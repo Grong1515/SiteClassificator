@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>������������ � �������� � �������� - ��������, ����������������� �������. �������������� ������� ����� � �����������.</title>
+<meta name="description" content="������������ �������� � ��������.">
+<meta name="keywords" content="������������, ��������������, ������� �����, �����������.">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<link href="favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="/styles.css" type="text/css" />
+<script type="text/javascript" src="/jquery.js"></script>
+<script type="text/javascript" src="/menu.js"></script>
+<script src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script> 
+<script type="text/javascript">		 
+function theRotator() {
+	$('div#slide_show ul li').css({opacity: 0.0});	
+	$('div#slide_show ul li:first').css({opacity: 1.0});		
+	setInterval('rotate()',5000);
+}		 
+function rotate() {	
+	var current = ($('div#slide_show ul li.show')?  $('div#slide_show ul li.show') : $('div#slide_show ul li:first'));		 
+	var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div#slide_show ul li:first') :current.next()) : $('div#slide_show ul li:first'));			 
+	next.css({opacity: 0.0})
+	.addClass('show')
+	.animate({opacity: 1.0}, 1000);		 
+	current.animate({opacity: 0.0}, 1000)
+	.removeClass('show');
+};
+ 
+$(document).ready(function() {		
+	theRotator();
+});
+</script>
+<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css">
+<script type="text/javascript" src="fancybox/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="fancybox/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="fancybox/jquery.fancybox-1.2.1.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function() { 
+$("a.first").fancybox(); 
+$("a.two11").fancybox(); 
+$("a.video").fancybox({"frameWidth":560,"frameHeight":340}); 
+$("a.content").fancybox({"frameWidth":600,"frameHeight":300}); 
+});
+</script>
+</head>
+<body>
+<div id="id_1">
+	<div id="header">
+<div id="logo">
+        <div id=slide>
+        <div id="slide_show">
+		  <ul>
+		    <li class="show"><img src="/slide/1.jpg" width="1100" height="300" /></li>
+		    <li><img src="/slide/2.jpg" width="1100" height="300" /></li>
+		    <li><img src="/slide/3.jpg" width="1100" height="300" /></li>
+		    <li><img src="/slide/4.jpg" width="1100" height="300" /></li>
+		  </ul>
+        </div>
+        </div>
+		</div>
+	</div>
+	<div id="menu">
+<ul>
+	<li><a href="/">�������</a></li><li><a href="/o_klinike">� �������</a></li><li><a href="/services/">������</a></li><li><a href="/ceny">����</a></li><li><a href="/akcii_i_skidki">����� � ������</a></li><li><a href="/kontakty">��������</a></li><li><a href="/news">������� � ������</a></li></ul>
+</div>
+	<div id="page">
+	<div id="page-bgtop">
+	<div id="page-bgbtm">
+		<div id="sidebar">
+    <div id="news">
+			<br />
+				     <h3>�.�������, ����������� ��., �.49<br />
+���: +7(495) 503-62-64<br />
+���: +7(495) 559-05-52<br />
+<br />
+� 9:00-21:00 ��� ��������<br />
+</h3>
+               </div>
+    <br>
+    <ul>
+	 </ul>    <div id="news">
+         <h4 style="background-color:">�����!<p>����������� ������ � �������, ����������� �� 9000 ���. �������.</p></h4><h5 style="background-color:">����� � ������!<p><h2>������ � ����� ������������ �������� ������ ������ �������������������
+������� �� ����������� �������� �������� " VECTOR"</h2>
+<a href="/akcii_i_skidki">���������� ���� ����� � ������</a></p></h5>
+
+	</div>
+	 <ul>
+	<li><a href="/faq/"><b>������� � ������</b></a></li><li><a href="/partners/"><b>��������</b></a></li> </ul>
+
+
+    <br>
+                    <center><a href="/question/"><img src="/images/online.png" width="280" height="150"/></a></center><br /><br />
+					�����: <form action="/search/" method=post>
+					          <input name="searchstring" type="text" value=""> <input type="submit" name="search" value="������">
+					       </form>
+
+    <div id="news">
+	     <h2></h2>
+         <br />
+         		<br /><br /><br />
+<!--LiveInternet counter--><!--/LiveInternet-->
+	</div>
+       </div>
+
+		<div id="id_2">
+			<div class="cl_1">
+                          <div class="cl_2">
+				<div align="center"></div><table border="0" align="center">
+						<tbody>
+							<tr>
+<td valign="top" style="width: 350px"><h4>�������</h4><a href="/lechenie_kanalov">������� �������</a><br /><a href="/plombirovanie_kanalov">������������� �������</a><br /><a href="/ustanovka_shtiftov">��������� �������</a><br /><a href="/restavraciya_zubov">����������� �����</a><br /></td><td style="width: 50px">&nbsp;</td><td valign="top" style="width: 350px"><h4>���������</h4><a href="/e-max_koronka_metodom_naneseniya">�-max ������� ������� ���������</a><br /><a href="/metallokeramika">���������������</a><br /><a href="/semnye_protezy">������� �������</a><br /><a href="/bugelnoe_protezirovanie">��������� ��������������</a><br /><a href="/zubnye_vkladki">������ �������</a><br /><a href="/viniry_na_zuby">������ �� ����</a><br /><a href="/bezmetallovaya_koronka">������������� �������</a><br /></td></tr><tr><td valign="top" style="width: 350px"><h4>��������</h4><a href="/vylushivanie_kisty">����������� �����</a><br /><a href="/udalenie_retenirovannogo_distopirovannogo_zuba">�������� ���������������, ���������������� ����</a><br /><a href="/udalenie_kamnya_iz_protoka_slunno_gelezy">�������� ����� �� ������� ������� ������</a><br /><a href="/plastika_uzdechki_yazyka">�������� ������� �����</a><br /><a href="/cistoektomiya_s_rezekcie_kornya_dvuhkornevogo_zuba">������������ � ��������� ����� ������������� ����</a><br /><a href="/cistoektomiya_s_rezekcie_kornya_odnokornevogo_zuba">������������ � ��������� ����� ������������� ����</a><br /></td><td style="width: 50px">&nbsp;</td><td valign="top" style="width: 350px"><h4>����������</h4><a href="/brekety_na_zuby">������� �� ����</a><br /><a href="/lechenie_semno_tehniko">������� ������� ��������</a><br /></td></tr><tr><td valign="top" style="width: 350px"><h4>�������������</h4><a href="/ustanovka_implantata_alpha-bio">��������� ���������� &quot;Alpha-Bio&quot;</a><br /><a href="/ispolzovanie_preparatov_naturalno_kosti_bgm">������������� ����������� ����� &quot;BGM&quot;</a><br /><a href="/ispolzovanie_membranybcg">������������� �������� &quot;BCG&quot;</a><br /><a href="/operaciya_po_podnyatiu_gamorovo_pazuhisinuslifting">�������� �� �������� ���������� ������</a><br /></td><td style="width: 50px">&nbsp;</td><td valign="top" style="width: 350px"><h4>������� ������� ���</h4><a href="/snyatie_zubnyh_otlogeny">������ ������ ���������</a><br /><a href="/obrabotka_zubov_po_metodu_air-flow">������ ����� �� ������ &quot;Air-Flow&quot;</a><br /><a href="/otbelivanie_klinicheskoeopalescence_boost">����������� &quot;Opalescence BOOST&quot;</a><br /><a href="/domashnee_otbelivanieday_white">�������� ����������� &quot;Day White&quot;</a><br /><a href="/pokrytie_zubov_preparatomtooth_mousse">�������� ����� ���������� &quot;Tooth Mousse&quot;</a><br /><a href="/pokrytie_zubov_preparatomfluokal">�������� ����� ���������� &quot;��������&quot;</a><br /><a href="/pokrytie_zubov_preparatombifluorid">�������� ����� ���������� &quot;���������&quot;</a><br /><a href="/pokrytie_zubov_preparatomegl">�������� ����� ���������� &quot;���&quot;</a><br /><a href="/germetizaciya_fissur">������������ ������</a><br /><a href="/obrabotka_zubov_preparatom_icon">��������� ����� ���������� &quot;Icon&quot;</a><br /></td></tr><tr><td valign="top" style="width: 350px"><h4>��������������</h4><a href="/parodontologiya">��������������</a><br /></td><td style="width: 50px">&nbsp;</td>							</tr>
+						</tbody>
+					</table>
+<h1>��� ������������ ������������ ��������!</h1>
+<p>&nbsp;</p>
+<center>
+<p><span style="font-size: large;"><span style="color: rgb(255, 0, 0);">�� <span style="color: rgb(0, 0, 0);"><b>������</b></span>, <span style="color: rgb(0, 0, 0);"><b>��������</b></span> � <span style="color: rgb(0, 0, 0);"><b>������������</b></span> ���������� ���������� ������� �����������<br />
+�� ����������� �������� �������� <span style="color: rgb(0, 0, 0);"><i><b>&quot;������&quot;</b></i></span><br />
+� ����� �����������-������������� <span style="color: rgb(0, 0, 0);"><b>���������� ����� ������������</b></span>.<br />
+<br />
+����������� ������ � �������, ����������� �� 9000 ���. �������.</span></span><span style="color: rgb(255, 0, 0);"> <br />
+</span></p>
+</center> <!--<h2 style="text-align: center;"><span style="color: rgb(255, 0, 0);"><br />
+�� ������������ ����� ����� ���� ���������� - ������������ ��������� ����� ������������.<br />
+���� ��� ����� �� ����������� �� 26.000 ���. <br />
+</span></h2>-->
+<h2>���������� �������� ���� ����������������� ������� &quot;��������&quot;, ������� ��� ��� <b><span style="color: rgb(255, 0, 0);">20 ���</span></b> ������� �������� � �. �������.</h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ����������������������� ����� ���� ��������������, ���������� �� ���������� ������, ������ ��� ����������� ������. ������������ � ������� ��������� ����������������� ��������� ���������� ���������, ������������������ ����������������� ������������ � �������� ���������� ������������ �������� ����������� �����.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ��� ������ �������������� ���������� ��� �������������� ����������� ����� ���� ����� ���������� ������������� �������������� ������������ � ������������ ���������� � ������������. � ���� ��� ����� &quot;��������������&quot; � &quot;�����������&quot; ��� ����� �� �������������� ��� ������� �������� - ������, ��� ������� ����������� � �������������� ��������� ��������� �������.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; �� ���� ����� ����������������� ������� � �������� �������������� ��� ���� �������������� � ������� �����: ������������������� �������, ������, ������������������� ������� �� ������ ��������� �������, ��������� ��������������, �������������� �� ��������� � ������ ���� �������.</p>
+<h2>������� ����� ���� ��������, �������� � ��������, � ������������� ������ ������� ��� � ����!</h2>
+<h2>���� ��� ������ ���� � ������������ &quot;��������&quot;!</h2>
+<p>&nbsp;</p><h1>�������</h1>
+<div class="news">
+					<span class="news_date">07.05.2015</span>
+						<a class="text" href="/news/kak_pravilno_chistit_zuby/">��� ��������� ������� ����?</a>
+			<br />��� ��������� ������� ����?
+
+����, ��� �������, ������ �������� �� ������� ����, �������������� ����, ����� ��� ���, ������� ������� �����.<br>
+
+		<p>
+					</p>
+	</div><div class="news">
+					<span class="news_date">16.04.2015</span>
+						<a class="text" href="/news/u_nas_novy_sat/">� ��� ����� ����!</a>
+			<br />� ��� ����� ����!<br>
+
+		<p>
+					</p>
+	</div><a href="/news/" class="all">��� �������</a>
+
+
+
+
+
+
+
+
+    </div>
+			</div>
+		<div style="clear: both;"> </div>
+		</div>
+		<div style="clear: both;"> </div>
+	</div>
+	</div>
+	</div>
+<div class="class_work">
+<div  class="first"><a href="/worker/korotkova_elena_vyacheslavovna/"><img src="/userfiles/image/min_1588855050_122.png" alt="" title="��������� ����� ������������" class="left" /></a><a href="/worker/korotkova_elena_vyacheslavovna/">��������� ����� ������������</a>
+			<p><p>��������� ����� ������������</p>
+<p>������� ����.</p>
+<p>����-����������-������������. ��������� ���������� ����������� ����������������� �������� � 1997�</p></p>
+	   </div><div  class="first"><a href="/worker/strelcova_natalya_anatolevna/"><img src="/userfiles/image/min_2024870199_i01_2.jpg" alt="" title="���������� ������� �����������" class="left" /></a><a href="/worker/strelcova_natalya_anatolevna/">���������� ������� �����������</a>
+			<p><p>����-����������-������ <br />
+����� ���� ������ 30 ���. <br />
+��������� ���������� ����������� ����������������� �������� � 1985�.</p></p>
+	   </div><div ><a href="/worker/mironov_vyacheslav_vasilevich/"><img src="/userfiles/image/min_1430819788_i10_2.jpg" alt="" title="������� �������� ����������" class="left" /></a><a href="/worker/mironov_vyacheslav_vasilevich/">������� �������� ����������</a>
+			<p><p>����-����������-�������<br />
+������-�����������<br />
+����� ���� ������ 34�<br />
+�������� ���������� ����������� ����������������� �������� � 1981�</p></p>
+	   </div><br />
+<a href="/worker/" class="all" title="��� ���������">��� ����������</a>
+</div>
+
+</div>
+    <div class="lower_band">� ��������һ 2010-2016  &nbsp;&nbsp;&nbsp;+7(495) 503-62-64, +7(495) 559-05-52 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <a href="http://www.yaya.su/" title="�������� � ����������� �����" target="_blank">�������� � ����������� �����</a><!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t44.13;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+</div>
+<script type="text/javascript" src="http://yourrobot.ru/main/getForm?code=d67d8ab4f4c10bf22aa353e27879133c" charset="UTF-8"></script>
+</body>
+</html>

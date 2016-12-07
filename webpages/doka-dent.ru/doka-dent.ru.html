@@ -1,0 +1,607 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if lt IE 8]>
+<html class="lt-ie8"><![endif]-->
+<!--[if lt IE 9]>
+<html class="lt-ie9"><![endif]-->
+<!--[if gte IE 9]><!-->
+<html xmlns="http://www.w3.org/1999/html" lang="ru"><!--<![endif]-->
+<head>
+<title>Ñåìåéíàÿ ñòîìàòîëîãèÿ - êëèíèêà ñåìåéíîé ñòîìàòîëîãèè â Ìîñêâå, ñåòü êëèíèê Äîêà-Äåíò</title>
+<base href="http://doka-dent.ru/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="Description" content="«Äîêà-Äåíò» - ýòî ñòîìàòîëîãè÷åñêàÿ êëèíèêà íîâîãî ïîêîëåíèÿ. Ëó÷øåå òåõíè÷åñêîå îñíàùåíèå, ìîëîäûå è îïûòíûå ñïåöèàëèñòû, êîìôîðòíûå óñëîâèÿ äëÿ ïàöèåíòîâ  âñå ýòî äåëàåò íàñ îäíèì èç âåäóùèõ ìåäó÷ðåæäåíèé äàííîãî ïðîôèëÿ.">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<link rel="stylesheet" href="http://doka-dent.ru/css/validationEngine.jquery.css" type="text/css" media="screen">
+<link rel="stylesheet" href="http://doka-dent.ru/css/owl.carousel.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/flexmenu.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="http://doka-dent.ru/css/colorbox.css" type="text/css" media="screen">
+<link rel="stylesheet" href="http://doka-dent.ru/css/jqtransform.css" type="text/css" media="all">
+<link rel="stylesheet" href="http://doka-dent.ru/css/boot.css" type="text/css" media="screen">
+
+<link rel="icon" href="http://doka-dent.ru/favicon.ico" type="image/x-icon">
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="/js/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".fancybox").fancybox({
+      helpers: {
+        overlay: {
+          locked: false
+        }
+      }
+    });
+
+    $('.b-nav__list').flexMenu({
+      linkText:"Ìåíþ",
+      cutoff: 9,
+      minimum_showed: 0,
+    });
+
+    function sliderItemsChange() {
+      //menu
+      if($(window).width() < 768){
+        if($('.b-nav').find('section').length < 1){
+           $('.b-nav').append($('.b-menu').detach()); 
+          }
+        }
+      else{
+        if($('.b-nav').find('section').length > 0){
+          $('.b-nav').after($('.b-menu').detach());
+        }
+      }
+
+      //doctor
+      if($(window).width() < 480){
+        if($('.ad_doctor td').eq(0).find('img').length > 0){
+          $('.b-content-menu_mini').after($('.ad_doctor td').eq(0).find('img').addClass('moved_dctr').detach());
+          $('.ad_doctor td').eq(0).hide();
+        }
+      }
+      else{
+        if($('.ad_doctor td').eq(0).find('p').length > 0 && $('.moved_dctr').length > 0){
+          $('.ad_doctor td').eq(0).find('p').after($('.moved_dctr').detach());
+          $('.moved_dctr').removeClass('moved_dctr');
+          $('.ad_doctor td').eq(0).show();
+        }
+      }
+    }
+
+    var resizeTimer;
+    $(window).resize(function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(sliderItemsChange, 100);
+    });
+    sliderItemsChange();
+    
+
+  });
+</script>
+
+<script src="js/jquery.leadocall.js" type="text/javascript"></script>
+<script src="js/jquery.leadocall_no_query.js" type="text/javascript"></script>
+<script src="js/jquery.form.js" type="text/javascript"></script>
+<script src="js/jquery.colorbox-min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.jqtransform.js" ></script>
+<script src="js/jquery.validationEngine-ru.js" type="text/javascript"></script>
+<script src="js/jquery.validationEngine.js" type="text/javascript"></script>
+<script src="js/tools.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+    <style type="text/css">
+    .clear {
+      zoom: 1;
+      display: block;
+    }
+    </style>
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="/pop/main.css">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43253195-1']);
+  _gaq.push(['_addOrganic', 'top-page.ru', 'q']);
+  _gaq.push(['_addOrganic', 'nigma.ru', 's']);
+  _gaq.push(['_addOrganic', 'webalta.ru', 'q']);
+  _gaq.push(['_addOrganic', 'ru.alhea.com', 'q']);
+  _gaq.push(['_addOrganic', 'delta-search.com', 'q']);
+  _gaq.push(['_addOrganic', 'images.yandex.ru', 'text', true]);  
+  _gaq.push(['_addOrganic', 'blogsearch.google.ru', 'q', true]);
+  _gaq.push(['_addOrganic', 'blogs.yandex.ru', 'text', true]);
+  _gaq.push(['_addOrganic', 'search.skydns.ru', 'query']);
+  _gaq.push(['_addOrganic', 'gigabase.ru', 'q']);
+  _gaq.push(['_addOrganic', 'search.globososo.com', 'q']);
+  _gaq.push(['_addOrganic', 'search.tut.by', 'query']);
+  _gaq.push(['_addOrganic', 'searchfunmoods.com', 'q']);
+  _gaq.push(['_addOrganic', 'search.qip.ru', 'query']);
+  _gaq.push(['_addOrganic', 'search.ukr.net', 'q']);
+  _gaq.push(['_addOrganic', 'start.iminent.com', 'q']);
+  _gaq.push(['_addOrganic', 'mysearchresults.com', 'q']);
+  _gaq.push(['_addOrganic', 'searchya.com', 'q']);
+  _gaq.push(['_addOrganic', 'search.mywebsearch.com', 'searchfor']);
+  _gaq.push(['_addOrganic', 'poisk.ru', 'text']);
+  _gaq.push(['_addOrganic', 'quintura.ru', 'request']);
+  _gaq.push(['_addOrganic', 'start.facemoods.com', 'q']);
+  _gaq.push(['_addOrganic', 'search.smartaddressbar.com', 's']); 
+  _gaq.push(['_addOrganic', 'all.by', 'query']);
+  _gaq.push(['_addOrganic', 'search.i.ua', 'q']);
+  _gaq.push(['_addOrganic', 'meta.ua', 'q']);
+  _gaq.push(['_addOrganic', 'index.online.ua', 'q']);
+  _gaq.push(['_addOrganic', 'web20.a.ua', 'query']);
+  _gaq.push(['_addOrganic', 'search.babylon.com', 'q']);
+  _gaq.push(['_setSiteSpeedSampleRate', 100]); 
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<link rel="stylesheet" href="http://doka-dent.ru/css/flexmenu.css" type="text/css" media="screen">
+<link rel="stylesheet" href="http://doka-dent.ru/css/media_queries.css" type="text/css" media="screen">
+
+<script type='text/javascript' charset='utf-8'>
+(function(w, d, undefined) {
+    w.CH_SERVER_NAME = '//chaser.ru',
+    w.CH_HASH = '09b35ad905cc1f7bcdcee849bc4451a4';
+    var p = d.createElement('script'),
+        s = d.getElementsByTagName('head')[0];
+    p.type = 'text/javascript';
+    p.charset = 'utf-8';
+    p.async = 'true';
+    p.src = (d.location.protocol == 'https:' ? 'https:' : 'http:') + w.CH_SERVER_NAME + '/widget/1.1/js/widget.js';
+    s.appendChild(p);
+})(window, document);
+</script>
+
+
+</head>
+<body>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter26613096 = new Ya.Metrika({id:26613096,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/26613096" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<div class="b-page">
+
+<!-- Header -->
+<header class="b-header">
+    <!-- Logo -->
+    <a class="b-logo" href="http://doka-dent.ru/" title="Ñòîìàòîëîãèÿ â öåíòðå Ìîñêâû &#171;Äîêà-Äåíò&#187;" alt="Ñòîìàòîëîãèÿ â öåíòðå Ìîñêâû &#171;Äîêà-Äåíò&#187;"></a>
+
+    <!-- Name -->
+    <div class="h-name h-name_header">
+        <div class="b-name">Ñåòü êëèíèê<br/>ñåìåéíîé<br/>ñòîìàòîëîãèè</div>
+       
+       <div class="header-adress">ã. Ìîñêâà ì. Áåëîðóññêàÿ (óë. 1-ÿ Òâåðñêàÿ-ßìñêàÿ, 27, ÖÀÎ)<br/> 
+    ã. Ìîñêâà ì. Þãî-Çàïàäíàÿ, (óë. 26 Áàêèíñêèõ êîìèññàðîâ, 14, ÞÇÀÎ)</div>
+    </div>
+    
+    <!-- Menu -->
+    <div class="h-menu h-menu_header">
+        <ul class="b-menu__list">
+<li class="b-menu__item"><a href="http://doka-dent.ru/about/">Î íàñ</a></li><li class="b-menu__item"><a href="http://doka-dent.ru/news/">Íîâîñòè</a></li><li class="b-menu__item"><a href="http://doka-dent.ru/contacts/">Êîíòàêòû</a></li>
+        </ul>
+    </div>
+
+    <!-- Address -->
+    <div class="b-address">
+<table class="b-address-table">
+	<tbody>
+		<tr>
+			<td colspan="2">
+				Íàøè êëèíèêè:</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="b-clinic__metro b-clinic__metro_red"><a href="/stomatologiya-na-yugo-zapadnaya/" style="color:#ff2626;border:none;">Þãî-Çàïàäíàÿ</a></span></td>
+			<td 7="" b="" class="b-address-table__phone leadocallPhone1">
+				(+7 495) <span class="strong">433-24-40</span></td>
+		</tr>
+		<tr>
+			<td>
+				<span class="b-clinic__metro b-clinic__metro_green"><a href="/stomatologiya-na-belorusskoi/" style="color:#0FE500;border:none;">Áåëîðóññêàÿ</a></span></td>
+			<td 7="" b="" class="b-address-table__phone leadocallPhone2">
+				(+7 499) <span class="strong">995-13-94</span></td>
+		</tr>
+	</tbody>
+</table>
+<br />
+ 
+
+<a href="mailto:dokadent24@gmail.com" class="email">dokadent24@gmail.com</a>
+<a href="mailto:info@doka-dent.ru" class="email">info@doka-dent.ru</a>
+
+    </div>
+
+    <div class="ad_adress_mobile">
+      <p style="text-align: center;">Íàøè êëèíèêè:</p>
+      <div class="ad_adr_block">
+        <div>
+          <span class="b-clinic__metro b-clinic__metro_red">
+            <a style="color:#ff2626;border:none;" href="/stomatologiya-na-yugo-zapadnaya/">Þãî-Çàïàäíàÿ</a>
+          </span>
+          <p>ã. Ìîñêâà ì. Þãî-Çàïàäíàÿ, (óë. 26 Áàêèíñêèõ êîìèññàðîâ, 14, ÞÇÀÎ)</p>
+          <a class="phn leadocallPhone1" href="tel:+74954332440">(+7 495)<strong>433-24-40</strong></a>
+        </div>
+      </div>
+      <div class="ad_adr_block">
+        <div>
+          <span class="b-clinic__metro b-clinic__metro_green">
+            <a style="color:#0FE500;border:none;" href="/stomatologiya-na-belorusskoi/">Áåëîðóññêàÿ</a>
+          </span>
+          <p>ã. Ìîñêâà ì. Áåëîðóññêàÿ (óë. 1-ÿ Òâåðñêàÿ-ßìñêàÿ, 27, ÖÀÎ)</p>
+          <a class="phn leadocallPhone2" href="tel:+74999951394">(+7 499)<strong>995-13-94</strong></a>
+        </div>
+      </div>
+    </div>
+
+      <div class="header-services">
+    <a class="b-form__button header-btn" href="/callme/">Îáðàòíûé çâîíîê</a>
+  <a class="b-form__button header-btn" href="/zapis/">Çàïèñü íà ïðèåì</a>
+    </div>
+
+    <div class="ad_head_mobile_mails">
+      <a href="mailto:dokadent24@gmail.com" class="email">dokadent24@gmail.com</a><br>
+      <a href="mailto:info@doka-dent.ru" class="email">info@doka-dent.ru</a>
+    </div>
+
+</header>
+<div class="b-greeting"><img src="http://doka-dent.ru/content/thumb/zastavka_fin_10_960_365.jpg"/></div>
+<!-- Navigation -->
+<nav class="b-nav">
+    <ul class="b-nav__list">
+<li class="b-nav__item"><a class="b-nav__link" href="http://doka-dent.ru/clinics/">Êëèíèêè</a></li><li class="b-nav__item"><a class="b-nav__link" href="http://doka-dent.ru/nashi-vrachi/">Íàøè âðà÷è</a></li><li class="b-nav__item"><a class="b-nav__link" href="http://doka-dent.ru/foto-do-i-posle/">Íàøè ðàáîòû</a><ul><li><a href="/stomatologiya-na-belorusskoi/nashi-raboty/">Íàøè ðàáîòû íà Áåëîðóññêîé</a></li><li><a href="/stomatologiya-na-yugo-zapadnaya/nashi-raboty/">Íàøè ðàáîòû íà Þãî-çàïàäíîé</a></li></ul></li><li class="b-nav__item"><a class="b-nav__link" href="http://doka-dent.ru/vopros-otvet/">Âîïðîñ-îòâåò</a></li><li class="b-nav__item"><a class="b-nav__link" href="http://doka-dent.ru/otzyvy/">Îòçûâû ïàöèåíòîâ</a></li><li class="b-nav__item"><a class="b-nav__link" href="http://doka-dent.ru/aktsii/">Àêöèè</a></li><li class="b-nav__item"><a class="b-nav__link" href="http://doka-dent.ru/polis-dms/">Ïîëèñ ÄÌÑ</a></li><li class="b-nav__item"><a class="b-nav__link" href="http://doka-dent.ru/oborudovaniye/">Îáîðóäîâàíèå</a></li><li class="b-nav__item"><a class="b-nav__link" href="/price/">Öåíû</a></li>
+    </ul>
+</nav>
+<section class="b-menu">
+    <div class="h-menu">
+        <ul class="b-menu__list b-menu__list_no-border">
+<li class="b-menu__item"><a href="/lechenie/">Ëå÷åíèå çóáîâ</a><ul><li><a href="/lechenie/karies/">Ëå÷åíèå êàðèåñà</a><ul><li><a href="/lechenie/karies/fissurnyj/">Ôèññóðíûé êàðèåñ</a></li><li><a href="/lechenie/karies/glubokyj/">Ãëóáîêèé êàðèåñ</a></li><li><a href="/lechenie/karies/butilochnyj/">Áóòûëî÷íûé êàðèåñ</a></li><li><a href="/lechenie/karies/prikornevoy/">Ïðèêîðíåâîé êàðèåñ</a></li><li><a href="/lechenie/karies/generalizovanyj/">Ãåíåðàëèçîâàííûé êàðèåñ</a></li><li><a href="/lechenie/karies/vtorichnyj/">Âòîðè÷íûé êàðèåñ</a></li><li><a href="/lechenie/karies/mezhzubnyj/">Ìåæçóáíûé êàðèåñ</a></li><li><a href="/lechenie/karies/kornya-zuba/">Êàðèåñ êîðíÿ çóáà</a></li><li><a href="/lechenie/karies/srednij/">Ñðåäíèé êàðèåñ</a></li><li><a href="/lechenie/karies/nachalnij/">Íà÷àëüíûé êàðèåñ</a></li><li><a href="/lechenie/karies/prisheechnyj/">Ïðèøåå÷íûé êàðèåñ</a></li><li><a href="/lechenie/karies/profilaktika/">Ïðîôèëàêòèêà êàðèåñà</a></li></ul></li><li><a href="/lechenie/pulpit/">Ïóëüïèò</a></li><li><a href="/lechenie/periodontit/">Ïåðèîäîíòèò</a><ul><li><a href="/lechenie/periodontit/kista/">Êèñòà çóáà</a><ul><li><a href="/lechenie/periodontit/kista/udalenie/">Óäàëåíèå êèñòû çóáà</a><ul><li><a href="/lechenie/periodontit/kista/udalenie/zuba-s-kistoj/">Óäàëåíèå çóáà ñ êèñòîé</a></li></ul></li></ul></li><li><a href="/lechenie/periodontit/travmaticheskyj/">Òðàâìàòè÷åñêèé ïåðèîäîíòèò</a></li><li><a href="/lechenie/periodontit/fibroznyj/">Ôèáðîçíûé ïåðèîäîíòèò</a></li><li><a href="/lechenie/periodontit/marginalnyj/">Ìàðãèíàëüíûé ïåðèîäîíòèò</a></li><li><a href="/lechenie/periodontit/apikalnyj/">Àïèêàëüíûé ïåðèîäîíòèò</a></li><li><a href="/lechenie/periodontit/gnojnyj/">Ãíîéíûé ïåðèîäîíòèò</a></li><li><a href="/lechenie/periodontit/granulematoznyj/">Ãðàíóëåìàòîçíûé ïåðèîäîíòèò</a></li><li><a href="/lechenie/periodontit/granuliruyushchij/">Ãðàíóëèðóþùèé ïåðèîäîíòèò</a></li></ul></li><li><a href="/lechenie/stomatit/">Ëå÷åíèå ñòîìàòèòà</a><ul><li><a href="/lechenie/stomatit/medikamentoznij/">Ìåäèêàìåíòîçíûé ñòîìàòèò</a></li><li><a href="/lechenie/stomatit/vezikulyarnij/">Âåçèêóëÿðíûé ñòîìàòèò</a></li><li><a href="/lechenie/stomatit/travmaticheskij/">Òðàâìàòè÷åñêèé ñòîìàòèò</a></li><li><a href="/lechenie/stomatit/angularnij/">Àíãóëÿðíûé ñòîìàòèò</a></li><li><a href="/lechenie/stomatit/bakterialnij/">Áàêòåðèàëüíûé ñòîìàòèò</a></li><li><a href="/lechenie/stomatit/aftoznij/">Àôòîçíûé ñòîìàòèò</a></li><li><a href="/lechenie/stomatit/gnojnij/">Ãíîéíûé ñòîìàòèò</a></li><li><a href="/lechenie/stomatit/kataralnij/">Êàòàðàëüíûé ñòîìàòèò</a></li><li><a href="/lechenie/stomatit/chronicheskij/">Õðîíè÷åñêèé ñòîìàòèò</a></li><li><a href="/lechenie/stomatit/yazvenij/">ßçâåííûé ñòîìàòèò</a></li><li><a href="/lechenie/stomatit/kandidoznij/">Êàíäèäîçíûé ñòîìàòèò</a></li><li><a href="/lechenie/stomatit/gerpetichesij/">Ãåðïåòè÷åñêèé ñòîìàòèò</a></li></ul></li><li><a href="/lechenie/povyshennoj-chuvstvitelnosti/">Ïîâûøåííàÿ ÷óâñòâèòåëüíîñòü çóáîâ</a><ul><li><a href="/lechenie/povyshennoj-chuvstvitelnosti/ftorirovanie/">Ôòîðèðîâàíèå çóáîâ</a></li></ul></li><li><a href="/lechenie/paradontologiya/">Ïàðîäîíòîëîãèÿ</a><ul><li><a href="/lechenie/paradontologiya/gingivit/">Ãèíãèâèò</a></li><li><a href="/lechenie/paradontologiya/parodontit/">Ïàðîäîíòèò</a></li><li><a href="/lechenie/paradontologiya/parodontoz/">Ïàðîäîíòîç</a></li><li><a href="/lechenie/paradontologiya/desen/">Ëå÷åíèå äåñåí</a></li></ul></li><li><a href="/lechenie/nerv/">Óäàëåíèå çóáíîãî íåðâà</a></li><li><a href="/lechenie/plombi/">Ïëîìáèðîâàíèå çóáîâ</a><ul><li><a href="/lechenie/plombi/vidy/">Âèäû çóáíûõ ïëîìá</a></li><li><a href="/lechenie/plombi/vremennye/">Âðåìåííàÿ ïëîìáà</a></li><li><a href="/lechenie/plombi/svetovye/">Ñâåòîâàÿ ïëîìáà</a></li><li><a href="/lechenie/plombi/guttapercha/">Ïëîìáèðîâàíèå êàíàëîâ ãóòòàïåð÷åé</a></li><li><a href="/lechenie/plombi/plombirovanie-kanalov/">Ïëîìáèðîâàíèå êàíàëîâ</a></li><li><a href="/lechenie/plombi/detskie/">Ïëîìáèðîâàíèå ìîëî÷íûõ çóáîâ</a></li></ul></li><li><a href="/lechenie/fluoroz/">Ôëþîðîç çóáîâ</a></li><li><a href="/lechenie/eroziya-emali/">Ýðîçèÿ ýìàëè çóáîâ</a></li><li><a href="/lechenie/gipoplaziya-emali/">Ãèïîïëàçèÿ ýìàëè</a></li><li><a href="/lechenie/izvlechenie-inorodnogo-tela-iz-kanala/">Èçâëå÷åíèå èíîðîäíîãî òåëà èç êàíàëà çóáà</a></li><li><a href="/lechenie/klinovidnyi-defekt/">Êëèíîâèäíûé äåôåêò çóáîâ</a></li><li><a href="/lechenie/perelechivanie-kanalov/">Ïåðåëå÷èâàíèå êàíàëîâ</a></li><li><a href="/lechenie/perednych-zubov/">Ëå÷åíèå ïåðåäíèõ çóáîâ</a></li><li><a href="/lechenie/slozhnych-zubov/">Ëå÷åíèå ñëîæíûõ çóáîâ</a></li></ul></li><li class="b-menu__item"><a href="/otbelivanie/">Îòáåëèâàíèå çóáîâ</a><ul><li><a href="/otbelivanie/zoom/">Îòáåëèâàíèå çóáîâ Zoom 3</a></li><li><a href="/otbelivanie/opalescence/">Îòáåëèâàíèå çóáîâ Opalescence</a></li><li><a href="/otbelivanie/kappy/">Êàïû äëÿ îòáåëèâàíèÿ çóáîâ</a></li><li><a href="/otbelivanie/domashnee/">Äîìàøíåå îòáåëèâàíèå çóáîâ</a></li></ul></li><li class="b-menu__item"><a href="/profilaktika/">Ïðîôèëàêòè÷åñêàÿ ñòîìàòîëîãèÿ</a><ul><li><a href="/profilaktika/chistka/">×èñòêà çóáîâ</a></li><li><a href="/profilaktika/air-flow/">×èñòêà çóáîâ Air Flow</a></li><li><a href="/profilaktika/ultrazvuk/">Óëüòðàçâóêîâàÿ ÷èñòêà çóáîâ</a></li><li><a href="/profilaktika/udalenie-kamnya/">Çóáíîé êàìåíü</a></li><li><a href="/profilaktika/remineralizaciya-zubov/">Ðåìèíåðàëèçèðóþùàÿ òåðàïèÿ</a></li><li><a href="/profilaktika/ukreplenie-emali/">Âîññòàíîâëåíèå ýìàëè çóáîâ</a></li><li><a href="/profilaktika/remineralizaciya-zubov/">Ðåìèíåðàëèçàöèÿ çóáîâ</a></li><li><a href="/profilaktika/ftorirovanie/">Ôòîðèðîâàíèå çóáîâ</a></li></ul></li><li class="b-menu__item"><a href="/esteticheskaya/">Ýñòåòè÷åñêàÿ ñòîìàòîëîãèÿ</a><ul><li><a href="/esteticheskaya/viniry/">Âèíèðû</a><ul><li><a href="/esteticheskaya/viniry/keramcheskie/">Êåðàìè÷åñêèå âèíèðû</a></li><li><a href="/esteticheskaya/viniry/terapevticheskye/">Òåðàïåâòè÷åñêèå âèíèðû</a></li><li><a href="/esteticheskaya/viniry/nepryamye/">Íåïðÿìûå âèíèðû</a></li><li><a href="/esteticheskaya/viniry/bez-obtochki/">Âèíèðû áåç îáòî÷êè</a></li><li><a href="/esteticheskaya/viniry/pryamye/">Ïðÿìûå âèíèðû</a></li><li><a href="/esteticheskaya/viniry/perednye-zuby/">Âèíèðû íà ïåðåäíèå çóáû</a></li><li><a href="/esteticheskaya/viniry/ustanovka/">Óñòàíîâêà âèíèðîâ</a></li><li><a href="/esteticheskaya/viniry/farforovye/">Ôàðôîðîâûå âèíèðû</a></li><li><a href="/esteticheskaya/viniry/kompozit/">Êîìïîçèòíûå âèíèðû</a></li></ul></li><li><a href="/esteticheskaya/restavratsiya/">Ðåñòàâðàöèÿ çóáîâ</a><ul><li><a href="/esteticheskaya/restavratsiya/bokovych-zubov/">Ðåñòàâðàöèÿ áîêîâûõ çóáîâ</a></li><li><a href="/esteticheskaya/restavratsiya/perednych-zubov/">Ðåñòàâðàöèÿ ïåðåäíèõ çóáîâ</a></li><li><a href="/esteticheskaya/restavratsiya/kompozitnaya/">Êîìïîçèòíàÿ ðåñòàâðàöèÿ çóáîâ</a></li><li><a href="/esteticheskaya/restavratsiya/hudozhestvennaja/">Õóäîæåñòâåííàÿ ðåñòàâðàöèÿ çóáîâ</a></li></ul></li><li><a href="/esteticheskaya/vosstanovlenie/">Âîññòàíîâëåíèå çóáîâ</a><ul><li><a href="/esteticheskaya/vosstanovlenie/perednych-zubov/">Âîññòàíîâëåíèå ïåðåäíèõ çóáîâ</a></li><li><a href="/esteticheskaya/vosstanovlenie/zhevatelnych-zubov/">Âîññòàíîâëåíèå æåâàòåëüíûõ çóáîâ</a></li></ul></li><li><a href="/esteticheskaya/nakladki/">Íàêëàäêè íà çóáû</a></li><li><a href="/esteticheskaya/meriland/">Ìîñò Ìåðèëåíä</a></li></ul></li>
+        </ul>
+    </div>
+    <div class="h-menu">
+        <ul class="b-menu__list"><li class="b-menu__item"><a href="/protezirovanie/">Ïðîòåçèðîâàíèå çóáîâ</a><ul><li><a href="/protezirovanie/semnoe/">Ñúåìíîå ïðîòåçèðîâàíèå</a></li><li><a href="/protezirovanie/bez-obtochki/">Ïðîòåçèðîâàíèå çóáîâ áåç îáòî÷êè</a></li><li><a href="/protezirovanie/vkladki/">Êóëüòåâàÿ âêëàäêà</a><ul><li><a href="/protezirovanie/vkladki/keramicheskie/">Êåðàìè÷åñêèå âêëàäêè</a></li></ul></li><li><a href="/protezirovanie/vremennoe/">Âðåìåííûå çóáíûå ïðîòåçû</a></li><li><a href="/protezirovanie/implanty/">Ïðîòåçèðîâàíèå íà èìïëàíòàõ</a></li><li><a href="/protezirovanie/koronki/">Êîðîíêè</a><ul><li><a href="/protezirovanie/koronki/keramicheskie/">Êåðàìè÷åñêèå êîðîíêè - áåçìåòàëëîâàÿ êåðàìèêà</a></li><li><a href="/protezirovanie/koronki/plastmassa/">Ïëàñòìàññîâûå çóáíûå ïðîòåçû</a></li><li><a href="/protezirovanie/koronki/tsirkonievye/">Öèðêîíèåâûå êîðîíêè</a></li><li><a href="/protezirovanie/koronki/metallokeramika/">Ìåòàëëîêåðàìè÷åñêèå êîðîíêè</a><ul><li><a href="/protezirovanie/koronki/metallokeramika/na-perednie-zuby/">Ìåòàëëîêåðàìèêà íà ïåðåäíèå çóáû</a></li></ul></li><li><a href="/protezirovanie/koronki/na-korennye-zuby/">Êîðîíêè íà êîðåííûå çóáû</a></li><li><a href="/protezirovanie/koronki/na-zhevatelnye-zuby/">Êîðîíêà íà æåâàòåëüíûå çóáû</a></li><li><a href="/protezirovanie/koronki/na-perednie-zuby/">Êîðîíêà íà ïåðåäíèå çóáû</a></li><li><a href="/protezirovanie/koronki/vidy/">Âèäû êîðîíîê íà çóáû</a></li><li><a href="/protezirovanie/koronki/metallicheskie/">Ìåòàëëè÷åñêèå êîðîíêè</a></li><li><a href="/protezirovanie/koronki/ustanovka/">Óñòàíîâêà êîðîíêè íà çóá</a></li><li><a href="/protezirovanie/koronki/oksyd-tsirkoniya/">Êîðîíêè èç îêñèäà öèðêîíèÿ</a></li><li><a href="/protezirovanie/koronki/dioksyd-tsirkoniya/">Êîðîíêè èç äèîêñèäà öèðêîíèÿ</a></li></ul></li><li><a href="/protezirovanie/most/">Ìîñòîâèäíûå çóáíûå ïðîòåçû</a><ul><li><a href="/protezirovanie/most/adgezivnij/">Àäãåçèâíûå ìîñòîâèäíûå ïðîòåçû</a></li><li><a href="/protezirovanie/most/metallokeramicheskij/">Ìåòàëëîêåðàìè÷åñêèå ìîñòîâèäíûå ïðîòåçû</a></li><li><a href="/protezirovanie/most/payanij/">Øòàìïîâàííî-ïàÿíûå ìîñòîâèäíûå ïðîòåçû</a></li><li><a href="/protezirovanie/most/celnolitye/">Öåëüíîëèòûå ìîñòîâèäíûå ïðîòåçû</a></li></ul></li><li><a href="/protezirovanie/shtift/">Çóáíûå øòèôòû</a><ul><li><a href="/protezirovanie/shtift/titanovye/">Òèòàíîâûå øòèôòû</a></li><li><a href="/protezirovanie/shtift/ankernye/">Àíêåðíûå øòèôòû</a></li><li><a href="/protezirovanie/shtift/steklovolokonnye/">Ñòåêëîâîëîêîííûå øòèôòû</a></li></ul></li><li><a href="/protezirovanie/vidy-protezov/">Âèäû çóáíûõ ïðîòåçîâ</a><ul><li><a href="/protezirovanie/vidy-protezov/na-prisoskach/">Çóáíûå ïðîòåçû íà ïðèñîñêàõ</a></li><li><a href="/protezirovanie/vidy-protezov/vinil/">Âèíèëîâûå çóáíûå ïðîòåçû</a></li><li><a href="/protezirovanie/vidy-protezov/shiniruyushchij/">Øèíèðóþùèå áþãåëüíûå ïðîòåçû</a></li><li><a href="/protezirovanie/vidy-protezov/semnye/">Ñúåìíûå çóáíûå ïðîòåçû</a><ul><li><a href="/protezirovanie/vidy-protezov/semnye/myagkie/">Ìÿãêèå ñúåìíûå çóáíûå ïðîòåçû</a></li><li><a href="/protezirovanie/vidy-protezov/semnye/poliuretanovye/">Ïîëèóðåòàíîâûå çóáíûå ïðîòåçû</a></li><li><a href="/protezirovanie/vidy-protezov/semnye/chastichno/">×àñòè÷íî-ñúåìíûå çóáíûå ïðîòåçû</a></li><li><a href="/protezirovanie/vidy-protezov/semnye/polnye/">Ïîëíûå ñúåìíûå çóáíûå ïðîòåçû</a></li></ul></li><li><a href="/protezirovanie/vidy-protezov/nesemnye/">Íåñúåìíûå çóáíûå ïðîòåçû</a></li><li><a href="/protezirovanie/vidy-protezov/plastinochnye/">Ñúåìíûå ïëàñòèíî÷íûå ïðîòåçû</a><ul><li><a href="/protezirovanie/vidy-protezov/plastinochnye/chastichnye/">×àñòè÷íûå ïëàñòèíî÷íûå ïðîòåçû</a></li><li><a href="/protezirovanie/vidy-protezov/plastinochnye/polnye/">Ïîëíûå ïëàñòèíî÷íûå ïðîòåçû</a></li></ul></li><li><a href="/protezirovanie/vidy-protezov/akri-fri/">Çóáíûå ïðîòåçû Àêðè Ôðè (Acry-Free)</a></li><li><a href="/protezirovanie/vidy-protezov/byugelnye/">Áþãåëüíûå ïðîòåçû</a><ul><li><a href="/protezirovanie/vidy-protezov/byugelnye/na-verhnjuju-cheljust/">Áþãåëüíûå ïðîòåçû íà âåðõíþþ ÷åëþñòü</a></li><li><a href="/protezirovanie/vidy-protezov/byugelnye/na-nizhnjuju-cheljust/">Áþãåëüíûå ïðîòåçû íà íèæíþþ ÷åëþñòü</a></li><li><a href="/protezirovanie/vidy-protezov/byugelnye/teleskopicheskich/">Áþãåëüíûå òåëåñêîïè÷åñêèå ïðîòåçû</a></li><li><a href="/protezirovanie/vidy-protezov/byugelnye/na-zamkach/">Áþãåëüíûå ïðîòåçû íà çàìêàõ</a></li></ul></li><li><a href="/protezirovanie/vidy-protezov/akril/">Àêðèëîâûå çóáíûå ïðîòåçû</a></li><li><a href="/protezirovanie/vidy-protezov/babochka/">Çóáíûå ïðîòåçû áàáî÷êà</a></li><li><a href="/protezirovanie/vidy-protezov/kvadrotti/">Çóáíûå ïðîòåçû Êâàäðîòòè (Quattro Ti)</a></li><li><a href="/protezirovanie/vidy-protezov/na-klammerakh/">Áþãåëüíûé ïðîòåç íà êëàììåðàõ</a></li><li><a href="/protezirovanie/vidy-protezov/na-attachmenakh/">Áþãåëüíûå ïðîòåçû íà àòòà÷ìåíàõ</a></li></ul></li><li><a href="/protezirovanie/slepki/">Ñëåïêè çóáîâ</a></li><li><a href="/protezirovanie/cerec/">Òåõíîëîãèÿ Cerec</a></li><li><a href="/protezirovanie/protezy/">Çóáíûå ïðîòåçû</a><ul><li><a href="/protezirovanie/protezy/chastichnye/">×àñòè÷íûå çóáíûå ïðîòåçû</a></li><li><a href="/protezirovanie/protezy/polnye/">Ïîëíûå çóáíûå ïðîòåçû</a></li></ul></li><li><a href="/protezirovanie/srochnoe/">Ñðî÷íîå ïðîòåçèðîâàíèå çóáîâ</a></li><li><a href="/protezirovanie/perednych-zubov/">Ïðîòåçèðîâàíèå ïåðåäíèõ çóáîâ</a></li><li><a href="/protezirovanie/zhevatelnych-zubov/">Ïðîòåçèðîâàíèå æåâàòåëüíûõ çóáîâ</a></li><li><a href="/protezirovanie/vidy/">Âèäû ïðîòåçèðîâàíèÿ çóáîâ</a></li><li><a href="/protezirovanie/chastichnoe/">×àñòè÷íîå ïðîòåçèðîâàíèå çóáîâ</a></li><li><a href="/protezirovanie/nizhnich-zubov/">Ïðîòåçèðîâàíèå íèæíèõ çóáîâ</a></li><li><a href="/protezirovanie/polnoe/">Ïîëíîå ïðîòåçèðîâàíèå çóáîâ</a></li><li><a href="/protezirovanie/sovremennoe/">Ñîâðåìåííîå ïðîòåçèðîâàíèå çóáîâ</a></li><li><a href="/protezirovanie/preparirovanie-zubov/">Ïðåïàðèðîâàíèå çóáîâ</a></li></ul></li><li class="b-menu__item"><a href="/implantatsiya/">Èìïëàíòàöèÿ çóáîâ</a><ul><li><a href="/implantatsiya/nobel-biocare/">Èìïëàíòû Nobel Biocare</a></li><li><a href="/implantatsiya/astra-tech/">Èìïëàíòû Astra Tech</a></li><li><a href="/implantatsiya/sinus-lifting/">Ñèíóñ-ëèôòèíã</a><ul><li><a href="/implantatsiya/sinus-lifting/otkrytyj/">Îòêðûòûé ñèíóñ-ëèôòèíã</a></li><li><a href="/implantatsiya/sinus-lifting/zakrytyj/">Çàêðûòûé ñèíóñ-ëèôòèíã</a></li></ul></li><li><a href="/implantatsiya/mini-implantatsiya/">Ìèíè èìïëàíòû</a></li><li><a href="/implantatsiya/ekspress-implantatsiya/">Ýêñïðåññ-èìïëàíòàöèÿ çóáîâ</a></li><li><a href="/implantatsiya/vidy-implantov/">Èìïëàíòû çóáîâ</a></li><li><a href="/implantatsiya/dentalnaya/">Äåíòàëüíàÿ èìïëàíòàöèÿ</a></li><li><a href="/implantatsiya/implantatsiya-zubov-yugo-zapadnaya/">Èìïëàíòàöèÿ çóáîâ íà Þãî-çàïàäíîé</a></li><li><a href="/implantatsiya/perednich-zubov/">Èìïëàíòàöèÿ ïåðåäíèõ çóáîâ</a></li><li><a href="/implantatsiya/implantatsiya-zubov-belorusskaya/">Èìïëàíòàöèÿ çóáîâ íà Áåëîðóññêîé</a></li><li><a href="/implantatsiya/zub-za-chas/">Çóá çà ÷àñ</a></li><li><a href="/implantatsiya/periimplantit/">Ïåðèèìïëàíòèò</a></li><li><a href="/implantatsiya/verchney-chelusty/">Èìïëàíòàöèÿ âåðõíåé ÷åëþñòè</a></li><li><a href="/implantatsiya/pri-polnom-otsutstvii-zubov/">Èìïëàíòàöèÿ ïðè ïîëíîì îòñóòñòâèè çóáîâ</a></li></ul></li><li class="b-menu__item"><a href="/ortodontiya/">Îðòîäîíòèÿ</a><ul><li><a href="/ortodontiya/vyravnivanie-zubov/">Âûðàâíèâàíèå çóáîâ</a></li><li><a href="/ortodontiya/ispravlenie-prikusa/">Èñïðàâëåíèå ïðèêóñà</a></li><li><a href="/ortodontiya/plastinki-dlya-zubov/">Ñêîáû (Ïëàñòèíêè) äëÿ çóáîâ</a></li><li><a href="/ortodontiya/brekety/">Áðåêåòû</a><ul><li><a href="/ortodontiya/brekety/inkognito/">Áðåêåòû Èíêîãíèòî</a></li><li><a href="/ortodontiya/brekety/vidy-breketov/">Âèäû áðåêåòîâ</a></li><li><a href="/ortodontiya/brekety/metallicheskie/">Ìåòàëëè÷åñêèå áðåêåòû</a></li><li><a href="/ortodontiya/brekety/keramicheskie/">Êåðàìè÷åñêèå áðåêåòû</a></li><li><a href="/ortodontiya/brekety/sapfirovye/">Ñàïôèðîâûå áðåêåòû</a></li><li><a href="/ortodontiya/brekety/samoligiruyuschie/">Áåçëèãàòóðíûå áðåêåòû</a></li><li><a href="/ortodontiya/brekety/damon/">Áðåêåòû Damon</a></li><li><a href="/ortodontiya/brekety/lingvalnye/">Ëèíãâàëüíûå áðåêåòû</a></li><li><a href="/ortodontiya/brekety/esteticheskie/">Ýñòåòè÷åñêèå áðåêåòû</a></li><li><a href="/ortodontiya/brekety/ustanovka/">Óñòàíîâêà áðåêåòîâ</a></li><li><a href="/ortodontiya/brekety/dlya-detej/">Áðåêåòû äëÿ äåòåé</a></li></ul></li><li><a href="/ortodontiya/detskaya/">Äåòñêàÿ îðòîäîíòèÿ</a></li><li><a href="/ortodontiya/elineri/">Ýëàéíåðû INVISALIGN</a></li></ul></li><li class="b-menu__item"><a href="/diagnostika/">Ðåíòãåíîëîãè÷åñêàÿ äèàãíîñòèêà</a><ul><li><a href="/diagnostika/panoramnyy-snimok/">Ïàíîðàìíûé ñíèìîê çóáîâ</a></li><li><a href="/diagnostika/kompyuternaya-tomografiya/">Êîìïüþòåðíàÿ òîìîãðàôèÿ çóáîâ</a></li><li><a href="/diagnostika/pritselnyj-snimok/">Ïðèöåëüíûé ñíèìîê çóáà</a></li><li><a href="/diagnostika/rentgen/">Ðåíòãåí çóáîâ</a></li><li><a href="/diagnostika/3d-snimok/">Ñíèìîê çóáîâ 3D</a></li></ul></li>
+        </ul>
+    </div>
+    <div class="h-menu">
+        <ul class="b-menu__list"><li class="b-menu__item"><a href="/detyam/">Äåòñêàÿ ñòîìàòîëîãèÿ</a><ul><li><a href="/detyam/gingivit/">Ãèíãèâèò ó äåòåé</a></li><li><a href="/detyam/karies-molochnykh-zubov/">Ëå÷åíèå êàðèåñà ó äåòåé</a></li><li><a href="/detyam/lechenie-molochnykh-zubov/">Ëå÷åíèå ìîëî÷íûõ çóáîâ</a></li><li><a href="/detyam/periodontit/">Ïåðèîäîíòèò ó äåòåé</a></li><li><a href="/detyam/pulpit/">Ïóëüïèò ìîëî÷íûõ çóáîâ</a></li><li><a href="/detyam/serebrenie-molochnykh-zubov/">Ñåðåáðåíèå ìîëî÷íûõ çóáîâ</a></li><li><a href="/detyam/stomatit/">Ñòîìàòèò ó äåòåé</a><ul><li><a href="/detyam/stomatit/virusnij/">Âèðóñíûé ñòîìàòèò ó äåòåé</a></li><li><a href="/detyam/stomatit/aftoznyj/">Àôòîçíûé ñòîìàòèò ó äåòåé</a></li><li><a href="/detyam/stomatit/kandidoznij/">Êàíäèäîçíûé ñòîìàòèò ó äåòåé</a></li><li><a href="/detyam/stomatit/gerpesnyj/">Ãåðïåñíûé ñòîìàòèò ó äåòåé</a></li></ul></li><li><a href="/detyam/udalenie-molochnykh-zubov/">Óäàëåíèå ìîëî÷íûõ çóáîâ</a></li><li><a href="/detyam/ftorirovanie-molochnykh-zubov/">Ôòîðèðîâàíèå ìîëî÷íûõ çóáîâ</a></li><li><a href="/detyam/detskaya-stomatologiya-yugo-zapadnaya/">Äåòñêàÿ ñòîìàòîëîãèÿ íà Þãî-çàïàäíîé</a></li><li><a href="/detyam/detskaya-stomatologiya-na-belorusskoi/">Äåòñêàÿ ñòîìàòîëîãèÿ íà Áåëîðóññêîé</a></li></ul></li><li class="b-menu__item"><a href="/beremennym/">Ñòîìàòîëîãèÿ äëÿ áåðåìåííûõ</a><ul><li><a href="/beremennym/rentgen/">Ðåíòãåí çóáà âî âðåìÿ áåðåìåííîñòè</a></li><li><a href="/beremennym/stomatit/">Ñòîìàòèò ïðè áåðåìåííîñòè</a></li><li><a href="/beremennym/udalenie/">Óäàëåíèå çóáà âî âðåìÿ áåðåìåííîñòè</a></li><li><a href="/beremennym/lechenie/">Ëå÷åíèå çóáîâ âî âðåìÿ áåðåìåííîñòè</a></li><li><a href="/beremennym/gingivit/">Ëå÷åíèå ãèíãèâèòà ïðè áåðåìåííîñòè</a></li><li><a href="/beremennym/karies/">Êàðèåñ ïðè áåðåìåííîñòè</a></li><li><a href="/beremennym/pulpit/">Ïóëüïèò ïðè áåðåìåííîñòè</a></li></ul></li><li class="b-menu__item"><a href="/udalenie/">Óäàëåíèå çóáîâ</a><ul><li><a href="/udalenie/zub-mudrosti/">Óäàëåíèå çóáà ìóäðîñòè</a><ul><li><a href="/udalenie/zub-mudrosti/udalenie-8-zuba/">Óäàëåíèå 8 çóáà</a></li><li><a href="/udalenie/zub-mudrosti/verchnij/">Óäàëåíèå âåðõíåãî çóáà ìóäðîñòè</a></li><li><a href="/udalenie/zub-mudrosti/udalenie-neprorezavshegosya-zuba/">Óäàëåíèå íåïðîðåçàâøåãîñÿ çóáà ìóäðîñòè</a></li><li><a href="/udalenie/zub-mudrosti/udalenie-retinirovannogo/">Óäàëåíèå ðåòèíèðîâàííîãî çóáà</a></li><li><a href="/udalenie/zub-mudrosti/nizhnij/">Óäàëåíèå íèæíåãî çóáà ìóäðîñòè</a></li><li><a href="/udalenie/zub-mudrosti/slozhnoe-udalenie/">Ñëîæíîå óäàëåíèå çóáà ìóäðîñòè</a></li></ul></li><li><a href="/udalenie/koren/">Óäàëåíèå êîðíÿ çóáà</a></li><li><a href="/udalenie/rezektsiya/">Ðåçåêöèÿ âåðõóøêè êîðíÿ çóáà</a></li><li><a href="/udalenie/srochnoe/">Ýêñòðåííîå óäàëåíèå çóáîâ</a></li><li><a href="/udalenie/atravmatichnoe/">Àòðàâìàòè÷íîå óäàëåíèå çóáîâ</a></li><li><a href="/udalenie/zubov-nizhnei-chelysti/">Óäàëåíèå çóáîâ íèæíåé ÷åëþñòè</a></li><li><a href="/udalenie/perednych-zubov/">Óäàëåíèå âåðõíèõ çóáîâ</a></li><li><a href="/udalenie/korennych-zubov/">Óäàëåíèå êîðåííûõ çóáîâ</a></li><li><a href="/udalenie/alveolit/">Àëüâåîëèò</a></li></ul></li><li class="b-menu__item"><a href="/stomatologiya-bez-vihodnyh/">Ñòîìàòîëîãèÿ áåç âûõîäíûõ</a></li>
+        </ul>
+    </div>
+    <div class="h-menu">
+        <ul class="b-menu__list"><li class="b-menu__item"><a href="/lechenie-zubov-pod-mikroskopom/">Ëå÷åíèå çóáîâ ïîä ìèêðîñêîïîì</a></li><li class="b-menu__item"><a href="/khirurgiya/">Õèðóðãè÷åñêàÿ ñòîìàòîëîãèÿ</a><ul><li><a href="/khirurgiya/alveolotomiya/">Àëüâåîëîòîìèÿ</a></li><li><a href="/khirurgiya/gemisektsiya/">Ãåìèñåêöèÿ</a></li><li><a href="/khirurgiya/perikoronarit/">Ïåðèêîðîíàðèò</a></li><li><a href="/khirurgiya/periostit/">Ïåðèîñòèò ÷åëþñòè</a><ul><li><a href="/khirurgiya/periostit/khronicheskij/">Õðîíè÷åñêèé ïåðèîñòèò</a></li><li><a href="/khirurgiya/periostit/ostrij/">Îñòðûé ïåðèîñòèò</a></li></ul></li><li><a href="/khirurgiya/gnojnyj/">Ãíîéíûé ïåðèîñòèò</a></li><li><a href="/khirurgiya/plastika-preddveriya/">Ïëàñòèêà ïðåääâåðèÿ ïîëîñòè ðòà</a></li><li><a href="/khirurgiya/plastika-uzdechek/">Ïëàñòèêà óçäå÷åê</a></li><li><a href="/khirurgiya/udalenie-granulem/">Óäàëåíèå ãðàíóëåì</a></li><li><a href="/khirurgiya/plastika-uzdechek-yazyka/">Ïëàñòèêà óçäå÷êè ÿçûêà</a></li></ul></li><li class="b-menu__item"><a href="/anesteziya/">Àíåñòåçèÿ ïðè ëå÷åíèè çóáîâ</a></li>        </ul>
+    </div>
+</section><br>
+
+
+
+  <div id="owl-example" class="owl-carousel3">
+    <div><a href="/ortodontiya/elineri/"><img class="bbnnrr" src="/images/banner dokadent_960_100.png"></a></div>
+    <div><img class="bbnnrr" src="/images/dokadent_960_100_insta.png"></div>
+  </div>
+
+
+
+
+
+<article class="b-article"><div class="b-intro">
+	<div class="b-intro__pic">
+		<img alt="" height="230" src="/images/b-intro.png" width="168" /></div><h1>Ñåìåéíàÿ ñòîìàòîëîãèÿ</h1>
+	<div class="b-intro__text">
+		<p>
+			<span class="b-intro__name">Èðèíà Êàíîðîâà</span><br />
+			<span class="b-intro__dir">ãåíåðàëüíûé äèðåêòîð &laquo;Äîêà-Äåíò&raquo;</span></p>
+		<p class="b-intro__italic">
+			&laquo;Óëûáêà äîõîäèò â ëþáóþ äàëü&raquo; (Äæåèìñ Äæîéñ)</p>
+		<p>
+			Ñëîâà êëàññèêà áåññïîðíû, óëûáêà &mdash; âèçèòíàÿ êàðòî÷êà ÷åëîâåêà. Âîçâðàùàòü ëþäÿì óâåðåííîñòü â ñåáå, â ñâîåé êðàñîòå &mdash; ïðîôåññèîíàëüíûé äîëã âðà÷à ñòîìàòîëîãà. Ïðèÿòíî ñîçíàâàòü, ÷òî âðà÷è êëèíèê &laquo;Äîêà äåíò&raquo; çàìå÷àòåëüíî ñïðàâëÿþòñÿ ñ ýòîé çàäà÷åé. Âûñî÷àéøèé ïðîôåññèîíàëèçì è ãëóáîêèå çíàíèÿ, ïîëó÷åííûå â èçâåñòíûõ çàðóáåæíûõ êîìïàíèÿõ, èõ ñòåïåíè è íàãðàäû ÿâëÿþòñÿ ïðåäìåòîì çàñëóæåííîé ãîðäîñòè.</p>
+	</div>
+</div>
+<div></div>
+<div class="indexblockfix1">
+	<div class="owl-carousel2">
+		<div class="oc2-item">
+			<a href="/protezirovanie/cerec/"><img src="/images/mainpage/i1.jpg" alt="CEREC  ïðîòåçèðîâàíèå çóáîâ çà îäíî ïîñåùåíèå" title="CEREC  ïðîòåçèðîâàíèå çóáîâ çà îäíî ïîñåùåíèå"></a>
+			<div>
+				<video id="iv1" src="/images/mainpage/i1.mp4" width="666" controls></video>
+			</div>
+		</div>
+		<div class="oc2-item">
+			<img src="/images/mainpage/i2.jpg" style="margin-bottom: 87px;">
+			<div>
+				<video id="iv2" src="/images/mainpage/i2.mp4" width="666" controls></video>
+			</div>
+		</div>
+	</div>
+    <img class="indeximgfix1" src="/images/mainpage/i3.jpg">
+</div>
+
+<!--table cellpadding="5">
+	<tbody>
+		<tr>
+			<td style="width: 25%; vertical-align: top;">
+				<span style="font-size:12px;">Àïïàðàò ORTHOPHOS XG 3D äåëàåò âîçìîæíûì ïîëó÷èòü 2D è 3D ñíèìêè íàèëó÷øåãî êà÷åñòâà ñ ìèíèìàëüíîé ëó÷åâîé íàãðóçêîé,÷òî çíà÷èòåëüíî óïðîùàåò äèàãíîñòèêó è ïîçâîëÿåò óñïåøíî ñïëàíèðîâàòü ëå÷åíèå!</span></td>
+			<td style="vertical-align: top;">
+				<a class="fancybox" rel="group" href="/media/image/klinika_belorusskaya_kt_2.jpg"><img alt="Àïïàðàò ORTHOPHOS XG 3D. Ðåâîëþöèÿ â ìèðå ñòîìàòîëîãèè!" title="Àïïàðàò ORTHOPHOS XG 3D. Ðåâîëþöèÿ â ìèðå ñòîìàòîëîãèè!" src="/media/image/klinika_belorusskaya_kt_2.jpg" style="font-size: 12px; width: 230px; height: 150px; margin: 5px; float: left;" /></a></td>
+			<td style="vertical-align: top; width: 25%;">
+				<span style="font-size:12px;">Ïðèìåíåíèå ìèêðîñêîïà ìíîãîêðàòíî óëó÷øàåò âèçóàëèçàöèþ íåîáõîäèìîãî ïîëÿ ïðè ñòîìàòîëîãè÷åñêèõ ìàíèïóëÿöèÿõ, òàêèõ êàê ýíäîäîíòèÿ, õèðóðèÿ, ïðåïàðèðîâàíèå çóáîâ ïîä âèíèðû è äðóãèå îðòîïåäè÷åñêèå êîíñòðóêöèè, òåì ñàìûì ïîâûøàÿ ýôôåêòèâíîñòü ëå÷åíèÿ!</span></td>
+			<td style="vertical-align: top;">
+				<a class="fancybox" rel="group" href="/media/image/microscope.jpg"><img alt="Ëå÷åíèå ïîä ìèêðîñêîïîì" title="Ëå÷åíèå ïîä ìèêðîñêîïîì" src="/media/image/microscope.jpg" style="font-size: 12px; width: 230px; height: 150px; margin: 5px;" /></a></td>
+		</tr>
+	</tbody>
+</table>
+<br /-->
+<div class="owl-carousel">
+	
+				
+<div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=9k-YLlBXpTU"></a></div>
+<div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=rYKsACXRD_c"></a></div>
+<div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=uRt3gM6DZLo"></a></div>
+<div class="item-video" data-merge="4"><a class="owl-video" href="https://www.youtube.com/watch?v=eOIYvAJ1CQM"></a></div>
+<div class="item-video" data-merge="5"><a class="owl-video" href="https://www.youtube.com/watch?v=GqXCNMGWNVk "></a></div>
+
+		
+
+	
+</div><div class="b-divider"></div><br />
+<table class="ad_index_table" cellpadding="1" cellspacing="1" style="width: 100%;">
+	<tbody>
+		<tr>
+			<td>
+
+
+<h2>Õîòåëè áû âû ëå÷èòüñÿ â ñåìåéíîé ñòîìàòîëîãèè, ñîçäàííîé ýêñïåðòàìè ïî çäîðîâüþ çóáîâ?</h2>
+
+<p>È ýòî âïîëíå ðåàëüíî, åñëè âàøèì âûáîðîì ñòàíåò êëèíèêà ñåìåéíîé ñòîìàòîëîãèè &laquo;Äîêà-Äåíò&raquo;.</p>
+
+<p>Âåäü îíà ïîñòðîåíà ïî èíäèâèäóàëüíîìó ïðîåêòó ëó÷øåé èíæåíåðíîé êîìïàíèåé ñïåöèàëèçèðóþùåéñÿ íà ñòîìàòîëîãè÷åñêîì íàïðàâëåíèè.</p>
+
+<p><span class="strong">Âûñîêèå ñòàíäàðòû íàøåé êëèíèêè &mdash; ýòî:</span></p>
+
+<p><img src="/images/main_03.jpg" style="float:left;margin:0 20px 0 0;"><span class="strong">Ïðîôåññèîíàëèçì âðà÷åé,</span> ïîäòâåðæäåííûé 13-ëåòíèì îïûòîì ðàáîòû, áîëüøèì êîëè÷åñòâîì ðàçëè÷íûõ ñåðòèôèêàòîâ è áëàãîäàðñòâåííûìè îòçûâàìè êëèåíòîâ</p>
+<br>
+<p><img src="/images/main_06.jpg" style="float:left;margin:0 20px 0 0;"><span class="strong">Îáîðóäîâàíèå è ìàòåðèàëû îò âåäóùèõ ìèðîâûõ ïðîèçâîäèòåëåé:</span> Kavo (Ãåðìàíèÿ), Melag (Èòàëèÿ), Morita (ßïîíèÿ), &nbsp;Dentsply (CØÀ, Øâåéöàðèÿ), Nobel biocare (Øâåéöàðèÿ) è äðóãèõ</p>
+
+<p>Ïåðñîíàë êëèíèêè ïðèäåðæèâàåòñÿ ïðîñòûõ è ÷åñòíûõ ïðèíöèïîâ â ðàáîòå. Ñàìûé öåííûé èç íèõ&rarr;</p>
+
+<h2>Èíäèâèäóàëüíûé ïîäõîä ê êàæäîìó ïàöèåíòó</h2>
+
+<p>Ìû óáåæäåíû, ÷òî õîðîøàÿ ñòîìàòîëîãèÿ &mdash; ýòî ïîðÿäîê âî âñ¸ì, íà÷èíàÿ îò óñëîâèé ëå÷åíèÿ è çàêàí÷èâàÿ âûñîêîêëàññíûì îñíàùåíèåì. À òàêæå äîáðîæåëàòåëüíîå è âíèìàòåëüíîå îòíîøåíèå ê êàæäîìó ïàöèåíòó.</p>
+
+<p>Ïðè ñîñòàâëåíèè ïëàíà ëå÷åíèÿ ìû ó÷èòûâàåì:</p>
+
+<ul class="arro str">
+	<li>ïñèõîëîãè÷åñêîå ñîñòîÿíèå êëèåíòà</li>
+	<li>åãî ôèíàíñîâûå âîçìîæíîñòè</li>
+	<li>âðåìåííûå îãðàíè÷åíèÿ è ëè÷íûå ïðåäïî÷òåíèÿ</li>
+</ul>
+
+<p>Áóäóùåå çà ñåìåéíîé ñòîìàòîëîãèåé, âåäü âàì íå íàäî òðàòèòü âðåìÿ íà ïîèñêè äåòñêîãî ñòîìàòîëîãà èëè ñïåöèàëèñòà äëÿ ïîæèëîãî ÷åëîâåêà. Âñå ÷ëåíû âàøåé ñåìüè îáñëóæèâàþòñÿ ó ñïåöèàëèñòîâ îäíîé êëèíèêè, êîòîðîìó âû <em>ïîëíîñòüþ</em> äîâåðÿåòå.</p>
+
+<h2>×àñòíàÿ ñòîìàòîëîãèÿ &mdash; ýòî íàäåæíûå ãàðàíòèè</h2>
+
+<ul class="arro round">
+	<li>Íà êàæäûé âèä óñëóã ìû ïðåäîñòàâëÿåì ãàðàíòèþ ñðîêîì íà 12 ìåñÿöåâ, ÷òî óêàçàíî â îáÿçàòåëüíîì äîãîâîðå íà ëå÷åíèå</li>
+	<li>Ïðè óñëîâèè ñòðîãîãî ñîáëþäåíèÿ âñåõ ðåêîìåíäàöèé ëå÷àùåãî âðà÷à è ïðîõîæäåíèÿ ïëàíîâûõ îñìîòðîâ äåéñòâóåò <em>ðàñøèðåííàÿ</em> ãàðàíòèÿ, ñðîêîì íà 3 ãîäà</li>
+	<li>Íàøà êëèíèêà ñîâðåìåííîé ñòîìàòîëîãèè íå ïåðåäàåò èíôîðìàöèþ î ïàöèåíòàõ òðåòüèì ëèöàì &mdash; âàøè ëè÷íûå äàííûå è ñâåäåíèÿ î ôèçè÷åñêîì ñîñòîÿíèè è ëå÷åíèè ñòðîãî <em>êîíôèäåíöèàëüíû</em></li>
+</ul>
+
+<p>Âû äóìàåòå, ÷òî õîðîøàÿ è íåäîðîãàÿ ñòîìàòîëîãèÿ â Ìîñêâå &ndash; ýòî óòîïèÿ? Ïîñåòèòå íàøó êëèíèêó, è âû óâèäèòå, íàñêîëüêî óäà÷íî ñî÷åòàþòñÿ äâà îñíîâíûõ êðèòåðèÿ &mdash; äîñòóïíàÿ öåíà è âûñîêîå êà÷åñòâî.</p>
+
+<p>Íàøà ñòîìàòîëîãèÿ â Ìîñêâå &mdash; ýòî áåçîïàñíîå ëå÷åíèå â êîìôîðòíûõ óñëîâèÿõ, êîòîðûå âû îöåíèòå ïî äîñòîèíñòâó, ïîñåòèâ îäèí èç ôèëèàëîâ êëèíèêè, íà ñòàíöèè ì. Áåëîðóññêàÿ èëè ì. Þãî-Çàïàäíàÿ.</p>
+
+<p><span class="strong">Âû íå îñòàíåòåñü ñî ñâîåé ïðîáëåìîé îäèí íà îäèí. </span>Ìû âñåãäà ðàäû ïîìî÷ü âàì îáðåñòè êðàñèâóþ óëûáêó!</p>
+
+
+
+
+</td>
+			<td class="hideme_mobile" style="width: 30px;">
+				&nbsp;</td>
+			<td class="hideme_mobile" style="text-align: right; vertical-align: top;">
+				<br />
+				<span style="font-size:20px;">Íàøè âðà÷è íà ðåêëàìå çóáíîé ïàñòû<span class="strong"> Brilard:</span></span><br />
+				<br />
+				<a class="fancybox" rel="group" href="/media/image/reklama_brilard_kanorova.jpg" class="fancybox" rel="lightbox-item"><img alt="" src="/media/image/reklama_brilard_kanorova.jpg" style="width: 250px; height: 204px;" /></a><br />
+				<br />
+				<a class="fancybox" rel="group" href="/media/image/reklama_brilard_privalov.jpg" class="fancybox" rel="lightbox-item"><img alt="" src="/media/image/reklama_brilard_privalov.jpg" style="width: 250px; height: 204px;" /></a><br />
+				<p style="text-align: right;">
+					<a href="http://doka-dent.ru/news/zubnaya-pasta-brilar/"><br />
+					<em>Óçíàòü ïîäðîáíåå</em></a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<p class="index_pinfo_style">Looking for the dental-clinic in Moscow with English speaking staff having international certificates - in the centre of the city? Welcome! We wait for you!</p>
+</article><!-- Footer -->
+<footer class="b-footer">
+<div class="ad_foot_text1" style="paddng: 10px 20px; text-align:center; font-size:11px;">Ñåòü ñòîìàòîëîãèé "Äîêà-Äåíò" ã. Ìîñêâà ì. Áåëîðóññêàÿ (óë. 1-ÿ Òâåðñêàÿ-ßìñêàÿ, 27, ÖÀÎ) è ã. Ìîñêâà ì. Þãî-Çàïàäíàÿ, (óë. 26 Áàêèíñêèõ êîìèññàðîâ, 14, ÞÇÀÎ)</div>
+<div class="ad_foot_text2" style="paddng: 10px 20px; text-align:center; font-size:11px;">Ñåòü ñòîìàòîëîãèé "Äîêà-Äåíò" <br>ã. Ìîñêâà ì. Áåëîðóññêàÿ<br> (óë. 1-ÿ Òâåðñêàÿ-ßìñêàÿ, 27, ÖÀÎ) <br>ã. Ìîñêâà ì. Þãî-Çàïàäíàÿ<br> (óë. 26 Áàêèíñêèõ êîìèññàðîâ, 14, ÞÇÀÎ)</div>
+    <!-- Copyright -->
+    
+    
+    <div class="b-copyright ad_foot_leftcpy">
+     <p class="b-copyright__text"><span class="b-copyright__date">© 2016</span>Âñå ïðàâà çàùèùåíû. Ëþáîå èñïîëüçîâàíèå ìàòåðèàëîâ, èõ ïîäáîðêè, äèçàéíà è ýëåìåíòîâ äèçàéíà ìîæåò îñóùåñòâëÿòüñÿ ëèøü ðàçðåøåíèÿ «Äîêà-Äåíò»<br/>
+     </p>
+    <p class="ad_foot_2links" style="margin:0;"><a href="/sitemap/">Êàðòà ñàéòà</a><br><a href="/licenzii/">Ëèöåíçèè</a></p>
+
+     
+    </div>
+
+    <!-- Social -->
+    <div class="b-copyright ad_foot_social">
+        <p style="padding-left:40px">Ïðèñîåäèíÿéòåñü ê íàì<br><a href="http://instagram.com/dokadent/" rel="nofollow" target="_blank"><img src="/images/ig32.png" title="Ìû â Instagram" "alt="Ìû â Instagram"></a>&nbsp;<a href="https://www.facebook.com/dokadentstomatolog" rel="nofollow" target="_blank"><img src="/images/fb32.png" title="Ìû â Facebook" "alt="Ìû â Facebook"></a>&nbsp;<a href="https://twitter.com/dokadent_uzao" rel="nofollow" target="_blank"><img src="/images/tw32.png" title="Ìû â Twitter" "alt="Ìû â Twitter"></a>&nbsp;<a href="https://www.google.com/+Doka-dentRu" rel="nofollow" target="_blank"><img src="/images/gp32.png" title="Ìû â Google Plus" "alt="Ìû â Google Plus"></a>&nbsp;<a href="http://instagram.com/dokadentstomatolog" rel="nofollow" target="_blank"><img src="/images/ig32.png" title="Ìû â Instagram" "alt="Ìû â Instagram"></a></p>
+    </div>
+    
+    <div class="foot-tel leadocallPhone4">
+    <p>(+7 495) 433-24-40</p>
+    <p>(+7 499) 995-13-94</p>
+    </div>
+
+    <!-- Design by -->
+    <div class="b-design-by">
+        
+
+
+
+<!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=26613096&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/26613096/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="ßíäåêñ.Ìåòðèêà" title="ßíäåêñ.Ìåòðèêà: äàííûå çà ñåãîäíÿ (ïðîñìîòðû, âèçèòû è óíèêàëüíûå ïîñåòèòåëè)" onclick="try{Ya.Metrika.informer({i:this,id:26613096,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+
+    </div>
+
+
+</footer>
+</div>
+
+<div class="overlay"></div>
+<div id="modal1" class="modal">
+<p class="closeBtn">Çàêðûòü</p>
+<div class="results"></div>
+<div class="h2">Çàïèñü íà ïðèåì</div>
+
+<form name="ajaxform" id="ajaxform" action="/zapis2.php" method="POST">
+            <div class="b-form__row">
+                <span class="span">Èìÿ :</span>
+                <input type="text" id="client-name" name="fname" class="b-form__input validate[required] check"/>
+            </div>
+            <div class="b-form__row">
+                <span class="span">Òåëåôîí:</span>
+                <input type="text" id="client-phone" name="phone" class="b-form__input b-form__input_small check validate[required]"/>
+            </div>
+            <div class="b-form__row">
+                <span class="span">Ôèëèàë:</span>
+<select id="clinica" class="b-form__input b-form__input_select" name="clinica"><option value="1">Ñòîìàòîëîãèÿ íà Þãî-çàïàäíîé</option><option value="2">Ñòîìàòîëîãèÿ íà Áåëîðóññêîé</option></select>
+            </div>
+                <input type=submit class="ffff b-form__button b-form__button" name="submIdu" type="button" value="Îòïðàâèòü" />
+
+
+</form></div>
+
+    <script src="js/owl.carousel.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script type='text/javascript' src='/pop/jquery.modal.js'></script>
+    <script type='text/javascript' src='/pop/site.js'></script>
+
+<script type="text/javascript">
+
+
+$('.owl-carousel3').owlCarousel({
+    items: 1,
+    loop: true,
+    slideSpeed : 500,
+    paginationSpeed : 800,
+    rewindSpeed : 1000,
+    autoplay : true,
+    stopOnHover : false,
+});
+
+
+$('.owl-carousel').owlCarousel({
+    items: 1,
+    merge: true,
+    loop: true,
+    margin: 10,
+    video: true,
+    lazyLoad: false,
+    center: true,
+    responsive: {
+        480: {
+            items: 1
+        },
+        600: {
+            items: 1
+        }
+    }
+})
+
+$('.owl-carousel2').owlCarousel({
+    items: 1,
+    loop: true
+});
+
+var vid1 = $('.owl-carousel2 .owl-item').not(".cloned").find("video").get(0); //document.getElementById("iv1");
+vid1.volume = 0.1;
+var vid2 = $('.owl-carousel2 .owl-item').not(".cloned").find("video").get(1); //document.getElementById("iv2");
+vid2.volume = 0.1;
+
+if (vid1 != null) {
+    var first_time_video = true;
+    var owlll = $('.owl-carousel2');
+    owlll.on('changed.owl.carousel', function(event) {
+        vid1.pause();
+        vid2.pause();
+    });
+    vid1.onended = function() {
+        owlll.trigger('next.owl.carousel');
+    };
+    vid2.onended = function() {
+        owlll.trigger('next.owl.carousel');
+    };
+    $(document).on('scroll', function() {
+
+        if ($(document).scrollTop() >= 1140 && first_time_video) {
+            first_time_video = false;
+            vid1.play();
+        }
+    });
+
+}
+    
+    </script>
+     
+     
+
+</body>
+</html>

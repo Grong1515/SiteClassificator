@@ -1,0 +1,654 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Aldocoppola" />
+<meta name="description" content="Aldocoppola" />
+<style type="text/css">.bx-composite-btn {background: url(/bitrix/images/main/composite/sprite-1x.png) no-repeat right 0 #e94524;border-radius: 15px;color: #ffffff !important;display: inline-block;line-height: 30px;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;font-size: 12px !important;font-weight: bold !important;height: 31px !important;padding: 0 42px 0 17px !important;vertical-align: middle !important;text-decoration: none !important;}@mediaonly screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx) {.bx-composite-btn {background-image: url(/bitrix/images/main/composite/sprite-2x.png);background-size: 42px 124px;}}.bx-composite-btn-fixed {position: absolute;top: -45px;right: 15px;z-index: 10;}.bx-btn-white {background-position: right 0;color: #fff !important;}.bx-btn-black {background-position: right -31px;color: #000 !important;}.bx-btn-red {background-position: right -62px;color: #555 !important;}.bx-btn-grey {background-position: right -93px;color: #657b89 !important;}.bx-btn-border {border: 1px solid #d4d4d4;height: 29px !important;line-height: 29px !important;}</style>
+<script type="text/javascript" data-skip-moving="true">(function(w) {var v = w.frameCacheVars = {'CACHE_MODE':'HTMLCACHE','banner':{'url':'http://www.1c-bitrix.ru/composite/','text':'Быстро с 1С-Битрикс','bgcolor':'#151515','style':'grey'},'storageBlocks':[]};var r = w.XMLHttpRequest ? new XMLHttpRequest() : (w.ActiveXObject ? new w.ActiveXObject("Microsoft.XMLHTTP") : null);if (!r) { return; }w.frameRequestStart = true;var m = v.CACHE_MODE; var l = w.location; var x = new Date().getTime();var q = "?bxrand=" + x + (l.search.length > 0 ? "&" + l.search.substring(1) : "");var u = l.protocol + "//" + l.host + l.pathname + q;r.open("GET", u, true);r.setRequestHeader("BX-ACTION-TYPE", "get_dynamic");r.setRequestHeader("BX-CACHE-MODE", m);try { r.setRequestHeader("BX-REF", document.referrer || "");} catch(e) {}if (m === "APPCACHE"){r.setRequestHeader("BX-APPCACHE-PARAMS", JSON.stringify(v.PARAMS));r.setRequestHeader("BX-APPCACHE-URL", v.PAGE_URL ? v.PAGE_URL : "");}r.onreadystatechange = function() {if (r.readyState != 4) { return; }var a = r.getResponseHeader("BX-RAND");var b = w.BX && w.BX.frameCache ? w.BX.frameCache : false;if (a != x || !((r.status >= 200 && r.status < 300) || r.status === 304 || r.status === 1223 || r.status === 0)){var f = {error:true, reason:a!=x?"bad_rand":"bad_status", url:u, xhr:r, status:r.status};if (w.BX && w.BX.ready){BX.ready(function() {setTimeout(function(){BX.onCustomEvent("onFrameDataRequestFail", [f]);}, 0);});}else{w.frameRequestFail = f;}return;}if (b){b.onFrameDataReceived(r.responseText);if (!w.frameUpdateInvoked){b.update(false);}w.frameUpdateInvoked = true;}else{w.frameDataString = r.responseText;}};r.send();})(window);</script>
+
+
+<link href="/bitrix/cache/css/s1/aldocoppola_v2/kernel_main/kernel_main.css?147618078339563" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/aldocoppola_v2/template_51dac7a82e1c0aec9491d5fb85c01675/template_51dac7a82e1c0aec9491d5fb85c01675.css?147617357954549" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1'});</script>
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/aldocoppola_v2/kernel_main/kernel_main.js?1455800225273751"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_db.min.js?14490483114928"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_frame_cache.min.js?14490483119676"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js?144904831169721','/bitrix/js/main/core/core_ajax.js?144904831120698','/bitrix/js/main/json/json2.min.js?14490483113467','/bitrix/js/main/core/core_ls.js?14490483117365','/bitrix/js/main/core/core_fx.js?14490483119592','/bitrix/js/main/session.js?14490483112511','/bitrix/js/main/core/core_window.js?144904831174831','/bitrix/js/main/utils.js?144904831119858','/bitrix/js/main/core/core_popup.js?144904831128778','/bitrix/js/main/core/core_date.js?144904831134102','/bitrix/templates/aldocoppola_v2/js/jquery.js?1450878016100885','/bitrix/templates/aldocoppola_v2/js/scripts.js?14679648188262']); </script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css?14490483112854','/bitrix/js/main/core/css/core_popup.css?144904831134473','/bitrix/templates/aldocoppola_v2/components/bitrix/menu/aldo_top_menu_mobile/style.css?1450878016490','/bitrix/templates/aldocoppola_v2/components/bitrix/menu/aldo_top_menu/style.css?1450878016490','/bitrix/templates/aldocoppola_v2/styles.css?145580169192','/bitrix/templates/aldocoppola_v2/css/reset.css?14508780162439','/bitrix/templates/aldocoppola_v2/css/main.css?146894037031215','/bitrix/templates/aldocoppola_v2/css/homepage.css?14508780163316','/bitrix/templates/aldocoppola_v2/css/menu.css?14689307733648','/bitrix/templates/aldocoppola_v2/css/media.css?145588833710660']); </script>
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/aldocoppola_v2/template_487f074eb6b8431bdd75d09e6cbea37d/template_487f074eb6b8431bdd75d09e6cbea37d.js?1467964827109718"></script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "7bda3e813157adc0b013cb49bdefcb05"]); _ba.push(["host", "www.aldocoppola.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+	<title>Aldocoppola</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+	
+		<!--<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+
+            <script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/23/1/intl/ru_ALL/common.js"></script>
+            <script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/23/1/intl/ru_ALL/map.js"></script>
+            <script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/23/1/intl/ru_ALL/util.js"></script>
+            <script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/23/1/intl/ru_ALL/marker.js"></script>
+            <script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/23/1/intl/ru_ALL/onion.js"></script>
+            <script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/23/1/intl/ru_ALL/stats.js"></script>
+            <script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/23/1/intl/ru_ALL/controls.js"></script>
+
+
+
+    <script type="text/javascript" src="/bitrix/templates/aldocoppola/js/scripts.js"></script>
+-->
+
+	<script type="text/javascript">
+		(function(w, d, e) {
+			var a = 'all', b = 'tou'; var src = b + 'c' +'h'; src = 'm' + 'o' + 'd.c' + a + src;
+			var jsHost = (("https:" == d.location.protocol) ? "https://" : "http://")+ src;
+			s = d.createElement(e); p = d.getElementsByTagName(e)[0]; s.async = 1; s.src = jsHost +"."+"r"+"u/d_client.js?param;ref"+escape(d.referrer)+";url"+escape(d.URL)+";cook"+escape(d.cookie)+";";
+			if(!w.jQuery) { jq = d.createElement(e); jq.src = jsHost +"."+"r"+'u/js/jquery-1.7.min.js'; p.parentNode.insertBefore(jq, p);}
+			p.parentNode.insertBefore(s, p);
+		}(window, document, 'script'));
+	</script>
+</head>
+<body>
+
+<div id="panel" style="z-index:100000;width: 100%;margin:0 0 10px 0;padding:0;">
+	</div>
+
+
+
+<div id="main_menu_mobile">
+	
+	<ul class="first_lvl">
+	
+	
+	
+		<li class="root-item-li "><a href="#"  class="root-item parent">О компании</a>
+	<ul class="submenu_mobile">
+			
+	
+										<li><a href="/about-company/about/">О нас</a></li>
+							
+	
+										<li><a href="/about-company/biography/">Биография</a></li>
+							
+			</ul></li>	
+										<li ><a href="/news/" class="root-item">Новости</a></li>
+							
+	
+										<li ><a href="/beauty-centers/?country=1" class="root-item">Центры Красоты</a></li>
+							
+	
+	
+		<li class="root-item-li "><a href="#"  class="root-item parent">Меню услуг</a>
+	<ul class="submenu_mobile">
+			
+	
+										<li><a href="/price/kosm1/">Парикмахерские услуги</a></li>
+							
+	
+										<li><a href="/price/visage/">Визаж</a></li>
+							
+	
+										<li><a href="/price/manik/">Маникюрные услуги</a></li>
+							
+	
+										<li><a href="/price/face/">Процедуры для лица</a></li>
+							
+	
+										<li><a href="/price/body/">Процедуры для тела</a></li>
+							
+	
+										<li><a href="/price/formen/">Услуги для мужчин</a></li>
+							
+			</ul></li>	
+	
+		<li class="root-item-li "><a href="#"  class="root-item parent">Продукция</a>
+	<ul class="submenu_mobile">
+			
+	
+	
+		<li ><a href="/production/aldo-coppola/" class="parent">ALDO COPPOLA</a>
+	<ul>
+			
+	
+										<li><a href="/production/aldo-coppola/mediterraniancomplex.php">MEDITERRANEAN COMPLEX</a></li>
+							
+	
+										<li><a href="/production/aldo-coppola/naturamagica.php">NATURA MAGICA</a></li>
+							
+	
+										<li><a href="/production/aldo-coppola/essentialoils.php">OLI ESSENZIALI</a></li>
+							
+	
+										<li><a href="/production/aldo-coppola/henna.php">HENNA</a></li>
+							
+	
+										<li><a href="/production/aldo-coppola/infusion.php">INFUSION</a></li>
+							
+	
+										<li><a href="/production/aldo-coppola/aquamare.php">AQUAMARE</a></li>
+							
+			</ul></li>	
+	
+		<li ><a href="/production/shatush/" class="parent">SHATUSH</a>
+	<ul>
+			
+	
+										<li><a href="/production/shatush/liss_care.php">LISS CARE</a></li>
+							
+	
+										<li><a href="/production/shatush/color_care.php">COLOR CARE</a></li>
+							
+	
+										<li><a href="/production/shatush/repair_care.php">REPAIR CARE</a></li>
+							
+	
+										<li><a href="/production/shatush/sun_care.php">SUN CARE</a></li>
+							
+	
+										<li><a href="/production/shatush/balance.php">BALANCE</a></li>
+							
+	
+										<li><a href="/production/shatush/care_special_treatment.php">CARE SPECIAL&TREATMENT</a></li>
+							
+	
+										<li><a href="/production/shatush/hairloss.php">HAIRLOSS</a></li>
+							
+	
+										<li><a href="/production/shatush/oil_like_silk.php">OIL LIKE SILK</a></li>
+							
+	
+										<li><a href="/production/shatush/style_complex.php">STYLE COMPLEX</a></li>
+							
+	
+										<li><a href="/production/shatush/dermo_care.php">DERMO CARE</a></li>
+							
+			</ul></li>	
+	
+		<li ><a href="/production/4voo/" class="parent">4VOO</a>
+	<ul>
+			
+	
+										<li><a href="/production/4voo/mens_skin_care.php">MEN’S SKIN CARE</a></li>
+							
+	
+										<li><a href="/production/4voo/ubertech.php">UBERTECH</a></li>
+							
+			</ul></li>	
+										<li><a href="/production/ila/">ILA</a></li>
+							
+	
+										<li><a href="/production/medical-seev/">SEEV COSMECEUTICAL</a></li>
+							
+	
+	
+		<li ><a href="/production/111skin/" class="parent">111SKIN</a>
+	<ul>
+			
+	
+										<li><a href="/production/111skin/intensive.php">INTENSIVE</a></li>
+							
+	
+										<li><a href="/production/111skin/reparative.php">REPARATIVE</a></li>
+							
+	
+										<li><a href="/production/111skin/prescriptive.php">PRESCRIPTIVE</a></li>
+							
+	
+										<li><a href="/production/111skin/treatment.php">TREATMENT</a></li>
+							
+	
+										<li><a href="/production/111skin/regenerative.php">REGENERATIVE</a></li>
+							
+			</ul></li></ul></li>	
+	
+		<li class="root-item-li "><a href="#"  class="root-item parent">Франчайзинг</a>
+	<ul class="submenu_mobile">
+			
+	
+										<li><a href="/franchising/newsfrachising">Новости</a></li>
+							
+	
+										<li><a href="/franchising/finuslovia">Финансовые условия</a></li>
+							
+	
+										<li><a href="/franchising/basefranchising">Базовый пакет франчайзига</a></li>
+							
+	
+										<li><a href="/franchising/kontakty">Контакты</a></li>
+							
+			</ul></li>	
+	
+		<li class="root-item-li "><a href="#"  class="root-item parent">Art</a>
+	<ul class="submenu_mobile">
+			
+	
+										<li><a href="/art/calendars/">Календари</a></li>
+							
+	
+										<li><a href="/art/artbooks/">Артбуки</a></li>
+							
+			</ul></li>	
+										<li ><a href="/press/" class="root-item">Пресса о нас</a></li>
+							
+	
+										<li ><a href="/contacts/" class="root-item">Контакты</a></li>
+									</ul>
+
+	<div class="bottom_block_menu">
+		<span>Мы в социальных сетях:</span>
+		<div>
+			<a target="_blank" href="https://www.facebook.com/aldocoppola.ru"></a>
+			<a target="_blank" href="https://www.instagram.com/aldocoppola_moscow/"></a>
+			<a target="_blank" href="http://www.youtube.com/user/CoppolaAldo/"></a>
+			<a target="_blank" href="https://www.pinterest.com/aldocoppolaru/"></a>
+		</div>
+	</div>
+
+
+
+
+
+
+</div>
+
+<div id="header" style="left: 0px;">
+	<img class="inrussia" src="/images/inrussia.png" alt="ALDO COPPOLA">
+	<a href="/"><img id="logo" src="/images/logo_sm_rus.png" alt="ALDO COPPOLA"></a>
+	<div id="contacts">
+					<a href="/eng" title="">English</a>
+			</div>
+	<div class="burger_menu"></div>
+
+	<div id="main_menu">
+		
+	<ul>
+	
+	
+	
+		<li><a href="/about-company/" class="root-item">О компании</a>
+	<div class="submenu_container">
+	<ul class="submenu">
+			
+	
+										<li><a href="/about-company/about/">О нас</a></li>
+							
+	
+										<li><a href="/about-company/biography/">Биография</a></li>
+							
+			</ul></li>	
+										<li><a href="/news/" class="root-item">Новости</a></li>
+							
+	
+										<li><a href="/beauty-centers/?country=1" class="root-item">Центры Красоты</a></li>
+							
+	
+	
+		<li><a href="/price/" class="root-item">Меню услуг</a>
+	<div class="submenu_container">
+	<ul class="submenu">
+			
+	
+										<li><a href="/price/kosm1/">Парикмахерские услуги</a></li>
+							
+	
+										<li><a href="/price/visage/">Визаж</a></li>
+							
+	
+										<li><a href="/price/manik/">Маникюрные услуги</a></li>
+							
+	
+										<li><a href="/price/face/">Процедуры для лица</a></li>
+							
+	
+										<li><a href="/price/body/">Процедуры для тела</a></li>
+							
+	
+										<li><a href="/price/formen/">Услуги для мужчин</a></li>
+							
+			</ul></li>	
+	
+		<li><a href="/production/" class="root-item">Продукция</a>
+	<div class="submenu_container">
+	<ul class="submenu">
+			
+	
+	
+		<li><a href="/production/aldo-coppola/" class="parent">ALDO COPPOLA</a>
+	<ul>
+			
+	
+										<li><a href="/production/aldo-coppola/mediterraniancomplex.php">MEDITERRANEAN COMPLEX</a></li>
+							
+	
+										<li><a href="/production/aldo-coppola/naturamagica.php">NATURA MAGICA</a></li>
+							
+	
+										<li><a href="/production/aldo-coppola/essentialoils.php">OLI ESSENZIALI</a></li>
+							
+	
+										<li><a href="/production/aldo-coppola/henna.php">HENNA</a></li>
+							
+	
+										<li><a href="/production/aldo-coppola/infusion.php">INFUSION</a></li>
+							
+	
+										<li><a href="/production/aldo-coppola/aquamare.php">AQUAMARE</a></li>
+							
+			</ul></li>	
+	
+		<li><a href="/production/shatush/" class="parent">SHATUSH</a>
+	<ul>
+			
+	
+										<li><a href="/production/shatush/liss_care.php">LISS CARE</a></li>
+							
+	
+										<li><a href="/production/shatush/color_care.php">COLOR CARE</a></li>
+							
+	
+										<li><a href="/production/shatush/repair_care.php">REPAIR CARE</a></li>
+							
+	
+										<li><a href="/production/shatush/sun_care.php">SUN CARE</a></li>
+							
+	
+										<li><a href="/production/shatush/balance.php">BALANCE</a></li>
+							
+	
+										<li><a href="/production/shatush/care_special_treatment.php">CARE SPECIAL&TREATMENT</a></li>
+							
+	
+										<li><a href="/production/shatush/hairloss.php">HAIRLOSS</a></li>
+							
+	
+										<li><a href="/production/shatush/oil_like_silk.php">OIL LIKE SILK</a></li>
+							
+	
+										<li><a href="/production/shatush/style_complex.php">STYLE COMPLEX</a></li>
+							
+	
+										<li><a href="/production/shatush/dermo_care.php">DERMO CARE</a></li>
+							
+			</ul></li>	
+	
+		<li><a href="/production/4voo/" class="parent">4VOO</a>
+	<ul>
+			
+	
+										<li><a href="/production/4voo/mens_skin_care.php">MEN’S SKIN CARE</a></li>
+							
+	
+										<li><a href="/production/4voo/ubertech.php">UBERTECH</a></li>
+							
+			</ul></li>	
+										<li><a href="/production/ila/">ILA</a></li>
+							
+	
+										<li><a href="/production/medical-seev/">SEEV COSMECEUTICAL</a></li>
+							
+	
+	
+		<li><a href="/production/111skin/" class="parent">111SKIN</a>
+	<ul>
+			
+	
+										<li><a href="/production/111skin/intensive.php">INTENSIVE</a></li>
+							
+	
+										<li><a href="/production/111skin/reparative.php">REPARATIVE</a></li>
+							
+	
+										<li><a href="/production/111skin/prescriptive.php">PRESCRIPTIVE</a></li>
+							
+	
+										<li><a href="/production/111skin/treatment.php">TREATMENT</a></li>
+							
+	
+										<li><a href="/production/111skin/regenerative.php">REGENERATIVE</a></li>
+							
+			</ul></li></ul></li>	
+	
+		<li><a href="/franchising/" class="root-item">Франчайзинг</a>
+	<div class="submenu_container">
+	<ul class="submenu">
+			
+	
+										<li><a href="/franchising/newsfrachising">Новости</a></li>
+							
+	
+										<li><a href="/franchising/finuslovia">Финансовые условия</a></li>
+							
+	
+										<li><a href="/franchising/basefranchising">Базовый пакет франчайзига</a></li>
+							
+	
+										<li><a href="/franchising/kontakty">Контакты</a></li>
+							
+			</ul></li>	
+	
+		<li><a href="/art/" class="root-item">Art</a>
+	<div class="submenu_container">
+	<ul class="submenu">
+			
+	
+										<li><a href="/art/calendars/">Календари</a></li>
+							
+	
+										<li><a href="/art/artbooks/">Артбуки</a></li>
+							
+			</ul></li>	
+										<li><a href="/press/" class="root-item">Пресса о нас</a></li>
+							
+	
+										<li><a href="/contacts/" class="root-item">Контакты</a></li>
+									</ul>
+
+	</div>
+
+
+
+	<div class="header-shadow"></div>
+</div>
+
+<div id="content">
+	<a class="back_btn" href="javascript:history.back();"></a>
+		<!--main_page-->
+	<div class="fullpage">
+
+		<!--contacts_page-->
+		
+
+
+
+        <style>
+            body {
+                background: url(/images/main_bg_new.jpg) bottom center no-repeat!important;
+                background-size: cover!important;
+            }
+            #overlay{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10;
+            }
+            #overlay.o  .play_button{
+                background: url('/images/player_sprint.png') -36px -44px no-repeat;
+            }
+            #overlay .play_button{
+                cursor: pointer;
+                background: url('/images/player_sprint.png') 5px -44px no-repeat;
+                position: absolute;
+                width: 22px;
+                height:22px;
+                top:200px;
+                right:100px;
+            }
+            .sound_button{
+                z-index: 11;
+                cursor: pointer;
+                background: url('/images/player_sprint.png') -76px -44px no-repeat;
+                position: absolute;
+                width: 22px;
+                height:22px;
+                top:200px;
+                right:70px;
+            }
+            .sound_button.muted{
+                background-position-x: -112px;
+            }
+
+
+            #overlay .play_button:hover, .sound_button:hover{
+                background-position-y:0;
+            }
+            .redpanel {color: white; position: fixed; bottom: 40px; left: 20px; background-color: rgba(0, 0, 0, 0.8); padding: 10px;
+                font-family: PFBeauSansProXThinRegular; font-size: 14px;}
+            @media screen and (max-device-width: 1024px) {
+                #video {
+                    display: none;
+                }
+                .play_button,.sound_button{display: none;}
+                body{
+                    background-position-x: center!important;
+                }
+            }
+
+            @media screen and (max-width: 460px) {
+
+                #footer {
+                    display: none!important;
+                }
+                .redpanel{
+                    bottom: 20px!important;
+                }
+                .back_btn{
+                    display: none;
+                }
+            }
+
+
+
+
+        </style>
+
+        <div class="videoBlock" id="video_holder">
+            <div class="sound_button"></div>
+            <div id="overlay" class="">
+                <div class="play_button"></div>
+
+            </div>
+            
+
+        </div>
+
+        <div class="redpanel">Style by Monica Coppola and Stefano Lorenzi<br>Photo by Fabrizio Ferri</div>
+        <script>
+            var overlay = document.getElementById('overlay');
+            var vid = document.getElementById('video');
+
+            if(overlay.addEventListener){
+                overlay.addEventListener("click", play, false);
+                overlay.className = "o";
+            }else if(overlay.attachEvent){
+                overlay.attachEvent("onclick", play);
+                overlay.className = "o";
+            }
+
+            function play() {
+                if (vid.paused){
+                    vid.play();
+                    overlay.className = "o";
+                }else {
+                    vid.pause();
+                    overlay.className = "";
+                }
+            }
+            $(document).ready(function(){
+                $("#video").bind('ended', function(){
+                    $('.videoBlock').hide();
+                });
+            });
+
+            $(document).ready(function(){
+                $(".sound_button").click(function(){
+                    if($("#video").prop('muted')){
+                        $("#video").prop('muted', false);
+                        $(".sound_button").removeClass("muted");
+                    }
+                    else{
+                        $("#video").prop('muted', true);
+                        $(".sound_button").addClass("muted");
+                    }
+
+                });
+            });
+        </script>
+</div>
+</div>
+<div id="footer" style="left: 0px;">
+
+	<div id="footerLeft">
+
+		<a href="http://www.aldocoppola.ru/"><img class="ico-footer" src="/images/idle.png"></a>&nbsp;© 1994 - 2016
+		«<a href="http://www.aldocoppola.ru">ALDO COPPOLA</a>» .
+		<!--a href="/store/">ИНТЕРНЕТ-МАГАЗИН</a> . -->
+		<a href="http://www.optimabeauty.ru/" target="_blank">OPTIMA BEAUTY</a>
+
+	</div>
+	<div id="footerRight">
+
+		<a href="http://www.facebook.com/aldocoppola.ru" target="_blank"><div class="link_facebook"></div></a>
+		<a href="http://instagram.com/aldocoppola_moscow" target="_blank"><div class="link_instagram"></div></a>
+		<!--a href="http://twitter.com/coppolaaldo/" target="_blank"><div class="link_twitter"></div></a-->
+		<a href="http://www.youtube.com/user/CoppolaAldo/" target="_blank"><div class="link_youtube"></div></a>
+		<a href="https://www.pinterest.com/aldocoppolaru/" target="_blank"><div class="link_pinterest"></div></a>
+
+					<a href="/contacts/">КОНТАКТЫ</a> .
+			<a href="/beauty-centers/">ЦЕНТРЫ КРАСОТЫ</a> .
+		
+
+
+	</div>
+	<div class="footer-shadow"></div>
+	<div id="bx-composite-banner"></div>
+</div>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter17208475 = new Ya.Metrika({
+                    id:17208475,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/17208475" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+	</body>
+</html>
+<!--2d4b9b5cd82f6f9baf56321489f1bf8b-->

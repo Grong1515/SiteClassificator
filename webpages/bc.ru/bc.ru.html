@@ -1,0 +1,1281 @@
+        <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
+    <head>
+		<!-- <meta name="viewport" content="width=device-width,initial-scale=1" /> -->
+        
+		<meta name="author" content="" />
+
+		<title>Belmont - системная интеграция.</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="/bitrix/cache/css/s1/index/kernel/kernel.css?1379859813" type="text/css" rel="stylesheet" />
+<script type="text/javascript"> var arKernelCSS = new Array('/bitrix/js/main/core/css/core.css','/bitrix/js/fileman/sticker.css','/bitrix/js/main/core/css/core_panel.css'); </script><link href="/bitrix/cache/css/s1/index/template_7cc2f37b5385176740ea49a357ae9b17/template_7cc2f37b5385176740ea49a357ae9b17_3e7df4a662b7a6e0bd800b8e1e1badbe.css?1394699262" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script><script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1477475277','SERVER_TZ_OFFSET':'10800','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'6779aab2e0b19c91867476e45afe102c','SITE_ID':'s1'});(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript" src="/bitrix/cache/js/s1/index/kernel/kernel.js?1379859813"></script>
+<script type="text/javascript"> BX.setKernelJS(['/bitrix/js/main/core/core.js','/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/session.js','/bitrix/js/main/core/core_fx.js','/bitrix/js/main/core/core_window.js','/bitrix/js/fileman/sticker.js','/bitrix/js/main/core/core_admin.js','/bitrix/js/main/utils.js','/bitrix/js/main/admin_tools.js','/bitrix/js/main/popup_menu.js','/bitrix/js/main/admin_search.js','/bitrix/js/main/hot_keys.js','/bitrix/js/main/public_tools.js']); </script><script type="text/javascript">
+bxSession.Expand(1440, '6779aab2e0b19c91867476e45afe102c', false, '5923a5b0e815b20cb65654092f3e7c05');
+</script>
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/index/template_23c6e4f60e83c29a2669c136721f9b53/template_23c6e4f60e83c29a2669c136721f9b53_8690c971baefc0dbe0e7658f4390850e.js?1379673901"></script>
+
+		
+        <link rel="stylesheet" href="/css/jquery.jscrollpane.css">
+        <link rel="stylesheet" href="/css/jquery.fancybox.css">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/main.css">
+		<!--link href="/css/ny.css" rel="stylesheet"/-->
+    </head>
+    <body>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter24174715 = new Ya.Metrika({id:24174715,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/24174715" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+        		<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+<div id="outer">
+        <div class="wrapper">
+            <div id="top">
+                <span id="toTopBg">&nbsp;</span>
+                <span id="toTopLink">наверх&nbsp;&uarr;</span>
+            </div>
+            <!--header-->
+            <div class="header">
+                <div class="headerLogo">
+                    <a href="/">&nbsp;</a>
+                </div>
+                <div class="headerContacts">
+                    <!-- <div class="langSwitch"><img src="/i/switch.jpg" alt="/" /></div> -->
+                    <div class="langSwitch">
+                        <div class="switchWrap">&nbsp;</div>
+                        <span class="switchCircle left"></span>
+                        <div class="lang">
+                                                            <a class="active" href="javascript:void(0);">RU</a><span>&nbsp;</span><a  href="/en/">ENG</a>
+                                                    </div>
+                    </div>
+                    <div class="hdBetween">&nbsp;</div>
+                    <div class="headerPhones">
+                        <span>+7 (495) 937-16-06</span>                    </div>
+                    <div class="hdBetween">&nbsp;</div>
+                    
+                    <div class="socialIcons">
+                        
+<div class="oneIcon"><a class="in" href="http://www.linkedin.com/company/llc-belmont" target="_blank" >&nbsp;</a></div>
+ 
+<div class="oneIcon"><a class="fb" href="https://www.facebook.com/pages/Belmont/451112284925984" target="_blank" >&nbsp;</a></div>
+ 
+<div class="oneIcon"><a class="tw" href="https://twitter.com/BelmontCompany" target="_blank" >&nbsp;</a></div>
+ 
+<div class="oneIcon"> <a href="https://www.youtube.com/channel/UCdNq46RrhtQzJgLvxRZOEBA" ><img src="/YouTube.png"  /></a></div>
+                    </div>
+                </div>
+                
+            </div>
+            <!--header-->
+
+            <!--top menu-->
+            <div class="topMenuWrap">
+                <nav>   
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table id="horizontal-multilevel-menu"><tr>
+	
+	
+	
+	
+					<td >
+				<div class="firstLevel"><a href="/about/" class="root-item">
+					<span class="ltPtMenu">
+						<span class="rtPtMenu">
+							<span class="ctPtMenu">О группе компаний</span>
+						</span>
+					</span>
+				</a>
+				<div><ul>
+						
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/about/our-certificates-and-licenses/">Лицензии и сертификаты</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/about/partners/">Партнеры</a></li>
+			
+		
+	
+	
+	
+	
+			</ul></li>	
+	
+					<td >
+				<div class="firstLevel"><a href="javascript:void(0);" class="root-item">
+					<span class="ltPtMenu">
+						<span class="rtPtMenu">
+							<span class="ctPtMenu">Услуги и решения</span>
+						</span>
+					</span>
+				</a>
+				<div><ul>
+						
+	
+	
+	
+	
+	
+	
+					<li class="parent"><a href="/competence-and-solutions/85/" class="parent">Инженерная инфраструктура</a>
+				<div><ul>
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/86/">Структурированные кабельные системы (СКС)</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/87/">Системы контроля и управления доступом (СКУД)</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/88/">Системы бесперебойного электропитания</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+					<li class="parent"><a href="/competence-and-solutions/171/" class="parent">Системы видеонаблюдения (CCVT)</a>
+				<div><ul>
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/175/">Интегрированные системы контроля и безопасности</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/177/">Ситуационные центры</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/178/">Территориально распределенные системы видеонаблюденния</a></li>
+			
+		
+	
+	
+	
+	
+			</ul></li>	
+	
+		
+							<li><a href="/competence-and-solutions/172/">Мультимедийные системы</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/174/">Системы диспетчирования</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/173/">Wi-Fi решения</a></li>
+			
+		
+	
+	
+	
+	
+			</ul></li>	
+	
+					<li class="parent"><a href="/competence-and-solutions/66/" class="parent">Сети и передача данных</a>
+				<div><ul>
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/69/">Системы беспроводного доступа</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/67/">IP-телефония на базе технологий Cisco, Microsoft Lync</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/68/">ВКС и системы удаленного присутствия</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/74/">Мультисервисные корпоративные сети передачи данных</a></li>
+			
+		
+	
+	
+	
+	
+			</ul></li>	
+	
+					<li class="parent"><a href="/competence-and-solutions/59/" class="parent">Вычислительные комплексы и системы хранения данных</a>
+				<div><ul>
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/63/">Адаптивные многоуровневые системы хранения данных</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/61/">Виртуализация</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/65/">Мониторинг и управление IT-инфраструктурой</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/60/">Серверные платформы</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/64/">Системы резервного копирования и восстановления данных</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/62/">Системы хранения данных</a></li>
+			
+		
+	
+	
+	
+	
+			</ul></li>	
+	
+					<li class="parent"><a href="/competence-and-solutions/79/" class="parent">Контакт-центры на платформе Genesys</a>
+				<div><ul>
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/81/">Аналитика, контроль и оптимизации использования ресурсов</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/82/">Интеллектуальные системы телефонного самообслуживания</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/80/">Проектирование и внедрение контакт-центров</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/83/">Техническая поддержка контактных центров</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/84/">Учебный центр Genesys University</a></li>
+			
+		
+	
+	
+	
+	
+			</ul></li>	
+	
+					<li class="parent"><a href="/competence-and-solutions/154/" class="parent">Системы управления обучением Blackboard </a>
+				<div><ul>
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/155/">Blackboard Learn</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/156/">Blackboard Collaborate </a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/157/">Blackboard Mobile</a></li>
+			
+		
+	
+	
+	
+	
+			</ul></li>	
+	
+					<li class="parent"><a href="/competence-and-solutions/75/" class="parent">Программные решения корпоративного уровня</a>
+				<div><ul>
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/76/">Виртуализация Hyper-V, System Center 2012, VMWare</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/78/">Skype for Business</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/competence-and-solutions/158/">Мониторинг состояния сетевых печатающих устройств</a></li>
+			
+		
+	
+	
+	
+	
+			</ul></li></ul></li>	
+	
+		
+							<td >
+					<div><a href="/academic-center/" class="root-item">
+						<span class="ltPtMenu">
+							<span class="rtPtMenu">
+								<span class="ctPtMenu">Учебный центр</span>
+							</span>
+						</span>
+					</a></div>
+				</td>
+							
+		
+	
+	
+	
+	
+	
+	
+					<td >
+				<div class="firstLevel"><a href="/service-center/" class="root-item">
+					<span class="ltPtMenu">
+						<span class="rtPtMenu">
+							<span class="ctPtMenu">Сервисный центр</span>
+						</span>
+					</span>
+				</a>
+				<div><ul>
+						
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/service-center/HP warranty repair/">Гарантийный ремонт оборудования HP</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/service-center/Lenovo warranty repair/">Гарантийный ремонт оборудования Lenovo</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/service-center/after warranty repair/">Послегарантийный ремонт оборудования</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/service-center/progser/">Программы корпоративного сервисного обслуживания</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/service-center/installation and start-up equipment/">Инсталляция и запуск оборудования</a></li>
+			
+		
+	
+	
+	
+	
+	
+	
+		
+							<li><a href="/service-center/kontrol/">Дистанционная диагностика оборудования</a></li>
+			
+		
+	
+	
+	
+	
+			</ul></li>	
+	
+		
+							<td >
+					<div><a href="/career/" class="root-item">
+						<span class="ltPtMenu">
+							<span class="rtPtMenu">
+								<span class="ctPtMenu">Карьера</span>
+							</span>
+						</span>
+					</a></div>
+				</td>
+							
+		
+	
+	
+	
+	
+	
+	
+		
+							<td >
+					<div><a href="/contacts/" class="root-item">
+						<span class="ltPtMenu">
+							<span class="rtPtMenu">
+								<span class="ctPtMenu">Контакты</span>
+							</span>
+						</span>
+					</a></div>
+				</td>
+							
+		
+	
+	
+	
+	
+	
+	
+		
+							<td class="lastChild">
+					<div><a href="http://service.bc.ru" class="root-item">
+						<span class="ltPtMenu">
+							<span class="rtPtMenu">
+								<span class="ctPtMenu">Сервисная заявка</span>
+							</span>
+						</span>
+					</a></div>
+				</td>
+							
+		
+	
+	
+
+
+</tr></table>
+<div class="menu-clear-left"></div>
+                </nav>  
+            </div>
+            <!--top menu-->
+
+            <!-- service order -->
+            <div id="serviceOrder" class="orderFormEvent">
+                <div id="comp_b852f2b6cf9e6f5dadc0b4584b3c3a2c">
+
+
+
+
+
+
+<form name="SIMPLE_FORM_6" action="/" method="POST" enctype="multipart/form-data"><input type="hidden" name="bxajaxid" id="bxajaxid_b852f2b6cf9e6f5dadc0b4584b3c3a2c_93833" value="b852f2b6cf9e6f5dadc0b4584b3c3a2c" /><input type="hidden" name="AJAX_CALL" value="Y" /><script type="text/javascript">
+function _processform_93833(){
+	var obForm = top.BX('bxajaxid_b852f2b6cf9e6f5dadc0b4584b3c3a2c_93833').form;
+	top.BX.bind(obForm, 'submit', function() {BX.ajax.submitComponentForm(this, 'comp_b852f2b6cf9e6f5dadc0b4584b3c3a2c', true)});
+	top.BX.removeCustomEvent('onAjaxSuccess', _processform_93833);
+}
+if (top.BX('bxajaxid_b852f2b6cf9e6f5dadc0b4584b3c3a2c_93833'))
+	_processform_93833();
+else
+	top.BX.addCustomEvent('onAjaxSuccess', _processform_93833);
+</script><input type="hidden" name="sessid" id="sessid" value="6779aab2e0b19c91867476e45afe102c" /><input type="hidden" name="WEB_FORM_ID" value="6" />
+
+
+
+
+<div>
+	<div class="orderTopEvent">
+		<div class="orderTopTypeEvent">Сервисная заявка</div>
+
+	</div>
+	<div class="formContent service">	
+
+		<table >
+			<tbody>
+				<tr>
+					<td colspan="2"><div class="serviceName">Запрос на сервисное обслуживание</div></td>
+				</tr>
+					<tr>
+					<td>Оборудование, модель<sup class="required">*</sup>							</td>
+					<td><input type="text" class="inputtext" name="form_text_32" value="" size="0"></td>
+				</tr>
+					<tr>
+					<td>
+										Product number (p/n)<sup class="required">*</sup>							</td>
+					<td><input type="text" class="inputtext" name="form_text_33" value="" size="0"></td>
+				</tr>
+					<tr>
+					<td>
+										Serial number (s/n)<sup class="required">*</sup>							</td>
+					<td><input type="text" class="inputtext" name="form_text_34" value="" size="0"></td>
+				</tr>
+					<tr>
+					<td>Описание неисправности<sup class="required">*</sup></td>
+					<td><textarea name="form_textarea_35" cols="40" rows="5" class="inputtextarea"></textarea></td>
+				</tr>
+					<tr>
+					<td>Комплектация оборудования, сдаваемого в ремонт</td>
+					<td>
+						
+						<div class="oneValue">
+							<span  class="customCheckbox">&nbsp;</span>
+							<span class="customLabel">Внешний блок питания</span>
+							<input type="hidden" value="36" disabled="disabled"  name="form_checkbox_SIMPLE_QUESTION_799[]">
+						</div>
+
+						<div class="oneValue">
+							<span class="customCheckbox">&nbsp;</span>
+							<span class="customLabel">Гарантийный талон</span>
+							<input type="hidden" value="37" disabled="disabled" name="form_checkbox_SIMPLE_QUESTION_799[]">
+						</div>
+
+						<div class="oneValue">
+							<span class="customCheckbox">&nbsp;</span>
+							<span class="customLabel">Кабель питания</span>
+							<input type="hidden" value="38" disabled="disabled" name="form_checkbox_SIMPLE_QUESTION_799[]">
+						</div>
+
+						<div class="oneValue">
+							<span class="customCheckbox">&nbsp;</span>
+							<span class="customLabel">Картриджи</span>
+							<input type="hidden" value="39" disabled="disabled" name="form_checkbox_SIMPLE_QUESTION_799[]">
+						</div>
+
+						<!-- <input type="checkbox" id="36" name="form_checkbox_SIMPLE_QUESTION_799[]" value="36">
+						<label for="36">Внешний блок питания</label><br>
+						
+						<input type="checkbox" id="37" name="form_checkbox_SIMPLE_QUESTION_799[]" value="37">
+						<label for="37">Гарантийный талон</label><br>
+						
+						<input type="checkbox" id="38" name="form_checkbox_SIMPLE_QUESTION_799[]" value="38">
+						<label for="38">Кабель питания</label><br>
+						
+						<input type="checkbox" id="39" name="form_checkbox_SIMPLE_QUESTION_799[]" value="39">
+						<label for="39">Картриджи</label> -->
+
+					</td>
+				</tr>
+					<tr>
+					<td></td>
+					<td><div>Другое:</div><br/><input type="text" class="inputtext" name="form_text_40" value="" size="0"></td>
+				</tr>
+					<tr>
+					<td>
+										Номер гарантийного талона, счета или накладной Belmont<sup class="required">*</sup>							</td>
+					<td><input type="text" class="inputtext" name="form_text_41" value="" size="0"></td>
+				</tr>
+					<tr>
+					<td>
+										Дата гарантийного талона, счета или накладной Belmont (гггг-мм-дд):							</td>
+					<td><input type="text" class="inputtext" name="form_text_42" value="" size="0"></td>
+				</tr>
+					<tr>
+					<td>
+										Примечание							</td>
+					<td><textarea name="form_textarea_43" cols="40" rows="5" class="inputtextarea"></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2"><div class="serviceName">Информация о клиенте</div></td>
+				</tr>
+					<tr>
+					<td><span class="icon1"><img src="/i/icon1.png" alt=""/></span>
+										Название компании<sup class="required">*</sup>							</td>
+					<td><input type="text" class="inputtext" name="form_text_44" value="" size="0"></td>
+				</tr>
+					<tr>
+					<td><span class="icon1"><img src="/i/icon2.png" alt=""/></span>
+										ФИО контактного лица<sup class="required">*</sup>							</td>
+					<td><input type="text" class="inputtext" name="form_text_45" value="" size="0"></td>
+				</tr>
+					<tr>
+					<td><span class="icon1"><img src="/i/icon3.png" alt=""/></span>
+										Адрес нахождения оборудования<sup class="required">*</sup>							</td>
+					<td><input type="text" class="inputtext" name="form_text_46" value="" size="0"></td>
+				</tr>
+					<tr>
+					<td><span class="icon1"><img src="/i/icon4.png" alt=""/></span>
+										Контактный телефон (просьба, по возможности, указывать дополнительный мобильный контактный телефон)<sup class="required">*</sup>							</td>
+					<td><input type="text" class="inputtext" name="form_text_47" value="" size="0"></td>
+				</tr>
+					<tr>
+					<td><span class="icon1"><img src="/i/icon5.png" alt=""/></span>
+										E-mail<sup class="required">*</sup>							</td>
+					<td><input type="text" class="inputtext" name="form_email_48" value="" size="0"></td>
+				</tr>
+					<tr>
+					<td><span class="icon1"><img src="/i/icon6.png" alt=""/></span>
+										Время, в которое Вам удобно забрать оборудование							</td>
+					<td><input type="text" class="inputtext" name="form_text_49" value="" size="0"></td>
+				</tr>
+					
+
+
+						<tr>
+					<td>Пожалуйста, введите символы, которые вы видите на картинке. Извините за неудобства.<sup class="required">*</sup><font color='red'><span class='form-required starrequired'>*</span></font></td>
+					<td>
+						<div class="captchaWrap">
+							<div class="captchaImg">
+								<input type="hidden" name="captcha_sid" value="032c6ee74b4db4ab96d8b74dbcc37e92" />
+								<img src="/bitrix/tools/captcha.php?captcha_sid=032c6ee74b4db4ab96d8b74dbcc37e92" width="180" height="40" />
+							</div>
+							<div class="captchaInput"><input type="text" name="captcha_word" size="30" maxlength="50" value="" class="inputtext" /></div>
+						</div>
+					</td>
+				</tr>
+					</tbody>
+			<tfoot>
+				<tr>
+					<th colspan="2">
+						<div class="ltSd">
+							<div class="rtSd">
+								<div class="ctSd">
+									<input type="submit" name="web_form_submit" value="Отправить">
+								</div>		
+							</div>
+						</div>
+					</th>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+</div>
+
+</form></div>            </div>
+            <!--/ service order -->            <!--top slider-->
+            
+<div class="sliderImportantNews">
+	<div class="topSlider">
+		<div class="sliderContainer">
+							
+				<div class="oneImg active" rel="0">
+
+					
+													<a href="http://www.bc.ru/competence-and-solutions/154/" class="imgWrap">
+								<img src="/upload/iblock/ab4/ab41226a2e3672aaa6e27c15e02d4e5b.jpg" alt="Решения Blackboard для дистанционного обучения" />
+							</a>	
+						
+					
+								<div class="textOnSlider">
+						<div class="tableCell">
+															<div class="greenText">Решения Blackboard для дистанционного обучения</div>
+								<div class="blackText"></div>	
+														
+						</div>
+					</div>
+
+				</div>
+							
+				<div class="oneImg" rel="1">
+
+					
+													<span class="imgWrap">
+								<img src="/upload/iblock/ca4/ca4893b2e94d9a661c246e604fa58048.jpg" alt="Контакт-центры на платформе Genesys" />
+							</span>
+						
+					
+								<div class="textOnSlider">
+						<div class="tableCell">
+															<div class="greenText">Контакт-центры на платформе Genesys</div>
+								<div class="blackText"></div>	
+														
+						</div>
+					</div>
+
+				</div>
+							
+				<div class="oneImg" rel="2">
+
+					
+													<span class="imgWrap">
+								<img src="/upload/iblock/9a4/9a4d99ac81d54210e62341210100c060.jpg" alt="Инженерная инфраструктура" />
+							</span>
+						
+					
+								<div class="textOnSlider">
+						<div class="tableCell">
+															<div class="greenText">Инженерная инфраструктура</div>
+								<div class="blackText"></div>	
+														
+						</div>
+					</div>
+
+				</div>
+							
+				<div class="oneImg" rel="3">
+
+					
+													<span class="imgWrap">
+								<img src="/upload/iblock/a41/a413d098bc377cc9ad715a6673473888.jpg" alt="Мультисервисные сети передачи данных и IP телефония" />
+							</span>
+						
+					
+								<div class="textOnSlider">
+						<div class="tableCell">
+															<div class="greenText">Мультисервисные сети передачи данных и IP телефония</div>
+								<div class="blackText"></div>	
+														
+						</div>
+					</div>
+
+				</div>
+							
+				<div class="oneImg" rel="4">
+
+					
+													<span class="imgWrap">
+								<img src="/upload/iblock/040/0400e7a5ef5694e95ff11f01906cd6d8.jpg" alt="Вычислительные комплексы и системы хранения данных" />
+							</span>
+						
+					
+								<div class="textOnSlider">
+						<div class="tableCell">
+															<div class="greenText">Вычислительные комплексы и системы хранения данных</div>
+								<div class="blackText"></div>	
+														
+						</div>
+					</div>
+
+				</div>
+							
+				<div class="oneImg" rel="5">
+
+					
+													<span class="imgWrap">
+								<img src="/upload/iblock/e1c/e1cd721e1616c0be2b16a535661f088d.jpg" alt="Системы IP видеонаблюдения" />
+							</span>
+						
+					
+								<div class="textOnSlider">
+						<div class="tableCell">
+															<div class="greenText">Системы IP видеонаблюдения</div>
+								<div class="blackText"></div>	
+														
+						</div>
+					</div>
+
+				</div>
+							
+				<div class="oneImg" rel="6">
+
+					
+													<span class="imgWrap">
+								<img src="/upload/iblock/165/16570ebf1d551c4f6584fec0b3a9eb8c.jpg" alt="Сервисная поддержка корпоративных систем" />
+							</span>
+						
+					
+								<div class="textOnSlider">
+						<div class="tableCell">
+															<div class="greenText">Сервисная поддержка корпоративных систем</div>
+								<div class="blackText"></div>	
+														
+						</div>
+					</div>
+
+				</div>
+					</div>
+	</div>
+
+			<div class="paginateWrapper">
+			<div class="paginateIcons">
+									<div class="paginateIcon active locked" rel="0"><img src="/upload/iblock/5ca/5caec500bb2a1d7483e16cc3923b9ac8.jpg" alt="Решения Blackboard для дистанционного обучения"></div>
+									<div class="paginateIcon" rel="1"><img src="/upload/iblock/f1e/f1e4a7ae51e37ee6e841e456ccf48d27.jpg" alt="Контакт-центры на платформе Genesys"></div>
+									<div class="paginateIcon" rel="2"><img src="/upload/iblock/33b/33b72ab4c5bcc658ce2e6e67d1e9fc12.jpg" alt="Инженерная инфраструктура"></div>
+									<div class="paginateIcon" rel="3"><img src="/upload/iblock/7b3/7b39ffcfc4846b462114c716e97d3207.jpg" alt="Мультисервисные сети передачи данных и IP телефония"></div>
+									<div class="paginateIcon" rel="4"><img src="/upload/iblock/651/6513dc61014b9cd3f8dfb4621a9c2e4a.jpg" alt="Вычислительные комплексы и системы хранения данных"></div>
+									<div class="paginateIcon" rel="5"><img src="/upload/iblock/1b3/1b3f54bb75101633781136e449b8202c.jpg" alt="Системы IP видеонаблюдения"></div>
+									<div class="paginateIcon" rel="6"><img src="/upload/iblock/92a/92a33a9670f9dc5f12eea1f9cb70c707.jpg" alt="Сервисная поддержка корпоративных систем"></div>
+							</div>
+		</div>
+		
+
+</div>            <!--top slider-->
+
+            <!-- center info -->
+            <div class="centerInfo">
+                <div class="oneBlock">
+                    <div class="oneBlockHead"><a href="/news/">Новости</a></div>
+                    <div class="oneBlockContent">
+                        
+	<div class="oneElMain">
+		<div class="oneElMainDate"><a href="/news/790/">18 Июля</a><div class="oneElMainDateEnd"></div></div>
+		<div class="oneElMainDescr"><a href="/news/790/">Продолжается регистрация на осеннюю программу 
+обучения в Genesys University Moscow</a></div>
+	</div>
+	<div class="oneElMain">
+		<div class="oneElMainDate"><a href="/news/788/">04 Июля</a><div class="oneElMainDateEnd"></div></div>
+		<div class="oneElMainDescr"><a href="/news/788/">На складе международной логистической 
+компании развернута система СКС</a></div>
+	</div>
+
+
+                    </div>
+                    <div class="oneBlockLink"><a href="/news/">Все новости</a></div>
+                    <div class="oneBlockShadow">&nbsp;</div>
+                </div>
+                <div class="oneBlock">
+                    <div class="oneBlockHead"><a href="/calendar-of-events/">Мероприятия</a></div>
+                    <div class="oneBlockContent">
+                        
+	<div class="oneElMain">
+					<div class="oneElMainDate">Дата проведения:&nbsp;<a href="/calendar-of-events/789/">19 Июля</a><div class="oneElMainDateEnd"></div></div>
+				
+		<div class="oneElMainDescr"><a href="/calendar-of-events/789/">Cеминар &laquo;Новые течения и решения на компьютерном 
+рынке&raquo;</a></div>
+	</div>
+	<div class="oneElMain">
+					<div class="oneElMainDate">Дата проведения:&nbsp;<a href="/calendar-of-events/786/">29 Июня</a><div class="oneElMainDateEnd"></div></div>
+				
+		<div class="oneElMainDescr"><a href="/calendar-of-events/786/">Бизнес-ланч: "Практика применения системы 
+управления обучением Blackboard в российски...</a></div>
+	</div>
+
+                    </div>
+                    <div class="oneBlockLink"><a href="/calendar-of-events/">Все мероприятия</a></div>
+                    <div class="oneBlockShadow">&nbsp;</div>
+                </div>
+                <div class="oneBlock">
+                    <div class="oneBlockHead"><a href="/implemented-projects/">Проекты</a></div>
+                    <div class="oneBlockContent">
+                        
+	<div class="oneElMain">
+		<div class="oneElMainImg">
+			<a href="/implemented-projects/725/">
+				<img src="/upload/iblock/436/436c2e991b2b3b9d1cf7421c57b2d6f6.jpg" alt="ГК Belmont реализовала концепцию интеллектуального обслуживания клиентов на платформе Genesys в контактном центре Кредит Европа Банка " />
+			</a>
+		</div>
+		<div class="oneElMainDescr">
+<p class="MsoNormal" style="text-align: justify;">В Кредит Европа Банке внедрено уникальное решение, открывающее новые возможности предсказательного взаимодействия...</p></div>
+	</div>
+                    </div>
+                    <div class="oneBlockLink"><a href="/implemented-projects/">Все реализованные проекты</a></div>
+                    <div class="oneBlockShadow">&nbsp;</div>
+                </div>
+                <div class="oneBlock">
+                    
+<div class="miniSlider">
+	
+	<div class="miniSliderContainer">
+		<div class="oneMiniImg">
+							<div class="block-event" style="background-image: url(/upload/iblock/e76/e768b69f6df57908e2a80ddd9b335e0b.png)">
+					<div class='up-block'>
+						<div class="date">
+								Октябрь 2016						</div>
+													<div class='text'>
+								Открыта регистрация							</div>
+																			<div class='type'>осенняя программа обучения в москве</div>
+								
+					</div>
+											<div class='partner'>
+							<img src="/upload/iblock/0bf/0bf4b324616fbe9750b5eb4b1d21df12.png">
+						</div>
+									
+					<div class='clear'></div>
+				</div>
+					</div>
+	</div>
+	
+	<div class="miniSliderContainer">
+		<div class="oneMiniImg">
+							<div class="block-event" style="background-image: url(/upload/iblock/b33/b336cdc56841ac7205880d9bdc71d627.png)">
+					<div class='up-block'>
+						<div class="date">
+								Октябрь 2016						</div>
+													<div class='text'>
+								Количество мест ограничено							</div>
+																			<div class='type'>Осенняя программа обучения в Москве</div>
+								
+					</div>
+											<div class='partner'>
+							<img src="/upload/iblock/81c/81c748add62802f6aecb1585899b2caa.png">
+						</div>
+									
+					<div class='clear'></div>
+				</div>
+					</div>
+	</div>
+</div>
+                    <div class="oneBlockShadow">&nbsp;</div>
+                </div>
+            </div>
+            <!-- center info -->
+
+            <!-- partners -->
+            <div class="partnersLink"><a href="/about/partners/">Партнеры</a><div class="oneElMainDateEnd"></div></div>
+            
+<div class="partnersWrapper">
+	<div class="partnersCarousel">
+		<ul>
+							<li>
+					<span class="brandContentSpan">						
+						<a href="http://ru.blackboard.com/sites/international/globalmaster/" target="_blank">
+							<img src="/upload/iblock/084/0848023bf53cdc26fed3e013480d926b.jpg" alt="Blackboard" title="Blackboard" />
+						</a>
+						<span class="verticalAlign">&nbsp;</span>
+					</span>
+					<span style="min-width:200px;" class="brandLinkSpan">Authorized Reseller</span>
+				</li>
+							<li>
+					<span class="brandContentSpan">						
+						<a href="javascript:void(0);" target="_blank">
+							<img src="/upload/iblock/735/7358779cab87cd8680c09377eeb05c8e.jpg" alt="lenovo" title="lenovo" />
+						</a>
+						<span class="verticalAlign">&nbsp;</span>
+					</span>
+					<span style="min-width:159px;" class="brandLinkSpan">Lenovo Authorized Partner</span>
+				</li>
+							<li>
+					<span class="brandContentSpan">						
+						<a href="javascript:void(0);" target="_blank">
+							<img src="/upload/iblock/7bf/7bfea9820e073a3816f495ab2f7c6720.jpg" alt="genesys" title="genesys" />
+						</a>
+						<span class="verticalAlign">&nbsp;</span>
+					</span>
+					<span style="min-width:138px;" class="brandLinkSpan">Genesys Bronze Partner</span>
+				</li>
+							<li>
+					<span class="brandContentSpan">						
+						<a href="javascript:void(0);" target="_blank">
+							<img src="/upload/iblock/8d8/8d8814a745fad82ae909770c5d818aac.jpg" alt="microsoft" title="microsoft" />
+						</a>
+						<span class="verticalAlign">&nbsp;</span>
+					</span>
+					<span style="min-width:135px;" class="brandLinkSpan">Microsoft Silver Devices and Deployment</span>
+				</li>
+							<li>
+					<span class="brandContentSpan">						
+						<a href="javascript:void(0);" target="_blank">
+							<img src="/upload/iblock/37d/37da30dabdb55ca52b1223c46edeca61.jpg" alt="vmware" title="vmware" />
+						</a>
+						<span class="verticalAlign">&nbsp;</span>
+					</span>
+					<span style="min-width:103px;" class="brandLinkSpan">VMWare Professional Partner</span>
+				</li>
+							<li>
+					<span class="brandContentSpan">						
+						<a href="javascript:void(0);" target="_blank">
+							<img src="/upload/iblock/d9c/d9c27d30f43e7696ab0b442a3777d778.jpg" alt="hp" title="hp" />
+						</a>
+						<span class="verticalAlign">&nbsp;</span>
+					</span>
+					<span style="min-width:64px;" class="brandLinkSpan">HP Platinum Partner</span>
+				</li>
+							<li>
+					<span class="brandContentSpan">						
+						<a href="javascript:void(0);" target="_blank">
+							<img src="/upload/iblock/050/050a2be6576f590d186bf85c34faed25.jpg" alt="cisco" title="cisco" />
+						</a>
+						<span class="verticalAlign">&nbsp;</span>
+					</span>
+					<span style="min-width:85px;" class="brandLinkSpan">Cisco Premier Certified Partner</span>
+				</li>
+						
+		</ul>
+	</div>				
+</div>            <!-- partners -->
+            
+            <!--content-->
+            <div class="content">
+                <!-- <h1>Belmont - системная интеграция.</h1> -->
+            </div>
+            <!--content-->
+
+            <div class="brick">&nbsp;</div>
+        </div>
+        <!--footer-->
+        <div class="footer">
+
+            <div class="bottomOther">
+                            	<div class="bottomSearch">
+                    
+<div class="topSearch">
+	<form action="/search/index.php">
+		<input type="text" name="q" value="" spellcheck="true" autocomplete="off" required />
+		<input name="s" type="submit" value="" />
+	</form>	
+</div>
+
+                </div>
+            	<!--contacts-->
+            	<div class="bottomContacts">
+                    <div class="bottomSitemap"><a href="/sitemap/">Карта сайта</a></div>
+            		<div class="bottomPhones">
+            			<span>+7 (495) 937-16-06</span>            		</div>
+            		<div class="bottomAddress">
+            			<address>
+            				Москва, Б.Саввинский пер., д. 12, стр. 18, 2 этаж						</address>
+            		</div>
+            	</div>
+            	<!--contacts-->            	
+            </div>
+            <div class="copySign">&copy; BELMONT, 2016 г. Все права защищены.</div>
+
+            <!--copyright-->
+            <div class="copyright">
+                
+<div class="uniText"> 	<a href="http://uniofweb.ru" >Разработано компанией &laquo;ЮниВеб&raquo;&nbsp;<time datetime="2012-06-15">2013</time></a> </div>
+ 
+<div class="uniLogo"> 	<a href="http://uniofweb.ru" ><img src="/i/uniofweb.png" title="uniofweb"  /></a> </div>
+            </div>
+            <!--copyright-->
+        </div>
+		</div>
+        <!--footer-->
+        
+        <script src="/js/jquery-1.9.1.min.js"></script>
+        <script src="/js/modernizr-2.6.1.min.js"></script>
+        <script src="/js/slides.jquery.js"></script>
+        <script src="/js/jquery.fancybox.js"></script>
+        <script src="/js/jquery.placeholder-enhanced.js"></script>
+        <script src="/js/slides.jquery.js"></script>
+        <script src="/js/jquery.jcarousel.js"></script>
+        <script src="/js/jquery.printPage.js"></script>
+        <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+        <!--
+        <script src="/js/jcarousellite.js"></script>
+        <script src="/js/jquery.jscrollpane.js"></script>
+        <script src="/js/jquery.tools.min.js"></script>
+        <script src="/js/jquery.json-2.3.min.js"></script>
+        -->
+        <script src="/js/main.js"></script>
+        
+    </body>
+</html>

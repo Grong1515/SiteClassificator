@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IBS</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<link href="/bitrix/templates/ibs/template_styles.less.css?146780664218886" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/ibs/css/styles.less.css?1467965381177438" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/main/core/css/core.css?13992947848964" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/defa.tools/linked_elements.css?1408086169191" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/.default/css/fancybox2/jquery.fancybox2.css?13957410585683" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/.default/js/jquery/css/jquery.jscrollpane.css?14648807561423" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/ibs/css/fonts.css?13957410595914" type="text/css"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1477472741','SERVER_TZ_OFFSET':'10800','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'e1f7d348c8e5ecf644c4c9dcfe8cf36f','SITE_ID':'s1'});</script>
+
+
+<script type="text/javascript" src="/bitrix/js/main/core/core.js?139929483378911"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ajax.js?139929483330654"></script>
+<script type="text/javascript" src="/bitrix/js/main/session.js?13992948332880"></script>
+<script type="text/javascript" src="/bitrix/js/defa.tools/linked_elements.js?14080861695965"></script>
+
+<script type="text/javascript">
+bxSession.Expand(1440, 'e1f7d348c8e5ecf644c4c9dcfe8cf36f', false, '1c50ac9f0984c4ad2288f6dc825e68be');
+</script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?1=1"></script>
+<script type="text/javascript" src="/bitrix/templates/.default/js/jquery/jquery.parallax.js?146488075612429"></script>
+<script type="text/javascript" src="/bitrix/templates/.default/js/jquery/jquery.flexslider.min.js?146488075616917"></script>
+<script type="text/javascript" src="/bitrix/templates/.default/js/jquery/jquery.masonry.min.js?146488075623455"></script>
+<script type="text/javascript" src="/bitrix/templates/.default/js/jquery/jquery.form.min.js?146488075614589"></script>
+<script type="text/javascript" src="/bitrix/templates/.default/js/jquery/jquery.validate.min.js?146488075620886"></script>
+<script type="text/javascript" src="/bitrix/templates/.default/js/jquery/jquery.styleForms.js?146488075621667"></script>
+<script type="text/javascript">BX.message({'FANCYBOX2_CLOSE':'Закрыть','FANCYBOX2_PREV':'Назад','FANCYBOX2_NEXT':'Вперед'})</script>
+<script type="text/javascript" src="/bitrix/templates/.default/js/jquery/jquery.fancybox2.min.js?146651814122595"></script>
+<script type="text/javascript" src="/bitrix/templates/.default/js/jquery/jquery.jscrollpane.min.js?146488075614107"></script>
+<script type="text/javascript" src="/bitrix/templates/.default/js/jquery/jquery.mousewheel.min.js?14648807561416"></script>
+<script type="text/javascript" src="/bitrix/templates/.default/js/jquery/jquery.caroufredsel.js?146488075654795"></script>
+<script type="text/javascript" src="/bitrix/templates/.default/js/jquery/jquery.device.min.js?14648807563296"></script>
+<!--[if lt IE 7]><script type="text/javascript" src="/bitrix/templates/ibs/js/unitpngfix.js"></script><![endif]-->
+<!--[if IE]><style type="text/css">.clearfix { zoom: 1; display: block;}</style><![endif]-->
+<!--[if lt IE 9]><script src="/bitrix/templates/ibs/js/html5shiv.js"></script><![endif]-->
+<script type="text/javascript" src="http://yandex.st/share/share.js" charset="utf-8"></script>
+<script type="text/javascript" src="/bitrix/templates/ibs/js/yashare.js" charset="utf-8"></script>
+<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/bitrix/templates/ibs/images/ios/apple-touch-icon-152x152-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/bitrix/templates/ibs/images/ios/apple-touch-icon-120x120-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/bitrix/templates/ibs/images/ios/apple-touch-icon-76x76-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/bitrix/templates/ibs/images/ios/apple-touch-icon-precomposed.png">
+<script type="text/javascript" src="/bitrix/templates/.default/components/bitrix/menu/main_menu/script.js?139574105889"></script>
+<script type="text/javascript" src="/bitrix/templates/ibs/js/scripts.js?146488075625634"></script>
+	<!-- Google analytics counter -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43128496-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Google analytics counter end -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter22056148 = new Ya.Metrika({
+                    id:22056148,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/22056148" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- Yandex.Metrika counter end -->
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '432013283654973');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=432013283654973&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+mixpanel.init("edcc6b2c881b9ca7a595e2b673bcafc6");</script><!-- end Mixpanel --></head>
+<body class=" " style="background-repeat: no-repeat">
+	<div id="bx-panel-wrapper" style="position: relative; z-index: 100500 !important; top: 0 !important; left: 0 !important; width: 100% !important;"></div>    <div class="wrapper">
+        <header class="main-header clearfix">
+            <i class="slogan"></i>
+            <div class="right-part clearfix">
+                	<ul class="navy">
+				<li class="item"><a href="/feedback/" class="link">Обратная связь</a></li>
+					</ul>
+									<ul class="lang-vers-b">
+						<!--<li><a href="http://en.ibs.ru/default.asp">EN</a></li>-->
+						<li><a href="http://www.ibs.ru/eng/">EN</a></li>
+					</ul>
+				                <form action="/search/index.php" class="search-form">
+    <input type="text" placeholder="Поиск по сайту" name="q" />
+</form>
+            </div>
+        </header>
+        <nav class="main-nav">
+			<a class="logo" href="/"><img src="/bitrix/templates/ibs/images/logo.png" alt="IBS" width="92" height="91"></a>
+			<div class="scroll-pane">
+	<ul class="menu">
+							    <li class="item  ">
+		        <a href="/business-apps/" class="link">
+		            <i class="icon business-apps"></i>
+		            <span class="text">Бизнес-приложения</span>
+		        </a>
+		    </li>
+																									    <li class="item  ">
+		        <a href="/it-infrastructure/" class="link">
+		            <i class="icon it-infrastructure"></i>
+		            <span class="text">ИТ-инфра- структура</span>
+		        </a>
+		    </li>
+																															    <li class="item  ">
+		        <a href="/data-management/" class="link">
+		            <i class="icon data-management"></i>
+		            <span class="text">Управление данными</span>
+		        </a>
+		    </li>
+																						    <li class="item orange ">
+		        <a href="/industrial-solutions/" class="link">
+		            <i class="icon industrial-solutions"></i>
+		            <span class="text">Отраслевые решения</span>
+		        </a>
+		    </li>
+																																		    <li class="item orange ">
+		        <a href="/projects/" class="link">
+		            <i class="icon projects"></i>
+		            <span class="text">Проекты</span>
+		        </a>
+		    </li>
+							    <li class="item blue ">
+		        <a href="/contacts/" class="link">
+		            <i class="icon contacts"></i>
+		            <span class="text">Контакты</span>
+		        </a>
+		    </li>
+							    <li class="item blue ">
+		        <a href="/career/" class="link">
+		            <i class="icon career"></i>
+		            <span class="text">Карьера</span>
+		        </a>
+		    </li>
+							    <li class="item blue ">
+		        <a href="/about/" class="link">
+		            <i class="icon about"></i>
+		            <span class="text">О компании</span>
+		        </a>
+		    </li>
+							    <li class="item blue ">
+		        <a href="/media/" class="link">
+		            <i class="icon media"></i>
+		            <span class="text">Медиа<br />и аналитика</span>
+		        </a>
+		    </li>
+			</ul>
+</div>	
+        </nav>
+         <section class="main-block index-page ">
+							
+<div class="promo-block">
+    <div class="slider">
+        <ul class="slides">
+        
+                <li>
+                    <a href="/hro/">
+                    <div class="slide slide-8 small-paralax">
+									<i class="parallax-layer layer-1"></i>
+									<i class="parallax-layer layer-2"></i>
+									<i class="parallax-layer layer-3"></i>
+									<div class="text">
+										<i class="title"></i>
+										<span class="info">Value-added HR</span>
+									</div>
+								</div>                    </a>
+                </li>
+
+            
+                <li>
+                    <a href="/planeta/">
+                           <div class="slide slide-7 small-paralax">
+			<i class="parallax-layer layer-1"></i>
+			<i class="parallax-layer layer-2"></i>
+			<i class="parallax-layer layer-3"></i>
+			<div class="text">
+				<i class="title"></i>
+				<span class="info">Коробочная система для финансового планирования</span><br />
+				<span class="info">в организации от компании IBS</span><br />
+
+			</div>
+		</div>                    </a>
+                </li>
+
+            
+                <li>
+                    <a href="/datalab/works/data-governance/">
+                    <div class="slide slide-4">
+									<i class="parallax-layer layer-1"></i>
+									<i class="parallax-layer layer-2"></i>
+									<i class="parallax-layer layer-3"></i>
+									<div class="text">
+										<i class="title"></i>
+										<span class="info">IBS представляет Data Governance - стратегию и пакет решений, </span><br />
+										<span class="info">которые сделают корпоративные данные новым источником эффективности.</span><br />
+						
+									</div>
+								</div>
+                    </a>
+                </li>
+
+            
+                <li>
+                    <a href="/interlab/works/parallels-vdi-from-ibs/">
+                    <div class="slide slide-2">
+									<i class="parallax-layer layer-1"></i>
+									<i class="parallax-layer layer-2"></i>
+									<i class="parallax-layer layer-3"></i>
+									<div class="text">
+										<i class="title"></i>
+										<span class="info">IBS и Parallels – мировой лидер в области виртуализации и облачных технологий</span><br />
+										<span class="info">стали партнерами. Компании создали решение для построения корпоративных систем</span><br />
+										<span class="info">виртуальных рабочих мест (VDI).</span>
+									</div>
+								</div>                    </a>
+                </li>
+
+            
+                <li>
+                    <a href="/smartgate/">
+                    <div class="slide slide-9 small-paralax">
+									<div class="text">
+										<i class="title"></i>
+										<span class="info">Решение для организации мобильных сервисов</span><br />
+										<span class="info">в современном вузе</span>
+									</div>
+								</div>                    </a>
+                </li>
+
+            
+        </ul>
+        <div class="slides-counter"><span class="current-slide"></span> / <span class="total-slides"></span></div>
+    </div>
+    <i class="lines"></i>
+</div>
+
+			            <div class="content">
+                
+				                
+								
+				<div class="clearfix">							            <div class="">
+
+<div class="news-block clearfix">
+    <div class="left-column">
+
+        
+<div class="column-title">
+    <h3>Главное</h3>
+</div>
+
+    <div class="news-item main">
+        <a href="https://slon.ru/posts/69111?utm_source=direct%20&utm_medium=anons&utm_term=macockiy&utm_content=interview&utm_campaign=ibs" target="_blank" class="link">
+                        	<span class="image"><img src="/upload/resize_cache/iblock/e1f/160_160_1/SM170616.png" Откуда мы знаем, каких сотрудников нанимать, а каких – нет? Интервью Сергея Мацоцкого на Слоне alt="" width="106" height="160" /></span>
+                        <span class="text"><span class="description">Откуда мы знаем, каких сотрудников нанимать, а каких – нет? Интервью Сергея Мацоцкого на Слоне</span></span>
+        </a>
+    </div>
+
+    </div>
+    <div class="right-column">
+
+        <div class="column-title">
+	<h3>Новости и события</h3>
+</div>
+<div class="container">
+	<a href="#" class="page-up"></a><a href="#" class="page-down"></a>
+	<div class="page-wrapper">
+		<div class="page">
+							<div class="news-item" data-color="">
+					<a href="/media/media/optimizatsiya-biznes-protsessov-kompanii-poshagovoe-rukovodstvo/"  class="link">
+											<span class="image"><img src="/upload/iblock/843/181016.jpg" С чего начать оптимизацию бизнес-процессов компании: пошаговое руководство от Елены Юриной, руководителя отдела финансового консалтинга в IBS alt="" width="200" height="118" /></span>
+										<span class="text">
+												<span class="description">С чего начать оптимизацию бизнес-процессов компании: пошаговое руководство от Елены Юриной, руководителя отдела финансового консалтинга в IBS</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/media/pravilnaya-shkola-kak-obespechit-rebenku-uspeshnuyu-kareru/"  class="link">
+											<span class="image"><img src="/upload/iblock/77c/141016.jpg" Как обеспечить ребенку успешную карьеру? Читайте статью Сергея Мацоцкого о реалиях и перспективах российского образования на Слоне alt="" width="200" height="135" /></span>
+										<span class="text">
+												<span class="description">Как обеспечить ребенку успешную карьеру? Читайте статью Сергея Мацоцкого о реалиях и перспективах российского образования на Слоне</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/news/ibs-stala-pervym-rossiyskim-provayderom-tekhnologii-flashgrid-dlya-bystrogo-sozdaniya-vysokoskorostnykh-khranilishch-pod-subd-oracle/"  class="link">
+											<span class="image"><img src="/upload/iblock/c87/131016_2.jpg" IBS стала первым российским провайдером технологии FlashGrid для быстрого создания высокоскоростных хранилищ под СУБД Oracle alt="" width="200" height="133" /></span>
+										<span class="text">
+												<span class="description">IBS стала первым российским провайдером технологии FlashGrid для быстрого создания высокоскоростных хранилищ под СУБД Oracle</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/news/klyuchevaya-sistema-minfina-rossii-migrirovala-v-federalnyy-tsod-bez-ostanovok-v-rabote/"  class="link">
+											<span class="image"><img src="/upload/iblock/6da/111016.jpg" Ключевая система Минфина России мигрировала в федеральный ЦОД без остановок в работе alt="" width="200" height="113" /></span>
+										<span class="text">
+												<span class="description">Ключевая система Минфина России мигрировала в федеральный ЦОД без остановок в работе</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="#00A99E">
+					<a href="/media/media/tekhnologii-big-data-pomogli-privlech-dopsredstva-v-byudzhet-rf/"  class="link">
+											<span class="image"><img src="/upload/iblock/dbb/061016.jpg" Татьяна Попова рассказала «Российской Газете» о том, как технологии Big Data помогли привлечь дополнительные средства в российский бюджет alt="" width="200" height="133" /></span>
+										<span class="text">
+												<span class="description">Татьяна Попова рассказала «Российской Газете» о том, как технологии Big Data помогли привлечь дополнительные средства в российский бюджет</span>
+						
+						
+													<span class="type-news" style="background-color:#00A99E">Видео</span>
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/news/7-top-menedzherov-kompanii-ibs-voshli-v-17-y-ezhegodnyy-reyting-top-1000-vedushchikh-menedzherov-rossii/"  class="link">
+											<span class="image"><img src="/upload/iblock/b1c/031016.png" 7 топ-менеджеров компании IBS вошли в 17-й ежегодный рейтинг «Топ-1000 ведущих менеджеров России» alt="" width="200" height="150" /></span>
+										<span class="text">
+												<span class="description">7 топ-менеджеров компании IBS вошли в 17-й ежегодный рейтинг «Топ-1000 ведущих менеджеров России»</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/media/programma-maksimum-kak-rossiyskiy-razrabotchik-konkuriruet-s-oracle-i-sap/"  class="link">
+											<span class="image"><img src="/upload/iblock/3ce/Nicolaenko.png" Андрей Николаенко рассказал РБК о компании Полиматика – партнере IBS по созданию программно-аппаратного комплекса «Скала-СР/Аналитика» alt="" width="200" height="133" /></span>
+										<span class="text">
+												<span class="description">Андрей Николаенко рассказал РБК о компании Полиматика – партнере IBS по созданию программно-аппаратного комплекса «Скала-СР/Аналитика»</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/news/minkomsvyazi-rf-vklyuchilo-ibs-monitoring-v-reestr-rossiyskogo-po/"  class="link">
+											<span class="image"><img src="/upload/iblock/716/fd250915.jpg" Минкомсвязи РФ включило IBS Monitoring в единый реестр российских программ для электронных вычислительных машин и баз данных alt="" width="200" height="133" /></span>
+										<span class="text">
+												<span class="description">Минкомсвязи РФ включило IBS Monitoring в единый реестр российских программ для электронных вычислительных машин и баз данных</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/media/konvergentnye-resheniya-klyuch-k-effektivnoy-it-strategii-mashinostroitelnogo-predpriyatiya/"  class="link">
+											<span class="image"><img src="/upload/iblock/8a1/skala080616.png" ИТ-задачи, с которыми сталкиваются российские машиностроительные предприятия, и методы их решения. Читайте статью IBS Interlab в журнале Rational Enterprise Management alt="" width="200" height="107" /></span>
+										<span class="text">
+												<span class="description">ИТ-задачи, с которыми сталкиваются российские машиностроительные предприятия, и методы их решения. Читайте статью IBS Interlab в журнале Rational Enterprise Management</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/media/kak-monetizirovat-it-bezopasnost/"  class="link">
+											<span class="image"><img src="/upload/iblock/a5c/Romanchenko.jpg" Как изменились объем и структура ИБ-бюджетов в российских компаниях, и могут ли корпоративные ИБ-сервисы быть самоокупаемыми? Комментарий Дмитрия Романченко в PCWeek alt="" width="200" height="119" /></span>
+										<span class="text">
+												<span class="description">Как изменились объем и структура ИБ-бюджетов в российских компаниях, и могут ли корпоративные ИБ-сервисы быть самоокупаемыми? Комментарий Дмитрия Романченко в PCWeek</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/news/kompanii-ibs-i-polimatika-rus-obyavili-o-nachale-partnerstva-v-oblasti-programmno-apparatnykh-analiticheskikh-platform/"  class="link">
+										<span class="text">
+												<span class="description">IBS и «Полиматика Рус» объявили о начале партнерства в области программно-аппаратных аналитических платформ</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/media/chto-nado-uchest-pri-formirovanii-byudzheta-predpriyatiya-na-sleduyushchiy-god/"  class="link">
+											<span class="image"><img src="/upload/iblock/91e/030816.png" Как максимально эффективно организовать подготовку бюджета на новый год? Рекомендации Елены Митрофановой, эксперта Департамента корпоративных решений IBS alt="" width="200" height="133" /></span>
+										<span class="text">
+												<span class="description">Как максимально эффективно организовать подготовку бюджета на новый год? Рекомендации Елены Митрофановой, эксперта Департамента корпоративных решений IBS</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/media/ucheba-radi-ucheby/"  class="link">
+										<span class="text">
+												<span class="description">Как российские компании измеряют эффективность корпоративного обучения сотрудников? Комментарий Яны Кудрявцевой в «Ведомостях»</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/media/bolshie-dannye-perevernuli-industriyu-hr/"  class="link">
+											<span class="image"><img src="/upload/iblock/b38/Prokhorenko.jpg" «Основной импульс развитию HR-технологий дают большие данные и их профессиональный анализ». Комментарий Дмитрия Прохоренко для Rusbase alt="" width="200" height="150" /></span>
+										<span class="text">
+												<span class="description">«Основной импульс развитию HR-технологий дают большие данные и их профессиональный анализ». Комментарий Дмитрия Прохоренко для Rusbase</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/news/kompaniya-ibs-poluchila-pravo-installyatsii-programmno-apparatnykh-kompleksov-oracle-exadata-v-rossii/"  class="link">
+											<span class="image"><img src="/upload/iblock/c9f/220415_200.png" IBS получила право самостоятельно конфигурировать и инсталлировать программно-аппаратные комплексы Oracle Exadata Database Machine alt="" width="200" height="133" /></span>
+										<span class="text">
+												<span class="description">IBS получила право самостоятельно конфигурировать и инсталлировать программно-аппаратные комплексы Oracle Exadata Database Machine</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/media/kto-boitsya-robotov/"  class="link">
+											<span class="image"><img src="/upload/iblock/686/SM090816.png" Почему сотрудники российских компаний боятся роботов? Комментарий Сергея Мацоцкого в «Ведомостях» alt="" width="200" height="148" /></span>
+										<span class="text">
+												<span class="description">Почему сотрудники российских компаний боятся роботов? Комментарий Сергея Мацоцкого в «Ведомостях»</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/news/ibs-i-hp-protestirovali-sovmestnoe-vdi-reshenie-dlya-krupnogo-i-srednego-biznesa/"  class="link">
+											<span class="image"><img src="/upload/iblock/c88/3100816.png" IBS и HP протестировали совместное VDI-решение для крупного и среднего бизнеса alt="" width="200" height="113" /></span>
+										<span class="text">
+												<span class="description">IBS и HP протестировали совместное VDI-решение для крупного и среднего бизнеса</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/news/interlab-ibs-predstavil-lineyku-prikladnykh-zashchishchennykh-sistem-na-platforme-skala-r/"  class="link">
+											<span class="image"><img src="/upload/iblock/3ce/211015_2.png" Interlab IBS представил линейку прикладных систем СКАЛА-Р в защищенном исполнении alt="" width="200" height="133" /></span>
+										<span class="text">
+												<span class="description">Interlab IBS представил линейку прикладных систем СКАЛА-Р в защищенном исполнении</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/news/ibs-poluchila-status-lenovo-premium-partner/"  class="link">
+											<span class="image"><img src="/upload/iblock/ee8/230816.jpg" IBS получила партнерский сертификат уровня Platinum от компании Lenovo alt="" width="200" height="140" /></span>
+										<span class="text">
+												<span class="description">IBS получила партнерский сертификат уровня Platinum от компании Lenovo</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/media/anatoliy-karachinskiy-parusnyy-sport-stal-dlya-menya-idealnym-narkotikom/"  class="link">
+											<span class="image"><img src="/upload/iblock/3e2/Forbes130816.jpg" «Парусный спорт стал для меня идеальным наркотиком». Интервью Анатолия Карачинского, президента Группы компаний IBS, в Forbes alt="" width="200" height="150" /></span>
+										<span class="text">
+												<span class="description">«Парусный спорт стал для меня идеальным наркотиком». Интервью Анатолия Карачинского, президента Группы компаний IBS, в Forbes</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/news/kompaniya-ibs-prisoedinilas-k-partnerskomu-soobshchestvu-terrasoft/"  class="link">
+											<span class="image"><img src="/upload/iblock/20d/160816.png" IBS получила партнерский статус Terrasoft для работы с продуктом bpm’online service alt="" width="200" height="107" /></span>
+										<span class="text">
+												<span class="description">IBS получила партнерский статус Terrasoft для работы с продуктом bpm’online service</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/media/big-data-benzin-ili-maz-ot-boli-v-sustavakh/"  class="link">
+											<span class="image"><img src="/upload/iblock/9f4/120816.png" Big Data: бензин или мазь от боли в суставах? Комментарий Игоря Хмелькова в CRN alt="" width="200" height="133" /></span>
+										<span class="text">
+												<span class="description">Big Data: бензин или мазь от боли в суставах? Комментарий Игоря Хмелькова в CRN</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/media/staroe-i-novoe-kak-izmenilas-struktura-rossiyskogo-rynka-it-uslug/"  class="link">
+											<span class="image"><img src="/upload/iblock/79e/110816.png" Как изменилась структура российского рынка ИТ-услуг за 2 года? Рассказывает Виктор Комар alt="" width="200" height="133" /></span>
+										<span class="text">
+												<span class="description">Как изменилась структура российского рынка ИТ-услуг за 2 года? Рассказывает Виктор Комар</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+								<div class="news-item" data-color="">
+					<a href="/media/media/tsifrovoe-predpriyatie-prishlo-vremya-peremen/"  class="link">
+											<span class="image"><img src="/upload/iblock/864/SM090816.png" Четвертая промышленная революция. Комментарий Сергея Мацоцкого о концепции «цифрового предприятия» в PCWeek alt="" width="200" height="148" /></span>
+										<span class="text">
+												<span class="description">Четвертая промышленная революция. Комментарий Сергея Мацоцкого о концепции «цифрового предприятия» в PCWeek</span>
+						
+						
+												</span>
+						</a>
+                	</div>
+						</div>
+	</div>
+</div>
+    </div>
+</div>
+<div class="clearfix">
+    <div class="banners-block">
+	    
+<a href="/bitrix/rk.php?id=15&amp;event1=banner&amp;event2=click&amp;event3=1+%2F+%5B15%5D+%5BINDEX_BOTTOM_NEW_3%5D+%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D0%BD%D1%8B%D0%B9+%D1%86%D0%B5%D0%BD%D1%82%D1%80&amp;goto=%2Fbusiness-apps%2Fservise%2Fservisnoe-soprovozhdenie-biznes-prilozheniy-sap%2F" target="_self" ><img alt="Сервисное сопровождение бизнес-приложений SAP"  title="Сервисное сопровождение бизнес-приложений SAP" src="/upload/rk/040/banner.jpg" width="170" height="140" border="0" /></a>		
+
+								<a target="_self" href="http://ibs.ru/business-apps/HR/mnogofunktsionalnyy-hr-autsorsing-hr-bpo/">
+				<img src="/upload/iblock/06f/b2.png"  alt="Многофункциональный HR-Аутсорсинг (HR_BPO)" title="Многофункциональный HR-Аутсорсинг (HR_BPO)"  width="190" height="140" />			</a>
+	    	
+<a href="/bitrix/rk.php?id=9&amp;event1=banner&amp;event2=click&amp;event3=1+%2F+%5B9%5D+%5BINDEX_BOTTOM_NEW_4%5D+IBS+%D0%B7%D0%B0+60+%D1%81%D0%B5%D0%BA%D1%83%D0%BD%D0%B4&amp;goto=%2Fabout%2Fibs-za-60-sekund%2F"><img alt=""  title="" src="/upload/rk/ea7/ibs60.jpg" width="190" height="140" border="0" /></a>
+    	
+<a href="/bitrix/rk.php?id=12&amp;event1=banner&amp;event2=click&amp;event3=1+%2F+%5B12%5D+%5BINDEX_BOTTOM_NEW_1%5D+HR-%D1%82%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B8%D0%BD%D1%8B&amp;goto=https%3A%2F%2Fwww.facebook.com%2FIBS.HRTramplins"><img alt="HR-трамплины"  title="HR-трамплины" src="/upload/rk/cfe/banner-1.jpg" width="190" height="140" border="0" /></a>
+		
+    </div>
+</div>
+
+
+						</div>					</div>
+				</div>
+			</section>
+			<footer class="main-footer">
+				<div class="footer-inner clearfix">
+					<div class="defa">
+	<span class="text">Разработка сайта:</span><br>
+	<a href="http://www.defa.ru/" target="_blank" ><img src="/bitrix/templates/ibs/images/defa-logo.png" alt="DEFA" width="63" height="21" /></a>
+</div>					<div class="iso-logo">
+	<a href="http://www.ibs.ru/about/iso/" target="_blank" >
+		<img src="/bitrix/templates/ibs/images/iso-logo.png" alt="IBS ISO" width="" height="" />
+	</a>
+</div>					 
+	<div class="links">
+					<a href="/personal_data_and_legal/" class="link">Персональные данные и правовые аспекты</a>
+					<a href="/cookies/" class="link">Сведения о сookies-файлах</a>
+			</div>
+						<div class="social-links">
+		<div class="b_social clearfix">
+						   	<a href="https://twitter.com/ibs_ru" class="link twitter" target="_blank"></a>
+						   	<a href="https://www.facebook.com/IBS.ru" class="link facebook" target="_blank"></a>
+						   	<a href="http://vk.com/ru_ibs" class="link vk" target="_blank"></a>
+						   	<a href="http://www.youtube.com/user/ibsru" class="link youtube" target="_blank"></a>
+						   	<a href="http://www.linkedin.com/company/ibs-company" class="link linkedin" target="_blank"></a>
+						   	<a href="http://habrahabr.ru/company/ibs/blog/" class="link habr" target="_blank"></a>
+					</div>
+	</div>
+					<div class="copyright">&copy; IBS, 2016. <br> Все права защищены.</div>												
+		
+				</div>
+			</footer>
+		</div>
+			<div class="popup-bg"></div>
+		<div class="block-popup block-popup-auth">
+				<div class="block-top">
+			<div class="block-icon icon-auth"></div>
+			<div class="title">Авторизация</div>
+			<a href="#" class="close"></a>
+		</div>
+		
+		<div class="clearfix block-middle">
+							<p>Если вы еще не зарегистрированы, пожалуйста, пройдите <a href="#" class="open-form-registration">регистрацию</a></p>
+									<div class="block-form form-registration form-popup">
+				<form name="system_auth_form6zOYVN" method="post" target="_top" action="/?login=yes">
+					<input type="hidden" name="backurl" value="/" />										<input type="hidden" name="AUTH_FORM" value="Y" />
+					<input type="hidden" name="TYPE" value="AUTH" />
+					<div class="inner-top">
+						<div class="block transition">
+							<div class="title">Логин <span class="red">*</span></div>
+							<div class="form">
+								<input type="text" name="USER_LOGIN" maxlength="50" value="" class="field-text field-required" />
+							</div>
+							<div class="error-text">Заполните обязательное поле</div>
+							<div class="block-info">Используйте e-mail</div>
+						</div>
+						
+						<div class="block transition">
+							<div class="title">Пароль <span class="red">*</span></div>
+							<div class="form">
+								<input type="password" name="USER_PASSWORD" maxlength="50" size="17" class="field-text field-required" />
+							</div>
+							<div class="error-text">Заполните обязательное поле</div>
+							<div class="block-info"><a href="#" class="open-form-forgot">Забыли пароль?</a></div>
+						</div>
+						
+											</div>
+					
+					<div class="inner-bottom">
+						<div class="inner-bottom-wrap">
+							<div class="required"><span class="red">*</span> Обязательное поле</div>
+							<label class="button-medium active"><i class="icon-check"></i><input type="submit" name="Login" value="Войти" /></label>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<div class="block-bottom">
+			<div class="line-1"><div class="block-color-1"></div><div class="block-color-2"></div><div class="block-color-3"></div>	</div>
+			<div class="line-2"><div class="block-color-1"></div><div class="block-color-2"></div><div class="block-color-3"></div></div>
+		</div>
+		<div class="bg-top"></div><div class="bg-left"></div><div class="bg-right"></div>
+	</div>
+	<script type='text/javascript'>
+	<!--
+		$(document).ready(function(){
+			$('.form-registration form[name^="system_auth_form"]').submit(function(e){
+				e.preventDefault();
+				$(this).ajaxSubmit({
+					data: {'AJAX_AUTH_CALL': 'Y'},
+					success: function(responseText, statusText, xhr, $form) {
+						if(responseText.indexOf('reg-popup-error') !== -1)
+						{
+							$('.block-popup-auth').html(responseText);
+							ajaxUpdate();
+						}
+						else
+						{
+							window.location.reload();
+						}
+					}
+				});
+			});
+		});
+	
+	//-->
+	</script>
+	<div class="block-popup block-popup-forgot">
+		
+	<div class="block-top">
+		<div class="block-icon icon-forgot"></div>
+		<div class="title">Напоминание пароля</div>
+		<a href="#" class="close"></a>
+	</div>
+	
+	<form name="bform" method="post" target="_top" action="/?forgot_password=yes">
+		<div class="clearfix block-middle">
+						<div class="block-form form-registration form-popup">
+				<form action="#" method="post">
+					<input type="hidden" name="AUTH_FORM" value="Y">
+					<input type="hidden" name="TYPE" value="SEND_PWD">
+					<div class="inner-top">
+						<div class="block transition">
+							<div class="title">E-mail<span class="red">*</span></div>
+							<div class="form">
+								<input type="text" name="USER_EMAIL" value="" class="field-text field-required" />
+							</div>
+							<div class="error-text">Заполните обязательное поле</div>
+						</div>
+					</div>
+					
+					<div class="inner-bottom">
+						<div class="inner-bottom-wrap">
+							<div class="required"><span class="red">*</span> Обязательное поле</div>
+							<label class="button-medium"><i class="icon-check"></i><input type="submit" name="send_account_info" value="Выслать" /></label>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</form>
+	<div class="block-bottom">
+		<div class="line-1"><div class="block-color-1"></div><div class="block-color-2"></div><div class="block-color-3"></div></div>
+		<div class="line-2"><div class="block-color-1"></div><div class="block-color-2"></div><div class="block-color-3"></div></div>
+	</div>
+	
+	<div class="bg-top"></div><div class="bg-left"></div><div class="bg-right"></div>
+	<script type='text/javascript'>
+	<!--
+
+	$(function() {
+		
+		var container = $('.block-popup-forgot'),
+			form = $('form', container);
+
+		form.find('.field-text.field-required').each(function(i, e) {
+			$(e).addClass("required");
+		});
+	
+		form.validate({
+			submitHandler: function(form) {
+				$(form).ajaxSubmit({
+					data: {'AJAX_FORGOT_CALL': 'Y'},
+					success: function(responseText, statusText, xhr, $form) {
+						if(responseText.indexOf('forgot-popup-error') !== -1)
+						{
+							$('.block-popup-forgot').html(responseText);
+							ajaxUpdate();
+						}
+						else
+						{
+							window.location.reload();
+						}
+					}
+				});
+			},
+			rules: {}
+		});
+	});
+	
+	//-->
+	</script>
+</div>
+		<div class="block-popup block-popup-registration">
+			<div class="block-top">
+			<div class="block-icon icon-reg"></div><div class="title">Регистрация на сайте</div><a href="#" class="close"></a>
+		</div>
+		
+		<div class="clearfix block-middle">
+			<p>Для скачивания файла заполните, пожалуйста, форму ниже. Мы создадим учетную запись, которая дает вам доступ к закрытым материалам сайта. Временный пароль будет отправлен на указанный вами адрес электронной почты. Этот же адрес используйте в качестве логина для входа на сайт</p>
+			
+			<div class="block-form form-registration form-popup">
+				<form method="post" action="/" name="regform" enctype="multipart/form-data">
+					<div class="inner-top">
+																					<div class="block transition">
+																												<div class="title">Фамилия <span class="red">*</span></div>
+																		<div class="form">
+										<input size="30" type="text" name="REGISTER[LAST_NAME]" value="" class="field-text field-required"/><div class="error-text">Заполните обязательное поле</div>									</div>
+									<div class="error-text">Заполните обязательное поле</div>
+								</div>
+																												<div class="block transition">
+																												<div class="title">Имя <span class="red">*</span></div>
+																		<div class="form">
+										<input size="30" type="text" name="REGISTER[NAME]" value="" class="field-text field-required"/><div class="error-text">Заполните обязательное поле</div>									</div>
+									<div class="error-text">Заполните обязательное поле</div>
+								</div>
+																												<div class="block transition">
+																												<div class="title">Отчество <span class="red">*</span></div>
+																		<div class="form">
+										<input size="30" type="text" name="REGISTER[SECOND_NAME]" value="" class="field-text field-required"/><div class="error-text">Заполните обязательное поле</div>									</div>
+									<div class="error-text">Заполните обязательное поле</div>
+								</div>
+																												<div class="block transition">
+																												<div class="title">E-mail <span class="red">*</span></div>
+																		<div class="form">
+										<input size="30" type="text" name="REGISTER[EMAIL]" value="" class="field-text field-required"/><div class="error-text-email">Введите корректный e-mail</div><div class="error-text">Заполните обязательное поле</div><i class="icon-success"></i>									</div>
+									<div class="error-text">Заполните обязательное поле</div>
+								</div>
+																												<div class="block transition">
+																											<div class="form">
+										<input type="hidden" name="REGISTER[LOGIN]" value="" /><div class="error-text">Заполните обязательное поле</div>									</div>
+									<div class="error-text">Заполните обязательное поле</div>
+								</div>
+																												<div class="block transition">
+																												<div class="title">Пароль <span class="red">*</span></div>
+																		<div class="form">
+										<input size="30" type="password" name="REGISTER[PASSWORD]" value="" autocomplete="off" class="field-text field-required" /><div class="error-text">Заполните обязательное поле</div>									</div>
+									<div class="error-text">Заполните обязательное поле</div>
+								</div>
+																												<div class="block transition">
+																												<div class="title">Подтверждение пароля <span class="red">*</span></div>
+																		<div class="form">
+										<input size="30" type="password" name="REGISTER[CONFIRM_PASSWORD]" value="" autocomplete="off" class="field-text field-required"/><div class="error-text">Заполните обязательное поле</div>									</div>
+									<div class="error-text">Заполните обязательное поле</div>
+								</div>
+																			
+													<div class="block transition">
+								<div class="title">Введите код с картинки</div>
+								<div class="form">
+									<input type="hidden" name="captcha_sid" value="0e5bfcd327ac0c56a5251827616a55ea" />
+									<img src="/bitrix/tools/captcha.php?captcha_sid=0e5bfcd327ac0c56a5251827616a55ea" width="180" height="40" alt="CAPTCHA" />
+									<div class="block"><input type="text" name="captcha_word" maxlength="50" value="" /></div>
+								</div>
+							</div>
+						
+						<div class="block block-confirm">
+							<label><input type="checkbox" name="confirm" value="0" class="style-forms license" /> Я согласен(-на) на обработку персональных данных</label>
+						</div>
+						
+						<div class="block block-confirm">
+							<label><input type="checkbox" name="UF_UPDATE_ON_SITE" value="4" class="style-forms" /> Хочу получать обновления сайта</label>
+						</div>
+					</div>
+					
+					<div class="inner-bottom">
+						<div class="inner-bottom-wrap">
+							<div class="required"><span class="red">*</span> Обязательное поле</div>
+							<label class="button-medium"><i class="icon-check"></i><input type="submit" name="register_submit_button" value="Зарегистрироваться" /></label>
+							<input type="hidden" name='register_submit_button' value="Зарегистрироваться" />
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<div class="block-bottom">
+			<div class="line-1"><div class="block-color-1"></div><div class="block-color-2"></div><div class="block-color-3"></div></div>
+			<div class="line-2"><div class="block-color-1"></div><div class="block-color-2"></div><div class="block-color-3"></div></div>
+		</div>
+		
+		<div class="bg-top"></div><div class="bg-left"></div><div class="bg-right"></div><div class="bg-bottom-1"></div>
+		<script type="text/javascript">
+		<!--
+		$(function() {
+			var container = $('.block-popup-registration'),
+				form = $('form', container);
+
+			form.find('.field-text.field-required, .license').each(function(i, e) {
+				$(e).addClass("required");
+			});
+		
+			form.validate({
+				errorPlacement: function(error, element) {},
+				highlight: function(element, errorClass)
+				{
+					$(element).addClass(errorClass);
+					$(element).parents('.block').find('.error-text').show();
+					
+					console.log(element);
+				},
+				unhighlight: function(element, errorClass, validClass){
+					$(element).removeClass(errorClass);
+					$(element).parents('.block').find('.error-text').hide();
+				},
+				submitHandler: function(form) {
+					$('.reg-approve-data').remove();
+					var bApproved = $('input[name="confirm"]').attr('checked');
+					if(bApproved)
+					{
+						$(form).ajaxSubmit({
+							ignore: '.ignore',
+							data: {'AJAX_REG_CALL': 'Y', 'REGISTER[LOGIN]':$(form).find('input[name="REGISTER[EMAIL]"]').val()},
+							success: function(responseText, statusText, xhr, $form) {
+								if(responseText.indexOf('reg-popup-errors') !== -1 || responseText.indexOf('reg-popup-email-send') !== -1)
+								{
+									$('.block-popup-registration').html(responseText);
+									ajaxUpdate();
+								}
+								else
+								{
+									window.location.reload();
+								}
+							}
+						});
+					}
+					else
+					{
+						var parent = $('input[name="confirm"]').parents('.block-confirm');
+						$('<div class="reg-approve-data" style="color:#f00;">Вы не согласились на обработку данных</div>').insertAfter(parent);
+					}
+				},
+				rules: {}
+			});
+		});
+		
+		//-->
+		</script>
+	</div>
+			
+	</body>
+</html>

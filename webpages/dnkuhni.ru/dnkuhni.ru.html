@@ -1,0 +1,464 @@
+
+<html>
+
+<head>
+  <title>Дом немецкой кухни</title>
+  <meta http-equiv=Content-Type content=text/html; charset=windows-1251>
+  <meta name='description' content=''>
+
+  <script type="text/javascript" src="../js/global.js"></script>
+  <script type="text/javascript" src="../js/ajax.js"></script>
+  <script type="text/javascript" src="ajax/ajax-dynamic-content.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet_tm.css" />
+
+<script type="text/javascript" src="js/jscript_jquery-1.4.min.js"></script>
+<script type="text/javascript" src="js/jscript_xdarkbox.js"></script>
+<script type="text/javascript" src="js/jscript_zjcarousellite.js"></script>
+<script type="text/javascript" src="js/jscript_zjquery.faded.js"></script>
+
+<script type="text/javascript" src="jscript/jscript_kwicks-1.5.1.pack.js"></script>
+
+
+
+<script type="">
+
+	$(function(){
+
+		$("#faded").faded({
+
+		speed: 1000,
+
+		bigtarget: false,
+
+		autoplay: 4000,
+
+		autorestart: 0,
+
+		autopagination:true,
+
+		crossfade:true
+
+		});
+
+	});
+
+	$(function() {
+
+		 $(".carousel").jCarouselLite({
+
+			  btnNext: ".next",
+
+			  btnPrev: ".prev"
+
+		 });
+
+	});
+
+
+
+</script>
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<style>
+.carousel-box{width:720px;}
+
+table, .txt12 {font-family:Arial,Tahoma}
+
+table, .txt12 {font-size:12px}
+.hdd, a.leftmenu, .leftmenu_text, h3, .txt14, .grey, .ln16, .pag, .pag_def {font-size:14px}
+h1 {font-size:22px}
+a.bigmenu {font-size:18px}
+h2, div.noneshadow, div.shadow {font-size:50px}
+h2 {text-shadow: 0.05em 0.05em 0.2em black}
+
+
+div.noneshadow {
+   color:#ffffff;
+   height:50px;
+   margin:10px 20px 5px 0px;
+}
+
+div.shadow {
+   height:50px;
+   color:#5f5f5f;
+   position:relative;
+   top:-50px;
+   left:1px;
+   z-index:-1;
+   margin:-10px 20px 5px 0px;
+}
+
+
+h1, h2 {font-weight:normal}
+
+.pag {padding:4px 8px 5px 8px;background-color:#a69859}
+.pag_def {padding:4px 8px 5px 8px;background-color:#ffd500}
+
+a.leftmenu, .leftmenu_text {font-weight:bold}
+
+a.leftmenu, .leftmenu_text {line-height:19px}
+a.submenu, .submenu_text {line-height:16px}
+a.bigmenu {line-height:32px}
+
+.topmenu_text, body, .submenu_text, .ln, .ln16, .spoiler, .spoiler2, .spoiler3  {color:#000000}
+a.topmenu, .grey {color:#a4a4a4}
+.pag, .pag_def {color:#000000}
+a.submenu, .hide {color:#727272}
+a.bigmenu, table, body, .txt12, a.leftmenu, .leftmenu_text, a.submenu:hover, h3 {color:#3e3e3e}
+a.topmenu:hover {color:#717171}
+h2, h4, .bgleftright {color:#ffffff}
+
+a.topmenu, a.leftmenu, a.submenu {text-decoration:none}
+.spoiler, .spoiler2 {border-bottom: 1px dashed #000}
+.hide {border-bottom: 1px dashed #727272}
+
+h2 {margin:10px 20px 5px 0px}
+a.leftmenu {margin-left:30px}
+
+.leftmenu_text {padding-left:30px}
+.mid {margin:5px 0px 0px 0px}
+h3 {margin:0px 0px 5px 0px}
+
+.bgleftright {padding:5px 260px 5px 20px}
+.bg {padding:0px 0px 0px 0px}
+
+.leftmenu_text {background-image:url('i/point.gif');background-repeat:no-repeat; background-position: 12px 5px}
+
+.pos_txt {width:450px; height:22px}
+.pos_area {width:450px; height:100px}
+.pos_txt, .pos_area {border:1px solid #777}
+
+.t_head {background-color:#ffd800}
+.t_gr {background-color:#f0f0f0}
+.t_gr2 {background-color:#fcfcfc}
+.t_yel {background-color:#fff1a2}
+
+.bgleftright, .bg {background:url('i/bgleftright.png');}
+*html .bgleftright {background:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i/bgleftright.png', sizingMethod='scale');}
+
+.in1 {width:300px}
+.in2 {width:70px}
+
+#faded{
+	overflow:hidden;
+	position:relative;
+	width:720px;
+	height:358px;
+	background:#ffffff;
+}
+ul.pagination { list-style:none; padding:0; margin:0; position:absolute; bottom:20px; right:20px;}
+ul.pagination li {
+	float:left;
+	position:relative;
+	z-index:11;
+	margin-left:3px;
+}
+ul.pagination li a {
+	display:block;
+	float:left;
+	background:url(../i/pagination.png) no-repeat -48px 0px;
+	width:24px;
+	height:25px;
+	text-indent:-9999px;
+	outline:none;
+}
+ul.pagination li a:hover{
+	background:url(../i/pagination.png) no-repeat -24px 0px;
+}
+ul.pagination li.current{
+	position:relative;
+	z-index:9999!important;
+}
+ul.pagination li.current a{
+	background:url(../i/pagination.png) no-repeat 0px 0px;
+}
+
+.phone1 {font-size:12px}
+.phone2 {font-size:17px}
+</style>
+
+<!--[if IE]>
+<style>
+.novis {display:none}
+</style>
+<![endif]-->
+
+<body leftmargin=0 rightmargin=0 topmargin=50 bottommargin=30>
+
+
+<table height="100%" width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td align="center" valign="top">
+
+
+
+			<table width="0" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                	<td colspan=2>
+                		    <div style="margin:0px 0px 10px 0px;" align=right>
+    	</div>
+					</td>
+				</tr>
+				<tr>
+
+					<td valign="top" width="210">
+
+				<img src="../i/logo.gif?1342" width=168 height=72  style="margin-left:30px">
+                    	<div style="margin-top:30px">
+
+<span class="leftmenu_text" style="">Кухни</span><br><div style="margin:0px 20px 6px 30px;"><a class=submenu href="../page_trand&id=15&id_brand=100000&id_trand=100016&table=sub">Allmilm&#246; </a><br><a class=submenu href="../page_trand&id=15&id_brand=100002&id_trand=100019&table=sub">Sch&#252;ller</a><br><a class=submenu href="../page_trand&id=15&id_brand=100003&id_trand=100027&table=sub">Next</a><br><a class=submenu href="../page_trand&id=15&id_brand=100014&id_trand=100061&table=sub">Nolte</a><br><a class=submenu href="../page_trand&id=15&id_brand=100106&id_trand=100107&table=sub">Beckermann</a><br><a class=submenu href="../page_trand&id=15&id_brand=100101&id_trand=100102&table=sub">Sachsen k&#252;chen</a><br><a class=submenu href="../page_trand&id=15&id_brand=100153&id_trand=100155&table=sub">Nieburg</a><br></div><a class=leftmenu  style="" href="../page_razd&id=25">Столовые группы</a><br><a class=leftmenu  style="" href="../page_razd&id=26">Барные стулья</a><br><a class=leftmenu  style="" href="../page_razd&id=27">Столешницы</a><br><a class=leftmenu  style="" href="../page_razd&id=31">Диваны и кресла</a><br><a class=leftmenu  style="" href="../page_razd&id=70">Гостинные</a><br><a class=leftmenu  style="color:red" href="../page_razd&id=61">Sale!</a><br><p><a class=leftmenu href="page_basket&id=9999999">Избранное</a><p><a class=leftmenu href="page_sh">Бытовая техника</a><br>                       <div align=left style="position:relative; top:46px; left:30px">
+
+     <i style="font-size:10px;color:#a4a4a4">Консультация специалиста<br>с 10-00 до 21-00 ежедневно:</i>
+
+
+						<div class="phone2" style="margin:4px 0px 0px 0px">
++7(495) 649-69-82						</div>
+
+
+                   </div>
+
+
+
+                    	</div>
+
+					</td>
+
+					<td valign="top" width="720">
+
+						<table width="720" height="68" cellpadding="0" cellspacing="0" border="0">
+
+							<tr height="61">
+
+								<td valign="bottom" align="right" width="720" style="padding-bottom:21px;">
+
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="topmenu"   href="../page_gallery&id=71">Акции</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="topmenu"  style="color:#ff0000" href="../page_gallery&id=54">Немецкая кухня за 172 тыс. руб.!!!</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="topmenu"   href="../page_pub&id=21">О компании</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="topmenu"   href="../page_pub&id=47">Вакансии</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="topmenu"   href="../page_pub&id=23">Адреса салонов</a>								</td>
+
+							</tr>
+
+							<tr height="7" style="background-color:#fcd403">
+
+								<td></td>
+
+							</tr>
+
+						</table>
+	
+						<!-- BOF Slideshow -->
+
+						<div class="banners" id="faded">
+					        <div>
+
+		
+								<table width="720" cellpadding="0" cellspacing="0" border="0" style="background:url('textpic/15/c79e8e3c6bb5.jpg') no-repeat center;">
+									<tr height="300">
+        								<td valign="top" align="right">
+        								<div class="novis"><h2>Кухни</h2></div>
+			                                <!--[if IE]>
+			                                <div class="noneshadow">Кухни</div>
+											<div class="shadow">Кухни</div>
+											<![endif]-->
+
+										</td>
+                					</tr>
+
+									<tr height="50">
+										<td class="bgleftright" align="left">
+											ALLMILM&#214;, SCH&#220;LLER, NEXT, NOLTE&nbsp;&nbsp;										</td>
+									</tr>
+								</table>
+
+	 	 
+								<table width="720" cellpadding="0" cellspacing="0" border="0" style="background:url('textpic/25/3e569c64da74.jpg') no-repeat center;">
+									<tr height="300">
+        								<td valign="top" align="right">
+        								<div class="novis"><h2>Столовые группы</h2></div>
+			                                <!--[if IE]>
+			                                <div class="noneshadow">Столовые группы</div>
+											<div class="shadow">Столовые группы</div>
+											<![endif]-->
+
+										</td>
+                					</tr>
+
+									<tr height="50">
+										<td class="bgleftright" align="left">
+											W&#214;SSNER										</td>
+									</tr>
+								</table>
+
+	 	 
+								<table width="720" cellpadding="0" cellspacing="0" border="0" style="background:url('textpic/26/5f97dc0b85a9.jpg') no-repeat center;">
+									<tr height="300">
+        								<td valign="top" align="right">
+        								<div class="novis"><h2>Барные стулья</h2></div>
+			                                <!--[if IE]>
+			                                <div class="noneshadow">Барные стулья</div>
+											<div class="shadow">Барные стулья</div>
+											<![endif]-->
+
+										</td>
+                					</tr>
+
+									<tr height="50">
+										<td class="bgleftright" align="left">
+											SeRiCo										</td>
+									</tr>
+								</table>
+
+	 	 
+								<table width="720" cellpadding="0" cellspacing="0" border="0" style="background:url('textpic/27/961d35bab7d1.jpg') no-repeat center;">
+									<tr height="300">
+        								<td valign="top" align="right">
+        								<div class="novis"><h2>Столешницы</h2></div>
+			                                <!--[if IE]>
+			                                <div class="noneshadow">Столешницы</div>
+											<div class="shadow">Столешницы</div>
+											<![endif]-->
+
+										</td>
+                					</tr>
+
+									<tr height="50">
+										<td class="bgleftright" align="left">
+											LIGRON, CAESARSTONE										</td>
+									</tr>
+								</table>
+
+	 	 
+								<table width="720" cellpadding="0" cellspacing="0" border="0" style="background:url('textpic/28/27f02dc78806.jpg') no-repeat center;">
+									<tr height="300">
+        								<td valign="top" align="right">
+        								<div class="novis"><h2>Бытовая техника</h2></div>
+			                                <!--[if IE]>
+			                                <div class="noneshadow">Бытовая техника</div>
+											<div class="shadow">Бытовая техника</div>
+											<![endif]-->
+
+										</td>
+                					</tr>
+
+									<tr height="50">
+										<td class="bgleftright" align="left">
+											GAGGENAU, NEFF, K&#220;PPERSBUSCH, V-ZUG, FHIABA, MIELE										</td>
+									</tr>
+								</table>
+
+	 	 
+								<table width="720" cellpadding="0" cellspacing="0" border="0" style="background:url('textpic/31/4a3668100865.jpg') no-repeat center;">
+									<tr height="300">
+        								<td valign="top" align="right">
+        								<div class="novis"><h2>Диваны и кресла</h2></div>
+			                                <!--[if IE]>
+			                                <div class="noneshadow">Диваны и кресла</div>
+											<div class="shadow">Диваны и кресла</div>
+											<![endif]-->
+
+										</td>
+                					</tr>
+
+									<tr height="50">
+										<td class="bgleftright" align="left">
+											W.Schillig										</td>
+									</tr>
+								</table>
+
+	 	 
+								<table width="720" cellpadding="0" cellspacing="0" border="0" style="background:url('textpic/70/9e1e9583556e.jpg') no-repeat center;">
+									<tr height="300">
+        								<td valign="top" align="right">
+        								<div class="novis"><h2>Гостинные</h2></div>
+			                                <!--[if IE]>
+			                                <div class="noneshadow">Гостинные</div>
+											<div class="shadow">Гостинные</div>
+											<![endif]-->
+
+										</td>
+                					</tr>
+
+									<tr height="50">
+										<td class="bgleftright" align="left">
+																					</td>
+									</tr>
+								</table>
+
+	 	 
+								<table width="720" cellpadding="0" cellspacing="0" border="0" style="background:url('textpic/61/eed2ed5110b6.jpg') no-repeat center;">
+									<tr height="300">
+        								<td valign="top" align="right">
+        								<div class="novis"><h2>SALE!</h2></div>
+			                                <!--[if IE]>
+			                                <div class="noneshadow">SALE!</div>
+											<div class="shadow">SALE!</div>
+											<![endif]-->
+
+										</td>
+                					</tr>
+
+									<tr height="50">
+										<td class="bgleftright" align="left">
+											Прекрасные образцы мебели по привлекательным ценам Вы найдёте в меню слева!&nbsp;&nbsp;Скидки до 70%!!!										</td>
+									</tr>
+								</table>
+
+	 	 
+							</div>
+						</div>
+
+						<!-- EOF Slideshow -->
+
+
+    <div style="margin-top:35px">
+  	<a href="../page_trand&id_brand=100000&id_trand=100016&table=sub&id=15" title="Allmilm&#246; " border=0><img src="logos/100000/allmilmo.gif" width="73" height="25" hspace=9 vspace=5 border=0></a><a href="../page_trand&id_brand=100002&id_trand=100019&table=sub&id=15" title="Sch&#252;ller" border=0><img src="logos/100002/schuller.gif" width="72" height="25" hspace=9 vspace=5 border=0></a><a href="../page_trand&id_brand=100003&id_trand=100027&table=sub&id=15" title="Next" border=0><img src="logos/100003/next.gif" width="54" height="25" hspace=9 vspace=5 border=0></a><a href="../page_trand&id_brand=100014&id_trand=100061&table=sub&id=15" title="Nolte" border=0><img src="logos/100014/nolte.gif" width="73" height="25" hspace=9 vspace=5 border=0></a><a href="../page_trand&id_brand=100106&id_trand=100107&table=sub&id=15" title="Beckermann" border=0><img src="logos/100106/Beckermann.jpg" width="75" height="26" hspace=9 vspace=5 border=0></a><a href="../page_trand&id_brand=100101&id_trand=100102&table=sub&id=15" title="Sachsen k&#252;chen" border=0><img src="logos/100101/logo_sachsen_kuechen.png" width="75" height="25" hspace=9 vspace=5 border=0></a><a href="../page_trand&id_brand=100153&id_trand=100155&table=sub&id=15" title="Nieburg" border=0><img src="logos/100153/nieburg_logo_2013_570x450.jpg" width="75" height="21" hspace=9 vspace=5 border=0></a><a href="../page_trand&id_brand=100029&id_trand=100044&table=sub&id=25" title="W&#246;ssner" border=0><img src="logos/100029/wossner.gif" width="73" height="25" hspace=9 vspace=5 border=0></a><a href="../page_trand&id_brand=100030&id_trand=100057&table=sub&id=26" title="SeRiCo" border=0><img src="logos/100030/serico.gif" width="73" height="25" hspace=9 vspace=5 border=0></a><a href="../page_trand&id_brand=100075&id_trand=&table=sub&id=27" title="Ligron" border=0><img src="logos/100075/ligron.gif" width="73" height="25" hspace=9 vspace=5 border=0></a><a href="../page_trand&id_brand=100093&id_trand=&table=sub&id=27" title="Caesarstone" border=0><img src="logos/100093/caesarstone.gif" width="73" height="25" hspace=9 vspace=5 border=0></a><a href="../page_trand&id_brand=100062&id_trand=100076&table=sub&id=31" title="W.Schillig" border=0><img src="logos/100062/Logo_W.schillig.jpg" width="75" height="25" hspace=9 vspace=5 border=0></a><a href="../page_trand&id_brand=100159&id_trand=100160&table=sub&id=70" title="Gwinner" border=0><img src="logos/100159/T_catalog_sections_F_image1_I_156_v1.jpg" width="75" height="20" hspace=9 vspace=5 border=0></a><a href="http://www.akademiya-gaggenau.ru/" title="" border=0 target="_blank"><img src="logos_sh/10/gaggenau_1.png" width="102" height="25" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=3&m=1" border=0><img src="logos_sh/3/miele.jpg" width="64" height="16" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=21&m=1" border=0><img src="logos_sh/21/Miele-Professional_2.jpg" width="64" height="25" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=18&m=1" border=0><img src="logos_sh/18/Kitchen_Aid.jpg" width="105" height="25" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=1&m=1" border=0><img src="logos_sh/1/Bosch.jpg" width="75" height="25" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=13&m=1" border=0><img src="logos_sh/13/siemens_logo.bmp" width="75" height="25" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=5&m=1" border=0><img src="logos_sh/5/neff.gif" width="73" height="25" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=6&m=1" border=0><img src="logos_sh/6/AEG.jpg" width="75" height="25" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=9&m=1" border=0><img src="logos_sh/9/electrolux_logo_new.png" width="75" height="25" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=11&m=1" border=0><img src="logos_sh/11/Falmec.jpg" width="75" height="25" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=12&m=1" border=0><img src="logos_sh/12/smeg_logo.jpg" width="75" height="25" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=15&m=1" border=0><img src="logos_sh/15/dedietrich-logo_1.JPG" width="75" height="23" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=16&m=1" border=0><img src="logos_sh/16/Liebherr.jpg" width="75" height="25" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=17&m=1" border=0><img src="logos_sh/17/FABER_(Slava).jpg" width="87" height="25" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=20&m=1" border=0><img src="logos_sh/20/Asko.jpg" width="75" height="25" hspace=9 vspace=5 border=0></a><a href="../page_search&id_brand=22&m=1" border=0><img src="logos_sh/22/bora-logo-cmyk-80k.jpg" width="75" height="14" hspace=9 vspace=5 border=0></a>	</div>
+
+					</td>
+
+					<td width="30"><img src="i/dot.gif" width="30" height="1"></td>
+
+				</tr>
+                <tr height=30><td></td><td></td></tr>
+				<tr height=37>
+						<td></td>
+						<td align=right>
+
+						<table border=0 cellpadding=0 cellspacing=0 width=720>
+						   <tr>
+								<td valign=middle align=right height=12>
+
+
+								</td>
+								<td width=130 align=right rowspan=3 height=40 valign=middle>
+									<a href="http://www.designproject.su" border=0><img src="i/dp_logo.gif" width=120 height=37 border=0></a>
+								</td>
+                           </tr>
+                		   <tr height=1><td style="background-color:#aeaeae"></td></tr>
+                           <tr>
+                           	 <td>
+
+
+                           	 	<table border=0 cellpadding=0 cellspacing=0 width=590>
+                           	 		<tr>
+			<td  align="left"><a class="topmenu" href="http://www.furniture.designproject.su/">Мебель и предметы интерьера</a></td><td  align="center"><a class="topmenu" href="http://www.architecture.designproject.su/">Архитектурное проектирование</a></td><td  align="right"><a class="topmenu" href="http://repair.designproject.su/">Строительство и ремонт</a></td>									</tr>
+								</table>
+
+							</td>
+						</tr>
+                       </table>
+
+
+
+                      </td>
+				</tr>
+
+			</table>
+
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta charset="UTF-8" />
+	<base href="http://www.moyasenevo.ru/" />
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<title>Главная | Муниципальный округ Ясенево</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js" ></script>  
+	<script type="text/javascript" src="js/menu.js"></script>
+	<link rel="stylesheet" href="css/menu.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/slider.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/modal.css" type="text/css" media="screen, projection" />
+	<script type="text/javascript">    
+	$(document).ready(function(){
+	$("#featured > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true);    
+	});    
+	</script>
+	
+	<!--Версия для слабовидящих-->
+    <link rel="alternate stylesheet" type="text/css" href="/css/blind.css" title="blind" />
+    <link rel="alternate stylesheet" type="text/css" href="/css/blind-m.css" title="blind-m" />
+    <link rel="alternate stylesheet" type="text/css" href="/css/blind-l.css" title="blind-l" />
+    <link rel="alternate stylesheet" type="text/css" href="/css/blind-f.css" title="blind-f" />
+    <link rel="alternate stylesheet" type="text/css" href="/css/black.css" title="black" />
+    <link rel="alternate stylesheet" type="text/css" href="/css/grey.css" title="grey" />
+    <link rel="alternate stylesheet" type="text/css" href="/css/noImg.css" title="noImg" />
+    <script type="text/javascript" src="/js/styleswitcher.js"></script>
+	
+	<!-- Модальные окна -->
+	<script src="js/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
+	<script type="text/javascript" src="assets/snippets/data/sendback.js"></script>
+	<link rel="stylesheet" href="js/arcticmodal/jquery.arcticmodal-0.3.css">
+	<link rel="stylesheet" href="js/arcticmodal/themes/simple.css">
+
+	
+<!-- Фотогаллерея -->
+<script type="text/javascript" src="js/pirobox.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$().piroBox({
+			my_speed: 400, //animation speed
+			bg_alpha: 0.1, //background opacity
+			slideShow : true, // true == slideshow on, false == slideshow off
+			slideSpeed : 4, //slideshow duration in seconds(3 to 6 Recommended)
+			close_all : '.piro_close,.piro_overlay'// add class .piro_overlay(with comma)if you want overlay click close piroBox
+
+	});
+});
+</script>
+<link href="css/foto/foto-style.css" class="piro_style" media="screen" title="white" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/pirobox.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$().piroBox({
+			my_speed: 400, //animation speed
+			bg_alpha: 0.1, //background opacity
+			slideShow : true, // true == slideshow on, false == slideshow off
+			slideSpeed : 4, //slideshow duration in seconds(3 to 6 Recommended)
+			close_all : '.piro_close,.piro_overlay'// add class .piro_overlay(with comma)if you want overlay click close piroBox
+
+	});
+});
+</script>
+<link href="css/foto/foto-style.css" class="piro_style" media="screen" title="white" rel="stylesheet" type="text/css" />
+<!-- Структура -->	
+	<script>
+	$(document).ready(function() {
+		$('.title').append('<span></span>');
+		$('.post span').each(function() {
+			var trigger = $(this), state = false, el = trigger.parent().next('.entry');
+			trigger.click(function(){
+				state = !state;
+				el.slideToggle();
+				trigger.parent().parent().toggleClass('inactive');
+			});
+		});
+
+	});
+	</script>
+	
+	<script src="http://e-timer.ru/js/etimer.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery(".eTimer").eTimer({
+			etType: 0, etDate: "09.05.2015.0.0", etTitleText: "До празднования осталось:", etTitleSize: 18, etShowSign: 1, etSep: ":", etFontFamily: "Trebuchet MS", etTextColor: "#a3a3a3", etPaddingTB: 5, etPaddingLR: 5, etBackground: "white", etBorderSize: 0, etBorderRadius: 1, etBorderColor: "white", etShadow: " 0px 0px 10px 0px #333333", etLastUnit: 3, etNumberFontFamily: "Impact", etNumberSize: 28, etNumberColor: "white", etNumberPaddingTB: 0, etNumberPaddingLR: 8, etNumberBackground: "#fb140f", etNumberBorderSize: 0, etNumberBorderRadius: 5, etNumberBorderColor: "white", etNumberShadow: "inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5)"
+		});
+	});
+</script>
+</head>
+
+<body>	
+
+<div id="wrapper">
+
+	<div class="blind-block">
+
+<div class="fonts-block">
+<a class="font-s-icon" href="#" onclick="setActiveStyleSheet('blind'); return false;"></a>
+<a class="font-m-icon" href="#" onclick="setActiveStyleSheet('blind-m'); return false;"></a>
+<a class="font-l-icon" href="#" onclick="setActiveStyleSheet('blind-l'); return false;"></a>
+</div>
+
+<div class="letterspace-block">
+<a class="letterspace-icon" href="#" onclick="setActiveStyleSheet('blind-f'); return false;"></a></div>
+
+<div class="fontcolors-block">
+<a class="white-icon" href="#" onclick="setActiveStyleSheet('blind'); return false;"></a>
+<a class="black-icon" href="#" onclick="setActiveStyleSheet('black'); return false;"></a>
+<a class="grey-icon" href="#" onclick="setActiveStyleSheet('grey'); return false;"></a>
+</div>
+
+<div class="noImg-block">
+<a class="noImg-icon" href="#" onclick="setActiveStyleSheet('noImg'); return false;"></a></div>
+
+<div class="default-link">
+<a class="default-link" href="#" onclick="setActiveStyleSheet('styles'); return false;">Основная версия</a></div>
+</div>
+
+<header id="header"><div class="blind-link"><a href="#" onclick="setActiveStyleSheet('blind'); return false;">Версия для слабовидящих</a></div>
+		<div class="logo-div">
+			<a class="logo" title="" href="/" class="png" ><img src="/img/logo.png" /></a>
+		</div>
+		<div class="header-right">
+			<div class="top-menu-div">
+				<ul class="top-menu"><li class="active"><a href="http://www.moyasenevo.ru/" title="Главная" >Главная</a></li>
+<li><a href="/объявления.html" title="Объявления" >Объявления</a></li>
+<li><a href="/faq.html" title="Полезная информация" >Полезная информация</a></li>
+<li><a href="/новости.html" title="Новости" >Новости</a></li>
+<li><a href="/видео.html" title="Видео" >Видео</a></li>
+<li><a href="/галерея.html" title="Галерея" >Галерея</a></li>
+<li class="last"><a href="/контакты.html" title="Контакты" >Контакты</a></li>
+</ul>
+			</div>
+			<div class="bottom-menu-div">
+					<ul class="bottom-menu"><li><a href="/задать-вопрос.html" title="Задать вопрос" >Задать вопрос</a></li>
+<li><a href="/правовые-вопросы.html" title="Правовые вопросы" >Правовые вопросы</a></li>
+<li><a href="/электронная-приемная.html" title="Электронная приемная" >Электронная приемная</a></li>
+<li class="last"><a href="/муниципальный-контроль1.html" title="Муниципальный контроль" >Муниципальный контроль</a></li>
+</ul>
+			</div>
+		</div>
+	</header><!-- #header-->	
+	
+	<section id="middle">
+		<div id="container">
+			<!-- Слайдер -->
+			<div class="slider-home">
+				<span>Новости</span>
+				<hr />
+				<div id="featured" >    
+					<ul class="ui-tabs-nav">    
+						<li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1764">
+							<a href="#fragment-1764">    
+								<img src="assets/images/news/2016/10/newsslidemimi/25.10.16_16.34.jpg" />    
+								<span>В столице пройдет торжественная церемония ...</span>
+							</a>
+						</li>    <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1763">
+							<a href="#fragment-1763">    
+								<img src="assets/images/news/2016/10/newsslidemimi/25.10.16_16.32.jpg" />    
+								<span>Новая топонимика Москвы</span>
+							</a>
+						</li>    <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1762">
+							<a href="#fragment-1762">    
+								<img src="assets/images/news/2016/09/newsslidemimi/22.09.16_16.33.jpg" />    
+								<span>4 ноября вМоскве пройдет«Ночь искусств» ...</span>
+							</a>
+						</li>    <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1752">
+							<a href="#fragment-1752">    
+								<img src="assets/images/news/2016/10/newsslidemimi/19.10.16_11.52.jpg" />    
+								<span>27 Севастопольская бригада принимала гостей ...</span>
+							</a>
+						</li>         
+					</ul>   
+					
+					<!-- Fourth Content -->    
+					<div id="fragment-1764" class="ui-tabs-panel ui-tabs-hide">    
+						<img src="assets/images/news/2016/10/newsslide/25.10.16_16.34.jpg" alt="В столице пройдет торжественная церемония вручения  Грантов Мэра Москвы" />    
+						<div class="info" >    
+							<h2><a href="http://www.moyasenevo.ru/в-столице-пройдет-торжественная-церемония-вручения-грантов-мэра-москвы.html" >В столице пройдет торжественная церемония вручения  Грантов Мэра ...</a></h2>    
+							<p>3 ноября в Большом зале музыкального театра «Геликон-опера» пройдет торжественная церемония вручения Грантов Мэра Москвы самым талантливым учащимся столичных колледжей ... <a href="http://www.moyasenevo.ru/в-столице-пройдет-торжественная-церемония-вручения-грантов-мэра-москвы.html" ><span>Подробно...</span></a></p>    
+						</div>
+					</div><div id="fragment-1763" class="ui-tabs-panel ui-tabs-hide">    
+						<img src="assets/images/news/2016/10/newsslide/25.10.16_16.32.jpg" alt="Новая топонимика Москвы" />    
+						<div class="info" >    
+							<h2><a href="http://www.moyasenevo.ru/новая-топонимика-москвы.html" >Новая топонимика Москвы</a></h2>    
+							<p>В городе решили увековечить память российских художников и писателей, учёных и пожарного, а также национального героя Мексики и культурных деятелей Испании. <a href="http://www.moyasenevo.ru/новая-топонимика-москвы.html" ><span>Подробно...</span></a></p>    
+						</div>
+					</div><div id="fragment-1762" class="ui-tabs-panel ui-tabs-hide">    
+						<img src="assets/images/news/2016/09/newsslide/22.09.16_16.33.jpg" alt="4 ноября вМоскве пройдет«Ночь искусств» под девизом «Время создавать»" />    
+						<div class="info" >    
+							<h2><a href="http://www.moyasenevo.ru/4-ноября-вмоскве-пройдетночь-искусств-под-девизом-время-создавать.html" >4 ноября вМоскве пройдет«Ночь искусств» под девизом «Время создавать»...</a></h2>    
+							<p>Департамент культуры напомнил, что 4 ноября в Москве в четвертый раз пройдет ежегодная культурно-образовательная акция «Ночь искусств». В этот раз она будет проводиться ... <a href="http://www.moyasenevo.ru/4-ноября-вмоскве-пройдетночь-искусств-под-девизом-время-создавать.html" ><span>Подробно...</span></a></p>    
+						</div>
+					</div><div id="fragment-1752" class="ui-tabs-panel ui-tabs-hide">    
+						<img src="assets/images/news/2016/10/newsslide/19.10.16_11.52.jpg" alt="27 Севастопольская бригада принимала гостей из школ ЮЗАО" />    
+						<div class="info" >    
+							<h2><a href="http://www.moyasenevo.ru/27-севастопольская-бригада-принимала-гостей-из-школ-юзао.html" >27 Севастопольская бригада принимала гостей из школ ЮЗАО</a></h2>    
+							<p>Будущие призывники Юго-Западного округа побывали на экскурсии в расположении 27 Севастопольской бригады в Мосрентгене, сообщает газета «Москва. За Калужской заставой». ... <a href="http://www.moyasenevo.ru/27-севастопольская-бригада-принимала-гостей-из-школ-юзао.html" ><span>Подробно...</span></a></p>    
+						</div>
+					</div> 
+					
+					
+				</div>
+			</div>
+			<!-- Слайдер ЭНД -->
+			<div class="home-video">
+				
+				<!--a href="https://www.mos.ru/city/projects/dg2016/" target=_blank><img src="assets/images/2016_09_08_24.jpg" width=730></a><br-->
+			<span>Новые видео</span>
+			<hr />
+			</div>
+			
+			
+			<div class="content-video" id="content">
+				<div class="odin">
+				<div class="video-element">
+<span>История Ясенево</span>
+<a onclick="$('#exampleModal11200').arcticmodal()" id="#example1" class="m-dotted">
+	<img src="assets/images/mvi/mvi/structmini/13.07.15_15.04.PNG" />
+</a> 
+<div style="display: none;">
+<div class="box-modal" id="exampleModal11200">
+<div class="box-modal_close arcticmodal-close">закрыть</div>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/IW-h-IAfZwE" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div><div class="video-element">
+<span>Флешмоб "Победа 70"</span>
+<a onclick="$('#exampleModal11127').arcticmodal()" id="#example1" class="m-dotted">
+	<img src="assets/images/mvi/mvi/structmini/13.05.15_23.20.jpg" />
+</a> 
+<div style="display: none;">
+<div class="box-modal" id="exampleModal11127">
+<div class="box-modal_close arcticmodal-close">закрыть</div>
+<iframe width="420" height="315" src="//www.youtube.com/embed/EPRojAWczog" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div><div class="video-element">
+<span>"Районы": Ясенево</span>
+<a onclick="$('#exampleModal1771').arcticmodal()" id="#example1" class="m-dotted">
+	<img src="assets/images/structmini/structmini/structmini/12.01.15_11.32.png" />
+</a> 
+<div style="display: none;">
+<div class="box-modal" id="exampleModal1771">
+<div class="box-modal_close arcticmodal-close">закрыть</div>
+<object width='483' height='353'><param name='movie' value='http://www.m24.ru/v/71113'></param><param name='wmode' value='transparent'></param><param name='allowScriptAccess' value='always'></param><param name='allowFullScreen' value='true'></param><embed src='http://www.m24.ru/v/71113' type='application/x-shockwave-flash' wmode='window' width='483' height='353' allowFullScreen='true' allowScriptAccess='always'></embed></object>
+</div>
+</div>
+</div><div class="video-element">
+<span>Храм в Ясеневе - мировой памятник</span>
+<a onclick="$('#exampleModal1523').arcticmodal()" id="#example1" class="m-dotted">
+	<img src="assets/images/mvi/structmini/structmini/21.08.14_23.48.png" />
+</a> 
+<div style="display: none;">
+<div class="box-modal" id="exampleModal1523">
+<div class="box-modal_close arcticmodal-close">закрыть</div>
+<object width='483' height='353'><param name='movie' value='http://www.m24.ru/v/59309'></param><param name='wmode' value='transparent'></param><param name='allowScriptAccess' value='always'></param><param name='allowFullScreen' value='true'></param><embed src='http://www.m24.ru/v/59309' type='application/x-shockwave-flash' wmode='window' width='483' height='353' allowFullScreen='true' allowScriptAccess='always'></embed></object>
+</div>
+</div>
+</div><div class="video-element">
+<span>Храм Покрова Пресвятой Богородицы</span>
+<a onclick="$('#exampleModal1301').arcticmodal()" id="#example1" class="m-dotted">
+	<img src="assets/images/mvi/structmini/28.03.14_23.42.png" />
+</a> 
+<div style="display: none;">
+<div class="box-modal" id="exampleModal1301">
+<div class="box-modal_close arcticmodal-close">закрыть</div>
+<iframe width="420" height="315" src="//www.youtube.com/embed/T32Sj2W_lk8" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div><div class="video-element">
+<span>Репортаж об имении Узкое</span>
+<a onclick="$('#exampleModal1300').arcticmodal()" id="#example1" class="m-dotted">
+	<img src="assets/images/mvi/structmini/28.03.14_23.31.png" />
+</a> 
+<div style="display: none;">
+<div class="box-modal" id="exampleModal1300">
+<div class="box-modal_close arcticmodal-close">закрыть</div>
+<iframe width="560" height="315" src="//www.youtube.com/embed/M_UpGeyjJQ0?list=PL7BB8A96022A6BCBB" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div><div class="video-element">
+<span>О проектировании Ясенево</span>
+<a onclick="$('#exampleModal1299').arcticmodal()" id="#example1" class="m-dotted">
+	<img src="assets/images/mvi/structmini/28.03.14_23.15.jpg" />
+</a> 
+<div style="display: none;">
+<div class="box-modal" id="exampleModal1299">
+<div class="box-modal_close arcticmodal-close">закрыть</div>
+<iframe width="420" height="315" src="//www.youtube.com/embed/lcEFDPAD_Po" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div><div class="video-element">
+<span>Спасение Усадьбы Ясенево</span>
+<a onclick="$('#exampleModal1295').arcticmodal()" id="#example1" class="m-dotted">
+	<img src="assets/images/mvi/structmini/28.03.14_23.02.png" />
+</a> 
+<div style="display: none;">
+<div class="box-modal" id="exampleModal1295">
+<div class="box-modal_close arcticmodal-close">закрыть</div>
+<iframe width="560" height="315" src="//www.youtube.com/embed/tzKcP2GlkWU" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+				</div>
+				<a href="/видео.html">Смотреть все видео...</a>
+				
+			</div>
+			
+			<div class="home-video">
+			<span>Объявления</span>
+			<hr />
+			</div>
+
+			<div class="content-video" id="content">
+								<div class="sobraniya">
+					<div class="spb-sob">
+						<h4>Публичные слушания по проекту решения Совета депутатов муниципального округа Ясенево «О внесении изменений и дополнений в Устав муниципального округа Ясенево»</h4>
+						<p class="opisanie-sobr">
+						Публичные слушания по проекту решения Совета депутатов муниципального округа Ясенево «О внесении изменений и дополнений ...
+						</p>
+						<a href="публичные-слушания-по-проекту-решения-совета-депутатов-муниципального-округа-ясенево-о-внесении-изменений-и-дополнений-в-устав-муниципального-округа-ясенево.html">Подробно...</a>
+					</div>	
+				</div>					<div class="sobraniya">
+					<div class="spb-sob">
+						<h4>Оповещение о проведении публичных слушаний</h4>
+						<p class="opisanie-sobr">
+						На публичные слушания представляется проект схемы теплоснабжения города Москвы до 2030 года с учётом развития присоединённых ...
+						</p>
+						<a href="оповещение-о-проведении-публичных-слушаний2.html">Подробно...</a>
+					</div>	
+				</div>					<div class="sobraniya">
+					<div class="spb-sob">
+						<h4>Дополнительный прием населения</h4>
+						<p class="opisanie-sobr">
+						Уважаемые жители района Ясенево!<br /><br />Сообщаем о дополнительном приеме населения депутатом Совета депутатов муниципального ...
+						</p>
+						<a href="дополнительный-прием-населения.html">Подробно...</a>
+					</div>	
+				</div>	
+				<a href="/объявления.html">Смотреть все объявления...</a>
+			</div>
+				
+			<div class="home-video">
+			<span>Новые фотографии</span>
+			<hr />
+			</div>
+			<div class="content-video" id="content">
+				<div class="odin2">
+		<div class="video-element">
+	<span></span>
+	<a href="/assets/galleries/6/2016_09_17_36.jpg" class="pirobox_gall" title=""><img src="/assets/galleries/6/thumbs/2016_09_17_36.jpg"  /></a>
+</div><div class="video-element">
+	<span></span>
+	<a href="/assets/galleries/6/2016_09_17_35.jpg" class="pirobox_gall" title=""><img src="/assets/galleries/6/thumbs/2016_09_17_35.jpg"  /></a>
+</div><div class="video-element">
+	<span></span>
+	<a href="/assets/galleries/6/2016_09_17_34.jpg" class="pirobox_gall" title=""><img src="/assets/galleries/6/thumbs/2016_09_17_34.jpg"  /></a>
+</div><div class="video-element">
+	<span></span>
+	<a href="/assets/galleries/6/2016_09_17_33.jpg" class="pirobox_gall" title=""><img src="/assets/galleries/6/thumbs/2016_09_17_33.jpg"  /></a>
+</div><div class="video-element">
+	<span></span>
+	<a href="/assets/galleries/6/2016_09_17_32.jpg" class="pirobox_gall" title=""><img src="/assets/galleries/6/thumbs/2016_09_17_32.jpg"  /></a>
+</div><div class="video-element">
+	<span></span>
+	<a href="/assets/galleries/6/2016_09_17_31.jpg" class="pirobox_gall" title=""><img src="/assets/galleries/6/thumbs/2016_09_17_31.jpg"  /></a>
+</div><div class="video-element">
+	<span></span>
+	<a href="/assets/galleries/6/2016_09_17_30.jpg" class="pirobox_gall" title=""><img src="/assets/galleries/6/thumbs/2016_09_17_30.jpg"  /></a>
+</div><div class="video-element">
+	<span></span>
+	<a href="/assets/galleries/6/2016_09_17_29.jpg" class="pirobox_gall" title=""><img src="/assets/galleries/6/thumbs/2016_09_17_29.jpg"  /></a>
+</div>
+
+				</div>
+				<a href="/галерея.html">Смотреть все фото...</a>
+			</div><!-- #content-->
+		
+		
+			
+		</div><!-- #container-->
+
+		<aside id="sideLeft">
+			<!-- Меню аккардион -->
+				<ul class="menu collapsible"><li><a href="/муниципальный-округ-ясенево.html" title="Муниципальный округ Ясенево" >Муниципальный округ Ясенево</a><ul class="acitem"><li><a href="/глава-мо-ясенево.html" title="Глава Муниципального Округа Ясенево" >Глава МО Ясенево</a></li>
+<li><a href="/структура-мо-ясенево.html" title="Структура МО Ясенево" >Структура МО Ясенево</a></li>
+<li><a href="/полномочия-мо-ясенево.html" title="Полномочия МО Ясенево" >Полномочия МО Ясенево</a></li>
+<li><a href="/символика-муниципального-округа-ясенево.html" title="Символика муниципального округа Ясенево" >Символика муниципального округа Ясенево</a></li>
+<li><a href="/история.html" title="История" >История</a></li>
+<li><a href="/статистика.html" title="Статистика" >Статистика</a></li>
+<li><a href="/карта-района.html" title="Карта района" >Карта района</a></li>
+<li><a href="/справочник.html" title="Справочник" >Справочник</a></li>
+<li><a href="/почетные-жители.html" title="Почетные жители" >Почетные жители</a></li>
+<li class="last"><a href="/улицы-района-ясенево.html" title="Улицы района Ясенево" >Улицы района Ясенево</a></li>
+</ul></li>
+<li><a href="/совет-депутатов-мо-ясенево.html" title="Совет депутатов МО Ясенево" >Совет депутатов МО Ясенево</a><ul class="acitem"><li><a href="/депутаты-совета-депутатов-мо-ясенево.html" title="Депутаты Совета депутатов МО Ясенево" >Депутаты Совета депутатов МО Ясенево</a></li>
+<li><a href="/обращения-граждан.html" title="Обращения граждан" >Обращения граждан</a></li>
+<li><a href="/график-приема-населения-депутатами-совета-депутатов-мо-ясенево.html" title="График приема населения депутатами Совета депутатов МО Ясенево" >График приема населения депутатами Совета депутатов МО Ясенево</a></li>
+<li><a href="/полномочия-совета-депутатов-мо-ясенево.html" title="Полномочия Совета депутатов МО Ясенево" >Полномочия Совета депутатов МО Ясенево</a></li>
+<li><a href="/комиссии-совета-депутатов.html" title="Комиссии Совета депутатов" >Комиссии Совета депутатов</a></li>
+<li><a href="/план-работы-совета-депутатов-мо-ясенево.html" title="ПЛАН работы Совета депутатов МО Ясенево" >ПЛАН работы Совета депутатов МО Ясенево</a></li>
+<li><a href="/повестки-заседаний.html" title="Повестки заседаний" >Повестки заседаний</a></li>
+<li><a href="/решения-совета-депутатов.html" title="Решения Совета депутатов" >Решения Совета депутатов</a></li>
+<li><a href="/видеозаписи-заседаний.html" title="Видеозаписи заседаний" >Видеозаписи заседаний</a></li>
+<li><a href="/публичные-слушания2.html" title="Публичные слушания" >Публичные слушания</a></li>
+<li class="last"><a href="/бюджетный-процесс.html" title="Бюджетный процесс" >Бюджетный процесс</a></li>
+</ul></li>
+<li><a href="/аппарат-мо.html" title="Аппарат Совета депутатов  МО Ясенево" >Аппарат Совета депутатов  МО Ясенево</a><ul class="acitem"><li><a href="/руководитель-аппарата.html" title="Руководитель аппарата" >Руководитель аппарата</a></li>
+<li><a href="/структура-ааппарата-мо.html" title="Структура аппарата Совета депутатов МО Ясенево" >Структура аппарата Совета депутатов МО Ясенево</a></li>
+<li><a href="/полномочия.html" title="Полномочия" >Полномочия</a></li>
+<li><a href="/призывная-комиссия.html" title="Призывная комиссия" >Призывная комиссия</a></li>
+<li><a href="/муниципальная-служба.html" title="Муниципальная служба" >Муниципальная служба</a></li>
+<li><a href="/торги.html" title="Торги" >Торги</a></li>
+<li><a href="/противодействие-коррупции.html" title="Противодействие коррупции" >Противодействие коррупции</a></li>
+<li class="last"><a href="/муниципальные-услуги.html" title="Муниципальные услуги" >Муниципальные услуги</a></li>
+</ul></li>
+<li><a href="/норамативные-документы.html" title="Нормативные документы" >Нормативные документы</a><ul class="acitem"><li><a href="/конституция.html" title="Конституция" >Конституция</a></li>
+<li><a href="/хартия.html" title="Хартия" >Хартия</a></li>
+<li><a href="/федеральные-законы.html" title="Федеральные законы" >Федеральные законы</a></li>
+<li><a href="/законы-города-москвы.html" title="Законы города Москвы" >Законы города Москвы</a></li>
+<li><a href="/устав-города-москвы.html" title="Устав города Москвы" >Устав города Москвы</a></li>
+<li><a href="/постановления.html" title="Постановления" >Постановления</a></li>
+<li><a href="/устав-мо-ясенево.html" title="Устав МО Ясенево" >Устав МО Ясенево</a></li>
+<li class="last"><a href="/регламент.html" title="Регламент" >Регламент</a></li>
+</ul></li>
+<li><a href="/реализация-отдельных-полномочий-города-москвы.html" title="Реализация отдельных полномочий города Москвы" >Реализация отдельных полномочий города Москвы</a><ul class="acitem"><li><a href="/регламент-реализации-полномочий.html" title="Регламент реализации полномочий по заслушиванию отчета главы управы района Ясенево города Москвы и информации руководителей городских организаций" >Регламент реализации полномочий по заслушиванию отчета главы управы района Ясенево города Москвы и информации руководителей городских организаций</a></li>
+<li><a href="/отчеты-главы-управы-и-руководителей-организаций-района-ясенево.html" title="Отчеты главы управы и руководителей организаций района Ясенево" >Отчеты главы управы и руководителей организаций района Ясенево</a></li>
+<li><a href="/отчет-главы-муниципального-округа-ясенево.html" title="Отчет главы муниципального округа Ясенево" >Отчет главы муниципального округа Ясенево</a></li>
+<li><a href="/депутатский-контроль-за-благоустройством-дворовых-территорий.html" title="Депутатский контроль за благоустройством дворовых территорий" >Депутатский контроль за благоустройством дворовых территорий</a></li>
+<li><a href="/капитальный-ремонт-многоквартирных-домов.html" title="Капитальный ремонт многоквартирных домов" >Капитальный ремонт многоквартирных домов</a></li>
+<li><a href="/депутатский-контроль-за-капитальным-ремонтом-многоквартирных-домов.html" title="Депутатский контроль за капитальным ремонтом многоквартирных домов" >Депутатский контроль за капитальным ремонтом многоквартирных домов</a></li>
+<li><a href="/благоустройство-парков-и-скверов.html" title="Благоустройство парков и скверов" >Благоустройство парков и скверов</a></li>
+<li><a href="/дополнительные-мероприятия-по-социально-экономическому-развитию-района.html" title="Дополнительные мероприятия по социально-экономическому развитию района" >Дополнительные мероприятия по социально-экономическому развитию района</a></li>
+<li class="last"><a href="/работа-с-населением-по-месту-жительства.html" title="Работа с населением по месту жительства" >Работа с населением по месту жительства</a></li>
+</ul></li>
+<li><a href="/независимая-антикоррупционная-экспертиза.html" title="Независимая антикоррупционная экспертиза" >Независимая антикоррупционная экспертиза</a><ul class="acitem"><li><a href="/совет-депутатов-мо-ясенево1.html" title="Независимая антикоррупционная экспертиза Совета депутатов МО Ясенево" >Независимая антикоррупционная экспертиза Совета депутатов МО Ясенево</a></li>
+<li class="last"><a href="/аппарат-совета-депутатов-мо-ясенево.html" title="Независимая антикоррупционная экспертиза аппарата  Совета депутатов МО Ясенево" >Независимая антикоррупционная экспертиза аппарата  Совета депутатов МО Ясенево</a></li>
+</ul></li>
+<li><a href="/выборы.html" title="Выборы" >Выборы</a><ul class="acitem"><li><a href="/территориальная-избирательная-комиссия-района-ясенево.html" title="Территориальная избирательная комиссия района Ясенево" >Территориальная избирательная комиссия района Ясенево</a></li>
+<li class="last"><a href="/2012г-депутаты-по-округам.html" title="2012г  Депутаты  по  округам" >2012г  Депутаты  по  округам</a></li>
+</ul></li>
+<li><a href="/газета-ясенево-общее.html" title="Газета &quot;Ясенево&quot;" >Газета &quot;Ясенево&quot;</a><ul class="acitem"><li><a href="/газета-ясенево.html" title="Газета &quot;Ясенево&quot;" >Газета &quot;Ясенево&quot;</a></li>
+<li class="last"><a href="/спецвыпуск-муниципальный-вестник.html" title="Спецвыпуск &quot;Муниципальный вестник&quot;" >Спецвыпуск &quot;Муниципальный вестник&quot;</a></li>
+</ul></li>
+<li><a href="/культурный-центр-вдохновение.html" title="Культурный центр &quot;Вдохновение&quot;" >Культурный центр &quot;Вдохновение&quot;</a><ul class="acitem"><li class="last"><a href="/афиша-кц-вдохновение.html" title="Афиша Культурного центра &quot;Вдохновение&quot;" >Афиша</a></li>
+</ul></li>
+<li><a href="/это-должен-знать-каждый.html" title="Это должен знать каждый" >Это должен знать каждый</a><ul class="acitem"><li><a href="/внимание-лесные-пожары.html" title="Внимание - лесные пожары!" >Внимание - лесные пожары!</a></li>
+<li><a href="/как-действовать-при-террористическом-акте.html" title="Как действовать при террористическом акте" >Как действовать при террористическом акте</a></li>
+<li><a href="/оказание-первой-медицинской-помощи.html" title="Оказание первой медицинской помощи" >Оказание первой медицинской помощи</a></li>
+<li><a href="/оповещение-в-чрезвычайных-ситуациях.html" title="Оповещение в чрезвычайных ситуациях" >Оповещение в чрезвычайных ситуациях</a></li>
+<li><a href="/правила-поведения-при-пожарах.html" title="Правила поведения при пожарах" >Правила поведения при пожарах</a></li>
+<li><a href="/химическая-авария.html" title="Химическая авария" >Химическая авария</a></li>
+<li class="last"><a href="/безопасность-на-воде.html" title="Безопасность на воде" >Безопасность на воде</a></li>
+</ul></li>
+<li><a href="/предупреждение-экстремистской-деятельности.html" title="Предупреждение экстремистской деятельности" >Предупреждение экстремистской деятельности</a><ul class="acitem"><li><a href="/что-такое-экстремизм-и-терроризм.html" title="Что такое экстремизм и терроризм?" >Что такое экстремизм и терроризм?</a></li>
+<li class="last"><a href="/фз-о-противодействии-экстремистской-деятельности.html" title="ФЗ о противодействии экстремистской деятельности" >ФЗ о противодействии экстремистской деятельности</a></li>
+</ul></li>
+<li class="last"><a href="/прокурорский-надзор.html" title="Прокуратура информирует" >Прокуратура информирует</a><ul class="acitem"><li class="last"><a href="/полномочия-органов-прокуратуры-по-участию-в-гражданском-процессе.html" title="Полномочия органов прокуратуры по участию в гражданском процессе" >Полномочия органов прокуратуры по участию в гражданском процессе</a></li>
+</ul></li>
+</ul>
+		<p style="text-align: center;"><a href="видеоролик-песни-ветеранам-войны.html" title="Ветеранам войны"><img src="assets/images/3_P70-6X3.jpg" width="250" height="125" /></a></p>
+
+			
+			
+	<a href="http://pravo.gov.ru" target="_blank" class="site_gos_link"><img src="http://pravo.gov.ru/export/sites/default/galleries/gspi_banners/7.gif" border="0" alt="Официальный интернет-портал правовой информации"></a>
+	
+			<!--a target="_blank" class="site_gos_link" title="Сайт 9 Мая. 70 лет Победе" href="http://may9.ru/"><img width="200" height="auto" src="/img/logo_9may_70_let.jpg" /></a-->
+			<a target="_blank" class="site_gos_link" href="http://www.gosuslugi.ru/"><img width="200" height="auto" src="http://www.gosuslugi.ru/pgu/htdocs/img/2012/logo.png" /></a>
+			<a target="_blank" class="site_gos_link" href="http://pgu.mos.ru/ru/"><img width="200" height="auto" src="/img/pgu.mos.ru.png" /></a>
+			<a target="_blank" class="site_gos_link" href="http://www.mos.ru/"><img width="200" height="auto" src="/img/exact_240x115_Quality85_banner4_240x100.jpg" /></a>
+			
+			<a target="_blank" class="site_gos_link" href="http://www.uzao.mos.ru/"><img width="200" height="auto" src="/img/banner_prefektura.png" /></a>
+			<a target="_blank" class="site_gos_link" href="http://www.yasenevo.mos.ru/"><img width="200" height="auto" src="/img/banner_uprava.png" /></a>
+			<a target="_blank" class="site_gos_link" href="http://amom.mos.ru/vestnik/"><img width="200" height="auto" src="/assets/images/banner_m_vestnik_30.jpg" /></a>
+			<a target="_blank" class="site_gos_link" href="http://repair.mos.ru/"><img width="200" height="auto" src="/img/sayt-banner-regionalnaya-programma_1-.jpg" /></a>
+			<a target="_blank" class="site_gos_link" href="http://www.mos.ru/"><img width="200" height="auto" src="/img/newmos.ru.png" /></a>
+			
+			<!--div class="reshenie-sobraniy">
+				<h2>Объявления</h2>
+				<hr class="hr-sobr">
+								<div class="sobraniya">
+					<div class="spb-sob">
+						<h4>Публичные слушания по проекту решения Совета депутатов муниципального округа Ясенево «О внесении изменений и дополнений в Устав муниципального округа Ясенево»</h4>
+						<p class="opisanie-sobr">
+						Публичные слушания по проекту решения Совета депутатов муниципального округа Ясенево «О внесении изменений и дополнений ...
+						</p>
+						<a href="публичные-слушания-по-проекту-решения-совета-депутатов-муниципального-округа-ясенево-о-внесении-изменений-и-дополнений-в-устав-муниципального-округа-ясенево.html">Подробно...</a>
+					</div>	
+				</div>					<div class="sobraniya">
+					<div class="spb-sob">
+						<h4>Оповещение о проведении публичных слушаний</h4>
+						<p class="opisanie-sobr">
+						На публичные слушания представляется проект схемы теплоснабжения города Москвы до 2030 года с учётом развития присоединённых ...
+						</p>
+						<a href="оповещение-о-проведении-публичных-слушаний2.html">Подробно...</a>
+					</div>	
+				</div>					<div class="sobraniya">
+					<div class="spb-sob">
+						<h4>Дополнительный прием населения</h4>
+						<p class="opisanie-sobr">
+						Уважаемые жители района Ясенево!<br /><br />Сообщаем о дополнительном приеме населения депутатом Совета депутатов муниципального ...
+						</p>
+						<a href="дополнительный-прием-населения.html">Подробно...</a>
+					</div>	
+				</div>	
+				<a href="/объявления.html">Смотреть все объявления...</a>
+			</div-->
+		</aside>
+		<!-- #sideLeft -->
+
+	</section><!-- #middle-->
+
+</div><!-- #wrapper -->
+
+	<style type="text/css">
+<!--
+.top-menu li {margin-right: 9px;padding: 4px;}
+	
+-->
+</style>
+
+<footer id="footer">
+	<ul class="footer-menu">
+		<li class="active"><a href="/">Главная</a></li>
+		<li><a href="/карта-района.html">Наш район</a></li>
+		<li><a href="/объявления.htmll">Объявления</a></li>
+		<li><a href="/faq.html">FAQ</a></li>
+		<li><a href="/видео.html">Видео</a></li>
+		<li><a href="/галерея.html">Галерея</a></li>
+		<li><a href="/контакты.html">Контакты</a></li>
+	</ul>
+	<span>&copy 2013 - Муниципальный округ Ясенево.</span>
+	<div id="yametr">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+var yaParams = {domain:"www.moyasenevo.ru"};
+</script>
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter34497035 = new Ya.Metrika({id:34497035, enableAll:true, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true, params:window.yaParams||{ }});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/34497035" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --><!--Openstat-->
+<span id="openstat2378486"></span>
+<script type="text/javascript">
+var openstat = { counter: 2378486, next: openstat, track_links: "all" };
+(function(d, t, p) {
+var j = d.createElement(t); j.async = true; j.type = "text/javascript";
+j.src = ("https:" == p ? "https:" : "http:") + "//openstat.net/cnt.js";
+var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(j, s);
+})(document, "script", document.location.protocol);
+</script><!--/Openstat-->
+	</div>
+</footer><!-- #footer -->
+</body>
+</html>

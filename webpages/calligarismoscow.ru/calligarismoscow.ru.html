@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+	<title>Calligaris</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=990">
+	<link rel="stylesheet" href="/bitrix/templates/.default/markup/css/style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+	<!--[if lt IE 9]><script src="/bitrix/templates/.default/markup/js/html5shiv.js"></script><script src="/bitrix/templates/.default/markup/js/respond.min.js"></script><script src="/bitrix/templates/.default/markup/js/selectivizr-min.js"></script><![endif]-->
+
+
+	<script src="/bitrix/templates/.default/markup/js/jquery-1.8.3.min.js"></script>
+	<script src="/bitrix/templates/.default/markup/js/custom_ajax_tools.js"></script>
+		<script src="/bitrix/templates/.default/markup/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+
+	<script src="/bitrix/templates/.default/markup/js/jquery.touchSwipe.min.js"></script>
+
+	<script src="/bitrix/templates/.default/markup/js/transition-events.js"></script>
+	<script src="/bitrix/templates/.default/markup/js/modernizr.custom.12183.js"></script>
+	<script src="/bitrix/templates/.default/markup/js/cloud-zoom.1.0.2-custom.js"></script>
+
+	<script src="/bitrix/templates/.default/markup/js/jquery.icheck.min.js"></script>
+	<script src="/bitrix/templates/.default/markup/js/chosen.jquery.js"></script>
+	<script src="/bitrix/templates/.default/markup/js/jquery.jscrollpane.min.js"></script>
+	<script src="/bitrix/templates/.default/markup/js/jquery.mousewheel.js"></script>
+	<script src="/bitrix/templates/.default/markup/js/main.js"></script>
+	<script src="/bitrix/templates/.default/markup/js/itemSlider.js"></script>
+		<script type="text/javascript" src="/bitrix/templates/.default/markup/jsCustom/header.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+        <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico?v=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<link href="/bitrix/cache/css/s1/calligaris/kernel_main/kernel_main.css?14774062609387" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/calligaris/page_cf53291d59ab7e59cf3d71a12745ac4c/page_cf53291d59ab7e59cf3d71a12745ac4c.css?1477406277209" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/calligaris/template_f8b524b4b2f02762eb7df67ef110b3d1/template_f8b524b4b2f02762eb7df67ef110b3d1.css?14774062602317" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','USER_ID':'','SERVER_TIME':'1477472310','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'4d7232b05842909103eb89254a386186'});</script>
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/calligaris/kernel_main/kernel_main.js?1477406260147378"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js?144135725394768','/bitrix/js/main/core/core_ajax.js?144135725335166','/bitrix/js/main/json/json2.min.js?14413572533467','/bitrix/js/main/core/core_ls.js?144135725310330','/bitrix/js/main/session.js?14413572533170']); </script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css?14413572538964','/bitrix/components/kodix/banners.list/templates/.default/style.css?144135770544','/bitrix/templates/calligaris/styles.css?14413577052179']); </script>
+
+
+<script type="text/javascript">
+bxSession.Expand(1440, '4d7232b05842909103eb89254a386186', false, '3b3c355ea12e4c48ebc7b59f4f35ce96');
+</script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "8a352f5f62a0718d8af5b0338fedddb4"]); _ba.push(["host", "www.calligarismoscow.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+</head>
+<body>
+<div class="hdr menu">
+    <div class="hdr__head">
+        <div class="case">
+            <div class="logo">
+                <a href="/">
+                    <img src="/bitrix/templates/.default/markup/img/logo.png" alt="магазин Calligaris" />
+                    <span class="logo__slogan">Moscow<br />Store</span>
+                </a>
+            </div>
+            <!-- MENU -->
+		    
+<ul class="hdr__menu">
+
+						<li class="hdr__menu-item"><a href="/event/" class="hdr__link">События</a></li>
+				
+						<li class="hdr__menu-item"><a href="/customers/" class="hdr__link">Клиентам</a></li>
+				
+						<li class="hdr__menu-item"><a href="/shops/" class="hdr__link">Магазины</a></li>
+				
+	
+</ul>
+			<!-- END MENU -->
+            <div class="hdr__phone">
+            	+7 495 950-55-61            	<span class="hdr__phone-desc">пн-пт 9-20 | сб-вс 11-20</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="menu__top">
+        <div class="case">
+        	<!-- personal block -->
+			<ul id="personalHead" class="menu__list menu__list_controls">
+				<li class="menu__list-item">
+					<a href="/search/" class="menu__link jsShowSearch">Поиск <i class="ico ico_search"></i></a>
+				</li>
+				<li class="menu__list-item">
+						<a href="/personal/" class="menu__link">Вход <i class="ico ico_lock"></i></a>
+				</li>
+				<li class="menu__list-item">
+						<a id="basketHeader" href="/basket/" class="menu__link jsShowCart">Корзина <i class="ico ico_cart"></i></a>
+			</ul>
+			<!-- end personal block -->
+							<ul class="menu__list menu__list_main">
+
+		
+			
+			
+									<li class="menu__list-item"><a href="#" data-dropdown="#id_0" class="menu__link jsShowMenu root-item">Каталог</a>
+						<div id="id_0" class="menu__dropdown">
+							<div class="case row-fluid">
+				
+			
+			
+		
+			
+														<div class="span2 menu__col">	
+							<h3 class="menu__ttl"><a href="/catalog/stolovaya/">Столовая</a></h3>
+														<ul class="menu__dropdown-list">
+																	<li class="menu__dropdown-item"><a href="/catalog/stolovaya/barnye_stulya/">Барные стулья</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/stolovaya/stulya/">Стулья</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/stolovaya/neraskladnye_stoly/">Нераскладные столы</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/stolovaya/raskladnye_stoly/">Раскладные столы</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/stolovaya/konsolnye_stoly/">Консольные столы</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/stolovaya/transformery/">Трансформеры</a></li>
+															</ul>
+													</div>
+									
+
+			
+			
+		
+			
+														<div class="span2 menu__col">	
+							<h3 class="menu__ttl"><a href="/catalog/kabinet/">Кабинет</a></h3>
+														<ul class="menu__dropdown-list">
+																	<li class="menu__dropdown-item"><a href="/catalog/kabinet/stulya_dlya_kabineta/">Стулья для кабинета</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/kabinet/stoly_dlya_kabineta/">Столы для кабинета</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/kabinet/biblioteki_i_veshalki/">Библиотеки и вешалки для кабинета</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/kabinet/molodezhnaya_mebel/">Мебель для подростков</a></li>
+															</ul>
+													</div>
+									
+
+			
+			
+		
+			
+														<div class="span2 menu__col">	
+							<h3 class="menu__ttl"><a href="/catalog/gostinaya/">Гостиная</a></h3>
+														<ul class="menu__dropdown-list">
+																	<li class="menu__dropdown-item"><a href="/catalog/gostinaya/kresla_i_pufy/">Кресла и пуфы</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/gostinaya/zhurnalnye_stoliki/">Журнальные столы</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/gostinaya/stellazhi_i_komody/">Стеллажи и комоды</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/gostinaya/divany/">Диваны</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/gostinaya/mebel_dlya_tv/">Мебель для ТВ и мультимедиа</a></li>
+															</ul>
+													</div>
+									
+
+			
+			
+		
+			
+														<div class="span2 menu__col">	
+							<h3 class="menu__ttl"><a href="/catalog/aksessuary/">Аксессуары</a></h3>
+														<ul class="menu__dropdown-list">
+																	<li class="menu__dropdown-item"><a href="/catalog/aksessuary/polki/">Полки</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/aksessuary/zerkala/">Зеркала</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/aksessuary/drugie_aksessuary/">Другие аксессуары</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/aksessuary/blyuda/">Блюда</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/aksessuary/vazy/">Вазы</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/aksessuary/kovry/">Ковры</a></li>
+															</ul>
+													</div>
+									
+
+			
+			
+		
+			
+														<div class="span2 menu__col">	
+							<h3 class="menu__ttl"><a href="/catalog/spalnya/">Спальня</a></h3>
+														<ul class="menu__dropdown-list">
+																	<li class="menu__dropdown-item"><a href="/catalog/spalnya/tumby_i_komody/">Тумбы и комоды</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/spalnya/krovati/">Кровати</a></li>
+															</ul>
+													</div>
+									
+
+			
+			
+		
+			
+														<div class="span2 menu__col">	
+							<h3 class="menu__ttl"><a href="/catalog/svetilniki/">Светильники</a></h3>
+														<ul class="menu__dropdown-list">
+																	<li class="menu__dropdown-item"><a href="/catalog/svetilniki/podvesnye_svetilniki/">Подвесные светильники</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/svetilniki/nastolnye_lampy/">Настольные лампы</a></li>
+																	<li class="menu__dropdown-item"><a href="/catalog/svetilniki/napolnye_lampy/">Напольные лампы</a></li>
+															</ul>
+													</div>
+									
+
+			
+			
+		
+							</div>
+								<div class="menu__gallery">
+		<div class="gallery">
+			<div class="gallery__inner">
+				<div class="jsGallery">
+											<a href="/catalog/product/CS-1472/" class="prod gallery__item">
+							<span class="prod__img"><img src="/upload/iblock/f14/f14fe7ebf21be15c103cae8da408e585.jpg" alt=""/></span>
+							<span class="prod__name">Стул SAMI</span>
+							<span class="prod__price">20 755 <i class="rbl">a</i>
+														</span>
+						</a>
+											<a href="/catalog/product/7164-B/" class="prod gallery__item">
+							<span class="prod__img"><img src="/upload/iblock/47e/47ed05462d57bfd9d2f13594bddd6781.jpg" alt=""/></span>
+							<span class="prod__name">Ковер MAROCCO</span>
+							<span class="prod__price">46 201 <i class="rbl">a</i>
+															<i class="ico ico_badge-sale"></i>
+														</span>
+						</a>
+											<a href="/catalog/product/CS-8024-T/" class="prod gallery__item">
+							<span class="prod__img"><img src="/upload/iblock/2f0/2f0e8ed12149a8a4ac659ade05c7e91a.jpg" alt=""/></span>
+							<span class="prod__name">Лампа POM POM</span>
+							<span class="prod__price">28 883 <i class="rbl">a</i>
+															<i class="ico ico_badge-sale"></i>
+														</span>
+						</a>
+											<a href="/catalog/product/CS-4092-R+200/" class="prod gallery__item">
+							<span class="prod__img"><img src="/upload/iblock/e67/e67ac6a629a770458957a3e6655a6c96.jpg" alt=""/></span>
+							<span class="prod__name">Стол CARTESIO 200</span>
+							<span class="prod__price">180 236 <i class="rbl">a</i>
+															<i class="ico ico_badge-new"></i>
+														</span>
+						</a>
+											<a href="/catalog/product/CS-1490/" class="prod gallery__item">
+							<span class="prod__img"><img src="/upload/iblock/2a4/2a4a56d5aac9ba242689175b99da30ed.jpg" alt=""/></span>
+							<span class="prod__name">Стул TOSCA</span>
+							<span class="prod__price">27 314 <i class="rbl">a</i>
+															<i class="ico ico_badge-new"></i>
+														</span>
+						</a>
+											<a href="/catalog/product/CS-1484/" class="prod gallery__item">
+							<span class="prod__img"><img src="/upload/iblock/3a9/3a9ccf8a391b371bb5f6825a89f99934.jpg" alt=""/></span>
+							<span class="prod__name">Стул AIDA PLUS</span>
+							<span class="prod__price">30 676 <i class="rbl">a</i>
+															<i class="ico ico_badge-new"></i>
+														</span>
+						</a>
+											<a href="/catalog/product/CS-4090-R+200/" class="prod gallery__item">
+							<span class="prod__img"><img src="/upload/iblock/998/9980f50324dac9bf7edd9384ec122ed6.jpg" alt=""/></span>
+							<span class="prod__name">Стол STATUS 200</span>
+							<span class="prod__price">180 319 <i class="rbl">a</i>
+															<i class="ico ico_badge-new"></i>
+														</span>
+						</a>
+											<a href="/catalog/product/CS-6047-G/" class="prod gallery__item">
+							<span class="prod__img"><img src="/upload/iblock/b58/b584d580274dfd33f116bf7f9c750ef3.jpg" alt=""/></span>
+							<span class="prod__name">Кровать HAMPTON</span>
+							<span class="prod__price">135 239 <i class="rbl">a</i>
+															<i class="ico ico_badge-new"></i>
+														</span>
+						</a>
+									</div>
+			</div>
+			<a href="#" class="gallery__prev"><i class="ico"></i></a>
+			<a href="#" class="gallery__next"><i class="ico"></i></a>
+		</div>
+	</div>
+							</div></li>			
+														<li class="menu__list-item"><a href="/design/" class="menu__link root-item">Дизайн интерьера</a></li>
+									
+
+			
+			
+		
+			
+														<li class="menu__list-item"><a href="/catalog/sale/" class="menu__link root-item">sale</a></li>
+									
+
+			
+			
+		
+		
+	</ul>
+        </div>
+    </div>
+
+    <div class="case">
+        <div class="menu__search">
+        	<div class="input-i input-search">
+	<form action="/search/" method="GET">
+		<input type="text" class="input" name="q" value="" size="15" maxlength="50" />
+		<span class="input__search"><i class="ico ico_search-white"></i><input class="input__submit" type="submit" name="s" value="" /></span>
+	</form>
+</div>
+        </div>
+        	<div id="basketContent" class="menu__cart" style="display:none;"></div>
+    </div>
+</div>
+<!-- map -->
+	<!-- End map-->
+	<div class="cnt cnt_shadow ">
+		<div class="cnt__inner">
+			<div class="design jsMainSlider">
+        <div class="design__inner jsWrap">
+                            <div class="design__item">
+                    <div class="design__bg-i">
+                                                <img class="design__bg" src="/upload/iblock/229/2297b7b80cdacf88a5b131f65c1c4450.jpg" alt="" />
+                                                    <div class="points">
+                                                                    <div class="mark jsMark " style="top:72.4%; left:74.0%;">
+                                        <div class="mark__holder"><i class="ico ico_plus"></i></div>
+                                                                                                                                <div class="mark__body">
+                                                <div class="mark__ttl">Стул ANÄIS <!--<i class="ico ico_badge-new"></i>--></div>
+                                                <div class="mark__price">22 664 <i class="rbl">a</i></div>
+                                                <div class="mark__desc">
+                                                                                                    </div>
+                                                <a href="/catalog/product/CS-1266/" class="mark__more">Подробнее</a>
+                                            </div>
+                                                                            </div>
+                                                                    <div class="mark jsMark " style="top:58.3%; left:61.7%;">
+                                        <div class="mark__holder"><i class="ico ico_plus"></i></div>
+                                                                                                                                <div class="mark__body">
+                                                <div class="mark__ttl">Стол CARTESIO 200 <!--<i class="ico ico_badge-new"></i>--></div>
+                                                <div class="mark__price">180 236 <i class="rbl">a</i></div>
+                                                <div class="mark__desc">
+                                                                                                    </div>
+                                                <a href="/catalog/product/CS-4092-R+200/" class="mark__more">Подробнее</a>
+                                            </div>
+                                                                            </div>
+                                                            </div>
+                                            </div>
+                </div>
+                            <div class="design__item">
+                    <div class="design__bg-i">
+                                                <img class="design__bg" src="/upload/iblock/d26/d262212166f9fd56a5523e94207ba943.jpg" alt="" />
+                                                    <div class="points">
+                                                                    <div class="mark jsMark mark_white" style="top:65.1%; left:40.7%;">
+                                        <div class="mark__holder"><i class="ico ico_plus"></i></div>
+                                                                                                                                <div class="mark__body">
+                                                <div class="mark__ttl">Стол ORBITAL <!--<i class="ico ico_badge-new"></i>--></div>
+                                                <div class="mark__price">351 257 <i class="rbl">a</i></div>
+                                                <div class="mark__desc">
+                                                                                                    </div>
+                                                <a href="/catalog/product/CS-4064/" class="mark__more">Подробнее</a>
+                                            </div>
+                                                                            </div>
+                                                                    <div class="mark jsMark mark_white" style="top:71.5%; left:63.0%;">
+                                        <div class="mark__holder"><i class="ico ico_plus"></i></div>
+                                                                                                                                <div class="mark__body">
+                                                <div class="mark__ttl">Стул AIDA PLUS <!--<i class="ico ico_badge-new"></i>--></div>
+                                                <div class="mark__price">30 676 <i class="rbl">a</i></div>
+                                                <div class="mark__desc">
+                                                                                                    </div>
+                                                <a href="/catalog/product/CS-1484/" class="mark__more">Подробнее</a>
+                                            </div>
+                                                                            </div>
+                                                            </div>
+                                            </div>
+                </div>
+                            <div class="design__item">
+                    <div class="design__bg-i">
+                                                <img class="design__bg" src="/upload/iblock/837/83797ed910125224756e985112f81793.jpg" alt="" />
+                                                    <div class="points">
+                                                                    <div class="mark jsMark " style="top:70.2%; left:30.1%;">
+                                        <div class="mark__holder"><i class="ico ico_plus"></i></div>
+                                                                                                                                <div class="mark__body">
+                                                <div class="mark__ttl">Стул TOSCA <!--<i class="ico ico_badge-new"></i>--></div>
+                                                <div class="mark__price">36 487 <i class="rbl">a</i></div>
+                                                <div class="mark__desc">
+                                                                                                    </div>
+                                                <a href="/catalog/product/CS-1490-LH/" class="mark__more">Подробнее</a>
+                                            </div>
+                                                                            </div>
+                                                                    <div class="mark jsMark " style="top:65.1%; left:72.7%;">
+                                        <div class="mark__holder"><i class="ico ico_plus"></i></div>
+                                                                                                                                <div class="mark__body">
+                                                <div class="mark__ttl">Стол STATUS 200 <!--<i class="ico ico_badge-new"></i>--></div>
+                                                <div class="mark__price">180 319 <i class="rbl">a</i></div>
+                                                <div class="mark__desc">
+                                                                                                    </div>
+                                                <a href="/catalog/product/CS-4090-R+200/" class="mark__more">Подробнее</a>
+                                            </div>
+                                                                            </div>
+                                                            </div>
+                                            </div>
+                </div>
+                            <div class="design__item">
+                    <div class="design__bg-i">
+                                                <img class="design__bg" src="/upload/iblock/6f2/6f2181aee45ef98fda9e98f4ea17e635.jpg" alt="" />
+                                                    <div class="points">
+                                                                    <div class="mark jsMark mark_white" style="top:64.2%; left:49.8%;">
+                                        <div class="mark__holder"><i class="ico ico_plus"></i></div>
+                                                                                                                                <div class="mark__body">
+                                                <div class="mark__ttl">Кровать HAMPTON <!--<i class="ico ico_badge-new"></i>--></div>
+                                                <div class="mark__price">135 239 <i class="rbl">a</i></div>
+                                                <div class="mark__desc">
+                                                                                                    </div>
+                                                <a href="/catalog/product/CS-6047-G/" class="mark__more">Подробнее</a>
+                                            </div>
+                                                                            </div>
+                                                                    <div class="mark jsMark mark_white" style="top:26.9%; left:16.1%;">
+                                        <div class="mark__holder"><i class="ico ico_plus"></i></div>
+                                                                                                                                <div class="mark__body">
+                                                <div class="mark__ttl">Лампа POM POM <!--<i class="ico ico_badge-new"></i>--></div>
+                                                <div class="mark__price">28 883 <i class="rbl">a</i></div>
+                                                <div class="mark__desc">
+                                                                                                    </div>
+                                                <a href="/catalog/product/CS-8024-T/" class="mark__more">Подробнее</a>
+                                            </div>
+                                                                            </div>
+                                                            </div>
+                                            </div>
+                </div>
+                </div>
+    <div class="design__controls control jsControl">
+        <span class="control__button control__button_top"><i class="control__arrow"></i></span>
+        <span class="control__count">1/1</span>
+        <span class="control__button control__button_bottom"><i class="control__arrow"></i></span>
+    </div>	<div class="spinner" id="spinner"></div>
+    <div class="promo jsPromo" style="display:block;">
+        	<div class="case">
+									<div class="promo__block promo__block_new">
+					<span class="promo__ttl">CALLIGARIS: Скидки новосёлам</span>
+					<a class="promo__link" href="/event/5872/">
+						<span class="promo__desc">
+<br />
+ </span>
+						<span class="promo__visual">
+															<img src="/upload/iblock/1c4/1c46af9bf97d103205b6510bf29be16d.jpg" alt="CALLIGARIS: Скидки новосёлам" width="298" height="119"/>
+																					</span>
+					</a>
+				</div>
+												<div class="promo__block promo__block_design">
+					<span class="promo__ttl">Выберите свою скидку!</span>
+					<a class="promo__link" href="/customers/discounts/">
+						<span class="promo__desc"><br />
+Скидки до 45% - 
+<br />
+ звоните и мы предложим
+<br />
+Вам персональные условия!</span>
+						<span class="promo__visual">
+															<img src="/upload/iblock/0e5/0e53833ce971c631e7d527085991f27f.jpg" alt="Выберите свою скидку!" width="298" height="119"/>
+																					</span>
+					</a>
+				</div>
+												<div class="promo__block promo__block_video">
+					<span class="promo__ttl">ГАЛЕРЕЯ НАШИХ ТВ ПРОЕКТОВ</span>
+					<a class="promo__link" href="http://www.youtube.com/playlist?list=PLS2pHULp4zA_-CidtnPrFcR73R60iCv1v">
+						<span class="promo__desc"></span>
+						<span class="promo__visual">
+															<img src="/upload/iblock/263/2638861c144236c1af684bf4d4101f13.jpg" alt="ГАЛЕРЕЯ НАШИХ ТВ ПРОЕКТОВ" width="298" height="119"/>
+																	<i class="ico ico_play"></i>
+																					</span>
+					</a>
+				</div>
+						</div>
+    </div>
+</div>
+
+<div class="cnt cnt_shadow"> 
+    <div class="cnt__inner">
+        <div class="promo promo_static jsPromoStatic">
+            	<div class="case">
+									<div class="promo__block promo__block_new">
+					<span class="promo__ttl">CALLIGARIS: Скидки новосёлам</span>
+					<a class="promo__link" href="/event/5872/">
+						<span class="promo__desc">
+<br />
+ </span>
+						<span class="promo__visual">
+															<img src="/upload/iblock/1c4/1c46af9bf97d103205b6510bf29be16d.jpg" alt="CALLIGARIS: Скидки новосёлам" width="298" height="119"/>
+																					</span>
+					</a>
+				</div>
+												<div class="promo__block promo__block_design">
+					<span class="promo__ttl">Выберите свою скидку!</span>
+					<a class="promo__link" href="/customers/discounts/">
+						<span class="promo__desc"><br />
+Скидки до 45% - 
+<br />
+ звоните и мы предложим
+<br />
+Вам персональные условия!</span>
+						<span class="promo__visual">
+															<img src="/upload/iblock/0e5/0e53833ce971c631e7d527085991f27f.jpg" alt="Выберите свою скидку!" width="298" height="119"/>
+																					</span>
+					</a>
+				</div>
+												<div class="promo__block promo__block_video">
+					<span class="promo__ttl">ГАЛЕРЕЯ НАШИХ ТВ ПРОЕКТОВ</span>
+					<a class="promo__link" href="http://www.youtube.com/playlist?list=PLS2pHULp4zA_-CidtnPrFcR73R60iCv1v">
+						<span class="promo__desc"></span>
+						<span class="promo__visual">
+															<img src="/upload/iblock/263/2638861c144236c1af684bf4d4101f13.jpg" alt="ГАЛЕРЕЯ НАШИХ ТВ ПРОЕКТОВ" width="298" height="119"/>
+																	<i class="ico ico_play"></i>
+																					</span>
+					</a>
+				</div>
+						</div>
+        </div>
+    </div>
+</div>
+
+				</div><!-- end cnt__inner-->
+	</div><!-- end cnt cnt_shadow-->
+
+<div class="ftr">
+	<div class="case">
+		<div class="ftr__ttl">Контактная информация</div>
+		<div class="ftr__blocks">
+			<div class="ftr__block">
+				<div class="ftr__field">
+					<i class="ico ico_clock"></i> пн-пт: c 9 до 20, <span class="g-red">сб-вс: с 11 до 20</span>				</div>
+				<div class="ftr__field">
+					<i class="ico ico_placemark"></i>109316, Москва, Волгоградский проспект, 11				</div>
+			</div>
+			<div class="ftr__block">
+				<div class="ftr__field">
+					<i class="ico ico_phone"></i> +7 495 950-55-61				</div>
+				<div class="ftr__field">
+					<i class="ico ico_email"></i> info@calligarismoscow.ru				</div>
+							</div>
+			<div class="ftr__block">
+				<div class="ftr__field">
+					<i class="ico ico_megaphone"></i> Подписка на эксклюзивные предложения
+				</div>
+				<div class="ftr__field">
+					<div class="input-i input-search">
+	<form id="subscribeForm" action="/personal/subscribe/" class="form form_subscribe tiles__form subscribe">
+					<input type="checkbox" name="sf_RUB_ID[]" id="sf_RUB_ID_1" value="1" checked style='display: none;' />
+				<input type="text" class="input" name="userEmail" value="" placeholder="Напишите ваш e-mail"/>
+		<span class="input__search" id="subscribeButton"><span class="input__search-in">Подписаться</span><input class="input__submit" type="submit" value="" /></span>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+				$("#subscribeButton").click(function(){
+					var config = {
+						url: '/bitrix/tools/kodix/ajax/subscribe.php',
+						dataType: 'json',
+						type: 'GET',
+						data: getData("subscribeForm"),
+						beforeSend: function(){},
+						success: function(data, textStatus)
+						{
+							if(data.RESULT != true)
+							{
+								// console.log(data.ERROR);
+								if(typeof data.ERROR == "undefined")
+								{
+
+								}
+								else
+								{
+									infoPopup.setContent("Добавление подписки", data.ERROR);
+									infoPopup.show();
+								}
+							}
+							else
+							{
+								infoPopup.setContent("Добавление подписки", "Подписка оформленна, на Ваш e-mail отправлено письмо с подтвержденим подписки.");
+								infoPopup.show();
+							}
+						}
+					};
+					sendRequest(config);
+
+					return false;
+				});
+			});
+		</script>
+	</form>
+</div>				</div>
+				<div class="ftr__field">
+					<a href="http://calligaris.biz/" class="ftr__link" target="_blank"><i class="ico ico_calligaris"></i> Посетите международный сайт Calligaris</a>				</div>
+			</div>
+		</div>
+		<p class="ftr__desc">
+			В 2012 г. открылся первый в Москве монобрендовый магазин Calligaris, в котором на площади 500 кв.м представлен полный ассортимент этой популярной итальянской фабрики. Компания Calligaris – итальянский производитель, работающий с полной самоотдачей и вниманием к потребителю с 1923 г. – сегодня полностью меняет свой облик. Новый логотип, а вместе с ним и новый мир образов, наилучшим образом выражает сущность компании, ее характерные особенности; в глазах общественности он является символом дизайна, наконец-то доступного широкой публике. Кроме того, у Calligaris теперь есть свой талисман – дятел, неутомимый труженик, живущий на деревьях. Он воплощает любовь к дереву, а также находчивость, которую фирма проявляет при разработке и изготовлении своей продукции.		</p>
+    	<!-- MENU -->
+		        <ul class="ftr__menu">
+                                <li class="ftr__menu-item"><a href="/event/" class="">События</a></li>
+                                        <li class="ftr__menu-item"><a href="/customers/" class="">Клиентам</a></li>
+                                        <li class="ftr__menu-item"><a href="/shops/" class="">Магазины</a></li>
+                    </ul>
+		<!-- END MENU -->
+		<div class="ftr__copy">
+			© Монобрендовый магазин Calligaris. Все права защищены. Торговые марки, модели и патенты на данном сайте являются собственностью Calligaris s.p.a. ITALIA
+			<a href="#"><img src="/bitrix/templates/.default/markup/img/italian-smart-design.png" alt=""/></a>
+		</div>
+	</div>
+</div>
+<!-- popup -->
+	<!-- end popup -->
+<!-- info popup -->
+<div class="kdx_popup" id="infoPopup">
+    <div class="kdx_popup_plate">
+        <div id="popupTitle" class="form__ttl">Заголовок</div>
+        <div id="popupTxt">
+	        <p>Текст</p>
+    	</div>
+        <div class="kdx_popup_close">x</div>
+    </div>
+</div>
+<!-- end info popup -->
+<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter25279460 = new Ya.Metrika({id:25279460, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/25279460" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+<script>
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new
+
+Date();a=s.createElement(o),
+
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+   ga('create', 'UA-4911633-5', 'calligarismoscow.ru');
+
+   ga('send', 'pageview');
+
+</script>
+</body>
+</html>

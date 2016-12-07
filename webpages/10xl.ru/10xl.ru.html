@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" dir="ltr" >
+	<head>
+		<!-- The following JDOC Head tag loads all the header and meta information from your site config and content. -->
+				  <base href="http://www.10xl.ru/" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="одежда больших размеров, богатырь на варшавке, одежда большого размера, одежда большого размера интернет, женская одежда большого размера, мужская  одежда большого размера, обувь большого размера, мужские куртки больших размеров, женские куртки больших размеров, мужские брюки больших размеров, женские платья больших размеров, 10xl.ru, 10xl, куртки, пуховики, рубашки, толстовки, платья, юбки, костюмы, сарафаны, футболки, ветровки, серебряная нить, терра" />
+  <meta name="description" content="Удобная одежда для полных и обувь размеров побольше. Выбирайте и покупайте в розничном магазине «Богатырь» на Варшавке" />
+  <title>Одежда и обувь больших размеров. Магазин «Богатырь»</title>
+  <link href="/templates/10xl-one/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="/media/zoo/applications/jbuniversal/assets/css/jbzoo.css?ver=20141012" type="text/css" />
+  <link rel="stylesheet" href="/cache/widgetkit/widgetkit-6f687170.css" type="text/css" />
+  <link rel="stylesheet" href="/modules/mod_zooitem/tmpl/list/style.css?ver=20140512" type="text/css" />
+  <link rel="stylesheet" href="/media/zoo/applications/jbuniversal/assets/css/jbzoo.filter.css?ver=20141012" type="text/css" />
+  <link rel="stylesheet" href="/media/zoo/libraries/jquery/jquery-ui.custom.css?ver=20140512" type="text/css" />
+  <script src="/media/zoo/libraries/jquery/jquery.js?ver=20140512" type="text/javascript"></script>
+  <script src="/media/zoo/assets/js/responsive.js?ver=20140512" type="text/javascript"></script>
+  <script src="/components/com_zoo/assets/js/default.js?ver=20140512" type="text/javascript"></script>
+  <script src="/media/zoo/applications/jbuniversal/assets/js/jquery.jbzootools.min.js?ver=20141012" type="text/javascript"></script>
+  <script src="/cache/widgetkit/widgetkit-f5213a16.js" type="text/javascript"></script>
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="/media/zoo/libraries/jquery/jquery-ui.custom.min.js?ver=20140512" type="text/javascript"></script>
+  <script type="text/javascript">
+function keepAlive() {	var myAjax = new Request({method: "get", url: "index.php"}).send();} window.addEvent("domready", function(){ keepAlive.periodical(3600000); });
+jQuery(function($){
+                $(".jbzoo .jsAutocomplete").each(function (n, obj) {
+                    var $input = $(obj),
+                        $form = $input.closest("form");
+                    $input.autocomplete({
+                        minLength: 2,
+                        source: function( request, response ) {
+                            var term = request.term;
+                            lastXhr = $.getJSON("index.php?option=com_zoo&controller=autocomplete&task=index&tmpl=raw",
+                                {
+                                    "name"  : $input.attr("name"),
+                                    "value" : term,
+                                    "app_id": $(".jsApplicationId", $form).val(),
+                                    "type"  : $(".jsItemType", $form).val()
+                                },
+                                function(data, status, xhr) {
+                                    $input.removeClass("ui-autocomplete-loading");
+                                    response(data);
+                                }
+                            );
+                        }
+                    });
+                });
+            })
+  </script>
+
+
+		<!-- The following five lines load the Blueprint CSS Framework (http://blueprintcss.org). If you don't want to use this framework, delete these lines. -->
+		<link rel="stylesheet" href="/templates/10xl-one/css/blueprint/screen.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="/templates/10xl-one/css/blueprint/print.css" type="text/css" media="print" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="/templates/10xl-one/css/template_ie.css" type="text/css" media="screen, projection"><![endif]-->
+		<link rel="stylesheet" href="/templates/10xl-one/css/blueprint/plugins/fancy-type/screen.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="/templates/10xl-one/css/blueprint/plugins/joomla-nav/screen.css" type="text/css" media="screen" />
+
+		<!-- The following line loads the template CSS file located in the template folder. -->
+		<link rel="stylesheet" href="/templates/10xl-one/css/template.css" type="text/css" />
+		
+		<link rel="stylesheet" href="/templates/10xl-one/css/10xl-one.css" type="text/css" />
+		<link rel="stylesheet" href="/templates/10xl-one/css/background.css" type="text/css" />
+
+		<!-- The following four lines load the Blueprint CSS Framework and the template CSS file for right-to-left languages. If you don't want to use these, delete these lines. -->
+		
+		<!-- The following line loads the template JavaScript file located in the template folder. It's blank by default. -->
+		<script type="text/javascript" src="/templates/10xl-one/js/template.js"></script>
+		<script type="text/javascript" src="/templates/10xl-one/js/egg.js"></script>
+		
+		<script type="text/javascript" src="/templates/10xl-one/js/scrollup.js"></script>
+		
+	</head>
+	<body>
+	<div class="background-photo background-default">	
+		<div class="container header-logos">
+			<hr class="space" />
+			<div class="joomla-header">
+									<div class="telephone">
+						+7 (499) 613-76-33</br>
++7 (499) 613-35-66</br>
+с 10:00 до 20:00</br>
+без обеда и выходных</br>
+<p class="location-map"><a onclick="goog_report_conversion('http://www.10xl.ru/skhema-proezda')" href="/skhema-proezda" title="Варшавское шоссе, дом 50">Схема проезда</a></p>
+					</div>
+								<div id="logos"><a href="/" ><img src="/images/logo.png" border="0" alt="Качественная одежда и обувь больших размеров в магазине Богатырь на Варшавке" title="Качественная одежда и обувь больших размеров в магазине Богатырь на Варшавке" width="1034" height="220" /></a></div>
+			</div>
+					</div>
+		
+		<div class="container">
+			<div class="span-16 append-1">
+							<div class="atomic-topquote"><div class="breadcrumbs"><span></span></div>
+
+<div class="jbzoo jbzoo-filter-wrapper">
+
+    <form class="jbzoo-filter filter-inline"
+          id="jbzoo-filter-inline-106"
+          method="get"
+          action="/search"
+          name="jbzoo-filter-inline-106">
+
+        <div class="filter-fields">
+            <!--
+                User fields
+            -->
+            <div class="filter-inline">
+    <div class="filter-element element-_auto_ first">
+    <div class="field"><div id="lupa"></div>
+	<input type="text" name="e[237f5bad-83ef-4d83-ad25-26220fe98187]" value="" id="filterEl_237f5bad-83ef-4d83-ad25-26220fe98187" class="element-text element-tmpl-_auto_ jsAutocomplete" maxlength="255" size="60" placeholder="Введите начало слова..." />
+</div>    <div class="clear clr"></div>
+</div>
+</div>
+
+            <!--
+                Static fields
+            -->
+            <div class="static-fields">
+                <input type="hidden" name="limit" value="50" />
+                                    <input type="hidden" name="order[field]" value="_none" />
+ <input type="hidden" name="order[mode]" value="s" />
+ <input type="hidden" name="order[order]" value="asc" />                
+
+                <input type="hidden" name="logic" value="or" />            </div>
+        </div>
+
+        <!--
+            Submit and reset buttons
+        -->
+        <div class="controls">
+                            <input type="submit" name="send-form" value="Искать"
+                       class="jsSubmit button rborder"/>
+            
+            
+            <div class="clear clr"></div>
+        </div>
+
+        <!--
+            System required fields
+        -->
+        <input type="hidden" name="controller" value="search"/>
+        <input type="hidden" name="Itemid" value="185"/>
+        <input type="hidden" name="option" value="com_zoo"/>
+        <input type="hidden" name="task" value="filter"/>
+        <input type="hidden" name="exact" value="0"/>
+        <input type="hidden" name="type" value="odezhda" class="jsItemType"/>
+        <input type="hidden" name="app_id" value="1" class="jsApplicationId"/>
+    </form>
+
+</div></div>
+				<div class="atomic-warning"></div>
+							
+<div id="system-message-container">
+</div>
+				<div  id="yoo-zoo" class="jbzoo jbzoo-view-frontpage jbzoo-app-katalog-tovarov jbzoo-tmpl-catalog yoo-zoo jbzoo-rborder" >
+    <div class="frontpage rborder alias-katalog-tovarov">
+
+        
+
+        
+
+        
+
+        
+
+                    <div class="description-full"><!-- h3 style="color:#FF6600; text-align:center;">По вопросам наличия конкретных размеров звоните по контактным номерам телефонов.</h3 -->
+<div class="front-cat" style="text-align: center;">
+<a href="/catalog/m">
+ <img alt="Мужская одежда и обувь большого размера" title="Мужской отдел" src="/images/men.jpg" width="600" height="250" alt="" />
+</a>
+<a href="/catalog/w">
+ <img alt="Женская одежда и обувь большого размера" title="Женский отдел" src="/images/women.jpg" width="600" height="250" alt="" />
+</a>
+</div>
+<div style="width:1234px; height:330px;">
+<div id="slideset-1-58107eaa6cbfa" class="wk-slideset wk-slideset-default" data-widgetkit="slideset" data-options='{"style":"default","width":"auto","height":"auto","effect":"slide","index":0,"autoplay":1,"interval":5000,"items_per_set":1,"navigation":1,"buttons":1,"title":0,"duration":300}'>
+	<div>
+		<div class="sets">
+							<ul class="set">
+															<li>
+						<article class="wk-content"><a href="/catalog/sale"><img src="/images/banners/_dem_sale.jpg" border="0" width="1200"/></a></article>
+											</li>
+									</ul>
+											<ul class="set">
+															<li>
+						<article class="wk-content"><div width="1200" height="300"><a href="/catalog/m/kozhanye-kurtki"><img src="data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEHAAIALAAAAAABAAEAAAICVAEAOw==" data-src="/images/banners/skin25_1.jpg" border="0" width="600"/></a><a href="/catalog/w/palto-dublenki"><img src="/images/banners/skin25_2.jpg" border="0" width="600"/></a></div></article>
+											</li>
+									</ul>
+											<ul class="set">
+															<li>
+						<article class="wk-content"><a href="/catalog/w/serebryanaya-nit"><img src="data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEHAAIALAAAAAABAAEAAAICVAEAOw==" data-src="/images/banners/_silver.jpg" border="0" width="1200"/></a></article>
+											</li>
+									</ul>
+											<ul class="set">
+															<li>
+						<article class="wk-content"><a href="/catalog/w/terra"><img src="data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEHAAIALAAAAAABAAEAAAICVAEAOw==" data-src="/images/banners/_terra-16.jpg" border="0" width="1200"/></a></article>
+											</li>
+									</ul>
+											<ul class="set">
+															<li>
+						<article class="wk-content"><a href="/diskontnaya-programma"><img src="data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEHAAIALAAAAAABAAEAAAICVAEAOw==" data-src="/images/banners/_diskont.jpg" border="0" width="1200"/></a></article>
+											</li>
+									</ul>
+											<ul class="set">
+															<li>
+						<article class="wk-content"><a href="/fotografii-torgovogo-zala"><img src="data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEHAAIALAAAAAABAAEAAAICVAEAOw==" data-src="/images/banners/_panorama.jpg" border="0" width="1200"/></a></article>
+											</li>
+									</ul>
+											<ul class="set">
+															<li>
+						<article class="wk-content"><a href="/catalog/w"><img src="data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEHAAIALAAAAAABAAEAAAICVAEAOw==" data-src="/images/banners/_panorama_zala1.jpg" border="0" width="1200"/></a></article>
+											</li>
+									</ul>
+											<ul class="set">
+															<li>
+						<article class="wk-content"><a href="/catalog/m"><img src="data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEHAAIALAAAAAABAAEAAAICVAEAOw==" data-src="/images/banners/_panorama_zala2.jpg" border="0" width="1200"/></a></article>
+											</li>
+									</ul>
+									</div>
+		<div class="next"></div><div class="prev"></div>	</div>
+		<ul class="nav icon"><li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li></ul>
+	</div></div>
+<div class="text-block">
+<p style="text-align: center;"><strong><em>Здравствуйте, дорогие наши покупатели!</em></strong></p>
+<p style="text-align: center;"><strong><em>Мы с радостью приглашаем Вас в наш уютный магазин "Богатырь" на Варшавке!</em></strong></p>
+<h1>Лучшая одежда и обувь больших размеров для лучших из нас!</h1>
+<div style="float: right;width: 300px;height: 618px;background-color: white;margin: 15px;">
+<div id="slideset-9-58107eaa6d6a5" class="wk-slideset wk-slideset-default" data-widgetkit="slideset" data-options='{"style":"default","width":300,"height":"auto","effect":"zoom","index":0,"autoplay":1,"interval":5000,"items_per_set":1,"navigation":0,"buttons":0,"title":0,"duration":300}'>
+	<div>
+		<div class="sets">
+							<ul class="set">
+															<li>
+						<article class="wk-content"><a href="/catalog/sale/item/003146?category_id=193"><img src="/images/banners/_dem_sale/03.jpg" border="0" width="300" height="300"/></a></br><a href="/catalog/sale/item/003147?category_id=193"><img src="/images/banners/_dem_sale/04.jpg" border="0" width="300" height="300"/></a></article>
+											</li>
+									</ul>
+											<ul class="set">
+															<li>
+						<article class="wk-content"><a href="/catalog/sale/item/003542?category_id=193"><img src="data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEHAAIALAAAAAABAAEAAAICVAEAOw==" data-src="/images/banners/_dem_sale/05.jpg" border="0" width="300" height="300"/></a></br><a href="/catalog/sale/item/003549?category_id=193"><img src="/images/banners/_dem_sale/06.jpg" border="0" width="300" height="300"/></a></article>
+											</li>
+									</ul>
+											<ul class="set">
+															<li>
+						<article class="wk-content"><a href="/catalog/sale/item/003553?category_id=193"><img src="data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEHAAIALAAAAAABAAEAAAICVAEAOw==" data-src="/images/banners/_dem_sale/07.jpg" border="0" width="300" height="300"/></a></br><a href="/catalog/sale/item/003554?category_id=193"><img src="/images/banners/_dem_sale/08.jpg" border="0" width="300" height="300"/></a></article>
+											</li>
+									</ul>
+									</div>
+			</div>
+	</div></div>
+<div style="text-align: justify;">
+<p>"Хорошего человека должно быть много" — эта старинная поговорка стала девизом нашей компании. А у хорошего человека должна быть самая лучшая одежда, не так ли? Магазин большой одежды "Богатырь” — это отличное место, где вы сможете пополнить свой гардероб стильными, красивыми и высококачественными вещами.</p>
+<p>Платья, куртки, халаты, джинсы и разнообразная обувь больших размеров, а также другие вещи больших размеров - все это вы найдете именно у нас. И это далеко не полный ассортимент наших товаров. Мы привыкли заботиться о наших покупателях с нестандартной фигурой, но с доброй и открытой душой, поэтому стараемся с каждым сезоном пополнять свои коллекции, чтобы каждый раз радовать вас замечательной одеждой по привлекательным ценам..</p>
+<p><b>Высокое качество и доступные цены</b></p>
+<p>В нашем магазине одежды больших размеров "Богатырь" Вы найдете великое множество самых разнообразных товаров на любой вкус! Качество — это первое, чему мы уделяем внимание при выборе наших товаров, потому что понимаем, как важно, чтобы любимая одежда служила долго и не теряла своей эстетичности даже после нескольких стирок. Мы сотрудничаем с лучшими производителями одежды больших размеров.</p>
+<p>Что для каждого из нас важно при выборе одежды? Конечно же, разумное сочетание цены и качества. В нашем <strong>магазине большой одежды</strong> вы наконец-то оцените этот немаловажный нюанс, ведь у нас одежда больших размеров и обувь больших размеров предлагается по самым демократичным ценам, что делает покупку не только очень приятной, но и действительно выгодной! Если вы все еще задаете себе вопрос: где купить обувь или одежду больших размеров, тогда Вам по адресу. В нашем магазине вы найдете вещи для людей с нестандартной фигурой на все случаи жизни: для дома, для работы, для спорта и для всевозможных праздников. Куртки, джинсы, халаты, платья, торжественная одежда, кожаная обувь поспешите, ведь эти вещи ждут именно вас!</p>
+<p><b>Широчайший ассортимент товаров для каждого</b></p>
+<p>Ни в одном другом магазине вы не найдете такой обширный выбор товаров, как в нашем магазине одежды и обуви больших размеров. Одежда для полных мужчин, женщин и, безусловно, для подростков. Здесь любой человек найдет одежду, которая удовлетворит его пожелания, требования и финансовые возможности.</p>
+<p>Милые дамы с радостью оценят модные платья, как повседневные, так и праздничные, в том числе наряды для торжеств, а также стильные джинсы и куртки, обворожительные босоножки больших размеров, туфли и шлепки больших размеров, и огромный ассортимент оригинальных аксессуаров, не говоря уже о соблазнительном нижнем белье и купальниках. Что женщине нужно для счастья? Приходите в магазин "Богатырь" на Варшавке, и вы поймете, что ваше счастье и восторг прячутся на наших прилавках.</p>
+<p>Джентльменам непременно приглянутся приготовленные для них сюрпризы. Высококачественная <a href="/catalog/m/zima">мужская обувь</a> больших размеров из первоклассной кожи, <a href="/catalog/m/remni">стильные ремни</a>, и, конечно же, ошеломительный ассортимент <a href="/catalog/m">одежды для мужчин</a> с нестандартной фигурой и недюжей физической силой. <a href="/catalog/m/vetrovki-plashchi">Куртки</a>, <a href="/catalog/m/dzhinsy">джинсы</a>, <a href="/catalog/m/dzhempera-zhiletki">джемпера</a>, <a href="/catalog/m/shorty-kapri">шорты</a>, <a href="/catalog/m/trusy">белье</a>, <a href="/catalog/m/rubashki-s-dlinnym-rukavom">рубашки</a>, <a href="/catalog/m/pidzhaki-kostyumy">костюмы</a> для торжеств, <a href="/catalog/m/vesna-osen">туфли</a> и сапоги большого размера в общем, у нас вы найдете все, что может понадобиться современному мужчине!</p>
+<p>Подростковая мода, как известно, самая требовательная, но мы всегда готовы удовлетворить любые требования и пожелания наших дорогих покупателей. Здесь Вы найдете все, чтобы не отставать от моды сверстников, блистать в кругу друзей и на пенных вечеринках. Верхняя одежда для девушек и юношей в широчайшем ассортименте ждет выхода в свет. Не отказывайте себя в желании быть стильным и красивым, ведь мы уже ждем Вас!</p>
+<p><b>Качественный сервис, или чтобы наши клиенты были довольны!</b></p>
+<p>Магазин одежды "Богатырь" на Варшавке - это место, куда приходишь с улыбкой, а уходишь в полном восторге. Причем улыбку вызывает абсолютно все: и декор, и ассортимент товар, и радушные продавцы, готовые помочь в любую минуту. Мы очень постарались, чтобы сделать вашу жизнь уютной и комфортной! Хочешь почувствовать себя как дома? Приходите и оцените наш первоклассный сервис.</p>
+<p>Что нужно человеку, когда он приходит в магазин для людей с нестандартной фигурой? Безусловно, внимание и уважение! Мы ценим наших клиентов, поэтому к каждому из них относимся со вниманием и уважением. Не знаете, какую одежду или обувь больших размеров выбрать? Наши квалифицированные продавцы-консультанты с радостью помогут вам подобрать <strong>одежду для полных</strong> мужчин и женщин, будь то куртки, платья, джинсы или халаты, ведь мы понимаем, что в таком огромном магазине, как наш, порой сложно найти то, что нужно. Но будьте уверены, что у нас  вы найдете все, чего только пожелает ваша душа.</p></div>
+<p><b><em>Милости просим в гости! Будьте красивы, блистайте и знайте, что вы лучшие!</em></b></p>
+<p><b><em>Магазин одежды "Богатырь"!</em></b></p>
+</div></div>
+        
+
+        <div class="clr clear"></div>
+    </div>
+
+
+<div class="clear clr"></div></div>
+
+									
+
+<div class="jbzoo jbzoo-app-katalog-tovarov jbzoo-rborder jbzoo-sale">
+	<div class="category rborder"><h5 class="title"><a href="/catalog/sale" title="Перейти в раздел &laquo;Распродажа&raquo;">Распродажа</a></h5>
+		<div class="items">
+					<div class="column rborder width20" style="height: 231px;">
+				<div class="jbzoo-item jbzoo-item-odezhda jbzoo-item-teaser jbzoo-item-908">
+    <h4 class="item-title"><li class="element element-text first last">
+	Блузка</li>	<li class="element element-text alias">003663</li></h4>
+	<div class="pos-new"></div>	<div class="pos-sale"></div>
+
+    <div class="item-image align-center teaser-image">
+         <a class="jbimage-link" title="003663" href="http://www.10xl.ru/catalog/w/serebryanaya-nit/item/003663" id="jbimage-link-58107eaa78290"><img class="jbimage" alt="Купить блузка большого размера, цена. Магазин одежды Богатырь на Варшавке" title="Блузка" src="http://www.10xl.ru/cache/com_zoo/images/412_15798c06a8ebd7c3d54385a29bba989e.jpg" width="82" height="110" /></a> 
+     </div>
+
+
+
+
+	<div class="teaser-price">
+		Цена 3500 
+ руб. 	</div>
+
+
+<div class="clear clr"></div></div>
+			</div>
+					<div class="column rborder width20" style="height: 231px;">
+				<div class="jbzoo-item jbzoo-item-odezhda jbzoo-item-teaser jbzoo-item-908">
+    <h4 class="item-title"><li class="element element-text first last">
+	Полупальто меховое Светлана</li>	<li class="element element-text alias">003453</li></h4>
+	<div class="pos-new"></div>	<div class="pos-sale"></div>
+
+    <div class="item-image align-center teaser-image">
+         <a class="jbimage-link" title="003453" href="http://www.10xl.ru/catalog/w/terra/item/003453" id="jbimage-link-58107eaa78fd1"><img class="jbimage" alt="Купить полупальто меховое светлана большого размера, цена. Магазин одежды Богатырь на Варшавке" title="Полупальто меховое Светлана" src="http://www.10xl.ru/cache/com_zoo/images/ter111_a415b3bf1edf0d0670b49e0da99d502d.jpg" width="72" height="110" /></a> 
+     </div>
+
+
+
+
+	<div class="teaser-price">
+		Цена 8300 
+ руб. 	</div>
+
+
+<div class="clear clr"></div></div>
+			</div>
+					<div class="column rborder width20" style="height: 231px;">
+				<div class="jbzoo-item jbzoo-item-odezhda jbzoo-item-teaser jbzoo-item-908">
+    <h4 class="item-title"><li class="element element-text first last">
+	Толстовка Борган-клаб</li>	<li class="element element-text alias">000383</li></h4>
+		<div class="pos-sale"></div>
+
+    <div class="item-image align-center teaser-image">
+         <a class="jbimage-link" title="000383" href="http://www.10xl.ru/catalog/m/tolstovki-vodolazki/item/000383" id="jbimage-link-58107eaa79bd6"><img class="jbimage" alt="Купить толстовка борган-клаб большого размера, цена. Магазин одежды Богатырь на Варшавке" title="Толстовка Борган-клаб" src="http://www.10xl.ru/cache/com_zoo/images/2315_1e1f3895664544155ee164a5a5c5c996.jpg" width="110" height="110" /></a> 
+     </div>
+
+
+
+
+	<div class="teaser-price">
+		Цена 1600 
+ руб. 	</div>
+
+
+<div class="clear clr"></div></div>
+			</div>
+					<div class="column rborder width20" style="height: 231px;">
+				<div class="jbzoo-item jbzoo-item-odezhda jbzoo-item-teaser jbzoo-item-908">
+    <h4 class="item-title"><li class="element element-text first last">
+	Блузон Кольцо</li>	<li class="element element-text alias">003642</li></h4>
+	<div class="pos-new"></div>	<div class="pos-sale"></div>
+
+    <div class="item-image align-center teaser-image">
+         <a class="jbimage-link" title="003642" href="http://www.10xl.ru/catalog/w/terra/item/003642" id="jbimage-link-58107eaa7a835"><img class="jbimage" alt="Купить блузон кольцо большого размера, цена. Магазин одежды Богатырь на Варшавке" title="Блузон Кольцо" src="http://www.10xl.ru/cache/com_zoo/images/302_026da19142eb56b2b574eed6aa3c78cc.jpg" width="72" height="110" /></a> 
+     </div>
+
+
+
+
+	<div class="teaser-price">
+		Цена 2300 
+ руб. 	</div>
+
+
+<div class="clear clr"></div></div>
+			</div>
+					<div class="column rborder width20" style="height: 231px;">
+				<div class="jbzoo-item jbzoo-item-odezhda jbzoo-item-teaser jbzoo-item-908">
+    <h4 class="item-title"><li class="element element-text first last">
+	Пальто</li>	<li class="element element-text alias">002148</li></h4>
+		<div class="pos-sale"></div>
+
+    <div class="item-image align-center teaser-image">
+         <a class="jbimage-link" title="002148" href="http://www.10xl.ru/catalog/sale/item/002148" id="jbimage-link-58107eaa7b44e"><img class="jbimage" alt="Купить пальто большого размера, цена. Магазин одежды Богатырь на Варшавке" title="Пальто" src="http://www.10xl.ru/cache/com_zoo/images/2818_826e93fb08171a71fcfea32649bb1278.jpg" width="110" height="110" /></a> 
+     </div>
+
+
+
+
+	<div class="teaser-price">
+		Цена 7250 
+ руб. 	</div>
+
+
+<div class="clear clr"></div></div>
+			</div>
+				</div>
+	</div>
+</div>
+
+<div class="clear clr"></div>
+
+
+												<div class="footer">
+				<hr />
+					
+	        			
+							<div class="footer-menu">
+					
+									<div class="footer-block c">
+<div class="m-f c" id="m-f">
+<div class="m-f-one m-f-user">
+
+<h4>
+<a href="#">Общая информация</a></h4>
+<ul>
+<li><a href="#">О магазине</a></li>
+<li><a href="/fotografii-torgovogo-zala">Фото магазина</a></li>
+<li><a href="/sitemap">Карта сайта</a></li>
+<li>&nbsp;</li>
+<li><a href="/diskontnaya-programma">Дисконтная программа</a></li>
+</ul>
+
+</div>
+
+<div class="m-f-one m-f-services">
+
+<h4>
+<a href="/catalog/m">Каталог</a></h4>
+<ul>
+<li><a href="/catalog/m">Мужской отдел</a></li>
+<li><a href="/catalog/w">Женский отдел</a></li>
+<li>&nbsp;</li>
+<li><a href="/catalog/sale">Распродажа</a></li>
+</ul>
+
+</div>
+<div class="m-f-one m-f-aproject">
+		<div class="moduletable loginform">
+					<form action="/" method="post" id="form-login1" >
+	Вход для сотрудников	<fieldset class="input">
+	<p id="form-login-username">
+		<!-- <label for="modlgn_username">Логин</label> -->
+		<input id="modlgn_username" type="text" name="username" class="inputbox"  size="26" placeholder="Логин"/>
+	</p>
+	<p id="form-login-password">
+		<!-- <label for="modlgn_passwd">Пароль</label> -->
+		<input id="modlgn_passwd" type="password" name="password" class="inputbox" size="26"  placeholder="Пароль"/>
+	</p>
+		<p id="form-login-remember">
+		<!-- <label for="modlgn_remember">Запомнить меня</label> -->
+		<input id="modlgn_remember" type="checkbox" name="remember" class="inputbox" value="yes" title="Запомнить меня"/>
+	</p>
+		<input type="submit" name="Submit" class="button" value="Войти" />
+	<input type="hidden" name="option" value="com_users" />
+	<input type="hidden" name="task" value="user.login" />
+	<input type="hidden" name="return" value="aW5kZXgucGhwP0l0ZW1pZD0xMDE=" />
+	<input type="hidden" name="f607148a8e0b99b1f43c22307c59923f" value="1" />	</fieldset>
+		</form>
+		</div>
+	
+</div>
+<div class="m-f-one m-f-help">
+<h4>
+<a onclick="goog_report_conversion('http://www.10xl.ru/skhema-proezda')" href="/skhema-proezda">Контакты</a></h4>
+<ul>
+<li><a onclick="goog_report_conversion('http://www.10xl.ru/skhema-proezda')" href="/skhema-proezda">Схема проезда</a></li>
+<li><a href="/feedback">Пишите нам</a></li>
+<li>&nbsp;</li>
+<li>+7 (499) 613-76-33</li>
+<li>+7 (499) 613-35-66</li>
+<li>Варшавское шоссе, д. 50</li>
+</ul>
+
+</div>
+</div>
+</div>	
+				</div>
+							</div>
+
+			<div class="joomla-footer span-16 append-1">
+				 
+				<div class="copyright">Для получения подробной информации о наличии и стоимости указанных товаров, пожалуйста, обращайтесь к менеджерам магазина по телефонам: (499)613-76-33 или (499)613-35-66</div>
+				<hr />
+				<!-- Yandex.Metrika informer -->
+				<div style="text-align: center;">
+				<a href="https://metrika.yandex.ru/stat/?id=1784299&amp;from=informer"
+				target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/1784299/3_0_525252FF_323232FF_1_pageviews"
+				style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:1784299,lang:'ru'});return false}catch(e){}"/></a>
+				<!-- /Yandex.Metrika informer -->
+
+				<!-- Yandex.Metrika counter -->
+				<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+				<script type="text/javascript">
+				try { var yaCounter1784299 = new Ya.Metrika({id:1784299,
+						  webvisor:true,
+						  clickmap:true,
+						  trackLinks:true});
+				} catch(e) { }
+				</script>
+				<noscript><div><img src="//mc.yandex.ru/watch/1784299" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+				</div>
+				<!-- /Yandex.Metrika counter -->
+				
+				<!-- Yandex.Metrika counter -->
+				<script src="https://mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+				<script type="text/javascript">
+				try {
+					var yaCounter1784299 = new Ya.Metrika({
+						id:1784299,
+						clickmap:true,
+						trackLinks:true,
+						accurateTrackBounce:true,
+						webvisor:true
+					});
+				} catch(e) { }
+				</script>
+				<noscript><div><img src="https://mc.yandex.ru/watch/1784299" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+				<!-- /Yandex.Metrika counter -->
+				
+				<!-- Google Code for &#1050;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;&#1099; Conversion Page
+				In your html page, add the snippet and call
+				goog_report_conversion when someone clicks on the
+				chosen link or button. -->
+				<script type="text/javascript">
+				  /* <![CDATA[ */
+				  goog_snippet_vars = function() {
+					var w = window;
+					w.google_conversion_id = 984067803;
+					w.google_conversion_label = "2DboCNWU3QoQ292e1QM";
+					w.google_remarketing_only = false;
+				  }
+				  // DO NOT CHANGE THE CODE BELOW.
+				  goog_report_conversion = function(url) {
+					goog_snippet_vars();
+					window.google_conversion_format = "3";
+					window.google_is_call = true;
+					var opt = new Object();
+					opt.onload_callback = function() {
+					if (typeof(url) != 'undefined') {
+					  window.location = url;
+					}
+				  }
+				  var conv_handler = window['google_trackConversion'];
+				  if (typeof(conv_handler) == 'function') {
+					conv_handler(opt);
+				  }
+				}
+				/* ]]> */
+				</script>
+				<script type="text/javascript"
+				  src="//www.googleadservices.com/pagead/conversion_async.js">
+				</script>
+				<!-- Google Code for &#1050;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;&#1099; Conversion Page -->
+				
+				<!-- GOOGLE ANALYTICS -->
+				<script>
+				  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+				  ga('create', 'UA-85029879-1', 'auto');
+				  ga('send', 'pageview');
+
+				</script>
+				<!-- GOOGLE ANALYTICS -->
+				
+				<div class="copyright">Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, <br />определяемой положениями <a href="http://www.gk-rf.ru/statia437" target="_blank" title="Ссылка откроется в новой вкладке">Статьи 437 (2) Гражданского кодекса Российской Федерации</a>.</div>
+				<div class="copyright">&copy; Одежда и обувь больших размеров. Магазин «Богатырь», 2009—2016				<br />Разработка и поддержка сайта <a href="mailto:from10xl@anorov.com?subject=Вопрос по сайту 10xl.ru" target="_blank">Аноров Григорий</a></div>
+			</div>
+			</div>
+		</div>
+		<!-- Аноров Григорий -->
+	</div>
+	<div id="trollface"></div><div id="egg"></div>	<div id="scrollup"><img alt="Прокрутить вверх" src="/templates/10xl-one/images/up.png"></div>
+	</body>
+</html>

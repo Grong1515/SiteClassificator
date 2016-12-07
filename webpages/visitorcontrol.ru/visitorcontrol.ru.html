@@ -1,0 +1,820 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="ctl00_Head1"><title>
+	VisitorControl - система заказа разовых пропусков и регистрации посетителей
+</title>
+    <link rel="stylesheet" type="text/css" href="/MasterPage/MasterPageStyle.css"/>
+    <link rel="stylesheet" type="text/css" HREF="/MainMenu/MainMenu.css" title="style">
+    <link rel="stylesheet" type="text/css" HREF="/BottomMenu/bottomMenuStyle.css" title="style">
+    <link rel="stylesheet" type="text/css" HREF="/TopMenu/TopMenu.css" title="style">
+    <link rel="stylesheet" type="text/css" HREF="/Clients/ClientsStyle.css" title="style">
+    <link rel="stylesheet" type="text/css" HREF="/Counters/CounterStyle.css" title="style">
+    <link rel="stylesheet" type="text/css" HREF="/News/NewsStyles.css" title="style">
+    <link rel="stylesheet" type="text/css" HREF="/HowToBuy/HowToBuyStyles.css" title="style">
+    <link rel="stylesheet" type="text/css" HREF="/Ctrls/PriceList/PriceStyles.css" title="style">
+    <link rel="stylesheet" type="text/css" media="screen" href="/MasterPage/fancybox/jquery.fancybox.css" title="style"/>
+	<link rel="shortcut icon" href="/favicon.ico?v=OmmbEOkLwJ" /><meta HTTP-EQUIV="Content-Type" content="text/html; charset=windows-1251" /><meta name="author" content="Insyres" /><meta name="keywords" content="visitorcontrol, система, программа, АРМ, заказ, разовый, пропуск, бюро, регистрация, посетитель, заявка, предварительный, visitor, control, сканирование, документ, паспорт, распознавание, сканер, проходная, автоматизация, гостевой, временный, СКД, СКУД, болид, bolid, орион, кодос, parsec, legos, apacs, шэлт, кронверк, kronwerk, shs, honeywell, контроль, учет, прием, проход, доступ, поток, посититель, гость, клиент, визитер, визитор, согласование, печать, выдача, оформление, автоматизированный, модуль, фотографирование, автомобиль, машина, материальный, ценность, внос, вынос, предприятие, бизнес-центр, офис, офисный, компания, insyres, ресепшн, reception, безопасность, здание, инсайрес, интеграция, карта, магнитный, оператор, охрана, охранник, ресепшен, ресепшин, секретарь, территория, электронный, комплекс, журнал" /><meta name="description" content="VisitorControl - система заказа разовых пропусков и регистрации посетителей. Программа / АРМ для автоматизации бюро пропусков, сканирование и распознавание документов, выдача гостевых пропусков, интеграция с системой контроля доступа." /><meta name="ROBOTS" content="ALL" /><meta name="yandex-verification" content="9814eada83fba169" />
+<style> 
+    
+    body.m1250 #mainOuterTable{ width:1250px; position:relative; left: 50%; margin-left: -625px; }
+    body.m_basic #mainOuterTable{ width:100%; }
+
+    #container 
+    { 
+    	position: relative; 
+ 
+    	border: none; 
+    	width: 180px; 
+    	height: 270px; 
+    } 
+    #down 
+    { 
+    	position: relative; 
+    	border: none; 
+    	width: 180px; 
+    	height: 270px;
+    	
+    	z-index:500;
+    }
+    #up 
+    { 
+    	position: relative; 
+    	width: 180px; 
+    	height: 270px; 
+    	top: -270px;
+     	z-index: 1000;
+    }
+</style>    
+</head>
+<body>
+<div id="mainOuterTable">
+<!--<div id="mainOuterTable" style="position:relative; left:50%; top:50%;">-->
+<script type="text/javascript">
+	function setScreenClass(){ 
+	    if(document.body.clientWidth<=1250){document.body.className = 'm_basic';}
+	    else {document.body.className = 'm1250';};
+	};
+	setScreenClass();
+	//	window.onload=function(){setScreenClass();};   
+	window.onresize=setScreenClass; 
+</script>
+    <form name="aspnetForm" method="post" action="default.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTYyNjA1NTIzMw9kFgJmD2QWAgIDD2QWBAIBD2QWAmYPDxYCHgRUZXh0BRvQm9C40YfQvdGL0Lkg0LrQsNCx0LjQvdC10YJkZAIDD2QWAgIBDw8WAh4NQ3VycmVudE5ld3NJRGZkFgICAQ88KwALAQAPFggeCERhdGFLZXlzFgAeC18hSXRlbUNvdW50AgMeCVBhZ2VDb3VudAIBHhVfIURhdGFTb3VyY2VJdGVtQ291bnQCA2QWAmYPZBYGAgEPZBYCZg9kFgJmDxUHD2NvbG9yOiAjMDA4RUIwOwoyNC4xMC4yMDE2D2NvbG9yOiAjNjY2NjY2OxAvTmV3cy9OZXdzLmFzcHg/AzE3MQ9jb2xvcjogIzY2NjY2NjsxVmlzaXRvckNvbnRyb2wg0L3QsCDCq9Ch0JrQo9CUIDIwMTfCuzog0LjRgtC+0LPQuGQCAg9kFgJmD2QWAmYPFQcPY29sb3I6ICMwMDhFQjA7CjE4LjEwLjIwMTYPY29sb3I6ICM2NjY2NjY7EC9OZXdzL05ld3MuYXNweD8DMTcwD2NvbG9yOiAjNjY2NjY2O0HQndCwINCh0JrQo9CUIDIwMTcg0L/QvtC60LDQttGD0YIg0YLQtdGA0LzQuNC90LDQuyBWaXNpdG9yQ29udHJvbGQCAw9kFgJmD2QWAmYPFQcPY29sb3I6ICMwMDhFQjA7CjAzLjA4LjIwMTYPY29sb3I6ICM2NjY2NjY7EC9OZXdzL05ld3MuYXNweD8DMTY5D2NvbG9yOiAjNjY2NjY2O1HQmtCw0Log0L7RgNCz0LDQvdC40LfQvtCy0LDRgtGMINGD0LTQvtCx0L3Rg9GOINC/0LDRgNC60L7QstC60YMg0YEgVmlzaXRvckNvbnRyb2xkZHbaMBYiZzx8lLyBaC/D9MOHlx4T" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+        <script language="JavaScript" type="text/javascript"> 
+            var aboutMenu = [[ "Организация пропускного режима","/about/Access_control.aspx" ],[ "Общее описание VisitorControl","/about/about.aspx" ],[ "Архитектура","/about/Architecture.aspx" ],[ "Модули и лицензирование","/about/Modules_license.aspx" ],[ "Технические требования","/about/Requirements.aspx" ],[ "Презентационные материалы","/about/Presentations.aspx" ],[ "Сертификаты и дипломы","/about/certificates.aspx" ]]; var functionalMenu = [[ "Краткий обзор функционала","/functional/Functional.aspx" ],[ "Заявки на пропуск","/functional/Requests.aspx" ],[ "Регистрация посетителя","/functional/Registration.aspx" ],[ "Выдача пропуска","/functional/PassIssue.aspx" ],[ "Сдача пропуска","/functional/PassReturn.aspx" ],[ "Видеоидентификация","/functional/Videoidentification.aspx" ],[ "Черный список","/functional/BlackList.aspx" ],[ "Контроль въезда автомобилей","/functional/CarControl.aspx" ],[ "Учет материальных ценностей","/functional/MaterialControl.aspx" ],[ "Учет рабочего времени","/functional/WorkTime.aspx" ],[ "Журналы и отчеты","/functional/JournalReports.aspx" ],[ "Права и Настройки","/functional/PermissionsSettings.aspx" ],[ "Импорт / Экспорт","/functional/ImportExport.aspx" ],[ "Архив","/functional/Archive.aspx" ]]; var equipmentMenu = [[ "Используемое оборудование","/Equipment/Equipment.aspx" ],[ "Документ-сканеры","/Equipment/Scanners.aspx" ],[ "Считыватели proximity","/Equipment/ProxReaders.aspx" ],[ "Считыватели штрих-кодов","/Equipment/BarcodeReaders.aspx" ],[ "Терминал регистрации посететелей","/Equipment/TerminalRegistraciiPosetiteley.aspx" ]]; var solutionsMenu = [[ "Выбор решения","/Solutions/Solutions.aspx" ],[ "Регистрация посетителей","/Solutions/RegVisitor.aspx" ],[ "Офисный центр","/Solutions/Office.aspx" ],[ "Здание организации / компании","/Solutions/AllBuilding.aspx" ],[ "Жилой комплекс","/Solutions/Apartment_complex.aspx" ],[ "Транспортный / складской центр","/Solutions/TransportCenter.aspx" ],[ "Противодействие терроризму","/Solutions/Antiterror.aspx" ]]; var integrationMenu = [[ "Опыт и возможности интеграции","/Integration/Integration.aspx" ],[ "СКД Apacs","/Integration/Apacs.aspx" ],[ "СКД Artonit","/Integration/Artonit.aspx" ],[ "СКД Бастион","/Integration/Bastion.aspx" ],[ "СКД Bolid","/Integration/Bolid.aspx" ],[ "СКД Bosch BIS","/Integration/BIS.aspx" ],[ "СКД GE Casi-Rusco","/Integration/Casi.aspx" ],[ "СКД Honeywell EBI","/Integration/HoneywellEBI.aspx" ],[ "СКД Honeywell IQ","/Integration/HoneywellIQ.aspx" ],[ "СКД KerySystems","/Integration/KerySystems.aspx" ],[ "СКД Кодос","/Integration/Kodos.aspx" ],[ "СКД Кронверк","/Integration/Kronwerk.aspx" ],[ "СКД Lenel","/Integration/Lenel.aspx" ],[ "СКД Octagram","/Integration/Legos.aspx" ],[ "СКД Parsec","/Integration/Parsec.aspx" ],[ "СКД PERCo","/Integration/Perco.aspx" ],[ "СКД RusGuard","/Integration/RusGuard.aspx" ],[ "СКД С-КУБ","/Integration/SCube.aspx" ],[ "СКД Securix","/Integration/Securix.aspx" ],[ "СКД Семь печатей","/Integration/SevenSeals.aspx" ],[ "СКД SHS","/Integration/SHS.aspx" ],[ "СКД Сигма-ИС","/Integration/Sigma.aspx" ],[ "СКД Siemens","/Integration/Siemens.aspx" ],[ "СКД Simplex","/Integration/Simplex.aspx" ],[ "СКД Сфинкс","/Integration/Sphinx.aspx" ],[ "СКД Шэлни","/Integration/Shelni.aspx" ],[ "Система Auto-TRASSIR","/Integration/CarNumberRecognition.aspx" ]]; var buyMenu = [[ "Как купить VisitorControl","/HowToBuy/Purchase.aspx" ],[ "Прайс-Калькулятор","/Cabinet/Cabinet.aspx" ]];
+        </script>
+     
+<input type=hidden name="screenWidth" id="screenWidth" />
+
+    <div id="PictureContainer" style="display: none; z-Index: 1000;"></div>
+	<div id="PictureLoading" style="display: none; position:absolute"><img class="image" src="/MasterPage/img/Wait_Animate.gif" /></div>
+  
+        <script language="JavaScript" type="text/javascript" src="/TopMenu/menu.js"> </script>
+        <script language="JavaScript" type="text/javascript" src="/common.js"> </script>
+	<table class="table">
+            <tr height=20 >
+                <td colspan=3>
+                    <!--Правое и левое верхнее меню-->
+                    <table class="table">
+                        <tr>
+                            <td align=left valign=bottom>
+                                
+<table class="innerTable">
+    <tr>
+        <td class="topMenuItem">
+            <a href="../"><img src="/TopMenu/img/home.gif" border=0/></a>
+        </td>
+        <td class="topMenuItem">
+            <a href="../SiteMap/SiteMap.aspx"><img src="/TopMenu/img/map.gif" border=0/></a>
+        </td>
+    </tr>
+</table>
+                            </td>
+                            <td align=right valign=bottom>
+                                
+                                
+
+<table class="innerTable"  style="padding: 0; margin:0;" cellpadding=0 cellspacing=0 border=0>
+    <tr height="35">
+         <td class="topMenuItem">
+            
+        </td>
+        <td class="topMenuItem">
+            
+            <a class="topMenuItem" href=/Cabinet/Projects.aspx><noindex><nobr><span id="ctl00_TopMenuRight1_lblProfile" style="font-size:110%;">Личный кабинет</span></nobr></noindex></a>
+        </td>
+        <td class="topMenuItem">
+            <img src="/TopMenu/img/menuItem.gif" class="topMenuItem"/>
+        </td>
+        <td>
+            <a class="topMenuItem" href=/News/News.aspx><noindex><nobr>Новости</nobr></noindex></a>
+        </td>                 
+        <td class="topMenuItem">
+            <img src="/TopMenu/img/menuItem.gif" class="topMenuItem"/>
+        </td>
+        <td>
+            <a class="topMenuItem" href=/Clients/ClientsPage.aspx><noindex><nobr>Клиенты</nobr></noindex></a>        
+        </td>
+        <td class="topMenuItem">
+            <img src="/TopMenu/img/menuItem.gif" class="topMenuItem"/>
+        </td>
+        <td>
+            <a class="topMenuItem" href=/Partners/Partners.aspx><noindex><nobr>Партнеры</nobr></noindex></a>
+        </td>
+        <td class="topMenuItem">
+            <img src="/TopMenu/img/menuItem.gif" class="topMenuItem"/>
+        </td>
+        <td>
+            <a class="topMenuItem" href=/Support/Support.aspx><noindex><nobr>Поддержка</nobr></noindex></a>
+        </td>             
+        <td class="topMenuItem">
+            <img src="/TopMenu/img/menuItem.gif" class="topMenuItem"/>
+        </td>
+        <td style="padding-right:15px;">
+            <a class="topMenuItem" href=/About/Company.aspx><noindex><nobr>О компании</nobr></noindex></a>
+        </td>
+        <td style="padding-right:10px; padding-top: 8px; vertical-align: top">
+            <h1 class="header1"><nobr>+7 (495) 539-23-09</nobr></h1>
+        </td>
+    </tr>
+</table>
+
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr height=126>
+                <td background=/MasterPage/img/top_stretch.gif style="background-repeat:repeat-x" width=100%>
+                    <table class="innerTable" height=100%>
+                        <tr><!--width=460-->
+                            <td background=/MasterPage/img/top_left.gif width=125 style="background-repeat:no-repeat; cursor:hand;" onclick="javascript: Redirect('/');" 
+                                title="Система контроля и регистрации посетителей, учета разовых пропусков, программа для автоматизации бюро пропусков">
+                                <div style="width:125px;"></div>
+                            </td>
+                            <td background=/MasterPage/img/top_left1.gif width=334 style="background-repeat:no-repeat; cursor:hand;" onclick="javascript: Redirect('/');">
+                                <div id="VC" style="font-family:Arial; font-weight:bold; font-size:13pt; color:#ffffff" 
+                                title="Система контроля и регистрации посетителей, учета разовых пропусков, программа для автоматизации бюро пропусков">
+                                    <div style="padding-top:25px; padding-left:15px">
+                                        <div style="font-family:Arial; font-size:20pt; font-weight:bold; color:#ffffff; padding-bottom:5px">
+                                            VisitorControl<br>
+                                        </div>
+                                        <nobr>система заказа разовых пропусков</nobr><br><nobr>  и регистрации посетителей</nobr>
+                                        <div style="width:320px;"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td background=/MasterPage/img/top_center.gif style="background-repeat:no-repeat;" width=799 valign=top align=right>
+                                <div id="topMenu" style="position:relative; left:0px; top:10px;">
+                                    
+
+
+<table class="innerTable" id="menuTable" width="100%">
+    <tr>
+        <td class="itemSeparator"><div style="width:1px"></div></td>
+        <td class="menuItem"  onmouseover="Select(aboutMenuTd, aboutMenuDiv)" onmouseout="Deselect(event, aboutMenuTd, aboutMenuDiv)"  >
+            <div id="aboutMenuTd">
+                <a   href="/about/Access_control.aspx" class="HeadMenuItem"><noindex><nobr>О продукте</nobr></noindex></a>
+            </div>
+        </td>
+        <td class="itemSeparator"><div style="width:1px"></div></td>
+        <td class="menuItem" onmouseover="Select(functionalMenuTd, functionalMenuDiv)" onmouseout="Deselect(event, functionalMenuTd, functionalMenuDiv)"  >
+            <div id="functionalMenuTd"  >
+                <a   href="/functional/Functional.aspx" class="HeadMenuItem"><noindex><nobr>Функционал</nobr></noindex></a>
+            </div>
+        </td>
+        <td class="itemSeparator"><div style="width:1px"></div></td>
+        <td class="menuItem" onmouseover="Select(equipmentMenuTd, equipmentMenuDiv)" onmouseout="Deselect(event,equipmentMenuTd, equipmentMenuDiv)"  >
+            <div id="equipmentMenuTd"  >
+                <a   href="/Equipment/equipment.aspx" class="HeadMenuItem"><noindex><nobr>Оборудование</nobr></noindex></a>
+            </div>
+        </td>
+        <td class="itemSeparator"><div style="width:1px"></div></td>
+        <td class="menuItem" onmouseover="Select(solutionsMenuTd, solutionsMenuDiv)" onmouseout="Deselect(event,solutionsMenuTd, solutionsMenuDiv)"  >
+            <div id="solutionsMenuTd"  >
+                <a href="/solutions/Solutions.aspx" class="HeadMenuItem"><noindex><nobr>Решения</nobr></noindex></a>
+            </div>
+        </td>
+        <td class="itemSeparator" ><div style="width:1px"></div></td>
+        <td class="menuItem" onmouseover="Select(integrationMenuTd, integrationMenuDiv)" onmouseout="Deselect(event,integrationMenuTd, integrationMenuDiv)"  >
+            <div id="integrationMenuTd"  >
+                <a   href="/integration/integration.aspx" class="HeadMenuItem"><noindex><nobr>Интеграция</nobr></noindex></a>
+            </div>
+        </td>
+        <td class="itemSeparator"><div style="width:1px"></div></td>
+        <td class="menuItem" onmouseover="Select(buyMenuTd, buyMenuDiv)" onmouseout="Deselect(event,buyMenuTd, buyMenuDiv)"  >
+            <div id="buyMenuTd"  >
+                <a   href="/HowToBuy/purchase.aspx" class="HeadMenuItem"><noindex><nobr>Купить</nobr></noindex></a>
+            </div>
+        </td>
+        <td class="itemSeparator"><div style="width:1px"></div></td>
+        
+        
+
+        <td class="itemSeparator"></td>
+    </tr>
+</table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr height="100%">
+                <td colspan=3>
+                    <table class="table">
+                        <tr>
+                            <td style="border-right: #999999 1px dotted; padding-left:15px; padding-right:25px; padding-top:15px; padding-bottom:15px; vertical-align:top" >
+                                <table width="100%" height="100%">
+                                    <tr >
+                                        <td valign=top>
+                                            <div style="width: 200px" nowrap>
+                                            <!--Левое меню-->
+                                                
+    
+<table class="table">
+    <tr>
+        <td style="height: 29px; vertical-align: top;"><h1 class="header1">Новости продукта</h1></td>
+    </tr>
+    <tr>
+        <td nowrap>
+             <table cellspacing="0" border="0" id="ctl00_mainMenu_newsPreviewGrid_newsPreviewGrid" style="width:100%;border-collapse:collapse;">
+	<tr>
+		<td>
+                            <table width="100%" style="margin-bottom: 10px;">
+                                <tr>
+                                    <td>
+                                        <noindex><span class="regularText" style="color: #008EB0;"><b>24.10.2016</b></span></noindex>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-top: 1 solid #D0CFCD; color: #666666;">
+                                       <noindex><a href="/News/News.aspx?ID=171" style="color: #666666; font-weight:normal">VisitorControl на «СКУД 2017»: итоги</a></noindex>
+                                    </td>
+                                </tr>
+                            </table>
+                        
+                        </td>
+	</tr><tr>
+		<td>
+                            <table width="100%" style="margin-bottom: 10px;">
+                                <tr>
+                                    <td>
+                                        <noindex><span class="regularText" style="color: #008EB0;"><b>18.10.2016</b></span></noindex>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-top: 1 solid #D0CFCD; color: #666666;">
+                                       <noindex><a href="/News/News.aspx?ID=170" style="color: #666666; font-weight:normal">На СКУД 2017 покажут терминал VisitorControl</a></noindex>
+                                    </td>
+                                </tr>
+                            </table>
+                        
+                        </td>
+	</tr><tr>
+		<td>
+                            <table width="100%" style="margin-bottom: 10px;">
+                                <tr>
+                                    <td>
+                                        <noindex><span class="regularText" style="color: #008EB0;"><b>03.08.2016</b></span></noindex>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-top: 1 solid #D0CFCD; color: #666666;">
+                                       <noindex><a href="/News/News.aspx?ID=169" style="color: #666666; font-weight:normal">Как организовать удобную парковку с VisitorControl</a></noindex>
+                                    </td>
+                                </tr>
+                            </table>
+                        
+                        </td>
+	</tr>
+</table>
+        </td>
+    </tr>
+    <tr height=100%>
+        <td style="vertical-align:top; padding-top:5px">
+            <a href="/News/News.aspx"><nobr><noindex>Все новости</noindex></nobr></a>
+        </td>
+    </tr>
+</table>
+
+ 
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr height="100%" align=center>
+                                        <td valign=top>
+                                            <!--<div id="container"> 
+                                                <div id="down"> 
+                                                    <embed type="application/x-shockwave-flash" src="/MasterPage/img/vc-act-flash.swf" name="banner" bgcolor="#FFFFFF" 
+                                                        quality="high" height= "270" width="180" wmode="opaque"></embed> 
+                                                </div> 
+                                            <div id="up"> 
+                                                <a href="/Action/Action.aspx">
+                                                    <img src="/MasterPage/img/none.png" border="0" width="180" height="270"></a> 
+                                                </div> 
+                                            </div>                                           -->
+                                           
+                                           <!-- terminal banner -->
+
+                                            <script type="text/javascript">
+                                                (function() {
+
+                                                    function Slideshow(element) {
+                                                        this.el = document.querySelector(element);
+                                                        this.init();
+                                                    }
+
+                                                    Slideshow.prototype = {
+                                                        init: function() {
+                                                            this.wrapper = this.el.querySelector(".slider-wrapper");
+                                                            this.slides = this.el.querySelectorAll(".slide");
+                                                            this.previous = this.el.querySelector(".slider-previous");
+                                                            this.next = this.el.querySelector(".slider-next");
+                                                            this.index = 0;
+                                                            this.total = this.slides.length;
+                                                            this.timer = null;
+
+                                                            this.action();
+                                                            this.stopStart();
+                                                        },
+                                                        _slideTo: function(slide) {
+                                                            var currentSlide = this.slides[slide];
+                                                            currentSlide.style.opacity = 1;
+
+                                                            for (var i = 0; i < this.slides.length; i++) {
+                                                                var slide = this.slides[i];
+                                                                if (slide !== currentSlide) {
+                                                                    slide.style.opacity = 0;
+                                                                }
+                                                            }
+                                                        },
+                                                        action: function() {
+                                                            var self = this;
+                                                            self.timer = setInterval(function() {
+                                                                self.index++;
+                                                                if (self.index == self.slides.length) {
+                                                                    self.index = 0;
+                                                                }
+                                                                self._slideTo(self.index);
+
+                                                            }, 10000);
+                                                        },
+                                                        stopStart: function() {
+                                                            var self = this;
+                                                            self.el.addEventListener("mouseover", function() {
+                                                                clearInterval(self.timer);
+                                                                self.timer = null;
+
+                                                            }, false);
+                                                            self.el.addEventListener("mouseout", function() {
+                                                                self.action();
+
+                                                            }, false);
+                                                        }
+
+
+                                                    };
+
+                                                    document.addEventListener("DOMContentLoaded", function() {
+
+                                                        var slider = new Slideshow("#main-slider");
+
+                                                    });
+
+
+                                                })();
+
+                                            </script>
+
+                                            <style>	
+	                                            html,body {
+		                                            margin: 0;
+		                                            padding: 0;
+	                                            }
+	                                            .slider {
+		                                            width: 210px;
+		                                            margin: 2em auto;
+	                                            }
+
+	                                            .slider-wrapper {
+		                                            width: 190px;
+		                                            height: 440px;
+		                                            position: relative;
+		                                            border: 1px solid #DDDDDD;
+		                                            padding-left:10px; 
+		                                            padding-right:10px;
+	                                            }
+
+	                                            .slide {
+		                                            float: left;
+		                                            position: absolute;
+		                                            width: 190px;
+		                                            height: 440px;
+		                                            text-align: center;
+		                                            opacity: 0;
+		                                            transition: opacity 1s linear;
+	                                            }
+
+	                                            .slider-wrapper > .slide:first-child {
+		                                            opacity: 1;
+	                                            }
+                                            	
+	                                            .check_img {
+		                                            vertical-align:top;
+		                                            padding-right:5px;
+		                                            border:0;
+	                                            }
+	                                            .advantage {
+		                                            vertical-align:top;
+		                                            padding-bottom:10px;
+		                                            color: #008eb0;
+		                                            font-family:Tahoma; 
+		                                            font-size:11pt;
+	                                            }
+	                                            .banner_caption {
+		                                            font-family:Tahoma; 
+		                                            font-size:14pt; 
+		                                            color:#1BAA72; 
+		                                            padding-top:15px; 
+		                                            padding-bottom:10px; 
+		                                            text-align:center; 
+		                                            font-weight:bold;
+	                                            }
+                                            </style>
+
+	                                            <div style="width:210px; height:440px; padding-top:20px">
+	                                            <a href="http://www.VisitorControl.ru/Equipment/TerminalRegistraciiPosetiteley.aspx" target="_blank">
+	                                            <div class="slider" id="main-slider"><!-- outermost container element -->
+		                                            <div class="slider-wrapper"><!-- innermost wrapper element -->
+
+			                                            <div class="slide" />
+				                                            <h1 class="banner_caption" style="padding-top:0px; padding-bottom: 0px;">Терминал регистрации посетителей</h1>
+				                                            <img src="http://visitorcontrol.ru/UserFiles/images/terminal1.jpg" style="width:123px; height:327px; padding-top:0px; padding-bottom: 0px; border:0;">
+			                                            </div><!-- slides -->
+
+			                                            <div class="slide" />
+				                                            <div class="banner_caption">Преимущества:</div>
+				                                            <table>
+				                                            <tr><td class="check_img"><img src="http://visitorcontrol.ru/UserFiles/images/other/check_green.png"></td>
+					                                            <td class="advantage">автоматизация бюро пропусков</td></tr>
+				                                            <tr><td class="check_img"><img src="http://visitorcontrol.ru/UserFiles/images/other/check_green.png"></td>
+					                                            <td class="advantage">снижение затрат на бюро пропусков</td></tr>
+				                                            <tr><td class="check_img"><img src="http://visitorcontrol.ru/UserFiles/images/other/check_green.png"></td>
+					                                            <td class="advantage">уменьшение очередей</td></tr>
+				                                            </table>
+                                            				
+				                                            <div class="banner_caption">Возможности:</div>
+				                                            <table>
+				                                            <tr><td class="check_img"><img src="http://visitorcontrol.ru/UserFiles/images/other/check_green.png"></td>
+					                                            <td class="advantage">сканирование и распознавание документов посетителя</td></tr>
+				                                            <tr><td class="check_img"><img src="http://visitorcontrol.ru/UserFiles/images/other/check_green.png"></td>
+					                                            <td class="advantage">выдача печатного пропуска или проксимити-карты</td></tr>
+				                                            <tr><td class="check_img"><img src="http://visitorcontrol.ru/UserFiles/images/other/check_orange.png"></td>
+					                                            <td class="advantage">индивидуальный дизайн</td></tr>
+				                                            </table>
+				                                            <div style="font-family:Tahoma; font-size:12pt; color:red; padding-top:12px; text-align:center; font-weight:normal;"><u>УЗНАТЬ БОЛЬШЕ</u></div>
+				                                            <div style="color:red;"></div>
+			                                            </div><!-- slides -->
+
+		                                            </div>
+	                                            </div>
+	                                            </a>
+	                                            </div>
+                                            <!-- terminal banner -->
+                                        </td>
+                                    </tr>
+                                </table>
+                               
+                            </td>
+                            <td width=100% style="padding-left:40px; padding-right:20px; padding-top:20px; padding-bottom:40px; vertical-align:top">
+                                <!--Контент-->
+                               
+                                
+
+<table class="table">
+	<tbody>
+		<tr height="100%">
+			<td valign="top">
+			<div class="regularText">
+			<table border="0" cellpadding="0" cellspacing="0" class="regularText" width="100%">
+				<tbody>
+					<tr>
+						<td valign="top" width="50%">
+						<table border="0" cellpadding="0" cellspacing="0" class="regularText" width="100%">
+							<tbody>
+								<tr>
+									<td valign="top">
+									<h1 class="header1"><span style="font-size: 16px; line-height: 20.7999992370605px;">Автоматизация БЮРО ПРОПУСКОВ</span></h1>
+
+									<p>VisitorControl &ndash; эффективная система регистрации, учета и контроля посетителей на предприятии. Автоматизация проходного режима с помощью VisitorControl позволяет</p>
+
+									<ul>
+										<li>создать <strong>комфортные условия приема посетителей</strong>;</li>
+										<li>разгрузить <strong>бюро пропусков</strong> (регистрация посетителей занимает в среднем 12-15 секунд);</li>
+										<li>усилить <strong>безопасность</strong> офиса;</li>
+										<li>повысить престиж организации / бизнес-центра;</li>
+									</ul>
+
+									<p>Применение VisitorControl возможно в различных сферах: для автоматизации бюро пропусков бизнес-центров, банков, коммерческих и гос. учреждений, проходных предприятий и т.д.</p>
+
+									<div align="right"><a href="/about/about.aspx">Подробнее о продукте &gt;&gt;</a></div>
+									<br />
+									<br />
+									&nbsp;</td>
+								</tr>
+								<tr>
+									<td valign="top">
+									<h1 class="header1"><span style="font-size: 16px; line-height: 20.7999992370605px;">Решения VISITORCONTROL</span></h1>
+
+									<div style="padding-bottom:4px;"><strong>Регистрация посетителей</strong></div>
+
+									<div align="justify">Наиболее простое и эффективное решение для регистрации посетителей и выдачи разовых пропусков. <a href="/Solutions/RegVisitor.aspx">Подробнее &gt;&gt;</a></div>
+
+									<div style="padding-bottom:4px; padding-top:15px;"><strong>Офисный центр</strong></div>
+
+									<div align="justify">Комплексное решение для организации приема и контроля посетителей уровня современного офисного центра. <a href="/Solutions/Office.aspx">Подробнее &gt;&gt;</a></div>
+
+									<div style="padding-bottom:4px; padding-top:15px;"><strong>Здание организации / компании</strong></div>
+
+									<div align="justify">Комплексное решение для организации приема и контроля посетителей уровня предприятия. <a href="/Solutions/AllBuilding.aspx">Подробнее &gt;&gt;</a></div>
+
+									<div style="padding-bottom:4px; padding-top:15px;"><strong>Транспортный / складской центр</strong></div>
+
+									<div align="justify">Эффективное решение для организации учета въезда / выезда на территорию грузовых и легковых автомобилей. <a href="/Solutions/TransportCenter.aspx">Подробнее &gt;&gt;</a></div>
+									<br />
+									<br />
+									&nbsp;</td>
+								</tr>
+								<tr>
+									<td valign="top">
+									<h1 class="header1"><span style="font-size: 16px; line-height: 20.7999992370605px;">Эксперты рекомендуют</span></h1>
+									<br />
+									<img align="left" src="http://www.visitorcontrol.ru/UserFiles/images/Speakers/chistyakov_round_100.jpg" style="margin: 0 15 15 0" />
+									<div align="justify"><a href="http://www.visitorcontrol.ru/News/News.aspx?ID=154">Андрей Чистяков,<br />
+									коммерческий директор ЗАО &laquo;РусГард&raquo;</a></div>
+
+									<div align="justify">&nbsp;</div>
+
+									<div align="justify"><i>&laquo;За все время нашей совместной работы еще не возникло такой ситуации, когда функционал VisitorControl не смог&nbsp;бы закрыть все задачи заказчика по регистрации посетителя&raquo;.</i></div>
+									<br />
+									<br />
+									<img align="left" src="http://www.visitorcontrol.ru/UserFiles/images/Speakers/bukharov_high_round_100_gray.jpg" style="margin: 0 15 15 0" />
+									<div align="justify"><a href="http://www.visitorcontrol.ru/News/News.aspx?ID=155">Андрей Бухаров,<br />
+									генеральный директор ООО &laquo;Артонит&raquo;</a></div>
+
+									<div align="justify"><i>&laquo;Сегодня VisitorControl &ndash; это мощный, надежный продукт, который уже не догнать. У меня нет проблем с техподдержкой, нет проблем с продуктом, ценообразование понятное и меня устраивает&raquo;.</i></div>
+									<br />
+									<br />
+									&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<td style="padding-left:40px" valign="top" width="50%">
+						<table border="0" cellpadding="0" cellspacing="0" class="regularText" width="100%">
+							<tbody>
+								<tr>
+									<td valign="top">
+									<h1 class="header1"><span style="font-size: 16px; line-height: 20.7999992370605px;">Возможности VISITORCONTROL</span></h1>
+
+									<p><img align="left" src="/Solutions/img/reception_s.jpg" style="line-height: 20.7999992370605px; padding-right:12px" /></p>
+
+									<div>Полнофункциональное программное решение для контроля посетителей VisitorControl охватывает все процессы: от предварительного заказа пропуска, согласования и доставки его на проходную - до простановки отметки о выходе гостя из здания. Основные функции:</div>
+
+									<div>&nbsp;</div>
+
+									<div>&nbsp;</div>
+
+									<div style="line-height:20px">
+									<ul>
+										<li><span style="line-height: 20.7999992370605px;"><strong>регистрация посетителей</strong>;</span></li>
+										<li><span style="line-height: 20.7999992370605px;">фотографирование посетителей и/или документов;</span></li>
+										<li><span style="line-height: 20.7999992370605px;">ускоренное <strong>распознавание документов</strong> посетителей (паспорт РФ и др);</span></li>
+										<li><span style="line-height: 20.7999992370605px;">выдача временных и разовых пропусков;</span></li>
+										<li><span style="line-height: 20.7999992370605px;">предварительный <strong>заказ пропусков</strong> по сети или через интернет;</span></li>
+										<li><span style="line-height: 20.7999992370605px;">согласование (визирование) заявок на пропуск уполномоченными лицами;</span></li>
+										<li><span style="line-height: 20.7999992370605px;">контроль посетителей по &laquo;черному&raquo; списку;</span></li>
+										<li><span style="line-height: 20.7999992370605px;">учет автомобилей посетителей;</span></li>
+										<li><span style="line-height: 20.7999992370605px;">учет вноса/выноса материальных ценностей;</span></li>
+										<li><span style="line-height: 20.7999992370605px;">отчеты on-line, история посещений;</span></li>
+										<li><span style="line-height: 20.7999992370605px;">и многое другое&hellip;</span></li>
+									</ul>
+									</div>
+
+									<div align="right"><a href="/functional/Functional.aspx">Подробнее о функционале &gt;&gt;</a></div>
+									<br />
+									<br />
+									&nbsp;</td>
+								</tr>
+								<tr>
+									<td valign="top">
+									<h1 class="header1"><span style="font-size: 16px; line-height: 20.7999992370605px;">!!! ИНТЕГРИРОВАНО с системами контроля доступа</span></h1>
+
+									<p>Программа полностью совместима с Системами контроля доступа, имеет интегрированные решения с крупнейшими Российскими и иностранными производителями. Среди них: <a href="/Integration/Artonit.aspx">Artonit</a>, <a href="/Integration/Kodos.aspx">Кодос</a>, <a href="/Integration/Bolid.aspx">Bolid</a>, <a href="/Integration/Sigma.aspx">Сигма-ИС</a>, <a href="/Integration/Kronwerk.aspx">Кронверк</a>, <a href="/Integration/Legos.aspx">Octagram</a>, <a href="/Integration/Parsec.aspx">Parsec</a>, <a href="/Integration/BIS.aspx">BOSCH</a>, <a href="/Integration/Simplex.aspx">Simlex</a>, <a href="/Integration/KerySystems.aspx">KerySystems</a>, <a href="/Integration/Apacs.aspx">Apacs</a>, <a href="/Integration/Casi.aspx">GE Casi-Rusco</a>, <a href="/Integration/SHS.aspx">SHS</a>, и другие.</p>
+
+									<p><a href="/Integration/Integration.aspx"><img src="/UserFiles/images/SKD/skud_labels.png" style="border:0px;" /></a></p>
+
+									<div align="right"><a href="/Integration/Integration.aspx#SKD">Подробнее об интеграции &gt;&gt;</a></div>
+									<br />
+									<br />
+									&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+    
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr height=70>
+                <td colspan=3>
+                    
+
+
+<table class="table">
+    <tr height=5>
+        <td colspan=3 background="/BottomMenu/img/border.gif" style="background-repeat:repeat-x">
+            
+        </td>
+    </tr>
+    <tr>
+        <td valign=top style="padding-left:10px; padding-top:10px;">
+            <span class="copyRight"><nobr>Copyright © 2004-2016 <a href=http://www.insyres.ru  target="_blank" class="copyRight" title="Перейти на сайт компании Инсайрес"><b>«Инсайрес»</b></a></nobr></span>
+        </td>
+        <td valign=top style="padding-left:10px; padding-top:10px;" >
+            <nobr><span class="copyRight">г.Москва, ул. Гримау 10,&nbsp; тел: <b>+7 (495) 539-23-09</b>,&nbsp; email:</span> <a href="mailto:info@insyres.ru" class="copyRight" title="Отправить e-mail">info@insyres.ru</a></nobr>
+        </td>
+        <td style="padding-left:10px;  padding-top:10px;" valign=top>
+           
+
+<table align="right">
+    <tr>
+        <td class="counter">
+	<noindex>
+	            <script type="text/javascript">
+	            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	            </script>
+	            <script type="text/javascript">
+	            var pageTracker = _gat._getTracker("UA-4042761-1");
+	            pageTracker._initData();
+	            pageTracker._trackPageview();
+	            </script>
+		</noindex>
+        </td>
+        <td class="counter">
+		<noindex>
+	            <!--LiveInternet counter--><script type="text/javascript"><!--
+	            document.write("<a href='http://www.liveinternet.ru/click' "+
+	            "target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+	            escape(document.referrer)+((typeof(screen)=="undefined")?"":
+	            ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+	            screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+	            ";"+Math.random()+
+	            "' alt='' title='LiveInternet: показано число посетителей за"+
+	            " сегодня' "+
+	            "border=0 width=88 height=15><\/a>")//--></script>
+	            <!--/LiveInternet-->
+		</noindex>
+        </td>
+        <td class="counter">
+		<noindex><nobr>
+	            <!-- CNStats -->
+	            
+                
+                <!--<noscript><img src="http://stat.insyres.ru/cnstats/cnt-gif1x1.php?468&amp;c=0" width="1" height="1" border="0" alt=""></noscript>
+	            <img src="http://stat.insyres.ru/cnstats/cnt-show.php" width="88" height="31" border="0" alt=""/>-->
+	            <!--/ CNStats -->        
+		</nobr></noindex>
+        </td>
+       <td class="counter">
+		<noindex>
+<!-- Yandex.Metrika counter -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<script type="text/javascript">
+	try {
+		var yaCounter53795 = new Ya.Metrika({ id: 53795,
+			webvisor: true,
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true
+		});
+	} catch (e) { }
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/53795" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --> 
+		</noindex>
+        </td>
+    </tr>
+</table>
+        </td>
+    </tr>
+</table>
+                </td>
+            </tr>
+        </table>
+    </form>
+<script src="/MasterPage/swfobject.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+var params = {
+
+   loop: "true",
+
+   bgcolor: "#ffffff",
+   wmode: "opaque"
+
+};
+
+    swfobject.embedSWF("/MasterPage/img/vc-act-flash.swf", "action_banner", "180", "270", "6.0.65", false, false, params, false);
+    swfobject.embedSWF("/MasterPage/img/VC.swf", "VC", "334", "126", "6.0.65", false, false, params, false);
+    if (screen.width <= 1024) 
+    {
+        var selects = document.getElementsByTagName("select");
+       
+        for (var i = 0; i < selects.length; i++) {
+            selects[i].style.maxWidth = "350";
+            if (selects[i].clientWidth > 350)
+                selects[i].style.width = "350";
+        }
+    }
+
+    var scrWidth = document.getElementById("screenWidth");
+    if (scrWidth != null) scrWidth.value = screen.width;
+    
+
+</script>
+</div>
+
+<!-- LIVE CHAT ------------------------------------------------------------>
+<script type="text/javascript">
+    var __cs = __cs || [];
+    __cs.push(["setAccount", "HzLhElimCnfUlAN1Gqn0xciVPExF1N8H"]);
+    __cs.push(["setHost", "//server.comagic.ru/comagic"]);
+</script>
+<script type="text/javascript" async src="//app.comagic.ru/static/cs.min.js"></script>
+<!-- LIVE CHAT ------------------------------------------------------------>
+
+</body>
+
+<!--
+                                <div id="VC" style="font-family:Arial; font-weight:bold; font-size:13pt; color:#ffffff">
+                                    <div style="font-family:Arial; font-size:20pt; font-weight:bold; color:#ffffff; padding-bottom:5px">
+                                        VisitorControl<br>
+                                    </div>
+                                    система заказа разовых пропусков<br>и регистрации посетителей
+                                </div>
+
+-->
+
+	<script type="text/javascript" src="../Scripts/jquery-2.1.1.min.js"></script>
+	
+    <script type="text/javascript" src="../Scripts/jquery.fancybox.pack.js?v=2.1.5"></script> 
+	<script type="text/javascript">
+	    $(document).ready(function () {
+
+	        $(".fancybox").fancybox({
+	            closeClick: true,
+	            openEffect: 'none',
+
+	            helpers: {
+	                title: {
+	                    type: 'inside'
+	                },
+	                overlay: {
+	                    css: {
+	                        'background': 'rgba(55,55,55,0.25)'
+	                    }
+	                }
+	            }
+	        });
+	        $.fancybox.helpers.overlay.beforeShow = function (opts, obj) { /*сброс функции, иначе проблемы со сдвигами*/ this.open(opts); };
+	    });
+
+	</script>
+
+
+</html>

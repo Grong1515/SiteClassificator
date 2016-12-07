@@ -1,0 +1,981 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/edumsko/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Главная</title>
+<meta name="Description" content="">
+<meta name="Keywords" content="">
+<style>
+.metapanel{
+    top: 50px;
+    left: 70px;
+    width: auto;
+    z-index: 20;
+    padding: 20px;
+    -moz-box-shadow: 0 0 4px #666;
+    -webkit-box-shadow: 0 0 4px #666;
+    box-shadow: 0 0 4px #666;
+    position: fixed;
+    background: #efefef;
+}
+</style>
+<div class="metapanel" style="display: none;">
+<a title="Закрыть окно" class="close"></a>
+<h2>Редактировать Мета</h2>
+
+<div class="box">
+&nbsp;Title:&nbsp;</div>
+<div class="box">
+&nbsp;Description:&nbsp;</div>
+<div class="box">
+&nbsp;Keywords:&nbsp;</div>
+</div>
+    
+    <link href="/css/jquery-ui.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<link href="/theme/nde3_dou_286/white/files/css/layout.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<link href="/theme/nde3_dou_286/white/files/css/style.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<link href="/theme/nde3_dou_286/white/files/css/picture.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<link href="/theme/nde3_dou_286/white/files/css/flexslider.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<link href="/theme/nde3_dou_286/white/files/css/font-awesome.min.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<link href="/theme/nde3_dou_286/white/files/js/nde/lytebox/lytebox.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<link href="/js/vendor/fancybox/jquery.fancybox.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<link href="/js/vendor/bootstrap/datetimepicker.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<link href="/css/eye/spv.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<link href="/css/style.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<link href="/theme/nde3_dou_286/white/files/css/renovationstyle.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<link href="/js/vendor/jqueryui-editable/css/jqueryui-editable.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<link href="/theme/nde3_dou_286/white/files/css/print.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet" media="print">
+<!--[if if IE 7]>
+<link href="/css/ie7.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<![endif]-->
+<!--[if if IE 8]>
+<link href="/css/ie8.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<![endif]-->
+<link href="/theme/nde3_dou_286/white/files/css/skins/sky_light/common.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<link href="/theme/nde3_dou_286/white/files/css/skins/sky_light/skin.css?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+" rel="stylesheet">
+<script src="/js/vendor/jquery-1.8.1.min.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+    <script type="text/javascript">
+                var ouType = 'dou';
+        var pageLink = '/';
+    </script>
+
+    <!-- css -->
+    <style type="text/css">
+        body {background: /css/skins/default/textures/bg1.png repeat scroll #FFFFFF;}
+        .tabs .pagetitle { font-family: Georgia; }
+    </style>
+
+</head>
+
+<body class="edumsko  eip-view_mode">
+
+
+
+
+
+<div id="eyes">
+		<div class="sticker">
+			<a href="#" title="Версия для слабовидящих" id="eyes-button"><i class="fa fa-eye"></i></a>
+		</div>
+	</div>
+
+<!-- SPECIAL VERSION -->
+<div id="spsettings" style="display:none;">
+  <div class="content">
+        <div class="setbox fontsizes">
+          <div class="setname">Размер шрифта:</div>
+          <div id="sfont" class="setbtn sfont active"><span class="sfontsize">А</span></div>
+          <div id="mfont" class="setbtn mfont"><span class="mfontsize">Б</span></div>
+          <div id="lfont" class="setbtn lfont"><span class="lfontsize">В</span></div>
+        </div>
+
+        <div class="setbox colorstyle">
+          <div class="setname">Цвет сайта:</div>
+          <div id="wstyle" class="setbtn wstyle active">
+            <div id="wsqr" class="sqr">Ж</div>
+          </div>
+          <div id="bstyle" class="setbtn bstyle">
+            <div id="bsqr" class="sqr">Ж</div>
+          </div>
+          <div id="cstyle" class="setbtn cstyle">
+            <div id="csqr" class="sqr">Ж</div>
+          </div>
+        </div>
+
+        <div class="setbox images">
+          <div class="setname">Изображения:</div>
+          <div id="imgstyle" class="setbtn imgstyle">
+            <div class="switch">
+              <input type="checkbox" checked>
+              <label></label>
+            </div>
+          </div><!-- imgstyle -->
+        </div><!-- setbox -->
+
+        <div id="generalsite" class="setbox generalsite">
+          <div class="setbtn generalsite"><a href="#">Обычная версия</a></div>
+        </div>
+
+  </div><!-- content -->
+</div><!-- spsettings -->
+
+<img class="back" id="siteBgImg" src="/uploads/3000/2281/design/backgrounds/osen.jpg">
+
+<div id="all">
+<div id="landscape">
+
+<!-- mainheader -->
+<div id="mainheader">
+<div class="wrapper">
+
+<a class="educom" target="_blank" href="http://www.admhimki.ru/">администрация городского округа химки московской области</a>
+
+<a href="http://himki-edu.ru/" target="_blank">Управление по образованию Администрации городского округа Химки</a>
+
+<div>Учредитель образовательной организации: :Администрация городского округа Химки Московской области, представленная Управлением по образованию</div>
+
+</div>
+</div>
+<!-- //mainheader -->
+
+<div class="topshadow"></div>
+
+<!-- header -->
+<div class="" id="header">
+<div class="wrapper">
+<div class="fourblocks">
+
+<!-- l_block -->
+<div class="l_block">
+<div class="singleblock lbimg">
+<div class="header_pic fotoframe">
+
+
+  
+    <img src="/uploads/3000/2281/generalimage/.thumbs/200x150/sdc11414.jpg" width="200" height="150" alt="" crop>
+  
+
+</div></div></div>
+<!-- //l_block -->
+
+<!-- twoblocks -->
+<div class="twoblocks">
+<p class="meta">
+муниципальное бюджетное дошкольное образовательное учреждение</p>
+<h1>
+<a title="На Главную страницу" href="/">Детский сад комбинированного вида № 4</a></h1>
+<div class="founded">Год основания
+1962</div>
+<div class="languages">языки образования: <span>
+русский</span>
+</div>
+<div class="adress">
+
+141420, Московская область, Химки, Сходня, Чапаева, д. 24,<br>E-mail:&nbsp;petushok_4@mail.ru,&nbsp;Тел:&nbsp;8 495 574 25 79; 8 495 574 00 76
+</div>
+
+</div>
+<!-- //twoblocks -->
+
+<div class="singleblock">
+      <div class="portal">
+        <a class="fa-icon-left " href="/portal"  target="_blank"" title="Информационный портал образовательной организации">
+          <span>Информационный портал образовательной организации</span>
+        </a>
+      </div>
+      <div class="stat">
+        <a class="fa-icon-left" href="/about/comformtoarticle29" title="Сведения об образовательной организации"><span>Сведения об образовательной организации</span></a>
+      </div>
+</div>
+
+<div class="fix"></div>
+
+</div></div></div>
+<!-- //header -->
+
+<div class="fix"></div>
+
+<div class="wrapper" id="menu">
+
+<div id="home">
+		<div class="sticker">
+			<a href="/" title="На главную страницу сайта"><i class="fa fa-home"></i></a>
+		</div>
+	</div>
+
+<div class="menu">
+<ul class="sf-menu">
+    <!--li class="p1"><a href="/">Главная</a-->
+          <li class="p2"><a href="/about">О нас</a>
+          <ul>
+        <li class="firstlink"><a href="/about">О нас</a></li>
+                                <li class="p1"><a href="/about/reviews">Отзывы и предложения</a></li>
+                                            <li class="p3"><a href="/about/news">Новости</a></li>
+                                <li class="p4"><a href="/about/history">Летопись</a></li>
+                                            <li class="p6"><a href="/about/structure">Структура и органы управления образовательной организацией</a></li>
+                                <li class="p7"><a href="/about/indicators">Достижения</a></li>
+                                <li class="p8"><a href="/about/council">Общественные органы управления</a></li>
+                                <li class="p9"><a href="/about/public_report">Публичный отчет</a></li>
+                                <li class="p10"><a href="/about/tour">Фотогалерея</a></li>
+                          </ul>
+      </li>
+          <li class="p3"><a href="/activity">Деятельность</a>
+          <ul>
+        <li class="firstlink"><a href="/activity">Деятельность</a></li>
+                                <li class="p1"><a href="/activity/fgos">ФГОС</a></li>
+                                <li class="p2"><a href="/activity/educational_program">Образовательная программа</a></li>
+                                <li class="p3"><a href="/activity/preschool_groups">Группы дошкольного образования</a></li>
+                                <li class="p4"><a href="/activity/program_development">Программа развития</a></li>
+                                <li class="p5"><a href="/activity/self_examination">Самообследование</a></li>
+              </ul>
+      </li>
+          <li class="p4"><a href="/collective">Коллектив</a>
+          <ul>
+        <li class="firstlink"><a href="/collective">Коллектив</a></li>
+                                <li class="p1"><a href="/collective/pedagogical_collective">Работники образовательной организации</a></li>
+                                <li class="p2"><a href="/collective/trade_union_organization1">Профсоюзная организация</a></li>
+                                <li class="p3"><a href="/collective/profstandards">Профессиональные стандарты</a></li>
+              </ul>
+      </li>
+          <li class="p5"><a href="/conditions">Условия</a>
+          <ul>
+        <li class="firstlink"><a href="/conditions">Условия</a></li>
+                                <li class="p1"><a href="/conditions/medicine">Охрана здоровья</a></li>
+                                <li class="p2"><a href="/conditions/daily">Режим работы</a></li>
+                                <li class="p3"><a href="/conditions/food">Питание</a></li>
+                                <li class="p4"><a href="/conditions/safety">Безопасность</a></li>
+                                <li class="p5"><a href="/conditions/logistics">Материально-технический ресурс</a></li>
+              </ul>
+      </li>
+          <li class="p6"><a href="/finance">Финансирование</a>
+          <ul>
+        <li class="firstlink"><a href="/finance">Финансирование</a></li>
+                                <li class="p1"><a href="/finance/budget">Бюджетное финансирование</a></li>
+                                <li class="p2"><a href="/finance/paid_services">Платные услуги</a></li>
+                                <li class="p3"><a href="/finance/nonbudget_source">Внебюджетные ресурсы</a></li>
+                                <li class="p4"><a href="/finance/payment">Платежные реквизиты</a></li>
+              </ul>
+      </li>
+          <li class="p7"><a href="/documents">Документы</a>
+          <ul>
+        <li class="firstlink"><a href="/documents">Документы</a></li>
+                                <li class="p1"><a href="/documents/right_documents">Правоустанавливающие документы</a></li>
+                                <li class="p2"><a href="/documents/other_documents">Иные документы</a></li>
+                                <li class="p3"><a href="/documents/result_control">Результаты проверок</a></li>
+              </ul>
+      </li>
+          <li class="p8"><a href="/electronic_services">Е-сервисы</a>
+          <ul>
+        <li class="firstlink"><a href="/electronic_services">Е-сервисы</a></li>
+                                <li class="p1"><a href="/electronic_services/electronnnie_uslugi">Электронные муниципальные услуги в сфере образования</a></li>
+                                <li class="p2"><a href="/electronic_services/information_systems">Информационные системы</a></li>
+                                <li class="p3"><a href="/electronic_services/document_forms">Формы документов</a></li>
+                                <li class="p4"><a href="/electronic_services/links">Полезные ссылки</a></li>
+              </ul>
+      </li>
+            <li class="p10"><a href="/about/contacts">Контакты</a>
+    </li>
+    </ul>
+</div>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+		$('ul.sf-menu').supersubs({
+            minWidth:    10,   // minimum width of sub-menus in em units
+            maxWidth:    30,   // maximum width of sub-menus in em units
+            extraWidth:  1     // extra width can ensure lines don't sometimes turn over
+                               // due to slight rounding differences and font-family
+        }).superfish({
+			delay:       500,                            // от 500 до 800
+			animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation
+			speed:       'normal',                          // faster animation speed
+			autoArrows:  false,                           // disable generation of arrow mark-up
+			dropShadows: false,                            // disable drop shadows
+			pathClass:  'current'
+		});
+
+    });
+
+</script>
+
+<div class="fix"></div>
+</div>
+
+<div class="fix"></div>
+
+<!-- content -->
+<div id="content" class="depth0">
+<div class="wrapper">
+
+<div class="leftcol" id="contentpage">
+
+
+        <div class="fourblocks">
+        <div class="singleblock lbimg">
+            <div class="fotoframe">
+                <img src="/uploads/3000/2281/images/.thumbs/200x0/kovaleva_e_m_5_200_auto_5_80.jpg" width="200" alt="">            </div>
+            <p class="bossname mizer">
+
+                Заведующий                <br>
+
+                Ковалева Елена Михайловна            </p>
+        </div>
+        <div class="twoblocks">
+            <div class="bosswords">
+                <p style="text-align: center;"><strong>Уважаемые гости!</strong></p>
+<p style="text-align: left;">Мы рады приветствовать Вас на сайте нашего детского сада № 4&nbsp;</p>
+<p style="text-align: justify;">Наш сайт в первую очередь адресован тем, кто заинтересован в гармоничном и всестороннем развитии своего ребенка, кто готов поделиться опытом и рассказать о трудностях воспитания и обучения дошкольника, кто желает сотрудничать с квалифицированными специалистами.</p>
+<p><strong>На нашем сайте Вы можете:</strong></p>
+<ul>
+<li style="text-align: justify;">Узнать последние новости нашего детского сада;</li>
+<li style="text-align: left;">Найти информацию о детском садике и реализуемых педагогическим коллективом программах воспитания и обучения детей дошкольного возраста;</li>
+<li style="text-align: left;">Прочитать советы специалистов детского сада;</li>
+<li style="text-align: justify;">Посетить нашу фотогалерею.</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>            </div>
+                        <p class="readmore"><a href="/head_reference"><span>»</span>Читать далее</a></p>
+                    </div>
+        <div class="fix">&nbsp;</div>
+    </div>
+    <div class="fix"></div>
+    <h1>Новости</h1>
+
+
+<div class="panes newsonmainpage two-column" style="margin-top: 20px;" id="lastnews">
+
+<div class="news">
+
+
+<div class="item">
+
+    <div class="date x-editable"
+            data-type="datetime"
+            data-pk="517937"
+            data-template="D MMM YYYY  HH:mm"
+            data-url="/api/edit/News/created_date">25 октября 2016 г.        </div>
+
+    <h3>
+        
+
+        <a href="/about/news/volshebnica_osen">Волшебница осень!</a>    </h3>
+
+    <div class="fix"> </div>
+                              <div class="thumb">
+                <img src="/uploads/3000/2281/section/211429/.thumbs/120x0/6.jpg" width="120" alt="">              </div>
+                        
+    <div class="anons">
+
+    <p>25 октября в строении 2 прошли осенние утренники "Волшебница осень"</p>
+        <span class="read"><a href="/about/news/volshebnica_osen" title="Полный текст">Читать&nbsp;далее</a>...</span>
+    
+    </div>
+
+    <div class="fix"> </div>
+
+    
+</div>
+
+
+
+<div class="item">
+
+    <div class="date x-editable"
+            data-type="datetime"
+            data-pk="517154"
+            data-template="D MMM YYYY  HH:mm"
+            data-url="/api/edit/News/created_date">24 октября 2016 г.        </div>
+
+    <h3>
+        
+
+        <a href="/about/news/postanovlenie_administracii_gorodskogo_okruga_himki_moskovskoj_oblasti_ot_28_09_2016_1004_o_vnesenii_izmenenij_v_postanovlenie_a"></a>    </h3>
+
+    <div class="fix"> </div>
+                              <div class="thumb">
+                <img src="/uploads/3000/2281/section/211429/.thumbs/120x0/2a9de6f2a42d.jpg" width="120" alt="">              </div>
+                        
+    <div class="anons">
+
+    <p style="text-align: center;">&nbsp;<strong>Уважаемые родители! Доводим до Вас информацию о том, что на основании&nbsp;</strong> &nbsp; &nbsp; &nbsp;ПОСТАНОВЛЕНИЯ АДМИНИСТРАЦИИ ГОРОДСКОГО ОКРУГА ХИМКИ МОСКОВСКОЙ ОБЛАСТИ ОТ 28.09.2016 № 1004 О ВНЕСЕНИИ ИЗМЕНЕНИЙ В ПОСТАНОВЛЕНИЕ АДМИНИСТРАЦИИ ГОРОДСКОГО ОКРУГА ХИМКИ МОСКОВСКОЙ ОБЛАСТИ ОТ 06.08.2015 № 832 &laquo;ОБ УТВЕРЖДЕНИИ МЕТОДИКИ РАСЧЀТА И УСТАНОВЛЕНИИ ПЛАТЫ, ВЗИМАЕМОЙ С РОДИТЕЛЕЙ (ЗАКОННЫХ ПРЕДСТАВИТЕЛЕЙ) ЗА ПРИСМОТР И УХОД ЗА ДЕТЬМИ В МУНИЦИПАЛЬНЫХ ОБРАЗОВАТЕЛЬНЫХ УЧРЕЖДЕНИЯХ ГОРОДСКОГО ОКРУГА ХИМКИ МОСКОВСКОЙ ОБЛАСТИ, РЕАЛИЗУЮЩИХ ОСНОВНУЮ ПРОГРАММУ ДОШКОЛЬНОГО ОБРАЗОВАНИЯ&raquo;</p>
+        <span class="read"><a href="/about/news/postanovlenie_administracii_gorodskogo_okruga_himki_moskovskoj_oblasti_ot_28_09_2016_1004_o_vnesenii_izmenenij_v_postanovlenie_a" title="Полный текст">Читать&nbsp;далее</a>...</span>
+    
+    </div>
+
+    <div class="fix"> </div>
+
+    
+</div>
+
+<div class="fix">&nbsp;</div>
+
+
+<div class="item">
+
+    <div class="date x-editable"
+            data-type="datetime"
+            data-pk="510709"
+            data-template="D MMM YYYY  HH:mm"
+            data-url="/api/edit/News/created_date">10 октября 2016 г.        </div>
+
+    <h3>
+        
+
+        <a href="/about/news/uvazhaemye_roditeli_zdes__vy_mozhete_posmotret__kontakty_dlya_svyazi_s_nachal_nikom_upravleniya_po_obrazovaniyu_administracii_go"></a>    </h3>
+
+    <div class="fix"> </div>
+                              <div class="thumb">
+                <img src="/uploads/3000/2281/section/211429/.thumbs/120x0/8DouJry0_400x400.jpg" width="120" alt="">              </div>
+                        
+    <div class="anons">
+
+    <p>Уважаемые родители! Здесь Вы можете посмотреть контакты для связи с Начальником Управления по образованию Администрации городского округа Химки</p>
+        <span class="read"><a href="/about/news/uvazhaemye_roditeli_zdes__vy_mozhete_posmotret__kontakty_dlya_svyazi_s_nachal_nikom_upravleniya_po_obrazovaniyu_administracii_go" title="Полный текст">Читать&nbsp;далее</a>...</span>
+    
+    </div>
+
+    <div class="fix"> </div>
+
+    
+</div>
+
+
+
+<div class="item">
+
+    <div class="date x-editable"
+            data-type="datetime"
+            data-pk="502887"
+            data-template="D MMM YYYY  HH:mm"
+            data-url="/api/edit/News/created_date">10 октября 2016 г.        </div>
+
+    <h3>
+        
+
+        <a href="/about/news/zawita_personal_nyh_dannyh">Защита персональных данных</a>    </h3>
+
+    <div class="fix"> </div>
+                              <div class="thumb">
+                <img src="/uploads/3000/2281/section/211429/.thumbs/120x0/zashchita_personalnykh_dannykh_fiz.jpg" width="120" alt="">              </div>
+                        
+    <div class="anons">
+
+    
+        <span class="read"><a href="/about/news/zawita_personal_nyh_dannyh" title="Полный текст">Читать&nbsp;далее</a>...</span>
+    
+    </div>
+
+    <div class="fix"> </div>
+
+    
+</div>
+
+<div class="fix">&nbsp;</div>
+
+
+<div class="item">
+
+    <div class="date x-editable"
+            data-type="datetime"
+            data-pk="504287"
+            data-template="D MMM YYYY  HH:mm"
+            data-url="/api/edit/News/created_date">10 октября 2016 г.        </div>
+
+    <h3>
+        
+
+        <a href="/about/news/vystavka">Выставка</a>    </h3>
+
+    <div class="fix"> </div>
+                              <div class="thumb">
+                <img src="/uploads/3000/2281/section/211429/.thumbs/120x0/DSC00937.JPG" width="120" alt="">              </div>
+                        
+    <div class="anons">
+
+    <p>В детском саду проходит выставка детского творчества "Огородное чудо"</p>
+        <span class="read"><a href="/about/news/vystavka" title="Полный текст">Читать&nbsp;далее</a>...</span>
+    
+    </div>
+
+    <div class="fix"> </div>
+
+    
+</div>
+
+
+
+<div class="item">
+
+    <div class="date x-editable"
+            data-type="datetime"
+            data-pk="497080"
+            data-template="D MMM YYYY  HH:mm"
+            data-url="/api/edit/News/created_date">09 октября 2016 г.        </div>
+
+    <h3>
+        
+
+            </h3>
+
+    <div class="fix"> </div>
+                              <div class="thumb">
+                <img src="/uploads/3000/2281/section/211429/.thumbs/120x0/3958f1d368339cf0851678a25feeec9f.jpg" width="120" alt="">              </div>
+                        
+    <div class="anons">
+
+    <p style="text-align: center;"><strong>Уважаемые родители!</strong></p>
+<p>Министерством государственного управления, информационных технологий и связи Московской области (Министерство) проводятся мероприятия по обеспечению функционирования единой системы приема и обработки телефонных вызовов и электронных сообщений по вопросам деятельности Центральных исполнительных органов государственной власти и органов местного самоуправления Московской области, а также находящихся в их ведении организаций и учреждений, в том числе по вопросам обслуживания населения и качества оказываемых услуг (Единая система).</p>
+<p>В ходе проводимых мероприятий организован контактный центр Губернатора Московской области (Контактный центр), обслуживающий заявителей по единому телефонному номеру <span class="wmi-callto">8-800-550-50-30</span>.</p>
+<p><strong>&nbsp; &nbsp; &nbsp; &nbsp;Единый телефонный номер колл-центра &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Губернатора МО <span class="wmi-callto">8-800-550-50-30</span></strong></p>
+<p>&nbsp;</p>
+    
+    </div>
+
+    <div class="fix"> </div>
+
+    
+</div>
+
+<div class="fix">&nbsp;</div>
+
+
+<div class="item">
+
+    <div class="date x-editable"
+            data-type="datetime"
+            data-pk="503641"
+            data-template="D MMM YYYY  HH:mm"
+            data-url="/api/edit/News/created_date">04 октября 2016 г.        </div>
+
+    <h3>
+        
+
+        <a href="/about/news/ronkurs-vystavka_sredi_doshkol_nyh_obrazovatel_nyh_uchrezhdenij_moj_dobryj_drug-robot">Муниципальный конкурс-выставка "Мой добрый друг - робот!"</a>    </h3>
+
+    <div class="fix"> </div>
+                              <div class="thumb">
+                <img src="/uploads/3000/2281/section/211429/.thumbs/120x0/DSC07328.JPG" width="120" alt="">              </div>
+                        
+    <div class="anons">
+
+    <p>&nbsp;В г.о. Химки с 31августа по 14 сентября 2016 года &nbsp;состоялся Муниципальный творческий конкурс "Мой добрый друг робот". &nbsp;Победителем в номинации "Лучшая композиция" стала наша воспитанница &nbsp;Лиза К. с поделкой "Озорные музыканты"</p>
+        <span class="read"><a href="/about/news/ronkurs-vystavka_sredi_doshkol_nyh_obrazovatel_nyh_uchrezhdenij_moj_dobryj_drug-robot" title="Полный текст">Читать&nbsp;далее</a>...</span>
+    
+    </div>
+
+    <div class="fix"> </div>
+
+    
+</div>
+
+
+
+<div class="item">
+
+    <div class="date x-editable"
+            data-type="datetime"
+            data-pk="490817"
+            data-template="D MMM YYYY  HH:mm"
+            data-url="/api/edit/News/created_date">05 сентября 2016 г.        </div>
+
+    <h3>
+        
+
+        <a href="/about/news/innovacionnyj_proekt_sozdanie_edinogo_informacionnogo_polya_dostupnost__i_partnerstvo_roditel__detskij_sad">Инновационный проект «Создание единого информационного поля. Доступность и партнерство.
+Родитель – детский сад»</a>    </h3>
+
+    <div class="fix"> </div>
+                              <div class="thumb">
+                <img src="/uploads/3000/2281/section/211429/.thumbs/120x0/Sovremennye-marketing-i-biznes.jpeg" width="120" alt="">              </div>
+                        
+    <div class="anons">
+
+    
+        <span class="read"><a href="/about/news/innovacionnyj_proekt_sozdanie_edinogo_informacionnogo_polya_dostupnost__i_partnerstvo_roditel__detskij_sad" title="Полный текст">Читать&nbsp;далее</a>...</span>
+    
+    </div>
+
+    <div class="fix"> </div>
+
+    
+</div>
+
+<div class="fix">&nbsp;</div>
+
+</div>
+</div>
+
+<div class="fix"></div>
+<p class="readmore"><a href="/about/news"><span>»</span>Все новости</a></p>
+<div class="fix"></div>
+</div>
+
+<!--rightcol -->
+<div class="rightcol">
+    
+
+<!--div class="service stat">
+	<a href="/about/comformtoarticle29" class="fa-icon-left" title="Сведения об образовательной организации">Сведения об образовательной организации</a>
+</div-->
+
+
+
+<ul class="userlinks service">
+
+    <li><a class="comment" title="Вопросы руководителю" href="/about/faq"><span>Вопросы руководителю</span></a></li>
+
+            <li><a class="pen" title="Отзывы и предложения" href="/about/reviews"><span>Отзывы и предложения</span></a></li>
+            <li >
+        <a class="folder" href="http://ds4himki.edumsko.ru/documents/other_documents"><span>Инновационный проект
+Создание единого информационного поля. Доступность и партнерство.
+Родитель – детский сад»</span></a>    </li>
+        <li >
+        <a class="book" href="http://www.un.org/ru/documents/decl_conv/conventions/childcon"><span>Конвенция о правах ребенка</span></a>    </li>
+        <li >
+        <a class="card2" href="https://twitter.com/UpravlenieHimki"><span>Твиттер Управления по образованию</span></a>    </li>
+        <li >
+        <a class="portfolio" href="http://himki-edu.ru/"><span>Портал Управления по образованию Администрации городского округа Химки Московской области</span></a>    </li>
+        <li class="last">
+        <a class="presentation" href="http://deti.gibdd.ru/"><span>Детям о ПДД</span></a>    </li>
+    </ul>
+
+<div class="service enroll"><a href="/about/welcome/">Набор в образовательную организацию и условия приема</a></div>
+
+
+    <div class="service">
+        <div class="input-width">
+          <div class="set-width">
+            <form action="/dispatches/subscribe_do" enctype="multipart/form-data" name="sbs_frm" method="post">
+                  <input type="text" class="input text meta small" id="subscribe" name="sbs_mail" onfocus="javascript: if(this.value == 'E-mail') this.value = '';" onblur="javascript: if(this.value == '') this.value = 'E-mail';" size="14" value="E-mail" />
+            <button type="submit" class="btnsubmit"><i class="fa fa-at"></i></button>
+            </form>
+					</div>
+				</div>
+
+    <span>Подписка на новости сайта</span>
+    <p>Подписчиков - 28</p>
+
+    </div>
+
+
+
+    <div class="banner">
+        <a href="/electronic_services/electronnnie_uslugi" alt="" target=""><img src="http://main.edsites.ru/images/cms/banners/1/kartinka_dlya_bannera_na_glavnuyu.jpg" width="218" alt=""></a>    </div>
+    <div class="banner">
+        <a href="http://xn--80aalcbc2bocdadlpp9nfk.xn--d1acj3b/multimedia/videorolik_o_zawite_detskih_personalnyh_dannyh1/" alt="" target="_blank"><img src="http://main.edsites.ru/images/cms/banners/1/2/personaldata_1.gif" width="218" alt=""></a>    </div>
+    <div class="banner" data-plugin="banner-show" data-id="13245">
+
+                    <a href="/banner/go?url=http%3A%2F%2Fscienceport.ru%2F" target="_blank"><img src="/uploads/3000/2281/banner/pic_image/scienseport.png" width="220" alt=""></a>            </div>
+    <div class="banner" data-plugin="banner-show" data-id="13280">
+
+                    <a href="/banner/go?url=https%3A%2F%2Ftwitter.com%2FDetckiysad4" target="_blank"><img src="/uploads/3000/2281/banner/pic_image/twitter_wallpaper_1920x10.png" width="220" alt=""></a>            </div>
+    <div class="banner" data-plugin="banner-show" data-id="13299">
+
+                    <a href="/banner/go?url=http%3A%2F%2Fwww.spas-extreme.ru%2F" target="_blank"><img src="/uploads/3000/2281/banner/pic_image/54bc540b8eb296af355c12da4a917e7d.jpg" width="220" alt=""></a>            </div>
+    <div class="banner" data-plugin="banner-show" data-id="13362">
+
+                    <a href="/banner/go?url=http%3A%2F%2Fds4himki.edumsko.ru%2Fconditions%2Fsafety%2Farticles%2Fbeshenstvo_pravila_bezopasnosti_dlya_detej" target="_blank"><img src="/uploads/3000/2281/banner/pic_image/7ac3ab0296c226cc0ba3e525b97bbb9b.jpg" width="220" alt=""></a>            </div>
+</div>
+<!-- //rightcol -->
+
+<div class="fix"></div>
+
+</div>
+</div>
+<!-- //content -->
+
+<div class="topshadow">&nbsp;</div>
+
+<!-- footer -->
+<div class="footer">
+
+<div class="wrapper footercontent">
+
+<!-- fourblocks -->
+<div class="fourblocks">
+
+<div class="singleblock adminbar">
+
+
+<p class="meta">Вход для зарегистрированных пользователей</p>
+<div>
+<a class="fa-icon sign-in authorlink" href="#"><span>Вход</span></a>
+</div>
+<div style="display: none;" class="service"><form action="/users/login_do" method="post">
+<input type="hidden" name="from_page" value=""><label>E-mail:</label><input type="text" value="" name="email" placeholder="E-mail" class="text"><label>Пароль:</label><input type="password" value="" name="password" placeholder="******" class="text"><input type="submit" class="submitbutton" value="Войти"><a href="/users/forget/" class="small">Забыли пароль?</a>
+</form></div>
+
+
+</div>
+
+
+<div class="singleblock">
+  <a href="/content/sitemap/" class="fa-icon sitemap"><span>Карта сайта</span></a>
+  <a href="/error_report/?referrer=%2F" class="fa-icon exclamation"><span>Заметили ошибку?</span></a>
+  <a href="http://help.edumsko.ru/" class="fa-icon support" title="Сайт технической поддержки"  target="_blank"><span>Техническая поддержка</span></a>
+</div>
+
+<div class="twoblocks">
+  <div class="service">
+    <form action="/search/search_do/" method="get" class="searchform">
+      <div class="input-width">
+        <div class="set-width">
+            <form class="searchform" method="get" action="/search/search_do">
+            <input type="text" onfocus="javascript: if(this.value == 'Поиск') this.value = '';" onblur="javascript: if(this.value == '') this.value = 'Поиск';" size="14" value="Поиск" name="search_string" class="text">
+            <!--<input type="submit" class="submit submit_search btnsubmit" value="Найти">-->
+            <button type="submit" class="btnsubmit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="fix"></div>
+</div>
+<!-- //fourblocks -->
+</div>
+
+<div class="wrapper links">
+
+<div id="linkscloud" class="masonry js-masonry" data-masonry-options='{ "columnWidth": ".category", "itemSelector": ".category" }'>
+
+<div class="category masonry-brick">
+<a class="firstlink" href="/about">О нас</a>
+
+    <a href="/about/reviews/">Отзывы и предложения</a>
+      <a href="/about/news/">Новости</a>
+    <a href="/about/history/">Летопись</a>
+      <a href="/about/structure/">Структура и органы управления образовательной организацией</a>
+    <a href="/about/indicators/">Достижения</a>
+    <a href="/about/council/">Общественные органы управления</a>
+    <a href="/about/public_report/">Публичный отчет</a>
+    <a href="/about/tour/">Фотогалерея</a>
+  
+</div>
+
+<div class="category masonry-brick">
+<a class="firstlink" href="/activity">Деятельность</a>
+
+    <a href="/activity/fgos/">ФГОС</a>
+    <a href="/activity/educational_program/">Образовательная программа</a>
+    <a href="/activity/preschool_groups/">Группы дошкольного образования</a>
+    <a href="/activity/program_development/">Программа развития</a>
+    <a href="/activity/self_examination/">Самообследование</a>
+
+</div>
+
+<div class="category masonry-brick">
+<a class="firstlink" href="/collective">Коллектив</a>
+
+    <a href="/collective/pedagogical_collective/">Работники образовательной организации</a>
+    <a href="/collective/trade_union_organization1/">Профсоюзная организация</a>
+    <a href="/collective/profstandards/">Профессиональные стандарты</a>
+
+</div>
+
+<div class="category masonry-brick">
+<a class="firstlink" href="/conditions">Условия</a>
+
+    <a href="/conditions/medicine/">Охрана здоровья</a>
+    <a href="/conditions/daily/">Режим работы</a>
+    <a href="/conditions/food/">Питание</a>
+    <a href="/conditions/safety/">Безопасность</a>
+    <a href="/conditions/logistics/">Материально-технический ресурс</a>
+
+</div>
+
+<div class="category masonry-brick">
+<a class="firstlink" href="/finance">Финансирование</a>
+
+    <a href="/finance/budget/">Бюджетное финансирование</a>
+    <a href="/finance/paid_services/">Платные услуги</a>
+    <a href="/finance/nonbudget_source/">Внебюджетные ресурсы</a>
+    <a href="/finance/payment/">Платежные реквизиты</a>
+
+</div>
+
+<div class="category masonry-brick">
+<a class="firstlink" href="/documents">Документы</a>
+
+    <a href="/documents/right_documents/">Правоустанавливающие документы</a>
+    <a href="/documents/other_documents/">Иные документы</a>
+    <a href="/documents/result_control/">Результаты проверок</a>
+
+</div>
+
+<div class="category masonry-brick">
+<a class="firstlink" href="/electronic_services">Е-сервисы</a>
+
+    <a href="/electronic_services/electronnnie_uslugi/">Электронные муниципальные услуги в сфере образования</a>
+    <a href="/electronic_services/information_systems/">Информационные системы</a>
+    <a href="/electronic_services/document_forms/">Формы документов</a>
+    <a href="/electronic_services/links/">Полезные ссылки</a>
+
+</div>
+
+<div class="category masonry-brick">
+<a class="firstlink" href="/about/contacts">Контакты</a>
+
+
+</div>
+
+
+</div>
+
+<div class="clear"></div>
+</div>
+
+<!-- COPYRIGHTS & COUNTERS
+==========================================================-->
+
+	<div id="copyrights">
+		<div class="fourblocks">
+			<div class="twoblocks">
+
+        <div>&copy; МБДОУ Детский сад  комбинированного вида № 4 г.о. Химки Московской области</div>
+
+                Персональные данные, размещенные на сайте, размещены с согласия субъекта персональных данных.        
+       
+				<div>Копирование материалов сайта разрешено только с письменного согласия администрации сайта.</div>
+
+			</div><!-- twoblocks -->
+
+			<div class="twoblocks">
+				<div class="floatright logo right">
+					<a href="http://sinergi-info.ru/" target="_blank" title="Синергия-Инфо"><img src="/images/logosinergi.png" alt="" /></a>
+					<span>Разработка и поддержка сайта</span>
+				</div>
+				<div class="floatright logoedunet center">
+          <a href="http://edumsko.ru/" title="Портал официальных сайтов образовательных организаций Московской области">
+            <img src="/templates/portal/images/logoEDUnet.png" alt="изображение">
+            <div class="logotext">EDUMSKO</div>
+          </a>
+          <span>Сеть сайтов</span>
+				</div>
+				<div class="floatleft metrica">
+					<div class="metrica col-sm-3 hidden-xs hidden-print">
+<!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=24110860&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/24110860/3_1_FFFFFFFF_EFEFEFFF_0_pagevi…" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:24110860,lang:'ru'});return false}catch(e){}" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter24110860 = new Ya.Metrika({ id:24110860, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/24110860" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+</div>
+				</div>
+			</div><!-- fourblocks -->
+		<div class="fix"></div>
+	</div><!-- copyrights -->
+
+</div>
+</div>
+</div>
+<script src="/assets/bfdc2a02/yii.js"></script>
+<script src="/js/vendor/jquery-ui-1.9.2/jquery-ui.min.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/moderator-design.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/main.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/tablesum.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/masonry.pkgd.min.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/hoverIntent.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/supersubs.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/superfish.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/mainwf.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/jquery.flexslider.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/jquery.maskedinput.min.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/faq.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/jquery.calendar-widget.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/showHierarchy.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/copyStudyPlan.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/lytebox/lytebox.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/theme/nde3_dou_286/white/files/js/nde/less-1.1.5.min.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/js/vendor/jquery.iframe-transport.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/js/vendor/jquery.iframe-transport.client.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/js/vendor/inputmask/jquery.inputmask.bundle.min.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/common/js/plugins.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/js/vendor/bootstrap/moment-with-locales.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/js/vendor/bootstrap/bootstrap-datepicker.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/js/vendor/jquery-ui/jquery.ui.datepicker-ru.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/js/vendor/jqueryui-editable/js/jqueryui-editable.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/js/eye/jquery.cookie.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/js/vendor/fancybox/jquery.fancybox.pack.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/js/reviews.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/js/jquery.scrollTo-min.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script src="/js/eye/spv.js?v=aca2dd1be90602018d93711ad6cf9bcf5fb70018
+"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+      $(".edit_meta_link").click(function(){
+        $(".metapanel").slideToggle("slow");
+        return false;
+      });
+});</script>
+<!--SCROLL to top
+================================================-->
+<div class="gototop"><i class="fa fa-2x fa-angle-double-up"></i></div>
+
+<script>
+$(window).scroll(function(){
+    if ($(this).scrollTop() > 1) {
+      $('.gototop').css({bottom:"25px"});
+      } else {
+        $('.gototop').css({bottom:"-100px"});
+      }
+    });
+    $('.gototop').click(function(){
+    $('html, body').animate({scrollTop: '0px'}, 1100);
+    return false;
+});
+</script>
+
+</body>
+</html>

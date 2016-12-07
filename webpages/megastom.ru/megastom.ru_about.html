@@ -1,0 +1,485 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        
+    <link type="image/png" href="/favicon.png" rel="icon">
+    <link type="image/png" href="/favicon.png" rel="shortcut icon">
+
+    <title>Мегастом - СЕТЬ КЛИНИК</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- CUSTOM THEME -->
+    <link rel="stylesheet" href="http://www.megastom.ru/htdocs/theme/megastom/font/font.css">
+    <link rel="stylesheet" href="http://www.megastom.ru/htdocs/theme/megastom/css/style.css">
+    <link rel="stylesheet" href="http://www.megastom.ru/htdocs/theme/megastom/css/custom2.css">
+    <link rel="stylesheet" href="http://www.megastom.ru/htdocs/theme/megastom/css/mobile.css">
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- SLICK carousel -->
+    <link rel="stylesheet" href="http://www.megastom.ru/htdocs/theme/megastom/plugins/slick/slick.css">
+    
+    <link rel="stylesheet" href="http://www.megastom.ru/htdocs/theme/megastom/plugins/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="http://www.megastom.ru/htdocs/theme/megastom/plugins/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    
+    <script src="/htdocs/lib/jquery.ajaxloader.js"></script>
+    <script src="/htdocs/lib/modal/customModal.js"></script>
+    <link rel="stylesheet" href="http://www.megastom.ru/htdocs/theme/megastom/css/modal.css">
+    
+    <script type="text/javascript" src="http://www.megastom.ru/htdocs/theme/megastom/plugins/slideMenu.js"></script>
+    
+    <!-- custom datetimepicker -->
+    <script src="/htdocs/lib/customDate.js"></script>
+    <script src="/htdocs/lib/pad.js"></script>
+    <script type="text/javascript" src="/htdocs/lib/datetimepicker/datetimepicker.js"></script>
+    <link rel="stylesheet" href="/htdocs/lib/datetimepicker/style.css">
+    
+    <script>
+    var cm = new customModal();    
+    $(document).ready(function() {
+        cm.initialize();
+        
+        $(".fancybox").fancybox();
+    });
+    </script>
+	
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15202958-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+	
+</head>
+
+<body>
+    <header id="header">
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-xs-12 col-ms-4 col-sm-12 col-md-3 col-lg-3"> -->
+        <div class="header-left">
+            <div id="logo">
+                <div style="margin:0; font-weight: bold; font-size:36pt;"><a href="/" title="Мегастом"><img src="http://www.megastom.ru/htdocs/theme/megastom/img/logo.png"><span>Мегастом</span></a></div>
+                <p>Сеть клиник</p>
+            </div>
+
+           <div class="search">
+                <form name="search" action="/search" method="GET">
+                    <div class="input-group stylish-input-group input-append">
+                        <input type="text" class="form-control" name="term"  placeholder="Введите слово для поиска" >
+                            <span class="input-group-addon">
+                                <button type="submit">
+                                    <span class="glyphicon glyphicon-search" onClick="search.submit()"></span>
+                                </button>
+                            </span>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        <!-- <div class="col-xs-12 col-ms-4 col-sm-12 col-md-5 col-lg-5 promo-block"> -->
+        <div class="header-center promo-block">
+
+            <!-- <h2 class="text-center banner">Баннер</h2> -->
+            <p><a href="http://megastom.ru/news/20.html"><img class="img-responsive content-image" style="margin: 10px;" src="http://www.megastom.ru/htdocs/uploads/promo/image_promo1467285150.gif?time=1467285150" alt="" /></a></p>            &nbsp;
+
+        </div>
+        <!-- <div class="col-xs-12 col-ms-4 col-sm-12 col-md-4 col-lg-4"> -->
+        <div class="header-right">
+
+            <div class="workdays clearfix">
+                <table>
+                    <tr>
+                        <td class="day-label">ПН-ПТ</td>
+                        <td><div class="workdays-time greenBorder">08:15</div></td>
+                        <td><div class="workdays-time greenBorder">21:15</div></td>
+                    </tr>
+                    <tr>
+                        <td class="day-label">СБ</td>
+                        <td><div class="workdays-time greenBorder">09:00</div></td>
+                        <td><div class="workdays-time greenBorder">18:45</div></td>
+                    </tr>
+                    <tr>
+                        <td class="day-label">ВС</td>
+                        <td colspan="2"><div class="workdays-time grayBorder">выходной</div></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="phone">
+                <p>+7<span>(495)</span>120-32-32</p>
+                <a href="#" class="order-call">Заказать обратный звонок</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+</header>
+
+<script>
+<!--//
+$(document).ready(function() {
+    $(".order-call").on("click", function(e) {
+    e.preventDefault();
+    cm.custom(".order-call-form");
+    return false;
+    });
+});
+//-->
+</script>
+
+<!-- CALL ORDER FORM (INVISIBLE) -->
+<div class="order-call-form" style="display: none;">
+    <div class="order-form-wrapper">
+        <form action="/order_call" id="order-call-form" method="POST">	
+        <p style="text-align:center; font-size:15px;">Поля помеченные (*) обязательны для заполнения.</p>
+        <p><input type="text" placeholder="* Как к Вам обращаться (ФИО)" id="name" name="name"></p>
+        <p><input type="text" placeholder="* Введите Ваш телефон" name="phone" id="phone"></p>
+        <p><textarea placeholder="Желаемое время звонка, Ваши пожелания" rows="8" name="comment" id="comment"></textarea></p>
+        <!-- <p><input type="text" placeholder="* Введите сумму 1 + 1 = " name="summa" id="summa"></p> -->
+        </form>
+        <p style="text-align: center;"><input type="submit" value="Заказать обратный звонок" id="submit" name="submit" class="btn btn-green" onclick="orderCall($(this));"></p>
+        
+    </div>
+</div>
+<!-- /CALL ORDER -->    
+    <!-- MAIN MENU SECTION 
+<div class="row">
+    <div class="container">
+        <div class="main-menu">
+                        <div class="main-menu-item"><a class="active" href="http://www.megastom.ru/about">О КОМПАНИИ</a></div>
+                        <div class="main-menu-item"><a  href="http://www.megastom.ru/contacts">КЛИНИКИ</a></div>
+                        <div class="main-menu-item"><a  href="http://www.megastom.ru/services">УСЛУГИ И ЦЕНЫ</a></div>
+                        <div class="main-menu-item"><a  href="http://www.megastom.ru/doctors">СПЕЦИАЛИСТЫ</a></div>
+                        <div class="main-menu-item"><a  href="http://www.megastom.ru/tech">НАШИ ТЕХНОЛОГИИ</a></div>
+                        <div class="main-menu-item"><a  href="http://www.megastom.ru/reviews">ОТЗЫВЫ</a></div>
+                        <div class="main-menu-item"><a  href="http://www.megastom.ru/patients">НАШИМ ПАЦИЕНТАМ</a></div>
+                    </div>
+    </div>
+</div>
+<!-- /MAIN MENU -->
+
+<div id="mainNav">
+
+    <div class="yellowline"></div>
+
+    <div class="container1">
+
+            <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="row">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--
+                    <a class="navbar-brand" href="#"><span class="mstomlogo">Мега<span>стом</span></span></a>
+                    -->
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <!--
+                        <li class="m1"><a href="index.php">О Компании</a></li>
+                        <li class="m2 active"><a href="catalog_lvl1.php">Клиники <span class="sr-only">(current)</span></a></li>
+                        <li class="m3"><a href="catalog_lvl2.php">Услуги и цены</a></li>
+                        <li class="m4"><a href="catalog_lvl3.php">Специалисты</a></li>
+                        <li class="m5"><a href="catalog_lvl4.php">Технологии</a></li>
+                        <li class="m6"><a href="index.php">Отзывы</a></li>
+                        <li class="m7"><a href="index.php">Пациентам</a></li>
+                        -->
+                                                                        <li class="m1 active"><a href="http://www.megastom.ru/about">О КОМПАНИИ</a></li>
+                                                <li class="m2 "><a href="http://www.megastom.ru/contacts">КЛИНИКИ</a></li>
+                                                <li class="m3 "><a href="http://www.megastom.ru/services">УСЛУГИ И ЦЕНЫ</a></li>
+                                                <li class="m4 "><a href="http://www.megastom.ru/doctors">СПЕЦИАЛИСТЫ</a></li>
+                                                <li class="m5 "><a href="http://www.megastom.ru/tech">НАШИ ТЕХНОЛОГИИ</a></li>
+                                                <li class="m6 "><a href="http://www.megastom.ru/reviews">ОТЗЫВЫ</a></li>
+                                                <li class="m7 "><a href="http://www.megastom.ru/patients">НАШИМ ПАЦИЕНТАМ</a></li>
+                                            </ul>
+
+                </div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+</div>    
+    <!--
+<div class="row">
+    <div class="container">
+            <h2>О компании</h2>
+    <div class="big-text">
+    <p style="text-align: center;">&nbsp;<strong><span style="color: #003366;"><span style="font-size: 14pt;">С <span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span> возможно все</span></span></strong></p>
+<p style="text-align: center;"><span style="color: #003366;"><span style="font-size: 14pt;"><strong><span style="color: #86c300;"><br />Мега</span><span style="color: #008edb;">стом</span></strong> &ndash; это первая частная стоматологическая клиника в России, где с момента открытия в 1992 году успешно проводятся операции дентальной имплантации любой сложности.</span></span></p>
+<p style="text-align: justify;"><span style="color: #003366;"><span style="font-size: 14pt;">Дентальные имплантаты, установленные нашим первым пациентам в <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong> более двадцати лет назад, и по сей день находятся под нашими профессиональными регулярными профилактическими осмотрами и являются гордостью, как для нас, так и для счастливых пациентов, забывших много лет назад о своих проблемах с зубами раз и навсегда!</span></span><br /> <br /><span style="color: #003366;"><span style="font-size: 14pt;">За долгое время успешной работы была наработана огромная врачебная практика, позволяющая гарантированно решать все известные (а иногда даже не известные!) науке заболевания зубов и десен. Не смотря на то, что <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong> изначально взялся за самое сложное в стоматологии - имплантацию, мы решаем и не менее сложные задачи - сохранение жизни Ваших зубов!</span></span><br /> <br /><span style="color: #003366;"><span style="font-size: 14pt;">Каждый из докторов-виртуозов стоматологии Мегастом за долгое время совместной сплоченной работы если еще не успел получить ученую степень, то опубликовал большое количество научных трудов, позволяющих регулярно проводить международные симпозиумы и мастер-классы раскрывая секреты зубоврачебного ремесла всем жаждущим, повышая тем самым уровень медицинского обслуживания в России.</span></span><br /> <br /><span style="color: #003366;"><span style="font-size: 14pt;">Оснащенность врачебных кабинетов <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong> ведущими немецкими и итальянскими производителями ни чем не отличается от первоклассных стоматологических кабинетов мирового уровня, разве, что наличием японского телевизора в потолке и хорошей акустической системой для просмотра и прослушивания пациентами во время лечения. Какой последний фильм Вы смотрели на приеме у стоматолога ?</span></span><br /> <br /><span style="color: #003366;"><span style="font-size: 14pt;"> Наличие собственной зуботехнической лаборатории с первых дней работы <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong> позволяет благодаря прямому взаимодействию зубного техника и доктора идеально достигать планируемый результат в кратчайшие сроки. Наша лаборатория и сейчас использует уникальные технологии производства доступные в России только в <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong>.</span></span><br /> <br /><span style="color: #003366;"><span style="font-size: 14pt;">За десятилетия были выработаны незыблемые законы обязательные к применению при оказании стоматологических услуг в <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong>. Один из них это максимальный уровень безопасности лечения для пациента: на каждом приеме используются новые одноразовые инструменты (упаковка и пломбы вскрываются при пациенте), а инструменты, подлежащие стерилизации проходят её в нашем же стерилизационном отделении по нашим высоким стандартам. Даже стоматологические установки после каждого приема проходят высокоуровневую дезинфекцию и обеззараживание.</span></span><br /> <br /><span style="color: #003366;"><span style="font-size: 14pt;">Среди клиентов <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong> всегда были публичные и известные люди от шоу-бизнеса до политики, благодаря которым мы выработали еще один из законов <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong> - к каждому нашему пациенту мы стараемся не просто найти индивидуальный подход, а относимся как к своим друзьям!</span></span></p>    </div>
+                </div>
+</div>
+
+-->
+
+<div class="innerpage">
+        <div class="container">
+        <div class="row">
+                        <div class="col-md-12">
+                <p style="text-align: center;">&nbsp;<strong><span style="color: #003366;"><span style="font-size: 14pt;">С <span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span> возможно все</span></span></strong></p>
+<p style="text-align: center;"><span style="color: #003366;"><span style="font-size: 14pt;"><strong><span style="color: #86c300;"><br />Мега</span><span style="color: #008edb;">стом</span></strong> &ndash; это первая частная стоматологическая клиника в России, где с момента открытия в 1992 году успешно проводятся операции дентальной имплантации любой сложности.</span></span></p>
+<p style="text-align: justify;"><span style="color: #003366;"><span style="font-size: 14pt;">Дентальные имплантаты, установленные нашим первым пациентам в <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong> более двадцати лет назад, и по сей день находятся под нашими профессиональными регулярными профилактическими осмотрами и являются гордостью, как для нас, так и для счастливых пациентов, забывших много лет назад о своих проблемах с зубами раз и навсегда!</span></span><br /> <br /><span style="color: #003366;"><span style="font-size: 14pt;">За долгое время успешной работы была наработана огромная врачебная практика, позволяющая гарантированно решать все известные (а иногда даже не известные!) науке заболевания зубов и десен. Не смотря на то, что <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong> изначально взялся за самое сложное в стоматологии - имплантацию, мы решаем и не менее сложные задачи - сохранение жизни Ваших зубов!</span></span><br /> <br /><span style="color: #003366;"><span style="font-size: 14pt;">Каждый из докторов-виртуозов стоматологии Мегастом за долгое время совместной сплоченной работы если еще не успел получить ученую степень, то опубликовал большое количество научных трудов, позволяющих регулярно проводить международные симпозиумы и мастер-классы раскрывая секреты зубоврачебного ремесла всем жаждущим, повышая тем самым уровень медицинского обслуживания в России.</span></span><br /> <br /><span style="color: #003366;"><span style="font-size: 14pt;">Оснащенность врачебных кабинетов <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong> ведущими немецкими и итальянскими производителями ни чем не отличается от первоклассных стоматологических кабинетов мирового уровня, разве, что наличием японского телевизора в потолке и хорошей акустической системой для просмотра и прослушивания пациентами во время лечения. Какой последний фильм Вы смотрели на приеме у стоматолога ?</span></span><br /> <br /><span style="color: #003366;"><span style="font-size: 14pt;"> Наличие собственной зуботехнической лаборатории с первых дней работы <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong> позволяет благодаря прямому взаимодействию зубного техника и доктора идеально достигать планируемый результат в кратчайшие сроки. Наша лаборатория и сейчас использует уникальные технологии производства доступные в России только в <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong>.</span></span><br /> <br /><span style="color: #003366;"><span style="font-size: 14pt;">За десятилетия были выработаны незыблемые законы обязательные к применению при оказании стоматологических услуг в <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong>. Один из них это максимальный уровень безопасности лечения для пациента: на каждом приеме используются новые одноразовые инструменты (упаковка и пломбы вскрываются при пациенте), а инструменты, подлежащие стерилизации проходят её в нашем же стерилизационном отделении по нашим высоким стандартам. Даже стоматологические установки после каждого приема проходят высокоуровневую дезинфекцию и обеззараживание.</span></span><br /> <br /><span style="color: #003366;"><span style="font-size: 14pt;">Среди клиентов <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong> всегда были публичные и известные люди от шоу-бизнеса до политики, благодаря которым мы выработали еще один из законов <strong><span style="color: #86c300;">Мега</span><span style="color: #008edb;">стом</span></strong> - к каждому нашему пациенту мы стараемся не просто найти индивидуальный подход, а относимся как к своим друзьям!</span></span></p>            </div>
+        </div>
+    </div>
+    </div>
+
+<section id="numbers">
+<div class="container">
+    <h3 class="special">Мегастом в цифрах</h3>
+
+    <div class="row">
+                <div class="col-xs-12 col-ms-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="num_num">25</div>
+            <div class="num_desc">успешных лет<br>в стоматологии</div>
+        </div>
+                <div class="col-xs-12 col-ms-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="num_num">30 тыс.</div>
+            <div class="num_desc">вживленных<br>имплантатов</div>
+        </div>
+                <div class="col-xs-12 col-ms-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="num_num">50 тыс.</div>
+            <div class="num_desc">сохраненных<br>зубов</div>
+        </div>
+            </div>
+</div>
+</section>    
+    <!-- MAIN MENU SECTION 
+<div class="row">
+    <div class="container">
+        <div class="main-menu">
+                        <div class="main-menu-item"><a class="active" href="http://www.megastom.ru/about">О КОМПАНИИ</a></div>
+                        <div class="main-menu-item"><a  href="http://www.megastom.ru/contacts">КЛИНИКИ</a></div>
+                        <div class="main-menu-item"><a  href="http://www.megastom.ru/services">УСЛУГИ И ЦЕНЫ</a></div>
+                        <div class="main-menu-item"><a  href="http://www.megastom.ru/doctors">СПЕЦИАЛИСТЫ</a></div>
+                        <div class="main-menu-item"><a  href="http://www.megastom.ru/tech">НАШИ ТЕХНОЛОГИИ</a></div>
+                        <div class="main-menu-item"><a  href="http://www.megastom.ru/reviews">ОТЗЫВЫ</a></div>
+                        <div class="main-menu-item"><a  href="http://www.megastom.ru/patients">НАШИМ ПАЦИЕНТАМ</a></div>
+                    </div>
+    </div>
+</div>
+<!-- /MAIN MENU -->
+
+<div id="mainNav">
+
+    <div class="yellowline"></div>
+
+    <div class="container1">
+
+            <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="row">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--
+                    <a class="navbar-brand" href="#"><span class="mstomlogo">Мега<span>стом</span></span></a>
+                    -->
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <!--
+                        <li class="m1"><a href="index.php">О Компании</a></li>
+                        <li class="m2 active"><a href="catalog_lvl1.php">Клиники <span class="sr-only">(current)</span></a></li>
+                        <li class="m3"><a href="catalog_lvl2.php">Услуги и цены</a></li>
+                        <li class="m4"><a href="catalog_lvl3.php">Специалисты</a></li>
+                        <li class="m5"><a href="catalog_lvl4.php">Технологии</a></li>
+                        <li class="m6"><a href="index.php">Отзывы</a></li>
+                        <li class="m7"><a href="index.php">Пациентам</a></li>
+                        -->
+                                                                        <li class="m1 active"><a href="http://www.megastom.ru/about">О КОМПАНИИ</a></li>
+                                                <li class="m2 "><a href="http://www.megastom.ru/contacts">КЛИНИКИ</a></li>
+                                                <li class="m3 "><a href="http://www.megastom.ru/services">УСЛУГИ И ЦЕНЫ</a></li>
+                                                <li class="m4 "><a href="http://www.megastom.ru/doctors">СПЕЦИАЛИСТЫ</a></li>
+                                                <li class="m5 "><a href="http://www.megastom.ru/tech">НАШИ ТЕХНОЛОГИИ</a></li>
+                                                <li class="m6 "><a href="http://www.megastom.ru/reviews">ОТЗЫВЫ</a></li>
+                                                <li class="m7 "><a href="http://www.megastom.ru/patients">НАШИМ ПАЦИЕНТАМ</a></li>
+                                            </ul>
+
+                </div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+</div>    
+    <footer id="footer">
+
+<div id="Metrika" style="display:none;">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter23839135 = new Ya.Metrika({
+                    id:23839135,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/23839135" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-xs-12 col-ms-12 col-sm-4 col-md-4 col-lg-4">
+            <!--
+            <img src="http://www.megastom.ru/htdocs/theme/megastom/img/logobottom.png" class="logobottom" >
+            <p class="footer-logo">Оборудование</p>
+            -->
+            
+            <div class="direction">
+
+                <a href="/" title="" class="footer-direction">
+                    <div class="text icon1">
+                        <img src="http://www.megastom.ru/htdocs/theme/megastom/img/direction-logo01.png"><br>
+                        <span>сеть клиник</span>
+                    </div>
+                </a>
+
+            </div>
+            <p class="copyright">
+                &copy; 1992 — 2016
+            </p>
+        </div>
+        <div class="col-xs-12 col-ms-12 col-sm-5 col-md-5 col-lg-5 text-center">
+            <div class="phone">
+                <p>+7<span>(495)</span>120-32-32</p>
+                <a href="#" class="order-call">Заказать обратный звонок</a>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-ms-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="workdays clearfix">
+                <table>
+                    <tr>
+                        <td class="day-label">ПН-ПТ</td>
+                        <td><div class="workdays-time greenBorder">08:15</div></td>
+                        <td><div class="workdays-time greenBorder">21:15</div></td>
+                    </tr>
+                    <tr>
+                        <td class="day-label">СБ</td>
+                        <td><div class="workdays-time greenBorder">09:00</div></td>
+                        <td><div class="workdays-time greenBorder">18:45</div></td>
+                    </tr>
+                    <tr>
+                        <td class="day-label">ВС</td>
+                        <td colspan="2"><div class="workdays-time grayBorder">выходной</div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>    
+    <div class="mobile-control"></div>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    
+    <script src="http://www.megastom.ru/htdocs/theme/megastom/js/vendors/jquery.easing.js"></script>
+    <script src="http://www.megastom.ru/htdocs/theme/megastom/js/vendors/bxslider/jquery.bxslider.min.js"></script>
+    <script src="http://www.megastom.ru/htdocs/theme/megastom/js/vendors/scrollup/jquery.scrollUp.min.js"></script>
+
+    <!-- MEGASTOM FUNCTIONALITY-->
+    <script src="http://www.megastom.ru/htdocs/theme/megastom/js/modules.js"></script>
+    
+    <script type="text/javascript" src="http://www.megastom.ru/htdocs/theme/megastom/js/effects.js"></script>
+    
+    <script>
+    <!--//
+    var dtp = new datetimepicker();
+    
+    function orderCall(obj)
+    {
+        var formData = obj.parent().parent().find("form").serialize();
+        $.post(
+            "/order_call/",
+            {data: formData},
+            function(response) {
+                if(typeof response.error != "undefined") {
+                    if(response.error) {
+                        /*
+                        cm.close();
+                        setTimeout(function() {
+                            cm.error(response.message);
+                        }, 300);
+                        */
+                        alert(response.message);
+                    } else {
+                        cm.close();
+                        setTimeout(function() {
+                            cm.success("Сообщение отправлено менеджеру, ожидайте звонка!", function() {
+                                cm.close();
+                            });
+                        }, 300);
+                    }
+                } else {
+                    cm.close();
+                    cm.error("Неизвестная оибка! Попробуйте ещё раз!");
+                    console.log(response);
+                }
+            }, "json"
+        );
+    }
+    //-->
+    </script>
+</body>
+</html>

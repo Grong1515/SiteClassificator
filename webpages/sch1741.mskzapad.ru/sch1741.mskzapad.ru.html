@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="UDhLYWRkUzZpeig7B1Q8XSAVJBBUPjhSEVd.URAtOQFjbSIQATBlfw==">
+    <title>Login</title>
+    <link href="/assets/72a4b5fe/themes/smoothness/jquery-ui.css" rel="stylesheet">
+<link href="/assets/ebb9de97/css/bootstrap.css" rel="stylesheet">
+<link href="/assets/80500167/app/css/app.css" rel="stylesheet">
+<link href="/assets/80500167/redactor/sup/sup.css" rel="stylesheet">
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"></head>
+<body>
+        <div class="wrap">
+        <nav id="w0" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w0-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="/">Учебный портал</a></div><div id="w0-collapse" class="collapse navbar-collapse"><ul id="w1" class="navbar-nav navbar-right nav"><li class="active"><a href="/login">Вход</a></li></ul></div></div></nav>
+
+        <div class="container">
+        <ul class="breadcrumb"><li><a href="/">Главная</a></li>
+<li class="active">Login</li>
+</ul>        <div class="site-login">
+    <h1>Login</h1>
+
+    <div class="row">
+        <div class="col-lg-5">
+            <form id="login-form" action="/login" method="post" role="form">
+<input type="hidden" name="_csrf" value="UDhLYWRkUzZpeig7B1Q8XSAVJBBUPjhSEVd.URAtOQFjbSIQATBlfw==">                <div class="form-group field-loginform-email required">
+<label class="control-label" for="loginform-email">Email</label>
+<input type="text" id="loginform-email" class="form-control" name="LoginForm[email]">
+
+<p class="help-block help-block-error"></p>
+</div>                <div class="form-group field-loginform-password required">
+<label class="control-label" for="loginform-password">Password</label>
+<input type="password" id="loginform-password" class="form-control" name="LoginForm[password]">
+
+<p class="help-block help-block-error"></p>
+</div>                <div class="form-group field-loginform-rememberme">
+<div class="checkbox">
+<label for="loginform-rememberme">
+<input type="hidden" name="LoginForm[rememberMe]" value="0"><input type="checkbox" id="loginform-rememberme" name="LoginForm[rememberMe]" value="1" checked>
+Remember Me
+</label>
+<p class="help-block help-block-error"></p>
+
+</div>
+</div>                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" name="login-button">Login</button>                </div>
+            </form>        </div>
+    </div>
+</div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+        <p class="pull-left">&copy; Учебный портал 2016</p>
+        </div>
+    </footer>
+
+    <script src="/assets/7e4970db/jquery.js"></script>
+<script src="/assets/bfdc2a02/yii.js"></script>
+<script src="/assets/bfdc2a02/yii.validation.js"></script>
+<script src="/assets/bfdc2a02/yii.activeForm.js"></script>
+<script src="/assets/72a4b5fe/jquery-ui.js"></script>
+<script src="/assets/80500167/redactor/sup/sup.js"></script>
+<script src="/assets/80500167/app/js/sortable.js"></script>
+<script src="/assets/ebb9de97/js/bootstrap.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+jQuery('#login-form').yiiActiveForm([{"id":"loginform-email","name":"email","container":".field-loginform-email","input":"#loginform-email","error":".help-block.help-block-error","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Email»."});}},{"id":"loginform-password","name":"password","container":".field-loginform-password","input":"#loginform-password","error":".help-block.help-block-error","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Password»."});}},{"id":"loginform-rememberme","name":"rememberMe","container":".field-loginform-rememberme","input":"#loginform-rememberme","error":".help-block.help-block-error","validate":function (attribute, value, messages, deferred, $form) {yii.validation.boolean(value, messages, {"trueValue":"1","falseValue":"0","message":"Значение «Remember Me» должно быть равно «1» или «0».","skipOnEmpty":1});}}], []);
+});</script></body>
+</html>

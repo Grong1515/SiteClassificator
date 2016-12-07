@@ -1,0 +1,614 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Spacelifting, Спейслифтинг" />
+<meta name="description" content="Спейслифтинг (Spacelifting) – современная методика омоложения лица и шеи. Записаться на консультацию к специалисту по спейслифтингу можно по телефону +7 (495) 737 88 99.&quot;&gt;" />
+<link href="/bitrix/cache/css/s1/main/kernel_main/kernel_main.css?14455826679387" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/main/template_4ba85a7c3addb21ac9e3a6b7ec626486/template_4ba85a7c3addb21ac9e3a6b7ec626486_adb2ed5ace83717f2addce03d0824f24.css?144768544412137" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1477470767','SERVER_TZ_OFFSET':'10800','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'464c3a4b2bed46ac2345e7f5f983275c','SITE_ID':'s1'});(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/main/kernel_main/kernel_main.js?1447424166239060"></script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css']); </script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js','/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/session.js','/bitrix/js/main/core/core_window.js','/bitrix/js/main/utils.js']); </script>
+
+<script type="text/javascript">
+bxSession.Expand(86400, '464c3a4b2bed46ac2345e7f5f983275c', false, '2ad319da9d656b77226d800bab9325d7');
+</script>
+
+<title>Spacelifting. Спейслифтинг - современная и эффективная процедура подтяжки и омоложения лица. Официальный сайт.</title>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'/>
+
+<script src="/js/jquery-1.7.2.min.js"></script>
+<script src="/js/jquery-ui-1.8.18.custom.min.js"></script>
+<script src="/js/jquery.leanModal.min.js"></script>
+<script src="/js/jquery.smooth-scroll.min.js"></script>
+<script src="/js/lightbox.js"></script>
+<script src="/js/jquery.maskedinput-1.3.min.js"></script>
+<script type="text/javascript" src="http://yandex.st/jquery/easing/1.3/jquery.easing.min.js"></script>   
+<script type="text/javascript" src="http://yandex.st/jquery/mousewheel/3.0.4/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="http://yandex.st/jquery/cookie/1.0/jquery.cookie.min.js"></script> 
+   <link rel="icon" href="/bitrix/templates/main/favicon.ico" type="image/x-icon">
+
+<script language="javascript" type="text/javascript">
+$(document).ready(
+    function()
+    {
+        ///$("#phone").mask("+7 (999) 999-9999");
+        
+        $("#time_p").click(function() {
+            $("#time").val("");
+            $('#time').focus();
+            
+            return false;
+        });
+        $("#date_p").click(function() {
+            $("#date").val("");
+            $('#date').focus();
+            
+            return false;
+        }); 
+        //toname
+        $("#name").click(function() {
+            if($("#name").val()=="имя") $("#name").val("");
+        });
+        $("#name").focusout(function() {
+            if($("#name").val()=="") $("#name").val("имя");
+            else
+            {
+                $.cookie("nameG", $("#name").val());
+            }            
+        });
+        
+        /*
+        $("#time").mask("99:99");
+        $("#date").mask("99.99");
+        */                
+        if($.cookie("timeG")) $("#time").val($.cookie("timeG"));
+        if($.cookie("dateG")) $("#date").val($.cookie("dateG"));
+        if($.cookie("phoneG")) $("#phone").val($.cookie("phoneG"));
+        if($.cookie("nameG")) $("#name").val($.cookie("nameG"));
+
+        
+        
+        $("#time").click(function() {
+            if($("#time").val()=="время") $("#time").val("");
+        });
+        $("#time").focusout(function() {
+            if($("#time").val()=="") $("#time").val("время");
+            else
+            {
+                $.cookie("timeG", $("#time").val());
+            }
+        });
+        
+        $("#phone").click(function() {
+            if($("#phone").val()=="телефон") $("#phone").val("");
+        });
+        $("#phone").focusout(function() {
+            if($("#phone").val()=="") $("#phone").val("телефон");
+            else
+            {
+                $.cookie("phoneG", $("#phone").val());
+            }
+        });        
+        
+        $("#date").click(function() {
+            if($("#date").val()=="дата") $("#date").val("");
+        });
+        $("#date").focusout(function() {
+            if($("#date").val()=="") $("#date").val("дата");
+            else
+            {
+                $.cookie("dateG", $("#date").val());
+            }            
+        });
+                
+        $(function() {
+    		$('a[rel*=pop]').leanModal({ top : 200,overlay : 0.7, closeButton: ".modal_close" });		
+    	});
+        $('a[rel*=pop]').click(
+            function()
+            {
+                ga('send', 'event', 'lead_move');
+            }
+        );        
+        
+        $("#ReqSend").click(
+            function()
+            {
+                $.post("/ajax.php",{callback: '1',
+				name: $("#name").val(), 
+				phone: $("#phone").val(),
+				time: $("#time").val(),
+                date: $("#date").val(),
+                },				
+				function(data){
+                    if(data==1) {
+                            $("#callback").hide();
+                            $("#lean_overlay").hide();
+                            $.cookie("timeG","");
+                            $.cookie("dateG","");
+                            $.cookie("phoneG","");
+                            $.cookie("nameG",""); 
+                            ga('send', 'event', 'lead _submit_ok');                   
+                        }
+                    else {$("#ReqError").show();ga('send', 'event', 'lead _submit_error');}
+                });
+                return false;
+            }
+        );
+        
+        
+        $("#CallBackSend").click(
+            function()
+            {
+                ga('send', 'event', 'lead_move');
+                
+                $.post("/ajax.php",{callback: '1',
+				name: $("#nameCC").val(), 
+				phone: $("#phoneCC").val(),
+                },				
+				function(data){
+                    if(data==1) {
+                        $("#callback").hide();
+                        $("#lean_overlay").hide();       
+                        ga('send', 'event', 'lead _submit_ok');                     
+                        }
+                    else {
+                            $("#ErrorCC").show();
+                            ga('send', 'event', 'lead _submit_error');
+                        }
+                });
+                return false;
+            }
+        );         
+        
+        $("#d1").click(
+            function()
+            {
+                $('html,body').delay(500).animate({scrollTop: $("#tod1").offset().top},600);
+                return false;
+            }
+        );
+        $("#d2").click(
+            function()
+            {
+                $('html,body').delay(500).animate({scrollTop: $("#tod2").offset().top},600);
+                return false;
+            }
+        );
+        $("#d3").click(
+            function()
+            {
+                $('html,body').delay(500).animate({scrollTop: $("#tod3").offset().top},600);
+                return false;
+            }
+        );                                      
+    }
+);
+
+function SmartDiv(id)
+    {
+        $("#"+id).toggle("slow");
+        return false;
+    }
+
+
+</script>
+</head>
+
+<body>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter21749848 = new Ya.Metrika({id:21749848,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/21749848" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter21749875 = new Ya.Metrika({id:21749875,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/21749875" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42362245-1', 'spacelifting.ru');
+  ga('send', 'pageview');
+
+</script>
+
+<div id="panel"></div>
+<img src="/upload/ofsite.png" class="novosti_metoda" />
+ <div id="all">
+<div class="callback" id="callback">
+		<div class="callback_middle">
+			<div class="modal_close"><a href="#"><img src="/images/close.gif"></a></div>
+			
+				<h3>Заказать обратный звонок</h3>
+				<form action="" method="post" class="consultation">
+				<input type="text" value="имя" class="text" id="nameCC" />
+			<input type="text" value="телефон" class="text" id="phoneCC" />
+			<!--<input type="text" value="дата" class="text date" id="date" />
+			<a href="#"><img src="/bitrix/templates/main/images/date_icon.jpg" class="date_pic" id="date_p"/></a>
+			<input type="text" value="время" class="text time" id="time" />
+			<a href="#"><img src="/bitrix/templates/main/images/time_icon.jpg" class="date_pic" id="time_p"/></a>-->		
+
+			<div class="cleaner"></div>
+            <span id="ErrorCC" style="display: none;">Ошибка заполнения, одно из полей заполнено не корректно.</span>
+			<a href="#" id="CallBackSend" class="consultation_button">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</a>
+				</form>
+		 </div>
+	</div>
+
+
+	
+	<div class="header">
+		<a href="/"><img src="/bitrix/templates/main/images/logo.png" class="logo" /></a>
+
+		<span class="title"></br>НОВАЯ ФИЛОСОФИЯ<br />
+		ПОДТЯЖКИ ЛИЦА И ШЕИ
+		</span>
+
+		<a href="#callback" rel="pop" class="consultation_button small">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</a>
+
+		<span class="phones">
+		<span class="address">Москва, ул. Удальцова, 85 корпус 2 </span> +7 (495) 730 55 55 
+<br />
+		</span>
+	</div>
+
+
+	<div class="blue_menu">
+		        
+
+<ul>
+            <li><a href="/speysliftinge/">О спейслифтинге</a>
+                        <ul>
+                            <li><a href="/speysliftinge/history-sl/">История </a></li>
+                            <li><a href="/speysliftinge/advantages-sl/">Преимущества и особенности</a></li>
+                            <li><a href="/speysliftinge/who-does-sl/">Кто выполняет</a></li>
+                            <li><a href="/speysliftinge/speyslifting-ili-smas/">СПЕЙСЛИФТИНГ или СМАС?</a></li>
+                        </ul>
+            </li>
+
+            <li><a href="/tseny/">Цены</a>
+                </li>
+
+            <li><a href="/zone-speysliftinga/">Зоны Спейслифтинга</a>
+                </li>
+
+            <li><a href="/about/">ЛИНЛАЙН</a>
+                </li>
+
+            <li><a href="#" onclick="return false;">Фото и отзывы</a>
+                        <ul>
+                            <li><a href="/photos-and-reviews/reviews/">Отзывы</a></li>
+                            <li><a href="/photos-and-reviews/photo/">Фото</a></li>
+                        </ul>
+            </li>
+
+
+</ul>
+ 
+	</div>
+
+
+
+	<div class="marine_block">
+        
+<div class="block"> 			 			<span class="title"><img src="/bitrix/templates/main/images/pic01.png" class="pic1"  /><a href="/speysliftinge/advantages-sl/" >Преимущества</a></span> 			Позволили мне практически полностью перейти только на этот вид лицевого омоложения, а пациентам насладиться быстрым восстановлением и отсутствием 		</div>
+ 		 
+<div class="block"> 			<span class="title"><img src="/bitrix/templates/main/images/pic02.png" class="pic2"  /><a href="/speysliftinge/restoration/" >Восстановление</a></span> 			После операции СПЕЙСЛИФТИНГ&reg; отсутствуют боли. Отеки могут держаться 2-3 дня и сойти. 		</div>
+ 		 
+<div class="block"> 			<span class="title"><img src="/bitrix/templates/main/images/pic03.png" class="pic3"  /><a href="/speysliftinge/the-result-sl/" >Результат</a></span> 			С точки зрения специалистов - это новая философия восстановления провисших тканей лица. 		</div>
+
+		<div class="cleaner"></div>
+	</div>
+
+	<div class="placeblock">
+		<img src="/bitrix/templates/main/images/face_img.jpg" class="face_img" />
+
+		<div class="effect">
+			<div class="text">
+            
+<h2>Эффективность и простота метода</h2>
+ 
+<p>К достоинствам пространственной подтяжки лица следует отнести восстановление областей, в которых, собственно, и произошли возрастные изменения. Именно эти пространства растянулись, провисли и потянули за собой поверхностные ткани. Таким образом, естественность восстановления очевидна. </p>
+ 
+<p> К большим преимуществам операции относится отсутствие травмы в других областях лица, что неизбежно при традиционном подходе. Зона восстановления затрагивает все области лица от угла брови до нижней части шеи. Особенно эффективно восстановление скуловой зоны вследствие поднятия малярного мешка. Эффективность здесь сравнима с операцией срединного лицевого лифтинга, выполняемого через височную зону или нижние веки. </p>
+ 
+<div style="display: none;" ;="" id="effect_full"> 
+  <p> Как известно, технология перемещения и фиксации глубоких структур, дает долговременный, а часто, не сильно меняющийся во времени результат, тоже относится и к пространственному омоложению, потому что лицевые пространства остаются фиксированными изнутри на все оставшееся время и уже не смогут вернуться к исходному состоянию. </p>
+ 
+  <p> Естественные линии шеи, наполнение щек, подъем скуловой области, расправление носогубных складок приводят к естественному омоложению, абсолютно без элементов растянутости кожи, искусственному оперированному виду лица. Все пациенты выглядят гармонично. У них сбалансированные СПЕЙСЛИФТИНГОМ пропорции без каких-либо элементов большего или меньшего восстановления в различных отделах. СПЕЙСЛИФТИНГ можно отнести к наиболее естественным и физиологичным методам восстановления возрастных проявлений. </p>
+ </div>
+
+            </div>
+		</div>
+
+		<div class="cleaner"></div>
+
+			<a href="javascript: void;" class="down_button" onclick="SmartDiv('effect_full')" ></a>
+        <span id="tod1"></span>
+	</div>
+
+	<div class="blue_menu">
+		<ul>
+			<li><a href="/speysliftinge/history-sl/">История МЕТОДА </a></li>
+			<li><a href="/speysliftinge/who-shows-sl/">Кому показан МЕТОД</a></li>
+			<li><a href="/speysliftinge/advantages-sl/">преимущества метода </a></li>
+			<li><a href="/photos-and-reviews/photo/">результат</a></li>
+		</ul>
+	</div>
+
+	<div class="placeblock">
+		<div class="zones">
+			<h2>Техника SPACELIFTING </h2>
+
+
+            <span class="zone_1">II ЗОНА 
+  <br />
+ ВОЗДЕЙСТВИЯ</span> <span class="zone_2">IV ЗОНА 
+  <br />
+ ВОЗДЕЙСТВИЯ</span> <span class="zone_3">VI ЗОНА 
+  <br />
+ ВОЗДЕЙСТВИЯ</span> <span class="zone_4">I ЗОНА 
+  <br />
+ ВОЗДЕЙСТВИЯ</span> <span class="zone_5">III ЗОНА 
+  <br />
+ ВОЗДЕЙСТВИЯ</span> <span class="zone_6">V ЗОНА 
+  <br />
+ ВОЗДЕЙСТВИЯ</span>            
+		</div>
+
+		<a href="#" class="down_button" id="d2"></a>
+        <span id="tod2"></span>
+	</div>
+
+	<div class="blue_menu">
+	<ul>
+			<li><a href="/photos-and-reviews/reviews/">мнения пациентов </a></li>
+			<li><a href="/views/">мнения специалистов </a></li>
+			<li><a href="/photos-and-reviews/photo/">фотогалерея</a></li>
+			<li><a rel="pop" href="#callback">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</a></li>
+		</ul>
+	</div>
+
+	<div class="placeblock">
+		<div class="vosstanovlenie">
+        
+            <img src="/upload/vosstanovlenie-new.jpg"  /> 
+<div class="text"> 	 
+  <h2>ВОССТАНОВЛЕНИЕ ПОСЛЕ СПЕЙСЛИФТИНГА</h2>
+ 	 
+  <p>Восстановление после любой операции &ndash; это слияние двух ключевых направлений: предотвращение осложнений и использование передовых аппаратных средств. Предотвращение осложнений начинается с соблюдения стандартов выполнения операции, раннего послеоперационного ухода, и правильных рекомендаций для пациента дома.</p>
+
+  <ul> 
+    <li>Образование, профессионализм, и опыт врача – главные составляющие операции</li>
+   
+    <li>Ранний послеоперационный период – забота подготовленного персонала</li>
+   
+    <li>Поведение дома – работа над объяснением пациенту всех нюансов его состояние и его действий</li>
+   </ul>
+
+  <p> По рекомендации врача пациент может пройти курс УЗИ терапии, магнитотерапии, и аппаратного массажа. Аппаратные средства являются базовой составляющей физиотерапии. Нами внедрен самый современный прибор по лазерной, радиочастотной и ударно-волновой терапии RayLife, позволяющий восстановится в считанные дни. Лечение проводится под контролем эксперта <b>компании Asclepion доктора Эйфари А.А.</b></p>
+ 
+  <p> Как дополнительные мероприятия мы используем в послеоперационном периоде ПЛАЗМОЛИФТИНГ. Отеки, припухлости, кровоизлияния проходят в кратчайшие сроки. </p>
+ 
+  <div style="display: none;" id="vosstanovlenie_full"> 
+    <p> Пациент к концу первой недели возвращается к обычному образу жизни и может вернуться на работу или выйти в свет. </p>
+   
+    <p> И самое главное, что все эти мероприятия позволяют пациенту чувствовать себя здоровым с первого дня после операции, а перечисленные действия можно расценивать, как усилия для достижения душевного и физического совершенства. </p>
+   </div>
+ </div>
+
+			<div class="cleaner"></div>
+
+			<a href="javascript: void;" class="down_button" onclick="SmartDiv('vosstanovlenie_full')" ></a>
+            
+
+		</div>
+	</div>
+
+	<div class="blue_menu">
+    <span id="tod3"></span>
+		<ul>
+			<li><a href="/speysliftinge/who-does-sl/">Кто выполняет SPACELIFTING </a></li>
+			<li><a href="/speysliftinge/how-to-master-sl/">Как овладеть SPACELIFTING </a></li>
+			<li><a href="/speysliftinge/technics-sl/">Техника SPACELIFTING </a></li>
+			<li><a rel="pop" href="#callback">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</a></li>
+		</ul>
+	</div>
+
+    
+                	<div class="placeblock">
+        		<div class="marine">
+                    <h2>РЕЗУЛЬТАТ ДО/ПОСЛЕ СПЕЙСЛИФТИНГА</h2>
+                    <img src="/upload/iblock/6fa/a_8.jpg"/>
+                    <img src="/upload/iblock/4f6/a_8_1.jpg"/>
+                    <img src="/upload/iblock/a79/a_8_2.jpg"/>
+                    <img src="/upload/iblock/f5d/a_8_3.jpg"/>
+        		</div>
+        	</div>         
+                        <div class="blue_menu">
+            	<ul>
+            		                        <li><a href="/photos-and-reviews/photo/#photo2">Спейслифтинг&reg; шеи</a></li>
+                                            <li><a href="/photos-and-reviews/photo/#photo4">Спейслифтинг&reg; лба</a></li>
+                                            <li><a href="/photos-and-reviews/photo/#photo3">Спейслифтинг&reg; средней зоны</a></li>
+                                            <li><a href="/photos-and-reviews/photo/#photo1">Спейслифтинг&reg лица</a></li>
+                                	</ul>
+            </div>  
+            
+	<div class="placeblock">
+		<div class="dr_ross">
+			
+ 
+<div class="docblock">
+ 
+<p><img align="left" src="/upload/orlando11.jpg" style="padding-right: 10px; width: 200px;"  /><font size="+1"><b>Доктор Орландо Салас Морено</b></font></p>
+
+<p>Пластический хирург мирового уровня с 25 летним опытом работы. Владеет всеми методами эстетической и пластической хирургии. Автор многочисленных методик по эстетической и реконструктивный хирургии. Получил медицинское образование в Испании (г.Мадрид). Также закончил университет РУДН (Российский Университет Дружбы Народов) и аспирантуру по эстетической, пластической и реконструктивной хирургии. Защитил диссертацию и получил ученую степень  - кандидат медицинских наук. 
+</p><ul><li>Член Европейского общества пластических хирургов</li>
+<li>Член Испанского общества пластических хирургов</li>
+<li>Действительный член Российского общества реконструктивных, пластических и эстетических хирургов (ОПРЭХ)</li>
+</ul>
+ 
+</div>
+ <div class="docblock">
+<p><img align="left" src="/upload/gordyatskiy22.jpg" style="padding-right: 10px; width: 200px;"  /><font size="+1"><b>Доктор Годяцкий Игорь Сергеевич</b></font></p>
+
+<p>Ведущий пластический хирург. Закончил лечебный факультет Российского Медицинского Университета им. Н.И Пирогова. Прошел многоступенчатую профессиональную подготовку по пластической хирургии лица в Университетской клинике г. Аахена Германия.
+</p><p>Доктор Годяцкий использует новейшие технологии: СПЕЙСЛИФТИНГ (Spacelifting), бесшовные методы в эндопротезировании, эндоскопические техники  выполнения пластических операций, лазерные технологии как во время операций, так и в реабилитационный период. Сотрудничает со многими известными пластическими хирургами.</p>
+ 
+ </div>
+			<div class="cleaner"></div>
+		</div>
+	</div>
+
+	<div class="blue_menu">
+		<ul>
+			<li><a href="http://www.spacelifting.ru/photos-and-reviews/reviews/">Отзывы пациентов</a></li>
+			<li><a href="/about/unikalnye-osobennosti-raboty/">Уникальные особенности работы</a></li>
+			<li><a href="/about/klinika-doktora-ross-/">О ЛИНЛАЙН</a></li>
+			<li><a rel="pop" href="#callback">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</a></li>
+		</ul>
+	</div>
+
+	<div class="placeblock">
+		<div class="contacts">
+			<div class="block">
+				<img src="/bitrix/templates/main/images/phone_icon.png" />+7 (495) 730 55 55
+				<div class="cleaner"></div>
+			</div>
+
+			
+
+			<div class="block">
+				<img src="/bitrix/templates/main/images/mail_icon.png" /><a href="mailto:Pismo-v-kliniku@linline.ru" >Pismo-v-kliniku@linline.ru</a>
+				<div class="cleaner"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+
+<p style="font-size: 13px; color: #0f548a; padding-left: 30px;">&copy; Spacelifting</p>
+		
+        
+<ul class="bottommenu">
+
+			<li><a href="/speysliftinge/history-sl/">История SL</a></li>
+		
+			<li><a href="/speysliftinge/advantages-sl/">Преимущества SL</a></li>
+		
+			<li><a href="/speysliftinge/who-shows-sl/">Кому показан SL</a></li>
+		
+			<li><a href="/speysliftinge/preparation-for-sl/">Подготовка к SL</a></li>
+		
+			<li><a href="/speysliftinge/technics-sl/">Техника SL</a></li>
+		
+			<li><a href="/speysliftinge/the-risks-of-the-operation/">Риски операции</a></li>
+		
+			<li><a href="/speysliftinge/restoration/">Восстановление</a></li>
+		
+			<li><a href="/speysliftinge/the-result-sl/">Результат SL</a></li>
+		
+			<li><a href="/speysliftinge/who-does-sl/">Кто выполняет SL</a></li>
+		
+			<li><a href="/speysliftinge/how-to-master-sl/">Как овладеть SL</a></li>
+		
+			<li><a href="/photos-and-reviews/reviews/">Отзывы пациентов</a></li>
+		
+			<li><a href="/views/">Мнения специалистов</a></li>
+		
+
+</ul>
+		<span class="logos">
+		<img src="/bitrix/templates/main/images/logo03.jpg" /><br />
+			<img src="/bitrix/templates/main/images/logo01.jpg"  style="float:left; width: 67px;"/><img src="/bitrix/templates/main/images/logo02.jpg" style="float: left; margin: 0; padding: 0; width: 67px;" />
+			
+		</span>
+
+
+		<div class="google_map"><a href="https://www.google.com/maps?ll=55.682247,37.480089&z=13&t=m&hl=ru&gl=US&mapclient=embed&q=%D1%83%D0%BB.+%D0%A3%D0%B4%D0%B0%D0%BB%D1%8C%D1%86%D0%BE%D0%B2%D0%B0,+85%D0%BA2+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F+119454" rel="nofollow" target=_blank class="link"></a>
+			<iframe width="370" height="210" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.ru/maps?f=q&amp;source=s_q&amp;hl=ru&amp;geocode=&amp;q=%D1%83%D0%BB.+%D0%A3%D0%B4%D0%B0%D0%BB%D1%8C%D1%86%D0%BE%D0%B2%D0%B0,+85+%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81+2,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&amp;sll=55.749792,37.632495&amp;sspn=0.932097,2.705383&amp;ie=UTF8&amp;hq=&amp;hnear=%D1%83%D0%BB.+%D0%A3%D0%B4%D0%B0%D0%BB%D1%8C%D1%86%D0%BE%D0%B2%D0%B0,+85+%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81+2,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&amp;ll=55.682586,37.488543&amp;spn=0.001824,0.005284&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+		</div>
+
+		<div class="shema_niz">
+			<img src="/upload/shema_niz.jpg" />
+		</div>
+
+		<span class="contacts">Телефон: <b>+7 (495) 730 55 55</b><br /><br />
+			
+			Электронная почта: <b><a href="mailto:Pismo-v-kliniku@linline.ru" >Pismo-v-kliniku@linline.ru</a></b><br /><br />
+
+			<b>Адрес:</b> Москва, ул. Удальцова, 85 корпус 2
+			<br /><br />
+			<b>Схема проезда:</b> <span style="text-transform: none;">М. Проспект Вернадского, последний вагон из центра. После выхода повернуть налево, спуститься по ступенькам и еще раз повернуть налево. Затем пройти 20 метров. Перед вами будет улица Удальцова. Нужно сесть на маршрутное такси №300 или 494, либо автобус 661. Вам нужна будет остановка "торговый центр "Магнит". Затем останется перейти дорогу, пройти вперед 100 метров, перед Вами будет наше здание.</span>
+
+
+		</span>
+		<div class="cleaner"></div>
+<span class="copy">Словосочетания: Spacelifting, Спейслифтинг являются зарегистрированными товарными знаками.<br />Использование без разрешения правообладателя запрещено.<br />
+
+ Использование  информации сайта <a href="http://www.spacelifting.ru">www.spacelifting.ru</a> производится только с разрешения правообладателя.<br />
+
+Данный интернет-сайт носит исключительно информационный характер, и ни при каких условиях информационные материалы и цены, размешенные на сайте, не являются публичной офертой.</span>
+
+
+
+	</div>
+ </div>
+
+
+ </body>
+</html>

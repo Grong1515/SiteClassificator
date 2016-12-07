@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <title>EVITA - Studio of beauty</title>
+    <link rel="stylesheet" type="text/css" href="/scripts/agile_carousel.css"/>
+    <link type='text/css' rel="stylesheet" href="/scripts/gallery-slider.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="/scripts/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.cookie.js"></script>
+    <link rel="stylesheet" type="text/css" href="/scripts/shadowbox/shadowbox.css"/>
+    <script type="text/javascript" src="/scripts/shadowbox/shadowbox.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.scrollTo-min.js"></script>
+    <script src="/scripts/jquery.filestyle.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/scripts/nyroModal.css" />
+    <script type="text/javascript" src="/scripts/jquery.nyroModal.custom.min.js"></script>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="/scripts/jquery.nyroModal-ie6.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript"> Shadowbox.init({
+            handleOversize:     "resize",
+            handleUnsupported:  "remove",
+            autoplayMovies:     false
+        }); </script>
+    <script>
+        jQuery(document).ready(function(){
+            jQuery("input[type=file]").filestyle({
+                image: "/img/get.jpg",
+                imageheight : 24,
+                imagewidth : 119,
+                width : 119
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function showSubscribe(){
+            jQuery(document).ready(function(){
+                jQuery(".subscribe_form").fadeToggle();
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            jQuery(".nyroModal").nyroModal();
+        });
+    </script>
+    <script src="/scripts/jquery.hammer.js"></script>
+    <script>
+        function Carousel(element)
+        {
+            jQuery(document).ready(function(){
+                var self = this;
+                element = $(element);
+                function handleHammer(ev) {
+                    // console.log(ev);
+                    // disable browser scrolling
+//            ev.gesture.preventDefault();
+
+                    switch(ev.type) {
+
+
+                        case 'swipeleft':
+                            jQuery(".hover_next_button").click();
+                            break;
+
+                        case 'swiperight':
+                            jQuery(".hover_previous_button").click();
+                            break;
+
+                        /*                case 'release':
+                         break;*/
+                    }
+                }
+                element.hammer({ drag_lock_to_axis: true })
+                    .on("swipeleft swiperight", handleHammer);
+            })
+        }
+    </script>
+    <script type='text/javascript' src='http://userapi.com/js/api/openapi.js?50'></script>
+    <script type='text/javascript'>VK.init({apiId: 3527894, onlyWidgets: true});</script>
+    <script type='text/javascript' src='http://s7.addthis.com/js/250/addthis_widget.js'></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<link href="/bitrix/cache/css/s1/new-design/page_2c41633f6432c63fe2c54a74b47b555a/page_2c41633f6432c63fe2c54a74b47b555a_d342ba8a0297be8c968a80970c67f7df.css?1391505574" type="text/css" rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/new-design/kernel/kernel.css?1391505574" type="text/css" rel="stylesheet" />
+<script type="text/javascript"> var arKernelCSS = new Array('/bitrix/js/main/core/css/core.css','/bitrix/js/main/core/css/core_popup.css','/bitrix/js/fileman/sticker.css','/bitrix/js/main/core/css/core_panel.css'); </script><link href="/bitrix/cache/css/s1/new-design/template_17c802ec31e83ce67f8b8cbec1553a5c/template_17c802ec31e83ce67f8b8cbec1553a5c_e3f326d73dda8249b227eea694ef2ebb.css?1409670550" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script><script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1477467642','SERVER_TZ_OFFSET':'10800','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'dab9d96debd4f3f8d3369b510d9d7350','SITE_ID':'s1'});(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript" src="/bitrix/cache/js/s1/new-design/kernel/kernel.js?1391505574"></script>
+<script type="text/javascript"> BX.setKernelJS(['/bitrix/js/main/core/core.js','/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/core/core_fx.js','/bitrix/js/main/session.js','/bitrix/js/main/core/core_window.js','/bitrix/js/main/core/core_popup.js','/bitrix/js/fileman/sticker.js','/bitrix/js/main/core/core_admin.js','/bitrix/js/main/utils.js','/bitrix/js/main/admin_tools.js','/bitrix/js/main/popup_menu.js','/bitrix/js/main/admin_search.js','/bitrix/js/main/hot_keys.js','/bitrix/js/main/public_tools.js']); </script><script type="text/javascript">
+bxSession.Expand(1440, 'dab9d96debd4f3f8d3369b510d9d7350', false, '41b912f7334b50409c6d4d7e6c204762');
+</script>
+
+
+
+    <script type="text/javascript" src="/scripts/agile_carousel.alpha.js"></script>
+
+</head>
+<body>
+
+<table class="content_table" width="100%" >
+    <tr>
+        <td height="110" align="center">
+            <div class="header_wrapper" align="center" style="margin-top: 22px;">
+                <div class="lang_menu">
+                                            <a style="text-transform: uppercase; color: white; text-decoration: none; font-size: 9px;" href="/">RUS</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a style="text-decoration: none; text-transform: uppercase; font-size: 9px;" href="/en/">ENG</a>
+                                    </div>
+                <a href="/">
+                                                                <img src="/img/logo.png" width="217" height="65" alt="evitastudio" />
+                                    </a>
+                <div class="right_menu">
+                                                                                        <a href="/evita/news/podpiska.php">Подписка на новости</a>
+                                    </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td height="40" align="center" class="menu_top_wrapper">
+
+            <table width="980" class="menu_table" style="border-top: 1px solid #635435;">
+                <tr>
+                    <td>
+                        <table class="menu_top">
+<tr>
+			<td><a href="/akcii/">Акции</a></td>
+		
+			<td><a href="/evita/">Evita</a></td>
+		
+			<td><a href="/uslugi/">Услуги</a></td>
+		
+			<td><a href="/evita-spa/">Evita-SPA</a></td>
+		
+			<td><a href="/boutique/">Boutique</a></td>
+		
+			<td><a href="/evita-cards/">Карты Эвита</a></td>
+		
+			<td><a href="/gallery/">Галерея</a></td>
+		
+			<td><a href="/price/">Прайс</a></td>
+		
+			<td><a href="/salony/">Салоны</a></td>
+		
+</tr>
+</table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" class="content_wrapper">
+                                        <style>
+                    .menu_table{
+                        border-bottom: 3px solid #c5a86a;
+                    }
+                </style>
+                        <div class="content">
+                <table width="100%">
+                    <tr>
+                                                <td valign="top" width="100%">
+                                                        <div class="measure_box">
+<script>
+jQuery(document).ready(function(){
+var carousel=new Carousel('#carousel_top');
+});
+</script>
+<script type="text/javascript">
+var text='[{"content": "'+
+'<a href=\'http://www.evitastudio.ru/akcii/aktsiya-mesyatsa-pilingi.html\'>'+
+'<img align=\'right\' height=\'390\' src=\'/upload/iblock/1ec/1ec36f265f8c66c0ca0fa8ed3934338b.jpg\' alt=\'пилинги октябрь\' title=\'пилинги октябрь\'/>'+
+'<div class=\'description\'></div>'+
+''+
+'</a>"}, {"content": "'+
+'<a href=\'http://www.evitastudio.ru/evita/news/keratinovoe-vypryamlenie.html\'>'+
+'<img align=\'right\' height=\'390\' src=\'/upload/iblock/61c/61cb662fb725b34a6cea4ea1a2621c91.jpg\' alt=\'Кератиновое выпрямление от Keratin Complex\' title=\'Кератиновое выпрямление от Keratin Complex\'/>'+
+'<div class=\'description\'></div>'+
+''+
+'</a>"}, {"content": "'+
+'<a href=\'http://www.evitastudio.ru/evita/news/meder-beauty-science.html\'>'+
+'<img align=\'right\' height=\'390\' src=\'/upload/iblock/a02/a02dd4c934f7667dce56223fafe04a7f.jpg\' alt=\'Meder\' title=\'Meder\'/>'+
+'<div class=\'description\'></div>'+
+''+
+'</a>"}, {"content": "'+
+'<a href=\'http://www.evitastudio.ru/evita/news/soleil-noir.html\'>'+
+'<img align=\'right\' height=\'390\' src=\'/upload/iblock/9c7/9c7d08255fb6edb2cfebfb25c884e680.jpg\' alt=\'Soleil Noir 1\' title=\'Soleil Noir 1\'/>'+
+'<div class=\'description\'></div>'+
+''+
+'</a>"}, {"content": "'+
+'<a href=\'http://www.evitastudio.ru/boutique/marki/olaplex.html\'>'+
+'<img align=\'right\' height=\'390\' src=\'/upload/iblock/4c1/4c15054aef7154f90c84106b3b8d7891.jpg\' alt=\'олаплекс\' title=\'олаплекс\'/>'+
+'<div class=\'description\'></div>'+
+''+
+'</a>"}]';
+var encoded = jQuery.parseJSON(text);
+        jQuery(document).ready(function(){
+            jQuery("#carousel_top").agile_carousel({
+				carousel_data: encoded,
+                carousel_outer_height: 390,
+                carousel_height: 390,
+                slide_height: 390,
+                carousel_outer_width: 980,
+                slide_width: 980,
+                number_slides_visible: 1,
+                transition_time: 600,
+				timer: 8000,
+                continuous_scrolling: true,
+                control_set_1: "numbered_buttons",
+                no_control_set: "hover_previous_button,hover_next_button"
+            });
+        });
+</script>
+<div id="carousel_top"></div><div class="pg_desc">
+
+</div>
+<div class="banners">
+<table width="100%">
+<tr>
+<td width="33.333333333333%">
+<a href="http://www.evitastudio.ru/evita-cards/abonement-v-spa-zonu/"><img src="/upload/iblock/958/958cc1ca786605ac2cea644b9d8eaab8.jpg" height="157" alt="Баннер-1"/></a>
+</td>
+<td width="33.333333333333%">
+<a href="http://www.evitastudio.ru/salony/evita-na-rechnom.html"><img src="/upload/iblock/20e/20e187749d11cb30e19e084f896b3e2a.jpg" height="157" alt="Баннер-1"/></a>
+</td>
+<td width="33.333333333333%">
+<a href="http://www.evitastudio.ru/evita-spa/massazhi-mira.html"><img src="/upload/iblock/f9e/f9eecb9208a1af42141415909ffb3381.jpg" height="157" alt="Баннер-1"/></a>
+</td>
+</tr>
+</table><input type="hidden" name="sessid" id="sessid" value="dab9d96debd4f3f8d3369b510d9d7350" /><script>
+function showAuth(type)
+{
+	if (type == 'auth')
+	{
+		BX('popup-buyer-auth-form').style["display"] = "block";
+		BX('popup-buyer-title-auth').innerHTML = '';
+		BX('popup-buyer-title-mail').innerHTML = '<a href="javascript:void(0)" onClick="showAuth(\'mail\');"></a>';
+		BX('popup_user_email').style["display"] = "none";
+		BX('popup_user_email').value = '';
+	}
+	else
+	{
+		BX('popup-buyer-auth-form').style["display"] = "none";
+		BX('popup-buyer-title-auth').innerHTML = '<a href="javascript:void(0)" onClick="showAuth(\'auth\');"></a>';
+		BX('popup-buyer-title-mail').innerHTML = '';
+		BX('popup_user_email').style["display"] = "block";
+		BX('notify_user_login').value = '';
+		BX('notify_user_password').value = '';
+	}
+}
+</script></div>
+
+</div>
+<div style="height: 32px;"></div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td height="92" align="center" valign=top">
+<div class="footer_wrapper" align="center">
+<table class="footer" width="100%">
+<tr>
+<td align="left"  width="244" valign="top">
+© 2012—2013 «Evita» Studio of beauty
+</td>
+<td align="center">
+
+<table class="bottom_menu">
+<tr>
+			<td><a href="/blog/">Блог</a></td>
+		
+			<td><a href="/otzyvy/">Отзывы</a></td>
+		
+			<td><a href="/press/">Пресса</a></td>
+		
+			<td><a href="/obratnaya-svyaz/">Обратная связь</a></td>
+		
+			<td><a href="/vacancy/">Вакансии</a></td>
+		
+			<td><a href="javascript:void(0)" class="search_bottom">Поиск</a></td>
+		
+</tr>
+</table>
+<div class="search_tag">
+
+<script>
+
+jQuery(document).ready(function(){
+
+});
+
+
+jQuery(document).ready(function(){
+jQuery('.search_bottom, .close_search').click(function(){jQuery('.top_search').toggle('fast',function(){document.getElementById('very_bottom').scrollIntoView();}); });
+})
+</script>
+<div class="top_search" style="width: 380px !important; display: none;">
+<form action="/search/index.php">
+	<table style="height: 30px;">
+		<tr>
+			<td><input type="text" name="q" value="" size="40" maxlength="50" placeholder="Введите запрос поиска"/></td>
+			<td><input name="s" type="submit" value="Поиск" /></td>
+		</tr>
+	</table>
+</form>
+<div class="close_search"></div>
+</div></div>
+<table class="social">
+<tr>
+<td><a target="_blank" href="http://facebook.com/evitastudio/" class="fb"></a></td>
+<td><a target="_blank" href="http://vk.com/club4212843" class="vk"></a></td>
+<td><a target="_blank" href="http://evitastudio.tumblr.com/" class="tr"></a></td>
+<td><a target="_blank" href="http://odnoklassniki.ru/group/51900672966741" class="ok"></a></td>
+<td><a target="_blank" href="https://twitter.com/evitastudio" class="tt"></a></td>
+<!--td><a target="_blank" href="http://pinterest.com/evitastudio/" class="r1"></a></td-->
+<td><a target="_blank" href="https://www.youtube.com/user/evitastudioofbeauty" class="yt"></a></td>
+<!--td><a target="_blank" href="http://viddy.com/evitastudio/" class="vd"></a></td-->
+<td><a target="_blank" href="http://instagram.com/evitastudio" class="in"></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" width="244">
+<a href="http://www.pixelplus.ru/" target="pixel" style="text-decoration: none;">Создание сайта</a> — Пиксель Плюс
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+<div id="very_bottom"></div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter20980795 = new Ya.Metrika({id:20980795,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/20980795" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

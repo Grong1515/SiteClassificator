@@ -1,0 +1,1531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+	<title>Сеть стоматологий - Мастердент</title>
+	<meta name="keywords" content='Стоматология, Стоматологическая клиника, Москва' />
+	<meta name="description" content='Стоматология «Мастердент» - каждый день помогает людям дарить улыбку. Наши клиники полностью укомплектована лучшим европейским оборудование и профессиональной командой специалистов.' />
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link href="/data/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/data/css/online.css" rel="stylesheet" type="text/css"/>
+	<!--[if IE 7]> <link href= "/data/css/ie7.css" rel= "stylesheet" media= "all" /> <![endif]-->
+	<script type="text/javascript" src="/data/js/jquery-1.4.3.min.js"></script>
+	<script type="text/javascript" src="/data/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/data/js/jquery.nivo.slider.pack.js"></script>
+	<script type="text/javascript" src="/data/js/main.js"></script>
+	<script type="text/javascript" src="/data/js/scrollTo.js"></script>
+	<script type="text/javascript" src="/data/js/script.js"></script>
+	<script type="text/javascript" src="/player/jquery.jplayer.min.js"></script>
+
+	<link type="text/css" media="screen" rel="stylesheet" href="/data/css/colorbox/colorbox.css">
+	<script type="text/javascript" src="/data/js/jquery.colorbox-min.js"></script>
+	<script src="/data/js/rollover.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".gal").colorbox();
+			$("a[rel='all_photo']").colorbox();
+		});		
+		jQuery(function () { // run this code on page load (AKA DOM load)
+			/* set variables locally for increased performance */
+			var scroll_timer;
+			var displayed = false;
+			var $message = jQuery('#message');
+			var $window = jQuery(window);
+			var top = jQuery(document.body).children(0).position().top;
+			/* react to scroll event on window */
+			$window.scroll(function () {
+				window.clearTimeout(scroll_timer);
+				scroll_timer = window.setTimeout(function () { // use a timer for performance
+					if($window.scrollTop() <= 300) // hide if at the top of the page
+					{
+						displayed = false;
+						$message.fadeOut(500);
+					}
+					else if(displayed == false) // show if scrolling down
+					{
+						displayed = true;
+						$message.stop(true, true).fadeIn(500).click(function () { $message.fadeOut(500); });
+					}
+				}, 100);
+			});
+			jQuery('#top-link').click(function(e) { 
+				e.preventDefault();
+				jQuery('html, body').animate({scrollTop:0},'slow')
+				
+			   });
+			   
+			jQuery('.zoom').hover(function(){
+				$(this).stop().animate({}, 200);
+				var id = $(this).attr('nomer');	
+				$(this).attr("src", "/data/images/site/6buttons/"+id+"a.png");
+
+				},
+				function(){
+					$(this).stop().animate({}, 200);
+					var id = $(this).attr('nomer');
+					$(this).attr("src", "/data/images/site/6buttons/"+id+".png");
+			});   
+		});
+	
+	
+	</script>
+	 <script type="text/javascript">
+    $(document).ready(function(){
+      $("#jquery_jplayer_1").jPlayer({
+      "ready": function (e) {
+        $(this).jPlayer("setMedia", {
+        	mp3:"sound.mp3" /// файл музыки
+        });
+      },
+      solution:"flash,html",
+      swfPath: "/player",
+      supplied: "mp3",
+      wmode:"window",
+      cssSelectorAncestor: "",
+      ended :function(){
+      	clearInterval(timer);
+  		timer = 0;
+  		$(elem).css("background-position","0px 0px");
+      },
+      error:function(e){
+  //      console.log(e);
+      }
+    });
+
+	var step = 192; ///пикседлей вправо за один шаг
+	var maxwidth = 2304;///ширина спрайта
+	var interval = 80;//интервал между шагами милесекунды
+	var timer = 0; //таймер не трогать!
+	var elem = ".animation"; /// анимируемый элемент
+	var triger = ".animation"; // клик по какому элементу вызывает анимацию
+
+	function animate(){
+
+    var postion = parseInt($(elem).css("background-position"));
+    if( isNaN(postion)){
+      postion= 0;
+    }
+    postion = postion + step;
+    
+		if(postion>maxwidth){
+			postion = 0;
+		}
+		$(elem).css("background-position",postion+"px 0px");
+	}
+	
+	$(triger).click(function(){
+		if(timer==0){
+			timer = setInterval(animate,interval);
+			$("#jquery_jplayer_1").jPlayer("play");
+		}else{
+			clearInterval(timer);
+			timer = 0;
+			$(elem).css("background-position-x",0);
+			$("#jquery_jplayer_1").jPlayer("stop");
+		}
+
+	});
+	MM_preloadImages('/images/1a.png','/images/2a.png','/images/3a.png','/images/4a.png','/images/5a.png','/images/6a.png')
+  });
+  </script>
+		
+	
+</head>
+<body onload="">
+<div id="top"></div>
+<div class="main">
+	<div class="header">
+			<div class="logo"><a href="/"><img src="/data/images/site/logo.gif" border="0" alt="" width="121" height="204" /></a></div>
+			<div class="head">
+				<div class="login">
+						
+<div class="login_form fr">
+<table width="830" cellpadding="0" cellspacing="0"><tr>
+<td width="350"><a target="_blank" href="https://www.instagram.com/masterdent_plus/"><img src="/data/images/i.png" style="margin-top: 5px; margin-left: 10px; margin-right: 40px; width: 25px; float: right">
+</a>
+<a target="_blank" href="https://www.facebook.com/masterdentplus/"><img src="/data/images/f.png" style="margin-top: 5px; margin-left: 10px; width: 25px; float: right">
+</a>
+<a target="_blank" href="https://vk.com/club93705786"><img src="/data/images/v.png" style="margin-top: 5px; margin-left: 10px; width: 25px; float: right">
+</a>
+</td>
+<td width="315">
+	<form action="" method="post"style="float:left;">
+		<span class="input"><input type="text" id="login_login" name="login[login]" onclick="javascript:if (this.value == 'Введите E-mail') this.value=''" value="Введите E-mail"/></span>
+		<span class="input"><input type="password" id="login_password" name="login[password]" onclick="javascript:if (this.value == 'Пароль') this.value=''" value="Пароль"/></span>
+		<span class="button1"><input type="submit" value="Войти"></span>
+		<input type="hidden" name="login[send]" value="yes" />
+		<input type="hidden" name="login[url]" value="/" />
+	</form>
+</td>
+<td width="95">	
+	<a class="button" href="/registration.html">Регистрация</a>
+</td>
+<td width="130">
+	<a class="button"  href="/forgotpass.html" >Забыли пароль?</a>
+</td>
+</tr></table>	
+</div>
+
+<script>
+  $(document).ready(function(){
+    $.fn.wait = function(time, type) {
+        time = time || 500;
+        type = type || "fx";
+        return this.queue(type, function() {
+            var self = this;
+            setTimeout(function() {
+                $(self).dequeue();
+            }, time);
+        });
+    };
+    function runIt() {
+      $(".blink").wait()
+              .animate({"opacity": 0.01},300)
+              .wait()
+              .animate({"opacity": 1},300,runIt);
+    }
+    runIt();
+  });
+ </script>
+
+					</div>	
+				<div class="block_head_left">
+					<div class="akcia">
+						<div class="akcia_content">
+							<div class="title"></div>
+							<div class="text"></div>
+						</div>
+						<div class="search">
+								<form action="/" method="GET">
+								<input type="text" name="search" onclick="javascript:if (this.value == 'Поиск по сайту') this.value=''" value="Поиск по сайту" class="search_input" />
+								<input type="submit" class="send" value=">>" />
+								</form>
+						</div>
+					</div>
+				</div>
+				<div class="block_head_right">
+					
+					<div class="phones">
+
+					
+ 
+  <style>
+    div.jp-jplayer {
+     width: 0px;
+     height: 0px;	
+    }
+    .animation{
+    	background: url('/sprite.png');
+    	width: 192px;
+    	height:43px;
+		float:right;
+		cursor:pointer;
+    }
+  </style>
+  
+
+  <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+  <div class='animation'></div>
+  
+						<div style="float: right; width:300px;"><span>+7(495) 674-1001</span></div>
+<div style="clear:both; height:5px;">&nbsp;</div>
+						<p><a href="javascript:show_form();" id="call"><span>Мастердент, перезвоните, пожалуйста!</span></a></p>
+					</div>
+				</div>
+			</div>	  
+						<div class="menu_h">
+				<table class="menu_table" cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+												<td class="first">
+								<span><a href="/terapiia.html">Терапия</a></span>
+							</td>
+												<td>
+								<span><a href="/parodontologiia.html">Пародонтология</a></span>
+							</td>
+												<td>
+								<span><a href="/implantologiia.html">Имплантология</a></span>
+							</td>
+												<td>
+								<span><a href="/protezirovanie.html">Протезирование</a></span>
+							</td>
+												<td>
+								<span><a href="/ortodontiia.html">Ортодонтия</a></span>
+							</td>
+												<td>
+								<span><a href="/detskaia_stomatologiia.html">Детская стоматология</a></span>
+							</td>
+												<td class="last">
+								<span><a href="/esteticheskaia_stomatologiia.html">Эстетическая стоматология</a></span>
+							</td>
+										</tr>
+				</table>
+			</div>
+			<div class="menu_h_bot"></div>	
+	<div id="online_form"><div class="form"><div onclick="javascript:show_form();" id="close_form">X</div>
+		<div class="title">Перезвоните мне:</div>
+		<div class="text">
+	
+					<div class="mail_form">
+							<form action="/perezvonite_mne.html#form" method="post">
+								<label>Имя <span class="red">*</span> :</label><span class="input"><input maxlength="40" name="FORM[name]" type="text" value="" /></span>
+								<div class="otst"></div>
+								<label>Телефон <span class="red">*</span> :</label>
+									<span class="input">+7&nbsp;&nbsp;&nbsp;<input id="miniI1" maxlength="3" size="3" name="FORM[phone1]" onkeyup="testJump(this);" type="text" value="" />&nbsp;&nbsp;&nbsp;&nbsp;<input id="miniI1" maxlength="3" size="3" name="FORM[phone2]" onkeyup="testJump(this);" type="text" value="" />&nbsp;&nbsp;-&nbsp;&nbsp;<input id="miniI2" maxlength="2" size="2" name="FORM[phone3]" onkeyup="testJump(this);" type="text" value="" />&nbsp;&nbsp;-&nbsp;&nbsp;<input id="miniI2" maxlength="2" size="2" name="FORM[phone4]" onkeyup="testJump(this);" type="text" value="" /></span>
+								<div class="otst"></div>
+								<label>Удобное время для звонка :</label><span class="select"><span class="select">
+									<select name="FORM[phone_time]">
+										<option  class="selected" selected value="0">Перезвоните сейчас!</option>
+										<option  value="1">с 9:00 до 11:00</option>
+										<option  value="2">с 11:00 до 13:00</option>
+										<option  value="3">с 13:00 до 15:00</option>
+										<option  value="4">с 17:00 до 19:00</option>
+										<option  value="5">с 19:00 до 21:00</option>
+									</select></span>
+								<div class="otst"></div>
+								<label>Являетесь нашим пациентом :</label><span class="select">
+									<select name="FORM[klient]">
+										<option  class="selected" selected value="0">Выбрать</option>
+										<option  value="1">Да</option>
+										<option  value="2">Нет</option>
+									</select>
+								</span>
+								<div class="otst"></div>
+								<label>Дополнительно <br>(укажите краткую <br>суть проблемы) <span class="red">*</span> :</label><span class="textarea"><textarea name="FORM[message]"></textarea></span>
+								
+																<div class="otst"></div>
+								<label><div style="width:122px">&nbsp;</div></label>
+
+								<span class="input">61 + 80 =  <input style="width:87px;" type="text" name="CAPTCHA_TEXT" onclick="javascript:if (this.value == 'Введите сумму') this.value=''" value="Введите сумму" /></span>
+								<span class="more_new fl" style="margin:2px 18px 0px 12px;">
+								<input type="submit" value="Отправить"></span>
+
+								<input type="hidden" name="send_perezvonite" value="yes">
+								<input type="hidden" name="send_perezvonite_id" value="487">
+								<div class="otst"></div>
+							</form>
+					</div>
+				</div>
+	</div></div>
+	</div>
+	<div class="content">
+		<div class="left">
+		<div class="menu">
+	<ul>
+	<li><a href="/o_kompanii.html">» О компании</a></li><li><a href="/clinics.html">» Контакты клиник</a></li><li><a href="/postanovlenie.html">» Постановление Правительства РФ</a></li><li><a href="/prais.html">» Прайс</a></li><li><a href="/doctors.html">» Наши специалисты</a></li><li><a href="/oborudovanie.html">» Оборудование</a></li><li><a href="/poleznaia_informatsiia.html">» Полезная информация</a></li><li><a href="/yumor_v_stomatologii.html">» Юмор в стоматологии</a></li><li><a href="http://masterdent.ru/sitemap.html ">» Карта сайта</a></li>	</ul>
+</div>
+
+
+<div class="block" id="mail_prezident">
+				<div class="title">Написать письмо Президенту сети:</div>
+				<div class="prezident">
+				 
+					<div class="mail_form2">
+							<form action="" method="post">
+								<span class="input"><input type="text" id="login_login" name="login[login]" onclick="javascript:if (this.value == 'Введите E-mail') this.value=''" value="Введите E-mail" /></span>
+								<div class="otst"></div>
+								<span class="input"><input type="password" id="login_password" name="login[password]" onclick="javascript:if (this.value == 'Пароль') this.value=''" value="Пароль" /></span>
+
+								<div class="fr"><input type="submit" value="Войти"></div>
+								<div class="otst"></div>
+								<input type="hidden" name="login[send]" value="yes" />
+								<input type="hidden" name="login[url]" value="/" />
+							</form>
+					</div>
+								
+				</div>
+			</div>
+
+
+<div style="width:200px; margin:20px 0px 60px 0px;">
+	
+	<div id="slider_left_pos" class="nivoSlider">
+		<a href="/oborudovanie.html"><img alt='Томограф Gendex CB-500' src="/images/uploaded/photos_184.jpg" width="200" height="225"/></a><a href="/oborudovanie.html"><img alt='Ортопантомограф Trophy Pan Kodak 8000' src="/images/uploaded/photos_185.jpg" width="200" height="225"/></a><a href="/oborudovanie.html"><img alt='Эрбиевый лазер Waterlase iPlus' src="/images/uploaded/photos_186.jpg" width="200" height="225"/></a><a href="/oborudovanie.html"><img alt='Дентальный рентген RVG Gendex' src="/images/uploaded/photos_187.jpg" width="200" height="225"/></a>	</div>
+
+</div>	
+
+
+<style>
+#slider_left_pos {padding:0px;height:225px;width:200px;overflow:hidden;}
+#slider_left_pos img{height:225px;width:200px;overflow:hidden;}
+#slider_left_pos .nivoSlider a.nivo-imageLink {border: 0 none;display: none;height: 100%;left: 0;margin: 0;padding: 0;position: absolute;top: 0;width: 100%;z-index: 6;}
+#slider_left_pos .nivo-controlNav {display:none; bottom: 10px;left: 10px;position: absolute;opacity:1;z-index:1000;}
+#slider_left_pos .nivo-controlNav a {background: url("/data/images/site/buttons/pagination.png") no-repeat scroll 0 0 transparent;border: 0 none;display: block;float: left;height: 15px;margin-right: 6px;text-indent: -9999px;width: 15px;cursor:pointer;}
+#slider_left_pos .nivo-controlNav a.active {background-position: 0 -15px;}
+</style>
+<script>
+	$(window).load(function() {
+		$('#slider_left_pos').nivoSlider({
+			effect: 'fade', // Specify sets like: 'fold,fade,sliceDown'
+			slices: 15, // For slice animations
+			boxCols: 8, // For box animations
+			boxRows: 4, // For box animations
+			animSpeed: 500, // Slide transition speed
+			pauseTime: 3000, // How long each slide will show
+			startSlide: 0, // Set starting Slide (0 index)
+			directionNav: false, // Next & Prev navigation
+			controlNav: true, // 1,2,3... navigation
+			controlNavThumbs: false, // Use thumbnails for Control Nav
+			pauseOnHover: false, // Stop animation while hovering
+			manualAdvance: false, // Force manual transitions
+			prevText: 'Prev', // Prev directionNav text
+			nextText: 'Next', // Next directionNav text
+			randomStart: false, // Start on a random slide
+			beforeChange: function(){}, // Triggers before a slide transition
+			afterChange: function(){}, // Triggers after a slide transition
+			slideshowEnd: function(){}, // Triggers after all slides have been shown
+			lastSlide: function(){}, // Triggers when last slide is shown
+			afterLoad: function(){} // Triggers when slider has loaded
+		});
+	});
+	</script>
+
+
+
+			
+		
+			
+		<script type="text/javascript">
+	function show_form(){ dis_form = $("#online_form").css("display"); if (dis_form == 'none') { $("#online_form").show('size', {}, 400); $("html,body").animate({ scrollTop: $(".header").offset().top}, 700); }else{ $("#online_form").hide('size', {}, 400); }};
+	function show_form2(){ dis_form = $("#online_form2").css("display"); if (dis_form == 'none') { $("#online_form2").show('size', {}, 400); $("html,body").animate({ scrollTop: $(".header").offset().top}, 700); }else{ $("#online_form2").hide('size', {}, 400); }};
+
+function testJump(x){
+    var ml = ~~x.getAttribute('maxlength');
+    if(ml && x.value.length >= ml){
+        do{
+            x = x.nextSibling;
+        }
+        while(x && !(/text/.test(x.type)));
+        if(x && /text/.test(x.type)){
+            x.focus();
+        }
+    }
+}
+
+	</script>	
+			
+
+		</div>
+		<div class="right">
+				<div class="news_block">
+				<div class="news">
+					<div class="title">
+					Новости</div>
+					<div class="text">
+												<div class="news_lent first">
+							<div class="date"><span>12</span>09.2016</div>
+							<div class="item">
+								<div class="item_title">Открытие клиники Мастердент+ в городе Красногорск!</div>
+								<div class="item_text"><p>&nbsp;Открытие клиники Мастердент+ в городе Красногорск!</p>
+								<a href="/news/news16.html" class="item_more">Читать далее</a>
+								</div>
+							</div>
+						</div>
+												<div class="news_lent">
+							<div class="date"><span>23</span>04.2015</div>
+							<div class="item">
+								<div class="item_title">Нам 10 лет!</div>
+								<div class="item_text"><p><span style="color: rgb(255, 0, 0);">Нашей клинике на Новоясеневском проспекте сегодня 10 лет.</span></p>
+<p>От всей души поздравляем коллектив клиники с юбилеем!</p>
+<p><span style="font-family: Tahoma, Arial; line-height: 16px; text-align: center; background-color: rgb(244, 247, 248);">Для всех нас это значимая дата, символизирующая стабильность и благополучие нашего положения и работы на благо компании. Пусть и в Вашей жизни будет все прекрасно и гармонично! Здоровья Вам и отличного настроения.</span><span id="ctrlcopy" style="margin: -37px 0px 0px -4px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; width: 1px; height: 1px; display: block; position: absolute; z-index: 5; color: transparent; opacity: 0; overflow: hidden; font-family: Tahoma, Arial; line-height: 16px; text-align: center; background: url(http://pozdrav.a-angel.ru/images/poem.png) 0px 0px no-repeat rgb(244, 247, 248);"><br />
+&copy;<a href="http://pozdrav.a-angel.ru/pozdravleniya/s-jubileem-organizacii-8.html" style="margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; color: rgb(41, 105, 126); cursor: pointer; background: transparent;">http://pozdrav.a-angel.ru/pozdravleniya/s-jubileem-organizacii-8.html</a></span></p>
+								<a href="/news/news15.html" class="item_more">Читать далее</a>
+								</div>
+							</div>
+						</div>
+												<div class="news_lent">
+							<div class="date"><span>23</span>05.2014</div>
+							<div class="item">
+								<div class="item_title">Гибридная керамика. Альтернатива отбеливанию зубов.</div>
+								<div class="item_text"><p><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:TrackMoves />
+<w:TrackFormatting />
+<w:PunctuationKerning />
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:DoNotPromoteQF />
+<w:LidThemeOther>RU</w:LidThemeOther>
+<w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+<w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:SplitPgBreakAndParaMark />
+<w:EnableOpenTypeKerning />
+<w:DontFlipMirrorIndents />
+<w:OverrideTableStyleHps />
+<w:UseFELayout />
+</w:Compatibility>
+<m:mathPr>
+<m:mathFont m:val="Cambria Math" />
+<m:brkBin m:val="before" />
+<m:brkBinSub m:val="&#45;-" />
+<m:smallFrac m:val="off" />
+<m:dispDef />
+<m:lMargin m:val="0" />
+<m:rMargin m:val="0" />
+<m:defJc m:val="centerGroup" />
+<m:wrapIndent m:val="1440" />
+<m:intLim m:val="subSup" />
+<m:naryLim m:val="undOvr" />
+</m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+LatentStyleCount="267">
+<w:LsdException Locked="false" Priority="0" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Normal" />
+<w:LsdException Locked="false" Priority="9" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="heading 1" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" />
+<w:LsdException Locked="false" Priority="39" Name="toc 1" />
+<w:LsdException Locked="false" Priority="39" Name="toc 2" />
+<w:LsdException Locked="false" Priority="39" Name="toc 3" />
+<w:LsdException Locked="false" Priority="39" Name="toc 4" />
+<w:LsdException Locked="false" Priority="39" Name="toc 5" />
+<w:LsdException Locked="false" Priority="39" Name="toc 6" />
+<w:LsdException Locked="false" Priority="39" Name="toc 7" />
+<w:LsdException Locked="false" Priority="39" Name="toc 8" />
+<w:LsdException Locked="false" Priority="39" Name="toc 9" />
+<w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" />
+<w:LsdException Locked="false" Priority="10" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Title" />
+<w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font" />
+<w:LsdException Locked="false" Priority="11" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtitle" />
+<w:LsdException Locked="false" Priority="22" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Strong" />
+<w:LsdException Locked="false" Priority="20" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Emphasis" />
+<w:LsdException Locked="false" Priority="59" SemiHidden="false"
+UnhideWhenUsed="false" Name="Table Grid" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" />
+<w:LsdException Locked="false" Priority="1" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="No Spacing" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 1" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 1" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 1" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 1" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" />
+<w:LsdException Locked="false" Priority="34" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" />
+<w:LsdException Locked="false" Priority="29" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Quote" />
+<w:LsdException Locked="false" Priority="30" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 1" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 1" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 1" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 1" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 1" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 2" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 2" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 2" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 2" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 2" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 2" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 2" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 2" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 3" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 3" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 3" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 3" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 3" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 3" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 3" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 3" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 3" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 4" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 4" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 4" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 4" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 4" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 4" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 4" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 4" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 4" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 5" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 5" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 5" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 5" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 5" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 5" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 5" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 5" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 5" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 6" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 6" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 6" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 6" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 6" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 6" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 6" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 6" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 6" />
+<w:LsdException Locked="false" Priority="19" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" />
+<w:LsdException Locked="false" Priority="21" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" />
+<w:LsdException Locked="false" Priority="31" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" />
+<w:LsdException Locked="false" Priority="32" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" />
+<w:LsdException Locked="false" Priority="33" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Book Title" />
+<w:LsdException Locked="false" Priority="37" Name="Bibliography" />
+<w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" />
+</w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Обычная таблица";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-priority:99;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin-top:0cm;
+mso-para-margin-right:0cm;
+mso-para-margin-bottom:10.0pt;
+mso-para-margin-left:0cm;
+line-height:115%;
+mso-pagination:widow-orphan;
+font-size:11.0pt;
+font-family:"Calibri","sans-serif";
+mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;
+mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:TrackMoves />
+<w:TrackFormatting />
+<w:PunctuationKerning />
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:DoNotPromoteQF />
+<w:LidThemeOther>RU</w:LidThemeOther>
+<w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+<w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:SplitPgBreakAndParaMark />
+<w:EnableOpenTypeKerning />
+<w:DontFlipMirrorIndents />
+<w:OverrideTableStyleHps />
+<w:UseFELayout />
+</w:Compatibility>
+<m:mathPr>
+<m:mathFont m:val="Cambria Math" />
+<m:brkBin m:val="before" />
+<m:brkBinSub m:val="&#45;-" />
+<m:smallFrac m:val="off" />
+<m:dispDef />
+<m:lMargin m:val="0" />
+<m:rMargin m:val="0" />
+<m:defJc m:val="centerGroup" />
+<m:wrapIndent m:val="1440" />
+<m:intLim m:val="subSup" />
+<m:naryLim m:val="undOvr" />
+</m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+LatentStyleCount="267">
+<w:LsdException Locked="false" Priority="0" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Normal" />
+<w:LsdException Locked="false" Priority="9" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="heading 1" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" />
+<w:LsdException Locked="false" Priority="39" Name="toc 1" />
+<w:LsdException Locked="false" Priority="39" Name="toc 2" />
+<w:LsdException Locked="false" Priority="39" Name="toc 3" />
+<w:LsdException Locked="false" Priority="39" Name="toc 4" />
+<w:LsdException Locked="false" Priority="39" Name="toc 5" />
+<w:LsdException Locked="false" Priority="39" Name="toc 6" />
+<w:LsdException Locked="false" Priority="39" Name="toc 7" />
+<w:LsdException Locked="false" Priority="39" Name="toc 8" />
+<w:LsdException Locked="false" Priority="39" Name="toc 9" />
+<w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" />
+<w:LsdException Locked="false" Priority="10" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Title" />
+<w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font" />
+<w:LsdException Locked="false" Priority="11" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtitle" />
+<w:LsdException Locked="false" Priority="22" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Strong" />
+<w:LsdException Locked="false" Priority="20" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Emphasis" />
+<w:LsdException Locked="false" Priority="59" SemiHidden="false"
+UnhideWhenUsed="false" Name="Table Grid" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" />
+<w:LsdException Locked="false" Priority="1" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="No Spacing" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 1" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 1" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 1" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 1" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" />
+<w:LsdException Locked="false" Priority="34" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" />
+<w:LsdException Locked="false" Priority="29" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Quote" />
+<w:LsdException Locked="false" Priority="30" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 1" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 1" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 1" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 1" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 1" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 2" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 2" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 2" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 2" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 2" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 2" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 2" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 2" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 3" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 3" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 3" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 3" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 3" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 3" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 3" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 3" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 3" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 4" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 4" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 4" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 4" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 4" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 4" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 4" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 4" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 4" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 5" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 5" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 5" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 5" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 5" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 5" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 5" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 5" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 5" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 6" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 6" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 6" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 6" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 6" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 6" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 6" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 6" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 6" />
+<w:LsdException Locked="false" Priority="19" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" />
+<w:LsdException Locked="false" Priority="21" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" />
+<w:LsdException Locked="false" Priority="31" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" />
+<w:LsdException Locked="false" Priority="32" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" />
+<w:LsdException Locked="false" Priority="33" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Book Title" />
+<w:LsdException Locked="false" Priority="37" Name="Bibliography" />
+<w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" />
+</w:LatentStyles>
+</xml><![endif]--><span style="font-size: medium;"><!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG />
+</o:OfficeDocumentSettings>
+</xml><![endif]--></span></p>
+<p><span style="font-size: medium;"><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:TrackMoves />
+<w:TrackFormatting />
+<w:PunctuationKerning />
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:DoNotPromoteQF />
+<w:LidThemeOther>RU</w:LidThemeOther>
+<w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+<w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:SplitPgBreakAndParaMark />
+<w:EnableOpenTypeKerning />
+<w:DontFlipMirrorIndents />
+<w:OverrideTableStyleHps />
+</w:Compatibility>
+<m:mathPr>
+<m:mathFont m:val="Cambria Math" />
+<m:brkBin m:val="before" />
+<m:brkBinSub m:val="&#45;-" />
+<m:smallFrac m:val="off" />
+<m:dispDef />
+<m:lMargin m:val="0" />
+<m:rMargin m:val="0" />
+<m:defJc m:val="centerGroup" />
+<m:wrapIndent m:val="1440" />
+<m:intLim m:val="subSup" />
+<m:naryLim m:val="undOvr" />
+</m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+LatentStyleCount="267">
+<w:LsdException Locked="false" Priority="0" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Normal" />
+<w:LsdException Locked="false" Priority="9" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="heading 1" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" />
+<w:LsdException Locked="false" Priority="39" Name="toc 1" />
+<w:LsdException Locked="false" Priority="39" Name="toc 2" />
+<w:LsdException Locked="false" Priority="39" Name="toc 3" />
+<w:LsdException Locked="false" Priority="39" Name="toc 4" />
+<w:LsdException Locked="false" Priority="39" Name="toc 5" />
+<w:LsdException Locked="false" Priority="39" Name="toc 6" />
+<w:LsdException Locked="false" Priority="39" Name="toc 7" />
+<w:LsdException Locked="false" Priority="39" Name="toc 8" />
+<w:LsdException Locked="false" Priority="39" Name="toc 9" />
+<w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" />
+<w:LsdException Locked="false" Priority="10" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Title" />
+<w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font" />
+<w:LsdException Locked="false" Priority="11" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtitle" />
+<w:LsdException Locked="false" Priority="22" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Strong" />
+<w:LsdException Locked="false" Priority="20" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Emphasis" />
+<w:LsdException Locked="false" Priority="59" SemiHidden="false"
+UnhideWhenUsed="false" Name="Table Grid" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" />
+<w:LsdException Locked="false" Priority="1" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="No Spacing" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 1" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 1" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 1" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 1" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" />
+<w:LsdException Locked="false" Priority="34" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" />
+<w:LsdException Locked="false" Priority="29" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Quote" />
+<w:LsdException Locked="false" Priority="30" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 1" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 1" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 1" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 1" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 1" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 2" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 2" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 2" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 2" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 2" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 2" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 2" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 2" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 3" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 3" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 3" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 3" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 3" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 3" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 3" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 3" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 3" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 4" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 4" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 4" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 4" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 4" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 4" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 4" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 4" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 4" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 5" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 5" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 5" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 5" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 5" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 5" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 5" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 5" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 5" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 6" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 6" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 6" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 6" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 6" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 6" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 6" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 6" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 6" />
+<w:LsdException Locked="false" Priority="19" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" />
+<w:LsdException Locked="false" Priority="21" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" />
+<w:LsdException Locked="false" Priority="31" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" />
+<w:LsdException Locked="false" Priority="32" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" />
+<w:LsdException Locked="false" Priority="33" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Book Title" />
+<w:LsdException Locked="false" Priority="37" Name="Bibliography" />
+<w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" />
+</w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Обычная таблица";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-priority:99;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin-top:0cm;
+mso-para-margin-right:0cm;
+mso-para-margin-bottom:10.0pt;
+mso-para-margin-left:0cm;
+line-height:115%;
+mso-pagination:widow-orphan;
+font-size:11.0pt;
+font-family:"Calibri","sans-serif";
+mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;
+mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;
+mso-fareast-language:EN-US;}
+</style>
+<![endif]--> </span></p>
+<p><strong>В клинике Мастердент стоматология в Раменках (Мосфильмовская ул. 41).</strong> </p>
+<p>Из гибридной керамики получаются высокопрочные виниры без     препарирования зубов с прочным, стабильным краем толщиной от 0,2мм.     Обычный винир имеет толщину от 0,6мм, люминир<span style="mso-spacerun: yes">&nbsp; </span>от 0,33. Из гибридной керамики     получаются точные и детальные реставрации, тонкий прочный край     повторяет форму зуба, и в то же время у нас есть возможность     изменить форму и цвет зубов, выбрав более светлые оттенки<span style="COLOR: #666666">.</span></p>
+								<a href="/news/news12.html" class="item_more">Читать далее</a>
+								</div>
+							</div>
+						</div>
+												<div class="news_lent">
+							<div class="date"><span>14</span>03.2014</div>
+							<div class="item">
+								<div class="item_title">Комплексное  гнатологическое  3D обследование и восстановление прикуса</div>
+								<div class="item_text"><p><b>В клинике </b><b>Мастердент стоматология в Раменках (Мосфильмовская ул. 41 )</b></p>
+<p>Гнатологическая консультация.<br />
+Консультация гнатолога - это сложная, комплексная, эксклюзивная услуга. Она может быть осуществлена врачом, получившим специальное образование. Гнатология как дисциплина в стоматологических ВУЗах России не преподаётся, поэтому в настоящее время врач-стоматолог может получить соответствующее образование и квалификацию гнатолога только за рубежом.<br />
+&nbsp;</p>
+								<a href="/news/news11.html" class="item_more">Читать далее</a>
+								</div>
+							</div>
+						</div>
+												<div class="news_lent">
+							<div class="date"><span>27</span>02.2014</div>
+							<div class="item">
+								<div class="item_title">УМНЫЙ НАРКОЗ – В УМНЫХ РУКАХ</div>
+								<div class="item_text"><p style="margin-bottom:0.0001pt;line-height:150%;"><b>Кто еще не был у нас, записывайте адрес: клиника Мастердент, Волгоградский проспект, 54.</b></p>
+<p style="margin-bottom:0.0001pt;line-height:150%;"><b>С 12 марта начнет действовать наше новшество &ndash; УМНЫЙ НАРКОЗ.</b></p>
+<p style="margin-bottom:0.0001pt;line-height:150%;">Современная  стоматология в опытных и умных руках уже давно не причиняет боли. Наши  пациенты хорошо знают это, и потому любая проблема, с которой они к нам  приходят&nbsp; &ndash; лечение зубов, удаление, протезирование &ndash; страха не  вызывает. И тут нечему удивляться:&nbsp; правильная анестезия действует  надежно. Если, конечно, и во всем остальном врач-стоматолог оказывается  на высоте. А в нашей клинике иначе быть не может.</p>
+<p>&nbsp;</p>
+								<a href="/news/news10.html" class="item_more">Читать далее</a>
+								</div>
+							</div>
+						</div>
+												<div class="news_lent">
+							<div class="date"><span>13</span>09.2012</div>
+							<div class="item">
+								<div class="item_title">Стоматология в рассрочку</div>
+								<div class="item_text"><p>В Компании  <span style="font-family:Tahoma;"><strong><span style="color:#009999;">Мастердент</span></strong></span>  вы можете оформить рассрочку на льготных условиях на оказание стоматологических услуг.</p>
+								<a href="/news/news4.html" class="item_more">Читать далее</a>
+								</div>
+							</div>
+						</div>
+											</div>
+					<div class="more"><span><a href="/news.html">Все новости</a></span></div>
+				</div>
+			</div>
+	<div class="content_block">
+		<div class="blocks_tl">
+<div class="blocks_tr">
+<div class="blocks_bl">
+<div class="blocks_br">
+<div class="main_block">
+<ul id="animenu">
+
+	    <li><a href="/ostraya_bol.html"><img width="112" class="zoom" nomer="1" src="/data/images/site/6buttons/1.png" alt="" /></a></li>	
+	    <li><a href="/online_consultant.html"><img width="112" class="zoom" nomer="2" src="/data/images/site/6buttons/2.png" alt="" /></a></li>	
+	    <li><a href="/zapis_na_priem.html"><img width="112" class="zoom" nomer="3" src="/data/images/site/6buttons/3.png" alt="" /></a></li>	
+	    <li><a href="/map_clinics.html"><img width="112" class="zoom" nomer="4" src="/data/images/site/6buttons/4.png" alt="" /></a></li>	
+		
+	
+	    <li><a href="/online_diagnosis.html"><img width="112" class="zoom" nomer="5" src="/data/images/site/6buttons/5.png" alt="" /></a></li>	
+	    <li><a href="/diagnozi.html"><img width="112" class="zoom" nomer="6" src="/data/images/site/6buttons/6.png" alt="" /></a></li>	
+	
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+	<div class="text">
+		<h1 style="text-align: center;">Стоматология &quot;Мастердент&quot;</h1>
+<div style="text-align: justify;"><span style="font-family: Tahoma;">Компания <span style="color: rgb(0, 153, 153);">&laquo;Мастердент&raquo;</span> была основана в 1995 году и представляет собой крупнейшую сеть коммерческих стоматологических клиник в России, странах СНГ и близлежащих странах Европы. Сотни людей ежедневно пользуются нашими услугами. Стоматология&nbsp;</span><span style="color: rgb(0, 153, 153); font-family: Tahoma;">&laquo;Мастердент&raquo;&nbsp;</span><span style="font-family: Tahoma;">- каждый день помогает людям дарить улыбку. Наши клиники полностью укомплектована лучшим европейским оборудованием и профессиональной командой специалистов. Персонал постоянно стажируется и повышает свою квалификацию &ndash; это гарантия успеха внедрения инновационных технологий.</span></div>
+<p>&nbsp;</p>
+		<div class="slider_block">
+			<div id="slider" class="nivoSlider">
+				<p><img width="505" height="295" src="/data/files/uploaded/imageimage/slider001.jpg" alt="" /></p>
+<p><img width="505" height="295" src="/data/files/uploaded/imageimage/slider002.jpg" alt="" /></p>
+<p><img width="505" height="295" src="/data/files/uploaded/imageimage/SL1.jpg" alt="" /></p>
+<p><img width="505" height="295" src="/data/files/uploaded/imageimage/SL2.jpg" alt="" /></p>
+<p><img width="505" height="295" src="/data/files/uploaded/imageimage/SL3.jpg" alt="" /></p>
+			</div>
+			<div class="slider_bottom"></div>
+		</div>
+		<div style="font-family: Tahoma; text-align: justify;">Стоматологическая клиника&nbsp;<span style="color: rgb(0, 153, 153);">&laquo;Мастердент&raquo;</span>&nbsp;- это&nbsp;<strong>бренд №1</strong>&nbsp;в стоматологии на рынке рекреационных услуг. Узнаваемость данного бренда находится на очень высоком уровне. Клиника&nbsp;<span style="color: rgb(0, 153, 153);">&laquo;Мастердент&raquo;</span>&nbsp;- это успешная торговая марка, принимающая участие во многих международных конкурсах. В 2005 году компания&nbsp;<span style="color: rgb(0, 153, 153);">&laquo;Мастердент&raquo;</span>&nbsp;триумфально была удостоена титула&nbsp;<strong>&laquo;Супер бренд года&raquo;</strong>, одержав победу над всеми стоматологическими брендами.</div>
+<div style="font-family: Tahoma; text-align: justify;">&nbsp;</div>
+<div style="font-family: Tahoma; text-align: justify;">Стоматология&nbsp;<span style="color: rgb(0, 153, 153);">&laquo;Мастердент&raquo;&nbsp;</span>- место, где всегда уделяли повышенное внимание качеству оказываемых услуг, используемых в работе инструментов и расходных материалов. Каждая нашастоматологическая клиника придерживается правила долговременного семейного сотрудничества с посетителями клиники. Мы считаем, что лучше сделать один раз на качество, нежели склонять посетителей к постоянному посещению клиники с одним и тем же вопросом. В связи с этим, к нам приходят лечиться целыми поколениями семей. И данный подход, в том числе, обеспечил нам сертификацию международной системы качества ISO 9001:2001. Мы &ndash; единственная сертифицированная стоматологическая компания в России.&nbsp;</div>
+<p>&nbsp;</p>
+<div style="font-family: Tahoma; text-align: justify;">Все наши стоматологии в Москве расположены в шаговой доступности от метро и во всех округах!&nbsp;</div>
+<p><span style="font-family:Tahoma;">Компания оказывает <strong>все виды стоматологических услуг</strong>: терапия, ортопедия, хирургия, детская стоматология, ортодонтия, имплантология, рентгенология;</span></p>
+<p><span style="font-family:Tahoma;">Все клиники <span style="color:#009999;"><strong>Мастердент</strong> </span><strong>оснащены современным медицинским и диагностическим оборудованием</strong> ведущих мировых производителей: <strong>KaVo </strong>(Германия), <strong>Sirona </strong>(Германия), <strong>Castellini </strong>(Италия), <strong>Trofi </strong>(Франция) и т.д.;</span></p>
+			<div class="text_block" style="position:relative;">
+						<div class="blockl">
+							<div class="title">НАШИ ПРЕИМУЩЕСТВА:</div>
+							<div class="text"><ul>
+    <li><strong>Спокойная атмосфера</strong></li>
+    <li><strong>Гарантия качества услуг</strong></li>
+    <li><strong>Современное оборудование</strong></li>
+    <li><strong>Свои зуботехнические лаборатории</strong></li>
+    <li><strong>Высококвалифицированные кадры</strong></li>
+</ul>
+<p>&nbsp;</p></div>
+						</div>
+												<div class="blockr">
+							<div class="title">Доска почета</div>
+							<div class="text">
+								<div class="mini_photo">
+									<a title="Дё Дмитрий Анатольевич" href="/data/images/uploaded/doctors_11.jpg" class="gal">
+									<img src="/data/images/uploaded/doctors_11_thumbnail.jpg" width="100" /></a>
+								</div>
+								<a href="/doctors/doctor-11.html"><b>Дё Дмитрий Анатольевич</b></a><br />
+								<b>Имплантолог</b><br />
+								<b><a href="/clinics/clinic-2.html">Стоматология на Кутузовской – Мастердент</a></b>
+								<br />
+							</div>
+						</div>
+											</div>
+					<script type="text/javascript"> $(document).ready(function(){ $("#mail_prezident").show("slide", {}, 800); }); </script>
+	</div>
+	</div>
+</div>
+<div class="clear">
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+<div style="width:980px; margin:0px auto;"><table width="100%" cellpadding="0" cellspacing="0"><tr>
+<td><div class="footer_logo">&nbsp;</div></td><td><div class="copyright"><p>1995-2013 &copy; Все права защищены.</p>
+<p>Любое использование информации только с разрешения владельцев ресурса.</p><p>Создание сайта - Peon AG</p></div>
+<div style="width: 350px; height: 42px; float: right;">
+<!--<a target="_blank" href="https://www.instagram.com/masterdent_plus/"><img src="/data/images/i.png" style="margin-top: 10px; margin-left: 10px; margin-right: 10px; width: 30px; float: right">
+</a>
+<a target="_blank" href="https://www.facebook.com/masterdentplus/"><img src="/data/images/f.png" style="margin-top: 10px; margin-left: 10px; width: 30px; float: right">
+</a>
+<a target="_blank" href="https://vk.com/club93705786"><img src="/data/images/v.png" style="margin-top: 10px; margin-left: 10px; width: 30px; float: right">
+</a>-->
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+
+</div>
+
+<div id="message"><a href="#top" id="top-link">Наверх</a></div>	
+
+	</body>
+
+</html>

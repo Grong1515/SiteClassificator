@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru" xml:lang="ru">
+ <head >
+  <title>mespana.ru - òåëåôîí: +7 499 129 45 57, ìåáåëü, ýëèòíàÿ ìåáåëü, ìåáåëü èç Èòàëèè, ìåáåëü èç Èñïàíèè - Î êîìïàíèè</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <meta http-equiv="Content-Language" content="ru">
+
+  <meta name="Author" content="">
+  <meta name="Keywords" content="ìåáåëü Èñïàíèè">
+  <meta name="Description" content="ìåáåëü Èñïàíèè">
+
+  <meta name='yandex-verification' content='643dc6ffabbd9813' />
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+ 
+<script type="text/javascript" src="/js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/buxtom.js"></script>
+<script type="text/javascript" src="/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.js"></script>
+<link rel="stylesheet" type="text/css" href="/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+
+ </head>
+
+ <body>
+<div id="window_muar"></div>
+
+ <div id="window_price">
+	<form class="form">
+	<div id="window_price_cont">
+		<input type="hidden" id="form_id" value="">
+		<input type="hidden" id="form_cat" value="">
+		<h2 style='color: #000; font-size: 12px;'>Âû ìîæåòå îñòàâèòü çàïðîñ, çàïîëíèâ ôîðìó íèæå è íàøè ìåíåäæåðû ñâÿæóòñÿ ñ âàìè äëÿ óòî÷íåíèÿ öåíû íà äàííóþ ìîäåëü.</h2>
+		<div id="window_price_din"></div>
+		<div id="window_price_form"><div id="form_complete"></div>
+<div id="form_onemore" class="button_1">Îòïðàâèòü åù¸ îäíî</div>
+<div id="form_body">
+
+<div class="form_title_1">Âàøå èìÿ:</div>
+<div id="form_name_err" class="form_err"></div>
+<input class="form_pole_1" type="text" id="form_name" name="form_name" value="" maxlength="64">
+
+
+<div class="form_title_1">Àäðåñ ýëåêòðîííîé ïî÷òû:</div>
+<div id="form_mail_err" class="form_err"></div>
+<input class="form_pole_1" type="text" id="form_mail" name="form_mail" value="" maxlength="64">
+
+
+<div class="form_title_1">Êîíòàêòíûé òåëåôîí:</div>
+<input class="form_pole_1" type="text" id="form_phone" name="form_phone" value="" maxlength="64">
+
+
+<div class="form_title_1">Ñîîáùåíèå:</div>
+<div id="form_text_err" class="form_err"></div>
+<textarea id="form_text" name="form_text" class="form_area_1" ></textarea>
+
+	
+<div class="form_title_1">Êîíòðîëüíîå ÷èñëî (ââåäèòå öèôðû, êòîðûå âû âèäèòå íèæå):</div>
+<div id="form_bot_err" class="form_err"></div>
+<span id="form_bot_test" class="protect_cod">2278</span>
+<input class="form_pole_1" style="width: 100px;" type="text"  id="form_bot" name="form_bot" value ="" />
+
+		
+<input type="hidden" name="test" value="2278">
+
+
+<br /><br />
+<div  id="form_clic" class="button_1" style="width: 100px; float: left">Îòïðàâèòü</div>
+<div id="form_action" class="form_act" style=" float: left"></div>
+<div class="clear"></div>
+<br />
+
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+
+	$("#form_clic").click(function(){
+		
+		
+		var form_name = $("#form_name").val();
+		var form_mail = $("#form_mail").val();
+		var form_phone = $("#form_phone").val();
+		var form_text = $("#form_text").val();
+		var form_bot_test = $("#form_bot_test").text();
+		var form_bot = $("#form_bot").val();
+		
+		var form_href = $("#form_href").val();
+		var form_title = $("#form_title").val();
+		var form_id = $("#form_id").val();
+		var form_cat = $("#form_cat").val();
+		
+		
+		$.ajax({  
+			type: "POST",  
+			url: "/modules/mod_feedback/action.php",  
+			data: "form_name=" + form_name + "&form_mail=" + form_mail + "&form_phone=" + form_phone + "&form_text=" + form_text + "&form_bot_test=" + form_bot_test + "&form_bot=" + form_bot + "&form_href=" + form_href + "&form_title=" + form_title + "&form_id=" + form_id + "&form_cat=" + form_cat,
+			beforeSend: function(){  
+				$("#form_action").html("<img src='/images/loading1.gif' />").slideDown(250);
+			},
+			success: function(html){ 
+				$("#form_action").html(html);
+				$("#form_action").html("").slideUp(100);
+			},  
+			error: function(){  
+				$("#form_action").html("Ïðîèçîøëà îøèáêà");
+			},
+			complete: function(){  
+				//$("#form_action").html("").slideUp(200);
+			} 
+		});	
+	});
+
+	
+	
+});						
+</script></div>
+	</div>
+	<div id="window_price_but">Óçíàòü öåíó</div>
+	</form>	
+ </div>
+
+
+
+
+<script type="text/javascript">
+
+  jsHover = function() {
+    var hEls = document.getElementById("nav").getElementsByTagName("LI");
+    for (var i=0, len=hEls.length; i<len; i++) {
+      hEls[i].onmouseover=function() { this.className+=" jshover"; }
+      hEls[i].onmouseout=function() { this.className=this.className.replace(" jshover", ""); }
+    }
+  }
+  if (window.attachEvent && navigator.userAgent.indexOf("Opera")==-1) window.attachEvent("onload", jsHover);
+
+  jsHover = function() {
+    var hEls = document.getElementById("nav1").getElementsByTagName("LI");
+    for (var i=0, len=hEls.length; i<len; i++) {
+      hEls[i].onmouseover=function() { this.className+=" jshover"; }
+      hEls[i].onmouseout=function() { this.className=this.className.replace(" jshover", ""); }
+    }
+  }
+  if (window.attachEvent && navigator.userAgent.indexOf("Opera")==-1) window.attachEvent("onload", jsHover);
+
+  jsHover = function() {
+    var hEls = document.getElementById("nav2").getElementsByTagName("LI");
+    for (var i=0, len=hEls.length; i<len; i++) {
+      hEls[i].onmouseover=function() { this.className+=" jshover"; }
+      hEls[i].onmouseout=function() { this.className=this.className.replace(" jshover", ""); }
+    }
+  }
+  if (window.attachEvent && navigator.userAgent.indexOf("Opera")==-1) window.attachEvent("onload", jsHover);
+
+</script>
+
+
+<center>
+ <table  border="0" width="100%" cellpadding="0" cellspacing="0">
+ <tr>
+	 <td height="450" style="background:url(images/fon.jpg) top center repeat-x;">
+	 <!-- -----------------------------------------------head----------------------------------------------------- -->
+
+        
+
+
+	 <!-- -----------------------------------------------head----------------------------------------------------- -->
+	 <img alt="" height="447" src="heder.png" width="1338" /></td>
+ </tr>
+ <tr>
+	 <td height="20" align="center">
+
+
+
+	 <!-- -----------------------------------------------links----------------------------------------------------- -->
+	 <table border="0" width="820" cellpadding="0" cellspacing="0">
+	 <tr>
+		<td class="cell" align="center">
+		
+		<span class="big_font"><a href="index.php?page=1">Î êîìïàíèè</a></span>
+
+		</td>
+		<td width="26"><img src="images/but.png" width="26" height="20" border="0" alt=""></td>
+		<td class="cell" align="left">
+			<ul id="nav">
+			  <li><span class="big_font"><a href="catalog.php?cat=1">Êàòàëîã</a></span>
+				<ul>
+					 <li><a href='catalog.php?cat=1' class='lili'>Ãîñòèíûå</a></li><li><a href='catalog.php?cat=2' class='lili'>Ñïàëüíè</a></li><li><a href='catalog.php?cat=3' class='lili'>Êàáèíåòû</a></li><li><a href='catalog.php?cat=4' class='lili'>Ìÿãêàÿ ìåáåëü</a></li><li><a href='catalog.php?cat=5' class='lili'>Äåòñêèå êîìíàòû</a></li><li><a href='catalog.php?cat=6' class='lili'>Ïðèõîæèe</a></li><li><a href='catalog.php?cat=9' class='lili'>Ìåáåëü äëÿ ÒÂ</a></li><li><a href='catalog.php?cat=10' class='lili'>Êîíñîëè</a></li><li><a href='catalog.php?cat=11' class='lili'>Æóðíàëüíûå ñòîëû</a></li><li><a href='catalog.php?cat=12' class='lili'>Âèòðèíû, ñòåëëàæè</a></li><li><a href='catalog.php?cat=14' class='lili'>Áàðû</a></li><li><a href='catalog.php?cat=16' class='lili'>Áþðî, êîìîäû</a></li><li><a href='catalog.php?cat=17' class='lili'>Êàðòèíû</a></li><li><a href='catalog.php?cat=19' class='lili'>Ìåáåëü äëÿ óëèöû</a></li><li><a href='catalog.php?cat=20' class='lili'>Çåðêàëà</a></li><li><a href='catalog.php?cat=21' class='lili'>Ïüåäåñòàëû, ïîäñòàâêè äëÿ öâåòîâ</a></li><li><a href='catalog.php?cat=22' class='lili'>Êóøåòêè, áàíêåòêè, êðåñëà</a></li><li><a href='catalog.php?cat=23' class='lili'>Còîëû îáåäåííûå, ñòóëüÿ</a></li><li><a href='catalog.php?cat=24' class='lili'>×àñû íàïîëüíûå, íàñòîëüíûå</a></li><li><a href='catalog.php?cat=25' class='lili'>Äåêîðàòèâíûå ôèãóðû</a></li><li><a href='catalog.php?cat=29' class='lili'>Ëþñòðû, ëàìïû íàñòîëüíûå</a></li><li><a href='catalog.php?cat=30' class='lili'>Ìåáåëü äëÿ âàííûõ êîìíàò</a></li><li><a href='catalog.php?cat=31' class='lili'>Áèëüÿðäíûå ñòîëû</a></li><li><a href='catalog.php?cat=32' class='lili'>Øêàôû</a></li><li><a href='catalog.php?cat=35' class='lili'>Êóõíè</a></li><li><a href='catalog.php?cat=36' class='lili'>Ñòåíêè äëÿ ãîñòèíîé</a></li><li><a href='catalog.php?cat=37' class='lili'>Ïèñüìåííûå ñòîëû</a></li><li><a href='catalog.php?cat=38' class='lili'>Øêàôû äëÿ äðàãîöåííîñòåé</a></li>				</ul>
+			  </li>
+			 </ul>					
+		</td>
+		<td width="26"><img src="images/but.png" width="26" height="20" border="0" alt=""></td>
+		<td class="cell" align="left">
+			<ul id="nav1">
+			  <li><span class="big_font"><a href="catalog2.php?cat=1">Ìåáåëü ñî ñêëàäà</a></span>
+				<ul>
+					 <li><a href='catalog2.php?cat=1' class='lili'>Ãîñòèíûå</a></li><li><a href='catalog2.php?cat=2' class='lili'>Ñïàëüíè</a></li><li><a href='catalog2.php?cat=3' class='lili'>Êàáèíåòû</a></li><li><a href='catalog2.php?cat=4' class='lili'>Ìÿãêàÿ ìåáåëü</a></li><li><a href='catalog2.php?cat=5' class='lili'>Ïðèõîæèe</a></li><li><a href='catalog2.php?cat=10' class='lili'>Àêñåññóàðû</a></li><li><a href='catalog2.php?cat=11' class='lili'>Äåòñêèå êîìíàòû</a></li><li><a href='catalog2.php?cat=12' class='lili'>Ìåáåëü äëÿ óëèöû</a></li>				</ul>
+			  </li>
+			 </ul>		
+		</td>
+		<td width="26"><img src="images/but.png" width="26" height="20" border="0" alt=""></td>
+		<td class="cell" align="center"><span class="big_font"><a href="index.php?page=5">Ñïåö. ïðåäëîæåíèÿ</a></span></td>
+		<td width="26"><img src="images/but.png" width="26" height="20" border="0" alt=""></td>
+		<td class="cell" align="left">
+			<ul id="nav2">
+			  <li><span class="big_font"><a href="index.php?page=6">Óñëóãè</a></span>
+				<ul>
+				  <li><a href="index.php?page=7" class="lili">Äîñòàâêà è ñáîðêà</a></li>
+				  <li><a href="index.php?page=8" class="lili">Äèçàéí</a></li>
+				</ul>
+			  </li>
+			 </ul>				
+		</td>		
+
+		<td width="26"><img src="images/but.png" width="26" height="20" border="0" alt=""></td>
+		<td class="cell" align="center"><span class="big_font"><a href="index.php?page=9">Êîíòàêòû</a></span></td>
+	 </tr>
+	 </table>
+	 <!-- -----------------------------------------------links----------------------------------------------------- -->
+
+
+
+	 </td>
+ </tr>
+ <tr>
+	<td height="550" align="center" valign="top">
+	 <!-- -----------------------------------------------count----------------------------------------------------- -->
+	 <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0">
+	 <tr>
+		<td align="center" valign="top" width="20">&nbsp;</td>
+		<td align="left" valign="top" width="200">
+		<br><br>
+
+		
+		<div class="big2"><a href="index.php?page=3"><img src="images/mit.png" width="245" height="46" border="0" alt="Èòàëüÿíñêèå ôàáðèêè"></a></div>
+		<!-- <div><img src="images/line1.jpg" width="200" height="5" border="0" alt=""></div> -->
+
+
+		<div class='link_fab'><a href='fabric.php?cat=177'>AGOSTINI MOBILI</a></div><div class='link_fab'><a href='fabric.php?cat=425'>AGRESTI</a></div><div class='link_fab'><a href='fabric.php?cat=361'>ALBERTA</a></div><div class='link_fab'><a href='fabric.php?cat=56'>ALBERTO&amp;MARIO GHEZZANI </a></div><div class='link_fab'><a href='fabric.php?cat=327'>ALF</a></div><div class='link_fab'><a href='fabric.php?cat=145'>ALTA MODA</a></div><div class='link_fab'><a href='fabric.php?cat=411'>ALTAVILLA</a></div><div class='link_fab'><a href='fabric.php?cat=238'>AMELI HOME</a></div><div class='link_fab'><a href='fabric.php?cat=57'>ANDREA FANFANI  </a></div><div class='link_fab'><a href='fabric.php?cat=58'>ANGELO CAPPELLINI</a></div><div class='link_fab'><a href='fabric.php?cat=244'>ANNIBALE ESPOSTI</a></div><div class='link_fab'><a href='fabric.php?cat=59'>ANTONELLI MORAVIO&amp;C</a></div><div class='link_fab'><a href='fabric.php?cat=164'>ANTONELLO ITALIA</a></div><div class='link_fab'><a href='fabric.php?cat=53'>AR ARREDAMENTI </a></div><div class='link_fab'><a href='fabric.php?cat=257'>ARKEOS (by Vittorio Grifoni)</a></div><div class='link_fab'><a href='fabric.php?cat=60'>ARMOBIL</a></div><div class='link_fab'><a href='fabric.php?cat=61'>ARREDO CLASSIC</a></div><div class='link_fab'><a href='fabric.php?cat=422'>ARTE VENEZIANA</a></div><div class='link_fab'><a href='fabric.php?cat=285'>ARTEX</a></div><div class='link_fab'><a href='fabric.php?cat=62'>ASNAGHI</a></div><div class='link_fab'><a href='fabric.php?cat=362'>ASNAGHI SALOTTI</a></div><div class='link_fab'><a href='fabric.php?cat=63'>BACCI STYLE</a></div><div class='link_fab'><a href='fabric.php?cat=345'>BAGNO PIU</a></div><div class='link_fab'><a href='fabric.php?cat=64'>BAKOKKO</a></div><div class='link_fab'><a href='fabric.php?cat=219'>BAMAR</a></div><div class='link_fab'><a href='fabric.php?cat=249'>BARJ-BUZZONI</a></div><div class='link_fab'><a href='fabric.php?cat=65'>BARNINI OSEO</a></div><div class='link_fab'><a href='fabric.php?cat=358'>BAROVIER&amp;TOSO</a></div><div class='link_fab'><a href='fabric.php?cat=179'>BASTEX</a></div><div class='link_fab'><a href='fabric.php?cat=289'>BASTIANELLI HOME</a></div><div class='link_fab'><a href='fabric.php?cat=366'>BAZZI</a></div><div class='link_fab'><a href='fabric.php?cat=225'>BBELLE (Vittorio Grifoni)</a></div><div class='link_fab'><a href='fabric.php?cat=292'>BEDDING</a></div><div class='link_fab'><a href='fabric.php?cat=66'>BELCOR</a></div><div class='link_fab'><a href='fabric.php?cat=392'>BELLANI</a></div><div class='link_fab'><a href='fabric.php?cat=313'>BIANCHINI</a></div><div class='link_fab'><a href='fabric.php?cat=344'>BIBA SALOTTI</a></div><div class='link_fab'><a href='fabric.php?cat=418'>BIREX</a></div><div class='link_fab'><a href='fabric.php?cat=195'>BITOSSI LUCIANO</a></div><div class='link_fab'><a href='fabric.php?cat=283'>BK ITALIA</a></div><div class='link_fab'><a href='fabric.php?cat=67'>BM STYLE</a></div><div class='link_fab'><a href='fabric.php?cat=314'>BOLZAN</a></div><div class='link_fab'><a href='fabric.php?cat=432'>BONTEMPI</a></div><div class='link_fab'><a href='fabric.php?cat=253'>BORDIGNON CAMILLO</a></div><div class='link_fab'><a href='fabric.php?cat=69'>BOVA</a></div><div class='link_fab'><a href='fabric.php?cat=415'>BRUNO PIOMBINI</a></div><div class='link_fab'><a href='fabric.php?cat=350'>BRUNO ZAMPA</a></div><div class='link_fab'><a href='fabric.php?cat=389'>BUCALOSSI</a></div><div class='link_fab'><a href='fabric.php?cat=276'>CALIA ITALIA</a></div><div class='link_fab'><a href='fabric.php?cat=420'>CANTIERO</a></div><div class='link_fab'><a href='fabric.php?cat=379'>CANTORI</a></div><div class='link_fab'><a href='fabric.php?cat=371'>CAPITAL COLLECTION</a></div><div class='link_fab'><a href='fabric.php?cat=71'>CAPPELLETTI</a></div><div class='link_fab'><a href='fabric.php?cat=246'>CAPPELLINI INTAGLI</a></div><div class='link_fab'><a href='fabric.php?cat=367'>CARLO ASNAGHI</a></div><div class='link_fab'><a href='fabric.php?cat=151'>CAROTI</a></div><div class='link_fab'><a href='fabric.php?cat=267'>CARPANELLI</a></div><div class='link_fab'><a href='fabric.php?cat=275'>CARPANESE</a></div><div class='link_fab'><a href='fabric.php?cat=407'>CASAMILANO</a></div><div class='link_fab'><a href='fabric.php?cat=175'>CASPANI TINO</a></div><div class='link_fab'><a href='fabric.php?cat=354'>CATTELAN ITALIA</a></div><div class='link_fab'><a href='fabric.php?cat=348'>CAVA</a></div><div class='link_fab'><a href='fabric.php?cat=436'>CAVIO</a></div><div class='link_fab'><a href='fabric.php?cat=359'>CEPPI STYLE</a></div><div class='link_fab'><a href='fabric.php?cat=386'>CERASA</a></div><div class='link_fab'><a href='fabric.php?cat=74'>CHELINI</a></div><div class='link_fab'><a href='fabric.php?cat=287'>CIS SALOTTI</a></div><div class='link_fab'><a href='fabric.php?cat=207'>CLAUDIO SAONCELLA</a></div><div class='link_fab'><a href='fabric.php?cat=419'>COLOMBO MOBILI</a></div><div class='link_fab'><a href='fabric.php?cat=218'>CORTEZARI</a></div><div class='link_fab'><a href='fabric.php?cat=416'>COSTANTINI PIETRO</a></div><div class='link_fab'><a href='fabric.php?cat=316'>CP MOBILI</a></div><div class='link_fab'><a href='fabric.php?cat=75'>CREAZIONI </a></div><div class='link_fab'><a href='fabric.php?cat=76'>DALLAGNESE</a></div><div class='link_fab'><a href='fabric.php?cat=202'>DANTI DIVANI</a></div><div class='link_fab'><a href='fabric.php?cat=236'>DITRE ITALIA</a></div><div class='link_fab'><a href='fabric.php?cat=196'>DOMUS</a></div><div class='link_fab'><a href='fabric.php?cat=388'>EBANISTERIA BACCI</a></div><div class='link_fab'><a href='fabric.php?cat=423'>EGO</a></div><div class='link_fab'><a href='fabric.php?cat=326'>ELLEDUE</a></div><div class='link_fab'><a href='fabric.php?cat=243'>EMMEMOBILI</a></div><div class='link_fab'><a href='fabric.php?cat=377'>EUROLAMPART</a></div><div class='link_fab'><a href='fabric.php?cat=186'>EZIO BELLOTTI</a></div><div class='link_fab'><a href='fabric.php?cat=337'>FABER</a></div><div class='link_fab'><a href='fabric.php?cat=162'>FERRETTI&amp;FERRETTI</a></div><div class='link_fab'><a href='fabric.php?cat=81'>FIMES</a></div><div class='link_fab'><a href='fabric.php?cat=277'>FLAI</a></div><div class='link_fab'><a href='fabric.php?cat=85'>FLORENCE ART</a></div><div class='link_fab'><a href='fabric.php?cat=84'>FLORENCE COLLECTIONS</a></div><div class='link_fab'><a href='fabric.php?cat=390'>FRANCESCO MOLON</a></div><div class='link_fab'><a href='fabric.php?cat=365'>FRANCESCO PASI</a></div><div class='link_fab'><a href='fabric.php?cat=438'>FRANCO BIANCHINI </a></div><div class='link_fab'><a href='fabric.php?cat=241'>FRARI</a></div><div class='link_fab'><a href='fabric.php?cat=290'>FRAST</a></div><div class='link_fab'><a href='fabric.php?cat=428'>GALIMBERTI NINO</a></div><div class='link_fab'><a href='fabric.php?cat=301'>GALLO</a></div><div class='link_fab'><a href='fabric.php?cat=311'>GALLO CLOCK</a></div><div class='link_fab'><a href='fabric.php?cat=347'>GAMMA ARREDAMENTI</a></div><div class='link_fab'><a href='fabric.php?cat=309'>GIORGIO CASA</a></div><div class='link_fab'><a href='fabric.php?cat=89'>GIORGIO COLLECTION</a></div><div class='link_fab'><a href='fabric.php?cat=201'>GIORGIO PIOTTO</a></div><div class='link_fab'><a href='fabric.php?cat=91'>GOLDCONFORT</a></div><div class='link_fab'><a href='fabric.php?cat=258'>GOTHA</a></div><div class='link_fab'><a href='fabric.php?cat=317'>GRANZOTTO</a></div><div class='link_fab'><a href='fabric.php?cat=92'>GRILLI</a></div><div class='link_fab'><a href='fabric.php?cat=93'>HALLEY</a></div><div class='link_fab'><a href='fabric.php?cat=96'>IL LOFT</a></div><div class='link_fab'><a href='fabric.php?cat=351'>IL PARALUME MARINA</a></div><div class='link_fab'><a href='fabric.php?cat=343'>IL TEMPO DEL</a></div><div class='link_fab'><a href='fabric.php?cat=373'>ILFARI</a></div><div class='link_fab'><a href='fabric.php?cat=259'>JUMBO</a></div><div class='link_fab'><a href='fabric.php?cat=315'>KEOMA</a></div><div class='link_fab'><a href='fabric.php?cat=187'>KHAOS</a></div><div class='link_fab'><a href='fabric.php?cat=248'>LA CONTESSINA</a></div><div class='link_fab'><a href='fabric.php?cat=380'>LA FALEGNAMI</a></div><div class='link_fab'><a href='fabric.php?cat=247'>LE CLASSIQUE</a></div><div class='link_fab'><a href='fabric.php?cat=413'>LE FABLIER</a></div><div class='link_fab'><a href='fabric.php?cat=352'>LE PORCELLANE</a></div><div class='link_fab'><a href='fabric.php?cat=307'>LINEA DUE</a></div><div class='link_fab'><a href='fabric.php?cat=341'>LINEA TRE</a></div><div class='link_fab'><a href='fabric.php?cat=100'>LONGHI </a></div><div class='link_fab'><a href='fabric.php?cat=312'>LORENZON</a></div><div class='link_fab'><a href='fabric.php?cat=194'>LU.BO.BILIARDI</a></div><div class='link_fab'><a href='fabric.php?cat=102'>MALERBÀ </a></div><div class='link_fab'><a href='fabric.php?cat=260'>MARIO VILLANOVA</a></div><div class='link_fab'><a href='fabric.php?cat=325'>MASIERO</a></div><div class='link_fab'><a href='fabric.php?cat=324'>MASIERO LUXURY</a></div><div class='link_fab'><a href='fabric.php?cat=356'>MECHINI</a></div><div class='link_fab'><a href='fabric.php?cat=103'>MEDEA</a></div><div class='link_fab'><a href='fabric.php?cat=342'>MEGAROS</a></div><div class='link_fab'><a href='fabric.php?cat=360'>MENICHETTI</a></div><div class='link_fab'><a href='fabric.php?cat=406'>MERIDIANI</a></div><div class='link_fab'><a href='fabric.php?cat=269'>MIDJ</a></div><div class='link_fab'><a href='fabric.php?cat=300'>MILANO BEDDING</a></div><div class='link_fab'><a href='fabric.php?cat=381'>MINIFORMS</a></div><div class='link_fab'><a href='fabric.php?cat=405'>MINOTTI COLLEZIONI</a></div><div class='link_fab'><a href='fabric.php?cat=104'>MIRANDOLA EXPORT </a></div><div class='link_fab'><a href='fabric.php?cat=340'>MISURA I SALOTTI</a></div><div class='link_fab'><a href='fabric.php?cat=308'>MOBILI DI CASTELLO</a></div><div class='link_fab'><a href='fabric.php?cat=105'>MOBILIDEA</a></div><div class='link_fab'><a href='fabric.php?cat=424'>MODA</a></div><div class='link_fab'><a href='fabric.php?cat=182'>MODENESE GASTONE</a></div><div class='link_fab'><a href='fabric.php?cat=437'>MODO 10</a></div><div class='link_fab'><a href='fabric.php?cat=363'>MOLETTA&amp;CO</a></div><div class='link_fab'><a href='fabric.php?cat=211'>MORELATO</a></div><div class='link_fab'><a href='fabric.php?cat=319'>OPERA (ANGELO CAPPELLINI)</a></div><div class='link_fab'><a href='fabric.php?cat=400'>OZZIO</a></div><div class='link_fab'><a href='fabric.php?cat=110'>PAOLO LUCÑHETÒA</a></div><div class='link_fab'><a href='fabric.php?cat=332'>PATAVIUMART</a></div><div class='link_fab'><a href='fabric.php?cat=375'>PATRIZIA GARGANTI</a></div><div class='link_fab'><a href='fabric.php?cat=183'>PELLEGATTA</a></div><div class='link_fab'><a href='fabric.php?cat=374'>PIGOLI</a></div><div class='link_fab'><a href='fabric.php?cat=112'>PISTOLESI F.LLI</a></div><div class='link_fab'><a href='fabric.php?cat=383'>PRAMA</a></div><div class='link_fab'><a href='fabric.php?cat=391'>PREGNO</a></div><div class='link_fab'><a href='fabric.php?cat=399'>PRESOTTO</a></div><div class='link_fab'><a href='fabric.php?cat=401'>PRESTIGE</a></div><div class='link_fab'><a href='fabric.php?cat=412'>PRIANERA (POLARIS)</a></div><div class='link_fab'><a href='fabric.php?cat=355'>REFLEX&amp;ANGELO</a></div><div class='link_fab'><a href='fabric.php?cat=176'>RIVA MOBILI</a></div><div class='link_fab'><a href='fabric.php?cat=417'>RIVA1920</a></div><div class='link_fab'><a href='fabric.php?cat=291'>ROBERTO GIOVANNINI</a></div><div class='link_fab'><a href='fabric.php?cat=376'>ROBERTO VENTURA</a></div><div class='link_fab'><a href='fabric.php?cat=115'>RUGIANO</a></div><div class='link_fab'><a href='fabric.php?cat=261'>SALDA</a></div><div class='link_fab'><a href='fabric.php?cat=272'>SAN MICHELE</a></div><div class='link_fab'><a href='fabric.php?cat=192'>SAT EXPORT</a></div><div class='link_fab'><a href='fabric.php?cat=116'>SAVIO FIRMINO</a></div><div class='link_fab'><a href='fabric.php?cat=117'>SCAPPINI</a></div><div class='link_fab'><a href='fabric.php?cat=118'>SELVA</a></div><div class='link_fab'><a href='fabric.php?cat=264'>SEVEN SEDIE</a></div><div class='link_fab'><a href='fabric.php?cat=120'>SIGNORINI COCO</a></div><div class='link_fab'><a href='fabric.php?cat=121'>SILIK</a></div><div class='link_fab'><a href='fabric.php?cat=221'>SILVANO GRIFONI</a></div><div class='link_fab'><a href='fabric.php?cat=402'>SMANIA</a></div><div class='link_fab'><a href='fabric.php?cat=122'>SOCCI ANCHISE </a></div><div class='link_fab'><a href='fabric.php?cat=370'>STELLA DEL MOBILE</a></div><div class='link_fab'><a href='fabric.php?cat=387'>STIL DECOR</a></div><div class='link_fab'><a href='fabric.php?cat=157'>STIL SALOTTI</a></div><div class='link_fab'><a href='fabric.php?cat=124'>STILEMA</a></div><div class='link_fab'><a href='fabric.php?cat=197'>T.N.B</a></div><div class='link_fab'><a href='fabric.php?cat=336'>TONIN CASA</a></div><div class='link_fab'><a href='fabric.php?cat=126'>TOSATO</a></div><div class='link_fab'><a href='fabric.php?cat=320'>TOSCONOVA</a></div><div class='link_fab'><a href='fabric.php?cat=127'>TURA</a></div><div class='link_fab'><a href='fabric.php?cat=128'>TURRI</a></div><div class='link_fab'><a href='fabric.php?cat=331'>TWILS</a></div><div class='link_fab'><a href='fabric.php?cat=333'>ULIVI </a></div><div class='link_fab'><a href='fabric.php?cat=284'>VACCARI INTERNACIONAL</a></div><div class='link_fab'><a href='fabric.php?cat=148'>VALDERAMOBILI</a></div><div class='link_fab'><a href='fabric.php?cat=278'>VENETA SEDIE</a></div><div class='link_fab'><a href='fabric.php?cat=136'>VIBIEFFE</a></div><div class='link_fab'><a href='fabric.php?cat=268'>VILLANOVA</a></div><div class='link_fab'><a href='fabric.php?cat=250'>VIPART (LINEA B)</a></div><div class='link_fab'><a href='fabric.php?cat=421'>VISIONNARIE</a></div><div class='link_fab'><a href='fabric.php?cat=131'>VISMARA</a></div><div class='link_fab'><a href='fabric.php?cat=265'>VITTORIA ORLANDI</a></div><div class='link_fab'><a href='fabric.php?cat=222'>VITTORIO GRIFONI</a></div><div class='link_fab'><a href='fabric.php?cat=135'>VOLPI</a></div><div class='link_fab'><a href='fabric.php?cat=433'>VOLTAN</a></div><div class='link_fab'><a href='fabric.php?cat=133'>ZANABONI</a></div><div class='link_fab'><a href='fabric.php?cat=240'>ZANOTTA</a></div><div class='link_fab'><a href='fabric.php?cat=134'>ZONTA LUCIANO</a></div>
+		<br>
+		<img src="images/msklad.png" width="183" height="39" border="0" alt="Ìåáåëü ñî ñêëàäà">
+
+		<div class='link_fab'><a href='fabric2.php?cat=30'>ARREDO CLASSIC</a></div><div class='link_fab'><a href='fabric2.php?cat=7'>BAKOKKO</a></div><div class='link_fab'><a href='fabric2.php?cat=46'>CALIA</a></div><div class='link_fab'><a href='fabric2.php?cat=3'>CASA+39</a></div><div class='link_fab'><a href='fabric2.php?cat=42'>CIS SALOTTI</a></div><div class='link_fab'><a href='fabric2.php?cat=44'>CLAUDIO SAONCELLA</a></div><div class='link_fab'><a href='fabric2.php?cat=48'>DAL CIN</a></div><div class='link_fab'><a href='fabric2.php?cat=5'>DALLAGNESE</a></div><div class='link_fab'><a href='fabric2.php?cat=14'>MARONESE</a></div><div class='link_fab'><a href='fabric2.php?cat=2'>MOBILTREVI</a></div><div class='link_fab'><a href='fabric2.php?cat=50'>PRAMA</a></div><div class='link_fab'><a href='fabric2.php?cat=43'>SAN MICHELE</a></div>
+
+		</td>
+		<td align="center" valign="top" width="25">&nbsp;</td>
+		<td align="left" valign="top">
+		 
+<br>
+<div class="path">
+<a href="index.php">Ãëàâíàÿ </a> &gt; 
+<a href="index.php?page=1"> Î êîìïàíèè</a>
+</div>
+<br>
+<div><strong style="font-size: xx-large;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></div>
+<div>&nbsp;</div>
+<div><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-size: large;"><span style="font-family: Verdana"><em>Äîáðî ïîæàëîâàòü íà ñàéò ñàëîíà &quot;Ìåáåëü <a href="http://www.mespana.ru/index.php?page=3">Èòàëèè</a> è&nbsp;<a href="http://www.mespana.ru/index.php?page=4">Èñïàíèè</a>&quot;!&nbsp;</em></span></span></strong></div>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify"><span style="font-family: Verdana;"><span style="font-size: medium;"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </em></span><em>Ñàëîí &quot;Ìåáåëü </em></span><span style="font-family: Verdana;"><em><span style="font-family: Verdana;"><a href="http://www.mespana.ru/index.php?page=3">Èòàëèè</a></span><span style="font-family: Verdana;"> è </span></em></span><span style="font-family: Verdana;"><em><a href="http://www.mespana.ru/index.php?page=4">Èñïàíèè</a>&quot; íà ìåáåëüíîì ðûíêå ñ 2002 ãîäà.</em> <br />
+</span><span style="font-family: Verdana;"><em><span style="font-family: Verdana;"><a href="http://www.mespana.ru/index.php?page=4">Èñïàíñêàÿ</a></span><span style="font-family: Verdana;"> è&nbsp;</span></em></span><em style="font-family: Verdana;"><a href="http://www.mespana.ru/index.php?page=3">èòàëüÿíñêàÿ</a>&nbsp;</em><em style="font-family: Verdana;">êëàññè÷åñêàÿ ìåáåëü øèðîêî èçâåñòíà áëàãîäàðÿ ñòîÿùèì çà íåé òðàäèöèÿì ìàñòåðñòâà.&nbsp;</em></address>
+<address style="text-align: justify"><em style="font-family: Verdana;">Âèðòóîçíîå ìàñòåðñòâî ïîçâîëÿåò èì ñîçäàâàòü íåîáûêíîâåííóþ ìåáåëü, ñäåëàâøóþ èõ èçâåñòíûìè âî âñåì ìèðå.</em></address>
+<div><span style="font-family: Verdana;"> </span></div>
+<address style="text-align: justify"><span style="font-family: Verdana;"><em>Â íàøåì àññîðòèìåíòå ðîñêîøíàÿ </em></span><span style="font-family: Verdana;"><em><span style="font-family: Verdana;"><a href="http://www.mespana.ru/index.php?page=4">èñïàíñêàÿ</a></span><span style="font-family: Verdana;"> è </span><span style="font-family: Verdana;"><a href="http://www.mespana.ru/index.php?page=3">èòàëüÿíñêàÿ</a></span><span style="font-family: Verdana;"> ìåáåëü ðàçëè÷íûõ ñòèëåé è íàïðàâëåíèé îò 300 íàäåæíûõ è ëó÷øèõ ïðîèçâîäèòåëåé </span><span style="font-family: Verdana;"><a href="http://www.mespana.ru/index.php?page=4">Èñïàíèè</a></span><span style="font-family: Verdana;"> è&nbsp;</span></em></span><em style="font-family: Verdana;"><a href="http://www.mespana.ru/index.php?page=3">Èòàëèè</a>&nbsp;</em><em style="font-family: Verdana;">ñî ñêëàäà â Ìîñêâå è íà çàêàç.&nbsp;</em></address>
+<div><span style="font-family: Verdana;"> </span></div>
+<address style="text-align: justify"><span style="font-family: Verdana;">Ìû ðàáîòàåì èñêëþ÷èòåëüíî ñ åâðîïåéñêèìè ôàáðèêàìè òîëüêî íàïðÿìóþ è ãîòîâû ïðåäëîæèòü âàì ñàìûå êîíêóðåíòíîñïîñîáíûå öåíû è îïòèìàëüíûå ñðîêè.</span></address>
+<address style="text-align: justify"><span style="font-family: Verdana;"><em>Â&nbsp;ðàçäåëå </em></span><span style="font-family: Verdana;"><em><a href="http://mespana.ru/master/catalog2.php?set=1">&quot;Ìåáåëü ñî ñêëàäà&quot;</a> Âû ìîæåòå âûáðàòü&nbsp;</em></span><span style="font-family: Verdana;"><em><span style="font-family: Arial;"><a href="http://mespana.ru/catalog2.php?cat=1"><span style="font-family: Verdana;">ãîñòèíûå</span></a></span><span style="font-family: Verdana;">, </span><span style="font-family: Arial;"><a href="http://mespana.ru/catalog2.php?cat=2"><span style="font-family: Verdana;">ñïàëüíè</span></a></span><span style="font-family: Verdana;">, </span></em></span><span style="font-family: Verdana;"><em><span style="font-family: Arial;"><a href="http://mespana.ru/catalog2.php?cat=3"><span style="font-family: Verdana;">êàáèíåòû</span></a></span>, <span style="font-family: Arial;"><a href="http://mespana.ru/catalog2.php?cat=4"><span style="font-family: Verdana;">ìÿãêóþ ìåáåëü</span></a></span>,&nbsp;</em></span><em style="font-family: Arial;"><span style="font-family: Verdana;"><a href="http://mespana.ru/catalog2.php?cat=5">ïðèõîæèå</a>&nbsp;</span></em><em style="font-family: Arial;">èç íàëè÷èÿ íà ñêëàäå â Ìîñêâå.</em></address>
+<div><span style="font-family: Verdana;"> </span></div>
+<address style="text-align: justify"><span style="font-family: Verdana;"><em>Íà ýêñïîçèöèè â íàøåì ñàëîíå ïðåäñòàâëåíà ìåáåëü îò &nbsp;</em></span><span style="font-family: Verdana;"><em>&nbsp;</em></span><span style="font-family: Verdana;"><a href="http://www.mespana.ru/fabric.php?cat=51">Vicente Zaragoza</a></span><span style="font-family: Verdana;">,&nbsp;</span><span style="font-family: Verdana;"><a href="http://www.mespana.ru/fabric.php?cat=227">AM Classic</a>.</span></address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify"><span style="background-color: rgb(255, 0, 0);"><strong><span style="color: rgb(255, 255, 255);"><span style="font-size: medium;">Íàø ñàëîí ÿâëÿåòñÿ îôèöèàëüíûì äèëåðîì èñïàíñêîé ôàáðèêè&nbsp;</span></span></strong></span><span style="background-color: rgb(255, 0, 0);"><span style="font-size: medium;"><span style="color: rgb(255, 255, 255);"><a href="http://mespana.ru/fabric.php?cat=51"><strong>VICENTE ZARAGOZA</strong></a></span></span></span></address>
+<address style="text-align: justify"><span style="color: rgb(255, 0, 0);">&nbsp;<br />
+</span></address>
+<hr />
+<address style="text-align: justify">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</address>
+<address style="text-align: justify">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href="http://www.mespana.ru/index.php?page=5"><img src="http://mespana.ru/downloads/pics/rasprodasha2.gif" width="300" height="86" alt="" /></a></address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp;&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify"><a href="http://www.mespana.ru/fabric.php?cat=51"><img src="http://mespana.ru/downloads/pics/13623_5269a87842946.jpeg" width="220" height="57" alt="" /></a></address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify"><a href="http://mespana.ru/downloads/pics/Verona Lacquer bed &amp; bedside tables(1).jpg"><img src="http://mespana.ru/downloads/pics/Verona Lacquer bed &amp; bedside tables.jpg" width="223" height="168" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/Herm Bdm L 1(3).jpg"><img src="http://mespana.ru/downloads/pics/Herm Bdm L 1(2).jpg" width="276" height="167" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/California lacquer bed &amp; bedside tables(2).jpg"><img src="http://mespana.ru/downloads/pics/California lacquer bed &amp; bedside tables(1).jpg" width="223" height="167" alt="" /></a></address>
+<address style="text-align: justify"><a href="http://mespana.ru/downloads/pics/001(Mar 2011)(2).jpg"><img src="http://mespana.ru/downloads/pics/001(Mar 2011)(1).jpg" width="245" height="139" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/Verona Lacquer Dining-room.jpg"><img src="http://mespana.ru/downloads/pics/1(227).jpg" width="252" height="139" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/California Lacquer Dining-room(2).jpg"><img src="http://mespana.ru/downloads/pics/California Lacquer Dining-room - êîïèÿ(1).jpg" width="225" height="140" alt="" /></a></address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</address>
+<address style="text-align: justify">&nbsp; <span style="font-size: small;">Íàø ñàëîí - ÎÔÈÖÈÀËÜÍÛÉ ÄÈËÅÐ èñïàíñêîé ôàáðèêè <a href="http://www.mespana.ru/fabric.php?cat=51">Vicente Zaragoza</a> - ïðîèçâîäèòåëÿ ýêñêëþçèâíîé êëàññè÷åñêîé ìåáåëè!</span></address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;"><span style="font-size: small;">&nbsp;Ìåáåëü ïðåäñòàâëåíà íà ýêñïîçèöèè â íàøåì ñàëîíå!</span></address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;">&nbsp;</address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;">&nbsp;</address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;"><span style="font-size: x-small;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(255, 255, 255);"><span style="font-size: x-small;">&nbsp;</span><span style="font-size: x-large;"><span style="background-color: rgb(255, 0, 0);">ÎÑÒÅÐÅÃÀÉÒÅÑÜ&nbsp;ÏÎÄÄÅËÎÊ!&nbsp;</span></span></span></address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;">&nbsp;</address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;">&nbsp;</address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;">&nbsp;</address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;">&nbsp;<a href="http://www.mespana.ru/fabric.php?cat=48"><img src="http://mespana.ru/downloads/pics/untitled(2)(3).jpg" width="300" height="64" alt="" /></a></address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;">&nbsp;</address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;"><span style="font-size: x-large;">&nbsp;&nbsp;<a href="http://mespana.ru/downloads/pics/Fortune Catalogue -Tecni Nova (1).pdf">Íîâûå êîëëåêöèè îò TECNI NOVA</a></span></address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;">&nbsp;</address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;"><span style="font-size: x-large;"><img src="http://mespana.ru/downloads/pics/47994.jpg" width="220" height="136" alt="" /><img src="http://mespana.ru/downloads/pics/48005.jpg" width="231" height="136" alt="" /><img src="http://mespana.ru/downloads/pics/48039.jpg" width="250" height="136" alt="" /></span></address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;">&nbsp;</address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;">&nbsp;</address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;">&nbsp;</address>
+<address style="font-family: Verdana, Helvetica, sans-serif; font-size: 11px; text-align: justify;">&nbsp;</address>
+<address style="text-align: justify">&nbsp;<a href="http://www.mespana.ru/fabric.php?cat=227"><img src="http://mespana.ru/downloads/pics/LogoAMClassic.png" width="220" height="141" alt="" /></a><span style="font-size: x-large;"><a href="http://www.mespana.ru/fabric.php?cat=227"><span style="font-size: medium;">&nbsp;</span></a></span><a href="http://www.mespana.ru/fabric.php?cat=227"><span style="font-size: medium;">Î÷àðîâàíèå ïðîâàíñà îò AM&nbsp;Classic...</span></a></address>
+<address style="text-align: justify"><span style="font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></address>
+<address style="text-align: justify"><span style="font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Íà ýêñïîçèöèè â íàøåì ñàëîíå!</span></address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify"><span style="font-size: medium;"><a href="http://mespana.ru/downloads/pics/Premium  2015_Ñòðàíèöà_22(1).jpg"><img src="http://mespana.ru/downloads/pics/Premium  2015_Ñòðàíèöà_22 - êîïèÿ.jpg" width="196" height="231" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/Ñòðàíèöû èç Êàòàëîã 2015-3(2).jpg"><img src="http://mespana.ru/downloads/pics/Ñòðàíèöû èç Êàòàëîã 2015-3(1).jpg" width="305" height="231" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/Premium  2015_Ñòðàíèöà_13(2).jpg"><img src="http://mespana.ru/downloads/pics/Premium  2015_Ñòðàíèöà_13(1).jpg" width="190" height="231" alt="" /></a></span></address>
+<address>&nbsp;</address>
+<address><a href="http://mespana.ru/downloads/pics/AM3170(4).jpg"><img height="154" width="213" alt="" src="http://mespana.ru/downloads/pics/AM3170(3).jpg" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/AM3276E(3).jpg"><img height="154" width="253" alt="" src="http://mespana.ru/downloads/pics/AM3276E(2).jpg" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/Directoire01(5).jpg"><img height="154" width="230" alt="" src="http://mespana.ru/downloads/pics/2(58).jpg" /></a></address>
+<address>&nbsp;</address>
+<address>&nbsp;</address>
+<address>&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify"><a href="http://www.mespana.ru/fabric.php?cat=251"><img src="http://mespana.ru/downloads/pics/la-ebanisteria(8).jpg" width="277" height="43" alt="" /></a></address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify"><a href="http://mespana.ru/downloads/pics/CONTENEDOR TRIANGLE COCO VERDE Y AZUL NOCHE.jpg"><img src="http://mespana.ru/downloads/pics/Ñòðàíèöû èç 2 New Collection PLUIE DE COULEURS-6(1).jpg" width="180" height="215" alt="" /></a>&nbsp;&nbsp;<a href="http://mespana.ru/downloads/pics/VITRINA TRIANGLE BEOL AZUL NOCHE.jpg"><img src="http://mespana.ru/downloads/pics/Ñòðàíèöû èç 2 New Collection PLUIE DE COULEURS-2.jpg" width="303" height="215" alt="" /></a>&nbsp;&nbsp;<a href="http://mespana.ru/downloads/pics/CONTENEDOR TRIANGLE PAISLEY.jpg"><img src="http://mespana.ru/downloads/pics/Ñòðàíèöû èç 2 New Collection PLUIE DE COULEURS-3.jpg" width="240" height="215" alt="" /></a>&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify"><a href="http://mespana.ru/downloads/pics/15(4).jpg"><img src="http://mespana.ru/downloads/pics/15(3).jpg" width="250" height="157" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/27819(1).jpg"><img src="http://mespana.ru/downloads/pics/27819.jpg" width="235" height="158" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/5(2)(4).jpg"><img src="http://mespana.ru/downloads/pics/5(2)(3).jpg" width="245" height="158" alt="" /></a>&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp;&nbsp;<a href="http://www.mespana.ru/fabric.php?cat=49"><img src="http://mespana.ru/downloads/pics/1(229).jpg" width="200" height="148" alt="" /></a></address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify"><a href="http://mespana.ru/downloads/pics/1(231).jpg"><img src="http://mespana.ru/downloads/pics/1(230).jpg" width="230" height="159" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/5(15).jpg"><img src="http://mespana.ru/downloads/pics/5(14).jpg" width="260" height="159" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/11(6).jpg"><img src="http://mespana.ru/downloads/pics/11(5).jpg" width="229" height="159" alt="" /></a></address>
+<address style="text-align: justify"><a href="http://mespana.ru/downloads/pics/Ñòðàíèöû èç ELYSEE-2(2).jpg"><img src="http://mespana.ru/downloads/pics/Ñòðàíèöû èç ELYSEE-2(1).jpg" width="235" height="162" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/Ñòðàíèöû èç MURANO(2).jpg"><img src="http://mespana.ru/downloads/pics/Ñòðàíèöû èç MURANO(1).jpg" width="275" height="163" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/Ñòðàíèöû èç MONZA(1).jpg"><img src="http://mespana.ru/downloads/pics/Ñòðàíèöû èç MONZA.jpg" width="200" height="163" alt="" /></a></address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify"><a href="http://www.mespana.ru/fabric.php?cat=263"><img src="http://mespana.ru/downloads/pics/monrabal-logo.png" width="224" height="70" alt="" /></a></address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp;<a href="http://mespana.ru/downloads/pics/Ñòðàíèöû èç PASION(1).jpg"><img src="http://mespana.ru/downloads/pics/Ñòðàíèöû èç PASION.jpg" width="250" height="175" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/Ñòðàíèöû èç ANABEL(3).jpg"><img src="http://mespana.ru/downloads/pics/Ñòðàíèöû èç ANABEL(2).jpg" width="236" height="179" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/Ñòðàíèöû èç VALERIA(2).jpg"><img src="http://mespana.ru/downloads/pics/Ñòðàíèöû èç VALERIA(1).jpg" width="235" height="179" alt="" /></a></address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify"><a href="http://mespana.ru/downloads/pics/Ñòðàíèöû èç ALBA(2).jpg"><img src="http://mespana.ru/downloads/pics/Ñòðàíèöû èç ALBA(1).jpg" width="225" height="175" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/Ñòðàíèöû èç VALERIA-2(2).jpg"><img src="http://mespana.ru/downloads/pics/Ñòðàíèöû èç VALERIA-2(1).jpg" width="252" height="175" alt="" /></a>&nbsp;<a href="http://mespana.ru/downloads/pics/Ñòðàíèöû èç PASION DORMITORIO(3).jpg"><img src="http://mespana.ru/downloads/pics/Ñòðàíèöû èç PASION DORMITORIO(2).jpg" width="245" height="174" alt="" /></a></address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify"><span style="font-family: Verdana">
+<address style="text-align: justify">&nbsp;</address>
+</span></address>
+<address style="text-align: justify">__________________________________________________________________________________________________________________________________</address>
+<address style="text-align: justify">&nbsp;</address>
+<address>&nbsp;</address>
+<address>&nbsp;</address>
+<address>&nbsp;</address>
+<address><span style="text-align: justify; font-family: Arial;"><span style="font-family: Verdana"><span style="font-size: medium"><em><font face="Arial">&nbsp;</font></em></span></span></span><span style="text-align: justify; font-family: Arial;"><span style="font-family: Verdana"><strong><span style="font-size: medium"><em>ÌÅÁÅËÜ ÈÑÏÀÍÈÈ ÊÀÊ ÏÐÎÈÇÂÅÄÅÍÈÅ ÈÑÊÓÑÑÒÂÀ È ÈÑÊÓÑÑÒÂÎ ÏÐÎÈÇÂÎÄÑÒÂÀ ÌÅÁÅËÈ</em>...</span></strong></span></span></address>
+<div>
+<div>
+<div style="text-align: justify"><span style="font-family: Verdana">&nbsp;</span></div>
+<div style="text-align: justify"><span style="font-family: Verdana"><em>×òî ñïîñîáíî ïðåâðàòèòü ïðîñòîé êóñîê äåðåâà â ïðîèçâåäåíèå èñêóññòâà, êîòîðûì õî÷åòñÿ ëþáîâàòüñÿ ñíîâà è ñíîâà?<br />
+Íåò, íå âîëøåáñòâî: ìàñòåðñòâî ðåç÷èêîâ, ëàêèðîâùèêîâ è äåêîðàòîðîâ &ndash; íàñëåäíèêîâ è õðàíèòåëåé ñëàâíûõ òðàäèöèé ïðîøëîãî, âîñõîäÿùèõ ê ýïîõå Âîçðîæäåíèÿ. Èõ óìåëûå ðóêè, âîîðóæåííûå èíñòðóìåíòàìè è ïðèñïîñîáëåíèÿìè, èçäàâíà èñïîëüçóåìûìè êðàñíîäåðåâùèêàìè, çíàêîìû ñ ñåêðåòàìè è òâîð÷åñêèìè ïðèåìàìè ñòàðûõ ìàñòåðîâ.</em><br />
+</span><span style="font-family: Verdana">&nbsp;</span></div>
+<div style="text-align: center"><span style="font-family: Verdana">&nbsp;</span><a href="http://mespana.ru/downloads/pics/1(15).jpg"><span style="font-family: Verdana"><em><span style="font-size: medium">ÄÐÅÂÍÅÅ ÈÑÊÓÑÑÒÂÎ ÐÅÇÜÁÛ ÏÎ ÄÅÐÅÂÓ</span></em></span></a></div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center"><span style="font-family: Verdana"><span style="font-size: x-small">&nbsp; &nbsp; &nbsp; &nbsp; <img height="132" width="160" alt="" src="http://mespana.ru/downloads/pics/1(34).jpg" /></span></span><span style="font-family: Verdana"><span style="font-size: x-small"><img height="132" width="160" alt="" src="http://mespana.ru/downloads/pics/4.jpg" /><img height="132" width="166" alt="" src="http://mespana.ru/downloads/pics/5(3).jpg" /><img height="132" width="158" alt="" src="http://mespana.ru/downloads/pics/1(53).jpg" /></span></span></div>
+</div>
+<div style="text-align: center">&nbsp;</div>
+</div>
+<address style="text-align: justify"><span style="font-family: Verdana">Ðåçüáà ïî äåðåâó, âîçìîæíî, ÿâëÿåòñÿ îäíèì èç ñàìûõ äðåâíèõ èñêóññòâ. Ðåçíûå ïðåäìåòû èç äåðåâà îáíàðóæåíû ñðåäè ïàìÿòíèêîâ äðåâíèõ öèâèëèçàöèé, íàïðèìåð ó åãèïòÿí. Ôèãóðû è äåêîð èç äåðåâà äëÿ óêðàøåíèÿ ìåáåëè âñåãäà ñîçäàâàëèñü èñêëþ÷èòåëüíî âðó÷íóþ, ÷òî òðåáîâàëî ðåìåñëåííûõ íàâûêîâ, êðåàòèâíîñòè, óãëóáëåííûõ çíàíèé è çíà÷èòåëüíîãî îïûòà. Áëàãîäàðÿ èñïîëüçîâàíèþ äåðåâîîáðàáàòûâàþùèõ ñòàíêîâ,&nbsp; ìåáåëüíàÿ ïðîìûøëåííîñòü äîñòèãëà âûñîêîãî êà÷åñòâåííîãî óðîâíÿ, îäíàêî îíà íå ñîáèðàåòñÿ îòêàçûâàòüñÿ&nbsp;îò&nbsp;ðó÷íîãî èçãîòîâëåíèÿ äåêîðàòèâíûõ ýëåìåíòîâ, ïåðåäàþùèõ âñå&nbsp;áîãàòñòâî ðåìåñëåííîé òðàäèöèè, óõîäÿùåé êîðíÿìè â âåêà.</span></address>
+<address style="text-align: justify"><span style="font-family: Verdana">Ðåçüáà - ñàìûé öåííûé äåêîðàòèâíûé ýëåìåíò ìåáåëè, â êîòîðîì íàèáîëåå ïîëíî ðàñêðûâàþòñÿ ñïîñîáíîñòè è óìåíèÿ ìàñòåðà. Ýòîò ýòàï íà÷èíàåòñÿ ñ îòäåëêè áëîêà öåëüíîãî äåðåâà, îáëàäàþùåãî äîñòàòî÷íî ìÿãêîé êîíñèñòåíöèåé è õîðîøî ïîääàþùåãîñÿ ðó÷íîé îáðàáîòêå.<br />
+Èäåàëüíîå äåðåâî äëÿ ýòîãî âèäà ðàáîòû íå èìååò âûðàæåííûõ ïðîæèëîê, îáëàäàåò îäíîðîäíîé ïîâåðõíîñòüþ, íå ñêàëûâàþùåéñÿ âî âðåìÿ ðàáîòû.<br />
+Ïîäãîòîâêà çàãîòîâêè äëÿ ðåçüáû âûïîëíÿåòñÿ íà ñòàíêàõ, êîòîðûå îáðàáàòûâàþò áëîê, äîâîäÿ åãî äî íåîáõîäèìîãî êîíòóðà.<br />
+Ïîñëå ìåõàíè÷åñêîé îáðàáîòêè äåòàëü äîâîäèòñÿ âðó÷íóþ, ÷òîáû ìàêñèìàëüíî òî÷íî îòäåëàòü äàæå ñàìûå ìàëåíüêèå ýëåìåíòû.Ýòî ñàìûé äåëèêàòíûé ýòàï, òàê êàê îäíà ëèøü îøèáêà ìîæåò èñïîðòèòü âñþ ðàáîòó, âåäü íåàêêóðàòíî ñðåçàííîå äåðåâî íåëüçÿ ïðèêëåèòü òàê, ÷òîáû íå áûëî âèäíî øâà. Â êîíöå ýòîé ôàçû áëîê ìîæåò áûòü îòøëèôîâàí äëÿ ïîëó÷åíèÿ ãëàäêîé îòäåëêè&nbsp;èëè æå îñòàâëåí íåîáðàáîòàííûì äëÿ ñîçäàíèÿ îñîáîãî äåêîðàòèâíîãî ýôôåêòà.&nbsp;</span></address>
+<address style="text-align: center"><span style="font-family: Arial">&nbsp;</span></address>
+<address style="text-align: center"><span style="font-size: x-small">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: x-small"><br />
+</span></address>
+<address style="text-align: center"><span style="font-family: Verdana">&nbsp;</span></address>
+<address style="text-align: center"><a href="http://mespana.ru/downloads/pics/9(8).jpg"><span style="font-family: Verdana"><span style="font-size: medium">ÒÐÀÄÈÖÈÎÍÍÀß ÒÅÕÍÈÊÀ ÐÓ×ÍÎÉ ÈÍÊÐÓÑÒÀÖÈÈ</span></span></a></address>
+<address style="text-align: center">&nbsp;</address>
+<address style="text-align: center">&nbsp;<img height="137" width="156" alt="" src="http://mespana.ru/downloads/pics/1(7).jpg" /><img height="136" width="147" alt="" src="http://mespana.ru/downloads/pics/2(4).jpg" /><img height="136" width="146" alt="" src="http://mespana.ru/downloads/pics/3(2).jpg" /><img height="136" width="174" alt="" src="http://mespana.ru/downloads/pics/1(17).jpg" /></address>
+<address style="text-align: justify">&nbsp;</address>
+<address style="text-align: justify"><span style="font-family: Verdana"><em>Äëÿ ñîçäàíèÿ èíêðóñòàöèè èç êîðíÿ íóæåí äîëãèé è êðîïîòëèâûé òðóä, äëÿ âûïîëíåíèÿ êîòîðîãî íóæíû íàâûêè ðó÷íîé ðàáîòû è òåðïåíèå.</em></span><span style="font-family: Verdana"><em>Òîëüêî òàê ïîÿâëÿåòñÿ íà ñâåò èçäåëèå, â êîòîðîì ðåìåñëî íàõîäèòñÿ íà ãðàíè èñêóññòâà.</em></span></address>
+<div style="text-align: justify"><span style="font-family: Verdana"><em>Êîðåíü, òàêæå èçâåñòíûé ïîä íàçâàíèåì &ldquo;êàï&rdquo;, ïîëó÷àåòñÿ èç êîðíåé è èç íàðîñòîâ íà ñòâîëå äåðåâà. Ýòî öåííàÿ ÷àñòü äåðåâà, òàê êàê îíà ñîäåðæèò óçëû, ïðîæèëêè è &ldquo;ìðàìîðíûé&rdquo; ðèñóíîê ñòîëü îñîáåííîé òåêñòóðû, ÷òî â ýïîõó Âîçðîæäåíèÿ êîðåíü èñïîëüçîâàëè äëÿ èìèòàöèè ìðàìîðà.</em></span></div>
+<div style="text-align: justify"><span style="font-family: Verdana"><em>Â ðåçóëüòàòå ðàñïèëîâêè êîðíÿ ïîëó÷àåòñÿ òîí÷àéøèé øïîí, îòëè÷àþùèéñÿ ÷ðåçâû÷àéíîé ðàçíîîáðàçíîñòüþ öâåòà è ðèñóíêà, êîòîðûé âìåñòå ñ èíêðóñòàöèåé ðàçíîöâåòíûìè ïîðîäàìè äåðåâà ñîçäàåò óäèâèòåëüíûå çðèòåëüíûå ýôôåêòû.Èñïîëüçóÿ ëèøü òîëüêî øïîí íàòóðàëüíîãî äåðåâà, êàæäàÿ&nbsp; èíêðóñòàöèÿ - åäèíñòâåííàÿ â ñâîåì ðîäå, îòëè÷àþùàÿñÿ îò ëþáîé äðóãîé êàê ïî ðèñóíêó äåðåâà, òàê è ïî îòòåíêàì è òîíàì.<br />
+Òàêîå ïðèêëàäíîå èñêóññòâî áåðåò ñâîå íà÷àëî óæå â ñðåäíåâåêîâüå, è ðàñöâåòàåò â òîñêàíñêîì Âîçðîæäåíèè. Ïîñëå ýòîãî èíêðóñòàöèÿ ñòàíîâèòñÿ î÷åíü ïîïóëÿðíûì, îòëè÷èòåëüíûì âèäîì îáðàáîòêè, ïðåâðàùàåòñÿ â ñâîåãî ðîäà êëåéìî äëÿ öåííîé ìåáåëè, ïðåäíàçíà÷åííîé äëÿ öàðñêèõ ñåìåé è çíàòè.Óæå â XVI âåêå äëÿ óêðàøåíèÿ äîðîãîé ìåáåëè ìàñòåðà èñïîëüçîâàëè ôàíåðó èç êîðíÿ òîëùèíîé 3-4 ìì, â íà÷àëå XIX âåêà íà ñìåíó åé ïðèøåë áîëåå òîíêèé (îê. 1 ìì.) øïîí.<br />
+Äðåâåñèíà êîðíÿ - èñòèííîå ïðîèçâåäåíèå èñêóññòâà, ñîçäàííîå ïðèðîäîé - íàèáîëåå øèðîêî èñïîëüçîâàëàñü äëÿ ñîçäàíèÿ èíêðóñòàöèé.Â èçäåëèÿõ èç äåðåâà, îòíîñÿùèõñÿ ê ýïîõå Ñðåäíåâåêîâüÿ, èíêðóñòàöèÿ ïðèñóòñòâóåò â äîâîëüíî íåáîëüøîì îáúåìå. Ïîñòåïåííî, â òå÷åíèå XV è XVI âåêîâ, ýòîò âèä èñêóññòâà ïîëó÷àåò â Èòàëèè (îñîáåííî âî Ôëîðåíöèè) âñå áîëüøåå ðàñïðîñòðàíåíèå, ÷òîáû ê êîíöó âåêà äîñòèãíóòü Ôðàíöèè. Â XVII âåêå â Èòàëèè ïðîñëàâëåííûé ìàñòåð Ìàäæîëèíè èçãîòîâëÿë ìåáåëü ñ èíêðóñòàöèÿìè èç ñëîíîâîé êîñòè è öåííûõ ïîðîä äåðåâà. Îí èñïîëüçîâàë îãðîìíîå êîëè÷åñòâî ðàçëè÷íîé äðåâåñèíû ( áîëåå âîñüìèäåñÿòè ïîðîä) âñåõ èñõîäíûõ öâåòîâ. ×òîáû ïîëó÷èòü äðåâåñèíó íåîáû÷íûõ îòòåíêîâ ìàñòåð èñïîëüçîâàë îñîáóþ òåõíèêó, êîòîðàÿ ñóùåñòâóåò è ïîíûíå:&nbsp;ïîãðóæàë íåáîëüøèå êóñî÷êè äåðåâà â ðàñêàëåííûé ïåñîê.&nbsp;<br />
+Êîìïàíèè, âûïóñêàþùèå ìåáåëü ñ ðó÷íîé èíêðóñòàöèåé, äîëæíû èìåòü â ñâîåì ðàñïîðÿæåíèè ìíîãî÷èñëåííûå ëèñòû äðåâåñèíû èç êîðíÿ ðàçëè÷íûõ òèïîâ, ýòî ïîçâîëÿåò âûáðàòü íàèáîëåå ïîäõîäÿùóþ äëÿ êàæäîãî âèäà îòäåëêè ïîðîäó. Ñðåäè íàèáîëåå ÷àñòî èñïîëüçóåìûõ ïîðîä: êîðåíü îëèâêîâîãî ÿñåíÿ, ïîëó÷àåìûé èç êîðíåé äåðåâà, îðåõ ñ ïîëíûì ðèñóíêîì, äîáûâàåìûé èç çîíû ïåðåñå÷åíèÿ âåòâåé è ñòâîëà, à òàêæå îáîææåííûé äóá, ïîëó÷àåìûé èç ñàìîé ïðÿìîé ÷àñòè äðåâåñíîãî ñòâîëà.</em></span></div>
+<address style="text-align: justify"><span style="font-family: Verdana"><em>Ïåðâûé ýòàï &ndash; ðó÷íîå âûðåçàíèå äåòàëè ñðàçó èç íåñêîëüêèõ ñëîåâ êîðíÿ èëè äðóãîé íàòóðàëüíîé äðåâåñèíû â ñîîòâåòñòâèè ñ çàäàííûì ðèñóíêîì. <br />
+Çàòåì âûðåçàííûå ýëåìåíòû ïîãðóæàþòñÿ â åìêîñòè ñ ðàñêàëåííûì ïåñêîì, âûñîêàÿ òåìïåðàòóðà ïåñêà ïîçâîëÿåò ïîëó÷èòü õàðàêòåðíûå öâåòîâûå îòòåíêè.Îêîí÷àòåëüíàÿ êîìïîçèöèÿ èíêðóñòàöèè ñîáèðàåòñÿ âðó÷íóþ íåïîñðåäñòâåííî íà ïàíåëè. Èíêðóñòèðîâàííàÿ ïàíåëü, â ñâîþ î÷åðåäü, çàêðåïëÿåòñÿ íà ñîîòâåòñòâóþùåé äåòàëè ìåáåëè.&nbsp;Íà ïåðâîì ýòàïå øëèôîâêè ñ èíêðóñòèðîâàííîé ïîâåðõíîñòè&nbsp;óäàëÿåòñÿ áóìàãà. Ýòà îïåðàöèÿ ïðîèçâîäèòñÿ èñêëþ÷èòåëüíî âðó÷íóþ.Èñïîëüçîâàíèå ñïåöèàëüíîé øïàêëåâêè ïîçâîëÿåò óñòðàíèòü ìåëü÷àéøèå äåôåêòû.Çàòåì èíêðóñòèðîâàííàÿ äåòàëü åùå ðàç øëèôóåòñÿ è íà÷èíàåòñÿ ïðîöåññ ëàêèðîâêè.<u><strong><span style="font-size: x-small"><br />
+</span></strong></u></em></span></address>
+<address style="text-align: center"><em>&nbsp;</em></address>
+<address style="text-align: center"><a href="http://www.mespana.ru/fabric.php?set=more&amp;cat=146&amp;id=316"><span style="font-size: small"><img height="196" width="221" alt="" src="http://mespana.ru/downloads/pics/5158.jpg" /></span></a><span style="font-size: x-small"><span style="font-size: small">&nbsp; </span><a href="http://www.mespana.ru/fabric.php?set=more&amp;cat=44&amp;id=52"><span style="font-size: small"><img height="196" width="195" alt="" src="http://mespana.ru/downloads/pics/824.jpg" /></span></a><span style="font-size: small">&nbsp; <a href="http://www.mespana.ru/fabric.php?set=more&amp;cat=48&amp;id=33"><img height="196" width="196" alt="" src="http://mespana.ru/downloads/pics/7711(1).jpg" /></a></span></span></address>
+<address style="text-align: center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</address>
+<div style="text-align: center">
+<div style="text-align: center"><span style="font-family: Verdana"><em>&nbsp;</em></span><span style="font-family: Times New Roman"><span style="font-size: medium"><a href="http://mespana.ru/downloads/pics/7766.jpg"><span style="font-family: Verdana"><em>ËÀÊÈÐÎÂÊÀ È ÏÀÒÈÍÈÐÎÂÀÍÈÅ - </em></span></a></span></span></div>
+<div style="text-align: center"><span style="font-family: Times New Roman"><span style="font-size: medium"><a href="http://mespana.ru/downloads/pics/7766.jpg"><span style="font-family: Verdana"><em>ÍÅÏÐÅÂÇÎÉÄÅÍÍÎÅ ÈÑÊÓÑÑÒÂÎ ÑÎÇÄÀÍÈß ÄÎÐÎÃÎÉ ÌÅÁÅËÈ</em></span></a></span></span></div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center">&nbsp;<span style="font-family: Times New Roman"><strong><img height="102" width="128" alt="" src="http://mespana.ru/downloads/pics/5555(1).jpg" /><img height="102" width="92" alt="" src="http://mespana.ru/downloads/pics/2(10).jpg" /><img height="102" width="119" alt="" src="http://mespana.ru/downloads/pics/1(32).jpg" /><img height="102" width="106" alt="" src="http://mespana.ru/downloads/pics/2(15).jpg" /><img height="102" width="228" alt="" src="http://mespana.ru/downloads/pics/3(15).jpg" /></strong></span></div>
+<div><span style="font-size: small">
+<address style="text-align: center">&nbsp;<span style="display: none" id="1286956722846S"><span style="display: none" id="1286956724056S"><span style="display: none" id="1286956725413S">&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</address>
+</span></div>
+<div style="text-align: justify"><span style="font-family: Verdana"><em>Òðàäèöèÿ ïàòèíèðîâàíèÿ è ëàêèðîâêè íàñ÷èòûâàåò íåñêîëüêî âåêîâ.</em></span></div>
+<address style="text-align: justify"><span style="font-family: Verdana">Áëàãîäàðÿ òðóäó è îïûòó ìàñòåðîâ, èñïîëüçóþùèõ ýòè òåõíèêè äëÿ ïðîèçâîäñòâà ìåáåëè è ïåðåäàþùèõ èõ ïîêîëåíèÿ â ïîêîëåíèå, ýòà òðàäèöèÿ æèâà è ïîíûíå. Áîëåå òîãî, òðàäèöèîííûå òåõíîëîãèè, îáîãàùåííûå ñîâðåìåííûìè çíàíèÿìè, è ñåãîäíÿ ÿâëÿþòñÿ áàçîé, íà êîòîðîé ëó÷øèå ïðîìûøëåííûå ïðåäïðèÿòèÿ ïðîäîëæàþò ñîçäàâàòü ìåáåëü âûñî÷àéøåãî êà÷åñòâà.</span></address>
+<address style="text-align: justify"><span style="font-family: Verdana">Ðó÷íîå ïàòèíèðîâàíèå òðåáóåò öåëîãî ðÿäà ïîñëåäóþùèõ îáðàáîòîê, äëÿ êîòîðûõ íåîáõîäèìû îïûò, óìåíèå, íåçàóðÿäíûå òåõíè÷åñêèå ñïîñîáíîñòè è - ïðåæäå âñåãî -ëþáîâü ê êðàñîòå.<br />
+Äðóãîé ñïîñîá èíäèâèäóàëüíîé îòäåëêè &ndash; çîëî÷åíèå èëè ñåðåáðåíèå, ò.å. íàíåñåíèå òîí÷àéøèõ ëèñòêîâ ñóñàëüíîãî çîëîòà èëè ñåðåáðà, ïðèäàþùèõ ìåáåëè äîðîãîé è èçûñêàííûé âèä. Ïîçîëî÷åííàÿ èëè ïîñåðåáðåííàÿ ïîâåðõíîñòü îñòàåòñÿ ãëÿíöåâîé, ëèáî ïðèìåíÿåòñÿ òåõíèêà, ïîçâîëÿþùàÿ ñîçäàòü ýôôåêò ñîñòàðèâàíèÿ. Çàòåì ìåáåëü ìîæåò áûòü óêðàøåíà öâåòî÷íûìè èëè îðíàìåíòàëüíûìè ìîòèâàìè, âûïîëíÿåìûìè èñêëþ÷èòåëüíî âðó÷íóþ ñ ïîìîùüþ òðàäèöèîííûõ ãðóíòîâîê è êðàñèòåëåé.<br />
+Ïî îêîí÷àíèè ïðîöåññà äåêîðèðîâàíèÿ íàñòóïàåò ýòàï íåïîñðåäñòâåííî ïàòèíèðîâàíèÿ. Íà ýòîì ýòàïå ìàñòåðó íåîáõîäèìî ìîáèëèçîâàòü âåñü ñâîé îïûò è óâëå÷åííîñòü, òàê êàê îáðàáîòêà òîëüêî ÷òî íàíåñåííîé ïàòèíû - ñëîæíûé ïðîöåññ, âûïîëíÿþùèéñÿ âðó÷íóþ è òðåáóþùèé ïðèìåíåíèÿ òðàäèöèîííûõ òåõíèê.&nbsp; Íåîáõîäèìî äîáèòüñÿ íóæíîãî äåêîðàòèâíîãî ýôôåêòà äî òîãî, êàê ïàòèíà âûñîõíåò. <br />
+Äëÿ ïîëó÷åíèÿ ýôôåêòà &ldquo;ôðåñêè&rdquo; èñïîëüçóåòñÿ ìÿãêàÿ íàòóðàëüíàÿ ìîðñêàÿ ãóáêà. Ýôôåêò &laquo;ïîëîñîê&raquo; äîñòèãàåòñÿ ñ ïîìîùüþ èñêóñíîãî èñïîëüçîâàíèÿ ìÿãêèõ è æåñòêèõ êèñòåé è ùåòîê, ñîçäàþùèõ ðàçíîîáðàçíûé ðèñóíîê è ðàçíîðîäíóþ òåêñòóðó, íå òîëüêî çàìåòíóþ íà îùóïü, íî è ïîðîæäàþùóþ îñîáûé çðèòåëüíûé ýôôåêò.<span style="font-size: small"><br />
+</span></span></address>
+<address style="text-align: center"><span style="font-size: small">&nbsp;</span></address>
+<address style="text-align: center"><span style="font-size: x-small"><a href="http://www.mespana.ru/fabric.php?set=more&amp;cat=56&amp;id=638"><span style="font-size: small"><img height="231" width="192" alt="" src="http://mespana.ru/downloads/pics/9950.jpg" /></span></a><span style="font-size: small">&nbsp; <span style="font-size: x-small"><span style="font-size: small"><a href="http://www.mespana.ru/fabric.php?cat=57"><img height="231" width="165" alt="" src="http://mespana.ru/downloads/pics/9(11).jpg" /></a>&nbsp;</span></span> <a href="http://www.mespana.ru/fabric.php?set=more&amp;cat=59&amp;id=365"><img height="231" width="183" alt="" src="http://mespana.ru/downloads/pics/6(5).jpg" /></a></span></span></address>
+<address style="text-align: center">&nbsp;</address>
+<div style="text-align: center">&nbsp;<span style="font-family: Verdana"> </span><a href="http://mespana.ru/downloads/pics/567(1).jpg"><span style="font-family: Verdana"><em><span style="font-size: medium">ÇÎËÎ×ÅÍÈÅ È ÑÅÐÅÁÐÅÍÈÅ</span></em></span></a></div>
+<div><span style="font-size: small">
+<address style="text-align: center">&nbsp;</address>
+</span></div>
+<div style="text-align: center">&nbsp;&nbsp;</div>
+<div style="text-align: justify"><span style="font-family: Verdana"><em>Íàíåñåíèå ñóñàëüíîãî çîëîòà è ñåðåáðà áàçèðóåòñÿ íà òðàäèöèîííîé òåõíèêå, âîñõîäÿùåé ê ýïîõå ôëîðåíòèéñêîãî Âîçðîæäåíèÿ.<br />
+Ïîëèìåíòíîå çîëî÷åíèå: íàòóðàëüíûå ìàòåðèàëû, ðó÷íàÿ îáðàáîòêà, èíäèâèäóàëüíîñòü çàêëþ÷àåòñÿ â íàíåñåíèè çîëîòîé èëè ñåðåáðÿíîé ôîëüãè - òîí÷àéøèõ ëèñòêîâ ýòèõ äðàãîöåííûõ ìåòàëëîâ, ïðèäàþùèõ ìåáåëè ýôôåêò áîëüøîé öåííîñòè.<br />
+Òîí÷àéøèå, ïðàêòè÷åñêè íåâåñîìûå, ëèñòû ñóñàëüíîãî çîëîòà íàêëàäûâàþòñÿ íà äåðåâÿííóþ ïîâåðõíîñòü. Çàòåì ïîâåðõíîñòü òùàòåëüíî, â íåñêîëüêî ïðèåìîâ, ïîëèðóåòñÿ è ñòàíîâèòñÿ îñëåïèòåëüíî ÿðêîé, ãëÿíöåâîé.<br />
+Ïîäãîòîâêà ê çîëî÷åíèþ è ñåðåáðåíèþ ïðîèñõîäèò ñëåäóþùèì îáðàçîì: ìåáåëü ïîëíîñòüþ ïîêðûâàåòñÿ ñìåñüþ ãèïñà è êëåÿ íà íàòóðàëüíîé îñíîâå; çàòåì øëèôóåòñÿ. Èñïîëüçîâàíèå òîíêîé íàæäà÷íîé áóìàãè ïîçâîëÿåò äîñòè÷ü àáñîëþòíî ãëàäêîé ïîâåðõíîñòè, íà êîòîðóþ èäåàëüíî ëîæàòñÿ òîí÷àéøèå çîëîòûå è ñåðåáðÿíûå ëèñòû. Äàëåå ñ ïîìîùüþ êèñòè íàíîñèòñÿ êëåé, à çàòåì ìÿãêèìè âàòíûìè òàìïîíàìè íàêëàäûâàþòñÿ íåáîëüøèå ôðàãìåíòû çîëîòîé èëè ñåðåáðÿíîé ôîëüãè. Ïîñëå ïîëíîãî âûñûõàíèÿ êëåÿ íà÷èíàåòñÿ ïðîöåññ ïîëèðîâêè. Îí ïðîèçâîäèòñÿ ñ ïîìîùüþ àãàòîâûõ &laquo;çóáêîâ&raquo; ðàçëè÷íûõ ðàçìåðîâ è ôîðì. Èñïîëüçîâàíèå ýòîé òåõíèêè ïîçâîëÿåò ïîëó÷èòü ãëàäêóþ ãëÿíöåâóþ ïîâåðõíîñòü ñ ÿðêèì áëåñêîì, âûãîäíî ïîä÷åðêèâàþùóþ èãðó òåíè è ñâåòà â èçãèáàõ è ðåëüåôàõ ðåçüáû.</em></span></div>
+<address style="text-align: center">&nbsp;</address>
+<address style="text-align: center"><span style="font-size: x-small">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mespana.ru/fabric.php?set=more&amp;cat=57&amp;id=529"><img height="241" width="206" alt="" src="http://mespana.ru/downloads/pics/3(16).jpg" /></a>&nbsp;&nbsp; <a href="http://www.mespana.ru/catalog_foto.php?cat=1&amp;id=1&amp;alb=12"><span style="font-size: x-small"><img height="241" width="138" alt="" src="http://mespana.ru/downloads/pics/2(18).jpg" /></span></a> &nbsp; <a href="http://www.mespana.ru/fabric.php?set=more&amp;cat=12&amp;id=31"><img height="241" width="295" alt="" src="http://mespana.ru/downloads/pics/563.jpg" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></address>
+<address style="text-align: center"><span style="font-size: x-large">&nbsp;</span></address>
+<address style="text-align: center"><span style="font-size: x-large"><span style="font-family: Verdana">Â èòîãå ïîëó÷àåòñÿ ðîñêîøíàÿ </span></span><span style="font-size: large"><span style="font-family: Times New Roman"><span style="font-size: x-large"><span style="font-family: Verdana">ìåáåëü êëàññà Luxe</span></span></span></span><span style="font-size: x-large"><span style="font-family: Times New Roman"><span style="font-family: Verdana">, </span></span></span></address>
+<address style="text-align: center"><span style="font-size: x-large"><span style="font-family: Times New Roman"><span style="font-family: Verdana">êîòîðàÿ ñòàíåò óêðàøåíèåì Âàøåãî èíòåðüåðà<span style="font-weight: bold">!</span></span></span></span><span style="font-size: small"><span style="font-family: Times New Roman"><span style="font-family: Verdana"><br />
+</span></span><span style="font-family: Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></address>
+<div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center"><span style="font-size: xx-large"><br />
+</span></div>
+<span style="font-size: xx-large">
+<div style="text-align: center"><span style="font-family: Arial"><em><br />
+</em></span></div>
+</span>
+<div style="text-align: center"><span style="font-size: x-large"><span style="font-family: Arial"><em>Äîñòàâêà â ëþáîé ðåãèîí Ðîññèè! </em><br />
+</span></span></div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center">&nbsp;</div>
+<span style="font-family: Arial">
+<div>&nbsp;</div>
+</span>
+<div style="text-align: center"><span style="font-family: Arial">&nbsp;</span></div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center">&nbsp;</div>
+<div><strong><span style="font-family: Verdana">
+<div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center">&nbsp;</div>
+</span></strong></div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center"><span style="font-family: Verdana"><span style="display: none" id="1286956714944S">&nbsp;</span>&nbsp;</span></div>
+<div>
+<div style="text-align: center"><strong>&nbsp;</strong></div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center">&nbsp;</div>
+<div style="text-align: center">&nbsp;</div>
+<span style="font-size: small"><span style="font-family: Verdana">
+<address style="text-align: center"><strong>&nbsp;</strong></address>
+</span></span>
+<div style="text-align: center"><strong>&nbsp;</strong></div>
+<div style="text-align: center"><strong>&nbsp;</strong></div>
+<div style="text-align: center"><strong><br />
+</strong></div>
+<div style="text-align: center"><strong><br />
+<br />
+<br />
+<br />
+&nbsp;</strong></div>
+<address style="text-align: center"><strong><span style="font-size: x-small"><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</span></strong></address>
+<address style="text-align: center"><strong>&nbsp;</strong></address>
+<address style="text-align: center"><strong>&nbsp;</strong></address>
+<address style="text-align: center"><strong>&nbsp;</strong></address>
+<address style="text-align: center"><strong>&nbsp;</strong></address>
+<address style="text-align: center"><strong><span style="font-size: x-small"><br />
+</span><br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></address>
+<div style="text-align: center"><strong>&nbsp;</strong></div>
+</div>
+</div>
+<div style="text-align: center">&nbsp;</div>
+</div>
+<br><br>
+
+
+
+
+<br><br>
+
+		
+		</td>
+		<td align="center" valign="top" width="25">&nbsp;</td>
+		<td align="left" valign="top" width="200">
+		<br><br>
+
+
+
+		<div class="big2"><a href="index.php?page=4"><img src="images/mesp.png" width="216" height="46" border="0" alt="Èñïàíñêèå ôàáðèêè"></a></div>
+		<!-- <div><img src="images/line1.jpg" width="200" height="5" border="0" alt=""></div> -->
+
+		<div class='link_fab'><a href='fabric.php?cat=323'>ALMERICH</a></div><div class='link_fab'><a href='fabric.php?cat=305'>ALPUCH</a></div><div class='link_fab'><a href='fabric.php?cat=227'>AM CLASSIC (ÏÎÐÒÓÃÀËÈß)</a></div><div class='link_fab'><a href='fabric.php?cat=209'>AMBOAN</a></div><div class='link_fab'><a href='fabric.php?cat=410'>ANTONINO (ÏÎÐÒÓÃÀËÈß)</a></div><div class='link_fab'><a href='fabric.php?cat=3'>ANZADI</a></div><div class='link_fab'><a href='fabric.php?cat=409'>APACHECO (ÏÎÐÒÓÃÀËÈß)</a></div><div class='link_fab'><a href='fabric.php?cat=231'>APARICIO Y NAVARRO</a></div><div class='link_fab'><a href='fabric.php?cat=5'>ASCENSION LATORRE</a></div><div class='link_fab'><a href='fabric.php?cat=398'>CENZERO</a></div><div class='link_fab'><a href='fabric.php?cat=12'>COLECCION  ALEXANDRA</a></div><div class='link_fab'><a href='fabric.php?cat=306'>COLONIAL CLUB</a></div><div class='link_fab'><a href='fabric.php?cat=141'>CREACIONES FEJOMI</a></div><div class='link_fab'><a href='fabric.php?cat=431'>CREACIONES SS</a></div><div class='link_fab'><a href='fabric.php?cat=434'>DE BOURNAIS (ÔÐÀÍÖÈß)</a></div><div class='link_fab'><a href='fabric.php?cat=288'>EGELASTA</a></div><div class='link_fab'><a href='fabric.php?cat=266'>ELIAS PEREZ</a></div><div class='link_fab'><a href='fabric.php?cat=146'>EPOCA</a></div><div class='link_fab'><a href='fabric.php?cat=404'>FENICIA MOBILIARIO</a></div><div class='link_fab'><a href='fabric.php?cat=393'>FRAJUMAR</a></div><div class='link_fab'><a href='fabric.php?cat=30'>GENOVEVA</a></div><div class='link_fab'><a href='fabric.php?cat=429'>GRASSOLER</a></div><div class='link_fab'><a href='fabric.php?cat=297'>HURTADO</a></div><div class='link_fab'><a href='fabric.php?cat=251'>LA EBANISTERIA</a></div><div class='link_fab'><a href='fabric.php?cat=369'>LABARERE (ÔÐÀÍÖÈß)</a></div><div class='link_fab'><a href='fabric.php?cat=296'>LAGRAMA</a></div><div class='link_fab'><a href='fabric.php?cat=35'>LINEAS TALLER </a></div><div class='link_fab'><a href='fabric.php?cat=430'>LLASS</a></div><div class='link_fab'><a href='fabric.php?cat=395'>LOLA GLAMOUR</a></div><div class='link_fab'><a href='fabric.php?cat=426'>LOYRA</a></div><div class='link_fab'><a href='fabric.php?cat=322'>MARINER</a></div><div class='link_fab'><a href='fabric.php?cat=143'>MESEGUE</a></div><div class='link_fab'><a href='fabric.php?cat=396'>MOBENIA</a></div><div class='link_fab'><a href='fabric.php?cat=414'>MOBILBERICA</a></div><div class='link_fab'><a href='fabric.php?cat=408'>MOBILFRESNO</a></div><div class='link_fab'><a href='fabric.php?cat=263'>MONRABAL CHIRIVELLA</a></div><div class='link_fab'><a href='fabric.php?cat=255'>MONTERO CREACIONES </a></div><div class='link_fab'><a href='fabric.php?cat=234'>MUGALI</a></div><div class='link_fab'><a href='fabric.php?cat=427'>NEOBRONCE</a></div><div class='link_fab'><a href='fabric.php?cat=394'>PACHECO`S (ÏÎÐÒÓÃÀËÈß)</a></div><div class='link_fab'><a href='fabric.php?cat=220'>PICO</a></div><div class='link_fab'><a href='fabric.php?cat=397'>PLAISANCE (ÏÎÐÒÓÃÀËÈß)</a></div><div class='link_fab'><a href='fabric.php?cat=41'>POINT </a></div><div class='link_fab'><a href='fabric.php?cat=328'>RIPERLAMP</a></div><div class='link_fab'><a href='fabric.php?cat=435'>SIGUIER (ÔÐÀÍÖÈß)</a></div><div class='link_fab'><a href='fabric.php?cat=378'>SKYLINE DESIGN</a></div><div class='link_fab'><a href='fabric.php?cat=44'>SOHER </a></div><div class='link_fab'><a href='fabric.php?cat=48'>TECNI NOVA </a></div><div class='link_fab'><a href='fabric.php?cat=299'>TOMAS&amp;SAEZ</a></div><div class='link_fab'><a href='fabric.php?cat=49'>TOSCANO MOBIL</a></div><div class='link_fab'><a href='fabric.php?cat=339'>TREBOL</a></div><div class='link_fab'><a href='fabric.php?cat=51'>VICENTE ZARAGOZA </a></div><div class='link_fab'><a href='fabric.php?cat=357'>VONDOM</a></div><div class='link_fab'><a href='fabric.php?cat=206'>VYM SOFAS</a></div><div class='link_fab'><a href='fabric.php?cat=52'>ZACHE DISENO</a></div>
+		<br>
+		<img src="images/msklad.png" width="183" height="39" border="0" alt="Ìåáåëü ñî ñêëàäà">
+
+		<div class='link_fab'><a href='fabric2.php?cat=55'>SKYLINE</a></div>
+
+		</td>
+		<td align="center" valign="top" width="20">&nbsp;</td>
+	 </tr>
+	 
+
+
+
+	 </table>
+	 
+	 <!-- -----------------------------------------------count----------------------------------------------------- -->
+	</td>
+ </tr>
+ <tr>
+	 <td height="6" align="center">
+	 <img src="images/hr.png" width="1029" height="6" border="0" alt="">
+	 </td>
+ </tr>
+  <tr>
+	 <td class="cop" height="30" align="center">
+	 <!-- -----------------------------------------------foot----------------------------------------------------- -->
+	 	 <table width="1050" border="0">
+	 <tr>
+		<td>&#1052;&#1099; &#1074; &#1089;&#1086;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1093; &#1089;&#1077;&#1090;&#1103;&#1093;: <a href="http://vk.com/club58176643"><img src="images/vk_logo.png" width="23" height="23" /></a> <a href="http://www.facebook.com"><img src="images/facebook_v2.png" width="23" height="23" /></a> <a href="http://instagram.com/"><img src="images/insta.png" width="23" height="23" /></a> <a href="https://plus.google.com"><img src="images/Glogo.png" width="23" height="23" /></a></td>
+		<td width="280" class="cop">
+		Copyright 2016 Ìåáåëü Èòàëèè è Èñïàíèè<br>
+		Ñîçäàíî â <a href="http://www.buxtom.ru"><img src="images/buxtom_v_over.png" alt="&#1057;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1077; &#1080; &#1087;&#1086;&#1076;&#1076;&#1077;&#1088;&#1078;&#1082;&#1072; Buxtom" width="70" height="22" align="absbottom" /></a></td>
+	 </tr>
+	 </table>
+	 <!-- -----------------------------------------------foot----------------------------------------------------- -->
+	 </td>
+ </tr>
+ </table>
+</center> 
+
+
+<!-- Yandex.Metrika -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter1152514 = new Ya.Metrika(1152514); } catch(e){}
+</script></div>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/1152514" alt="" /></div></noscript>
+<!-- /Yandex.Metrika -->
+
+
+ </body>
+</html>
+
+<html>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter31460743 = new Ya.Metrika({
+                    id:31460743,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/31460743" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<body>
+<script async="async" src="https://w.uptolike.com/widgets/v1/zp.js?pid=1380047" type="text/javascript"></script>
+
+</body>
+<html>

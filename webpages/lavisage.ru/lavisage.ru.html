@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+<link href="css/style.css" rel="stylesheet" media="all" />
+<link href="css/galleria.css" rel="stylesheet" type="text/css" media="screen">
+<link rel="stylesheet" type="text/css" href="css/accord.css" />
+
+
+<title>Ëÿ Âèçàæ</title>
+<meta name="description" content="Ñåòü ñàëîíîâ êðàñîòû Ëÿ Âèçàæ ïðåäëàãàåò ïîñåòèòü íàøè ñàëîíû è îçíàêîìèòüñÿ ñ óñëóãàìè: ïàðèêìàõåðñêîãî çàëà, êîñìåòîëîãèè, íîãòåâîãî ñåðâèñà è ñîëÿðèÿ. Òåë: +7 (495) 708-96-48, +7 (495) 708-86-68." />
+<meta name="keywords" content="ñàëîí, êðàñîòû, ìîñêâà" />
+
+
+<script type="text/javascript" src="js/accord/prototype.js"></script>
+<script type="text/javascript" src="js/accord/effects.js"></script>
+<script type="text/javascript" src="js/accord/accordion.js"></script>
+<script type="text/javascript">
+	Event.observe(window, 'load', loadAccordions, false);
+	function loadAccordions() {
+		var topAccordion = new accordion('horizontal_container', {
+			classNames : {
+				toggle : 'horizontal_accordion_toggle',
+				toggleActive : 'horizontal_accordion_toggle_active',
+				content : 'horizontal_accordion_content'
+			},
+			defaultSize : {
+				width : 100
+			},
+			direction : 'horizontal'
+		});
+		var bottomAccordion = new accordion('vertical_container');
+		// Open first one
+		bottomAccordion.activate($$('#vertical_container .accordion_toggle')[-1]);
+		// Open second one
+	}
+			
+	
+
+</script>
+
+    <link rel="stylesheet" type="text/css" href="css/light/lightwindow.css" />
+	<script type="text/javascript" src="js/light/prototype.js"></script>
+	<script type="text/javascript" src="js/light/effects.js"></script>
+	<script type="text/javascript" src="js/light/lightwindow.js"></script>
+	<!--script type="text/javascript" src="js/snow.js"></script-->
+	
+	
+<script type="text/javascript" src="js/highslide/highslide-with-gallery.js"></script> 
+<link rel="stylesheet" type="text/css" href="css/highslide/highslide.css" /> 
+ 
+<!--
+	2) Optionally override the settings defined at the top
+	of the highslide.js file. The parameter hs.graphicsDir is important!
+--> 
+ 
+<script type="text/javascript"> 
+	hs.graphicsDir = 'img/highslide/graphics/';
+	hs.align = 'center';
+	hs.transitions = ['expand', 'crossfade'];
+	hs.outlineType = 'rounded-white';
+	hs.wrapperClassName = 'controls-in-heading';
+	hs.fadeInOut = true;
+	//hs.dimmingOpacity = 0.75;
+ 
+	// Add the controlbar
+	if (hs.addSlideshow) hs.addSlideshow({
+		//slideshowGroup: 'group1',
+		interval: 5000,
+		repeat: false,
+		useControls: true,
+		fixedControls: false,
+		overlayOptions: {
+			opacity: 1,
+			position: 'top right',
+			hideOnMouseOut: false
+		}
+	});
+</script> 
+
+	
+<!--
+<style>
+.content {
+	background: transparent url(/images/ng/ng-8.png) no-repeat -2px -2px;
+	margin-top:15px; padding:7px; border:1px solid #636363;}
+</style>
+	
+-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<style type="text/css">
+/* Îêíî */
+#modal_form {
+	width: 706px; 
+	height: 750px; /* Ðàçìåðû äîëæíû áûòü ôèêñèðîâàíû */
+	border-radius: 5px;
+	border: 3px #000 solid;
+	background: #fff;
+	position: fixed; /* ÷òîáû îêíî áûëî â âèäèìîé çîíå â ëþáîì ìåñòå */
+	top: 4%; /* îòñòóïàåì ñâåðõó 45%, îñòàëüíûå 5% ïîäâèíåò ñêðèïò */
+	left: 36%; /* ïîëîâèíà ýêðàíà ñëåâà */
+	margin-top: -380px;
+	margin-left: -150px; /* òóò âñÿ ìàãèÿ öåíòðîâêè css, îòñòóïàåì âëåâî è ââåðõ ìèíóñ ïîëîâèíó øèðèíû è âûñîòû ñîîòâåòñòâåííî =) */
+	display: none; /* â îáû÷íîì ñîñòîÿíèè îêíà íå äîëæíî áûòü */
+	opacity: 0; /* ïîëíîñòüþ ïðîçðà÷íî äëÿ àíèìèðîâàíèÿ */
+	z-index: 5; /* îêíî äîëæíî áûòü íàèáîëåå áîëüøåì ñëîå */
+	padding: 20px 10px;
+	text-align:center;
+}
+/* Êíîïêà çàêðûòü äëÿ òåõ êòî â òàíêå) */
+#modal_form #modal_close {
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: block;
+}
+/* Ïîäëîæêà */
+#overlay {
+	z-index: 3; /* ïîäëîæêà äîëæíà áûòü âûøå ñëîåâ ýëåìåíòîâ ñàéòà, íî íèæå ñëîÿ ìîäàëüíîãî îêíà */
+	position: fixed; /* âñåãäà ïåðåêðûâàåò âåñü ñàéò */
+	background-color: #000; /* ÷åðíàÿ */
+	opacity: 0.8; /* íî íåìíîãî ïðîçðà÷íà */
+	width: 100%; 
+	height: 100%; /* ðàçìåðîì âî âåñü ýêðàí */
+	top: 0; 
+	left: 0; /* ñâåðõó è ñëåâà 0, îáÿçàòåëüíûå ñâîéñòâà! */
+	cursor: pointer;
+	display: none; /* â îáû÷íîì ñîñòîÿíèè å¸ íåò) */
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function() { // âñÿ ìàãèÿ ïîñëå çàãðóçêè ñòðàíèöû
+	$('a#go').click( function(event){ // ëîâèì êëèê ïî ññûëêè ñ id="go"
+		event.preventDefault(); // âûêëþ÷àåì ñòàíäàðòíóþ ðîëü ýëåìåíòà
+		$('#overlay').fadeIn(400, // ñíà÷àëà ïëàâíî ïîêàçûâàåì òåìíóþ ïîäëîæêó
+		 	function(){ // ïîñëå âûïîëíåíèÿ ïðåäúèäóùåé àíèìàöèè
+				$('#modal_form') 
+					.css('display', 'block') // óáèðàåì ó ìîäàëüíîãî îêíà display: none;
+					.animate({opacity: 1, top: '50%'}, 200); // ïëàâíî ïðèáàâëÿåì ïðîçðà÷íîñòü îäíîâðåìåííî ñî ñúåçæàíèåì âíèç
+		});
+	});
+	/* Çàêðûòèå ìîäàëüíîãî îêíà, òóò äåëàåì òî æå ñàìîå íî â îáðàòíîì ïîðÿäêå */
+	$('#modal_close, #overlay').click( function(){ // ëîâèì êëèê ïî êðåñòèêó èëè ïîäëîæêå
+		$('#modal_form')
+			.animate({opacity: 0, top: '45%'}, 200,  // ïëàâíî ìåíÿåì ïðîçðà÷íîñòü íà 0 è îäíîâðåìåííî äâèãàåì îêíî ââåðõ
+				function(){ // ïîñëå àíèìàöèè
+					$(this).css('display', 'none'); // äåëàåì åìó display: none;
+					$('#overlay').fadeOut(400); // ñêðûâàåì ïîäëîæêó
+				}
+			);
+	});
+});
+</script>	
+</head>
+
+<body>
+
+<script type="text/javascript" charset="utf-8">
+var host = 'http://moresalonov.ru';
+document.write(unescape("%3Cscript src='" + host + "/js/ms.bookingwidget.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div id="ms-inline-button-container"></div>
+<script type="text/javascript" charset="utf-8">
+var MSWidgetOptions = {
+href: '1050/2/1',
+host: 'http://moresalonov.ru',
+type: 'left',
+lang: 'rus',
+border_color: '',
+main_color: 'E86A78'
+};
+MSWidget.initWidget(MSWidgetOptions);
+</script>
+<style>
+#ms-booking-button-container .ms-absolute.rus {
+}
+</style>
+	
+
+
+<div style="width: 960px; margin: 0 auto;position: relative;">
+	
+<!--
+<img src="/images/ng/ng-1.jpg" alt="" style="position: absolute; top: 147px;left:31px;z-index:9;"/>
+<img src="/images/ng/ng-1.jpg" alt="" style="position: absolute; top: 94px;left:31px;z-index:9;"/>
+<img src="/images/ng/ng-2.png" alt="" style="position: absolute; top: 163px;left:10px;"/>
+<img src="/images/ng/ng-3.png" alt="" style="position: absolute; top: 0px;left:10px;"/>
+<img src="/images/ng/ng-4.png" alt="" style="position: absolute; top: 163px;right:222px;"/>
+<img src="/images/ng/ng-5.png" alt="" style="position: absolute; top: 163px;right:25px;"/>
+<img src="/images/ng/ng-6.png" alt="" style="position: absolute; top: 25px;right:-18px;"/>
+<img src="/images/ng/ng-7.gif?5" alt="" style="position: absolute; bottom: 12px;left:-8px;z-index:9;"/>
+<img src="/images/ng/ng-1.jpg" alt="" style="position: absolute; bottom: 0px;left:0px;width: 930px;"/>
+-->
+
+<table cellpadding="0" cellspacing="0" width="960" align="center" class="gray">
+	<tr>
+		<td valign="top">
+			<table cellpadding="0" cellspacing="0" width="100%" class="main">
+			
+	<tr>
+		<td align="right">
+		<img src="img/logo.png" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<table cellpadding="0" cellspacing="0" class="menu" align="center">
+			<tr>
+				<td width="72"></td>
+				<td width="200" align="center"><a href="/"><img src="img/menu_1_1.jpg" border="0" /></a></td>
+				<td width="4" style="color:#dcdcdc">|</td>
+				<td width="200" align="center"><a href="service.html"><img src="img/menu_2_9.jpg" border="0" /></a></td>
+				<td width="4" style="color:#dcdcdc">|</td>
+				<td width="200" align="center"><a href="action.html"><img src="img/menu_21.jpg" border="0" /></a></td>
+				<td width="4" style="color:#dcdcdc">|</td>
+				<td width="200" align="center"><a href="news_list.html"><img src="img/menu_2_1.jpg" border="0" /></a></td>
+				<td width="4" style="color:#dcdcdc">|</td>
+				<td width="200" align="center"><a href="partner.html"><img src="img/menu_3_1.jpg" border="0" /></a></td>
+				<td width="4" style="color:#dcdcdc">|</td>
+				<td width="200" align="center"><a href="contact_all.html"><img src="img/menu_4_1.jpg" border="0" /></a></td>
+				<td width="72"></td>
+			</tr>
+		</table>		
+		</td>
+	</tr>
+	<tr>
+		<td>
+		
+		<table cellpadding="0" cellspacing="0" width="960">
+			<tr>
+				<td width="30">&nbsp;</td>
+				<td valign="top" width="200">
+					
+				</td>
+				<td width="20"></td>
+				<td valign="top">
+				
+				
+				
+<script type="text/javascript" src="js/highslide/highslide-with-gallery.js"></script> 
+<link rel="stylesheet" type="text/css" href="css/highslide/highslide.css" /> 
+ 
+<!--
+	2) Optionally override the settings defined at the top
+	of the highslide.js file. The parameter hs.graphicsDir is important!
+--> 
+ 
+<script type="text/javascript"> 
+	hs.graphicsDir = 'img/highslide/graphics/';
+	hs.align = 'center';
+	hs.transitions = ['expand', 'crossfade'];
+	hs.outlineType = 'rounded-white';
+	hs.wrapperClassName = 'controls-in-heading';
+	hs.fadeInOut = true;
+	//hs.dimmingOpacity = 0.75;
+ 
+	// Add the controlbar
+	if (hs.addSlideshow) hs.addSlideshow({
+		//slideshowGroup: 'group1',
+		interval: 5000,
+		repeat: false,
+		useControls: true,
+		fixedControls: false,
+		overlayOptions: {
+			opacity: 1,
+			position: 'top right',
+			hideOnMouseOut: false
+		}
+	});
+</script> 
+				<br/>
+				
+				
+<table cellpadding="0" cellspacing="0" width="100%" style="margin-top:10px;">
+	
+    <tr>
+		<!--<td width="33%" align="center"><a href="zheleznyaka.html"><img title="Ñàëîí êðàñîòû Ëÿ Âèçàæ ó ì. Âîéêîâñêàÿ è ì. Âîéêîâñêàÿ" src="img/beauty_salon_petrovsko_razumovskaya.jpg" alt="Ñàëîí êðàñîòû Ëÿ Âèçàæ ó ì. Âîéêîâñêàÿ è ì. Âîéêîâñêàÿ" class="bord"/></a><br />
+		<a href="zheleznyaka.html" style="font:normal 9pt Tahoma; color:#FFFFFF; text-decoration:none;">Ì. Âîéêîâñêàÿ<br /> òåë.:(495)708-96-48 <br />(495)708-86-68</a>
+		</td>-->
+		<td width="50%" align="center"><a href="gilyarovskogo.html"><img title="Ñàëîí êðàñîòû Ëÿ Âèçàæ ó ì. Ïðîñïåêò Ìèðà" src="img/beauty_salon_prospekt_mira.jpg" alt="Ñàëîí êðàñîòû Ëÿ Âèçàæ ó ì. Ïðîñïåêò Ìèðà" class="bord" /></a><br />
+		<a href="gilyarovskogo.html" style="font:normal 9pt Tahoma; color:#FFFFFF; text-decoration:none;">Ì. Ïðîñïåêò Ìèðà<br /> òåë.:(495)681-52-93<br /> (495)681-61-92</a></td>
+		<td width="50%" align="center"><a href="talalikhina.html"><img title="Ñàëîí êðàñîòû Ëÿ Âèçàæ íà Ïðîëåòàðñêîé" 
+		src="img/beauty_salon_proletarskaya.jpg" alt="Ñàëîí êðàñîòû Ëÿ Âèçàæ íà Ïðîëåòàðñêîé" class="bord" /></a><br />
+		<a href="talalikhina.html" style="font:normal 9pt Tahoma; color:#FFFFFF; text-decoration:none;">Ì. Ïðîëåòàðñêàÿ <br /> òåë.:(495)670-69-19<br /> (495)670-87-14</a>
+		
+
+		
+		
+		</td>
+	</tr>
+</table>				
+								<table border="0" cellpadding="0" cellspacing="0" width="100%" class="content">
+					<tr>
+						<td>
+						
+						<div class="breadcrumbs"></div>
+						
+						
+							
+
+<table class="table_content">
+	<tr>
+		<td>
+		<p style="text-align: center;">&nbsp;</p><p style="text-align: center;"><span style="font-family: mceinline;"><strong><em><span style="text-decoration: underline;">ÂÍÈÌÀÍÈÞ &nbsp;ÍÀØÈÕ &nbsp;ÄÎÐÎÃÈÕ &nbsp;È &nbsp;ÓÂÀÆÀÅÌÛÕ &nbsp;ÊËÈÅÍÒÎÂ</span></em></strong></span></p><p style="text-align: center;"><span style="font-family: mceinline;"><strong><em>Ñòèëèñò &nbsp;ÌÀÄËÅÍÀ ÌÈÐÇÎßÍ ðàáîòàåò â ñàëîíå "Ëÿ Âèçàæ" (óë.Ãèëÿðîâñêîãî, ä.50)</em></strong></span></p><p style="text-align: center;"><span style="font-style: italic; font-weight: bold; font-family: mceinline;">Êîñìåòîëîã &nbsp;ËÀÌÀ ÏÐÎÂÀÒÎÐÎÂÀ ðàáîòàåò â ñàëîíàõ "Ëÿ Âèçàæ"(óë.Ãèëÿðîâñêîãî. ä.50 è óë.Òàëàëèõèíà, ä.1, êîðï.2)</span></p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;"><img src="/useruploads/images/1473973769_______________.PNG" alt="" width="84" height="150" />&nbsp; <img src="/useruploads/images/1473973857_________.PNG" alt="" width="84" height="150" /></p>		</td>
+	</tr>						
+</table>		
+
+
+
+
+						
+						</td>
+					</tr>
+								
+				</table>				
+				</td>
+				<td width="30">&nbsp;</td>
+			</tr>
+		</table>
+		
+
+			
+<br/><br/><br/>			
+<div style="text-align:right;">
+<!-- Yandex.Metrika informer -->
+<a href="http://metrika.yandex.ru/stat/?id=17865586&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/17865586/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="ßíäåêñ.Ìåòðèêà" title="ßíäåêñ.Ìåòðèêà: äàííûå çà ñåãîäíÿ (ïðîñìîòðû, âèçèòû è óíèêàëüíûå ïîñåòèòåëè)" onclick="try{Ya.Metrika.informer({i:this,id:17865586,type:0,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter17865586 = new Ya.Metrika({id:17865586, enableAll: true, webvisor:true});
+        } catch(e) { }
+    });
+   
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/17865586" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t14.4;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: ïîêàçàíî ÷èñëî ïðîñìîòðîâ çà 24"+
+" ÷àñà, ïîñåòèòåëåé çà 24 ÷àñà è çà ñåãîäíÿ' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+
+</div>
+<div id="soc_seti" style="position:absolute; margin-left:290px; margin-top:-35px;">
+<a href="https://www.facebook.com/LaVisage.msk" target="_blank"><img src="/images/face.png" alt="Ôåéñáóê" width="30px;" style="border:1px solid #CCC; border-radius:5px;"/></a> <a href="http://instagram.com/SALONLAVISAGE" target="_blank"><img src="/images/inst.png" alt="Èíñòàãðàì"  width="30px;" style="border:1px solid #CCC; border-radius:5px;"/></a> <a href="https://twitter.com/lyavisage" target="_blank"><img src="/images/twitter-icon.png" alt="Òâèòòåð"  width="30px;" style="border:1px solid #CCC; border-radius:5px;"/></a>
+</div>
+		</td>
+	</tr>
+
+
+			</table>
+		</td>
+	</tr>
+</table>
+<br/><br/><br/>
+</div>
+
+<!-- Ìîäàëüíîå îêíî -->
+<!-- <div id="modal_form">
+	
+		<img src="/images/den_krasoti-5.jpg" alt="Äåíü êðàñîòû" />
+</div> -->
+<div id="overlay"></div>
+</body>
+</html>

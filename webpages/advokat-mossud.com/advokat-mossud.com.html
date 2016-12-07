@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>Ивантеевский  Филиал Московской Областной Коллегии Адвокатов</title>
+<script type="text/javascript" src="http://advokat-mossud.com/wp-content/themes/law_wordpress_theme_2/script.js"></script>
+<link rel="stylesheet" href="http://advokat-mossud.com/wp-content/themes/law_wordpress_theme_2/style.css" type="text/css" media="screen" />
+<!--[if IE 6]><link rel="stylesheet" href="http://advokat-mossud.com/wp-content/themes/law_wordpress_theme_2/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="http://advokat-mossud.com/wp-content/themes/law_wordpress_theme_2/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+<link rel="alternate" type="application/rss+xml" title="RSS-лента Ивантеевский  Филиал Московской Областной Коллегии Адвокатов" href="http://advokat-mossud.com/?feed=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom-лента Ивантеевский  Филиал Московской Областной Коллегии Адвокатов" href="http://advokat-mossud.com/?feed=atom" /> 
+<link rel="pingback" href="http://advokat-mossud.com/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://advokat-mossud.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://advokat-mossud.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.8.16" />
+<style type="text/css">
+    .calnk a:hover {
+        background-position:0 0;
+        text-decoration:none;  
+        color:#000000;
+        border-bottom:1px dotted #000000;
+     }
+    .calnk a:visited {
+        text-decoration:none;
+        color:#000000;
+        border-bottom:1px dotted #000000;
+    }
+    .calnk a {
+        text-decoration:none; 
+        color:#000000; 
+        border-bottom:1px dotted #000000;
+    }
+    .calnk a span { 
+        display:none; 
+    }
+    .calnk a:hover span {
+        color:#333333; 
+        background:#F6F79B; 
+        display:block;
+        position:absolute; 
+        margin-top:1px; 
+        padding:5px; 
+        width:150px; 
+        z-index:100;
+        line-height:1.2em;
+    }
+    .calendar-table {
+        border:0 !important;
+        width:100% !important;
+        border-collapse:separate !important;
+        border-spacing:2px !important;
+    }
+    .calendar-heading {
+        height:25px;
+        text-align:center;
+        border:1px solid #D6DED5;
+        background-color:#E4EBE3;
+    }
+    .calendar-next {
+        width:25%;
+        text-align:center;
+    }
+    .calendar-prev {
+        width:25%;
+        text-align:center;
+    }
+    .calendar-month {
+        width:50%;
+        text-align:center;
+        font-weight:bold;
+    }
+    .normal-day-heading {
+        text-align:center;
+        width:25px;
+        height:25px;
+        font-size:0.8em;
+        border:1px solid #DFE6DE;
+        background-color:#EBF2EA;
+    }
+    .weekend-heading {
+        text-align:center;
+        width:25px;
+        height:25px;
+        font-size:0.8em;
+        border:1px solid #DFE6DE;
+        background-color:#EBF2EA;
+        color:#FF0000;
+    }
+    .day-with-date {
+        vertical-align:text-top;
+        text-align:left;
+        width:60px;
+        height:60px;
+        border:1px solid #DFE6DE;
+    }
+    .no-events {
+
+    }
+    .day-without-date {
+        width:60px;
+        height:60px;
+        border:1px solid #E9F0E8;
+    }
+    span.weekend {
+        color:#FF0000;
+    }
+    .current-day {
+        vertical-align:text-top;
+        text-align:left;
+        width:60px;
+        height:60px;
+        border:1px solid #BFBFBF;
+        background-color:#E4EBE3;
+    }
+    span.event {
+        font-size:0.75em;
+    }
+    .kjo-link {
+        font-size:0.75em;
+        text-align:center;
+    }
+    .calendar-date-switcher {
+        height:25px;
+        text-align:center;
+        border:1px solid #D6DED5;
+        background-color:#E4EBE3;
+    }
+    .calendar-date-switcher form {
+        margin:2px;
+    }
+    .calendar-date-switcher input {
+        border:1px #D6DED5 solid;
+        margin:0;
+    }
+    .calendar-date-switcher select {
+        border:1px #D6DED5 solid;
+        margin:0;
+    }
+    .calnk a:hover span span.event-title {
+        padding:0;
+        text-align:center;
+        font-weight:bold;
+        font-size:1.2em;
+        margin-left:0px;
+    }
+    .calnk a:hover span span.event-title-break {
+        width:96%;
+        text-align:center;
+        height:1px;
+        margin-top:5px;
+        margin-right:2%;
+        padding:0;
+        background-color:#000000;
+        margin-left:0px;
+    }
+    .calnk a:hover span span.event-content-break {
+        width:96%;
+        text-align:center;
+        height:1px;
+        margin-top:5px;
+        margin-right:2%;
+        padding:0;
+        background-color:#000000;
+        margin-left:0px;
+    }
+    .page-upcoming-events {
+        font-size:80%;
+    }
+    .page-todays-events {
+        font-size:80%;
+    }
+    .calendar-table table,tbody,tr,td {
+        margin:0 !important;
+        padding:0 !important;
+    }
+    table.calendar-table {
+        margin-bottom:5px !important;
+    }
+    .cat-key {
+        width:100%;
+        margin-top:30px;
+        padding:5px;
+        border:0 !important;
+    }
+    .cal-separate {
+       border:0 !important;
+       margin-top:10px;
+    }
+    table.cat-key {
+       margin-top:5px !important;
+       border:1px solid #DFE6DE !important;
+       border-collapse:separate !important;
+       border-spacing:4px !important;
+       margin-left:2px !important;
+       width:99.5% !important;
+       margin-bottom:5px !important;
+    }
+    .cat-key td {
+       border:0 !important;
+    }
+</style>
+</head>
+<link rel="icon" href="http://advokat-mossud.com/wp-content/uploads/2014/02/favicon-.ico" type="image/x-icon" />
+
+ 
+
+<link rel="shortcut icon"href="http://advokat-mossud.com/wp-content/uploads/2014/02/favicon-.ico" type="image/x-icon" />
+
+<meta name='yandex-verification' content='5fd976b8e0a7831e' />
+
+
+
+
+
+
+<body>
+<div id="art-page-background-glare">
+    <div id="art-page-background-glare-image"></div>
+</div>
+<div id="art-main">
+<div class="art-sheet">
+    <div class="art-sheet-tl"></div>
+    <div class="art-sheet-tr"></div>
+    <div class="art-sheet-bl"></div>
+    <div class="art-sheet-br"></div>
+    <div class="art-sheet-tc"></div>
+    <div class="art-sheet-bc"></div>
+    <div class="art-sheet-cl"></div>
+    <div class="art-sheet-cr"></div>
+    <div class="art-sheet-cc"></div>
+    <div class="art-sheet-body">
+<div class="art-nav">
+	<div class="l"></div>
+	<div class="r"></div>
+	<ul class="art-menu">
+		<li><a class="active" href="http://advokat-mossud.com"><span class="l"></span><span class="r"></span><span class="t">Главная</span></a></li><li class="page_item page-item-2"><a href="http://advokat-mossud.com/?page_id=2"><span class="l"></span><span class="r"></span><span class="t">Адвокатура</span></a></li>
+<li class="page_item page-item-6"><a href="http://advokat-mossud.com/?page_id=6"><span class="l"></span><span class="r"></span><span class="t">Юридические услуги</span></a></li>
+<li class="page_item page-item-15 page_item_has_children"><a href="http://advokat-mossud.com/?page_id=15"><span class="l"></span><span class="r"></span><span class="t">Наши адвокаты</span></a>
+<ul class='children'>
+	<li class="page_item page-item-115"><a href="http://advokat-mossud.com/?page_id=115">Красинский А. Л.</a></li>
+	<li class="page_item page-item-118"><a href="http://advokat-mossud.com/?page_id=118">Соловьева Р. В.</a></li>
+	<li class="page_item page-item-120"><a href="http://advokat-mossud.com/?page_id=120">Брайко Л. И.</a></li>
+	<li class="page_item page-item-127"><a href="http://advokat-mossud.com/?page_id=127">Кузнецова С. А.</a></li>
+	<li class="page_item page-item-131"><a href="http://advokat-mossud.com/?page_id=131">Нефедова О. В.</a></li>
+	<li class="page_item page-item-135"><a href="http://advokat-mossud.com/?page_id=135">Толкачев И. И.</a></li>
+	<li class="page_item page-item-137"><a href="http://advokat-mossud.com/?page_id=137">Щеглов Е. Г.</a></li>
+	<li class="page_item page-item-139"><a href="http://advokat-mossud.com/?page_id=139">Царьков Д. В.</a></li>
+	<li class="page_item page-item-81"><a href="http://advokat-mossud.com/?page_id=81">Канаев А. Е.</a></li>
+</ul>
+</li>
+<li class="page_item page-item-17"><a href="http://advokat-mossud.com/?page_id=17"><span class="l"></span><span class="r"></span><span class="t">Контакты</span></a></li>
+<li class="page_item page-item-66"><a href="http://advokat-mossud.com/?page_id=66"><span class="l"></span><span class="r"></span><span class="t">Карта сайта</span></a></li>
+	</ul>
+</div>
+<div class="art-header">
+    <div class="art-header-jpeg"></div>
+<div class="art-logo">
+<h1 id="name-text" class="art-logo-name">
+        <a href="http://advokat-mossud.com/">Ивантеевский  Филиал Московской Областной Коллегии Адвокатов</a></h1>
+    <div id="slogan-text" class="art-logo-text">
+        Адвокатская Палата Московской Области</div>
+</div>
+
+<div id="had"></div>
+
+</div><div class="art-content-layout">
+    <div class="art-content-layout-row">
+<div class="art-layout-cell art-sidebar1">      
+<div id="search-2" class="widget widget_search"><div class="art-block">
+    <div class="art-block-tl"></div>
+    <div class="art-block-tr"></div>
+    <div class="art-block-bl"></div>
+    <div class="art-block-br"></div>
+    <div class="art-block-tc"></div>
+    <div class="art-block-bc"></div>
+    <div class="art-block-cl"></div>
+    <div class="art-block-cr"></div>
+    <div class="art-block-cc"></div>
+    <div class="art-block-body">
+<div class="art-blockcontent">
+    <div class="art-blockcontent-tl"></div>
+    <div class="art-blockcontent-tr"></div>
+    <div class="art-blockcontent-bl"></div>
+    <div class="art-blockcontent-br"></div>
+    <div class="art-blockcontent-tc"></div>
+    <div class="art-blockcontent-bc"></div>
+    <div class="art-blockcontent-cl"></div>
+    <div class="art-blockcontent-cr"></div>
+    <div class="art-blockcontent-cc"></div>
+    <div class="art-blockcontent-body">
+<!-- block-content -->
+<form method="get" name="searchform" action="http://advokat-mossud.com/">
+<div><input type="text" value="" name="s" style="width: 95%;" />
+	<span class="art-button-wrapper">
+		<span class="l"> </span>
+		<span class="r"> </span>
+		<input class="art-button" type="submit" name="search" value="Поиск" />
+	</span>
+</div>
+</form>
+
+
+<!-- /block-content -->
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div>		<div id="recent-posts-2" class="widget widget_recent_entries"><div class="art-block">
+    <div class="art-block-tl"></div>
+    <div class="art-block-tr"></div>
+    <div class="art-block-bl"></div>
+    <div class="art-block-br"></div>
+    <div class="art-block-tc"></div>
+    <div class="art-block-bc"></div>
+    <div class="art-block-cl"></div>
+    <div class="art-block-cr"></div>
+    <div class="art-block-cc"></div>
+    <div class="art-block-body">
+		<div class="art-blockheader">
+    <div class="l"></div>
+    <div class="r"></div>
+     <div class="t">Научные статьи</div>
+</div>
+<div class="art-blockcontent">
+    <div class="art-blockcontent-tl"></div>
+    <div class="art-blockcontent-tr"></div>
+    <div class="art-blockcontent-bl"></div>
+    <div class="art-blockcontent-br"></div>
+    <div class="art-blockcontent-tc"></div>
+    <div class="art-blockcontent-bc"></div>
+    <div class="art-blockcontent-cl"></div>
+    <div class="art-blockcontent-cr"></div>
+    <div class="art-blockcontent-cc"></div>
+    <div class="art-blockcontent-body">
+<!-- block-content -->
+		<ul>
+					<li>
+				<a href="http://advokat-mossud.com/?p=159">Сравнительный анализ статей 21 И 22 УК РФ</a>
+						</li>
+					<li>
+				<a href="http://advokat-mossud.com/?p=51">Аффекты в УК  РФ</a>
+						</li>
+					<li>
+				<a href="http://advokat-mossud.com/?p=53">Великие адвокаты России</a>
+						</li>
+					<li>
+				<a href="http://advokat-mossud.com/?p=1">Ивантеевский филиал МОКА</a>
+						</li>
+				</ul>
+		
+<!-- /block-content -->
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="calendar-2" class="widget widget_calendar"><div class="art-block">
+    <div class="art-block-tl"></div>
+    <div class="art-block-tr"></div>
+    <div class="art-block-bl"></div>
+    <div class="art-block-br"></div>
+    <div class="art-block-tc"></div>
+    <div class="art-block-bc"></div>
+    <div class="art-block-cl"></div>
+    <div class="art-block-cr"></div>
+    <div class="art-block-cc"></div>
+    <div class="art-block-body">
+<div class="art-blockheader">
+    <div class="l"></div>
+    <div class="r"></div>
+     <div class="t">Календарь </div>
+</div>
+<div class="art-blockcontent">
+    <div class="art-blockcontent-tl"></div>
+    <div class="art-blockcontent-tr"></div>
+    <div class="art-blockcontent-bl"></div>
+    <div class="art-blockcontent-br"></div>
+    <div class="art-blockcontent-tc"></div>
+    <div class="art-blockcontent-bc"></div>
+    <div class="art-blockcontent-cl"></div>
+    <div class="art-blockcontent-cr"></div>
+    <div class="art-blockcontent-cc"></div>
+    <div class="art-blockcontent-body">
+<!-- block-content -->
+<div id="calendar_wrap"><table id="wp-calendar">
+	<caption>Октябрь 2016</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Понедельник">Пн</th>
+		<th scope="col" title="Вторник">Вт</th>
+		<th scope="col" title="Среда">Ср</th>
+		<th scope="col" title="Четверг">Чт</th>
+		<th scope="col" title="Пятница">Пт</th>
+		<th scope="col" title="Суббота">Сб</th>
+		<th scope="col" title="Воскресенье">Вс</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://advokat-mossud.com/?m=201402" title="Посмотреть записи за Февраль 2014">&laquo; Фев</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="5" class="pad">&nbsp;</td><td>1</td><td>2</td>
+	</tr>
+	<tr>
+		<td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+	</tr>
+	<tr>
+		<td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td>
+	</tr>
+	<tr>
+		<td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+	</tr>
+	<tr>
+		<td>24</td><td>25</td><td id="today">26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+	</tr>
+	<tr>
+		<td>31</td>
+		<td class="pad" colspan="6">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div>
+<!-- /block-content -->
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div></div>
+<div class="art-layout-cell art-content">
+
+
+
+
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = '125101';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!-- {/literal} END JIVOSITE CODE -->
+
+
+
+
+<link rel="shortcut icon" href="http://advokat-mossud.com/favicon%20.ico" type="image/x-icon">
+
+
+
+
+
+
+
+
+
+<div class="art-post">
+    <div class="art-post-tl"></div>
+    <div class="art-post-tr"></div>
+    <div class="art-post-bl"></div>
+    <div class="art-post-br"></div>
+    <div class="art-post-tc"></div>
+    <div class="art-post-bc"></div>
+    <div class="art-post-cl"></div>
+    <div class="art-post-cr"></div>
+    <div class="art-post-cc"></div>
+    <div class="art-post-body">
+<div class="art-post-inner art-article">
+<h2 class="art-postheader">
+  <img src="http://advokat-mossud.com/wp-content/themes/law_wordpress_theme_2/images/postheadericon.png" width="32" height="32" alt="postheadericon" />
+<a href="http://advokat-mossud.com/?p=1" rel="bookmark" title="Постоянная ссылка на Ивантеевский филиал МОКА">
+Ивантеевский филиал МОКА</a>
+</h2>
+ <div class="art-postheadericons art-metadata-icons">
+
+
+
+<!--09.02.2014 -->
+
+
+
+ | 
+
+<!--Автор: -->
+
+
+<!--<a href="http://advokat-mossud.com/?author=1" title="Записи GRP" rel="author">GRP</a>-->
+
+
+
+
+</div>
+<div class="art-postcontent">
+    <!-- article-content -->
+
+          <p><a href="http://test.openworld.in.ua/wp-content/uploads/2014/02/image-10-11-13-16-41.jpg"><img class="size-medium wp-image-181 aligncenter" alt="image-10-11-13-16-41" src="http://test.openworld.in.ua/wp-content/uploads/2014/02/image-10-11-13-16-41-300x225.jpg" width="300" height="225" /></a></p>
+<p align="center"><span style="color: #993300; font-size: large;">Ивантеевский филиал Московской областной коллегии адвокатов</span></p>
+<p><span style="color: #993300;"><a href="http://test.openworld.in.ua/?page_id=15"> <span style="color: #993300;">Адвокаты Ивантеевского филиала Московской областной коллегии адвокатов</span></a> являются высококвалифицированными специалистами в области уголовных, гражданских, арбитражных, административных дел. Наши адвокаты имеют большой опыт практической работы, ведь Ивантеевский филиал МОКА как юридическая консультация существует почти 90лет, является одним из старейших адвокатских образований на территории Пушкинского района, действующим в составе Московской областной коллегии адвокатов, сохраняющим традиции российской адвокатуры. Территориально мы находимся в непосредственной близости от Ивантеевского  городского суда, на ул. Хлебозаводская, д.33/1.</span></p>
+<p><span style="color: #993300;">Вы можете обращаться к нам в случаях, когда Вам необходима квалифицировананная <span style="text-decoration: underline;">судебная защита.</span> Мы готовы представлять Ваши интересы в судах первой, кассационной и надзорной инстанций,  Главными направлениями деятельности нашего филиала является оказание квалифицированной юридической помощи в сфере уголовного, гражданского, жилищного, наследственного, трудового, семейного законодательства. Нами накоплен большой опыт по разрешению земельных споров различной сложности.</span></p>
+<p><span style="color: #993300;">Грамотная <a href="http://test.openworld.in.ua/?page_id=6"><span style="color: #993300;">юридическая консультация</span></a> – это возможность предотвратить принятие неверных решений, которые могут повлечь за собой серьезные последствия. Наши адвокаты представляют квалифицированные консультации по вопросам гражданского, уголовного, жилищного и семейного, земельного права, права собственности. На консультациях мы подробно расскажем Вам о всех необходимых документах для обращения во все судебные инстанции поможем в их сборе путем выдачи запросы в любые организации.</span></p>
+<p><span style="color: #993300;">Также мы составляем <span style="text-decoration: underline;">жалобы в прокуратуру</span>.</span></p>
+<p><span style="color: #993300;">Другим важнейшим аспектом деятельности нашего филиала являются работы по <a href="http://test.openworld.in.ua/?page_id=6"><span style="color: #993300;">юридическому обслуживанию предприятий и организаций</span></a>. Мы предлагаем полное юридическое сопровождение деятельности Вашей компании. Адвокаты Ивантеевского филиала проконсультируют Вас по любым юридическим вопросам, вытекающим из хозяйственной деятельности клиента.</span></p>
+<p><span style="color: #993300;">Мы гарантируем Вам добросовестное, ответственное и профессиональное отношение к делу что, безусловно, значительно увеличивает шансы на успешное решение Вашей проблемы в максимально короткие сроки.</span></p>
+<div>
+<hr noshade="noshade" size="2" width="1078" />
+</div>
+<p><span style="color: #993300;"> </span></p>
+<p><span style="color: #993300;"> </span></p>
+<p><span style="color: #993300;">Простому гражданину, не отличающему юриста от адвоката, сложно уловить разницу между юридической фирмой и адвокатской конторой. Кажется, что разница не имеет значения. ОДНАКО: различного рода юридические компании и фирмы – это коммерческие структуры (как правило, ООО), цель которых &#8212; получение прибыли путём оказания юридических услуг. Юридическую фирму может учредить любое лицо: юридическое образование и лицензия на оказание юридических услуг не требуются.</span><br />
+<span style="color: #993300;"> Что касается адвокатских образований, то цель их создания- оказание квалифицированной юридической помощи населению и организациям. И учреждать их имеют право только адвокаты. Получить же статус адвоката может не каждый юрист, имеющий высшее юридическое образование. Для этого нужен опыт работы по юридической специальности не менее 2-х лет и успешно сданные квалификационные экзамены. Это гарантирует определенный уровень профессионализма нанимаемого адвоката, к которому Вы обращаетесь.</span></p>
+<p><span style="color: #993300;">Наша деятельность регламентируется Федеральным законом «Об адвокатской деятельности и адвокатуре в Российской Федерации.</span><br />
+<span style="color: #993300;"> Организовано ежедневное дежурство.<a href="http://test.openworld.in.ua/?page_id=17"> </a><span style="color: #993300;"><a href="http://test.openworld.in.ua/?page_id=17">Адрес Ивантеевского филиала Московской областной коллегии адвокатов</a><a href="http://www.advokat-pushkino.info/index.php?page=mesto">:</a></span>  г.Ивантеевка, ул.Хлебозаводская, д.33/1 Телефон 8 (496) 536-19-21</span></p>
+<p><span style="color: #993300;">e-mail:<span style="text-decoration: underline;"><a href="mailto:oon2000@mail.ru"><span style="color: #993300; text-decoration: underline;">oon2000@mail.ru</span></a></span></span></p>
+<p><span style="color: #993300;">Заведующий Ивантеевским филиалом МОКА Представитель Совета Адвокатской палаты МО в г.Ивантеевка Московской области    А.Л. Красинский.</span></p>
+<p><span style="color: #993300;"> </span></p>
+<p><span style="color: #993300;"> </span></p>
+<p><span style="color: #993300;"> </span></p>
+<p><span style="color: #993300;"> </span></p>
+                  
+    <!-- /article-content -->
+</div>
+<div class="cleared"></div>
+<div class="art-postmetadatafooter">
+<div class="art-postfootericons art-metadata-icons">
+Рубрика: <a href="http://advokat-mossud.com/?cat=1" title="Просмотреть все записи в рубрике &laquo;Образцы документов&raquo;" rel="category">Образцы документов</a> | <a href="http://advokat-mossud.com/?p=1#respond" title="Прокомментировать запись &laquo;Ивантеевский филиал МОКА&raquo;">Нет комментариев &#187;</a>
+</div>
+
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-post">
+    <div class="art-post-tl"></div>
+    <div class="art-post-tr"></div>
+    <div class="art-post-bl"></div>
+    <div class="art-post-br"></div>
+    <div class="art-post-tc"></div>
+    <div class="art-post-bc"></div>
+    <div class="art-post-cl"></div>
+    <div class="art-post-cr"></div>
+    <div class="art-post-cc"></div>
+    <div class="art-post-body">
+<div class="art-post-inner art-article">
+<h2 class="art-postheader">
+  <img src="http://advokat-mossud.com/wp-content/themes/law_wordpress_theme_2/images/postheadericon.png" width="32" height="32" alt="postheadericon" />
+<a href="http://advokat-mossud.com/?p=159" rel="bookmark" title="Постоянная ссылка на Сравнительный анализ статей 21 И 22 УК РФ">
+Сравнительный анализ статей 21 И 22 УК РФ</a>
+</h2>
+ <div class="art-postheadericons art-metadata-icons">
+
+
+
+<!--21.02.2014 -->
+
+
+
+ | 
+
+<!--Автор: -->
+
+
+<!--<a href="http://advokat-mossud.com/?author=1" title="Записи GRP" rel="author">GRP</a>-->
+
+
+
+
+</div>
+<div class="art-postcontent">
+    <!-- article-content -->
+
+          <p><span style="color: #993300;">МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ РОССИЙСКОЙ ФЕДЕРАЦИИ</span><br />
+<span style="color: #993300;">ГОСУДАРСТВЕННОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО</span><br />
+<span style="color: #993300;">ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ</span><br />
+<span style="color: #993300;">«МОРДОВСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ</span><br />
+<span style="color: #993300;">им. Н.П.ОГАРЕВА»</span><br />
+<span style="color: #993300;">НОВЫЕ ПОДХОДЫ В ГУМАНИТАРНЫХ ИССЛЕДОВАНИЯХ:</span><br />
+<span style="color: #993300;">ПРАВО, ФИЛОСОФИЯ, ИСТОРИЯ, ЛИНГВИСТИКА</span><br />
+<span style="color: #993300;">МЕЖВУЗОВСКИЙ СБОРНИК НАУЧНЫХ ТРУДОВ</span><br />
+<span style="color: #993300;">САРАНСК 2009</span><br />
+<span style="color: #993300;">ВЫПУСК IX</span></p>
+<p><span style="color: #993300;">УДК 303.425.2+009</span><br />
+<span style="color: #993300;">ББК С.я43</span><br />
+<span style="color: #993300;">Н766</span><br />
+<span style="color: #993300;">Редакционная коллегия:</span></p>
+<p><span style="color: #993300;">д-р соц. наук проф. Савинов Л.И. (председатель), д-р псих, наук проф.</span><br />
+<span style="color: #993300;">Андропов В.П., д-р биол. наук проф Тарасова Т.В., д-р пед. наук проф.</span><br />
+<span style="color: #993300;">Ломшин М.И., д-р юрид. наук проф. Худойкина Т.В., канд. филос. наук</span><br />
+<span style="color: #993300;">Гришаков Г.В. (ответственный редактор и составитель)</span></p>
+<p><span style="color: #993300;">Рецензеты:</span></p>
+<p><span style="color: #993300;">Бибин М,А. ( Саранский кооперативный институт)</span><br />
+<span style="color: #993300;">Калинкин Ю.А. (Мордовский гуманитарный институт)</span></p>
+<p><span style="color: #993300;">Авторы несут ответственность за точность предоставляемой информации</span></p>
+<p><span style="color: #993300;">Новые подходы в гуманитарных исследованиях: право, философия, ис¬тория, лингвистика: межвуз. сб. науч. тр.- Вып. IX / редкол.: Л.И. Савинов (пред.) [и др.].- Саранск; РНИИЦ, 2009,- 288 с.</span></p>
+<p><span style="color: #993300;">ISBN 978-5-98241-033-7</span></p>
+<p><span style="color: #993300;">Включает материалы исследований по актуальным проблемам права, фи¬лософии, социологии, психологии, культурологии, истории, педагогики, лин¬гвистики и литературоведения.</span><br />
+<span style="color: #993300;">Адресован широкому кругу читателей: научным работникам, практикам. преподавателям и студентам вузов.</span></p>
+<p><span style="color: #993300;">Печатается в авторской редакции</span><br />
+<span style="color: #993300;">в соответствии с предоставленным оригинал-макетом</span></p>
+<p><span style="color: #993300;">Дизайн обложки С.С.Тремаскина</span><br />
+<span style="color: #993300;">Подписано в печать 02 .11. 2009. Формат 60×84/16.</span><br />
+<span style="color: #993300;">Усл. печ. Л1б.74 Тираж — 120 экз. Заказ № 427</span></p>
+<p><span style="color: #993300;">__________________________________________________________________</span></p>
+<p><span style="color: #993300;">Отпечатано в ООО «Краснослободская типография»</span><br />
+<span style="color: #993300;">4312.60 г. Краснослободск, уд, Коммунистическая. 19</span></p>
+<p><span style="color: #993300;">ISBN 978-5-98241-033-7</span><br />
+<span style="color: #993300;">© Коллектив авторов, 2009</span></p>
+<p><span style="color: #993300;">© Региональный.научно-исследовательский</span><br />
+<span style="color: #993300;">информационный центр, 2009</span></p>
+<p><span style="color: #993300;">УДК 343.2/.7</span><br />
+<span style="color: #993300;">СРАВНИТЕЛЬНЫЙ АНАЛИЗ СТАТЕЙ 21 И 22 УК РФ</span></p>
+<p><span style="color: #993300;">А. Е. Канаев, А.В. Щенников</span></p>
+<p><span style="color: #993300;">( ИПФ ООО «Системные решения», г. Москва)</span></p>
+<p><span style="color: #993300;">Существует два психологических (юридических) критерия невменяемо¬сти. Один из них есть неспособность осознавать значение своих действий. Это так называемый интеллектуальный критерий. Другой из них есть невоз¬можность руководить своими действиями. Это волевой критерий. А так как оба этих признака (критерия) разделены в статье 21УК РФ союзом «либо», то это разделение подчёркивает их самостоятельное значение. Для более точно¬го понимания дальнейших наших формулировок, авторы данной работы ещё раз просят обратить внимание на словосочетание «их самостоятельное значе¬ние», А теперь прибегнем к буквальному толкованию вышеупомянутых ста¬тей (21 и 22 УК РФ). А затем рассмотрим эти статьи в части, когда лицо, со¬вершившее общественно опасное деяние, не могло руководить своими дейст¬виями.</span></p>
+<p><span style="color: #993300;">Статья 21 УК РФ «Невменяемость»</span><br />
+<span style="color: #993300;">21.1 Не подлежит уголовной ответственности лицо, которое во время совершения общественно опасного деяния находилось s состоянии невме¬няемости, то есть не могло осознавать фактический характер и общественную опасность своих действий (бездействия) либо руководить ими вследствие хронического психического расстройства, временного психического рас¬стройства, слабоумия либо иного болезненного состояния психики.</span><br />
+<span style="color: #993300;">Статья 22 УК РФ «Уголовная ответственность лип, с психическим расстрой¬ством, не исключающим вменяемости)»</span><br />
+<span style="color: #993300;">22.1 Вменяемое лицо, которое во время совершения преступления в силу психического расстройства не могло в полной мере осознавать фактический характер и общественную опасность своих действий (бездействия) либо ру¬ководить ими, подлежит уголовной ответственности.</span><br />
+<span style="color: #993300;">Вначале рассмотрим статью 22 УК РФ в плоскости юридических критериев (интеллектуального и волевого). Для этого прибегнем к грамматическому приёму (способу) толкования уголовного закона.</span><br />
+<span style="color: #993300;">При внимательном прочтении статьи 22 УК РФ прослеживается очень серьёзное противоречие, а именно при существующем написании этой статьи, словосочетание «в полной мере» может относиться только к словосочетанию «осознавать фактический характер и общественную опасность своих действий», но не как не к словосочетанию «руководить ими (своими дейст¬виями)».</span><br />
+<span style="color: #993300;">Чтобы словосочетание «в полной мере» относилось в равной степени как к словосочетанию «осознавать фактический характер и общественную опас¬ность своих действий», так и к словосочетанию «руководить ими (своими действиями)» необходимо писать: «Вменяемое лицо, которое во время совершения преступления в силу психического расстройства не могло в полной мере осознавать фактиче¬ский характер и общественную опасность своих действий (бездействия) либо в полной мере руководить ими, подлежит уголовной ответственно¬сти».</span><br />
+<span style="color: #993300;">То есть получается, что при нынешнем написании статьи 22 УК РФ, один из юридических критериев, а именно волевой критерий является сто процент¬ным клоном одного из психологических (юридических) критериев невменяе¬мости. А для того, чтобы лицо было признано невменяемым достаточно всего лишь одного психологического (юридического) критерия.</span><br />
+<span style="color: #993300;">Ещё раз сравним статьи 21 и 22 УК РФ в части оценки ими волевого кри¬терия (Неспособность руководить своими действиями).</span><br />
+<span style="color: #993300;">Ст. 21 УК РФ « Не подлежит уголовной ответственности лицо, которое во время совершения общественно опасного деяния не могло руководить своими действиями вследствие временного психического расстройства, хро¬нического психического расстройства» (То есть находилось в состояние не¬вменяемости).</span><br />
+<span style="color: #993300;">Ст.22 УК РФ «Лицо, которое во время совершения преступления в силу психиче¬ского расстройства, не могло руководить ими (то есть своими действия¬ми), подлежит уголовному наказанию» (вменяемое лицо),</span><br />
+<span style="color: #993300;">А теперь рассмотрим медицинские критерии психических состояний у лиц, совершивших общественно опасные деяния с позиции обоих этих ста¬тей.</span><br />
+<span style="color: #993300;">Разве временное психическое расстройство и хроническое психическое расстройство не являются частью или производной от просто психического расстройства? А точнее, разве это не одно и тоже? А если при временном психическом расстройстве и при хроническом психическом расстройстве, ли¬цо, совершившее общественно опасное деяние, признаётся невменяемым, то почему же при просто психическом расстройстве, лицо не просто совершает общественно опасное деяние, а совершает преступление. И к тому же это ли¬цо вменяемое&#8230;</span><br />
+<span style="color: #993300;">Авторы данной работы считают, что содержание ст.22 УК РФ, которое вступает в противоречие с содержанием статьи 21 УК РФ, в части равного отображения в данных статьях отношения медицинского критерия (психиче¬ского расстройства) к юридическому (волевому критерию), необходимо пере¬рабатывать. Заменив выражение «либо руководить ими» на выражение «ли¬бо в полной мере руководить ими». Или на подобное выражение, отражаю¬щие искажение (изменения) у данной категории лиц волевого элемента. А так же в рассматриваемой 22 ст. УК РФ жизненно необходимо поменять слово¬сочетание «лиц с психическими расстройствами, не исключающими вме¬няемость» на словосочетание «лиц с психическими отклонениями, не ис-ключающими вменяемость». Отклонение от нормы, а не расстройства всей психики, временное или хроническое. Почему авторы этой работы предлага¬ют психическое расстройство поменять на психические отклонения? Для это¬го мы рассмотрим комментарии такого понятия как невменяемость, которые дали Судьи Верховного Суда РФ к УК РФ (Комментарии к Уголовному Ко-дексу Российской Федерации) [2].</span><br />
+<span style="color: #993300;">«Состояние невменяемости определяется одновременным наличием двух критериев: медицинского (биологического, психиатрического) и юридическо¬го (психологического). Первый критерий предполагает наличие у лица бо¬лезненного состояния психики. В комментируемой статье названы четыре вида такого состояния: 1) хроническое психическое расстройство (вместо «хронической душевной болезни» по УК РСФСР); 2) временное психическое расстройство (вместо «временного расстройства душевной деятельности»); 3) слабоумие; 4) иное болезненное состояние психики (прежняя формулировка «иное болезненное состояние» позволяла некоторым толкователям относить сюда и соматическое заболевание) [2].</span><br />
+<span style="color: #993300;">Названные четыре категории охватывают все известные медицинской науке болезненные расстройства психики. Из содержания медицинского кри¬терия следует, что неболезненные расстройства психической деятельности (например, аффект) не должны исключать вменяемость. Для установления медицинского критерия невменяемости достаточно одного из упомянутых видов психического расстройства.</span><br />
+<span style="color: #993300;">Юридический (психологический) критерий невменяемости означает, что вследствие болезненного состояния психики субъект не мог осознавать фак¬тический характер и общественную опасность своих действий (бездействия) либо руководить ими. Только при этом условии лицо признаётся невменяе¬мым.</span><br />
+<span style="color: #993300;">Мы видим, что в УК РФ существует четыре медицинских критерия не¬вменяемости, они закреплены в ст.21 УК РФ (Нас, в данном случае, больше интересуют временное психическое расстройство и хроническое психическое расстройство), и они могут существовать у лиц как не совершивших общест¬венно опасные деяния, так и их совершивших. Можно ли рассматривать как медицинский критерий невменяемости просто психическое расстройство? Авторы этой работы считают это очевидным. Может ли психическое рас¬стройство быть временным? Ответ:— Да. Может ли психическое рас¬стройство быть, хроническим? Ответ: &#8212; Да. То есть, временные или хро¬нические психические расстройства, это не что иное, как разновидности просто психического расстройства. Значит по логике Российского законо¬дательства, поменяв в статье 22 УК РФ выражение «в силу психического рас¬стройства» на одно из двух выражений «в силу временного, психического расстройства» или «в силу хронического, психического расстройства», доктринальная (научная) оценка медицинского критерия невменяемости оста¬нется не изменой.</span><br />
+<span style="color: #993300;">Статья 22 действующего УК РФ не выдерживает никакой критики. И в том виде как она написана, не имеет право на существование, потому как дез¬организует многие нормы уголовного Законодательства, позволяет им всту¬пать в противоречие между собой. Но самое главное: больно бьёт по Консти¬туционным правам граждан, и принципам Уголовного права.</span><br />
+<span style="color: #993300;">______________________________________________________________________________________________________________________</span><br />
+<span style="color: #993300;">1 Уголовный кодекс Российской Федерации от 1.3.06. 1996г №63-Ф3 (в ред. от 30.12.2006 г.) //СЗ РФ. 1996. №25. Cт 2954.</span><br />
+<span style="color: #993300;">2 Комментарии к Уголовному Кодексу Российской Федерации / отв. ред. В.М.Лебедев-8-е изд., перераб. и доп. М.: Издательство Юрайт, 2008. С, 75.</span></p>
+                  
+    <!-- /article-content -->
+</div>
+<div class="cleared"></div>
+<div class="art-postmetadatafooter">
+<div class="art-postfootericons art-metadata-icons">
+Рубрика: <a href="http://advokat-mossud.com/?cat=1" title="Просмотреть все записи в рубрике &laquo;Образцы документов&raquo;" rel="category">Образцы документов</a> | <span>Обсуждение закрыто.</span>
+</div>
+
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-post">
+    <div class="art-post-tl"></div>
+    <div class="art-post-tr"></div>
+    <div class="art-post-bl"></div>
+    <div class="art-post-br"></div>
+    <div class="art-post-tc"></div>
+    <div class="art-post-bc"></div>
+    <div class="art-post-cl"></div>
+    <div class="art-post-cr"></div>
+    <div class="art-post-cc"></div>
+    <div class="art-post-body">
+<div class="art-post-inner art-article">
+
+<div class="art-postcontent">
+    <!-- article-content -->
+
+<div class="navigation">
+	<div class="alignleft"><a href="http://advokat-mossud.com/?paged=2" >&laquo; Раньше</a></div>
+	<div class="alignright"></div>
+</div>
+
+    <!-- /article-content -->
+</div>
+<div class="cleared"></div>
+
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+</div>
+<div class="cleared"></div>
+
+<div class="art-footer">
+    <div class="art-footer-inner">
+        <a href="http://advokat-mossud.com/?feed=rss2" class="art-rss-tag-icon" title="RSS"></a>
+        <div class="art-footer-text">
+
+<!-- Yandex.Metrika informer -->
+<a href="http://metrika.yandex.ru/stat/?id=24078703&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/24078703/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:24078703,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter24078703 = new Ya.Metrika({id:24078703,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/24078703" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+<p>
+ <a href='#'>made in GRP</a><br />Copyright &copy; 2014 Ивантеевский  Филиал Московской Областной Коллегии Адвокатов. All Rights Reserved.</p>
+</div>
+    </div>
+    <div class="art-footer-background">
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+<div class="cleared"></div>
+<p class="art-page-footer">
+
+</p>
+
+</div>
+
+<!-- 28 запросов. 0,348 секунд. -->
+</body>
+</html>

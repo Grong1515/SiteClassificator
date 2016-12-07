@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="description" content="Главная страница"><link href="/style.css" type="text/css" rel="stylesheet"><title>Главная страница | А.Р.ИМПЭКС -  столы и стулья из Италии, магазин Calligaris в Москве, PRANZO, Natisa, VARO, Connubia (O&amp;G)</title><script type="text/javascript" src="/js/pf.js"></script><script type="text/javascript" src="/js/pf/ext/effects.js"></script><script type="text/javascript" src="/js/jquery.js"></script><script type="text/javascript" src="/js/engine.js"></script><script type="text/JavaScript">
+
+
+        function init()
+        {
+        	voteS();
+            mainMenu('sub-catalog');
+            window.splashEffects = new pf.Effects({
+                'obj': $('splash-image').style,
+                'props': 'marginLeft',
+                'suffixe': 'px',
+                'methodName': 'quartOut',
+                'path': [0],
+                'duration' : 800});
+            window.splashThumbOnEffects = new pf.Effects({
+                'obj': $('splash-thumb-1').style,
+                'props': 'right',
+                'suffixe': 'px',
+                'methodName': 'quartOut',
+                'path': [0],
+                'duration' : 800});
+            window.splashThumbOffEffects = new pf.Effects({
+                'obj': $('splash-thumb-1').style,
+                'props': 'right',
+                'suffixe': 'px',
+                'methodName': 'quartOut',
+                'path': [0],
+                'duration' : 800});
+        }
+
+        function openScreen()
+        {
+            pf.elem.addClass(document.body, 'noscroll');
+            var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            $('nScreen').style.top = scrollTop + 'px';
+            pf.elem.toggle($('nScreen'));
+        }
+
+        function closeScreen()
+        {
+            pf.elem.delClass(document.body, 'noscroll');
+            pf.elem.toggle($('nScreen'));
+        }
+
+        var splashEffects;
+        var splashActive = 1;
+        var splashPrev = 0;
+
+        function splashToggle(num)
+        {
+            var active = window.splashActive;
+            if (active == num) return false;
+
+            $('splash-image').appendChild($('img-'+num));
+            $('img-'+num).style.display = 'block';
+
+            window.splashEffects.addEvent('onafterstop', function(){
+                $('img-'+window.splashPrev).style.display = 'none';
+                $('splash-image').style.marginLeft = 0
+            });
+            var w = $('img-'+num).offsetWidth;
+            window.splashEffects.continueTo(-w);
+
+            window.splashThumbOnEffects.obj = $('splash-thumb-'+num).style;
+            window.splashThumbOnEffects.continueTo(58);
+
+            window.splashThumbOffEffects.obj = $('splash-thumb-'+active).style;
+            window.splashThumbOffEffects.continueTo(0);
+
+            window.splashPrev = window.splashActive;
+            window.splashActive = num;
+        }
+
+
+        pf.evt.add(window, 'load', setFooter);
+        pf.evt.add(window, 'resize', setFooter);
+
+        pf.evt.add(window, 'load', setLayout);
+        pf.evt.add(window, 'resize', setLayout);
+
+        pf.evt.add(window, 'load', init);
+
+    
+
+    </script><!--[if IE 6]>
+    <script src="/js/DD_belatedPNG.js"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('#delimiter');
+        DD_belatedPNG.fix('#splash-panel');
+        DD_belatedPNG.fix('.shadow.tr');
+        DD_belatedPNG.fix('.shadow.tl');
+        DD_belatedPNG.fix('.shadow.br');
+        DD_belatedPNG.fix('.shadow.bl');
+        DD_belatedPNG.fix('.shadow.l DIV');
+        DD_belatedPNG.fix('.shadow.r DIV');
+        DD_belatedPNG.fix('.shadow.b DIV');
+        DD_belatedPNG.fix('.shadow.t DIV');
+    </script>
+    <![endif]--></head><body><div id="layout"><div id="logo"><a href="/"><img width="142" height="33" alt="А.Р. ИМПЭКС" src="/images/editor/logoWEB.png" /></a></div><p id="topPhone" style="width: 162px; height: 53px;"><em><span id="ya-phone-1">(495) 933-22-39</span></em><span class="from">пн-пт 9-20</span><span class="to">сб-вс 11-19</span></p><p id="topCart"><a href="/cart/">Корзина</a><em id="cartCnt"><script type="text/javascript">cartCount()</script></em></p><ul id="topMenu"><li><a href="/doc/services/lovelycustomers/">Для покупателя</a></li><li><a href="/doc/services/b2b/">Для бизнеса</a></li><li><a href="/doc/services/designers/">Для дизайнера</a></li><li><a href="/shops/" id="shops">Магазины</a></li><li><a href="/doc/services/poehali/">Доставка и сборка</a></li><li><a href="javascript:void();" target="_blank" id="query">Консультант он-лайн</a></li><li><a href="/brand/18/">PRANZO</a></li></ul><ul id="mainMenu"><li class="sel"><a href="#">Каталог</a><ul id="sub-catalog"><li><a href="/cat/table/">Столы</a></li><li><a href="/cat/chairs/">Стулья</a></li><li><a href="/cat/divani/">Диваны и  кресла</a></li><li><a href="/cat/beds/">Кровати</a></li><li><a href="/cat/accessories/">Аксессуары</a></li></ul></li><li><a href="#">Дисконт %</a><ul id="sub-discont"><li><a href="/discount/table/">Столы</a></li><li><a href="/discount/chairs/">Стулья</a></li><li><a href="/discount/accessories/">Аксессуары</a></li></ul></li><li><a href="#">Бренды</a><ul id="sub-brand"><li><a href="/brand/1/">NATISA</a></li><li><a href="/brand/5/">Bontempi</a></li><li><a href="/brand/12/">Connubia (O&amp;G)</a></li><li><a href="/brand/13/">Calligaris</a></li><li><a href="/brand/18/">PRANZO</a></li><li><a href="/brand/16/">VARO</a></li></ul></li></ul><div id="delimiter"></div><div id="content" class="index"><div class="in-2" style="padding-bottom:0px;"><div id="index-splash"><div id="splash-image" style="margin-left:0"><div id="img-1" class="img" onclick="document.location.href='/stocks/10/'" style="cursor:pointer;"><img src="/images/itg/10_s.jpg" alt="PRANZO - гарантия лучшей цены"><div class="txt"><h1><a href=""></a></h1><p></p></div></div><div id="img-2" class="img" onclick="document.location.href='/stocks/../'" style="cursor:pointer;display:none;"><img src="/images/itg/20_s.gif" alt="Открытие обновлённой секции в ТЦ ГРАНД"><div class="txt"><h1><a href="/"></a></h1></div></div><div id="img-3" class="img" onclick="document.location.href='/stocks/17/'" style="cursor:pointer;display:none;"><img src="/images/itg/17_s.jpg" alt='Акция "1+4"'><div class="txt"><h1><a href="/stocks/17/"><br /></a></h1><p></p></div></div><div id="img-4" class="img" onclick="document.location.href='/stocks/15/'" style="cursor:pointer;display:none;"><img src="/images/itg/15_s.jpg" alt="Столы со стеклянной столешницей"><div class="txt"><h1><a href="/stocks/15/page0"><p></p><p></p>Столы со стеклянной столешницей</a></h1><p></p><p>Стильно, современно и практично!<br />Нажмите здесь, чтобы посмотреть модели</p></div></div></div><div id="splash-panel"><div class="pad"><div class="thumb"><div class="img"><img src="/images/itg/10_s2.jpg" height="58" width="58" alt="PRANZO - гарантия лучшей цены" id="splash-thumb-1" onclick="splashToggle(1); return false;" style="right:58px;"></div><div class="txt"><a href="/stocks/10/" class="inner" onclick="splashToggle(1); return false;">PRANZO - гарантия лучшей цены</a></div></div><div class="thumb"><div class="img"><img src="/images/itg/20_s2.jpg" height="58" width="58" alt="Открытие обновлённой секции в ТЦ ГРАНД" id="splash-thumb-2" onclick="splashToggle(2); return false;" style="right:0px;"></div><div class="txt"><a href="/stocks/../" class="inner" onclick="splashToggle(2); return false;">Открытие обновлённой секции в ТЦ ГРАНД</a></div></div><div class="thumb"><div class="img"><img src="/images/itg/17_s2.jpg" height="58" width="58" alt='Акция "1+4"' id="splash-thumb-3" onclick="splashToggle(3); return false;" style="right:0px;"></div><div class="txt"><a href="/stocks/17/" class="inner" onclick="splashToggle(3); return false;">Акция "1+4"</a></div></div><div class="thumb"><div class="img"><img src="/images/itg/15_s2.jpg" height="58" width="58" alt="Столы со стеклянной столешницей" id="splash-thumb-4" onclick="splashToggle(4); return false;" style="right:0px;"></div><div class="txt"><a href="/stocks/15/" class="inner" onclick="splashToggle(4); return false;">Столы со стеклянной столешницей</a></div></div></div></div></div><div style="padding:50px 30px 0px 30px" class="clearfix"><div style="width: 300px; float: left; height: 155px;">
+<h4>О компании</h4>
+<p>Интернет-магазин мебели arimpex.ru это проект компании А.Р.ИМПЭКС - крупного дистрибьютора итальянской мебели, официально представляющего в России продукцию фабрик PRANZO, Natisa, VARO, Calligaris, Connubia (O&amp;G) ...<br />
+<a href="#" onclick="openScreen(); return false" class="dark inner">Подробнее...</a></p>
+</div><div style="float:right; width:321px" id="voteData"><h4>Какой размер кухонного стола вам подойдет?</h4><form action="/vote_ajax/" method="post" id="voteForm"><input type="hidden" name="votes_id" value="7"><label><input type="radio" name="vote_item_id" value="22"> <span>D.120</span></label><label><input type="radio" name="vote_item_id" value="21"> <span>D.100</span></label><label><input type="radio" name="vote_item_id" value="23"> <span>60x90 +30</span></label><label><input type="radio" name="vote_item_id" value="24"> <span>90x90 +90</span></label><label><input type="radio" name="vote_item_id" value="25"> <span>70x110 +40</span></label><label><input type="radio" name="vote_item_id" value="26"> <span>80x120 +60</span></label><label><input type="radio" name="vote_item_id" value="27"> <span>85x130 +90</span></label><label><input type="radio" name="vote_item_id" value="28"> <span>90x160 +60</span></label><input type="button" class="padBut" value="Проголосовать" id="VoteSubmit"></form></div></div></div></div><div style="clear:both"></div><div id="foot" class="clearfix"><form action="/search/" method="get" id="searchForm"><input style="width: 99px; font-size: 10px;" name="s" id="search" value="Поиск по сайту" onfocus="if(this.value=='Поиск по сайту')this.value=''" onblur="if(this.value=='')this.value='Поиск по сайту'"></form><table>
+    <tbody>
+        <tr>
+            <td>
+            <p id="copy" style="padding-left: 7px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &copy;&nbsp; А.Р.ИМПЭКС -- столы, стулья, диваны, кресла и аксессуары.&nbsp; Указаны цены интернет-магазина.</p>
+            </td>
+        </tr>
+    </tbody>
+</table></div></div><div id="nScreen" style="display:none"><div id="lightbox-back"> </div><div id="lightbox" class="window"><div class="shadow t"><div class="pad"></div></div><div class="shadow tr"></div><div class="shadow r"><div class="pad"></div></div><div class="shadow br"></div><div class="shadow b"><div class="pad"></div></div><div class="shadow bl"></div><div class="shadow l"><div class="pad"></div></div><div class="shadow tl"></div><div class="close"><img src="/images/i/..gif" alt="закрыть" onclick="closeScreen()"></div><div id="lightbox-main"><div class="in"><div class="in">
+<h1>История компании начинается в далёких восьмидесятых. В 1992 г. зарегистрирована торговая марка А.Р.ИМПЭКС.</h1>
+<p>Основное направление деятельности компании &ndash; оптовая продажа мебели и розничная продажа через сеть собственных салонов в Москве. Основной ассортимент компании включает в себя столы и стулья, диваны и кресла, стенки, кровати и аксессуары. Это гармоничная итальянская коллекция от лучших производителей &ndash; PRANZO, Natisa, VARO, Calligaris, Connubia (O&amp;G) и др.</p>
+<p>Компания А.Р.ИМПЭКС является крупным дистрибьютором известных западных и российских производителей мебели и аксессуаров.</p>
+<blockquote>Наши преимущества &ndash; оперативные поставки мебели для дилерской сети <a href="http://mxinfo.ru/android-emulyator-na-kompyuter" style="color: black;text-decoration:none;">здесь</a>
+, корпоративных клиентов и государственных структур, ресторанов, кафе и баров в Москве и городах России. Все наши партнеры получают необходимую информацию, рекламные материалы и тренинги. Для нас важен каждый клиент, и их успех &ndash; наша лучшая рекомендация.</blockquote>
+<p>Компания А.Р.ИМПЭКС в рамках программы Правительства Москвы по строительству и оборудованию объектов социальной сферы выполняет полное внутреннее ос&shy;нащение объектов города.</p>
+<p>Компания выполняет доставку и сборку всех видов мебели. Вся продукция <a href="http://sneaker.kiev.ua/vans-old-skool" style="color: black;text-decoration:none;">тут</a>  является оригинальной и имеет все необходимые сертификаты.</p>
+</div></div></div></div></div><!-- Yandex.Metrika counter --> <script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter36588 = new Ya.Metrika({id:36588,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script> <noscript><div><img src="//mc.yandex.ru/watch/36588" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+<p>&nbsp;</p>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4911633-3', 'auto');
+  ga('send', 'pageview');
+
+</script><script type="text/javascript" src="/clickheat/js/clickheat.js"></script><script type="text/javascript">clickHeatSite = 'arimpex';clickHeatGroup = '/_router.php';clickHeatServer = '/clickheat/click.php';initClickHeat();</script></body></html>

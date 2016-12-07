@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+    <head>
+        <title>Салон Juli</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+        <meta name="description" content="Салон Juli" />
+        <meta name="keywords" content="салон juli" />
+        <base href="http://www.salon-juli.ru" />
+        <link rel="stylesheet" type="text/css" href="http://www.salon-juli.ru/css/style.css" />
+        <script src="js/show_bimage.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/js_pic_view.css" type="text/css" />
+    </head>    <body>
+      <div class="inner">
+              <!-- Этот скрипт нужно подключить после body, для определения размеров клиентской области и пр. -->
+		<script src="js/Geometry.js" type="text/javascript"></script>
+		
+		<script src="js/b_img_viewer_param.js" type="text/javascript"></script>
+		
+		<div class="b_image_div_span" id="b_pic_viewer_b_image_div_span">
+			<!--Отображает область затемнения-->
+			<div class="bimage_div" id="b_pic_viewer_back_div" onclick="javascript: temp_b_pic_viewer.close_bimage()"> 
+				&nbsp;
+			</div>
+			<div class="img_buffer">
+				<img src="images/right_active.gif" alt="" />
+				<img src="images/left_active.gif" alt="" />
+				<img src="images/close_active.gif" alt="" />
+			</div>
+
+			
+			<!--колесико прогресса-->
+			<img src="images/progress.gif" class="progress" id="b_pic_viewer_progress" alt="" />
+			
+			<div class="b_image_view" id="b_pic_viewer_b_image_div" onclick="javascript: temp_b_pic_viewer.close_bimage()">
+				<!-- Таблица, содержащая изображение с описанием, рамкой и пр. -->
+				<table class="b_image_view" id="b_pic_viewer_table_with_bimage" onclick="javascript: temp_b_pic_viewer.close_enabled=false;"> 
+					<tr id="b_pic_viewer_one_from_line">	
+						<td class="one_from" id="b_pic_viewer_one_from">
+						<!-- место для номера изображения -->
+						</td>
+					</tr>
+					<tr>
+						<td id="b_pic_viewer_bimage_cell" class="b_pic_viewer_b_img">
+							<!-- картинка, которая должна отображаться -->
+							<img src="#" id="b_pic_viewer_bimage" class="bimage" onclick="javascript: temp_b_pic_viewer.real_size_show();" alt=""/>
+						</td>
+					</tr>
+					<tr style="display: none;" id="b_pic_viewer_b_img_descr_row">
+						<!-- строка с описанием -->
+						<td class="decription" id="b_pic_viewer_b_img_descr" style="visibility: hidden;">
+						</td>
+					</tr>
+					<tr id="b_pic_viewer_b_img_control">
+						<!-- панель с кнопками управления -->
+						<td class="panel">
+							<table class="control">
+							<!-- строка с кнопками для галереи -->
+							<tr id="b_pic_viewer_many_pic" style="display: none;">
+								<td style="text-align: left;">
+									<img src="images/left.gif" id="b_pic_viewer_left_arrow" onmouseover="javascript: this.src='images/left_active.gif';" onmouseout="javascript: this.src='images/left.gif';" alt="предыдущее изображение" title="предыдущее изображение" onclick="temp_b_pic_viewer.prev_img();" />
+									<span id="b_pic_viewer_fullscreen" style="visibility: hidden;">
+										<img src="images/full_screen.gif" id="b_pic_viewer_full_screen_button" onmouseover="javascript: this.src='images/full_screen_active.gif';" onmouseout="javascript: this.src='images/full_screen.gif';" alt="реальный размер" title="реальный размер" onclick="javascript: temp_b_pic_viewer.real_size_show();" /> 
+									</span>
+								</td>
+								<td>
+									&nbsp;
+								</td>
+								<td style="text-align: right;">
+                                    <img src="images/close.gif" class="bimage_close" id="b_pic_viewer_close_button" alt="Закрыть" title="Закрыть" onclick="javascript: temp_b_pic_viewer.close_bimage()" onmouseover="javascript: this.src='images/close_active.gif';" onmouseout="javascript: this.src='images/close.gif';" />
+									<img src="images/right.gif" id="b_pic_viewer_right_arrow" onmouseover="javascript: this.src='images/right_active.gif';" onmouseout="javascript: this.src='images/right.gif';" alt="следующее изображение" title="следующее изображение" onclick="temp_b_pic_viewer.next_img();" />
+								</td>
+							</tr>
+							<!-- строка для одного изображения, только кнопка закрыть -->
+							<tr id="b_pic_viewer_one_pic" style="display: none;">
+								<td colspan="3" style="text-align: right; vertical-align: top;">
+									<span id="b_pic_viewer_fullscreen_one_picture" style="visibility: hidden;">
+										<img src="images/full_screen.gif" id="b_pic_viewer_full_screen_button_one_pic" onmouseover="javascript: this.src='images/full_screen_active.gif';" onmouseout="javascript: this.src='images/full_screen.gif';" alt="реальный размер" title="реальный размер" onclick="javascript: temp_b_pic_viewer.real_size_show();" /> 
+									</span>
+									<img src="images/close.gif" id="b_pic_viewer_close_button_one_pic" class="bimage_close" alt="Закрыть" title="Закрыть" onclick="javascript: temp_b_pic_viewer.close_bimage()" onmouseover="javascript: this.src='images/close_active.gif';" onmouseout="javascript: this.src='images/close.gif';" />
+								</td>
+							</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+        <!-- Голова - начало -->
+        <div id="container">
+
+          <div id="left"> 
+
+              <h4>Меню</h4>
+
+              <div id="navcontainer">
+                  <ul id="navlist"><li id="active"><a href="http://www.salon-juli.ru/" class="current_link">Главная</a></li><li><a href="http://www.salon-juli.ru/lpg">LPG-эндермология</a></li><li><a href="http://www.salon-juli.ru/sertif">Подарочные сертификаты</a></li><li><a href="http://www.salon-juli.ru/mezoterapia">Мезотерапия – инъекции красоты</a></li><li><a href="http://www.salon-juli.ru/mezoterapia-2">Мезотерапия в любом возрасте</a></li><li><a href="http://www.salon-juli.ru/biogel">Мезотерапия и биогель</a></li><li><a href="http://www.salon-juli.ru/laminirovanie">Ламинирование волос и мезотерапия</a></li><li><a href="http://www.salon-juli.ru/elektrolipoliz">Несколько фактов о мезотерапии и электролиполизе</a></li><li><a href="http://www.salon-juli.ru/profelektrolipoliz">Профессиональный электролиполиз</a></li><li><a href="http://www.salon-juli.ru/japanmanikur">Японский маникюр и электролиполиз</a></li></ul>              </div>
+
+          </div>        <div id="right">
+           <h1>Косметология и секреты красоты</h1>
+           <div class="text">       
+           <p align="justify"><strong>Достижения современной косметологии поражают воображение!</strong> Действительно, если бы мы не знали, что за потрясающими результатами коррекции эстетических проблем стоит колоссальный труд врачей, а также постоянное внедрение инновационных разработок, то мы могли бы назвать это чудом. Но это &mdash; наука, и поэтому за художественной работой косметолога, помогающего сохранить и продлить человеческую красоту, всегда стоят ювелирная точность, основательность проверенной методики и большая ответственность. Используя и синтезируя накопленный другими научными дисциплинами (биологией, дерматологией, диетологией, химией) опыт, косметология с помощью настоящих профессионалов превращает его в триумф совершенной красоты.</p>
+<p align="justify">В настоящее время существуют эстетическая и медицинская косметология, решающие разные задачи, но неизменно стремящиеся к созданию совершенного образа. Врачебной косметологией могут заниматься лишь специалисты, имеющие высшее медицинское образование, поскольку проведение процедур, нарушающих целостность кожного покрова (м<strong>езотерапия, инъекции ботокса, электролиполиз</strong>), а также операций требует большого профессионализма и квалификации. Эстетическая косметология включает в себя процедуры, осуществляющие полноценный уход за кожей лица и придающие ей сияющий и здоровый вид. К ней относят чистку лица, пилинг, безоперационное устранение мелких недостатков кожи.</p>
+<p align="justify">Полноценный уход невозможен и без процедур, ставших уже неотъемлемыми в жизни каждой ухаживающей за собой женщины &mdash; <strong>ламинирования волос</strong> и<strong> укрепления ногтей биогелем</strong>. Совместно с косметическими, такие процедуры доставят настоящее удовольствие.</p>           </div>
+        </div>
+     </div>            <div id="footer">
+               <p>Copyright 2016&nbsp;&nbsp; 
+               <a href="http://www.salon-juli.ru">
+               www.salon-juli.ru               </a>
+               <br>
+               	               </p>
+            </div>
+        </div>
+    </body>
+</html>

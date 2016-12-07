@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+   <link type="text/css" href="/themes/diona/css/font-awesome.min.css" rel="stylesheet" />
+   <!--[if IE 9]> <link href= "/themes/diona/css/ie9.css" rel= "stylesheet" media="all" /> <![endif]-->
+       <link href="/themes/diona/css/jquery-ui.css" type="text/css" rel="stylesheet"> 
+        <link href="/themes/diona/css/fancybox.css" type="text/css" rel="stylesheet" />
+        <link href="/themes/diona/css/style.css" type="text/css" rel="stylesheet">
+          <script type="text/javascript" src="/themes/diona/js/jquery.js"></script>
+          <script   src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js"   integrity="sha256-55Jz3pBCF8z9jBO1qQ7cIf0L+neuPTD1u7Ytzrp2dqo="   crossorigin="anonymous"></script>
+                <script src='/netcat/modules/auth/auth.js'></script>
+        <script src='/themes/diona/js/jquery.validate.js'></script>
+        <script src='/themes/diona/js/jquery.autocolumnlist.js'></script>
+		<script type="text/javascript" src="/themes/diona/js/scripts.js"></script>
+        <script type="text/javascript" src="/themes/diona/js/maskedinput.js"></script>
+        <script type="text/javascript" src="/themes/diona/js/site.js"></script>
+        <script type="text/javascript" src="/themes/diona/js/jason.js"></script>
+        <script type="text/javascript" src="/themes/diona/js/fancybox.js"></script>
+        <script type="text/javascript" src="/themes/diona/js/tape_slider.js"></script>
+
+  <title>ООО "ДИОНА Холдинг"</title>
+</head>
+<body>
+<div class="top_add_bg_wrap">
+            <div class="top_add_bg"></div>
+        </div>
+<div class="main_wrapper">
+<!-- если это Главная, то внедрим сюда шаблон попап окна -->
+            <div class="achievements_popup_wrap">
+                <div class="achievements_popup">
+                    <span class="close">
+                        <span>&times;</span>
+                    </span>
+                    <div class="add_border_wrap">
+                        <div class="add_border">
+                            <h3 id="popup_title"> </h3>
+                            <p id="popup_text"> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+<div class="write_us_wrap">
+                <div class="write_us" id='min_form'>
+                    <!--span class="uppercase">Написать&nbsp;нам</span-->
+                </div>
+                <form class="form_write_us" name="form_write_us">
+                    <div class="add_border_3">
+                        <label>
+                            <span class="uppercase translator" data-type="First Name">Ваше имя</span>
+                            <input type="text" id="form_name" data-eng="Please fill in this field" data-rus="Необходимо заполнить это поле" />
+                        </label>
+                        <label>
+                            <span class="uppercase">E-mail</span>
+                            <input type="text" id="form_email"  data-eng="Please fill in a valid email address" data-rus="Неправильный e-mail"/>
+                        </label>
+                        <label>
+                            <span class="uppercase translator" data-type="Message">Ваше сообщение</span>
+                            <textarea id="form_text"></textarea>
+                        </label>
+                        <button type="submit" class="btn blue uppercase translator" data-type="Send" id="form_send_mail">Отправить</button>
+                    </div>
+                </form>
+            </div>
+
+
+	 <header >
+                <div class="header_contacts">
+                    <div class="container_block">
+                        <div class="logo_block">
+                            <a href="/" class="main_logo_link" title="главная страница">
+                                <div class="d_logo">
+                                    <img src="/netcat_files/c/logo_header.svg" alt="логотип" />
+                                </div>
+                            </a>
+                            <a href="/" class="IBM_logo_link" title="">
+                                <div class="ibm_logo_wrap">
+                                    <img src="/netcat_files/c/IBM_logo.svg" alt="логотип" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="address_block">                        
+                            <a href="/contacts/" >
+                            <div class="add_bg">
+                                <div class="left"></div>
+                                <div class="right"></div>
+                            </div>
+                            <img src="/themes/diona/img/header_map.png" alt="" />
+                            <div class="translator" data-type='<span style="width: 200px; right: 20px;">30 Chasovaya Street, Moscow, 124315, Russia</span>'><span>г. Москва,<br /> ул. Часовая, д. 30</span></div>
+                            
+                          </a>    
+                        </div>
+                        <div class="phone_block">
+                            <p>+7 (495) <span>797-32-82</span></p>
+                            <p>+7 (495) <span>797-32-83</span></p>
+                        </div>
+
+                                                    <div class="registration right-location">
+                                                                            <a href="/registration/" class="translator" data-type="Register">Регистрация на сайте</a> |  <a href="/profile/" class="translator" data-type="Sign in">Вход в личный кабинет</a>
+                                                </div>
+                        
+                               
+             <!-- флажки выбора языка на главной-->
+         <div class="language_wrap">
+           <ul>
+             <li>
+               <a href="/about/">
+                 <span class="color rus"></span>
+                 <span class="desc">RUS</span>
+               </a>
+             </li>
+             <li>
+               <a onclick="loadEng('/about/')">
+                 <span class="color eng"></span>
+                 <span class="desc">ENG</span>
+               </a>
+             </li>
+           </ul>
+         </div>
+                               
+                    </div>
+
+                    <div class="header_menu">
+                        <div class="container_block">
+                                                        <ul>
+                                                                                                                                                                                                                                                                                                                                                      <li>
+                                          <a href="/" class="translator" data-type="Home" style="color: gray;">Главная</a>
+                                      </li>
+                                                                                                                                                                                   <li>
+                                          <a href="/about/" class="translator" data-type="About us" >О компании</a>
+                                      </li>
+                                                                                                                                                                                   <li>
+                                          <a href="/uslugi/" class="translator" data-type="Services" >Услуги</a>
+                                      </li>
+                                                                                                                                                                                   <li>
+                                          <a href="/produkty/" class="translator" data-type="Products" >Продукты</a>
+                                      </li>
+                                                                                                                                                                                   <li>
+                                          <a href="/resheniya/" class="translator" data-type="Solutions" >Решения</a>
+                                      </li>
+                                                                                                                                                                                                                                                     <li>
+                                          <a href="/press-tsentr/" class="translator" data-type="Press-center" >Пресс-центр</a>
+                                      </li>
+                                                                                                                                                                                   <li>
+                                          <a href="/contacts/" class="translator" data-type="Contacts" >Контакты</a>
+                                      </li>
+                                                                                              </ul>
+                        </div>
+                    </div>
+                </div>
+               
+<div class="bread_crumbs_wrap main">
+    <div class="bread_crumbs">
+    
+              
+       
+                  <div class="search">
+                <form method="GET" action="/search/">
+                    <input placeholder="Поиск" type="search" name="search_query">
+                    <button type="submit">
+                        <img src="/themes/diona/img/search.svg" alt="">
+                    </button>
+                </form>
+         </div>
+         
+
+    <div>
+</div>
+
+
+      
+       <!--search block -->
+       
+      
+      </div>
+       
+                                
+    </header>
+    
+                    <!-- если это Мероприятия, то выведем листинг мероприятий -->
+                                <!-- если это просмотр конкретного Мероприятия -->
+    
+  <!-- нужно вывести изображение мероприятия и заголовок -->
+                  
+
+
+    
+    <!-- личный кабинет, авторизация -->
+<!-- content -->
+
+<div class="tpl-block-list tpl-component-195 tpl-template-226" id="nc-block-cd25d290f8f0d72ec9b02e6190f8af61">
+<div class="home-page">
+<div class="slider_wrap">
+    <div class="slider home_page">
+        <div class="container_block">
+        
+            <div class="list_block">
+    <span class="empty_span"></span>
+        <ul data-list='unbound'>
+      <li>
+          <a href="http://www.dionaholding.ru/produkty/produkty-ibm/servery/servere_IBM_Power_Systems.html" title="">Серверы IBM Power Systems</a>
+      </li>
+      <li>
+          <a href="http://www.dionaholding.ru/produkty/produkty-ibm/sistemy-hraneniya-dannyh/storage_systems.html" title="">Современные системы хранения данных</a>
+      </li>
+      <li>
+          <a href="http://www.dionaholding.ru/produkty/produkty-ibm/" title="">Продукты IBM</a>
+      </li>
+      <li>
+          <a href="http://www.dionaholding.ru/resheniya/vision-solution/" title="">Решения Vision Solutions</a>
+      </li>
+      <li>
+          <a href="http://www.dionaholding.ru/produkty/produkty-ibm/demo-oborudovanie/" title="">Демо оборудование IBM</a>
+      </li>
+      <li>
+          <a href="http://www.dionaholding.ru/produkty/vision-solutions/MIMIX.html" title="">MIMIX Availability для IBM i</a>
+      </li>
+    </ul>
+</div>
+             <div class="slider_img_block">           <a href="http://www.dionaholding.ru/produkty/produkty-ibm/demo-oborudovanie/demooborudovanie.html" target="_blanc">
+            <img src="pic.php?w=730&h=360&file=/netcat_files/573_10.png" alt="" data-imgCount = '1' class="active"/>
+            <div class="info_text full_length index" data-info_text="1">
+            <p style="text-transform: none;">Демо оборудование IBM</p>
+            <p class="p_top-slider">У нас есть демо-сервер IBM POWER на процессорах POWER 8.&nbsp;У Вас есть прекрасная возможность оценить прирост производительности на новейшей платформе!</p>
+            <p class="link_fake">Подробнее</p>
+            </div>
+      </a>
+            <a href="http://www.dionaholding.ru/produkty/produkty-ibm/servery/servere_IBM_Power_Systems.html" target="_blanc">
+            <img src="pic.php?w=730&h=360&file=/netcat_files/573_7.png" alt="" data-imgCount = '2' />
+            <div class="info_text full_length index" data-info_text="2">
+            <p style="text-transform: none;">Серверы IBM POWER SYSTEMS</p>
+            <p class="p_top-slider">Масштабируемые серверы Power Systems - это доступные по цене серверы, простые в установке и энергоэффективные.&nbsp;</p>
+            <p class="link_fake">Подробнее</p>
+            </div>
+      </a>
+            <a href="http://www.dionaholding.ru/produkty/vision-solutions/MIMIX.html" target="_blanc">
+            <img src="pic.php?w=730&h=360&file=/netcat_files/573_6.png" alt="" data-imgCount = '3' />
+            <div class="info_text full_length index" data-info_text="3">
+            <p style="text-transform: none;">MIMIX Availability для IBM i</p>
+            <p class="p_top-slider">Решение&nbsp;MIMIX Availability, которое подходит как для SMB-сектора, так и для крупных корпораций.</p>
+            <p class="link_fake">Подробнее</p>
+            </div>
+      </a>
+            <a href="http://www.dionaholding.ru/resheniya/vision-solution/" target="_blanc">
+            <img src="pic.php?w=730&h=360&file=/netcat_files/573_4.png" alt="" data-imgCount = '4' />
+            <div class="info_text full_length index" data-info_text="4">
+            <p style="text-transform: none;">Решения VISION SOLUTIONS</p>
+            <p class="p_top-slider">Vision Solutions&reg;&nbsp;(VS) - это лидер в области услуг по обеспечению высокой доступности (HA), катастрофоустойчивости (DR), восстановлению данных, миграции и кросс-платформенному обмену данными...</p>
+            <p class="link_fake">Подробнее</p>
+            </div>
+      </a>
+            <a href="http://www.dionaholding.ru/produkty/produkty-ibm/" target="_blanc">
+            <img src="pic.php?w=730&h=360&file=/netcat_files/573_3.png" alt="" data-imgCount = '5' />
+            <div class="info_text full_length index" data-info_text="5">
+            <p style="text-transform: none;">Продукты IBM</p>
+            <p class="p_top-slider">IBM FlashSystem&reg; V9000 представляет собой комплексное решение для хранения данных уровня предприятия, построенное полностью на флэш-памяти, которое использует все возможности технологии IBM FlashCore&trade;</p>
+            <p class="link_fake">Подробнее</p>
+            </div>
+      </a>
+      </div>        <div class="directions_block">
+                  <div class="left">
+                          <span>
+                              <i></i>
+                          </span>
+                  </div>
+                  <div class="right">
+                          <span>
+                              <i></i>
+                          </span>
+                  </div>
+              </div>
+                <div class="squares_block"></div><!--достраивается скриптом-->
+            </div>            
+        </div>
+    </div>
+</div></div><section class="achievements_wrap">
+                <div class="container_block">
+                    <ul>
+                        <li data-info="1" id="loadpopup">
+                            <div>
+                                <span class="capitalize">
+                                    Доверие                                </span>
+                                <div class="description-property" style="display: none">Компания «Диона Холдинг» работает на российском рынке более 20 лет. За это время специалистами накоплен значительный опыт по созданию и внедрению решений в сфере высоких технологий, обслуживанию компьютерной техники разных платформ, программных средств для государственных организаций, крупных коммерческих банков и телекоммуникационных компаний по всей территории России.</div>
+                            </div>
+                            <span class="hands icons">
+                                <i></i>
+                            </span>
+                            <span class="letter first">Д</span>
+                        </li>
+                        <li data-info="2" id="loadpopup">
+                            <div>
+                                <span class="capitalize">
+                                    Информативность                                </span>
+                                <div class="description-property" style="display: none">Партнеры компании «Диона Холдинг» — ведущие мировые лидеры в сфере ИТ-индустрии. Самые современные технологии и решения в области создания и бесперебойной работы программно-технических комплексов для Вашего бизнеса находятся в наших руках. Специалисты компании готовы предоставить весь арсенал средств и знаний для решения Ваших задач.</div>
+                            </div>
+                            <span class="info icons">
+                                <i></i>
+                            </span>
+                            <span class="letter">И</span>
+                        </li>
+                        <li data-info="3" id="loadpopup">
+                            <div>
+                                <span class="capitalize">
+                                    Оперативность                                </span>
+                                <div class="description-property" style="display: none">Большой опыт работы компании на рынке ИТ-индустрии позволяет нашим специалистам в короткое время решать поставленные Клиентом задачи. Мы прекрасно понимаем — время очень материально, поэтому наше кредо — оперативность, качество и надежность в практике повседневной работы — основа жизни компании.</div>
+                            </div>
+                            <span class="clock icons">
+                                <i></i>
+                            </span>
+                            <span class="letter">О</span>
+                        </li>
+                        <li data-info="4" id="loadpopup">
+                            <div>
+                                <span class="capitalize">
+                                    Надежность                                </span>
+                                <div class="description-property" style="display: none">Мы работаем с ведущими разработчиками и поставщиками оборудования и программных средств и предлагаем решения, обеспечивающие высокую надежность и работоспособность всех компонент. Проект не заканчивается установкой компьютеров и программ, поэтому наш Технический центр обеспечивает техническую поддержку и сервисное обслуживание, как оборудования, так и программных комплексов.</div>
+                            </div>
+                            <span class="guard icons">
+                                <i></i>
+                            </span>
+                            <span class="letter">Н</span>
+                        </li>
+                        <li data-info="5" id="loadpopup">
+                            <div>
+                                <span class="capitalize">
+                                    Актуальность                                </span>
+                                <div class="description-property" style="display: none">В современном мире высоких технологий и сверхскоростей успешной может стать лишь та компания, которая использует самые современные достижения науки и техники. Наша цель - помочь Вам использовать высоконадежные и оптимальные технические решения для развития и совершенствования Вашего бизнеса.</div>
+                            </div>
+                            <span class="ground icons">
+                                <i></i>
+                            </span>
+                            <span class="letter">А</span>
+                        </li>
+                    </ul>
+                </div>
+</section>
+<!-- вывод Мероприятия -->
+<div class="tpl-block-list tpl-component-186" id="nc-block-3de7a8d87d7266e0fd25613d7736319b"></div><!-- вывод Новостей -->
+<div class="tpl-block-list tpl-component-191 tpl-template-221" id="nc-block-1a50589e2475b32ce06538b725629d33"><section class="company_news_wrap">
+                <div class="container_block">
+                    <h2 class="blue_font">Новости компании <a href="/press-tsentr/news/" class="bold" title="все новости">Читать все новости</a></h2>
+                    <ul class="two_column_list">    <li>
+  <div class="add_border">
+    <div class="news_content">
+      <div class="news_img_min" style="background: url(/netcat_files/638_29.jpg) no-repeat center; "></div>
+      <div class="news">
+        <h4>Новости об IBM FlashSystems</h4>
+        <p class="date">28.09.2016</p>
+        <p class="text_short">
+          
+Системы FlashSystem снова попали в сектор лидеров.
+В годовом отчете 2016 Magic Quadrant система семейства IBM FlashSystem снова была названа лидеро...        </p>
+        <a href="/press-tsentr/news/novosti_29.html" title="">Читать полностью</a>
+      </div>
+    </div>
+  </div>
+</li>
+    <li>
+  <div class="add_border">
+    <div class="news_content">
+      <div class="news_img_min" style="background: url(/netcat_files/638_14.jpg) no-repeat center; "></div>
+      <div class="news">
+        <h4>Наш новый партнер - компания INSPUR</h4>
+        <p class="date">16.06.2015</p>
+        <p class="text_short">
+          Подписано партнерское соглашение между компаниями Диона Холдинг и INSPUR на поставку и лицензирование серверного оборудования и ПО....        </p>
+        <a href="/press-tsentr/news/novosti_14.html" title="">Читать полностью</a>
+      </div>
+    </div>
+  </div>
+</li>
+ </ul>
+                </div>
+            </section></div>
+<!-- /content -->
+<div class="helper_footer clear"></div>
+            <footer>
+                <section class="footer_menu">
+                    <div class="add_border">
+                      <ul>
+                                                                                                        <li>
+                                            <a href="/"  class="translator" data-type="Home">Главная</a>
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                          <li>
+                                            <a href="/about/"  class="translator" data-type="About us">О компании</a>
+                                        </li>
+                                                                                                                                             <li>
+                                            <a href="/uslugi/"  class="translator" data-type="Services">Услуги</a>
+                                        </li>
+                                                                                                                                             <li>
+                                            <a href="/produkty/"  class="translator" data-type="Products">Продукты</a>
+                                        </li>
+                                                                                                                                             <li>
+                                            <a href="/resheniya/"  class="translator" data-type="Solutions">Решения</a>
+                                        </li>
+                                                                                                                                             <li>
+                                            <a href="/press-tsentr/"  class="translator" data-type="Press-center">Пресс-центр</a>
+                                        </li>
+                                                                                                                                             <li>
+                                            <a href="/contacts/"  class="translator" data-type="Contacts">Контакты</a>
+                                        </li>
+                                                                                                                                             <li>
+                                            <a href="/vakansii/"  class="translator" data-type="Careers">Вакансии</a>
+                                        </li>
+                                                                                     </ul>
+                    </div>
+                </section>
+
+                <section class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="cols col-6">
+                                <a href="/" title="Главная">
+                                    <img src="/netcat_files/c/logo_header.svg" alt="логотип" />
+                                </a>
+                                <div class="address">
+                                    <h3 class="translator" data-type="Diona Holding">ООО "ДИОНА Холдинг"</h3>
+                                    <span class="translator" data-type="30 Chasovaya Street, Moscow, 124315, Russia">125315, г. Москва, ул. Часовая, д. 30</span>
+                                </div>
+                            </div>
+                            <div class="cols col-6 phones">
+                                                                                        <p class="translator" data-type="Phone: <span>+7 (495)797-32-82, +7 (495)797-32-83</span>">Телефоны: <span>+7 (495)797-32-82, +7 (495)797-32-83</span></p>
+                                <p class="translator" data-type='Fax: <span>+7 (495) 797-32-81</span>'>Факс: <span>+7 (495) 797-32-81</span></p>
+                                <p class="translator" data-type='E-mail: <a href="mailto:mail@dionaholding.ru" title="email">mail@dionaholding.ru</a>'>Электронная почта: <a href="mailto:mail@dionaholding.ru" title="email">mail@dionaholding.ru</a></p>
+                            </div>
+                        </div>
+                        <a href="http://www.seofactory.ru/" target="_blank" title="" class="seofactory_link">
+                            <img src="/themes/diona/img/logo_seo.svg" alt="seofactory" />
+                        </a>
+                    </div>
+                </section>
+            </footer>
+</div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter40297419 = new Ya.Metrika({
+                    id:40297419,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/40297419" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></body>
+</html>

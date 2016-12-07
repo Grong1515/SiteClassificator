@@ -1,0 +1,413 @@
+<!doctype html><html lang="ru"><head xmlns:og="http://ogp.me/ns#">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=1200">
+<meta name="MobileOptimized" content="1200">
+<title>Стоматологическая клиника Астра-Смайл </title>
+<link rel="canonical" href="http://astra-smile.ru/">
+<meta name="description" content="Профессиональная стоматологическая клиника Астра-Смайл в районе Западное Дегунино, Москва. Полный спектр услуг"><meta property="og:description" content="Профессиональная стоматологическая клиника Астра-Смайл в районе Западное Дегунино, Москва. Полный спектр услуг"><meta name="twitter:card" content="summary">
+<meta property="og:title" content="Стоматологическая клиника Астра-Смайл ">
+<meta property="og:url" content="http://astra-smile.ru/"><link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'><meta name="robots" content="all"><link rel="stylesheet" href="/skinss/css/default.css?v6">
+<link rel="stylesheet" href="/files/styles/16.css?times=1477389609">
+<link rel="stylesheet" href="/files/styles/-16.css?times=1477389609">
+<link id="favicon" rel="shortcut icon" href="/files/page/favicon.ico">
+<script type="text/javascript" src="/skinss/js/jquery.js"></script>
+<script type="text/javascript" src="/skinss/js/cycle.all.js"></script><script type="text/javascript" src="/skinss/js/jcarousel.js"></script><link href="/skinss/js/highslide/highslide.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="/skinss/js/highslide/highslide.js"></script><script type="text/javascript">/*171a7b6594165378ae1ebdf7b91b95bd*/hs.lang = {cssDirection: "ltr",restoreTitle: "",loadingText: "Загружается...",playTitle: "Начать слайдшоу (пробел)",pauseTitle: "Приостановить слайдшоу (пробел)",previousTitle: "Предыдущее (стрелка влево)",nextTitle: "Следующее (стрелка вправо)",closeTitle: "Закрыть (esc)",fullExpandTitle: "Развернуть до оригинального размера"};hs.restoreCursor = null;hs.Expander.prototype.onImageClick = function() {return hs.next();};hs.graphicsDir = "/skinss/js/highslide/graphics/";hs.creditsText ="";hs.showCredits = false;</script><script type="text/javascript">var gr277Opt = {slideshowGroup: "gr277",align: "center",transitions: ["expand", "crossfade"],outlineType: null,dimmingOpacity: 0.8};</script><script type="text/javascript">var deftitle = document.title;
+var defurl = document.location.toString().split('#', 2)[0];
+var popI = 0, stPoint = 0, anchors = [], anchorsUs = [], anchTop = [];
+$(function(){anchors[0]="ac_170";anchorsUs[0]="";anchors[1]="ac_280";anchorsUs[1]="c_280";anchors[2]="ac_294";anchorsUs[2]="c_294";anchors[3]="ac_303";anchorsUs[3]="c_303";anchors[4]="ac_312";anchorsUs[4]="c_312";for(var i = 0; i < 5; i++) {
+anchTop[i] = $('#'+anchors[i]).offset().top;
+}
+var lastrel = '';
+$('a[href^="#/"]').bind("click", function(e){popupScroll($(this).attr('href'),true);e.preventDefault();});
+if (window.location.hash && window.location.hash.substr(0, 2) == "#/") popupScroll(window.location.hash,false, 1);$(document).on('keyup', function(e){
+  if (e.which == 27) $.each($('.popupContent'), function(i, val) {popupClose(val.id.substr(2));});
+});
+$(window).scroll(function(){
+  stPoint = $(window).scrollTop();
+    var rel = '';
+    for (i = 0; i < 5; i++) {
+    if ((anchTop[i] - 1) <= stPoint && !$('#'+anchors[i]).parent().parent().hasClass('phidden')) {
+      rel = anchors[i];
+      if (anchTop[i+1] != undefined && (anchTop[i+1] - 1) > stPoint || $('#'+anchors[i]).parent().parent().hasClass('popupContent')) break;
+    }
+  }
+  if (lastrel != rel) {
+	if (lastrel) {
+	    if (rel == 'ac_170' || rel == '') {
+	        if (deftitle != document.title) document.title = deftitle;
+	        if (history && history.replaceState) history.replaceState(null, null, defurl);
+	    } else {
+	        document.title = $('#'+rel).attr('title')+deftitle;
+	        if (history && history.replaceState) history.replaceState(null, null, '#'+$('#'+rel+' span').attr('id'));
+	    }
+	}
+    lastrel = rel;
+    $('.anchors').removeClass('msel');
+    if (rel) $('.'+rel).addClass('msel');
+  }
+});
+$(window).trigger('scroll');
+$.get("/hit.php?pageId=16&utms=0");
+});
+function popupScroll(anchor, scroll, hReplace) {
+  var idContent = null, scrollObj = null;
+  hReplace  = hReplace || 0;
+  if (anchor.substr(0, 2) == '#/') {
+      var canchor = anchor.substr(2);
+    for(var i = 0; i < 5; i++) {
+      if (anchorsUs[i] == canchor) {
+        idContent = anchors[i].substr(1);
+        scrollObj = $('#a'+idContent);
+        break;
+      }
+    }
+        if (idContent == null && anchor == '#/') {
+        scrollObj = $('#ac_170');
+        idContent = 'c_170';
+    }
+      } else if (anchor.substr(0, 4) == '#ac_') {
+    idContent = anchor.substr(2);
+    scrollObj = $(anchor);
+  }
+  if (idContent == null || scrollObj.attr('id') == undefined) return;
+  var pgc = $('#pg'+idContent);
+  if (pgc.hasClass('phidden')) {
+    pgc.removeClass('phidden').find('.flash').removeClass('phidden2');
+    if (window['fpg'+idContent] !== undefined) window['fpg'+idContent] = "hide";
+    showFirstContents(idContent);
+    for(var i = 0; i < 5; i++) {
+      anchTop[i] = $('#'+anchors[i]).offset().top;
+    }
+  }
+  if (scroll == true) {
+     var newPoint = scrollObj.offset().top;
+     var newPoint2 = newPoint; 
+     if (pgc.hasClass('allMark')) {
+       $.each($('.allMark:not(.phidden,#pg'+idContent+')'), function(i, val) {
+         if (newPoint > $("#"+val.id).offset().top)
+           newPoint2 -= $(val).find('.virtuals').outerHeight();
+       });
+     }
+         if (newPoint2 < 0) newPoint2 = 0;
+     newPoint = newPoint2;
+     $('html,body').stop().animate({scrollTop: newPoint}, 1000, function() {
+        $('.anchors').removeClass('msel');
+        $('.a'+idContent).addClass('msel');
+        if (anchor == '#/') {
+          document.title = deftitle;
+          if (history && history.replaceState) history.replaceState(null, null, defurl);
+        } else {
+          document.title = scrollObj.attr('title')+deftitle;
+          if (history && history.replaceState) history.replaceState(null, null, anchor);
+        }
+     });
+  } else {
+     $('.anchors').removeClass('msel');
+     $('.a'+idContent).addClass('msel');
+     if (hReplace) {
+	     if (anchor == '#/') {
+	       document.title = deftitle;
+	       if (history && history.replaceState) history.replaceState(null, null, defurl);
+	     } else {
+	       document.title = scrollObj.attr('title')+deftitle;
+	       if (history && history.replaceState) history.replaceState(null, null, anchor);
+	     }
+     }
+  }
+  if (pgc.hasClass('allMark')) {
+    $.each($('.allMark:not(.phidden,#pg'+idContent+')'), function(i, val) {
+      popupClose(val.id.substr(2));
+    });
+  }
+}
+function showHideContent(idContent, action) {
+  var pgc = $('#pg'+idContent);
+  var virtuals = pgc.find('.virtuals');
+  if (action == 'show') {
+    if (pgc.hasClass('phidden')) {
+      pgc.removeClass('phidden').find('.flash').removeClass('phidden2');
+      window['fpg'+idContent] = "hide";
+      showFirstContents(idContent);
+    }
+  } else if (!pgc.hasClass('phidden')) {
+      window['fpg'+idContent] = "show";
+      pgc.addClass('phidden').find('.flash').addClass('phidden2');
+  }
+}
+function setGood(cId, goodId) {
+  $('#'+cId).find('input.goodsId').val(goodId);
+}
+function popupOpen(id) {
+  popI++;
+  var pgc = $('#pg'+id);
+  if (pgc.hasClass('phidden')) {
+    if (pgc.hasClass('allMark')) {
+        $.each($('.allMark:not(.phidden,#pg'+id+')'), function(i, val) {
+           popupClose(val.id.substr(2));
+        });
+    }
+    pgc.addClass('mustHide').addClass('popupContent').removeClass('phidden').css({'top':$(window).scrollTop(),'zIndex':(920+popI)}).find('.flash').removeClass('phidden2');
+    showFirstContents(id);
+  } else {
+    pgc.addClass('popupContent').css({'top':$(window).scrollTop(),'zIndex':(920+popI)});
+  }
+  pgc.find('.isPopup').val(1);
+  $('#cpdi'+id).remove();
+  $('body').append('<div id="cpdi'+id+'" class="cpdimming" style="z-index:'+(919+popI)+'"></div>');
+  $(window).trigger('scroll');
+  $('#pg'+id+',#cpdi'+id).bind("click", function(e){
+    if(!$(e.target).closest('#'+id).length) {
+      if (pgc.hasClass('mustHide')) {
+          pgc.addClass('phidden').find('.flash').addClass('phidden2');
+                }
+      pgc.css({'top':0,'zIndex':'auto'}); 
+      $('#cpdi'+id).remove();
+      pgc.find('.isPopup').val(0);
+      pgc.removeClass('popupContent');
+      pgc.unbind("click");
+      popI--;
+      $(window).trigger('scroll');
+      e.preventDefault();
+    }
+  });
+}
+function popupClose(id) {
+  var pgc = $('#pg'+id);
+  if (pgc.hasClass('popupContent')) {
+    if (pgc.hasClass('mustHide')) {
+        pgc.addClass('phidden').find('.flash').addClass('phidden2');
+            }
+    pgc.css({'top':0,'zIndex':'auto'});
+    $('#cpdi'+id).remove();
+    pgc.find('.isPopup').val(0);
+    pgc.removeClass('popupContent');
+    pgc.unbind("click");
+    popI--;
+  } else {
+    if (!pgc.hasClass('phidden')) {
+        pgc.addClass('phidden').find('.flash').addClass('phidden2');
+            }
+   for(var i = 0; i < 5; i++) {
+     anchTop[i] = $('#'+anchors[i]).offset().top;
+   }
+  }
+  $(window).trigger('scroll');
+}
+function showFirstContents(idContent) {}
+function reachGoal(pageId) {
+  pageId = pageId || 16;
+  $.get("/reachGoal.php?pageId="+pageId);
+}
+function hover2(id){
+  var ul = $('#s'+id+' ul');
+  if (ul.hasClass('hover2')) ul.removeClass('hover2');
+  else ul.addClass('hover2');
+  $(document).on("click.hov"+id, function(e){
+    if($(e.target).attr('id') != 'a'+id) {
+      ul.removeClass('hover2');
+      $(document).unbind("click.hov"+id);
+    }
+  });
+}
+</script><style type="text/css">html,body{height:100%;margin:0;}div#i155{line-height:0;font-size:0;}#i241, #i241 .irz {width:209px;height:66px;}#i171, #i171 .irz {width:214px;height:114px;}#i175, #i175 .irz {width:230px;height:64px;}#i182 {width:1200px;height:400px;}#i182 .arrow {height:400px;line-height:400px;}#i194, #i194 .irz {width:600px;height:49px;}div#i198{line-height:0;font-size:0;}#i209, #i209 .irz {width:840px;height:673px;}#i224, #i224 .irz {width:932px;height:313px;}#i224 .arrow {height:313px;line-height:313px;}#i228, #i228 .irz {width:932px;height:37px;}#i231, #i231 .irz {width:447px;height:90px;}#i232, #i232 .irz {width:545px;height:95px;}#i234, #i234 .irz {width:271px;height:48px;}#i243, #i243 .irz {width:197px;height:87px;}div#i245{line-height:0;font-size:0;}#i276, #i276 .irz {width:300px;height:306px;}#i244, #i244 .irz {width:134px;height:34px;}div#i247{line-height:0;font-size:0;}div#i248{line-height:0;font-size:0;}div#i249{line-height:0;font-size:0;}div#i250{line-height:0;font-size:0;}div#i251{line-height:0;font-size:0;}#i246, #i246 .irz {width:197px;height:34px;}#i252, #i252 .irz {width:197px;height:34px;}#i260, #i260 .irz {width:420px;height:23px;}#i261, #i261 .irz {width:258px;height:104px;}div#i262{line-height:0;font-size:0;}#i263, #i263 .irz {width:206px;height:34px;}#i266, #i266 .irz {width:177px;height:48px;}#i270, #i270 .irz {width:81px;height:44px;}#i272, #i272 .irz {width:300px;height:35px;}#i277, #i277 .irz {width:240px;height:294px;}#i277 .arrow {height:294px;line-height:294px;}#i281{width:360px;height:369px;}#i282, #i282 .crz {width:300px;height:42px;}#i284, #i284 .crz {width:200px;height:46px;}#i286, #i286 .crz {width:360px;height:100px;}#i287, #i287 .crz {width:300px;height:42px;}#i295{width:360px;height:438px;}#i296, #i296 .crz {width:300px;height:42px;}#i297, #i297 .crz {width:200px;height:46px;}#i298, #i298 .crz {width:360px;height:100px;}#i299, #i299 .crz {width:300px;height:42px;}#i301, #i301 .crz {width:160px;height:42px;}#i302, #i302 .crz {width:100px;height:42px;}#i304{width:360px;height:438px;}#i305, #i305 .crz {width:300px;height:42px;}#i306, #i306 .crz {width:200px;height:46px;}#i307, #i307 .crz {width:360px;height:100px;}#i308, #i308 .crz {width:300px;height:42px;}#i309, #i309 .crz {width:160px;height:42px;}#i310, #i310 .crz {width:100px;height:42px;}#i315, #i315 .irz {width:600px;height:400px;}div#i324{line-height:0;font-size:0;}#i325, #i325 .irz {width:178px;height:47px;}div#i327{line-height:0;font-size:0;}div#i328{line-height:0;font-size:0;}#i330, #i330 .irz {width:208px;height:44px;}div#i332{line-height:0;font-size:0;}#i353, #i353 .irz {width:595px;height:24px;}#i354, #i354 .irz {width:255px;height:36px;}div#i355{line-height:0;font-size:0;}#i357 {width:300px;height:300px;}#i357 .arrow {height:300px;line-height:300px;}#i642, #i642 .irz {width:222px;height:44px;}#i185, #i185 .irz {width:825px;height:51px;}#i253, #i253 .irz {width:200px;height:187px;}</style>
+<link rel="stylesheet" href="/dop.css"></head>
+<body><div id="pgc_170" class="pgdiv"><div class="tddiv"><a id="ac_170" class="ascroll" style="top:0px;" title="Шапка  "><span id="/"></span></a><div id="virtualc_170" style="z-index:1;" class="virtuals"><div class="vdis" id="vdisc_170"><div class="allContent" style="width:1200px;"><div id="c_170" class="droppable" style="width:1200px;height:200px;"><div class="bi irz" id="i171" style="z-index:16;top:9px;left:981px;"><div class="irz scroll0"><p><span style="color: #888888; font-family: 'Open Sans', sans-serif; font-size: 16px;">Записаться на прием:</span></p>
+<div style="line-height: 26px;">
+<p><span style="font-family: 'Open Sans', sans-serif;"><span style="color: #333333; font-size: 20px;">8(499) </span><strong style="font-family: 'Open Sans', sans-serif; font-size: 28px;">905-00-97</strong></span></p>
+<p><span style="font-family: 'Open Sans', sans-serif; font-size: 28px;"><span style="color: #333333; font-size: 20px;">8(916)</span> <strong>025-55-33</strong></span></p>
+<p><span style="font-family: 'Open Sans', sans-serif; font-size: 28px;"><span style="color: #333333; font-size: 20px;">8(925)</span> <strong>533-94-73</strong></span></p>
+</div></div></div><div class="bi irz" id="i175" style="z-index:19;top:9px;left:683px;"><div class="irz scroll0"><p><span style="color: #888888; font-family: 'Open Sans', sans-serif; font-size: 16px;">Адрес:</span></p>
+<p><span style="font-size: 14px;"><span style="font-family: 'Open Sans', sans-serif;">г.Москва </span><span style="font-family: 'Open Sans', sans-serif; line-height: 1.25;">ул.Ангарская, </span></span><span style="font-size: 14px;"><span style="font-family: 'Open Sans', sans-serif; line-height: 1.25;">д.22, к.1</span> </span></p></div></div><div class="bi irz" id="i642" style="z-index:89;top:80px;left:683px;"><div class="irz scroll0"><p>Пн-Сб: <strong>9:00-21:00</strong></p>
+<p>      Вс:<span style="color: #888888;"> </span><strong>выходной</strong></p></div></div><a href="/" class="nodec"><div class="bi msel" id="i155" style="top:40px;left:20px;z-index:12;"><img src="/files/block/s-logo2.png?times=1440835999" width="441" height="115" alt="" class="bl center"></div></a><div class="bi" id="i172" style="top:132px;left:981px;z-index:17;"><a class="links" href="#" id="a172" onclick="popupOpen('c_280');return false;">Обратный звонок</a></div><div class="bi" id="i173" style="top:132px;left:683px;z-index:18;"><a class="links" href="#" id="a173" onclick="popupOpen('c_294');return false;">Запись на прием</a></div><div class="bi" id="i198" style="top:33px;left:919px;z-index:23;"><img src="/files/block/s-block-1.png?times=1440445514" width="1" height="100" alt="" class="bl center"></div><div class="bi" id="i314" style="top:46px;left:683px;z-index:65;"><a class="links" href="#" id="a314" onclick="popupOpen('c_312');return false;">посмотреть на карте</a></div></div></div></div></div></div></div><div id="pgc_181" class="pgdiv"><div class="tddiv"><a id="ac_181" class="ascroll" style="top:0px;" title="Слайдер  "><span id="/c_181"></span></a><div id="virtualc_181" style="z-index:1;" class="virtuals"><div class="vdis" id="vdisc_181"><div class="allContent" style="width:1200px;"><div id="c_181" class="droppable" style="width:1200px;height:400px;"><div class="bi irz" id="i182" style="top:0px;left:0px;z-index:20;"><div class="nav"><div class="arrow" id="prev182">‹</div><div class="arrow next182">›</div></div><table class="tb wh100">
+	<tr>
+		<td class="td" style="width: 100%; height: 100%;">
+		<div class="pics182 highslide-gallery center" style="width:1200px;height:400px;overflow:hidden;position:relative;z-index:1;">
+		<img id="i1413" src="/files/block/s-banner25-4.jpg?times=1477389609" width="1200" height="400" alt="Безболезненное отбеливание AMAZING WHITE" title="Безболезненное отбеливание AMAZING WHITE" class="bl cursor" onclick="window.location = '/uslugi/bezboleznennoe-otbelivanie-amazing-white';return false;"><img id="i597" src="/files/block/s-banner4.jpg?times=1440578135" width="1200" height="400" alt="Профессиональная чистка зубов-3 990р" title="Профессиональная чистка зубов-3 990р" class="bl cursor next182"><img id="i598" src="/files/block/s-banner5.jpg?times=1440672111" width="1200" height="400" alt="Имплантация зубов под КЛЮЧ - 42 000 рублей!" title="Имплантация зубов под КЛЮЧ - 42 000 рублей!" class="bl cursor next182"></div>
+		</td>
+	</tr>
+</table><script type="text/javascript">$(document).ready(function() {$(".pics182").cycle({fx: "fade",timeout:7000,speed:800,next:".next182",prev:"#prev182"});});</script></div>
+</div></div></div></div></div></div><div id="pgc_318" class="pgdiv"><div class="tddiv"><a id="ac_318" class="ascroll" style="top:0px;" title="Меню  "><span id="/c_318"></span></a><div id="virtualc_318" style="z-index:1;" class="virtuals"><div class="vdis" id="vdisc_318"><div class="allContent" style="width:1200px;"><div id="c_318" class="droppable" style="width:1200px;height:51px;"><div class="bi irz" id="i194" style="top:0px;left:600px;z-index:21;"></div><div class="bi" id="i355" style="top:-13px;left:1000px;z-index:86;"><img src="/files/block/s-akcii.png?times=1440445676" width="172" height="63" alt="" class="bl center"></div><div class="bi" id="i356" style="top:13px;left:1026px;z-index:87;"><a class="links" href="/skidki-akcii" id="a356">СКИДКИ / АКЦИИ</a></div><div class="bi irz" id="i185" style="top:0px;left:0px;z-index:300;">
+<table class="tb h100"><tr><td class="td" style="padding-right:1px"><div class=" msel" id="i186"><a class="links msel" href="/" id="a186">О клинике</a></div></td><td class="td" style="padding-right:1px"><div id="i187"><a class="links" href="/uslugi" id="a187">Услуги</a></div></td><td class="td" style="padding-right:1px"><div id="i188"><a class="links" href="/doctors" id="a188">Специалисты</a></div></td><td class="td" style="padding-right:1px"><div id="i189"><a class="links" href="/nashi-raboti" id="a189">Наши работы</a></div></td><td class="td" style="padding-right:1px"><div id="i190"><a class="links" href="/ceny" id="a190">Прайс-лист</a></div></td><td class="td" style="padding-right:1px"><div id="i192"><a class="links" href="/fotogalereya" id="a192">Фотогалерея</a></div></td><td class="td" style="padding-right:1px"><div id="i191"><a class="links" href="/otzivi" id="a191">Отзывы</a></div></td><td class="td"><div id="i193"><a class="links" href="/kontakti" id="a193">Контакты</a></div></td></tr></table>
+</div></div></div></div></div></div></div><div id="pgc_329" class="pgdiv"><div class="tddiv"><a id="ac_329" class="ascroll" style="top:0px;" title="Преимущества  "><span id="/c_329"></span></a><div id="virtualc_329" style="z-index:1;" class="virtuals"><div class="vdis" id="vdisc_329"><div class="allContent" style="width:1200px;"><div id="c_329" class="droppable" style="width:1200px;height:100px;"><div class="bi irz" id="i266" style="z-index:55;top:38px;left:710px;"><div class="irz scroll0"><p><span style="font-family: 'Open Sans', sans-serif; font-size: 16px; color: #888888;">ВЫСОКОЕ КАЧЕСТВО</span></p></div></div><div class="bi irz" id="i270" style="z-index:58;top:38px;left:1010px;"><div class="irz scroll0"><p><span style="font-family: 'Open Sans', sans-serif; font-size: 16px; color: #888888;">ГАРАНТИЯ</span></p></div></div><div class="bi irz" id="i325" style="z-index:73;top:38px;left:110px;"><div class="irz scroll0"><p><span style="font-family: 'Open Sans', sans-serif; font-size: 16px; color: #888888;">ДОСТУПНЫЕ ЦЕНЫ</span></p>
+<p><span style="font-family: 'Open Sans', sans-serif; font-size: 16px;"> </span></p></div></div><div class="bi irz" id="i330" style="z-index:77;top:38px;left:412px;"><div class="irz scroll0"><p><span style="font-family: 'Open Sans', sans-serif; font-size: 16px; color: #888888;">ЛЕТ УСПЕШНОЙ РАБОТЫ</span></p></div></div><div class="bi" id="i324" style="top:25px;left:50px;z-index:72;"><img src="/files/block/s-commerce.png?times=1440754865" width="48" height="48" alt="" class="bl center"></div><div class="bi" id="i327" style="top:25px;left:650px;z-index:75;"><img src="/files/block/s-sticker3.png?times=1440755080" width="48" height="48" alt="" class="bl center"></div><div class="bi" id="i328" style="top:25px;left:950px;z-index:76;"><img src="/files/block/s-dental-care.png?times=1440755106" width="48" height="48" alt="" class="bl center"></div><div class="bi" id="i332" style="top:21px;left:350px;z-index:78;"><img src="/files/block/s-p2.png?times=1440754915" width="52" height="52" alt="" class="bl center"></div></div></div></div></div></div></div><div id="pgc_712" class="pgdiv"><div class="tddiv"><a id="ac_712" class="ascroll" style="top:0px;" title="Услуги   "><span id="/c_712"></span></a><div id="virtualc_712" style="z-index:5;" class="virtuals"><div class="vdis" id="vdisc_712"><div class="allContent" style="width:1200px;"><div id="c_712" class="droppable" style="width:1200px;height:491px;"><div class="bi" id="i715" style="top:36px;left:50px;z-index:68;"><img src="/files/block/715-s-carusel.png?times=1440684196" width="200" height="160" alt="Терапия" class="bl center"><div style="padding-top:8px;"><h2 style="text-align: center;"><span style="font-family: 'Open Sans', sans-serif; font-size: 20px;">Терапия</span></h2></div></div><div class="bi" id="i714" style="top:260px;left:16px;z-index:69;"><img src="/files/block/714-s-321-carusel.png?times=1440684196" width="200" height="160" alt="Эстетическая стоматология" class="bl center"><div style="padding-top:8px;"><h2 style="text-align: center;"><span style="font-family: 'Open Sans', sans-serif; font-size: 20px;">Эстетическая стоматология</span></h2></div></div><div class="bi" id="i716" style="top:35px;left:928px;z-index:70;"><img src="/files/block/716-s-322-carusel.png?times=1442421258" width="200" height="160" alt="Профилактика и гигиена" class="bl center"><div style="padding-top:8px;"><h2 style="text-align: center;"><span style="font-family: 'Open Sans', sans-serif; font-size: 20px;">Профилактика и гигиена</span></h2></div></div><div class="bi" id="i713" style="top:260px;left:349px;z-index:71;"><img src="/files/block/713-s-323-carusel.png?times=1440684196" width="200" height="160" alt="Отбеливание" class="bl center"><div style="padding-top:8px;"><h2 style="text-align: center;"><span style="font-family: 'Open Sans', sans-serif; font-size: 20px;">Отбеливание</span></h2></div></div><div class="bi" id="i717" style="top:260px;left:650px;z-index:79;"><img src="/files/block/717-s-333-carusel.png?times=1440684196" width="200" height="160" alt="Пародонтология" class="bl center"><div style="padding-top:8px;"><h2 style="text-align: center;"><span style="font-family: 'Open Sans', sans-serif; font-size: 20px;">Пародонтология</span></h2></div></div><div class="bi" id="i718" style="top:36px;left:350px;z-index:80;"><img src="/files/block/718-s-334-carusel.png?times=1440684196" width="200" height="160" alt="Хирургия" class="bl center"><div style="padding-top:8px;"><h2 style="text-align: center;"><span style="font-family: 'Open Sans', sans-serif; font-size: 20px;">Хирургия</span></h2></div></div><div class="bi" id="i719" style="top:35px;left:650px;z-index:81;"><img src="/files/block/719-s-335-carusel.png?times=1442421182" width="200" height="160" alt="Ортопедия" class="bl center"><div style="padding-top:8px;"><h2 style="text-align: center;"><span style="font-family: 'Open Sans', sans-serif; font-size: 20px;">Ортопедия</span></h2></div></div><a href="/uslugi/implantaciya-zubov" class="nodec"><div class="bi" id="i720" style="top:260px;left:950px;z-index:82;"><img src="/files/block/720-s-336-carusel.png?times=1458590130" width="200" height="160" alt="Имплантация" class="bl center"><div style="padding-top:8px;"><h2 style="text-align: center;"><span style="font-family: 'Open Sans', sans-serif; font-size: 20px;">Имплантация</span></h2></div></div></a><div class="bi" id="i755" style="top:259px;left:649px;z-index:90;">
+<div class="smenu" id="s755">
+<a class="links" id="a755" href="#" onclick="hover2('755');return false;">Пародонтология</a><ul><li style="padding-bottom:0px"><a class="links" href="/uslugi/lechenie-parodontita-apparatom-vector" id="a756">Лечение пародонтита <br>аппаратом Vector</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/parodontologicheskie-povyazki" id="a757">Пародонтологические повязки</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/otkrytyj-i-zakrytyj-kyuretazh-zubodesnevyh-karmanov" id="a758"> Открытый и закрытый кюретаж <br>зубодесневых карманов</a></li><li><a class="links" href="/uslugi/shinirovanie-zubov" id="a759">Шинирование зубов</a></li></ul></div>
+</div><div class="bi" id="i728" style="top:259px;left:48px;z-index:90;">
+<div class="smenu" id="s728">
+<a class="links" id="a728" href="#" onclick="hover2('728');return false;">Эстетическая<br> стоматология</a><ul><li style="padding-bottom:0px"><a class="links" href="/uslugi/skajs" id="a729">Скайс</a></li><li><a class="links" href="/uslugi/restavraciya-perednih-zubov" id="a730">Реставрация передних зубов</a></li></ul></div>
+</div><div class="bi" id="i731" style="top:36px;left:950px;z-index:90;">
+<div class="smenu" id="s731">
+<a class="links" id="a731" href="#" onclick="hover2('731');return false;">Профилактика и гигиена</a><ul><li style="padding-bottom:0px"><a class="links" href="/uslugi/ultrazvukovaya-chistka-zubov" id="a732">Ультразвуковая чистка зубов</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/remineralizaciya-i-ftorirovanie-zubov" id="a733">Реминерализация и фторирование зубов</a></li><li><a class="links" href="/uslugi/chistka-zubov-air-flow" id="a734">Чистка зубов Air-flow</a></li></ul></div>
+</div><div class="bi" id="i735" style="top:259px;left:349px;z-index:90;">
+<div class="smenu" id="s735">
+<a class="links" id="a735" href="#" onclick="hover2('735');return false;">Отбеливание</a><ul><li style="padding-bottom:0px"><a class="links" href="/uslugi/sistema-otbelivaniya-zubov-zoom-2" id="a736">Система  отбеливания ZOOM-2</a></li><li><a class="links" href="/uslugi/bezboleznennoe-otbelivanie-amazing-white" id="a737">Безболезненное отбеливание<br/>AMAZING WHITE</a></li></ul></div>
+</div><div class="bi" id="i742" style="top:35px;left:349px;z-index:90;">
+<div class="smenu" id="s742">
+<a class="links" id="a742" href="#" onclick="hover2('742');return false;">Хирургия</a><ul><li style="padding-bottom:0px"><a class="links" href="/uslugi/udalenie-zubov-v-astra-smajl-skazhite-net-strahu-i-boli" id="a743">Удаление зубов</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/rezekciya-verhushki-kornya-zuba" id="a744">Резекции</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/alveoktomiya" id="a745">Альвеоктомия</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/cistehktomiya" id="a746">Цистэктомия</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/vskrytie-abscessa" id="a747">Вскрытие абсцесса</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/gingivehktomiya" id="a748">Гингивэктомия</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/kostnaya-plastika" id="a749">Костная пластика</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/gingivoplastika" id="a750">Гингивопластика</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/perikoronarit" id="a751">Перикоронатомия</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/frenuloplastika-ili-plastika-uzdechki-verhnej-guby-i-yazyka" id="a752">Френулопластика</a></li><li><a class="links" href="/uslugi/udalenie-retinirovannyh-zubov-s-pomoshchyu-pezo-nozha" id="a753"> Удаление ретинированных зубов<br> с помощью пьезо ножа</a></li></ul></div>
+</div><div class="bi" id="i738" style="top:36px;left:649px;z-index:91;">
+<div class="smenu" id="s738">
+<a class="links" id="a738" href="#" onclick="hover2('738');return false;">Ортопедия</a><ul><li style="padding-bottom:0px"><a class="links" href="/uslugi/nesemnoe-protezirovanie" id="a739">Несъемное протезирование</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/mikroprotezirovanie" id="a740">Микропротезирование</a></li><li><a class="links" href="/uslugi/semnoe-protezirovanie" id="a741">Съемное протезирование</a></li></ul></div>
+</div><div class="bi" id="i721" style="top:35px;left:49px;z-index:92;">
+<div class="smenu" id="s721">
+<a class="links" id="a721" href="#" onclick="hover2('721');return false;">Терапия</a><ul><li style="padding-bottom:0px"><a class="links" href="/uslugi/germetizaciya-fissur" id="a722">Герметизация фиссур</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/lechenie-kariesa" id="a723"> Лечение кариеса</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/vosstanovlenie-zuba-vinirom" id="a724">Восстановление зуба виниром</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/pulpit" id="a725">Пульпит</a></li><li style="padding-bottom:0px"><a class="links" href="/uslugi/perelechivanie-kornevyh-kanalov" id="a726">Перелечивание корневых каналов</a></li><li><a class="links" href="/uslugi/periodontit" id="a727">Периодонтит</a></li></ul></div>
+</div></div></div></div></div></div></div><div id="pgc_222" class="pgdiv"><div class="tddiv"><a id="ac_222" class="ascroll" style="top:0px;" title="Акция  "><span id="/c_222"></span></a><div id="virtualc_222" style="z-index:1;" class="virtuals"><div class="vdis" id="vdisc_222"><div class="allContent" style="width:1200px;"><div id="c_222" class="droppable" style="width:1200px;height:200px;"><div class="bi irz" id="i231" style="z-index:30;top:85px;left:26px;"><div class="irz scroll0"><p style="text-align: center;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 72px;">БЕСПЛАТНО!</span></p></div></div><div class="bi irz" id="i232" style="z-index:31;top:11px;left:586px;"><div class="irz scroll0"><p><span style="font-family: helvetica, sans-serif; font-size: 36px;">Консультация специалиста</span></p>
+<p><span style="font-family: helvetica, sans-serif; font-size: 36px;">+ план лечения   </span>                    </p></div></div><div class="bi" id="i233" style="top:129px;left:750px;z-index:32;"><a class="links" href="#" id="a233" onclick="popupOpen('c_303');return false;">Записаться на консультацию</a></div></div></div></div></div></div></div><div id="pgc_196" class="pgdiv"><div class="tddiv"><a id="ac_196" class="ascroll" style="top:0px;" title="Контент  "><span id="/c_196"></span></a><div id="virtualc_196" style="z-index:1;" class="virtuals"><div class="vdis" id="vdisc_196"><div class="allContent" style="width:1200px;"><div id="c_196" class="droppable" style="width:1200px;height:716px;"><div class="bi irz" id="i209" style="z-index:26;top:31px;left:336px;"><div class="irz scroll0"><div class="text1">
+<h1>Стоматологическая клиника "Астра-Смайл"</h1>
+<p>Всем известно, что здоровые зубы — это залог здоровья всего организма! Многие люди, особенно старшее поколение, с детства бояться стоматологов. Оно и понятно, в советское время были устрашающего вида бормашины, которые издавали ужасные звуки, и при этом пациенту было не очень приятно, так как больной зуб не обезболивали.</p>
+<h2>Современная стоматология — это совсем другое дело!</h2>
+<p>В нашей стоматологической клинике трудятся врачи - стоматологи с огромным опытом работы и готовы Вам предоставить весь перечень стоматологических услуг.</p>
+<p>Наши специалисты стараются опровергнуть предубеждения и стереотипы, на деле доказывая своим пациентам, что на данном этапе развития медицины, лечение зубов – это не только необходимое, но и приятное дело. </p>
+<p>Новейшие безопасные обезболивающие препараты и применение передовых достижений в стоматологии позволяют осуществлять процедуры любой сложности, а внушительный опыт и высокий уровень профессионализма наших специалистов дарит всем пациентам здоровые зубы и красивую улыбку!</p>
+<p>Результат ежедневного труда сотрудников нашей клиники — это тысячи благодарных пациентов, 90% из которых пришли по рекомендации друзей, знакомых и родственников! Ведь настоящая награда - это когда видишь красивую улыбку, счастливые глаза, слышишь слова благодарности и читаешь хорошие отзывы.</p>
+<p>Профессия стоматолог для врачей нашей клиники — не просто профессия, а любимое дело, в котором никуда без терпения, внимания, человечности и огромного профессионализма. А лучшей наградой в работе является здоровье пациента — то, что действительно ДОРОГО!</p>
+<p>Будем рады видеть Вас в нашей клинике!</p>
+</div></div></div><div class="bi irz" id="i272" style="z-index:60;top:350px;left:15px;"><div class="irz scroll0"><p style="text-align: center;"><span style="color: #ffffff; font-family: helvetica, sans-serif; font-size: 20px;">ЛИЦЕНЗИИ</span></p></div></div><div class="bi irz" id="i276" style="top:400px;left:15px;z-index:40;"></div><div class="bi irz" id="i277" style="top:410px;left:45px;z-index:61;"><div class="nav"><div class="arrow" id="prev277">‹</div><div class="arrow next277">›</div></div><div class="carusel irz">
+<ul id="mycarousel277" class="jcarousel-skin-tango">
+<li><div id="li362"><div id="i362" class="center" style="width:200px;"><a href="/files/block/lic3.jpg" class="highslide" onclick="return hs.expand(this, gr277Opt)"><img src="/files/block/s-lic3.jpg?times=1440445118" width="200" height="288" alt="" class="bl"></a></div></div></li><li><div id="li279"><div id="i279" class="center" style="width:200px;"><a href="/files/block/lic1.jpg" class="highslide" onclick="return hs.expand(this, gr277Opt)"><img src="/files/block/s-lic1.jpg?times=1440445083" width="200" height="288" alt="" class="bl"></a></div></div></li><li><div id="li278"><div id="i278" class="center" style="width:200px;"><a href="/files/block/lic2.jpg" class="highslide" onclick="return hs.expand(this, gr277Opt)"><img src="/files/block/s-lic2.jpg?times=1440445107" width="200" height="288" alt="" class="bl"></a></div></div></li></ul>
+</div>
+</div>
+<script type="text/javascript">$('#mycarousel277').jcarousel({
+    wrap: 'circular',
+    buttonPrevHTML: null,
+    buttonNextHTML: null,
+    auto: 0,
+    scroll: 1,
+    initCallback: buttons277
+});function buttons277(carousel) {$('.next277').bind('click', function() {carousel.next();return false;});$('#prev277').bind('click', function() {carousel.prev();return false;});};</script><div class="bi irz" id="i357" style="top:30px;left:15px;z-index:88;"><table class="tb wh100">
+	<tr>
+		<td class="td" style="width: 100%; height: 100%;">
+		<div class="pics357 highslide-gallery center" style="width:300px;height:300px;overflow:hidden;position:relative;z-index:1;">
+		<img id="i361" src="/files/block/s-b4.jpg?times=1440517193" width="300" height="300" alt="Полный и частичный съемный протез" title="Полный и частичный съемный протез" class="bl cursor" onclick="window.location = '/skidki-akcii/#c_513';return false;"><img id="i360" src="/files/block/s-b3.jpg?times=1440517169" width="300" height="300" alt="Косметическая чистка зубов" title="Косметическая чистка зубов" class="bl cursor" onclick="window.location = '/skidki-akcii/#c_505';return false;"><img id="i359" src="/files/block/s-b2.jpg?times=1440517149" width="300" height="300" alt="Удаление зуба" title="Удаление зуба" class="bl cursor" onclick="window.location = '/skidki-akcii/#c_509';return false;"><img id="i358" src="/files/block/s-b1.jpg?times=1440517181" width="300" height="300" alt="Имплантация зубов под ключ" title="Имплантация зубов под ключ" class="bl cursor" onclick="window.location = '/skidki-akcii/#c_491';return false;"></div>
+		</td>
+	</tr>
+</table><script type="text/javascript">$(document).ready(function() {$(".pics357").cycle({fx: "fade,cover,slideX,curtainX",timeout:4000,speed:800,next:".next357"});});</script></div>
+</div></div></div></div></div></div><div id="pgc_223" class="pgdiv"><div class="tddiv"><a id="ac_223" class="ascroll" style="top:0px;" title="Специалисты  "><span id="/c_223"></span></a><div id="virtualc_223" style="z-index:1;" class="virtuals"><div class="vdis" id="vdisc_223"><div class="allContent" style="width:1200px;"><div id="c_223" class="droppable" style="width:1200px;height:481px;"><div class="bi irz" id="i228" style="z-index:29;top:30px;left:124px;"><div class="irz scroll0"><p><span style="font-family: helvetica, sans-serif; font-size: 24px;"> Наши специалисты</span></p></div></div><div class="bi irz" id="i224" style="top:120px;left:124px;z-index:28;"><div class="nav"><div class="arrow" id="prev224">‹</div><div class="arrow next224">›</div></div><div class="carusel irz">
+<ul id="mycarousel224" class="jcarousel-skin-tango">
+<li><div id="li229"><a href="/doctors#c_599" class="nodec"><div id="i229" class="center" style="width:208px;"><img src="/files/block/s-vrachi11.png?times=1440753643" width="208" height="211" alt="Куцев Владимир Серафимович
+Cтоматолог-ортопед, 
+-хирург, -имплантолог" class="bl"><div style="padding-top:8px;"><p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 20px; color: #414141;">Куцев Владимир Серафимович</span></p>
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; line-height: 1.25;">Cтоматолог-ортопед, </span></p>
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; line-height: 1.25;">-хирург, -имплантолог</span></p></div></div></a></div></li><li><div id="li227"><a href="/doctors#c_606" class="nodec"><div id="i227" class="center" style="width:208px;"><img src="/files/block/s-227-vrachi2.png?times=1442672749" width="208" height="211" alt="Цветкова Елена Сергеевна
+Стоматолог-терапевт,
+- пародонтолог" class="bl"><div style="padding-top:8px;"><p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 20px; color: #414141;">Цветкова Елена Сергеевна</span></p>
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; line-height: 1.25;">Стоматолог-терапевт,</span></p>
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; line-height: 1.25;">- пародонтолог</span></p></div></div></a></div></li><li><div id="li226"><a href="/doctors#c_610" class="nodec"><div id="i226" class="center" style="width:208px;"><img src="/files/block/s-226-vrachi3.png?times=1440747808" width="208" height="211" alt="Балабанова Жанна Алексеевна
+Стоматолог-терапевт, 
+-пародонтолог" class="bl"><div style="padding-top:8px;"><p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 20px; color: #414141;">Балабанова Жанна Алексеевна</span></p>
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; line-height: 1.25;">Стоматолог-терапевт, </span></p>
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; line-height: 1.25;">-пародонтолог</span></p></div></div></a></div></li><li><div id="li1071"><a href="/doctors#c_1063" class="nodec"><div id="i1071" class="center" style="width:208px;"><img src="/files/block/s-1071-vrachi4.png?times=1447839447" width="208" height="211" alt="Барошина Карина Александровна
+Гигиенист стоматологический" class="bl"><div style="padding-top:8px;"><p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 20px; color: #414141;">Барошина Карина Александровна</span></p>
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; line-height: 1.25;">Гигиенист стоматологический</span></p></div></div></a></div></li><li><div id="li1072"><a href="/doctors#c_1067" class="nodec"><div id="i1072" class="center" style="width:208px;"><img src="/files/block/s-1072-vrachi5.png?times=1447786280" width="208" height="211" alt="Крижевский Дмитрий Викторович
+Cтоматолог-терапевт, 
+-хирург, -ортопед" class="bl"><div style="padding-top:8px;"><p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 20px; color: #414141;">Крижевский Дмитрий Викторович</span></p>
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; line-height: 1.25;">Cтоматолог-терапевт, </span></p>
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; line-height: 1.25;">-хирург, -ортопед</span></p></div></div></a></div></li></ul>
+</div>
+</div>
+<script type="text/javascript">$('#mycarousel224').jcarousel({
+    wrap: 'circular',
+    buttonPrevHTML: null,
+    buttonNextHTML: null,
+    auto: 0,
+    scroll: 1,
+    initCallback: buttons224
+});function buttons224(carousel) {$('.next224').bind('click', function() {carousel.next();return false;});$('#prev224').bind('click', function() {carousel.prev();return false;});};</script></div></div></div></div></div></div><div id="pgc_221" class="pgdiv"><div class="tddiv"><a id="ac_221" class="ascroll" style="top:0px;" title="Футер  "><span id="/c_221"></span></a><div id="virtualc_221" style="z-index:1;" class="virtuals"><div class="vdis" id="vdisc_221"><div class="allContent" style="width:1200px;"><div id="c_221" class="droppable" style="width:1200px;height:263px;"><div class="bi irz" id="i241" style="z-index:16;top:90px;left:332px;"><div class="irz scroll0"><p><span style="color: #333333; font-family: 'Roboto Condensed', sans-serif; font-size: 20px;"><span style="font-size: 18px;">Пн-Сб:</span> </span><span style="font-size: 20px;"><strong style="font-family: 'Roboto Condensed', sans-serif; font-size: 28px; line-height: 26px;">9:00-21:00</strong></span></p>
+<div style="line-height: 26px;">
+<p><span style="font-family: 'Roboto Condensed', sans-serif; font-size: 28px;"><span style="color: #333333; font-size: 20px;">      <span style="font-size: 18px;">Вс:</span></span><span style="font-size: 18px;"> </span><strong><span style="font-size: 20px;">выходной</span></strong></span></p>
+<p><span style="font-family: 'Roboto Condensed', sans-serif; font-size: 28px;"><span style="color: #333333; font-size: 20px;"> </span></span></p>
+</div></div></div><div class="bi irz" id="i234" style="z-index:33;top:53px;left:32px;"><div class="irz scroll0"><p><span style="font-family: 'open sans', sans-serif; font-size: 18px; line-height: 1.25;">г.Москва ул.Ангарская д.22 к.1</span></p></div></div><div class="bi irz" id="i243" style="z-index:35;top:110px;left:32px;"><div class="irz scroll0"><p><span style="font-family: helvetica, sans-serif; font-size: 18px;">8(499) <span style="color: #e67710; font-size: 24px;"><strong>905-00-97</strong></span></span></p>
+<p><span style="font-family: helvetica, sans-serif; font-size: 18px;">8(916) <span style="font-size: 24px; color: #e67710;"><strong>025-55-33</strong></span></span></p>
+<div>
+<p><span style="font-family: helvetica, sans-serif; font-size: 18px;">8(925) <span style="font-size: 24px; color: #e67710;"><strong>533-94-73</strong></span></span></p>
+</div>
+<p> </p></div></div><div class="bi irz" id="i244" style="z-index:41;top:-9px;left:44px;"><div class="irz scroll0"><p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 22px;">КОНТАКТЫ</span></p></div></div><div class="bi irz" id="i246" style="z-index:48;top:-9px;left:344px;"><div class="irz scroll0"><p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 22px;">РЕЖИМ РАБОТЫ</span></p></div></div><div class="bi irz" id="i252" style="z-index:49;top:-9px;left:644px;"><div class="irz scroll0"><p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 22px;">СТОМАТОЛОГИЯ</span></p></div></div><div class="bi irz" id="i261" style="z-index:51;top:53px;left:932px;"><div class="irz scroll0"><p><span style="font-family: helvetica, sans-serif; font-size: 14px;">Я в восторге! Зашел в клинику по дороге с работы - приняли без записи, удалили зуб мудрости за пару секунд, абсолютно безболезненно!</span></p></div></div><div class="bi irz" id="i263" style="z-index:53;top:-9px;left:944px;"><div class="irz scroll0"><p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 22px;">БЛАГОДАРНОСТИ</span></p></div></div><div class="bi" id="i240" style="top:210px;left:32px;z-index:17;"><a class="links" href="#" id="a240" onclick="popupOpen('c_280');return false;">Обратный звонок</a></div><div class="bi" id="i235" style="top:210px;left:332px;z-index:34;"><a class="links" href="#" id="a235" onclick="popupOpen('c_294');return false;">Запись на прием</a></div><div class="bi" id="i245" style="top:-9px;left:20px;z-index:37;"><img src="/files/block/s-footer-part1.png?times=1440445730" width="70" height="56" alt="" class="bl center"></div><div class="bi" id="i247" style="top:25px;left:300px;z-index:43;"><img src="/files/block/s-footer-separator.png?times=1440445746" width="2" height="215" alt="" class="bl center"></div><div class="bi" id="i248" style="top:25px;left:600px;z-index:44;"><img src="/files/block/248-s-footer-separator.png?times=1440445833" width="2" height="215" alt="" class="bl center"></div><div class="bi" id="i249" style="top:25px;left:900px;z-index:45;"><img src="/files/block/249-248-s-footer-separator.png?times=1440445872" width="2" height="215" alt="" class="bl center"></div><div class="bi" id="i250" style="top:-9px;left:320px;z-index:46;"><img src="/files/block/s-250-footer-part1.png?times=1440445811" width="70" height="56" alt="" class="bl center"></div><div class="bi" id="i251" style="top:-9px;left:620px;z-index:47;"><img src="/files/block/s-251-footer-part1.png?times=1440445842" width="70" height="56" alt="" class="bl center"></div><div class="bi" id="i262" style="top:-9px;left:920px;z-index:52;"><img src="/files/block/s-262-footer-part1.png?times=1440445880" width="70" height="56" alt="" class="bl center"></div><div class="bi" id="i264" style="top:200px;left:1098px;z-index:54;"><a class="links" href="/otzivi" id="a264">Еще отзывы</a></div><div class="bi" id="i313" style="top:72px;left:32px;z-index:64;"><a class="links" href="#" id="a313" onclick="popupOpen('c_312');return false;">посмотреть на карте</a></div><div class="bi irz" id="i253" style="top:53px;left:632px;z-index:300;">
+<table class="tb"><tr><td class="td" style="padding-bottom:5px"><div class=" msel" id="i760"><a class="links msel" href="/" id="a760">О клинике</a></div></td></tr><tr><td class="td" style="padding-bottom:5px"><div id="i254"><a class="links" href="/uslugi" id="a254">Услуги</a></div></td></tr><tr><td class="td" style="padding-bottom:5px"><div id="i255"><a class="links" href="/doctors" id="a255">Специалисты</a></div></td></tr><tr><td class="td" style="padding-bottom:5px"><div id="i256"><a class="links" href="/nashi-raboti" id="a256">Наши работы</a></div></td></tr><tr><td class="td" style="padding-bottom:5px"><div id="i257"><a class="links" href="/ceny" id="a257">Прайс-лист</a></div></td></tr><tr><td class="td" style="padding-bottom:5px"><div id="i258"><a class="links" href="/fotogalereya" id="a258">Фотогалерея</a></div></td></tr><tr><td class="td"><div id="i259"><a class="links" href="/otzivi" id="a259">Отзывы</a></div></td></tr></table></div></div></div></div></div></div></div><div id="pgc_230" class="pgdiv"><div class="tddiv"><a id="ac_230" class="ascroll" style="top:0px;" title="Футер2  "><span id="/c_230"></span></a><div id="virtualc_230" style="z-index:1;" class="virtuals"><div class="vdis" id="vdisc_230"><div class="allContent" style="width:1200px;"><div id="c_230" class="droppable" style="width:1200px;height:80px;"><div class="bi irz" id="i260" style="z-index:50;top:6px;left:780px;"><div class="irz scroll0"><p><span style="font-family: helvetica, sans-serif; font-size: 14px;">© 2003 - 2016. "Астра - Смайл" стоматологическая клиника.</span><span style="font-family: helvetica, sans-serif; font-size: 14px;"><br /></span></p></div></div><div class="bi irz" id="i353" style="z-index:84;top:46px;left:10px;"><div class="irz scroll0"><p><span style="font-family: helvetica, sans-serif; font-size: 14px;">Лицензия на осуществление медицинской </span><span style="font-family: helvetica, sans-serif; font-size: 14px;">деятельности № ЛО-77-01-010599</span></p></div></div><div class="bi irz" id="i354" style="top:36px;left:780px;z-index:85;"><div class="irz scroll0"><script type="text/javascript">(function() {
+  if (window.pluso)if (typeof window.pluso.start == "function") return;
+  if (window.ifpluso==undefined) { window.ifpluso = 1;
+    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+    var h=d[g]('body')[0];
+    h.appendChild(s);
+  }})();</script>
+<div class="pluso" data-background="transparent" data-options="medium,square,line,horizontal,nocounter,theme=01" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir"></div></div></div></div></div></div></div></div></div><div id="pgc_280" class="pgdiv phidden"><div class="tddiv"><a id="ac_280" class="ascroll" style="top:0px;" title="Обратный звонок  "><span id="/c_280"></span></a><div id="virtualc_280" style="z-index:1;" class="virtuals"><div class="vdis" id="vdisc_280"><div class="allContent" style="width:398px;"><div id="c_280" class="droppable" style="width:398px;height:423px;"><form action="/" name="form281" id="form281" method="post" enctype="multipart/form-data">
+<div class="bi formR irz" id="i281" style="top:30px;left:14px;z-index:62;">
+<input type="hidden" name="submitted" value="281">
+<input type="text" name="url" class="url" value="">
+<input type="hidden" name="goodsId" class="goodsId" value="0">
+<input type="hidden" name="isPopup281" class="isPopup" value="0">
+<div class="bi crz" id="i282" style="top:144px;left:30px;z-index:1;">
+<input type="text" placeholder="Ваше имя" required class="field input" name="fields[282]" value=""></div><div class="bi crz" id="i284" style="top:288px;left:80px;z-index:3;">
+<button>Заказать звонок</button>
+</div><div class="bi crz" id="i286" style="top:7px;left:0px;z-index:4;"><div class="crz scroll0"><p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 24px; color: #333333;">Заказать звонок</span></p>
+<hr />
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 18px;">Заполните форму и мы перезвоним </span></p>
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 18px;">Вам </span><span style="font-family: helvetica, sans-serif; font-size: 18px; line-height: 1.25;">в ближайшее </span><span style="font-family: helvetica, sans-serif; font-size: 18px; line-height: 1.25;">время </span></p>
+<p> </p></div></div>
+        <div class="bi crz" id="i287" style="top:210px;left:30px;z-index:5;">
+<input type="text" placeholder="Ваш номер телефона" required class="field input" name="fields[287]" value=""></div></div></form><div class="bi" id="i288" style="top:5px;left:302px;z-index:63;"><a class="links" href="#" id="a288" onclick="popupClose('c_280');return false;">Закрыть Х</a></div></div></div></div></div></div></div><div id="pgc_294" class="pgdiv phidden"><div class="tddiv"><a id="ac_294" class="ascroll" style="top:0px;" title="Запись на прием  "><span id="/c_294"></span></a><div id="virtualc_294" style="z-index:1;" class="virtuals"><div class="vdis" id="vdisc_294"><div class="allContent" style="width:398px;"><div id="c_294" class="droppable" style="width:398px;height:487px;"><form action="/" name="form295" id="form295" method="post" enctype="multipart/form-data">
+<div class="bi formR irz" id="i295" style="top:30px;left:14px;z-index:62;">
+<input type="hidden" name="submitted" value="295">
+<input type="text" name="url" class="url" value="">
+<input type="hidden" name="goodsId" class="goodsId" value="0">
+<input type="hidden" name="isPopup295" class="isPopup" value="0">
+<div class="bi crz" id="i296" style="top:144px;left:30px;z-index:1;">
+<input type="text" placeholder="Ваше имя" required class="field input" name="fields[296]" value=""></div><div class="bi crz" id="i297" style="top:360px;left:80px;z-index:3;">
+<button>Записаться</button>
+</div><div class="bi crz" id="i298" style="top:7px;left:0px;z-index:4;"><div class="crz scroll0"><p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 24px; color: #333333;">Записаться на прием</span></p>
+<hr />
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 18px; line-height: 1.25;">Укажите удобную для Вас</span></p>
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 18px; line-height: 1.25;">дату и время </span></p>
+<p> </p></div></div>
+        <div class="bi crz" id="i299" style="top:210px;left:30px;z-index:5;">
+<input type="text" placeholder="Ваш номер телефона" required class="field input" name="fields[299]" value=""></div><div class="bi crz" id="i301" style="top:276px;left:30px;z-index:6;">
+<input type="text" placeholder="Желаемая дата" class="field input" name="fields[301]" value=""></div><div class="bi crz" id="i302" style="top:276px;left:230px;z-index:7;">
+<input type="text" placeholder="Время" class="field input" name="fields[302]" value=""></div></div></form><div class="bi" id="i300" style="top:5px;left:300px;z-index:63;"><a class="links" href="#" id="a300" onclick="popupClose('c_294');return false;">Закрыть Х</a></div></div></div></div></div></div></div><div id="pgc_303" class="pgdiv phidden"><div class="tddiv"><a id="ac_303" class="ascroll" style="top:0px;" title="Запись на бесплатную консультацию  "><span id="/c_303"></span></a><div id="virtualc_303" style="z-index:1;" class="virtuals"><div class="vdis" id="vdisc_303"><div class="allContent" style="width:398px;"><div id="c_303" class="droppable" style="width:398px;height:487px;"><form action="/" name="form304" id="form304" method="post" enctype="multipart/form-data">
+<div class="bi formR irz" id="i304" style="top:30px;left:14px;z-index:62;">
+<input type="hidden" name="submitted" value="304">
+<input type="text" name="url" class="url" value="">
+<input type="hidden" name="goodsId" class="goodsId" value="0">
+<input type="hidden" name="isPopup304" class="isPopup" value="0">
+<div class="bi crz" id="i305" style="top:144px;left:30px;z-index:1;">
+<input type="text" placeholder="Ваше имя" required class="field input" name="fields[305]" value=""></div><div class="bi crz" id="i306" style="top:360px;left:80px;z-index:3;">
+<button>Записаться</button>
+</div><div class="bi crz" id="i307" style="top:7px;left:0px;z-index:4;"><div class="crz scroll0"><p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 24px; color: #333333;">Записаться на консультацию</span></p>
+<hr />
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 18px; line-height: 1.25;">Укажите удобную для Вас</span></p>
+<p style="text-align: center;"><span style="font-family: helvetica, sans-serif; font-size: 18px; line-height: 1.25;">дату и время </span></p>
+<p> </p></div></div>
+        <div class="bi crz" id="i308" style="top:210px;left:30px;z-index:5;">
+<input type="text" placeholder="Ваш номер телефона" required class="field input" name="fields[308]" value=""></div><div class="bi crz" id="i309" style="top:276px;left:30px;z-index:6;">
+<input type="text" placeholder="Желаемая дата" class="field input" name="fields[309]" value=""></div><div class="bi crz" id="i310" style="top:276px;left:230px;z-index:7;">
+<input type="text" placeholder="Время" class="field input" name="fields[310]" value=""></div></div></form><div class="bi" id="i311" style="top:5px;left:300px;z-index:63;"><a class="links" href="#" id="a311" onclick="popupClose('c_303');return false;">Закрыть Х</a></div></div></div></div></div></div></div><div id="pgc_312" class="pgdiv phidden"><div class="tddiv"><a id="ac_312" class="ascroll" style="top:0px;" title="Карта  "><span id="/c_312"></span></a><div id="virtualc_312" style="z-index:1;" class="virtuals"><div class="vdis" id="vdisc_312"><div class="allContent" style="width:650px;"><div id="c_312" class="droppable" style="width:650px;height:450px;"><div class="bi" id="i316" style="top:0px;left:548px;z-index:67;"><a class="links" href="#" id="a316" onclick="popupClose('c_312');return false;">Закрыть Х</a></div><div class="bi irz" id="i315" style="top:25px;left:25px;z-index:66;"><div class="irz scroll0"><script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=XsFWSHTfMsQNFEZr3R5i5Jea7FC8j05r&width=600&height=400"></script></div></div></div></div></div></div></div></div><!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter32345290 = new Ya.Metrika({
+                    id:32345290,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/32345290" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></body>
+</html>

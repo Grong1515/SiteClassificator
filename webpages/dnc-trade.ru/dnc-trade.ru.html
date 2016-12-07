@@ -1,0 +1,1139 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" >
+<head>
+  <meta name="designer" content="Juergen Koller - http://www.lernvid.com" />
+<meta name="licence" content="Creative Commons 3.0" />
+<link href="/templates/allrounder-3/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+<!--- ADD CSS Files -->
+
+
+
+	<link href="/templates/allrounder-3/css/template.css" rel="stylesheet" type="text/css" media="all" />
+<!--
+	<link href="/templates/allrounder-3/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+-->
+	<link href="/templates/allrounder-3/css/joomla.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/templates/allrounder-3/css/colors.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/templates/allrounder-3/css/lvdropdown.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/templates/allrounder-3/css/typo.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/templates/allrounder-3/css/modules.css" rel="stylesheet" type="text/css" media="all" />
+	
+<!--- Older Browser CSS -->
+<!--[if IE 7]>
+	<link href="/templates/allrounder-3/css/ie7.css" rel="stylesheet" type="text/css" media="all" />
+<![endif]-->
+
+<!--- ADD JavaScript Files -->
+
+	<script type="text/javascript" src="/templates/allrounder-3/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+		var jq = jQuery.noConflict();
+	</script>
+	<script type="text/javascript" src="/templates/allrounder-3/js/lv-dropdown.js"></script>
+	<script type="text/javascript" src="/templates/allrounder-3/js/jq.easy-tooltip.min.js"></script>
+	<script type="text/javascript" src="/templates/allrounder-3/js/jq.easy-caption.min.js"></script>
+	<script type="text/javascript" src="/templates/allrounder-3/js/reflection.js"></script>
+	<script type="text/javascript" src="/templates/allrounder-3/js/effects.js"></script>
+
+
+<!-- Layout parameters -->
+	<style type="text/css">
+
+	/* Template layout parameters */
+	
+
+	#wrapper {
+		margin-top:0px;
+	}
+	#foot_container {
+		margin-bottom:0px;
+	}
+	#topmenu ul.menu, #topmenu ul.menu li a, #topmenu ul.menu li span.separator {
+		background-image: url('/templates/allrounder-3/images/dropdown-smooth.png');
+	}
+	#topmenu ul.menu li.parent a, #topmenu ul.menu li.parent span.separator {
+		background-image: url('/templates/allrounder-3/images/menu-parent-smooth.png');
+	}
+	#topmenu ul.menu li.parent a:hover, #topmenu ul.menu li.parent span.separator:hover, 
+	#topmenu ul.menu li#current.parent a, #topmenu ul.menu li#current.parent span.separator {
+		background-image: url('/templates/allrounder-3/images/menu-parent-hover-smooth.png');
+	}
+			
+</style>
+<!-- Define fonts -->
+	<style type="text/css">
+
+	/* Template fonts */
+	
+	body {
+		font-size:14px;
+
+					font-family:Arial, Helvetica, Sans-Serif;
+						line-height:1.3em;
+	}
+
+</style>
+<!-- ADD own template colors -->
+	<style type="text/css">
+
+	/* Template colors */
+
+	body {
+		background-color: #FFFFFF;
+		color: #171717;
+	}
+	span#copy a {
+		color: #171717;
+	}
+	a, a:link, a:visited, a:active, a:focus {
+		color: #A52A2A;
+	}
+
+	#wrapper, #foot_container {
+		background-color: #EFEFEF;
+		border: 1px solid #FFFFFF;
+	}
+
+	
+	#header {
+		background-color: #591B10;
+		border-top:1px solid #591B10;
+		border-left:1px solid #591B10;	
+		border-right:1px solid #591B10;	
+	}
+	.heckl, .heckr {  
+		border-top: 10px solid #591B10;
+	}
+
+	#footer {
+		background-color: #591B10;
+		border:1px solid #591B10;
+		border-bottom:2px solid #591B10;
+	}
+	.feckl, .feckr {  
+		border-bottom: 10px solid #591B10;
+	}
+	#footer a#gotop {
+		color: #FFFFFF;
+	}
+	#footermodule1234, #footermodule1234 a, #footermodule1234 ul.menu, #footermodule5, #footermodule5 a {
+		color: #591B10;
+	}
+	#subfoot {
+		background-color: #591B10;
+		border-top:1px solid #FFFFFF;
+		border-bottom:1px solid #591B10;
+	}
+	.copytext {
+		color: #591B10;
+	}
+
+	#maincontent {
+		background-color: #FFFFFF;
+		border: 3px double #E9E9E9;
+	}
+	
+	.item-page, .item, .leading-0, .leading-1, .leading-2, .leading-3, .leading-4, .leading-5, .contact,
+	#maincontent div.search, #maincontent .categories-list, #maincontent .category-list, 
+	#maincontent .archive , #maincontent .contact-category, #maincontent .weblink-category, 
+	#maincontent .newsfeed-category, #maincontent .login, #maincontent .profile, #maincontent .profile-edit, 
+	#maincontent .registration, #maincontent .remind, #maincontent .reset, #maincontent .finder {
+		background-color:#FFFFFF;
+		border: 1px solid #E9E9E9;
+	}
+
+	.page-header h2, .page-header h2 a {
+		color: #080808 !important;
+	}
+
+	#wrapper #leftcol h3.moduleh3, #wrapper #rightcol h3.moduleh3	 {
+		background-color: #383838;
+		border-top:	1px solid #555555;
+		color: #DDDDDD;
+	}
+	#wrapper #leftcol h3.moduleh3	 {
+		border-left: 1px solid #999999;
+		border-right: 1px solid #555555;
+	}
+	#wrapper #rightcol h3.moduleh3	 {
+		border-right: 1px solid #999999;
+		border-left: 1px solid #555555;
+	}
+	.h3eckl, .h3eckr {  
+		border-top: 10px solid #222222;
+	}
+
+	#leftcol .module div.lvround-inner, #leftcol .module_menu div.lvround-inner, #leftcol .module_text div.lvround-inner, 
+	#rightcol .module div.lvround-inner, #rightcol .module_menu div.lvround-inner, #rightcol .module_text div.lvround-inner {
+		background-color: #F9F9F9;
+		border: 1px solid #DDDDDD;
+		color: #505050;
+	}
+	#subhead {
+		background-color: #F9F9F9;
+		border: 1px solid #FFFFFF;
+	}
+	.breadcrumbs, .breadcrumbs span {
+		color: #555555;
+	}
+	#leftcol .module div div, #leftcol .module_menu div div, #leftcol .module_text div div, 
+	#rightcol .module div div, #rightcol .module_menu div div, #rightcol .module_text div div {
+		border: 1px solid #FFFFFF;
+	}
+
+	/**** Global Modules ****/
+
+	div.module {
+		color:#030303;
+		background-color:#FFFFFF;
+		border:1px solid #DDDDDD;
+	}
+	div.module h3.moduleh3 {
+		background-color:#EFEFEF;
+		border:1px solid #DDDDDD;
+	}
+
+
+	.input, .inputbox {
+		color: #000000;
+		background-color: #EFEFEF;
+		border-top: 1px solid #CCCCCC;
+		border-left: 1px solid #CCCCCC;
+		border-right: 1px solid #FFFFFF;
+		border-bottom: 1px solid #FFFFFF;
+	}
+	.input:hover, .inputbox:hover {
+		color: #050505;
+		background-color: #F9F9F9;
+	}
+
+	input.button, button.button, button.validate, .pagenav, ul.pagenav li a {
+		color: #555;
+		background-color: #efefef;
+		color: #555555;
+		background-color: #EFEFEF;
+		border-top: 1px solid #CCCCCC;
+		border-left: 1px solid #CCCCCC;
+		border-right: 1px solid #FFFFFF;
+		border-bottom: 1px solid #FFFFFF;
+	}
+	input.button:hover, button.button:hover, button.validate:hover, .pagenav, ul.pagenav li a:hover {
+		color: #000000;
+		background-color: #FFFFFF;
+	}
+
+	/**** Mainmenu with suffix: _menu ****/
+	
+	.module_menu ul.menu li a, .module_menu ul.menu li span.separator {
+		color: #333333;
+		border-bottom:1px dotted #591B10;
+	}
+	.module_menu ul.menu li a:hover, .module_menu ul.menu li a:active, .module_menu ul.menu li a:focus {
+		color: #000000!important;
+	}
+	.module_menu ul.menu li.current a {
+		color: #000000;
+	}
+	.module_menu ul.menu li.current ul li a {
+		color: #000000;
+	}
+
+	/**** Default Tooltips ****/
+
+	.easy-tooltip-default {
+		border: 1px solid #A6A7AB; 
+		background-color: #F2F3F5; 
+		color: #800000;
+	}
+
+
+</style>
+<!-- ADD own dropdown-menu colors -->
+
+
+
+
+
+<!-- math the width of the 3 columns -->
+<style type="text/css">
+	#leftcol {width: 20%;}
+	#rightcol {width: 20%;}
+	#content_outmiddle {width: 58%;}
+	#content_outright {width: 79%;}
+	#content_outleft {width: 79%;}
+</style>
+
+    <base href="http://dnc-trade.ru/" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Кассовый аппарат, денежный ящик, сканер штрих-кода, принтер этикеток, терминал сбора данных, весы торговые, противокражные системы, банковское оборудование,
+АТОЛ, Штрих-М, Mercury-Equipment, ИНКОТЕКС, Дорс" />
+  <meta name="rights" content="http://dnc-trade.ru" />
+  <meta name="description" content="торговое оборудование" />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Торговое оборудование</title>
+  <link href="/?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+  <link href="/?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+  <link href="/templates/allrounder-3/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="/components/com_virtuemart/assets/css/vmsite-ltr.css" type="text/css" />
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/caption.js" type="text/javascript"></script>
+  <script src="/components/com_virtuemart/assets/js/jquery.min.js" type="text/javascript"></script>
+  <script src="/components/com_virtuemart/assets/js/jquery.noConflict.js" type="text/javascript"></script>
+  <script type="text/javascript">
+window.addEvent('load', function() {
+				new JCaption('img.caption');
+			});
+  </script>
+
+</head>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter4993918 = new Ya.Metrika({
+                    id:4993918,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/4993918" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+      <div id="wrapper" style="max-width:1180px;">
+            	
+		
+	    <div id="header_container">
+        
+        <div id="header">
+                
+                      <div id="banner_outer">
+              <div id="banner">
+                       <div class="bannergroup">
+
+	<div class="banneritem">
+																																																															<a
+							href="/component/banners/click/13" target="_blank"
+							title="КОРЗИНА">
+							<img
+								src="http://dnc-trade.ru/images/Korzina_.png"
+								alt="КОРЗИНА"
+																							/>
+						</a>
+																<div class="clr"></div>
+	</div>
+
+</div>
+
+              </div>
+            </div>
+                
+          <div id="logo">
+                                
+              <a class="medialogo" href="/index.php"><img alt="Logo" src="/images/shapka2.png"/></a>
+                                            
+              <div style="color:#E9E9E9;" class="slogan">Кассовые аппараты, автоматизация магазинов, POS-системы, принтеры этикеток, банковское оборудование</div>
+                      </div>  
+                
+          <span class="heckl">&nbsp;</span>
+          <span class="heckr">&nbsp;</span>
+        </div>
+            
+      	
+		
+	              <div id="topmenu_container">
+          <div id="topmenu">
+                   
+<ul class="menu">
+<li class="item-101 current active"><a href="/" title="Торговое оборудование" >Торговое оборудование</a></li><li class="item-122"><a href="/catalog" title="Каталог торгового оборудования" >КАТАЛОГ</a></li><li class="item-118"><a href="/kak-kupit" title="Как купить" >Как купить</a></li><li class="item-109"><a href="/registratsia-kkm" title="Регистрация ККМ" >Регистрация ККМ</a></li><li class="item-111"><a href="/zamena-eklz" title="Замена ЭКЛЗ" >Замена ЭКЛЗ</a></li><li class="item-113"><a href="/tarify" title="Тарифы ЦТО" >Тарифы ЦТО</a></li><li class="item-114"><a href="/stati" title="Статьи" >Статьи</a></li><li class="item-117"><a href="/o-kompanii" title="О компании" >О компании</a></li></ul>
+
+          </div>
+          <div class="clr"></div>
+        </div>
+                           
+<div class="breadcrumbs">
+</div>
+
+        <div class="clr"></div>
+          </div>
+        <div id="container">
+            	
+		
+              <div id="leftcol">
+                 	<div class="module-outer">
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						<!--BEGIN Search Box -->
+<form action="/catalog/search" method="get">
+<div class="search">
+<input style="height:16px;vertical-align :middle;" name="keyword" id="mod_virtuemart_search" maxlength="20" alt="Поиск" class="inputbox" type="text" size="20" value="Искать..."  onblur="if(this.value=='') this.value='Искать...';" onfocus="if(this.value=='Искать...') this.value='';" /><input type="submit" value="Поиск" class="button" onclick="this.form.keyword.focus();"/></div>
+		<input type="hidden" name="limitstart" value="0" />
+		<input type="hidden" name="option" value="com_virtuemart" />
+		<input type="hidden" name="view" value="category" />
+
+	  </form>
+
+<!-- End Search Box -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer">
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						
+<ul class="menu" >
+
+<li >
+	<div>
+		<a href="/catalog/egais" >! ЕГАИС</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/kkm" >- КАССОВЫЕ АППАРАТЫ</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/envd" >- КАССЫ для ЕНВД (ЧПМ)</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/fr" >- Фискальные регистраторы</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/akcii" >Aкции</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/pos-systems" >POS-системы</a>	</div>
+<ul class="menu">
+<li>
+	<div ><a href="/catalog/pos-systems/svoy-magazin" >Свой Магазин</a></div>
+</li>
+<li>
+	<div ><a href="/catalog/pos-systems/front" >Фронтальные решения</a></div>
+</li>
+</ul>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/avtomatizatcia" >Автоматизация магазина</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/cash-drowers" >Денежные ящики</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/detectory" >Детекторы купюр</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/spec-detector" >Детекторы спецзащиты</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/plat-terminaly" >ПЛАТЁЖНЫЕ РЕШЕНИЯ</a>	</div>
+<ul class="menu">
+<li>
+	<div ><a href="/catalog/plat-terminaly/complect-bankovskie-terminaly" >Комплектующие для банковских терминалов</a></div>
+</li>
+</ul>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/price-checker" >Прайс-чекер</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/printery-chekov" >Принтеры чеков</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/bar-code-printer" >Принтеры этикеток</a>	</div>
+<ul class="menu">
+<li>
+	<div ><a href="/catalog/bar-code-printer/complect-printery" >Комплектующие для принтеров этикеток</a></div>
+</li>
+</ul>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/soft" >Программное обеспечение</a>	</div>
+<ul class="menu">
+<li>
+	<div ><a href="/catalog/soft/front-office" >ДЭНСИ:КАССА фронт-офис</a></div>
+</li>
+<li>
+	<div ><a href="/catalog/soft/biznes-upravlenie" >Платформа управления бизнесом</a></div>
+</li>
+<li>
+	<div ><a href="/catalog/soft/back-office" >Программы класса back-office</a></div>
+</li>
+</ul>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/rashodniki" >Расходные материалы</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/barcode-scaner" >Сканеры штрихкода</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/counters" >Счётчики банкнот</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/taxometr" >Тахографы и таксометры</a>	</div>
+</li>
+
+<li >
+	<div>
+		<a href="/catalog/tsd" >Терминалы сбора данных</a>	</div>
+</li>
+</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer">
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						<div class="bannergroup">
+
+	<div class="banneritem">
+																																																															<a
+							href="/component/banners/click/12" target="_blank"
+							title="Разместим оферту на портале поставщиков, участвуем в тендерах">
+							<img
+								src="http://dnc-trade.ru/images/banners/oferty.jpg"
+								alt="Разместим оферту на портале поставщиков, участвуем в тендерах"
+								width ="210"								height ="150"							/>
+						</a>
+																<div class="clr"></div>
+	</div>
+
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer">
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						<div class="bannergroup">
+
+	<div class="banneritem">
+																																																															<a
+							href="/component/banners/click/17" target="_blank"
+							title="Forum">
+							<img
+								src="http://dnc-trade.ru/images/banners/vopros.png"
+								alt="Forum"
+								width ="210"															/>
+						</a>
+																<div class="clr"></div>
+	</div>
+
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer">
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						<ul class="category-module">
+		    <li>
+	   	<h4>
+	   			<a class="mod-articles-category-title " href="/25-zip/argox-complect/26-argox-zip">
+		Принтеры ARGOX, аксессуары и комплектующие        </a>
+                </h4>
+
+       			        		
+			</li>
+	</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer">
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						<ul class="category-module">
+		    <li>
+	   	<h4>
+	   			<a class="mod-articles-category-title " href="/39-zebra-printers/29-zebra-printer">
+		Принтеры ZEBRA, аксессуары и комплектующие        </a>
+                </h4>
+
+       			        		
+			</li>
+	</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+	
+        </div>
+          
+        <div id="content_outmiddle">
+        	
+		
+	<div id="advert6out">
+					<div id="advert6">
+	           	<div class="module-outer">
+		<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+												<div class="bannergroup">
+
+	<div class="banneritem">
+																																																															<a
+							href="/component/banners/click/20" target="_blank"
+							title="online-kassy">
+							<img
+								src="http://dnc-trade.ru/images/banners/online-kassy.png"
+								alt="online-kassy"
+																							/>
+						</a>
+																<div class="clr"></div>
+	</div>
+
+</div>
+						<div class="clr"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+	
+			</div>
+					
+	</div>					
+        <div id="maincontent">
+          
+<div id="system-message-container">
+</div>            
+          <div class="blog-featured">
+
+<div class="items-leading">
+			<div class="leading-0">
+			
+
+
+	
+
+
+
+
+<p>
+<title>купить кассу</title>
+<meta name="description" content="торговое оборудование" /><meta name="keywords" content="кассовые аппараты, сканеры штрих-кода, принтеры этикеток, банковское оборудование, терминалы сбора данных" /><meta name="robots" content="index,all" /><meta name="copyright" content="www.dnc-trade.ru" /></p>
+<!-- Yandex.Metrika counter --><noscript>
+<div><img src="https://mc.yandex.ru/watch/4993918" style="position: absolute; left: -9999px;" alt="" /></div>
+</noscript><!-- /Yandex.Metrika counter -->
+<p><strong>Кассовые аппараты</strong>, <strong>денежные ящики</strong>, <strong>сканеры штрих-кода</strong>, <strong>принтеры этикеток</strong>, <strong>терминалы сбора данных</strong>, <strong>противокражные системы</strong> и <strong>банковское оборудование</strong>.</p>
+<p>Мы можем предложить Вам больше, чем представлено на этом сайте!</p>
+<p><strong>Продаём оборудование АТОЛ, Штрих-М, Mercury-Equipment, ИНКОТЕКС, Дримкас, Эвотор, Дорс и других производителей</strong>.</p>
+<h3><span style="color: #800000;">Звоните: (495) 781-54-45, (919) 996-30-05</span></h3>
+
+
+<div class="item-separator"></div>
+		</div>
+			</div>
+
+
+
+</div>
+
+        </div>
+        <div class="clr"></div>
+        <span class="shadow-left">&nbsp;</span>
+        <span class="shadow-right">&nbsp;</span>
+        	
+		
+	<div id="advert12out">
+					<div id="advert12">
+	           	<div class="module-outer">
+		<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+												<div class="bannergroup">
+
+	<div class="banneritem">
+																																																															<a
+							href="/component/banners/click/11"
+							title="ОТЛИЧНЫЙ БЕЗНАЛИЧНЫЙ">
+							<img
+								src="http://dnc-trade.ru/images/banners/bank_terminaly.png"
+								alt="ОТЛИЧНЫЙ БЕЗНАЛИЧНЫЙ"
+																							/>
+						</a>
+																<div class="clr"></div>
+	</div>
+
+</div>
+						<div class="clr"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer">
+		<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+												
+	<div style="direction: ltr; text-align: left ! important"  class="feed">
+	
+				<h4>
+					<a href="http://dnc.ru" target="_blank">
+					Группа компаний ДЭНСИ, автоматизация торговли, продажа и обслуживание кассовой техники » Новости ДЭНСИ</a>
+				</h4>
+
+		
+			<ul class="newsfeed">
+							<li class="newsfeed-item">
+									<h5 class="feed-link">
+				<a href="http://dnc.ru/?p=2376" target="_blank">
+					Умная и гибкая автоматизация торговой точки</a>
+					</h5>				
+						<p> Компания ДЭНСИ начала продажу суперсовременных терминалов Эвотор . У нас Вы можете купить данное оборудование,...</p>
+
+									</li>
+								<li class="newsfeed-item">
+									<h5 class="feed-link">
+				<a href="http://dnc.ru/?p=2366" target="_blank">
+					Семинар в Федеральной налоговой службе</a>
+					</h5>				
+						<p> 9 августа 2016 года в Федеральной налоговой службе состоялась презентация тестовой версии личного кабинета для...</p>
+
+									</li>
+								<li class="newsfeed-item">
+									<h5 class="feed-link">
+				<a href="http://dnc.ru/?p=2343" target="_blank">
+					ЕГАИС с 1 июля 2016 года</a>
+					</h5>				
+						<p> С 1 июля 2016 года вступит в силу норма закона 171-ФЗ, обязывающая продавцов крепкого алкоголя,...</p>
+
+									</li>
+								<li class="newsfeed-item">
+									<h5 class="feed-link">
+				<a href="http://dnc.ru/?p=2319" target="_blank">
+					Кассовая техника RR</a>
+					</h5>				
+						<p> Компания RR-Электро разработала линейку передовых кассовых аппаратов начального уровня и высокопроизводительных. ККМ RR подходят для...</p>
+
+									</li>
+								<li class="newsfeed-item">
+									<h5 class="feed-link">
+				<a href="http://dnc.ru/?p=2303" target="_blank">
+					Детекторы банкнот по ценам лайт</a>
+					</h5>				
+						<p> Снижена цена на инфракрасный детектор DoCash DVM Lite! Купить, подробное описание Docash dvm lite гарантирует...</p>
+
+									</li>
+								<li class="newsfeed-item">
+									<h5 class="feed-link">
+				<a href="http://dnc.ru/?p=2297" target="_blank">
+					Обновлён список партнёров ДЭНСИ:КАССА</a>
+					</h5>				
+						<p> Компания ДЭНСИ постоянно проводит обучение партнёров. Не зависимо от того, работает Ваш магазин в Москве,...</p>
+
+									</li>
+							</ul>
+
+	</div>
+						<div class="clr"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+	
+			</div>
+					
+	</div>					
+      </div>
+              <div id="rightcol">
+                 	<div class="module-outer">
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						<div class="bannergroup">
+
+	<div class="banneritem">
+																																																															<a
+							href="/component/banners/click/15" target="_blank"
+							title="ЕГАИС">
+							<img
+								src="http://dnc-trade.ru/images/banners/EGAIS-3.png"
+								alt="ЕГАИС"
+																							/>
+						</a>
+																<div class="clr"></div>
+	</div>
+
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer">
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						
+<!-- Virtuemart 2 Ajax Card -->
+<div class="vmCartModule " id="vmCartModule">
+	<div id="hiddencontainer" style=" display: none; ">
+		<div class="container">
+						<div class="product_row">
+				<span class="quantity"></span>&nbsp;x&nbsp;<span class="product_name"></span>
+			</div>
+
+			<div class="product_attributes"></div>
+		</div>
+	</div>
+	<div class="vm_cart_products">
+		<div class="container">
+
+				</div>
+	</div>
+<div class="total_products">Корзина пуста</div>
+<div class="show_cart"rel="nofollow">
+	</div>
+<div style="clear:both;"></div>
+
+<noscript>
+Пожалуйста, подождите</noscript>
+</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer">
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						<ul class="categories-module">
+	<li >   <h5>
+		<a href="/14-poleznoe/regisrt-kkt">
+		Заявление о регистрации ККТ</a>
+   </h5>
+
+		 </li>
+	<li >   <h5>
+		<a href="/16-poleznoe/obosobka">
+		Открытие обособленного подразделения</a>
+   </h5>
+
+		 </li>
+	<li >   <h5>
+		<a href="/18-poleznoe/km-4-zapoln">
+		Как заполнять журнал кассира</a>
+   </h5>
+
+		 </li>
+	<li >   <h5>
+		<a href="/19-poleznoe/chek-osh">
+		Ошибочно пробитый чек</a>
+   </h5>
+
+		 </li>
+	<li >   <h5>
+		<a href="/20-poleznoe/ir-metki">
+		Карта ИК-меток для проверки банкнот</a>
+   </h5>
+
+		 </li>
+	<li >   <h5>
+		<a href="/11-poleznoe/rabota-s-kkt">
+		Работа с ККТ</a>
+   </h5>
+
+		 </li>
+</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer">
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						<ul class="weblinks">
+<li>
+	<a href="http://www.youtube.com/watch?v=1P4RTxyrT5k&feature=youtu.be" target="_blank" rel="no follow">Кассовый аппарат видео</a>	
+	</li>
+</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer">
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						<div class="bannergroup">
+
+	<div class="banneritem">
+																																																															<a
+							href="/component/banners/click/19" target="_blank"
+							title="DoCash-3040">
+							<img
+								src="http://dnc-trade.ru/images/banners/DoCash-3040-220x380.jpg"
+								alt="DoCash-3040"
+																							/>
+						</a>
+																<div class="clr"></div>
+	</div>
+
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer">
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						<div class="bannergroup">
+
+	<div class="banneritem">
+																																																															<a
+							href="/component/banners/click/3"
+							title="ДЭНСИ:КАССА">
+							<img
+								src="http://dnc-trade.ru/images/banners/bannerdensikassa124x124.gif"
+								alt="ДЭНСИ:КАССА"
+																							/>
+						</a>
+																<div class="clr"></div>
+	</div>
+
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+	
+        </div>
+        
+      <div class="clr"></div>
+    </div>
+    	
+	<div id="bottom45">
+					<div id="bottom4">
+	           	<div class="module-outer">
+		<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+												<div class="bannergroup">
+
+	<div class="banneritem">
+																																														<img
+						src="http://dnc-trade.ru/images/banners/banner_scan_pal1.jpg"
+						alt="Терминал сбора данных"
+																	/>
+											<div class="clr"></div>
+	</div>
+
+</div>
+						<div class="clr"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+	
+			</div>
+					
+					<div id="bottom5">
+	           	<div class="module-outer">
+		<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+												<div class="bannergroup">
+
+	<div class="banneritem">
+																																																															<a
+							href="/component/banners/click/21" target="_blank"
+							title="Платформа ДИВИЗИОН">
+							<img
+								src="http://dnc-trade.ru/images/banners/division.png"
+								alt="Платформа ДИВИЗИОН"
+								width ="560"								height ="212"							/>
+						</a>
+																<div class="clr"></div>
+	</div>
+
+</div>
+						<div class="clr"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+	
+			</div>
+					
+	</div>					
+		
+		
+      <div id="foot_container" style="max-width:1180px;">
+        	
+		
+		
+              
+  
+      
+      <div id="subfoot">
+              </div>
+          
+  
+    <div class="clr"></div>
+      <div id="footer">
+        <div class="footer-inner">
+          <span class="feckl">&nbsp;</span>
+          <span class="feckr">&nbsp;</span>
+          <div id="scroll_up"> <a href="#" class="lv-tooltip" id="gotop" title="Scroll to top">&uarr;&uarr;&uarr;</a></div>
+          	        </div>
+        <div class="footer-bottom">
+                  
+              <span id="date">26.10.2016</span>
+                      <span id="copy"><a href="http://dnc-trade.ru/language/es-ES/language.php?go=http://www.lernvid.com/" title="Joomla Templates" target="_blank">Template designed by LernVid.com</a> & <a href="http://dnc-trade.ru/language/es-ES/language.php?go=http://templjoomla.ru/joomla-17/8-joomla-30.html" title="Joomla 3.0 Templates" target="_blank">templjoomla.ru</a></span>
+        </div>
+      </div>    
+    <div class="clr"></div>
+  </div>  
+    
+</body>
+</html>

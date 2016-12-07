@@ -1,0 +1,572 @@
+<!doctype html>
+<html>
+<head>
+<title>Салоны красоты «Моя прекрасная леди»</title>
+
+<meta name="description" content="Салоны красоты в английском стиле в центре Москвы. Маникюр, педикюр, биоэпиляция, уход за волосами, массажи и спа-программы, косметология. Даже скромную цветочницу мы превращаем в прекрасную леди. Gift shop. Кафе. Вечеринки. Корпоративное обслуживание. Авторская бижутерия и профессиональная косметика: Zoya, Thalion, Dermalogica, Davines, Moroccanoil. Скидки, акции, подарки." />
+<meta name="keywords" content="Моя прекрасная леди, cалон Моя прекрасная леди, Леди, Прекрасная леди, салон красоты, салон маникюра, ногти, нейл, бар, маникюр, европейский маникюр, педикюр, аппаратный педикюр, спа, спа уход, наращивание ногтей, дизайн ногтей, биогель, наращивание биогелем, массаж, массаж ног, массаж рук, мужской маникюр, девичник, My Fair Lady, nail bar, нэйл-бар, маникюр, педикюр, макияж, косметика, меню, кофе, рецепт, аксессуар, мода, завтрак, обед, ужин, выпивка, водка, виски, текилла, гламур" />
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="http://myfairlady.ru/images/favicon.ico" />
+<base href="http://www.myfairlady.ru/" />
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.11.2.js"></script>
+<script src="js/ui.datepicker-ru.js"></script>
+<script src="js/modernizr.custom.97135.js"></script>
+<script src="js/main.js"></script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="jquery-ui-1.10.1.custom.min.css" />
+<link rel="stylesheet" href="fset/mirandolina/MRN76_stylesheet.css" charset="utf-8" />
+<link rel="stylesheet" href="fset/mirandolina/MRN75_stylesheet.css" charset="utf-8" />
+<link rel="stylesheet" href="fset/mirandolina/MRN56_stylesheet.css" charset="utf-8" />
+<link rel="stylesheet" href="fset/mirandolina/MRN55_stylesheet.css" charset="utf-8" />
+<link rel="stylesheet" href="fset/mirandolina/MRNC1_stylesheet.css" charset="utf-8" />
+<link rel="stylesheet" href="main.css" />
+<link rel="stylesheet" href="index.css" />
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?113"></script>
+<script type="text/javascript">
+  VK.init({apiId: 4382417, onlyWidgets: true});
+</script>
+<script>
+$(function() {
+$('.service_info .price').each(function(index, el) {
+   var re= /^\s*\d+\s*$/;
+   if(re.test($(el).text())) {
+      $(el).html($(el).html() + '&nbsp;р.');
+   }
+});
+
+var currentBanner = 0;
+var currentBannerStaff = 0;
+
+function showBanner(n)
+{
+	$('.page_item').hide();
+	$($('.page_item')[n]).show();
+}
+
+function showBannerStaff(n)
+{
+	$('.staff_item').hide();
+	$($('.staff_item')[n]).show();
+}
+
+function showTeaser(n)
+{
+	$('.page_item_left').hide();
+	$($('.page_item_left')[n]).show();
+}
+
+$(function() {
+$('.page_item[rotate=1]').remove();
+$('.page_item_left[rotate=1]').remove();
+$('.staff_item[rotate=1]').remove();
+
+$(".service_info_close").click(function() {
+    $(".service_wrapper").hide()
+});
+
+if(0 != $('.page_item').length) {
+	showBanner(0);
+
+	setInterval(function() {
+		currentBanner = (currentBanner + 1) % $('.page_item').length;
+		showBanner(currentBanner);
+	}, 5000);
+}
+
+if(0 != $('.page_item_left').length) {
+	showTeaser(0);
+
+	setInterval(function() {
+		currentBanner = (currentBanner + 1) % $('.page_item_left').length;
+		showTeaser(currentBanner);
+	}, 7000);
+}
+
+if(0 != $('.staff_item').length) {
+	showBannerStaff(0);
+
+	setInterval(function() {
+		currentBannerStaff = (currentBannerStaff + 1) % $('.staff_item').length;
+		showBannerStaff(currentBannerStaff);
+	}, 5000);
+}
+});
+
+$('.acontent').each(function(index, el) {
+	if($(el).height() > 320) {
+		$(el).addClass('expanded');
+		var a = $('<a href="#">ещё...</a>');
+		a.click(function(event) {
+			event.preventDefault();
+			if($(el).hasClass('expanded')){
+				a.text('свернуть...');
+				$(el).removeClass('expanded');
+			}
+			else {
+				a.text('ещё...');
+				$(el).addClass('expanded');
+			}
+		});
+		$(el).after(a);
+	}
+});
+
+$('.bcontent').each(function(index, el) {
+	if($(el).height() > 228) {
+		$(el).addClass('expanded');
+		var a = $('<a href="#">ещё...</a>');
+		a.click(function(event) {
+			event.preventDefault();
+			if($(el).hasClass('expanded')){
+				a.text('свернуть...');
+				$(el).removeClass('expanded');
+			}
+			else {
+				a.text('ещё...');
+				$(el).addClass('expanded');
+			}
+		});
+		$(el).after(a);
+	}
+});
+
+$('#title').show('slide', {direction: "up"}, 1000);    
+});
+</script>
+
+<!-- UNISENDER -->
+<script type="text/javascript">
+// <![CDATA[
+var us_msg = {missing: "Не задано обязательное поле: \"%s\"", invalid: "Недопустимое значение поля: \"%s\"", email_or_phone: "Не задан email", no_list_ids: "Не выбрано ни одного списка рассылки"};
+var us_emailRegexp = /^[a-zA-Z0-9_+=-]+[a-zA-Z0-9\._+=-]*@[a-zA-Z0-9][a-zA-Z0-9-]*(\.[a-zA-Z0-9]([a-zA-Z0-9-]+))*\.([a-zA-Z]{2,6})$/;
+var us_phoneRegexp = /^\s*[\d +()-.]{7,32}\s*$/;
+if (typeof us_ == 'undefined') {
+	var us_ = new function() {
+
+		var onLoadCalled = false;
+		var onLoadOld = window.onload;
+		window.onload = function() { us_.onLoad(); };
+		var onResizeOld = null;
+		var popups = [];
+
+		function autodetectCharset(form) {
+			var ee = form.getElementsByTagName('input');
+			for (var i = 0;  i < ee.length;  i++) {
+				var e = ee[i];
+				if (e.getAttribute('name') == 'charset') {
+					if (e.value == '') {
+						// http://stackoverflow.com/questions/318831
+						e.value = document.characterSet ? document.characterSet : document.charset;
+					}
+					return;
+				}
+			}
+		}
+
+		function createAndShowPopup(form) {
+			var d = document;
+			// outerHTML(): http://stackoverflow.com/questions/1700870
+			var e = d.createElement('div');
+			e.style.position = 'absolute';
+			e.style.width = 'auto';
+			e = d.body.appendChild(e);
+			e.appendChild(form);
+			form.style.display = '';
+			popups.push(e);
+		}
+
+		function centerAllPopups() {
+			// Multiple popups will overlap, but nobody cares until somebody cares.
+			var w = window;
+			var d = document;
+			var ww = w.innerWidth ? w.innerWidth : d.body.clientWidth;
+			var wh = w.innerHeight ? w.innerHeight : d.body.clientHeight;
+			for (var i = 0;  i < popups.length;  i++) {
+				var e = popups[i];
+				var ew = parseInt(e.offsetWidth + '');
+				var eh = parseInt(e.offsetHeight + '');
+				e.style.left = (ww - ew) / 2 + d.body.scrollLeft + (i * 10);
+				e.style.top = (wh - eh) / 2 + d.body.scrollTop + (i * 10);
+			}
+		}
+
+		this.onLoad = function() {
+			var i;
+			var ffl = document.getElementsByTagName('form');
+			var ff = [];
+			// NodeList changes while we move form to different parent; preload into array.
+			for (i = 0;  i < ffl.length;  i++) {
+				ff.push(ffl[i]);
+			}
+			
+			for (i = 0;  i < ff.length;  i++) {
+				var f = ff[i];
+				var a = f.getAttribute('us_mode');
+				if (!a) {
+					continue;
+				}
+				if (a == 'popup') {
+					createAndShowPopup(f);
+				}
+				autodetectCharset(f);
+			}
+//			console.log(popups);
+			centerAllPopups();
+			onResizeOld = window.onresize;
+			window.onresize = function() { us_.onResize(); };
+			onLoadCalled = true;
+			if (onLoadOld) {
+				onLoadOld();
+			}
+		};
+
+		this.onResize = function() {
+			centerAllPopups();
+			if (onResizeOld) {
+				onResizeOld();
+			}
+		};
+
+		this.onSubmit = function(form) {
+			if (!onLoadCalled) {
+				alert('us_.onLoad() has not been called');
+				return false;
+			}
+
+			function trim(s) {
+				return s == null ? '' : s.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+			}
+
+			var d = document;
+
+			var ee, i, e, n, v, r, k, b1, b2;
+			var hasEmail = false;
+			var hasPhone = false;
+
+			ee = form.getElementsByTagName('input');
+			for (i = 0;  i < ee.length;  i++) {
+				e = ee[i];
+				n = e.getAttribute('name');
+				if (!n || e.getAttribute('type') != 'text') {
+					continue;
+				}
+
+				v = trim(e.value);
+				if (v == '') {
+					k = e.getAttribute('_required');
+					if (k == '1') {
+						alert(us_msg['missing'].replace('%s', e.getAttribute('_label')));
+						e.focus();
+						return false;
+					}
+					continue;
+				}
+
+				if (n == 'email') {
+					hasEmail = true;
+				} else if (n == 'phone') {
+					hasPhone = true;
+				}
+
+				k = e.getAttribute('_validator');
+				r = null;
+				switch (k) {
+					case null:
+					case '':
+					case 'date':
+						break;
+					case 'email':
+						r = us_emailRegexp;
+						break;
+					case 'phone':
+						r = us_phoneRegexp;
+						break;
+					case 'float':
+						r = /^[+\-]?\d+(\.\d+)?$/;
+						break;
+					default:
+						alert('Internal error: unknown validator "' + k + '"');
+						e.focus();
+						return false;
+				}
+				if (r && !r.test(v)) {
+					alert(us_msg['invalid'].replace('%s', e.getAttribute('_label')));
+					e.focus();
+					return false;
+				}
+			}
+
+			if (!hasEmail && !hasPhone) {
+				alert(us_msg['email_or_phone']);
+				return false;
+			}
+
+			ee = form.getElementsByTagName('input');
+			b1 = false;
+			b2 = false;
+			for (i = 0;  i < ee.length;  i++) {
+				e = ee[i];
+				if (e.getAttribute('name') != 'list_ids[]') {
+					continue;
+				}
+				b1 = true;
+				if (e.checked) {
+					b2 = true;
+					break;
+				}
+			}
+			if (b1 && !b2) {
+				alert(us_msg['no_list_ids']);
+				return false;
+			}
+
+			return true;
+		};
+	};
+}
+// ]]>
+</script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1072521292818384');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1072521292818384&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="container">
+<div id="topblock">
+<div id="title" style="display: none;"><table id="info" border="0" cellpadding="0" cellpadding="0" cellspacing="0"><tr><td valign="middle" align="center"><a style="font-weight:500;" class="ms_booking" href="#">Online-запись</a></td></tr></table><script type="text/javascript" src="//w14362.yclients.com/widgetJS" charset="UTF-8"></script></div>
+<div id="salons_addr">
+<div id="address">
+<!-- h1>Салоны красоты</h1 --!>
+<div class="address_left"><div class="address_item even">
+<div><a href="parkk.html">м. Парк культуры</a></div>
+<div class="address_descr">ул.&nbsp;Льва Толстого, д.&nbsp;16,<br />
+<i>(495)&nbsp;780-88-18, (495)&nbsp;780-88-19</i></div>
+</div>
+<div class="address_item even">
+<div><a href="gogol.html">м. Кропоткинская</a></div>
+<div class="address_descr">Гоголевский бульвар, д.&nbsp;23,<br />
+<i>(495)&nbsp;697-26-57, (925)&nbsp;292-70-94</i> </div>
+</div>
+<div class="address_item even">
+<div><a href="stsvet.html">м. Цветной бульвар</a></div>
+<div class="address_descr">Б.&nbsp;Сухаревский переулок, д.&nbsp;2/24,<br />
+<i>(925)&nbsp;017-35-70, (925)&nbsp;003-55-26</i></div>
+</div></div>
+<div class="address_right"><div class="address_item even">
+<div><a href="sarb.html">м. Арбатская</a></div>
+<div class="address_descr">Никитский бульвар, д.&nbsp;9,<br />
+<i>(495)&nbsp;697-95-56, (495)&nbsp;695-50-05</i> </div>
+</div>
+<div class="address_item even">
+<div><a href="sbel.html">м. Белорусская</a></div>
+<div class="address_descr">ул. 1-ая Тверская-Ямская, д.&nbsp;23, стр.&nbsp;1,<br />
+<i>(495)&nbsp;725-65-75, (495)&nbsp;725-65-76</i></div>
+</div>
+<div class="address_item even">
+<div><a href="smayak.html">м. Маяковская</a></div>
+<div class="address_descr">М.&nbsp;Патриарший пер., д.&nbsp;3,<br />
+<i>(495)&nbsp;650-63-32, (495)&nbsp;650-63-72</i></div>
+</div></div>
+
+</div>
+</div>
+<div id="logo"><a href="http://www.myfairlady.ru/"><img src="i/logo.png" border="0" /></a></div>
+</div>
+<div id="topblock2">
+<div id="topmenu" style="width: 662px;margin: 0 auto;text-align: center;"><a href="http://www.myfairlady.ru/">Главная</a>
+<a  class="first" href="uslugi/" title="Услуги" >Услуги</a>
+<a  href="akcii/" title="Акции" >Акции</a>
+<a  href="presents/" title="Подарки" >Подарки</a>
+<a  href="party/" title="Вечеринки" >Вечеринки</a>
+<a  href="mastera/" title="Мастера" >Мастера</a>
+<a  class="last" href="about/" title="Контакты" >Контакты</a>
+</div>
+<div id="social-top" style="float: right;margin-top: -25px;margin-right: 60px;">
+    <a class="facebook" href="https://www.facebook.com/lady.nailbar?ref=hl"> </a>
+    <a class="instagram" href="http://instagram.com/myfairlady_salon"> </a>
+    <a class="vk" href="https://vk.com/myfairlady_salon"> </a>
+</div>
+</div>
+
+<div class="clear"></div>
+<div id="leftbar">
+	<div class="left_set">
+	<div style="display: none;" class="page_item_left" rotate="">
+<center><span style="z-index: 9999;"><a href="https://myfairlady.ezcard.ru"><img src="banner_certificate_small.jpg" alt="Баннер мобильного приложения" width="200" height="350" /></a></span></center>
+<div class="print_action"> </div>
+</div>
+<div style="display: none;" class="page_item_left" rotate="">
+<center><a style="z-index: 9999; display: block;" href="http://loyaltyplant.com/lp/moyaprekrasnayaledi"><img src="i/banner_mobilnoe_small.gif" alt="Баннер мобильного приложения" /></a></center>
+<div class="print_action"> </div>
+</div>
+
+	
+	</div>
+	
+        <!-- div id="content-footer">
+            <div id="feedback-link">
+    <a href="index.php?id=313" class="button wide light">Оставить отзыв</a>
+</div>
+        </div -->
+</div>
+<div class="content">
+	<script type="text/javascript">// <![CDATA[
+var current = 0;
+           var imgs = [ "site_home_zaglushka_new_foto3.jpg","foto_slider1.jpg", "foto_slider8.jpg", "site_home_zaglushka_new_foto4.jpg"];
+$(function() {setCurrent(0);});
+
+function next() {
+	setCurrent((1 + current) % imgs.length);
+}
+
+function prev() {
+	setCurrent((imgs.length + current - 1) % imgs.length);
+}
+
+function setCurrent(c) {
+	current = c;
+	$('#mimg').off('click');
+	$('#mimg').css('cursor', 'default');
+	var data = imgs[current];
+	if($.isArray(data)) {
+		$('#mimg').attr('src', data[0]);
+		$('#mimg').click(function(event) { event.preventDefault(); location.href = data[1]; });
+		$('#mimg').css('cursor', 'pointer');
+	} else {
+		$('#mimg').attr('src', data);
+	}
+
+	$('#rpager').empty();
+	for(var i = 0; i < imgs.length; i++) {
+		(function() {
+		var cp = i;
+		var d = $('<div />').css('width', '10px').css('height', '10px').css('margin', '0 4px').css('display', 'inline-block').css('border', '2px solid #BE4D64').css('border-radius', '6px').css('background-color', i == c ? '#BE4D64' : 'white');
+		var a = $('<a></a>').attr('href', '#').click(function(event) {
+			event.preventDefault();
+			setCurrent(cp);
+		});
+		a.append(d);
+		$('#rpager').append(a);
+		})();
+	}
+}
+
+//setInterval(function() {next();}, 5000);
+
+
+// ]]></script>
+
+<div style="position: relative;"><a href="http://www.myfairlady.ru/akcii/"><img id="mimg" src="640_site1.gif" alt="" /></a> <a style="position: absolute; left: 3px; top: 159px;" onclick="prev(); return false;" href="#"><img src="i/prev.png" alt="" /></a> <a style="position: absolute; left: 608px; top: 159px;" onclick="next(); return false;" href="#"><img src="i/next.png" alt="" /></a><div id="rpager" style="position: absolute; width: 640px; height: 20px;left: 0px; top: 327px; text-align: center;"></div>
+<p style="font-size: 18px; line-height: 24px;"></p>
+</div>
+
+<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=p/hwz2Lahxgh9C3mcxQWBUZHbeMcqRbuhCMsecQGlHKJf0HOTdVfywAKNDlbUycB9LT3*GMVBZe27YHCzkcCUCjcdhMs81uYJXkp25NtjrJDjYoI7UHRcqA1yZ8JnSjpUgRgaKE/opk2MukB8GhMcDudQ/bu/5k4Be/15uZG*gI-';</script>
+</div><!-- #content -->
+<div id="rightbar">
+	<div class="page_set">
+		<div style="display: none;" class="page_item" rotate="">
+<a href="/cafe/"><img src="i/banner_small_kafe.jpg" alt="Кафе"/></a>
+</div>
+<div style="display: none;" class="page_item" rotate="">
+<a href="akcii/#a588"><img src="./banner_small_M+P.jpg"/></a>
+</div>
+<div style="display: none;" class="page_item" rotate="">
+<a href="/cafe/"><img src="i/banner_small_kafe.jpg" alt="Кафе"/></a>
+</div>
+<div style="display: none;" class="page_item" rotate="">
+<a href="akcii/#a589"><img src="./banner_small_Beauty brunch.jpg"/></a>
+</div>
+<div style="display: none;" class="page_item" rotate="">
+<a href="/cafe/"><img src="i/banner_small_kafe.jpg" alt="Кафе"/></a>
+</div>
+<div style="display: none;" class="page_item" rotate="">
+<a href="akcii/#a542"><img src="./banner_small_brow.gif"/></a>
+</div>
+<div style="display: none;" class="page_item" rotate="">
+<a href="/cafe/"><img src="i/banner_small_kafe.jpg" alt="Кафе"/></a>
+</div>
+<div style="display: none;" class="page_item" rotate="">
+<a href="akcii/#a468"><img src="./banner_svadba_small.gif"/></a>
+</div>
+<div style="display: none;" class="page_item" rotate="">
+<a href="/cafe/"><img src="i/banner_small_kafe.jpg" alt="Кафе"/></a>
+</div>
+<div style="display: none;" class="page_item" rotate="">
+<a href="akcii/#a433"><img src="./small_brazil_banner.gif"/></a>
+</div>
+	</div>
+	
+</div>
+<div class="clear"></div>
+<script type="text/javascript">
+$(function () {
+	$("a.youtube").YouTubePopup({ hideTitleBar: true });
+});
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-41863913-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter33036419 = new Ya.Metrika({
+                    id:33036419,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/33036419" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- BEGIN CLICKTEX CODE {literal} -->
+<script type="text/javascript" charset="utf-8" async="async" src="//www.clicktex.ru/code/34498"></script>
+<!-- {/literal} END CLICKTEX CODE -->
+
+</body>
+</html>

@@ -1,0 +1,782 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Èíòåðüåð ìàãàçèíà, äîìà, îôèñà, äèçàéí áóòèêîâ, äèçàéíåðñêèå êîëëåêöèè íàòóðàëüíîé êîæè, àâòîðñêàÿ ìåáåëü, ýëèòíûå øêàôû, êðåñëà, äèâàíû</title>
+<link href="main.css" rel="stylesheet" type="text/css" />
+<link href="http://www.rodeo-interiors.ru/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<script type="text/javascript" src="cgi-bin/dynamicdrive/1/jquery-1.2.2.pack.js"></script>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript" src="cgi-bin/dynamicdrive/1/ddaccordion.js">
+
+/***********************************************
+* Accordion Content script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+
+</script>
+
+<script type="text/javascript" src="cgi-bin/open_foto.js"></script>
+<script type="text/javascript">
+
+
+ddaccordion.init({ //top level headers initialization
+	headerclass: "expandable", //Shared CSS class name of headers group that are expandable
+	contentclass: "categoryitems", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click" or "mouseover
+	mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "openheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["prefix", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+ddaccordion.init({ //2nd level headers initialization
+	headerclass: "subexpandable", //Shared CSS class name of sub headers group that are expandable
+	contentclass: "subcategoryitems", //Shared CSS class name of sub contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click" or "mouseover
+	mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["opensubheader", "closedsubheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["none", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+
+
+
+function MM_CheckFlashVersion(reqVerStr,msg){
+  with(navigator){
+    var isIE  = (appVersion.indexOf("MSIE") != -1 && userAgent.indexOf("Opera") == -1);
+    var isWin = (appVersion.toLowerCase().indexOf("win") != -1);
+    if (!isIE || !isWin){  
+      var flashVer = -1;
+      if (plugins && plugins.length > 0){
+        var desc = plugins["Shockwave Flash"] ? plugins["Shockwave Flash"].description : "";
+        desc = plugins["Shockwave Flash 2.0"] ? plugins["Shockwave Flash 2.0"].description : desc;
+        if (desc == "") flashVer = -1;
+        else{
+          var descArr = desc.split(" ");
+          var tempArrMajor = descArr[2].split(".");
+          var verMajor = tempArrMajor[0];
+          var tempArrMinor = (descArr[3] != "") ? descArr[3].split("r") : descArr[4].split("r");
+          var verMinor = (tempArrMinor[1] > 0) ? tempArrMinor[1] : 0;
+          flashVer =  parseFloat(verMajor + "." + verMinor);
+        }
+      }
+      // WebTV has Flash Player 4 or lower -- too low for video
+      else if (userAgent.toLowerCase().indexOf("webtv") != -1) flashVer = 4.0;
+
+      var verArr = reqVerStr.split(",");
+      var reqVer = parseFloat(verArr[0] + "." + verArr[2]);
+  
+      if (flashVer < reqVer){
+        if (confirm(msg))
+          window.location = "http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash";
+      }
+    }
+  } 
+}
+</script>
+
+<script language="javascript">
+
+var delay = 2200;
+var imageNum = 1;
+
+// Ïðåäâàðèòåëüíàÿ çàãðóçêà èçîáðàæåíèé àíèìàöèè
+var theImages = new Array();
+for(i = 0; i < 2; i++)
+{
+	theImages[i] = new Image();
+	theImages[i].src = "photos/catalogue/catalogue"+i+".jpg";
+}
+
+function animate()
+{
+	document.animation.src = theImages[imageNum].src;
+	imageNum++;
+	if(imageNum > 1)
+	{
+		imageNum = 0;
+	}
+}
+
+//-->
+
+</script>
+
+<style type="text/css">
+<!--
+
+
+.arrowlistmenu{
+width: 300px; /*width of accordion menu*/
+}
+
+.menuheader_link {
+font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+color:#CCCCCC;
+}
+
+.menuheader_link:visited{
+font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+color:#CCCCCC;
+}
+
+.menuheader_link:hover {
+font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+color:#FFFFFF;
+}
+
+.menuheader_link:link{
+font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+color:#CCCCCC;
+}
+
+.arrowlistmenu .menuheader { /*CSS class for menu headers in general (expanding or not!)*/
+font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+color: #FFFFFF;
+background: black repeat-x center left;
+border-bottom: 1px solid #999999;
+margin-bottom: 10px; /*bottom spacing between header and rest of content*/
+text-transform: uppercase;
+padding: 4px 0 4px 10px; /*header text is indented 10px*/
+cursor: hand;
+cursor: pointer;
+margin-right : 7px;
+text-align : right;
+text-decoration: NONE;
+}
+
+
+
+.contour {
+font:  8px Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+.arrowlistmenu .openheader { /*CSS class to apply to expandable header when it's expanded*/
+background-image: url(cgi-bin/dynamicdrive/1/titlebar-active.png);
+}
+
+
+
+.arrowlistmenu ul{ /*CSS for UL of each sub menu*/
+font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+list-style-type: none;
+margin: 0;
+padding: 0;
+margin-right : 50px;
+margin-bottom: 0px; /*bottom spacing between each UL and rest of content*/
+}
+
+.arrowlistmenu ul li{
+padding-bottom: 0px; /*bottom spacing between menu items*/
+}
+
+.arrowlistmenu ul li a{
+font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+font-size: 90%;
+color: WHITE;
+/*background: url(arrowbullet.png) no-repeat center left; custom bullet list image*/
+display: block;
+padding: 2px 0;
+padding-left: 19px; /*link text is indented 19px*/
+text-decoration: none;
+font-weight: bold;
+border-bottom: 1px solid #333333;
+text-align : right;
+font-size: 100%;
+}
+
+.arrowlistmenu ul li a:visited{
+font-size: 90%;
+font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+color: WHITE;
+
+margin-right : 0px;
+}
+
+.arrowlistmenu ul li a:hover{ /*hover state CSS*/
+font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+font-size: 90%;
+color: #FF3333;
+background-color: #333333;
+
+}
+
+.arrowlistmenu ul li .opensubheader{ /*Open state CSS for sub menu header*/
+font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+color: WHITE;
+}
+
+.arrowlistmenu ul li .closedsubheader{ /*Closed state CSS for sub menu header*/
+font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+color: WHITE;
+}
+
+
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #333333;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+.oneColElsCtr #container {
+	width: 99%;
+	height: 100%;
+	background: BLACK;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.oneColElsCtr #container_bottom {
+	width: 99%;
+	height: 20px;
+	background: BLACK;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: right; /* this overrides the text-align: center on the body element. */
+}
+.oneColElsCtr #mainContent {
+	padding: 0 0px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+}
+.style1 {font-size: xx-small}
+
+
+-->
+</style>
+<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type="text/javascript">
+(function() { var widget_id = '23747';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss); })(); </script>
+<!-- {/literal} END JIVOSITE CODE -->
+</head>
+
+<body class="oneColElsCtr" onload="MM_CheckFlashVersion('8,0,0,0','Content on this page requires a newer version of Adobe Flash Player. Do you want to download it now?');" >
+<div id="container">
+ <BR>
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="300"><a href="rodeo_contacts.asp"><img src="gif/contacts.jpg" alt="Êîíòàêòû" width="300" height="150" border="0" /></a></td>
+      <td width="100%"><div id="mainContent">
+          <div align="center"><img src="gif/rodeo_big.jpg" alt="Ëîãîòèï Ðîäåî"/></div>
+      </div></td>
+      <td width="100%" align="center">
+      <div id="fb-root"></div>
+      
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}
+(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="http://www.rodeo-interiors.ru/" data-send="true" data-layout="box_count" data-width="0" data-show-faces="true" data-action="recommend" data-colorscheme="dark" data-font="segoe ui"></div>
+      </td>
+      </tr>
+    <tr>
+      <td valign="top" width="300"><div class="arrowlistmenu">
+          <h3 class="menuheader" style="cursor: default"><a href="rodeo_contacts.asp" class="menuheader_link">Êîíòàêòû, ñõåìà ïðîåçäà</a></h3>
+        <div align="right"><img src="gif/amadeus.jpg" border="0" alt="ïîðòôîëèî ìåáåëè àìàäåóñ" align="absmiddle" /> </div>
+        <h3 class="menuheader expandable"><a href="" class="menuheader_link">ÏÎÐÒÔÎËÈÎ ÌÅÁÅËÈ ÀÌÀÄÅÓÑ</a> <br />
+                   <span class="contour">èçãîòîâëåíèå ýêñêëþçèâíîé ìåáåëè</span></h3>
+        <ul class="categoryitems">
+            <li><a href="amadeus_portfolio.asp?all">ÂÑß ÌÅÁÅËÜ</a></li>
+          <li><a href="amadeus_portfolio.asp" class="subexpandable">ÊÎËËÅÊÖÈÈ</a>
+                <ul class="subcategoryitems" style="margin-left: 0px">
+                  <li><a href="amadeus_portfolio.asp?col=1&name=BAROCCO">BAROCCO</a></li>
+                  <li><a href="amadeus_portfolio.asp?col=3&name=CLASSIC">CLASSIC</a></li>
+                  <li><a href="amadeus_portfolio.asp?col=2&name=DECO">DECO</a></li>
+                </ul>
+          </li>
+          <li><a href="amadeus_portfolio.asp" class="subexpandable">ÒÈÏÛ ÌÅÁÅËÈ</a>
+                <ul class="subcategoryitems" style="margin-left: 0px">
+                  <li><a href="amadeus_portfolio.asp?type=1">ÄÈÂÀÍÛ</a></li>
+                  <li><a href="amadeus_portfolio.asp?type=2">ÊÐÅÑËÀ</a></li>
+                  <li><a href="amadeus_portfolio.asp?type=3">ÑÒÓËÜß</a></li>
+                  <li><a href="amadeus_portfolio.asp?type=4">ÁÀÐÍÛÅ ÑÒÓËÜß</a></li>
+                  <li><a href="amadeus_portfolio.asp?type=5">ÑÒÎËÛ/ÊÎÍÑÎËÈ</a></li>
+                  <li><a href="amadeus_portfolio.asp?type=6">ØÊÀÔÛ</a></li>
+                  <li><a href="amadeus_portfolio.asp?type=7">ÊÐÎÂÀÒÈ</a></li>
+                </ul>
+          </li>
+        </ul>
+        <h3 class="menuheader" style="cursor: default"><a href="index.html#about" class="menuheader_link">ÍÀØÈ ÏÐÅÈÌÓÙÅÑÒÂÀ</a><br />
+              <span class="contour">èíòåðâüþ ñ æóðíàëîì SALON</span></h3>
+        <h3 class="menuheader expandable"><a href="" class="menuheader_link">Êîëëåêöèè Êîæè</a></h3>
+        <ul class="categoryitems">
+            <li><a href="rodeo_leather.asp?i=4">EXCLUSIVE & EXOTIC</a></li>
+          <li><a href="rodeo_leather.asp?i=7">TOP</a></li>
+          <li><a href="rodeo_leather.asp?i=1">BOUTIQUE</a></li>
+          <li><a href="rodeo_leather.asp?i=2">FANCY 2900 VOL. 1</a></li>
+           
+            <li><a href="rodeo_leather.asp?i=3">FANCY 2900 VOL. 2</a></li>
+          <li><a href="rodeo_leather.asp?i=6">LAMINATO</a></li>
+          <li><a href="rodeo_leather.asp?i=5">ÂÈÄ È ÏÐÈÌÅÐÍÛÅ ÐÀÇÌÅÐÛ ÍÅÊÎÒÎÐÛÕ ÊÎÆ</a></li>
+        </ul>
+        <h3 class="menuheader expandable"><a href="" class="menuheader_link">Êîëëåêöèè äðóãèõ ìàòåðèàëîâ</a></h3>
+        <ul class="categoryitems">
+            <li><a href="rodeo_other_materials.asp?i=1">ÒÊÀÍÈ</a></li>
+          <li><a href="rodeo_other_materials.asp?i=2">ØÊÓÐÛ ÊÎÐÎÂ Ñ ÂÎÐÑÎÌ</a></li>
+        </ul>
+        <h3 class="menuheader expandable"><a href="" class="menuheader_link">Ìîäåëè ìåáåëüíûõ êàðêàñîâ</a></h3>
+        <ul class="categoryitems">
+          <li><a href="rodeo_frame.asp?i=1">CLASSIC</a></li>
+          <li><a href="rodeo_frame.asp?i=2">BAROCCO vol. 1</a></li>
+          <li><a href="rodeo_frame.asp?i=6">BAROCCO vol. 2</a></li>
+          <li><a href="rodeo_frame.asp?i=3">DECO</a></li>
+          <li><a href="rodeo_frame.asp?i=4">FRENCH</a></li>
+          <li><a href="rodeo_frame.asp?i=7">MIRRORS</a></li>
+          <li><a href="rodeo_frame.asp?i=5">ÂÀÐÈÀÍÒÛ ÔÈÍÈØÀ(ÖÂÅÒÀ) ÊÀÐÊÀÑÎÂ</a></li>
+        </ul>
+        <h3 class="menuheader expandable"><a href="" class="menuheader_link">Èçäåëèÿ Ìàñòåðñêîé</a><br />
+              <span class="contour">ïðåäìåòû èíòåðüåðà èç íàòóðàëüíîé êîæè</span> </h3>
+        <ul class="categoryitems">
+          <li><a href="rodeo_workshop.asp?i=1">ÇÅÐÊÀËÀ È ÐÀÌÊÈ</a></li>
+          <li><a href="rodeo_workshop.asp?i=2">ÊÎËÎÍÍÛ</a></li>
+          <li><a href="rodeo_workshop.asp?i=3">ÊÎÌÎÄÛ È ÒÓÌÁÛ</a></li>
+          <li><a href="rodeo_workshop.asp?i=8">ØÊÀÔÛ</a></li>
+          <li><a href="rodeo_workshop.asp?i=9">ÄÈÂÀÍÛ È ÊÐÎÂÀÒÈ</a></li>
+        </ul>
+        <h3 class="menuheader" style="cursor: default"><a href="rodeo_workshop.asp?i=4" class="menuheader_link">Êîæàíûå ñòåíîâûå ïàíåëè</a></h3>
+        <h3 class="menuheader" style="cursor: default"><a href="rodeo_workshop.asp?i=5" class="menuheader_link">Êîæàíàÿ ïîëîâàÿ ïëèòêà</a> <br />
+              <span class="contour">êîæàíûå ïîëû</span> </h3>
+        <h3 class="menuheader" style="cursor: default"><a href="rodeo_workshop.asp?i=7" class="menuheader_link">Ìåõîâûå ïîêðûâàëà, ïëåäû</a></h3>
+        <h3 class="menuheader" style="cursor: default"><a href="rodeo_workshop.asp?i=6" class="menuheader_link">Êîâðû èç íàòóðàëüíîé êîæè è ìåõà</a></h3>
+        <h3 class="menuheader" style="cursor: default"><a href="rodeo_portfolio_v1.asp" class="menuheader_link">×ÀÑÒÍÛÉ ÈÍÒÅÐÜÅÐ È ÊÎÆÀ</a><br />
+              <span class="contour">ïîðòôîëèî ãîòîâûõ îáúåêòîâ</span></h3>
+        <h3 class="menuheader" style="cursor: default"><a href="rodeo_portfolio_v2.asp" class="menuheader_link">ÄÈÇÀÉÍ ÐÅÑÒÎÐÀÍÎÂ È VIP ÇÎÍ</a> <br />
+              <span class="contour">ïîðòôîëèî ãîòîâûõ îáúåêòîâ</span></h3>
+        <h3 class="menuheader" style="cursor: default"><a href="http://www.rodeo-shop.ru/" class="menuheader_link">Ñàéò rodeo-shop</a> <br />
+              <span class="contour">(àâòî. êîæà)</span></h3>
+      </div>
+          <table width="100%" border="0" cellspacing="0" cellpadding="5">
+          <tr>
+              <td><div align="center"><a href="http://www.rodeo-interiors.ru/rodeo_order_of_catalogue.html" target="_self"><img name="animation" src="photos/catalogue/catalogue0.jpg" border="0" alt="ÇÀÊÀÇÀÒÜ ÊÀÒÀËÎÃ EXCLUSIVE & EXOTIC 2015" onLoad="setTimeout('animate()',delay)"/></a></div></td>
+            </tr>
+            <tr>
+              <td><h3 align="center" class="menuheader" style="cursor: default"><a href="http://www.rodeo-interiors.ru/rodeo_order_of_catalogue.html" class="menuheader_link" target="_self">ÇÀÊÀÇÀÒÜ ÊÀÒÀËÎÃ EXCLUSIVE & EXOTIC 2015</a></h3>
+                  <br />
+                <br /></td>
+            </tr>
+            <tr>
+              <td><div align="center"><a href="photos/workers/LD2A6447.jpg" target="_blank" onClick="OpenImagePopup('photos/workers/LD2A6447.jpg'); return false;"><img src="photos/workers/LD2A6447s.jpg" alt="Ðàáîòà ñ êàòàëîãàìè êîæ â ØîóÐóìå" title="Ðàáîòà ñ êàòàëîãàìè êîæ â ØîóÐóìå" border="0"/></a></div></td>
+            </tr>
+            <tr>
+              <td><div align="center" class="style1"><font color="#FFFFFF">Ðàáîòà ñ êàòàëîãàìè êîæ â ØîóÐóìå</font></div>
+                  <br />
+                <br /></td>
+            </tr>
+            <tr>
+              <td><div align="center"><a href="photos/workers/LD2A6442.jpg" target="_blank" onClick="OpenImagePopup('photos/workers/LD2A6442.jpg'); return false;"><img src="photos/workers/LD2A6442s.jpg" alt="Ñ êëèåíòàìè â ØîóÐóìå" title="Ñ êëèåíòàìè â ØîóÐóìå" border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td><div align="center" class="style1"><font color="#FFFFFF">Ñ êëèåíòàìè â ØîóÐóìå</font></div>
+                  <br />
+                <br /></td>
+            </tr>
+            <tr>
+              <td><div align="center"><a href="photos/workers/IMG_8918.jpg" target="_blank" onClick="OpenImagePopup('photos/workers/IMG_8918.jpg'); return false;"><img src="photos/workers/IMG_8918s.jpg" alt="Ìîíòàæ êîæàíûõ ïàíåëåé íà îáúåêòå" title="Ìîíòàæ êîæàíûõ ïàíåëåé íà îáúåêòå" border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td><div align="center" class="style1"><font color="#FFFFFF">Ìîíòàæ êîæàíûõ ïàíåëåé íà îáúåêòå</font></div>
+                  <br />
+                <br /></td>
+            </tr>
+            <tr>
+              <td><div align="center"><a href="photos/workers/IMG_8875.jpg" target="_blank" onClick="OpenImagePopup('photos/workers/IMG_8875.jpg'); return false;"><img src="photos/workers/IMG_8875s.jpg" alt="Ìîíòàæ êîæàíûõ ïàíåëåé íà îáúåêòå" title="Ìîíòàæ êîæàíûõ ïàíåëåé íà îáúåêòå" border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td><div align="center" class="style1"><font color="#FFFFFF">Ìîíòàæ êîæàíûõ ïàíåëåé íà îáúåêòå</font></div>
+                  <br />
+                <br /></td>
+            </tr>
+            <tr>
+              <td><div align="center"><a href="photos/workers/IMG_8841.jpg" target="_blank" onClick="OpenImagePopup('photos/workers/IMG_8841.jpg'); return false;"><img src="photos/workers/IMG_8841s.jpg" alt="Ðàáîòà ñ êîæåé" border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td><div align="center" class="style1"><font color="#FFFFFF">Ðàáîòà ñ êîæåé</font></div>
+                  <br />
+                <br /></td>
+            </tr>
+            <tr>
+              <td><div align="center"><a href="photos/workers/IMG_9019.jpg" target="_blank" onClick="OpenImagePopup('photos/workers/IMG_9019.jpg'); return false;"><img src="photos/workers/IMG_9019s.jpg" alt="Íàíåñåíèå ïîòàëè" border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td><div align="center" class="style1"><font color="#FFFFFF">Íàíåñåíèå ïîòàëè</font></div>
+                  <br />
+                <br /></td>
+            </tr>
+            <tr>
+              <td><div align="center"><a href="photos/workers/IMG_9088.jpg" target="_blank" onClick="OpenImagePopup('photos/workers/IMG_9088.jpg'); return false;"><img src="photos/workers/IMG_9088s.jpg" alt="Îáèâêà êàðêàñà êîæåé" title="Îáèâêà êàðêàñà êîæåé" border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td><div align="center" class="style1"><font color="#FFFFFF">Îáèâêà êàðêàñà êîæåé</font></div><br /><br /></td>
+            <tr>
+                <td><div align="center"><a href="photos/workers/IMG_9097.jpg" target="_blank" onclick="OpenImagePopup('photos/workers/IMG_9097.jpg'); return false;"><img src="photos/workers/IMG_9097s.jpg" alt="Îáèâêà êàðêàñà êîæåé" title="Îáèâêà êàðêàñà êîæåé" border="0" /></a><br />
+              </div></td>
+            </tr>
+            <tr>
+              <td><div align="center" class="style1"><font color="#FFFFFF">Îáèâêà êàðêàñà êîæåé</font></div>
+                  <br />
+                <br /></td>
+            </tr>
+            <tr>
+              <td><div align="center"><a href="photos/workers/IMG_9101.jpg" target="_blank" onClick="OpenImagePopup('photos/workers/IMG_9101.jpg'); return false;"><img src="photos/workers/IMG_9101s.jpg" alt="Ðàçðàáîòêà íîâîé ìîäåëè ñòóëà" border="0"/></a></div></td>
+            </tr>
+            <tr>
+              <td><div align="center" class="style1"><font color="#FFFFFF">Ðàçðàáîòêà íîâîé ìîäåëè ñòóëà</font></div>
+                  <br />
+                <br /></td>
+            </tr>
+            <tr>
+              <td><div align="center"><a href="photos/workers/IMG_9121.jpg" target="_blank" onClick="OpenImagePopup('photos/workers/IMG_9121.jpg'); return false;"><img src="photos/workers/IMG_9121s.jpg" alt="Ðàçðàáîòêà íîâîé ìîäåëè äèâàíà" border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td><div align="center" class="style1"><font color="#FFFFFF">Ðàçðàáîòêà íîâîé ìîäåëè äèâàíà</font></div>
+                  <br />
+                <br /></td>
+            </tr>
+            <tr>
+              <td><div align="center"><a href="photos/workers/IMG_9069.jpg" target="_blank" onClick="OpenImagePopup('photos/workers/IMG_9069.jpg'); return false;"><img src="photos/workers/IMG_9069s.jpg" alt="Íàíåñåíèå ãðóíòîâîãî ñëîÿ íà ïîâåðõíîñòü êîæè" border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td><div align="center" class="style1"><font color="#FFFFFF">Íàíåñåíèå ãðóíòîâîãî ñëîÿ íà ïîâåðõíîñòü<br />êîæè</font></div>
+                  <br />
+                <br /></td>
+            </tr>
+      </table></td>
+      <td valign="top" width="100%">
+      <div id="test" align="center">
+	<script type="text/javascript">
+		var s1 = new SWFObject("player.swf","ply","469","354","9","#FFFFFF");
+		s1.addParam("allowscriptaccess","always");
+		s1.addParam("lightcolor","0xFF0000");
+		s1.addParam("flashvars","file=flash/rod_10_650.flv&image=kreslo_big_movie.jpg");
+		s1.addParam("allowfullscreen","true");
+		s1.write("test");
+	</script>	
+    </div>
+        <div align="center"><font color="#FFFFFF" size="1">àíèìàöèîííûé ðîëèê - ïðåçåíòàöèÿ 1ìèí. 40ñåê.</font></div><br /><br />
+          <a name="about"></a>
+          <p align="center"><font size="4" color="#FF0000">ÍÀØÈ ÏÐÅÈÌÓÙÅÑÒÂÀ</font></p>
+          <p align="center"><em><font size="3" color="#FFFFFF">èíòåðâüþ ðóññêîãî èçäàíèÿ æóðíàëà SALON ñ ó÷ðåäèòåëåì ôèðì Rodeo è Amadeus Àëåêñååì Ãðèáîâûì</font></em></p>
+          <p> <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em><br />
+              <em><font size="2" color="#FFFFFF">Íà èíòåðüåðíîì øîó ISIS(International Salon Interior Show) â Ìîñêâå Âàøà ýêñêëþçèâíàÿ ìåáåëü AMADEUS è èçäåëèÿ ìàñòåðñêîé Rodeo âñòàëè â îäèí ðÿä ñ èçäåëèÿìè èçâåñòíûõ áðýíäîâ - ó÷àñòíèêîâ øîó Versace Casa(CASA V),FENDI,Andrew Martin<br />
+                Ïðè÷åì ïî îöåíêå ðîññèéñêèõ è èíîñòðàííûõ ñïåöèàëèñòîâ Âàø ñòåíä áûë îäíèì èç ëó÷øèõ íà âûñòàâêå. Ïîçäðàâëÿåì! </font></em> <br />
+              <br />
+              <em><strong><font size="2" color="#FFFFFF">Àëåêñåé Ãðèáîâ(À.Ã.)</font></strong></em><br />
+              <font size="2" color="#FFFFFF">Áîëüøîå ñïàñèáî, ìû ãîðäèìñÿ íàøåé ðàáîòîé è î÷åíü ðàäû, ÷òî îíà áûëà îöåíåíà ïî äîñòîèíñòâó!<br />
+                Îñîáåííî ïðèÿòíî êîãäà ãîñòè øîó ïîñëå îñìîòðà ñòåíäîâ ëó÷øèõ èíòåðüåðíûõ áðýíäîâ ðàçìåùàþò ñâîè çàêàçû ó íàñ!</font><br />
+  <br />
+  <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em><br />
+  <em><font size="2" color="#FFFFFF">Ðàññêàæèòå ïðî Rodeo  è AMADEUS.</font></em><br />
+  <br />
+  <em><strong><font size="2" color="#FFFFFF">À.Ã.</font></strong></em><br />
+  <font size="2" color="#FFFFFF">Rodeo- ýòî ìàñòåðñêàÿ ýêñêëþçèâíûõ ïðåäìåòîâ  èíòåðüåðà èç íàòóðàëüíîé êîæè.</font><br />
+              <font size="2" color="#FFFFFF">Êðîìå òîãî, áåç ëîæíîé ñêðîìíîñòè,- Rodeo ïðåäîñòàâëÿåò ñàìûå êðóïíûå â Åâðîïå                 êîëëåêöèè íàòóðàëüíîé êîæè, ïðèìåíÿåìîé â èíòåðüåðàõ.</font><br />
+              <font size="2" color="#FFFFFF">AMADEUS - ýòî  äèçàéíåðñêàÿ ìåáåëü, ñîçäàííàÿ  íà îñíîâå èçäåëèé ëó÷øèõ ñòîëÿðíûõ                 ìàñòåðñêèõ Èòàëèè è íàòóðàëüíîé êîæè èç ñàìûõ äîðîãèõ êîëëåêöèé Rodeo.</font> <br />
+            <br />
+              <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+              <em><font size="2" color="#FFFFFF">Äàâàéòå íà÷íåì ñ êîæè  Rodeo</font></em> <br />
+              <br />
+              <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+<font size="2" color="#FFFFFF">Ìû ïîñòàâëÿåì êîæó äëÿ ïðîèçâîäñòâà ìåáåëè ñ 1995 ãîäà <br />
+                Â ïîñëåäíèå íåñêîëüêî ëåò íàòóðàëüíàÿ êîæà ïðèîáðåëà íåîáû÷àéíóþ ïîïóëÿðíîñòü.<br />
+                Êîæà ñòàëà ìàòåðèàëîì áåç êîòîðîãî ïðàêòè÷åñêè íå îáõîäèòñÿ ñîâðåìåííûé  èíòåðüåð.<br /> 
+      Êîæà íàøëà ñâîå ïðèìåíåíèå â ñòåíîâûõ ïàíåëÿõ, ïîëàõ, â ýëåìåíòàõ äåêîðà, âñåãäà ñìîòðèòñÿ øèêàðíî, äîðîãî è âìåñòå ñ òåì ñîçäàåò øàðì è îñîáóþ àòìîñôåðó ïðèñóùóþ òîëüêî ýòîìó ìàòåðèàëó.<br />Ìû ñîáðàëè äåéñòâèòåëüíî áîãàòûå êîëëåêöèè êîæ, êîòîðûå  ïðèìåíÿåòñÿ èòàëüÿíñêèìè, èñïàíñêèìè è àíãëèéñêèìè äèçàéíåðñêèìè äîìàìè äëÿ ñîçäàíèÿ èíòåðüåðîâ êëàññà ëþêñ.</font><br /><br />
+      			 <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+                 <em><font size="2" color="#FFFFFF">...Â âàøèõ êàòàëîãàõ ÿ âèæó êîæó, çíàêîìóþ ïî èçäåëèÿì ñàìûõ èçâåñòíûõ èòàëüÿíñêèõ ôàáðèê...</font></em> <br />
+              <br />
+              <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+              <font size="2" color="#FFFFFF">Äà - ýòî àðòèêóëû ñàìîé ïîïóëÿðíîé íàøåé êîëëåêöèè Rodeo Exclusive&Exotic.<br> 
+				Åñëè äèçàéíåð, çàäóìàë êàêîé ëèáî ýëåìåíò èíòåðüåðà, êîòîðûé äîëæåí ñî÷åòàòüñÿ ñ ìåáåëüþ èòàëüÿíñêèõ ôàáðèê - íàèëó÷øèé ñïîñîá èñïîëüçîâàòü êîæó èç ýòîé êîëëåêöèè.</font><br /><br />
+                <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+                <em><font size="2" color="#FFFFFF">Êàê äîëãî èäóò ïîñòàâêè êîæè?</font></em><br />
+              <br />
+				<em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+                <font size="2" color="#FFFFFF">Ïîñòàâêè êîæ èç êîëëåêöèé Exclusive&Exotic (èòàëüÿíñêàÿ) è Top Collection (àíãëèéñêàÿ) ïðàêòè÷åñêè âñåãäà îñóùåñòâëÿþòñÿ çà 2-3  íåäåëè. Ïðè ýòîì ìèíèìàëüíûé îáúåì çàêàçà - 1 öåëàÿ øêóðà. Ïîñòàâêè êîæè èç êîëëåêöèè Boutique è äðóãèõ òðåáóþò áîëüøåãî âðåìåíè îêîëî 1,5-2-õ ìåñÿöåâ.</font><br />
+            <br />
+                <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em><br />
+                <em><font size="2" color="#FFFFFF">...è  ìàñòåðà Rodeo áåðóòñÿ çà äåêîðèðîâàíèå êîæåé ýëåìåíòîâ èíòåðüåðà?</font></em> <br />
+            <br />
+                <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+                <font size="2" color="#FFFFFF">Äà êîíå÷íî. Ìàñòåðñêàÿ Rodeo îáúåäèíÿåò ñïåöèàëèñòîâ, èìåþùèõ îãðîìíûé îïûò â ðàáîòå ñ êîæåé  è ãîòîâûõ âûïîëíèòü ïðàêòè÷åñêè  ëþáûå ïîæåëàíèÿ çàêàç÷èêà.<br />
+            Ìû ïåðåòÿãèâàåì ïðàêòè÷åñêè ëþáûå ýëåìåíòû, â òîì ÷èñëå- ñëîæíûå êðèâîëèíåéíûå ïîâåðõíîñòè, îñóùåñòâëÿåì  ïîäãîòîâêó  è  ìîíòàæ ñòåíîâûõ ïàíåëåé è ïîëîâ èç êîæè íà îáúåêòàõ.</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">Åñëè ãîâîðèòü î ìåáåëè - Âû ïåðåòÿãèâàåòå êîæåé  ìåáåëü òîëüêî ñîáñòâåííîãî ïðîèçâîäñòâà èëè âîçìîæíà ïåðåòÿæêà êîæåé ìåáåëè çàêàç÷èêà?</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Êîíå÷íî ãîðàçäî óäîáíåå êîãäà ïåðåòÿæêà êîæåé ýëåìåíòîâ ìåáåëè çàêëàäûâàåòñÿ íà ýòàïå ïðîåêòèðîâêè. Îñóùåñòâëÿåòñÿ íåîáõîäèìàÿ ïîäãîòîâêà ïîâåðõíîñòåé, çàêëàäûâàþòñÿ  çàçîðû<br />
+            Ïîýòîìó ìû ïðåäïî÷èòàåì èçãîòàâëèâàòü ìåáåëü ñàìè, íî åñëè åñòü ïîæåëàíèÿ äåêîðèðîâàòü êîæåé ãîòîâóþ ìåáåëü è äëÿ ýòîãî åñòü âîçìîæíîñòü  ïîæàëóéñòà.</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">Ðàññêàæèòå î Âàøåì áðýíäå AMADEUS.</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Rodeo-  âîïëîùàåò â æèçíü ïîæåëàíèÿ äèçàéíåðîâ è çàêàç÷èêîâ, à AMADEUS - ýòî ìîå ëè÷íîå âèäåíèå êàê äîëæíà ñî÷åòàòüñÿ äîðîãàÿ êîæà ñ èçäåëèÿìè ñòîëÿðíûõ ìàñòåðñêèõ Èòàëèè</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">Òî åñòü Âû ñàìè ÿâëÿåòåñü äèçàéíåðîì ìåáåëè AMADEUS?</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Äà. Åñëè ìîæíî òàê âûðàçèòüñÿ -  äåëàþ òþíèíã èòàëüÿíñêîé ìåáåëè.<br />
+            Åùå ìíîãî èçäåëèé äëÿ Amadeus ðàçðàáàòûâàþ ñàì, â ýòîì òàêæå áîëüøàÿ çàñëóãà ìàñòåðîâ âûïîëíÿþùèõ ìîè ïîæåëàíèÿ, è ÿ î÷åíü áëàãîäàðåí èì çà õîðîøóþ ðàáîòó.</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">Ìåáåëü êàêèõ ñòèëåé ìîæíî èçãîòîâèòü íà îñíîâå ìîäåëåé èòàëüÿíñêèõ ñòîëÿðíûõ ìàñòåðñêèõ?</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Ìû òåñíî ñîòðóäíè÷àåì ñ ìàñòåðñêèìè, êîòîðûå äåëàþò ìîäåëè - êàðêàñû äëÿ ñàìûõ èçâåñòíûõ èòàëüÿíñêèõ áðåíäîâ. Â èõ êàòàëîãàõ  - îãðîìíûé âûáîð ìîäåëåé îò êëàññè÷åñêèõ âèäîâ äî áàðîêêî è àðò äåêî...<br />Ñåé÷àñ äëÿ íîâûõ èçäåëèé Amadeus ÿ ñòàðàþñü ïîäáèðàòü ìîäåëè - êàðêàñû íà îñíîâå êîòîðûõ, èòàëüÿíñêèå ôàáðèêè áóäóò âûñòàâëÿòü ñâîþ ìåáåëü íà âûñòàâêàõ ÷åðåç ïîëãîäà.</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">...Òî åñòü ó Âàñ ïîäîáíàÿ ìîäåëü ïîÿâèòñÿ ðàíüøå âûñòàâêè â Ìèëàíå?</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Äà.</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">Åñëè ãîâîðèòü î ìÿãêîé ìåáåëè - â ÷åì åùå èíäèâèäóàëüíîñòü èçäåëèé AMADEUS è Rodeo?</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Âîîáùå  åñëè ãîâîðèòü î äèâàíå èëè êðåñëå - ýòî ñòðîãî èíäèâèäóàëüíîå èçäåëèå.<br />
+            Ê ïðèìåðó äâà ÷åëîâåêà ñ ðàçíîé êîìïëåêöèåé íà îäíîì è òîì æå äèâàíå áóäóò ÷óâñòâîâàòü ñåáÿ ïî ðàçíîìó. Êîìó òî íóæíî æåñò÷å, êîìó ïîìÿã÷å, ðàçíûì ëþäÿì íóæåí ðàçíûé íàêëîí ñïèíêè<br />
+            Â ñîîòâåòñòâèè ñ ïîæåëàíèÿìè çàêàç÷èêà ìû ïîäáèðàåì íàïîëíåíèå, àäàïòèðóåì êîíêðåòíóþ ìîäåëü ìåáåëè ê êîíêðåòíîìó ÷åëîâåêó. Íè îäíà ôàáðèêà èëè áóòèê ýòîãî íå äåëàåò.</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">Êàêóþ åùå ìåáåëü Âû ìîæåòå ñäåëàòü?</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Ìû  èçãîòàâëèâàåì  ýëèòíûå øêàôû ñ ôàñàäàìè è âíóòðåííèìè ýëåìåíòàìè îòäåëàííûå êîæåé, òóìáû, ñòîëû, êðîâàòè, êóõíè... Ñòàðàåìñÿ ïðèìåíÿòü èíòåðåñíûå ìåõàíèçìû...<br />Äåëàåì êðàøåíèå, çîëî÷åíèå ìåáåëè è ýëåìåíòîâ èíòåðüåðà íà îáúåêòàõ..</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">Âû òàêæå äåëàåòå çîëî÷åíèå?</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Äà, êîíå÷íî. Âñåãäà õîðîøî êîãäà çîëî÷åíèå ìåáåëè, è ê ïðèìåðó, çîëî÷åíèå ëåïíèíû íà îáúåêòå ñäåëàíî îäíîé ðóêîé - ýòî èñêëþ÷àåò îøèáêè â îòòåíêå çîëîòà..</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">Ýòî çîëî÷åíèå  ñóñàëüíûì  çîëîòîì?</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Íàñòîÿùåå ñóñàëüíîå çîëîòî ñåé÷àñ â ìåáåëè ïðàêòè÷åñêè íå èñïîëüçóþò. Äëÿ çîëî÷åíèÿ ìû èñïîëüçóåì ïîòàëü - ïîçîëî÷åííóþ ôîëüãó.<br />
+            ß ñàì ñ íàøèìè ìàñòåðàìè åçäèë â Èòàëèþ ó÷èòüñÿ ó î÷åíü èçâåñòíîãî èòàëüÿíñêîãî äîðàòîðå - ìàñòåðà ïî çîëî÷åíèþ. Çîëîòèë ñàì ìåáåëü. Î÷åíü êðàñèâàÿ è èíòåðåñíàÿ ðàáîòà</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">Êàê ñðàâíèòü ïî ñòîèìîñòè AMADEUS è Rodeo ñ èçâåñòíûìè èòàëüÿíñêèìè ìåáåëüíûìè áðåíäàìè?</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Çíàåòå - ýòî êàê ñðàâíèâàòü ñòîèìîñòü ðàçðàáîòêè ïèëîòíîé ìîäåëè àâòîìîáèëÿ ñî ñòîèìîñòüþ àâòîìîáèëÿ ñ êîíâååðà.<br /><br />
+            Ñëîæíî ñðàâíèòü ïî ñòîèìîñòè - åñëè  õîòèòå - ìîæíî ñðàâíèòü ïî ñåáåñòîèìîñòè.<br /><br />
+            Åùå ðàç ïîä÷åðêíó - âñå ÷òî ìû ïðåäëàãàåì  ýòî àâòîðñêàÿ ìåáåëü ðó÷íîé ðàáîòû. Ìû íèêîãäà íå êîïèðóåì òî ÷òî ñäåëàëè äðóãèå, íî ñòàðàåìñÿ ñëåäîâàòü ìîäíûì òðýíäàì â èíòåðüåðå.<br /><br />
+            Òåì íå ìåíåå åñëè ãîâîðèòü î ñåáåñòîèìîñòè - íå ñåêðåò ÷òî èçâåñòíûå áðåíäû äîñòàòî÷íî îãðàíè÷åíû öåíîâûì äèàïàçîíîì. Íåîáõîäèìî ïîääåðæèâàòü óðîâåíü ðåíòàáåëüíîñòè âñåì ó÷àñòíèêàì äëèííîé öåïî÷êè îò ôàáðèêè ïðîèçâîäèòåëÿ, àãåíòàì, äèëåðàì è ðîçíè÷íûì ñàëîíàì. Ïðèáàâüòå åùå ñòîèìîñòü òðàíñïîðòèðîâêè è òàìîæíè.<br /><br />
+            Èìåÿ èçâåñòíûé áðýíä, ôàáðèêè  ìîãóò ñåáå ïîçâîëèòü íå ïðèìåíÿòü äîðîãèå îòäåëî÷íûå ìàòåðèàëû - ê ïðèìåðó   íå èñïîëüçóþò ñàìûå äîðîãèå âèäû îáèâî÷íûõ êîæ, êîòîðûå èñïîëüçóåì  ìû.<br />
+            Áîëüøàÿ ñîñòàâëÿþùàÿ öåíû íà ìåáåëü îò èçâåñòíûõ êîìïàíèé ýòî ïëàòà çà ñàì áðýíä .<br /><br />
+            Â íàøåì ñëó÷àå ìû ðàáîòàåì ñ äèçàéíåðîì èëè çàêàç÷èêîì íàïðÿìóþ è ñîñòàâëÿþùèå öåíû - ýòî ðàçðàáîòêà ïðàêòè÷åñêè âñåãäà - èíäèâèäóàëüíîãî ýêñêëþçèâíîãî èçäåëèÿ, ëó÷øèå, ÷àñòî ñàìûå äîðîãèå ìàòåðèàëû, ðó÷íàÿ ðàáîòà êëàññíûõ ìàñòåðîâ è ïðåäåëüíî áûñòðûå ñðîêè èñïîëíåíèÿ çàêàçîâ.</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">Êàêèì îáðàçîì âû äîáèâàåòåñü áûñòðûõ ñðîêîâ èñïîëíåíèÿ çàêàçîâ?</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Áîëüøèíñòâî êîìïëåêòóþùèõ ïðèëåòàåò àâèàòðàíñïîðòîì.<br />
+            Ïîýòîìó âðåìÿ èñïîëíåíèÿ çàêàçîâ îãðàíè÷åíî òîëüêî ñàìèì ðàáî÷èì ïðîöåññîì, è íå çàâèñèò îò äîëãîé òðàíñïîðòèðîâêè, äëèòåëüíîãî  òàìîæåííîãî îôîðìëåíèÿ è ò.ä. Ââîç êîìïëåêòóþùèõ îñóùåñòâëÿåòñÿ ïîëíîñòüþ ëåãàëüíî  îïëà÷èâàþòñÿ âñå íàëîãè è ïîøëèíû- òåì ñàìûì íåò íåîáõîäèìîñòè ñòîÿòü â î÷åðåäÿõ íà òàìîæíå îæèäàÿ «îêíà»<br />
+            Äîëãîå îæèäàíèå ìåáåëè - òî ñ ÷åì, âîçìîæíî, ñòàëêèâàëèñü ïîêóïàòåëè èíòåðüåðíûõ ñàëîíîâ - ýòî íå ïðî íàñ.</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">Âû íå îãðàíè÷åíû òîëüêî êîæåé</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Ìû ñïåöèàëèçèðóåìñÿ íà êîæå - ìû åå õîðîøî çíàåì ýòî ñëîæíûé ìàòåðèàë, êîòîðûé íå ïðîùàåò îøèáîê â ðàáîòå. Íî åñëè çàêàç÷èê ïðåäïî÷èòàåò òêàíü - ýòî òîëüêî îáëåã÷àåò íàøó çàäà÷ó.</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">Amadeus è Rodeo ýòî ïðåäìåòû òîëüêî äëÿ äîìà èëè Âû òàêæå èçãîòàâëèâàåòå ìåáåëü äëÿ ðåñòîðàíîâ, îòåëåé?</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Íàøà ìåáåëü ñòîèò âî ìíîãèõ èçâåñòíûõ  ðåñòîðàíàõ, íî ïî áîëüøåé ÷àñòè ýòî èçäåëèÿ äîñòàòî÷íî ïðîñòûõ ôîðì.<br />
+            ×åñòíî ãîâîðÿ, íàì áû õîòåëîñü áîëüøå ðàçðàáàòûâàòü êðàñèâîé ìåáåëè äëÿ ðåñòîðàíîâ.<br /><br />
+            Ðåñòîðàíû ïðàêòè÷åñêè âñåãäà òðàòÿò îãðîìíûå äåíüãè íà øèêàðíóþ äîðîãóþ ýêñêëþçèâíóþ îòäåëêó, íî â áîëüøèíñòâå ñëó÷àåâ ýêîíîìÿò íà ìåáåëè - çàêàçûâàþò ïðîñòûå ëàâêè èëè ñòàâÿò ìàãàçèííóþ ìåáåëü.<br />Ðåñòîðàí è âñå ÷òî ñ íèì ñâÿçàíî ýòî, êîíå÷íî, áîëüøîå âëîæåíèå, íî èíòåðüåðû ðåñòîðàíîâ è îòåëåé âûñîêîãî óðîâíÿ  íóæíî ðàññìàòðèâàòü êàê èíâåñòèöèþ.<br />Èçãîòîâëåíèå ýêñêëþçèâíîé ìåáåëè ñïåöèàëüíî ïîä èíòåðüåð ýòîãî ðåñòîðàíà  ýòî íåîáõîäèìàÿ ÷àñòü òàêîé èíâåñòèöèè áåç êîòîðîé îáúåêò íå áóäåò èìåòü çàêîí÷åííûé âèä.</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">Åñëè áû õîçÿåâà ðåñòîðàíîâ âèäåëè êàê ëþáÿò ïîñåòèòåëè Âàøåãî ñòåíäà (à îñîáåííî êðàñèâûå äåâóøêè) ôîòîãðàôèðîâàòüñÿ íà ìåáåëè AMADEUS!</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Äà! Ýòî òî÷íî! Åñëè áû òàêàÿ ìåáåëü ñòîÿëà â èõ êàôå èëè ðåñòîðàíå - íàðîä áû  ïîñåùàë òîëüêî èç çà âîçìîæíîñòè ñôîòîãðàôèðîâàòüñÿ!!!</font> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">SALON</font></strong></em> <br />
+            <em><font size="2" color="#FFFFFF">Ìíå êàæåòñÿ ìåáåëü AMADEUS òàêæå õîðîøî äîïîëíèò èíòåðüåð ìàãàçèíà, èëè ïðàâèëüíåå - èíòåðüåð áóòèêà.</font></em> <br />
+            <br />
+            <em><strong><font size="2" color="#FFFFFF">À. Ã.</font></strong></em> <br />
+            <font size="2" color="#FFFFFF">Êîíå÷íî. Äèçàéí áóòèêîâ, þâåëèðíûõ ñàëîíîâ òàêæå íå îáîéäåòñÿ áåç íàñ!<br />Ìû âñåãäà ãîòîâû ïîìî÷ü â èçãîòîâëåíèè ýêñêëþçèâíîé ìåáåëè íà ëþáîé îáúåêò!</font> <br />
+            <br /><br /><br />
+<h1 style="color:white;font-size:10px;font-weight:normal;">&copy; RODEO - èíòåðüåð ìàãàçèíà, äîìà, îôèñà èç íàòóðàëüíîé êîæè. Ýêñêëþçèâíûé äèçàéí áóòèêîâ. Àâòîðñêàÿ ìåáåëü.</h1>
+        </p>      </td>
+      <td valign="top" width="100%">
+        <table width="100%" border="0" cellspacing="0" cellpadding="5">
+         <tr>
+            <td valign="top"><div align="center"><a href="photos/gallery/safronov_b.jpg" target="_blank" onClick="OpenImagePopup('photos/gallery/safronov_b.jpg'); return false;"><img src="photos/gallery/safronov.jpg" alt="Íèêàñ Ñàôðîíîâ è ó÷ðåäèòåëü Rodeo, AMADEUS Àëåêñåé Ãðèáîâ â íàøåì ØîóÐóìå" title="Íèêàñ Ñàôðîíîâ è ó÷ðåäèòåëü Rodeo, AMADEUS Àëåêñåé Ãðèáîâ â íàøåì ØîóÐóìå" border="0"/></a></div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="style1"><font color="#FFFFFF">Íèêàñ Ñàôðîíîâ è ó÷ðåäèòåëü Rodeo, AMADEUS Àëåêñåé Ãðèáîâ â íàøåì ØîóÐóìå</font></div>
+                <br />
+              <br /></td>
+          </tr>
+		  <tr>
+            <td valign="top"><div align="center"><a href="photos/gallery/hazanov_b.jpg" target="_blank" onClick="OpenImagePopup('photos/gallery/hazanov_b.jpg'); return false;"><img src="photos/gallery/hazanov.jpg" alt="Ãåííàäèé Õàçàíîâ" title="Ãåííàäèé Õàçàíîâ" border="0"/></a></div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="style1"><font color="#FFFFFF">Ãåííàäèé Õàçàíîâ</font></div>
+                <br />
+              <br /></td>
+          </tr>
+          <tr>
+            <td valign="top"><div align="center"><a href="photos/gallery/villi_tokarev.jpg" target="_blank" onClick="OpenImagePopup('photos/gallery/villi_tokarev.jpg'); return false;"><img src="photos/gallery/villi_tokarev_s.jpg" alt="Âèëëè Òîêàðåâ" title="Âèëëè Òîêàðåâ" border="0"/></a></div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="style1"><font color="#FFFFFF">Âèëëè Òîêàðåâ</font></div>
+                <br />
+              <br /></td>
+          </tr>
+          <tr>
+            <td><div align="center"><a href="photos/gallery/saltykova_b.jpg" target="_blank" onClick="OpenImagePopup('photos/gallery/saltykova_b.jpg'); return false;"><img src="photos/gallery/saltykova.jpg" alt="Èðèíà Ñàëòûêîâà è åå êðåñëî AMADEUS â íàøåì ØîóÐóìå" title="Èðèíà Ñàëòûêîâà è åå êðåñëî AMADEUS â íàøåì ØîóÐóìå" border="0"/></a></div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="style1"><font color="#FFFFFF">Èðèíà Ñàëòûêîâà è åå êðåñëî AMADEUS â íàøåì ØîóÐóìå</font></div>
+                <br />
+              <br /></td>
+          </tr>
+          <tr>
+            <td><div align="center"><a href="photos/gallery/isis_fair_b.jpg" target="_blank" onClick="OpenImagePopup('photos/gallery/isis_fair_b.jpg'); return false;"><img src="photos/gallery/isis_fair.jpg" alt="Âðó÷åíèå äèïëîìà æóðíàëà SALON íà âûñòàâêå ISIS" title="Âðó÷åíèå äèïëîìà æóðíàëà SALON íà âûñòàâêå ISIS" border="0" /></a></div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="style1"><font color="#FFFFFF">Âðó÷åíèå äèïëîìà îò æóðíàëà SALON íà âûñòàâêå ISIS</font></div>
+                <br />
+              <br /></td>
+          </tr>
+          <tr>
+            <td><div align="center"><a href="photos/gallery/divan_5seats_b.jpg" target="_blank" onClick="OpenImagePopup('photos/gallery/divan_5seats_b.jpg'); return false;"><img src="photos/gallery/divan_5seats.jpg" alt="Ýêñïîçèöèÿ Rodeo/AMADEUS ñ âûñòàâêè ISIS (ñòåíîâûå êîæàíûå ïàíåëè Damasco Nero/Tone è Capri Nero, äèâàí 5-ìåñò. ìîäåëü 067, îáèâêà Laminato Gold 7764)" title="Ýêñïîçèöèÿ Rodeo/AMADEUS ñ âûñòàâêè ISIS (ñòåíîâûå êîæàíûå ïàíåëè Damasco Nero/Tone è Capri Nero, äèâàí 5-ìåñò. ìîäåëü 067, îáèâêà Laminato Gold 7764)" border="0" /></a></div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="style1"><font color="#FFFFFF">Ýêñïîçèöèÿ Rodeo/AMADEUS<br />Âûñòàâêà ISIS<br />(ñòåíîâûå êîæàíûå ïàíåëè Damasco Nero/Tone è Capri Nero, äèâàí 5-ìåñò. ìîäåëü 067, îáèâêà Laminato Gold 7764)</font></div>
+                <br />
+              <br /></td>
+          </tr>
+          <tr>
+            <td><div align="center"><a href="photos/gallery/divan_3seats_b.jpg" target="_blank" onClick="OpenImagePopup('photos/gallery/divan_3seats_b.jpg'); return false;"><img src="photos/gallery/divan_3seats.jpg" alt="Ýêñïîçèöèÿ Rodeo/AMADEUS ñ âûñòàâêè ISIS (Äèâàí 3-ìåñò. ìîäåëü 'GLAM', îáèâêà êîæà 586/A Prugna è Pitone 537/A Perla)" title="Ýêñïîçèöèÿ Rodeo/AMADEUS ñ âûñòàâêè ISIS (Äèâàí 3-ìåñò. ìîäåëü 'GLAM', îáèâêà êîæà 586/A Prugna è Pitone 537/A Perla)" border="0" /></a></div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="style1"><font color="#FFFFFF">Ýêñïîçèöèÿ Rodeo/AMADEUS<br />Âûñòàâêà ISIS<br />(Äèâàí 3-ìåñò. ìîäåëü "GLAM", îáèâêà êîæà 586/A Prugna è Pitone 537/A Perla)</font></div>
+                <br />
+              <br /></td>
+          </tr>
+          <tr>
+            <td><div align="center"><a href="photos/gallery/isis3_b.jpg" target="_blank" onClick="OpenImagePopup('photos/gallery/isis3_b.jpg'); return false;"><img src="photos/gallery/isis3.jpg" alt="Ýêñïîçèöèÿ Rodeo/AMADEUS ñ âûñòàâêè ISIS (äâåðü øêàôà êîæà Gola Grande Nero, êðåñëî Carlos îáèâêà ML 38 Pitone Perla, íîâàÿ ìîäåëü êîìîäà è çåðêàëî)" title="Ýêñïîçèöèÿ Rodeo/AMADEUS ñ âûñòàâêè ISIS (äâåðü øêàôà êîæà Gola Grande Nero, êðåñëî Carlos îáèâêà ML 38 Pitone Perla, íîâàÿ ìîäåëü êîìîäà è çåðêàëî)" border="0" /></a></div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="style1"><font color="#FFFFFF">Ýêñïîçèöèÿ Rodeo/AMADEUS<br />Âûñòàâêà ISIS<br />(äâåðü øêàôà êîæà Gola Grande Nero, êðåñëî Carlos îáèâêà ML 38 Pitone Perla, íîâàÿ ìîäåëü êîìîäà è çåðêàëî)</font></div>
+                <br />
+              <br /></td>
+          </tr>
+          <tr>
+            <td><div align="center"><a href="photos/gallery/isis4_b.jpg" target="_blank" onClick="OpenImagePopup('photos/gallery/isis4_b.jpg'); return false;"><img src="photos/gallery/isis4.jpg" alt="Ýêñïîçèöèÿ Rodeo/AMADEUS ñ âûñòàâêè ISIS (êðåñëî AMADEUS îáèâêà êîæà Paillet Oro)" title="Ýêñïîçèöèÿ Rodeo/AMADEUS ñ âûñòàâêè ISIS (êðåñëî AMADEUS îáèâêà êîæà Paillet Oro)" border="0" /></a></div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="style1"><font color="#FFFFFF">Ýêñïîçèöèÿ Rodeo/AMADEUS<br />Âûñòàâêà ISIS<br />(êðåñëî AMADEUS îáèâêà êîæà Paillet Oro)</font></div>
+                <br />
+              <br /></td>
+          </tr>
+          <tr>
+            <td><div align="center"><a href="photos/gallery/MG_7524_b.jpg" target="_blank" onClick="OpenImagePopup('photos/gallery/MG_7524_b.jpg'); return false;"><img src="photos/gallery/MG_7524s.jpg" alt="Ýêñïîçèöèÿ Rodeo/AMADEUS ñ âûñòàâêè ISIS (íîâàÿ ìîäåëü êðîâàòü êîæà Sughero Liscio Oro, ëàêîâàÿ êîæà Vernice Black; Êîâåð êîæà Cavallino Nero, Sughero Liscio Oro, Gola Grande Nero)" title="Ýêñïîçèöèÿ Rodeo/AMADEUS ñ âûñòàâêè ISIS (íîâàÿ ìîäåëü êðîâàòü êîæà Sughero Liscio Oro, ëàêîâàÿ êîæà Vernice Black; Êîâåð êîæà Cavallino Nero, Sughero Liscio Oro, Gola Grande Nero)" border="0" /></a></div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="style1"><font color="#FFFFFF">Ýêñïîçèöèÿ Rodeo/AMADEUS<br />Âûñòàâêà ISIS<br />(íîâàÿ ìîäåëü êðîâàòü êîæà Sughero Liscio Oro, ëàêîâàÿ êîæà Vernice Black; Êîâåð êîæà Cavallino Nero, Sughero Liscio Oro, Gola Grande Nero)</font></div>
+                <br />
+              <br /></td>
+          </tr>
+          <tr>
+            <td><div align="center"><a href="photos/gallery/MG_7500_b.jpg" target="_blank" onClick="OpenImagePopup('photos/gallery/MG_7500_b.jpg'); return false;"><img src="photos/gallery/MG_7500s.jpg" alt="Ýêñïîçèöèÿ Rodeo/AMADEUS c âûñòàâêè ISIS (çåðêàëî Round Mirror, îòäåëêà êðèñòàëû Swarovski, êîìîä Black Shiny)" title="Ýêñïîçèöèÿ Rodeo/AMADEUS c âûñòàâêè ISIS (çåðêàëî Round Mirror, îòäåëêà êðèñòàëû Swarovski, êîìîä Black Shiny)" border="0" /></a></div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="style1"><font color="#FFFFFF">Ýêñïîçèöèÿ Rodeo/AMADEUS<br />Âûñòàâêà ISIS<br />(çåðêàëî Round Mirror, îòäåëêà êðèñòàëû Swarovski, êîìîä Black Shiny)</font></div>
+                <br />
+              <br /></td>
+          </tr>
+      </table></td>
+    </tr>
+  </table>
+<table><tr><td>
+<div><!--SpyLOG-->
+<span id="spylog2000488"></span><script type="text/javascript"> var spylog = { counter: 2000488, image: 5012, next: spylog }; document.write(unescape('%3Cscript src%3D"http' + (('https:' == document.location.protocol) ? 's' : '') + '://counter.spylog.com/cnt.js" defer="defer"%3E%3C/script%3E')); </script>
+<!--SpyLOG--></div></td>
+<td>
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t44.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border=0 width=31 height=31><\/a>")//--></script><!--/LiveInternet--></td>
+
+<td>
+
+<!-- Yandex.Metrika -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter971135 = new Ya.Metrika(971135); } catch(e){}
+</script></div>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/971135"  alt="" /></div></noscript>
+<!-- /Yandex.Metrika --></td>
+
+<td>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15948018-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</td>
+
+</tr></table>     
+<a style="color:white;font-size:9px;" href="http://www.unmedia.ru/" target="_blank">ðàñêðóòêà ñàéòà</a>
+
+</div>
+<div id="container_bottom">
+<a href="mailto:maximzar@hotbox.ru" class="mz">DESIGNED & PROGRAMMED BY MAXIMZAR</a>&nbsp;
+</div>
+</body>
+</html>

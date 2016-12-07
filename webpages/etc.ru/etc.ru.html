@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--[if lt IE 10]><link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/Content/img/favicon.ico" /><![endif]-->
+		<link rel="icon" type="image/png" href="/Content/img/favicon.png" />
+		<title></title>
+			<!--[if lt IE 9]><script src="/Content/js/html5.js"></script><![endif]-->
+	<style type="text/css">
+		
+		@import url('/Content/css/!html.01.normalize-1.0.css');
+		@import url('/Content/css/!html.02.general-1.0.css?v7');
+		@import url('/Content/css/!html.03.header-1.0.css?v5');
+		@import url('/Content/css/!html.04.mainnav-1.0.css?v2');
+		@import url('/Content/css/!html.04a.sitemap-1.0.css?v2');
+		@import url('/Content/css/!html.05.widgets-1.0.css');
+		@import url('/Content/css/!html.06.messages-1.0.css');
+		@import url('/Content/css/!html.07.datatable-1.0.css?v5');
+		@import url('/Content/css/!html.08.footer-1.0.css?v6');
+		@import url('/Content/css/!html.09.calendar-1.0.css?v20160411');
+		@import url('/Content/css/!html.10.hrm.employee-1.0.css');
+		@import url('/Content/css/!html.12.digitalsign-1.0.css?v6');
+		@import url('/Content/css/!html.13.jr.request-1.0.css');
+		@import url('/Content/css/!html.14.fastreport-1.0.css');
+		@import url('/Content/css/!icons-1.0.css?v3');
+		@import url('/Content/css/!icons.table-1.0.css?v2');
+		@import url('/Content/css/!icons.textEditor.css?v2');
+	</style>
+	<style type="text/css">
+		
+		@import url('/Content/css/!jq.01.dm.trace-1.0.css');
+		@import url('/Content/css/!jq.02.dm.notify-1.0.css?v6');
+		@import url('/Content/css/!jq.03.dm.choice-1.0.css');
+		@import url('/Content/css/!jq.04.dm.resize.compact-1.0.css?v6');
+		@import url('/Content/css/!jq.05.dm.load-1.0.css?v2');
+		@import url('/Content/css/!jq.06.dm.lookup-1.0.css?v2');
+		@import url('/Content/css/!jq.07.dm.calendar-1.0.css?v20160411');
+		@import url('/Content/css/!jq.08.etc.popup-1.0.css?v3');
+		@import url('/Content/css/!jq.09.dm.lookup2-1.0.css?v2');
+		@import url('/Content/css/!jq.10.etc.grid-1.0.css?v3');
+		@import url('/Content/css/!jq.11.etc.layoutEditor.css?v6');
+		@import url('/Content/css/!jq.12.etc.htmlEditor.css?v8');		
+	</style>
+	<style type="text/css">
+		
+		@import url('/Content/css/jquery-ui-1.10.3.custom.css');
+		@import url('/Content/css/jquery.jqplot.min.css');
+		@import url('/Content/css/plugins/treelist/jquery.treetable.css');
+		@import url('/Content/css/plugins/treelist/jquery.treetable.theme.default.css');
+	</style>
+	<style type="text/css">
+		
+ @import url('/Areas/AC2/Content/css/roleaccess.css?v6');  @import url('/Areas/Info/Content/css/!html.info-1.0.css?v4'); 	</style>
+	<!--[if lte IE 8]><style type="text/css">
+		
+		@import url('/Content/css/ie7!.html.08.footer-1.0.css');
+		@import url('/Content/css/ie7!.jq.01.dm.trace-1.0.css');
+		@import url('/Content/css/ie8!.jq.etc.grid-1.0.css');
+	</style><![endif]-->	
+	<style type="text/css">			
+		
+		@import url('/Content/css/!html.99.new-design.css?v8');
+		@import url('/Content/css/media-print.css') print;
+	</style>	
+		<style type="text/css">
+			@import url('/Designs/ETC/css/!html.99.etc.main.css?v4');
+		</style>
+
+			<script type="text/javascript" src="/Content/js/dm.lazy-1.0.js?v2"></script>
+	<script type="text/javascript" src="/Content/js/jq-1.9.0.js"></script>
+	<script type="text/javascript" src="/Content/js/jquery-migrate-1.2.1.js"></script> 
+	<script type="text/javascript" src="/Content/js/jquery-ui-1.10.3.custom.js"></script>
+	<script type="text/javascript" src="/Content/js/jquery.globalize/globalize.js"></script>
+	<script type="text/javascript" src="/Content/js/jquery.globalize/cultures/globalize.culture.ru-RU.js"></script>
+	<script type="text/javascript" src="/Content/js/history.js"></script>
+	<script type="text/javascript" src="/Content/js/history.adapter.jquery.js"></script>
+	<script type="text/javascript" src="/Content/js/history.html4.js"></script>
+	<script type="text/javascript" src="/Content/js/jq.dm.trace-1.0.js"></script>
+	<script type="text/javascript" src="/Content/js/jq.dm.notify-1.01.js?v9"></script>
+	<script type="text/javascript" src="/Content/js/jq.dm.resize-1.0.js?v2"></script>
+	<script type="text/javascript" src="/Content/js/jq.dm.mainnav-1.0.js?v4"></script>
+	<script type="text/javascript" src="/Content/js/jq.dm.ajaxnav-1.0.js?v19"></script>
+	<script type="text/javascript" src="/Content/js/jq.etc.popup-1.0.js?v6"></script>
+	<script type="text/javascript" src="/Content/js/jq.dm.lookup-1.0.js"></script>
+	<script type="text/javascript" src="/Content/js/jq.dm.lookup2-1.0.js?v20160404"></script>
+	<script type="text/javascript" src="/Content/js/jq.dm.calendar-1.1.js?v20160413"></script>
+	<script type="text/javascript" src="/Content/js/jq.etc.grid-1.1.js?v10"></script>
+	<script type="text/javascript" src="/Content/js/jq.etc.layoutEditor-1.0.js?v101"></script>
+	<script type="text/javascript" src="/Content/js/jq.etc.htmlEditor-1.0.js?v16"></script>
+	<script type="text/javascript" src="/Content/js/jq.etc.globalKeyEvents-1.0.js"></script>
+	<script type="text/javascript" src="/Content/js/jq.jr.request-1.0.js"></script>
+	<script type="text/javascript" src="/Content/js/jquery.jshowoff.js?v=1"></script>	 
+    <script type="text/javascript" src="/Content/js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			Globalize.culture = Globalize.cultures["ru-RU"];
+			Globalize.culture.numberFormat["."] = ".";
+			Globalize.culture.numberFormat[","] = " ";
+		});
+	</script>
+	<script type="text/javascript" src="/Content/js/jquery.numberformatter-1.2.3.js?1"></script>
+	<script type="text/javascript" src="/Content/js/jquery-ui-nf-1.0.js?v4"></script>
+	<script type="text/javascript" src="/Content/js/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="/Content/js/jq.etc.ds-2.0.js?v20160316"></script>
+	<script type="text/javascript" src="/Content/js/cryptopro.api-1.0.js?v2"></script>
+	<script type="text/javascript" src="/Content/js/jq.etc.ds.cp-2.0.js?v2"></script>
+	<script type="text/javascript" src="/Content/js/jquery.fileUpload.lib.js"></script>
+	<script type="text/javascript" src="/Content/js/jquery.iframe-transport.js"></script>
+	<script type="text/javascript" src="/Content/js/jquery.inputmask.js"></script>
+	<script type="text/javascript" src="/Content/js/jquery.inputmask.extensions.js"></script>
+	<script type="text/javascript" src="/Content/js/jquery.inputmask.date.extensions.js"></script>
+	<script type="text/javascript" src="/Content/js/jquery.inputmask.numeric.extensions.js"></script>
+	<script type="text/javascript" src="/Content/js/jquery.inputmask.regex.extensions.js"></script>
+	<script type="text/javascript" src="/Content/js/jquery.elementEvents.js?v6"></script>
+		<script type="text/javascript" src="/Areas/JR/Content/js/jr.report.result.js"></script>
+		<script type="text/javascript" src="/Areas/JR/Content/js/jr.report.column.js"></script>
+		<script type="text/javascript" src="/Areas/JR/Content/js/jr.waiting.task.js"></script>
+		<script type="text/javascript" src="/Areas/PFT/Content/js/pft.template.js?v3"></script>
+		<script type="text/javascript" src="/Areas/PFT/Content/js/pft.print.form.js?v2"></script>
+		<script type="text/javascript" src="/Areas/PFT/Content/js/pft.attach.js?v2"></script>
+<script src="/WebResource.axd?d=RNnDeWyk6hBOld_ri7iie2ZovRd2c4K8cZw99ASipajUd3NPwMaH5713ix8CvyzE4VqIQUFA6__Lcw4h9qlSPrax5vP-GTiQUTvjiz8w64aOtukokJDfxWK2lVKH_8Pps5NKNav-lrrz4qIq6ttk2LaaXNmlbwbVs--QIgXHr7I1&t=635858778121753670" type="text/javascript"></script>
+
+	</head>
+	<body data-onresize='{ "fill": 1400, "nominor": 1024 }'  >
+		
+		<header id="topheader">
+			<div class="content">
+	<nav id="toplinks">
+		<div class="layout">
+			<span><a href="/Info/contacts">Подробные контакты</a></span>
+			<span>email: info@etc.ru</span>
+			<span>+7 (495) 245-02-17</span>
+		</div>
+	</nav>
+</div>
+<div class="content1">
+	<div class="layout">
+		<div class="logo1"><a href="/">&nbsp;</a></div>
+		<div class="navigation">
+			<a href="/Info/solutions" class="topMenuButton"><div class="buttonBgLeft">Решения</div></a>
+			<a href="/Info/technologies" class="topMenuButton"><div class="buttonBgLeft">Технологии</div></a>
+			<a href="/Info/experience" class="topMenuButton"><div class="buttonBgLeft">Опыт</div></a>
+			<a href="/Info/trainingcenter" class="topMenuButton"><div class="buttonBgLeft">Учебный центр</div></a>
+			<a href="/Info/techsupport" class="topMenuButton"><div class="buttonBgLeft">Техподдержка</div></a>
+			<a href="/Info/partnership" class="topMenuButton"><div class="buttonBgLeft">Сотрудничество</div></a>
+			<a href="/Info/about" class="topMenuButton"><div class="buttonBgLeft">О компании</div></a>
+			<a href="/Info/contacts" class="topMenuButton"><div class="buttonBgLeft">Контакты</div></a>
+		</div>
+	</div>			
+</div>
+
+		</header>
+		<section id="workplace">
+			<div class="layout" id="wplayout">
+				<section id="content">
+					<section id="indicator"><header><div class="layout"><h1 class="ashow"></h1></div></header><span class="loading"><div class="progress"></div></span></section>
+					<section id="ds2" style="display: none;">
+						
+							<header>
+		<div class="layout">
+			
+				<h1 class="ashow pagetitle hasicon"  style="background-image:url(&#39;/Content/img/ds/check.png&#39;);">DocName</h1>
+		</div>
+	</header>
+
+						<table class="values">
+							<tr id="docssw"><th>Документы для подписи</th><td><select id="docs"></select></td></tr>
+							<tr class="DSFileContentView"><td class="containerHead" colspan="2">Информация о файле</td></tr>
+							<tr class="DSFileContentView"><th>Хэш файла</th><td id="dsfhash"></td></tr>
+							<tr class="DSFileContentView"><th>Скачать файл</th><td><a id="dsflink" data-load="ignore"></a><span class="size"></span></td></tr>
+						</table>
+						<div class="preview"><iframe></iframe></div>
+						<footer><div class="layout"><table><tbody>
+							<tr><td id="r"><div id="doSignKeys"><button id="doSignDoc">Подписать</button></div><div id="doKeys"></div><div><button id="cancelSignDoc">Отменить</button></div></td></tr>
+						</tbody></table><div class="copyright"> &copy; 2012-2016</div>
+</div></footer>
+					</section>
+					<section id="container">
+							<!-- _WorkplaceLayout -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter30977531 = new Ya.Metrika({
+                    id:30977531,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/30977531" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- MainPage -->
+
+<style type="text/css">BODY
+{
+	background				: #F0F0F0 url('/Designs/ETC/img/bg_main.jpg') no-repeat;
+}
+#workplace
+{
+	background				: none;
+}
+#workplace > .layout
+{
+	background				: none;
+}
+.layoutTable { border: none; }
+
+.slide_name {
+line-height:1.2em;
+}
+
+.layoutTable .btntd{ padding-left: 20px; }
+.layoutTable .cmr{ text-align:right; }
+.layoutTable .cml{ text-align:left; }
+</style><table id="P616936E24F1E4CA09E705A2F412D5943" class="layoutTable"><tr><td colspan="6"><div class="carousel">
+					<div class="arrowNext"></div>
+					<div class="arrowPrev"></div>
+					<div class="carouselCollection">
+						<div class="carouselItem" data-link=".item1">
+							<table>
+								<tbody><tr>
+									<td class="photo">
+										<img src="/_pfiles/2015/01/20/14-03-01_2C107D518DD44FB0AE08C789E5EA5FF8.Content.png">
+									</td>
+									<td class="info">
+
+<div><br></div><h1 style="padding: 0;" class="slide_name">Подготовка и сбор сводной отчетности</h1><div><br></div>
+<div>Автоматизация процесса подготовки, сбора и проверки отчетности, выполнения операций по своду и консолидации информации</div><div><br></div>
+										<a href="/Info/reporting" class="Button"><div class="buttonBgLeft">Подробнее</div>
+									</a></td>
+								</tr>
+							</tbody></table>
+						</div>
+						<div class="carouselItem" data-link=".item2">
+							<table>
+								<tbody><tr>
+									<td class="photo">
+										<img src="/_pfiles/2015/01/20/14-03-19_385827C91E104B51A99B69B76F7AD31A.Content.png">
+									</td>
+									<td class="info">
+
+										<div><br></div><h1 style="padding: 0;" class="slide_name">Автоматизация управленческого учета</h1><div><br></div>
+<div>Ведение учета операций, подготовки и сбора отчетности управленческого учета, контроль нераспределенных материальных ценностей, а также построение аналитических срезов по головной организации и структурным подразделениям</div><div><br></div>
+										<a href="/Info/management" class="Button"><div class="buttonBgLeft">Подробнее</div>
+									</a>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						<div class="carouselItem" data-link=".item3">
+							<table>
+								<tbody><tr>
+									<td class="photo">
+										<img src="/_pfiles/2015/01/20/14-03-37_2C00E41C4AE345AF9E94ABBE22A2856D.Content.png">
+									</td>
+									<td class="info">
+
+										<div><br></div><h1 style="padding: 0;" class="slide_name">Автоматизация бухгалтерского учета</h1><div><br></div>
+<div>Оперативный и достоверный контроль использования бюджетных средств по целевому назначению с учетом требований нормативной документации</div><div><br></div>
+										<a href="/Info/accounting" class="Button"><div class="buttonBgLeft">Подробнее</div>
+									</a>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						<div class="carouselItem" data-link=".item4">
+							<table>
+								<tbody><tr>
+									<td class="photo">
+										<img src="/_pfiles/2015/01/20/14-03-49_F885ED42E1E846A39A53C6198F76AE75.Content.png">
+									</td>
+									<td class="info">
+
+										<div><br></div><h1 style="padding: 0;" class="slide_name">Автоматизация процессов кадрового учета и расчетов с персоналом</h1><div><br></div>
+<div>Централизованный учет данных по сотрудникам организации и территориальным подразделениям, расчет заработной платы, дотаций и начислений</div><div><br></div>
+										<a href="/Info/manpower" class="Button"><div class="buttonBgLeft">Подробнее</div>
+									</a>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						<div class="carouselItem" data-link=".item5">
+							<table>
+								<tbody><tr>
+									<td class="photo">
+										<img src="/_pfiles/2015/01/20/14-04-25_76882813EE9B4F839254B1E64681ACF3.Content.png">
+									</td>
+									<td class="info">
+
+										<div><br></div><h1 style="padding: 0;" class="slide_name">Автоматизация закупочной деятельности</h1><div><br></div>
+<div>Автоматизация всей цепочки закупочного процесса организации в соответствии с нормами и требованиями Федерального закона от 05.04.2013 №44-ФЗ (ФЗ "О контрактной системе"), Федерального закона от 18.07.2011 №223-ФЗ (ФЗ "О закупках товаров, работ, услуг отдельными видами юридических лиц")</div><div><br></div>
+										<a href="/Info/purchase" class="Button"><div class="buttonBgLeft">Подробнее</div>
+									</a>
+<a href="/_pfiles/2015/04/09/14-56-53_75BAD3B04F59421DBCF705CF006F3BED.Content.pdf" class="Button" target="_blank"><div class="buttonBgLeft">Презентация</div>
+									</a>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						<div class="carouselItem" data-link=".item6">
+							<table>
+								<tbody><tr>
+									<td class="photo">
+										<img src="/_pfiles/2015/01/20/14-04-04_83ECAE871BBC4472B9B0B7A884131569.Content.png">
+									</td>
+									<td class="info">
+
+										<div><br></div><h1 style="padding: 0;" class="slide_name">Автоматизация бюджетного планирования и доведения финансирования</h1><div><br></div>
+<div>Планирование затрат головной организации и подведомственных (территориальных) подразделений в текущем и плановом финансовом периоде в разрезе бюджетной и внутриведомственной классификации</div><div><br></div>
+										<a href="/Info/planning" class="Button"><div class="buttonBgLeft">Подробнее</div>
+									</a>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+					</div>
+				</div></td></tr><tr><td class="cmr" colspan="3">				<div class="carousel_menu">
+					<div class="item item1">
+						<img src="/_pfiles/2015/01/20/14-43-25_8A5DD2C1DFE549ECB7CFA5B4BA553563.Content.png" alt="">
+						<div style="text-align:center;">Подготовка и сбор сводной отчетности</div>
+					</div>
+					<div class="item item2">
+						<img src="/_pfiles/2015/01/20/14-43-39_CA92668B9E5D42FF8896AF4337CA8E12.Content.png" alt="">
+						<div style="text-align:center;">Автоматизация управленческого учета</div>
+					</div>
+					<div class="item item3">
+						<img src="/_pfiles/2015/01/20/14-43-49_83A713D468C7432198BAA986FE448889.Content.png" alt="">
+						<div style="text-align:center;">Автоматизация бухгалтерского учета</div></div></div></td><td class="cml" colspan="3">				<div class="carousel_menu">
+					
+					<div class="item item4">
+						<img src="/_pfiles/2015/01/20/14-43-58_51BDDD9F093840A697D7929C2FD83C58.Content.png" alt="">
+						<div style="text-align:center;">Автоматизация процессов кадрового учета и расчетов с персоналом</div>
+					</div>
+					<div class="item item5">
+						<img src="/_pfiles/2015/01/20/14-44-09_8644E9D60B3F40E8A78C9F179E4D355B.Content.png" alt="">
+						<div style="text-align:center;">Автоматизация закупочной деятельности</div>
+					</div>
+					<div class="item item6">
+						<img src="/_pfiles/2015/01/20/14-25-06_43F2CDF9AA6B4B6BBDC4530EA3C6FC58.Content.png" alt="">
+                                                <div style="text-align:center;">Автоматизация бюджетного планирования</div>
+					</div>
+				</div></td></tr><tr><td class="place" colspan="3">
+<table>
+	<tbody><tr>
+		<td style="padding: 15px;">
+			<img style="float: left; vertical-align: middle;" src="/Designs/ETC/img/icon4.png"><h3>ТЕХНОЛОГИИ</h3>
+		</td>
+	</tr>
+	<tr>
+		<td class="text">Отличительной особенностью предлагаемых решений является использование высокотехнологичной Web-платформы, позволяющей построить в рамках единой платформы распределенные системы и обеспечить работу большого количества пользователей.
+		
+<h3 style="padding: 0;"><br></h3><h3 style="padding: 0;">Специализация компании:</h3><div><br></div>
+			<ul>
+				<li>Поставка готовых автоматизированных решений</li>
+				<li>Создание (адаптация) автоматизированных решений в сфере управления финансово-хозяйственною деятельностью</li>
+				<li>Внедрение</li>
+                                <li>Комплексное сопровождение</li>			
+                        </ul>
+		</td>
+	</tr>
+</tbody></table></td><td class="place" colspan="3"><table>
+	<tbody><tr>
+		<td style="padding: 15px;">
+			<img style="float: left; vertical-align: middle;" src="/Designs/ETC/img/icon6.png"><h3>ОПЫТ</h3>
+		</td>
+	</tr>
+	<tr>
+		<td class="text">
+			<h2 style="padding: 0;">Федеральный уровень:</h2>
+			<ul>
+				<li>Министерство сельского хозяйства РФ</li>
+				<li>Министерство финансов РФ</li>
+				<li>Федеральная налоговая служба</li>
+                                <li>Казначейство России</li>
+			</ul>
+			<h2 style="padding: 0;">Проекты регионального и муниципального уровня:</h2>
+<ul>
+<li>13 внедрений в регионах и более 150 проектов в муниципалитетах</li>
+</ul>
+<h2 style="padding: 0;">Образовательные учреждения:</h2>
+<ul>
+<li>Тюменский государственный нефтегазовый университет</li>
+<li>МГИМО</li>
+<li>Университет МИД России</li>
+</ul>
+		</td>
+	</tr>
+	
+</tbody></table></td></tr><tr><td class="btntd place" colspan="3"><a href="/Info/technologies"><img src="/Designs/ETC/img/button_moreInfo.jpg" alt=""></a></td><td class="place btntd" colspan="3"><a href="/Info/experience"><img src="/Designs/ETC/img/button_moreInfo.jpg" alt=""></a>
+</td></tr><tr><td class="placeHR" colspan="6"><div></div></td></tr><tr><td class="place" colspan="2"><table>
+	<tbody>
+<tr><td><img class="staticPic" src="/_pfiles/2015/01/20/15-03-12_F7CB67B2116040E688547748126B814D.Content.png"></td></tr>
+	<tr>
+		<td style="padding: 15px;">
+			<img style="float: left;" src="/Designs/ETC/img/icon1.png"><h3>УЧЕБНЫЙ ЦЕНТР</h3>
+		</td>
+	</tr>
+	<tr>
+		<td class=" text" =""="">В учебном центре Вы можете пройти обучение по различным направлениям закупочной деятельности в рамках закупочных процедур по Федеральному закону №44-ФЗ, приобрести навыки и бесценный опыт осуществления закупок товаров, работ и услуг в рамках Федерального закона №223-ФЗ, а также ознакомиться с нашими решениями и технологиями</td>
+	</tr>
+
+</tbody></table></td><td class="place" colspan="2"><table>
+	<tbody>
+<tr><td><img class="staticPic" src="/_pfiles/2015/01/20/15-03-25_65D8E6B50BCE4D9BBF66D59D79AF5273.Content.png"></td></tr>
+	<tr>
+	</tr><tr>
+		<td style="padding: 15px;">
+			<img style="float: left; vertical-align: middle;" src="/Designs/ETC/img/icon2.png"><h3>ТЕХПОДДЕРЖКА</h3>
+		</td>
+	</tr>
+	<tr>
+		<td class="text">Приобретая наши решения Вы всегда можете рассчитывать на оперативные консультации и заблаговременное предупреждение возможных внештатных ситуаций.<br>Мы ведем базу знаний о различных ситуациях у наших клиентов и способах заблаговременного их предупреждения в дальнейшем</td>
+	</tr>
+
+</tbody></table></td><td class="place" colspan="2"><table>
+	<tbody>
+<tr><td><img class="staticPic" src="/_pfiles/2015/01/20/15-03-37_FE7D8C894B31469C8AFC54726B0EA09B.Content.png"></td></tr>
+	<tr>
+	</tr><tr>
+		<td style="padding: 15px;">
+			<img style="float: left; vertical-align: middle;" src="/Designs/ETC/img/icon3.png"><h3>СОТРУДНИЧЕСТВО</h3>
+		</td>
+	</tr>
+	<tr>
+		<td class="text">Мы предлагаем Вам сотрудничество в сфере продвижения систем класса В2В и B2G. В рамках программы партнерства мы готовы рассмотреть любые формы нашего сотрудничества, такие как посреднические услуги в привлечении клиентов и другие формы взаимовыгодной реализации совместных проектов</td>
+	</tr>
+
+</tbody></table></td></tr><tr><td class="place btntd" colspan="2"><a href="/Info/trainingcenter"><img src="/Designs/ETC/img/button_moreInfo.jpg" alt=""></a>
+</td><td class="place btntd" colspan="2"><a href="/Info/techsupport"><img src="/Designs/ETC/img/button_moreInfo.jpg" alt=""></a>
+</td><td class="place btntd" colspan="2"><a href="/Info/partnership"><img src="/Designs/ETC/img/button_moreInfo.jpg" alt=""></a></td></tr><tr><td class="placeHR" colspan="6"><div></div></td></tr><tr><td class="place" colspan="2"><table>
+	<tbody><tr>
+		<td style="padding: 15px;">
+<img style="float: left;" src="/Designs/ETC/img/icon5.png">
+			<h3>КОНТАКТЫ</h3>
+		</td>
+	</tr>
+	<tr>
+		<td class="text">Адрес: 115419, Москва, 2-й Рощинский проезд, д.8, стр.2
+			<br>
+			Телефоны: +7 (495) 245-02-17, 245-02-27 &nbsp; &nbsp;<br>
+			E-mail: info@etc.ru
+			<br>
+			Режим работы: понедельник-пятница,  09:00 - 18:00
+<br>
+		</td>
+	</tr>
+</tbody></table></td><td class="place" colspan="4"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.036845520567!2d37.60385079999999!3d55.705731300000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54b67910865a9%3A0x1e0d141646df6494!2zMi3QuSDQoNC-0YnQuNC90YHQutC40Lkg0L_RgC3QtCwgONGBMiwg0JzQvtGB0LrQstCwLCAxMTU0MTk!5e0!3m2!1sru!2sru!4v1444057409337" width="791" height="239" frameborder="0" style="padding: 4px; border: 1px solid #EBEBEB; margin: 0px 13px; background:#FFF;"></iframe>
+
+</td></tr></table><script type="text/javascript">$(document).ready(function(){ var _uid = 'P616936E24F1E4CA09E705A2F412D5943';$('.carouselCollection').jshowoff({
+		animatePause : false,
+		autoPlay : true,
+		changeSpeed : 600,
+		controls : false,
+		customControls : {
+			next :		'.arrowNext',
+			previous :	'.arrowPrev'
+		},
+		effect : 'fade',
+		hoverPause : true,
+		links : false,
+		customLinks : true,
+		speed : 10000
+	});});</script>
+<footer class="mainPage scrolled">
+	<div class="footerNavigate">
+		<div class="layout">	
+			<table>
+				<tr>
+					<td><a href="/Info/solutions">Решения</a></td>
+					<td><a href="/Info/technologies">Технологии</a></td>
+					<td><a href="/Info/experienced">Опыт</a></td>
+					<td><a href="/Info/trainingcenter">Учебный центр</a></td>
+					<td><a href="/Info/techsupport">Техподдержка</a></td>
+					<td><a href="/Info/partnership">Сотрудничество</a></td>
+					<td><a href="/Info/about">О компании</a></td>
+					<td><a href="/Info/contacts">Контакты</a></td>
+				</tr>
+			</table>		
+		</div>	
+	</div>
+	<div class="footerContent">
+		<div class="layout">
+			<div class="footerLogo"></div>
+			<div class="copyright">© 2012-2016 ETC.ru<br />Группа компаний ЕТС</div>
+		</div>
+	</div>
+</footer>
+<!-- /MainPage --><!-- /_WorkplaceLayout -->
+
+					</section>
+				</section>
+			</div>
+		</section>
+		
+	</body>
+</html>

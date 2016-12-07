@@ -1,0 +1,1826 @@
+
+<!-- This is with -->
+ <!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+
+<script type="text/javascript"
+src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+
+<title>Профессиональная стоматология, гинекология, урология, узи, лечение зпп, кардиология, терапия, дерматология, все виды анализов,оформляем медкнижки и медицинские справки | Отрадное, Братиславская, Перово, Петровско-разумовская, Марьино, Новогиреево, Балашиха, шоссе Энтузиастов, Люблино, Бабушкинская, Владыкино, Бибирево, Алтуфьево | Наш стоматолог, дерматолог и хирург - лучшие врачи на СВАО и ЮВАО Москвы! - Клиника здоровья Ждем Вас!</title>
+<meta name="keywords" content="Клиника здоровья" />
+
+<meta name="description" content="Клиника здоровья" />
+
+
+<meta name="robots" content="Клиника здоровья" />
+
+<link href="/bitrix/components/bitrix/breadcrumb/templates/.default/style.css" type="text/css" rel="stylesheet" />
+<link href="/timer/flipclock.css" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/food/styles.css" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/food/template_styles.css" type="text/css" rel="stylesheet" />
+
+<link rel="canonical" href="http://www.klinika-zdorovia.ru/">
+
+<script type="text/javascript" src="/timer/base.js"></script>
+<script type="text/javascript" src="/timer/flipclock.js"></script>
+<script type="text/javascript" src="/timer/dailycounter.js"></script>
+
+
+
+	<script Language="JavaScript">
+
+	var timer=function(arg){
+
+	//document.getElementById("action").style.color = (arg % 2 == 0) ? "#DFF1DC" : "red";
+
+	arg++; setTimeout(function(){ timer(arg) },1050);
+
+	}
+
+	window.onload=function(){
+
+		timer(0);
+
+	}
+
+	function windowPrint (url){
+
+		testwindow = window.open("/print_action.php?img="+url,"printActions","location=1,status=1,scrollbars=1,width=640,height=480");
+
+		testwindow.moveTo(0,0);
+
+	}
+
+
+
+	function windowPrint2 (url){
+
+		testwindow = window.open("/print_action2.php?img="+url,"printActions","location=1,status=1,scrollbars=1,width=640,height=480");
+
+		testwindow.moveTo(0,0);
+
+	}
+
+	</script>
+
+
+
+	<meta name='yandex-verification' content='695f56d2d3f5f0fd' />
+
+	<link href="/css/styles.css" rel="stylesheet" type="text/css">
+
+	<link href="/jform/style_form.css" rel="stylesheet" type="text/css">
+
+
+
+	<script type="text/javascript" src="/carusel/jquery.carouFredSel-6.1.0.js"></script>
+
+	<script type="text/javascript"> 
+
+	$(document).ready(function() {
+
+		$("#foo").carouFredSel({
+
+			items				: 1,
+
+			direction			: "up",
+
+			width                           : 505,
+
+			height                          : 258,   
+
+			scroll : {
+
+				items			: 1,
+
+				easing			: "linear",
+
+				fx                      : "crossfade",
+
+				duration                : 2000,
+
+				timeoutDuration         : 5000  
+
+			}					
+
+		});
+
+		// функциональность левого меню с левым меню
+
+	/*	$('.left-sidebar .left-menu ul li img').attr("show","1");
+
+		$('.left-sidebar .left-menu ul li img').click(function() {
+
+
+
+			if($(this).siblings('.left-menu-links').is(':visible')) {
+
+
+
+				$(this).siblings('.left-menu-links').fadeOut();
+
+			} else {
+
+
+
+				$('.left-sidebar .left-menu .left-menu-links').fadeOut();
+
+				$(this).siblings('.left-menu-links').fadeIn();
+
+			}
+
+			
+
+			if ($(this).attr("show") == '1' && $(this).attr("src") == "/images/new_template/leftmenu/1111.png") {
+
+				$(this).attr("src","/images/new_template/leftmenu/8.png");
+
+				$(this).attr("show","0");
+
+			} else if ($(this).attr("show") == '0' && $(this).attr("src") == "/images/new_template/leftmenu/8.png") {
+
+				$(this).attr("src","/images/new_template/leftmenu/1111.png");
+
+				$(this).attr("show","1");
+
+			} else if ($(this).attr("show") == '1' && $(this).attr("src") == "/images/new_template/leftmenu/222.png") {
+
+				$(this).attr("src","/images/new_template/leftmenu/9.png");
+
+				$(this).attr("show","0");
+
+			} else if ($(this).attr("show") == '0' && $(this).attr("src") == "/images/new_template/leftmenu/9.png") {
+
+				$(this).attr("src","/images/new_template/leftmenu/222.png");
+
+				$(this).attr("show","1");
+
+			}
+
+ 
+
+		}) */
+
+		// включенное меню когда находимся по этой ссылке
+
+		var href = window.location.pathname;
+
+		var menuLink = '.left-menu-list a';
+
+		$(menuLink).each(function(){
+
+			if ($(this).attr('href') == href) {
+
+				$(this).addClass('activeLeft');
+
+				$(this).parent().parent().parent().parent().css({'display':'block'});
+
+				var menuImage = $(this).parent().parent().parent().parent().parent().children('img');
+
+				if (menuImage.attr("show") == '1' && menuImage.attr("src") == "/images/new_template/leftmenu/1111.png") {
+
+					menuImage.attr("src","/images/new_template/leftmenu/8.png");
+
+					menuImage.attr("show","0");
+
+				} else if (menuImage.attr("show") == '0' && menuImage.attr("src") == "/images/new_template/leftmenu/8.png") {
+
+					menuImage.attr("src","/images/new_template/leftmenu/1111.png");
+
+					menuImage.attr("show","1");
+
+				} else if (menuImage.attr("show") == '1' && menuImage.attr("src") == "/images/new_template/leftmenu/222.png") {
+
+					menuImage.attr("src","/images/new_template/leftmenu/9.png");
+
+					menuImage.attr("show","0");
+
+				} else if (menuImage.attr("show") == '0' && menuImage.attr("src") == "/images/new_template/leftmenu/9.png") {
+
+					menuImage.attr("src","/images/new_template/leftmenu/222.png");
+
+					menuImage.attr("show","1");
+
+				}
+
+			}
+
+		});
+
+		// функциональность таблицы на страницах филиалов
+
+		$('#filials-table-price li .filials-price-title').click(function() {
+
+
+
+			if($(this).siblings('.price-table').is(':visible')) {
+
+				$(this).siblings('.price-table').fadeOut();
+
+			} else {
+
+
+
+			$('#filials-table-price li .price-table').fadeOut();
+
+				$(this).siblings('.price-table').fadeIn();
+
+			}
+
+
+
+		})
+
+		// полупрозначные мини-баннеры на гланой
+
+		$('.mini-slides img').hover(
+
+		  function(){
+
+			$(this).css({'opacity':'1'})
+
+		  },  function(){
+
+			$(this).css({'opacity':'0.5'})
+
+		});
+
+		// ставим стрелочку в хлебные крошки
+
+		$('.Del').html('&rarr;');
+
+		// уравниваем блок с таблицей прайсов на страницах услуг
+
+		var table = $('.price-table-wrap > .price-table');
+
+		var tableHeight = table.outerHeight(true);
+
+		var text = $('.price-text');
+
+		var textHeight = text.outerHeight(true);
+
+		if (table) {
+
+			if (textHeight < tableHeight) {
+
+				text.css({height:tableHeight});
+
+			} else if (textHeight > tableHeight) {
+
+				table.parent().css({height:$('#price-block').outerHeight(true)});
+
+			}
+
+		}
+
+	});
+
+	</script> 
+
+	<script src="/jform/jquery.ui.core.js"></script>
+
+	<script src="/jform/doit.js"></script>
+
+	<script type="text/javascript">
+
+	(function(){
+
+
+
+		jQuery(document).ready(function(){
+
+
+
+			jQuery('#jivo-label').click(function(){
+
+				setTimeout(creatJivoLogo, 2000);
+
+			});
+
+
+
+		});
+
+
+
+
+
+		function creatJivoLogo() {
+
+			var iframeJivosite = document.getElementById('jivo_chat_iframe').contentWindow.document;
+
+			var htmlHeadJivoSite = iframeJivosite.getElementById('header_simple').innerHTML;
+
+
+
+			var e = img_create('http://klinika-zdorovia.ru/images/logo.jpg','','','logojivo');
+
+
+
+			jQuery(iframeJivosite.getElementById('header_simple')).css({'height': '80px'});
+
+
+
+			jQuery(iframeJivosite.getElementById('header_simple')).before(e);
+
+			jQuery(iframeJivosite).find('.logojivo').css({'margin': '5px', 'float': 'left'});
+
+		}
+
+
+
+
+
+		function img_create(src, alt, title, imgClass) {
+
+			var img = document.createElement('img');
+
+			img.src = src;
+
+			if (alt != null) img.alt = alt;
+
+			if (title != null) img.title = title;
+
+			if (imgClass != null) img.className = imgClass;
+
+			return img;
+
+		}
+
+
+
+	})();
+
+	</script>
+
+<script type="text/javascript">
+
+	jQuery(document).ready(function(){
+
+		var href= location.pathname;
+
+var re = new RegExp('/service/.*');
+
+if(re.test(href)){
+
+  jQuery('.rhino-container').remove()
+
+}
+
+
+
+	})
+
+</script>
+
+	<script type='text/javascript' src='/bitrix/js/myscript.js' ></script>
+
+	<script type='text/javascript' src='/bitrix/js/price-show.js' ></script>
+
+
+
+		<link type="text/css" rel="stylesheet" href="/css/rhinoslider-1.css" />
+
+
+
+		<script type="text/javascript" src="/js/rhinoslider-1.05.js"></script>
+
+		<script type="text/javascript" src="/js/mousewheel.js"></script>
+
+		<script type="text/javascript" src="/js/easing.js"></script>
+
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+
+				$('#slider-1').rhinoslider({
+
+					controlsMousewheel: false,
+
+					controlsKeyboard: false,
+
+					controlsPlayPause: false,
+
+					showBullets: 'never',
+
+					showControls: 'always',
+
+					slidePrevDirection: 'toRight',
+
+					slideNextDirection: 'toLeft'
+
+				});
+
+				$('#slider').rhinoslider({
+
+					controlsMousewheel: false,
+
+					controlsPrevNext: false,
+
+					controlsPlayPause: false
+
+				});
+
+			});
+
+		</script>
+
+		<script type="text/javascript" src="/bxslider/jquery.bxslider.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="/bxslider/jquery.bxslider.css" />
+
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+
+				$('.bxslider').bxSlider({
+
+				  minSlides: 4,
+
+				  maxSlides: 4,
+
+				  moveSlides: 1,
+
+				  slideWidth: 360,
+
+				  slideMargin: 10
+
+				});
+
+			});
+
+		</script>
+
+<link rel="stylesheet" href="/agile-carousel/agile_carousel.css" type='text/css'>
+
+<script src="/agile-carousel/agile_carousel.alpha.js"></script>
+
+
+
+
+
+<script>
+
+    $.getJSON("/agile-carousel/agile_carousel_data.php", function(data) {
+
+        $(document).ready(function(){
+
+            $("#flavor_2").agile_carousel({
+
+                carousel_data: data,
+
+                carousel_outer_height: 270,
+
+                carousel_height: 0,
+
+                slide_height: 230,
+
+                carousel_outer_width: 1260,
+
+                slide_width: 1260,
+
+                transition_type: "fade",
+
+                transition_time: 600,
+
+                timer: 4500,
+
+                continuous_scrolling: true,
+
+                control_set_1: "numbered_buttons,previous_button",
+
+               
+
+                control_set_2: "content_buttons",
+
+                change_on_hover: "content_buttons",
+
+                
+
+            });
+
+        });
+
+    });
+
+</script>
+
+<script src="/agile-carousel/caruselkaAG.js"></script>
+
+<script type="text/javascript" src="/exform/exform.js"></script>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function($){
+
+$('.extform').exform({theme:'callback'});
+$('.callback-0303').exform({theme:'callback-0303med'});
+$('.request-me-0303').exform({theme:'callback2-0303med'});
+});
+
+</script>
+
+
+
+<script type="text/javascript">
+
+/*
+
+$( document ).ready(function() {
+
+if(location.pathname !='/akcii/' && location.pathname != '/gallery/' && location.pathname != '/gallery/specialisty.php'){
+
+	if(!($('.content-wrapper img').parent().hasClass('exp'))){
+
+		  if(!($('.content-wrapper img').parent().hasClass('categories-img'))){
+
+		$('.content-with-sidebar img').wrap(function() {
+
+			if($(this).attr('class') == 'nolightbox' ){return false;}
+
+  		return '<a  data-lightbox="roadtrip" href= "' + $(this).attr("src") + '"></a>';
+
+		});
+
+      }
+
+      }
+
+}
+
+if(location.pathname == '/gallery/'){
+
+	$('.content-with-sidebar img').wrap(function() {
+
+  		return '<a  data-lightbox="roadtrip" href= "' + $(this).attr("src") + '"></a>';
+
+	});
+
+}
+
+if(location.pathname == '/gallery/specialisty.php'){
+
+	$('.about-doctors-item-leftside img').wrap(function() {
+
+  		return '<a  data-lightbox="roadtrip" href= "' + $(this).attr("src") + '"></a>';
+
+	});
+
+}
+
+
+
+	//akcuu-bnr unwrap img
+
+
+
+	$('.akcuu-bnr img').unwrap();
+
+
+
+
+
+});
+
+*/
+
+</script>
+
+
+
+<link rel="stylesheet" href="/lightbox/css/lightbox.css" type='text/css'>
+
+<script src="/lightbox/js/lightbox.js"></script>
+
+
+
+<script type="text/javascript">
+
+	jQuery(document).ready(function(){
+
+		$('a.button_slide, img.header-feedback, a.doctors-button, img.footer-feedback, #form-oftalm a > img').click(function(){
+
+			yaCounter14537995.reachGoal('ORDER1'); return true;
+
+		});
+
+		
+
+		$('a.extform').click(function(){
+
+			yaCounter14537995.reachGoal('ORDER'); return true;
+
+		});
+
+	});
+
+</script>
+
+
+
+<script type="text/javascript">
+
+  var top_show = 450; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
+
+  var delay = 1500; // Задержка прокрутки
+
+  $(document).ready(function() {
+
+$(window).scroll(function () { // При прокрутке попадаем в эту функцию
+
+      /* В зависимости от положения полосы прокрукти и значения top_show, скрываем или открываем кнопку "Наверх" */
+
+      if ($(this).scrollTop() > top_show) $('#top').fadeIn().css('display','block');
+
+      else $('#top').fadeOut();
+
+    });
+
+
+
+    $('#top').click(function () { // При клике по кнопке "Наверх" попадаем в эту функцию
+
+      /* Плавная прокрутка наверх */
+
+      $('body, html').animate({
+
+        scrollTop: 0
+
+      }, delay);
+
+    });
+
+  });
+
+</script>
+
+
+
+<script type="text/javascript">
+
+(function($){
+
+ $(document).ready(function(){
+
+
+
+	$('#klinika').on('change',function(){
+
+       // Берем значение из <option> клиники
+
+       curr_clinic = $('#klinika option:selected').val();
+
+       // шлем значение в обработчик
+
+       $.post("/_conform.php", {klinika: curr_clinic}, onAjaxSuccess);
+
+ 
+
+		function onAjaxSuccess(data)
+
+			{
+
+				//console.log(data);
+
+				if (data != '<select name="direction" id="direction" size="1"><option value=""></option></select>'){
+
+			  		// Здесь мы получаем данные, отправленные сервером и вставляем их в "направление".
+
+			  		$('#direction').replaceWith(data);
+
+				}
+
+			}
+
+		 });
+
+
+
+ });
+
+})(jQuery);
+
+</script>
+
+<!-- Спойлеры -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+ $('.spoiler_links').click(function(){
+  $(this).next('.spoiler_body').toggle('normal');
+  return false;
+ });
+});
+</script>
+
+
+<!-- LET IT SNOW -->
+<!--<script type="text/javascript"> 
+	imageDir = "http://mvcreative.ru/example/6/2/snow/"; 
+	sflakesMax = 65; 
+	sflakesMaxActive = 65; 
+	svMaxX = 2; 
+	svMaxY = 6; 
+	ssnowStick = 1; 
+	ssnowCollect = 0; 
+	sfollowMouse = 1; 
+	sflakeBottom = 0; 
+	susePNG = 1; 
+	sflakeTypes = 5; 
+	sflakeWidth = 15; 
+	sflakeHeight = 15; 
+</script> 
+<script type="text/javascript" src="http://mvcreative.ru/example/6/2/snow.js"></script>--><!-- END LET IT SNOW -->
+
+<!-- Спойлеры -->
+<style>
+.colortext {color: #EB0524;}
+</style>
+
+<!--<link rel="stylesheet" href="/new_year_motnyay/style.css">
+<script type="text/javascript" src="/new_year_motnyay/swfobject.min.js"></script>
+<script type="text/javascript" src="/new_year_motnyay/newyear.js"></script>-->
+
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<div class="b-page_newyear">
+  <div class="b-page__content">
+  <!-- новогодняя мотня newyear.html -->
+   
+  <i class="b-head-decor">
+  <i class="b-head-decor__inner b-head-decor__inner_n1">
+  <div class="b-ball b-ball_n1 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n2 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n3 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n4 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n5 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n6 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n7 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+   
+  <div class="b-ball b-ball_n8 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n9 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i1"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i2"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i3"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i4"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i5"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i6"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  </i>
+   
+  <i class="b-head-decor__inner b-head-decor__inner_n2">
+  <div class="b-ball b-ball_n1 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n2 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n3 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n4 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n5 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n6 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n7 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n8 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+   
+  <div class="b-ball b-ball_n9 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i1"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i2"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i3"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i4"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i5"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i6"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  </i>
+  <i class="b-head-decor__inner b-head-decor__inner_n3">
+   
+  <div class="b-ball b-ball_n1 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n2 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n3 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n4 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n5 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n6 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n7 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n8 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n9 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+   
+  <div class="b-ball b-ball_i1"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i2"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i3"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i4"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i5"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i6"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  </i>
+  <i class="b-head-decor__inner b-head-decor__inner_n4">
+  <div class="b-ball b-ball_n1 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+   
+  <div class="b-ball b-ball_n2 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n3 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n4 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n5 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n6 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n7 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n8 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n9 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i1"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+   
+  <div class="b-ball b-ball_i2"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i3"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i4"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i5"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i6"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  </i>
+  <i class="b-head-decor__inner b-head-decor__inner_n5">
+  <div class="b-ball b-ball_n1 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n2 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+   
+  <div class="b-ball b-ball_n3 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n4 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n5 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n6 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n7 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n8 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n9 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i1"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i2"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+   
+  <div class="b-ball b-ball_i3"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i4"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i5"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i6"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  </i>
+  <i class="b-head-decor__inner b-head-decor__inner_n6">
+  <div class="b-ball b-ball_n1 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n2 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n3 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+   
+  <div class="b-ball b-ball_n4 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n5 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n6 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n7 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n8 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n9 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i1"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i2"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i3"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+   
+  <div class="b-ball b-ball_i4"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i5"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i6"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  </i>
+  <i class="b-head-decor__inner b-head-decor__inner_n7">
+  <div class="b-ball b-ball_n1 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n2 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n3 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n4 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+   
+  <div class="b-ball b-ball_n5 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n6 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n7 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n8 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_n9 b-ball_bounce"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i1"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i2"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i3"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i4"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+   
+  <div class="b-ball b-ball_i5"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  <div class="b-ball b-ball_i6"><div class="b-ball__right"></div><div class="b-ball__i"></div></div>
+  </i>
+  </i>
+   
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="conform_ah">
+
+		<div class="conform_ah_header"><div></div><span class="closebot"></span></div>
+
+		<div class="messag"></div>
+
+		<div class="polya1">
+
+			<p><label>Ф.И.О.:<em>*</em></label><input type="text" name="names"/></p>
+
+			<p><label>Телефон:<em>*</em></label><input type="text" name="tell"/></p>
+
+			
+
+            <p><label>Выберите клинику:<em>*</em><select name="klinika" id="klinika" size="1" >
+
+				<option value=""></option>
+
+				<option value="Клиника Здоровья м.Отрадное">Клиника Здоровья м.Отрадное</option>
+
+				<option value="Клиника Здоровья м.Перово">Клиника Здоровья м.Перово</option>
+
+				<option value="Семейная Стоматология м.Братиславская">Семейная Стоматология м.Братиславская</option>
+
+                <option value="Семейная Стоматология м.Бабушкинская 1">Семейная Стоматология м.Бабушкинская 1</option>
+
+                <option value="Семейная Стоматология м.Бабушкинская 2">Семейная Стоматология м.Бабушкинская 2</option>
+
+				<option value="Семейная Стоматология м.Зеленоград">Семейная Стоматология г.Зеленоград</option>
+
+				
+
+			</select></label></p>
+
+            
+
+            <p><label >Выберите направление:<em>*</em>
+
+             <select name="direction" id="direction" size="1">
+
+                 <option value=""></option>
+
+                 <option value="Гинекология">Гинекология</option>
+
+                 <option value="Урология, нефрология">Урология, нефрология</option>
+
+                 <option value="Дерматовенерология">Дерматовенерология</option>
+
+                 <option value="Липоклазия">Липоклазия</option>
+
+                 <option value="Косметология">Косметология</option>
+
+                 <option value="Терапия">Терапия</option>
+
+                 <option value="Кардиология">Кардиология</option>
+
+                 <option value="Лор">Лор</option>
+
+                 <option value="Офтальмология">Офтальмология</option>
+
+                 <option value="Неврология">Неврология</option>
+
+                 <option value="Хирургия(амбулаторная)">Хирургия(амбулаторная)</option>
+
+                 <option value="Все виды анализов">Все виды анализов</option>
+
+                 <option value="УЗИ (все виды)">УЗИ (все виды)</option>
+
+                 <option value="Гастроэнтерология">Гастроэнтерология</option>
+
+                 <option value="Стоматология">Стоматология</option>
+
+                 <option value="Ортодонтия">Ортодонтия</option>
+
+                 <option value="Флебология">Флебология</option>
+
+                 <option value="Эндокринология">Эндокринология</option>
+
+                 <option value="Лечебный массаж">Лечебный массаж</option>
+
+                 <option value="Медицинские справки">Медицинские справки</option>
+
+                 <option value="Профосмотры">Профосмотры</option>
+
+                 <option value="Больничные листы">Больничные листы</option>
+
+                 <option value="Медкнижки">Медкнижки</option>
+
+                 <option value="Медкнижки для организаций">Медкнижки для организаций</option>
+
+                 <option value="Лечение зубов">Лечение зубов</option>
+
+                 <option value="Лечение кариеса">Лечение кариеса</option>
+
+                 <option value="Профилактика кариеса">Профилактика кариеса</option>
+
+                 <option value="Лечение пульпита">Лечение пульпита</option>
+
+                 <option value="Профессиональное">Профессиональное</option>
+
+                 <option value="Отбеливание зубов">Отбеливание зубов</option>
+
+                 <option value="Реставрация зубов">Реставрация зубов</option>
+
+                 <option value="Металлокерамика">Металлокерамика</option>
+
+                 <option value="Безметалловая керамика">Безметалловая керамика</option>
+
+                 <option value="Съемное протезирование">Съемное протезирование</option>
+
+                 <option value="Виниры">Виниры</option>
+
+                 <option value="Протезирование зубов">Протезирование зубов</option>
+
+                 <option value="Брекет системы">Брекет системы</option>
+
+                 <option value="Пародонтоз">Пародонтоз</option>
+
+                 <option value="Пародонтит">Пародонтит</option>
+
+                 <option value="Периодонтит. Лечение">Периодонтит. Лечение</option>
+
+                 <option value="Лечение десен">Лечение десен</option>
+
+                 <option value="Лечение стоматита">Лечение стоматита</option>
+
+                 <option value="Имплантация зубов">Имплантация зубов</option>
+
+                 <option value="Радиовизиография">Радиовизиография</option>
+
+                 <option value="Исправление прикуса">Исправление прикуса</option>
+
+                 <option value="Брекет системы">Брекет системы</option>
+
+                 <option value="Зуб мудрости">Зуб мудрости</option>
+
+                 <option value="Удаление зуба">Удаление зуба</option>
+
+             </select>
+
+             </label>
+
+            </p> 
+
+            
+
+			<p><label>Удобное время:</label><input type="text" name="goodtime"/></p>
+
+			<p><label>Врач:</label><input type="text" name="vrach"/></p>
+
+			<p><label>Дополнительная информация:</label><textarea name="info"></textarea></p>
+
+			<!-- <div class="submit1" onclick="yaCounter25537250.reachGoal('FORMA1'); return true;" name="form1">Отправить</div> -->
+
+			<div class="submit1" onclick="yaCounter14537995.reachGoal('FORMA2'); return true;" name="form1">Отправить</div>
+
+		</div>
+
+	</div>
+
+	
+
+	<div id="panel"></div>
+
+	<div id="header">
+
+
+
+<div id="logo">
+<a href="/">
+<div class="logo">
+<img src="/images/new_template/logo.png" alt="логотип">
+</div>
+</a>
+</div>
+<div id="header-center">
+<div class="header-contacts">
+<p class="header-contacts-phone">8-800-222-22-<span class="colortext"><b>03</b></span></p>
+<p class="categories-title" style="margin: 5px 0 0 98px; color:orange;">звонок бесплатный</p>
+<p class="header-contacts-phone" style="margin-top: 7px;">8-495-109-<span class="colortext"><b>03</b></span>-<span class="colortext"><b>03</b></span></p>
+</div>
+<div class="header-button">
+<img class="header-feedback" src="/images/new_template/header-feedback.png" alt="записаться на прием">
+<a class="extform" onclick="yaCounter14537995.reachGoal('ORDER'); return true;" href="/"><img src="/images/callback.png" alt="" /></a>
+</div>
+</div>
+<div id="logo-right"><a href="/service/stomatologija/"><img src="/images/new_template/logo_2.png" alt="логотип"></a></div>
+  
+	</div>
+
+	<div class="clear"></div>
+
+	<div id="top-menu">
+
+		<ul class="top-menu">
+
+			<li><a href="/">Главная</a></li>
+
+			<li><a href="/price/">Прайс-лист</a></li>
+
+			<li><a href="/akcii/">Акции</a></li>
+
+			<li><a href="/gallery/specialisty.php">Наши врачи</a></li>
+
+			<li><a href="/about/">О клинике</a></li>
+
+			<li><a href="/article/">Статьи</a></li>
+
+			<li><a href="/review/">Отзывы</a></li>
+			<li class="last-menu"><a href="/contacts/">Контакты</a></li>
+			
+			<li class="last-menu"><a href="/vacancu/">Вакансии</a></li>
+
+		</ul>
+
+	</div>
+
+ 
+
+	
+
+		
+
+	<div id="top-slider"><div class="slideshow" id="flavor_2"></div></div>
+
+
+		
+
+	</div>
+
+	<div id="top-filials-list">
+
+		<div class="top-filials-item">
+
+			<div class="filials-item-leftside"><img src="/images/new_template/filial/filial-leaf.png"></div>
+
+			<div class="filials-item-rightside">
+
+				<p class="filials-title"><img src="/images/new_template/filial/filial-m-gray.png"><a href="/filial/stomatologija-otradnoe.php"><span>Отрадное</span></a></p>
+
+				<p class="filials-description">8-800-775-97-03<br>Звонок бесплатный<br>ул. Декабристов, 10, к. 3</p>
+
+			</div>
+
+		</div>
+
+		<div class="top-filials-item">
+
+			<div class="filials-item-leftside"><img src="/images/new_template/filial/filial-leaf.png"></div>
+
+			<div class="filials-item-rightside">
+
+				<p class="filials-title"><img src="/images/new_template/filial/filial-m-yellow.png"><a href="/filial/stomatologija-perovo.php"><span>Перово</span></a></p>
+
+				<p class="filials-description"><span class="ya-phone-p"><!--8-495-672-87-87-->8-495-672-76-66</span>
+				<br>Зеленый проспект, 17</p>
+
+			</div>
+
+		</div>
+
+		<div class="top-filials-item">
+
+			<div class="filials-item-leftside"><img src="/images/new_template/filial/filial-tooth.png"></div>
+
+			<div class="filials-item-rightside">
+
+				<p class="filials-title"><img src="/images/new_template/filial/filial-m-salat.png"><a href="/filial/stomatologija-bratislavskaja.php"><span>Братиславская</span></a></p>
+
+				<p class="filials-description"><span class="ya-phone-b">8 (495) 654-94-36</span>
+				<br>ул. Братиславская, 14</p>
+
+			</div>
+
+		</div>
+
+		<div class="top-filials-item">
+
+			<div class="filials-item-leftside"><img src="/images/new_template/filial/filial-tooth.png"></div>
+
+			<div class="filials-item-rightside">
+
+				<p class="filials-title"><img src="/images/new_template/filial/filial-m-red.png"><a href="/filial/stomatologija-babushkinskaja.php"><span>Бабушкинская 1</span></a></p>
+
+				<p class="filials-description">8 (495) 474-75-92<br>ул. Минусинская, 9</p>
+
+			</div>
+
+		</div>
+
+		<div class="top-filials-item">
+
+			<div class="filials-item-leftside"><img src="/images/new_template/filial/filial-tooth.png"></div>
+
+			<div class="filials-item-rightside">
+
+				<p class="filials-title"><img src="/images/new_template/filial/filial-m-red.png"><a href="/filial/stomatologija-babushkinskaja2.php"><span>Бабушкинская 2</span></a></p>
+
+				<p class="filials-description">8 (499) 798-03-03<br>ул. Летчика Бабушкина, 23</p>
+
+			</div>
+
+		</div>
+
+		<div class="top-filials-item last">
+
+			<div class="filials-item-leftside"><img src="/images/new_template/filial/filial-tooth.png"></div>
+
+			<div class="filials-item-rightside">
+
+				<p class="filials-title"><a href="/filial/stomatologija-zelenograd.php"><span>Зеленоград</span></a></p>
+
+				<p class="filials-description">8 (499)729 29 09<br>корпус 1519</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="clear"></div>
+	
+
+	
+	
+	
+	
+
+	<div class="content-wrapper">
+
+		
+		<div class="content">
+	
+		
+
+		
+			<!--div class="snejinka2"></div-->
+
+
+
+			 
+
+
+<!--div class="medialinck">
+
+	<div class="cstm-row">
+		
+		<div class="cstm_col medicanter">
+			
+			<p class="name_block">
+				Медицинский центр
+			</p>
+			
+			<div class="wrapper_link">
+				
+				<p>Наш коммерческий медицинский центр представляет собой сеть профессиональных клиник «Центр Здоровья», предоставляющих следующие услуги:</p>
+				
+				<ul class="listlink">
+					<li><a href="/service/kz/">Гинекология</a></li>
+					<li><a href="/service/kz3/">Урология, нефрология</a></li>
+					<li><a href="/service/dermatovenerologija/">Дерматовенерология</a></li>
+					<li><a href="/service/lipoklaziya/">Липоклазия</a></li>
+					<li><a href="/service/konturnaya_plastika_botoks/">Косметология</a></li>
+					<li><a href="/service/kz6/">Терапия</a></li>
+					<li><a href="/service/kz7/">Кардиология</a></li>
+					<li><a href="/service/kz8/">Лор</a></li>
+				</ul>
+				
+				<ul class="listlink"> 
+					<li><a href="/service/oftalmologija/">Офтальмология</a></li>
+					<li><a href="/service/nevrologija/">Неврология</a></li>
+					<li><a href="/service/kz12/">Хирургия(амбулаторная)</a></li>
+					<li><a href="/service/vse-vidy-analizov/">Все виды анализов</a></li>
+					<li><a href="/service/kz14">УЗИ (все виды)</a></li>
+					<li><a href="/service/gastroendokrenologija/">Гастроэнтерология</a></li>
+					<li><a href="/service/kz18/">Маммология</a></li>
+				</ul>
+				
+				
+				<ul class="listlink"> 
+					<li><a href="/service/stomatologija/">Стоматология</a></li>
+					<li><a href="/price/ortodontija/">Ортодонтия</a></li>
+					<li><a href="/service/kz39/">Флебология</a></li>
+					
+					<li><a href="/service/kz33/">Эндокринология</a></li>
+					<li><a href="/service/massage/">Лечебный массаж</a></li>
+					<li><a href="/price/vizov_na_dom.php">Услуги вызова на дом</a></li>
+				</ul>
+				
+			</div>
+			
+		</div>
+		
+		<div class="cstm_col stomatology">
+			
+			<p class="name_block">
+				стоматология
+			</p>
+			
+			<div class="wrapper_link">
+				
+	
+				<ul class="listlink">
+					<li><a href="/service/kz/">Гинекология</a></li>
+					<li><a href="/service/kz3/">Урология, нефрология</a></li>
+					<li><a href="/service/dermatovenerologija/">Дерматовенерология</a></li>
+					<li><a href="/service/lipoklaziya/">Липоклазия</a></li>
+					<li><a href="/service/konturnaya_plastika_botoks/">Косметология</a></li>
+					<li><a href="/service/kz6/">Терапия</a></li>
+					<li><a href="/service/kz7/">Кардиология</a></li>
+					<li><a href="/service/kz8/">Лор</a></li>
+				</ul>
+				
+				<ul class="listlink"> 
+					<li><a href="/service/oftalmologija/">Офтальмология</a></li>
+					<li><a href="/service/nevrologija/">Неврология</a></li>
+					<li><a href="/service/kz12/">Хирургия(амбулаторная)</a></li>
+					<li><a href="/service/vse-vidy-analizov/">Все виды анализов</a></li>
+					<li><a href="/service/kz14">УЗИ (все виды)</a></li>
+					<li><a href="/service/gastroendokrenologija/">Гастроэнтерология</a></li>
+					<li><a href="/service/kz18/">Маммология</a></li>
+				</ul>
+				
+				
+				<ul class="listlink"> 
+					<li><a href="/service/stomatologija/">Стоматология</a></li>
+					<li><a href="/price/ortodontija/">Ортодонтия</a></li>
+					<li><a href="/service/kz39/">Флебология</a></li>
+					
+					<li><a href="/service/kz33/">Эндокринология</a></li>
+					<li><a href="/service/massage/">Лечебный массаж</a></li>
+					<li><a href="/price/vizov_na_dom.php">Услуги вызова на дом</a></li>
+				</ul>
+				
+			</div>
+			
+		</div>
+
+	</div>
+
+</div-->
+
+
+
+
+<div class="categories-img">
+  <p class="center-text"><a href="/price/vizov_na_dom.php"><img src="/images/new_template/12.jpg" /></a>
+    <br />
+  <img src="/images/new_template/6.png" />
+    <br />
+  <img src="/images/new_template/7.png" /></p>
+</div>
+ 
+<div class="cat-blocks"> 
+  <div class="first-categories-block"> 
+    <div class="categories-links"> 
+      <div class="categories-item"> 
+        <ul class="categories-list"> 
+          <li><a href="/service/kz/">Гинекология</a></li>
+         
+          <li><a href="/service/kz3/">Урология, нефрология</a></li>
+         
+          <li><a href="/service/dermatovenerologija/">Дерматовенерология</a></li>
+         
+          <li><a href="/service/lipoklaziya/">Липоклазия</a></li>
+         
+          <li><a href="/service/konturnaya_plastika_botoks/">Косметология</a></li>
+         
+          <li><a href="/service/kz6/">Терапия</a></li>
+         
+          <li><a href="/service/kz7/">Кардиология</a></li>
+         </ul>
+       </div>
+     
+      <div class="categories-item"> 
+        <ul class="categories-list"> 
+          <li><a href="/service/kz8/">Лор</a></li>
+         
+          <li><a href="/service/oftalmologija/">Офтальмология</a></li>
+         
+          <li><a href="/service/nevrologija/">Неврология</a></li>
+         
+          <li><a href="/service/kz12/">Хирургия(амбулаторная)</a></li>
+         
+          <li><a href="/service/vse-vidy-analizov/">Все виды анализов</a></li>
+          <li><a href="/service/analizi-dnk/" >Анализы ДНК</a></li>
+         
+          <li><a href="/service/kz14">УЗИ (все виды)</a></li>
+         
+          <li><a href="/service/gastroendokrenologija/">Гастроэнтерология</a></li>
+		  <li><a href="/service/kz18/">Маммология</a></li>
+         </ul>
+       </div>
+     
+      <div class="categories-item"> 
+        <ul class="categories-list"> 
+          <li><a href="/service/stomatologija/">Стоматология</a></li>
+         
+          <li><a href="/price/ortodontija/">Ортодонтия</a></li>
+         
+          <li><a href="/service/kz39/">Флебология</a></li>
+         
+<!--li><a href="/service/elektrostaticheskij-massage-apparatom-detox-touch/" >Электростатический массаж<br>аппаратом Detox Touch</a></li-->
+ 
+          <li><a href="/service/kz33/">Эндокринология</a></li>
+         
+          <li><a href="/service/massage/">Лечебный массаж</a></li>
+         
+          <li><a href="/price/vizov_na_dom.php">Услуги вызова на дом</a></li>
+         </ul>
+       </div>
+     
+      <div class="categories-item"> 
+        <ul class="categories-list"> 
+          <li><a href="/service/kz16/">Медицинские справки</a></li>
+         
+          <li><a href="/service/kz37/">Профосмотры</a></li>
+         
+          <li><a href="/service/kz38/">Больничные листы</a></li>
+         
+          <li><a href="/service/kz15/">Медкнижки</a></li>
+         
+          <li><a href="/service/medorg/">Медкнижки для организаций</a></li>
+         </ul>
+       </div>
+     </div>
+   </div>
+ 
+  <div class="clear:both"></div>
+ 
+  <div class="second-categories-block"> 
+    <div class="categories-links"> 
+      <div class="categories-item"> 
+        <p class="categories-title">ТЕРАПЕВТИЧЕСКАЯ 
+          <br />
+         СТОМАТОЛОГИЯ</p>
+       
+        <ul class="categories-list"> 
+          <li><a href="/service/dentistry">Лечение зубов</a></li>
+         
+          <li><a href="/art/lech2.php">Лечение кариеса</a></li>
+         
+          <li><a href="/service/profilaktika-kariesa/">Профилактика кариеса</a></li>
+         
+          <li><a href="/art/lechenie-pyltipa.php">Лечение пульпита</a></li>
+         
+          <li><a href="/art/professionalnoe-otbelivanie-zubov.php">Профессиональное 
+              <br />
+             отбеливание зубов</a></li>
+         
+          <li><a href="/service/dentistry7/">Реставрация зубов</a></li>
+         </ul>
+       </div>
+     
+      <div class="categories-item"> 
+        <p class="categories-title">ПРОТЕЗИРОВАНИЕ 
+          <br />
+         ЗУБОВ</p>
+       
+        <ul class="categories-list"> 
+          <li><a href="/service/dentistry9/">Металлокерамика</a></li>
+         
+          <li><a href="/art/bezmetallovaja-keramika.php">Безметалловая керамика</a></li>
+         
+          <li><a href="/service/dentistry11/">Съемное протезирование</a></li>
+         
+          <li><a href="/service/viniry/">Виниры</a></li>
+         
+          <li><a href="/service/dentistry13/">Протезирование зубов</a></li>
+         
+          <li><a href="/art/breket-systemy.php">Брекет системы</a></li>
+         </ul>
+       </div>
+     
+      <div class="categories-item"> 
+        <p class="categories-title">ПАРОДОНТОЛОГИЯ</p>
+       
+        <ul class="categories-list"> 
+          <li><a href="/service/paradontoz/">Пародонтоз</a></li>
+         
+          <li><a href="/service/paradontit/">Пародонтит</a></li>
+         
+          <li><a href="/service/lechenie-paradontit/">Периодонтит. Лечение</a></li>
+         
+          <li><a href="/service/lechenie-desen/">Лечение десен</a></li>
+         
+          <li><a href="/service/lechenie-stomatita/">Лечение стоматита</a></li>
+         
+          <br />
+         
+          <li><a href="/service/dentistry21/">Имплантация зубов</a></li>
+         
+          <li><a href="/service/radioviziografija/">Радиовизиография</a></li>
+         </ul>
+       </div>
+     
+      <div class="categories-item"> 
+        <p class="categories-title">ОРТОДОНТИЯ</p>
+       
+        <ul class="categories-list"> 
+          <li><a href="/service/dentistry24/">Исправление прикуса</a></li>
+         
+          <li><a href="/service/breket-systemy/">Брекет системы</a></li>
+         </ul>
+       
+        <p class="categories-title">ХИРУРГИЧЕСКАЯ 
+          <br />
+         СТОМАТОЛОГИЯ</p>
+       
+        <ul class="categories-list"> 
+          <li><a href="/art/zub-mudrosti.php">Зуб мудрости</a></li>
+         
+          <li><a href="/art/lech5.php">Удаление зуба</a></li>
+         </ul>
+       </div>
+     </div>
+   </div>
+ </div>
+ 
+<div class="clear:both"></div>
+  
+<div class="clear:both"></div>
+  	 	 	 
+
+
+<div class="clear"></div>
+ 	 
+<div id="about-on-main">
+<h1 style="text-align:center;background:#5ba838;height:50px;color:#fff;padding-top:10px;text-transform:uppercase;text-shadow: 4px 2px 5px rgba(0, 0, 0, 0.5);margin-bottom:0px">Добро пожаловать на сайт - Клиники Здоровья</h1> 		 
+  <div class="about-on-main">
+   			 <div class="left_col_img">
+            <div class="img_container">
+              <img src="/images/new_template/about-filial/perovo-lb.jpg" alt="">
+              <img src="/img/foto_2.jpg" alt="">
+            </div>
+         </div>
+
+         <div class="right_col_wrap">
+            <div class="img_container_right">
+              <img src="/img/foto_3.jpg" alt="">
+              <img src="/img/foto_4.jpg" alt="">
+            </div>
+         </div>
+    <div class="text-on-main"> 				 
+      <!--h1>Добро пожаловать на сайт Клиники здоровья и сети стоматологических клиник "Семейная стоматология"!</h1-->
+     				 
+     <div class="blok_na_gl">
+	 <div><p>Вас приветствует <span class="green_cl">«Клиника здоровья»</span> - один из лучших в городе многопрофильных лечебно-диагностических центров . . Оборудование для диагностики, лабораторного исследования позволяет не только детально осмотреть каждого пациента, тщательно изучить результаты осмотра, но и проводить оздоровительные процедуры, какой бы курс лечения ни назначили больному.</p></div>
+
+<div><p>Наши компетентные специалисты призваны обеспечить всем, кто к нам обратился, крепкое здоровье и прекрасное самочувствие. Все наши врачи &ndash; и узкие специалисты, и терапевты - профессионалы,работающие по своей специализации много лет. Хороший сервис, почтительное отношение к пациенту и четкое, последовательное лечение &ndash; вот то, чем прославилась <span class="green_cl">«Клиника здоровья»</span>.</p></div>
+
+<div><p>Помимо здоровья - величайшей для нас ценности - мы поможем вам сохранить и другую, не меньшую ценность - красоту. В <span class="green_cl">«Клинике здоровья»</span> индустрия красоты также идет в ногу со временем! Вы всегда сможете, если возникнет необходимость, получить грамотную консультацию опытного косметолога по омоложению, лечению целлюлита, оздоровлению и укреплению волос. Эти проблемы всерьез и надолго решают специальные лечебные курсы, после которых вы действительно преобразитесь!</p></div>
+</div>
+	 <!-- <img src="/images/2835.jpg" alt=""  style="display: block; margin: 0px auto; height: 402px; width: 654px;"> -->		 
+      <div class="all-photos"> 					<img src="/images/new_template/all-photos.png" /> 					 
+        <p><a href="/gallery/" >Просмотреть всю фотогалерею</a><img src="/images/new_template/next.png" /> 
+          <br />
+         34 фотографии 8 филиалов наших клиник</p>
+       				</div>
+     			</div>
+   			 			 
+    <!--div class="img-on-main"> 				<img src="/images/new_template/photo-on-main.jpg" /> 				 
+      <p><a href="/filial/stomatologija-babushkinskaja2.php" >Наш филиал Семейной стоматологии на Бабушкинской</a> 
+        <br />
+       ул. Летчика Бабушкина, дом 23</p>
+     			</div-->
+   			 
+    <div class="clear"></div>
+   			 
+    <div class="preview-block-on-main" style="position:absolute;margin-top:9999px;"> 				 
+      <div class="preview-item"> 					<!--img src="/images/new_template/preview/1.png" /--> 					 
+        <p><a href="/filial/stomatologija-babushkinskaja.php" >Cтоматология на Бабушкинской</a></p>
+       				</div>
+     				 
+      <div class="preview-item"> 					<!--img src="/images/new_template/preview/2.png" /--> 					 
+        <p><a href="/filial/stomatologija-bratislavskaja.php" >Стоматология на Братиславской</a></p>
+       				</div>
+     				 
+      <div class="preview-item"> 					<!--img src="/images/new_template/preview/3.png" /--> 					 
+        <p><a href="/filial/stomatologija-marjino.php" >Стоматология в Марьино</a></p>
+       				</div>
+     				 
+      <div class="preview-item"> 					 
+<!--img src="/images/stomatologia/photo5.jpg" style="height: 170px;"/--> 					 
+        <p><a href="/filial/stomatologija-novogireevo.php" >Стоматология в Новогиреево</a></p>
+       				</div>
+     				 
+      <div class="preview-item"> 					<!--img src="/images/new_template/preview/5.png" /--> 					 
+        <p><a href="/filial/stomatologija-otradnoe.php" >Стоматология в Отрадном</a></p>
+       				</div>
+     			</div>
+   		</div>
+ 	</div>
+ 	 
+<div class="clear"></div>
+ 	 	
+</div>	
+
+<div class="social-links">
+	<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script><div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div>
+</div>
+<div id="bottom-menu"> 		 
+  <div class="bottom-menu"> 			 
+    <div class="bottom-menu-item"> 				 
+      <p class="bottom-menu-title">О клинике</p>
+     				 
+      <ul class="bottom-menu-list"> 					 
+        <li><a href="/service/" >Услуги</a></li>
+       					 
+        <li><a href="/price/" >Прайс-лист</a></li>
+       					 
+        <li><a href="/gallery/" >Галерея</a></li>
+       					 
+        <li><a href="/article/" >Статьи</a></li>
+       					 
+        <li><a href="/contacts/" >Контакты</a></li>
+       					 
+        <li><a href="/sitemap.php" >Карта сайта</a></li>
+       				</ul>
+     			</div>
+   			 
+    <div class="bottom-menu-item"> 				 
+      <p class="bottom-menu-title"><img src="/images/new_template/footer-leaf.png" />Наши направления</p>
+     				 
+      <ul class="bottom-menu-list"> 					 
+        <li><a href="/service/kz/" >Гинекология</a></li>
+       					 
+        <li><a href="/service/kz3/" >Урология, нефрология</a></li>
+       					 
+        <li><a href="/service/dermatovenerologija/" >Дерматовенерология</a></li>
+       					 
+        <li><a href="/service/lipoklaziya/" >Липоклазия</a></li>
+       					 
+        <li><a href="/service/konturnaya_plastika_botoks/" >Косметология</a></li>
+       					 
+        <li><a href="/service/kz6/" >Терапия</a></li>
+       				</ul>
+     				 
+      <ul class="bottom-menu-list"> 					 
+        <li><a href="/service/kz7/" >Кардиология</a></li>
+       					 
+        <li><a href="/service/kz8/" >Лор</a></li>
+       					 
+        <li><a href="/service/oftalmologija/" >Офтальмология</a></li>
+       					 
+        <li><a href="/service/nevrologija/" >Неврология</a></li>
+       					 
+        <li><a href="/service/kz12/" >Хирургия(амбулаторная)</a></li>
+       					 
+        <li><a href="/service/vse-vidy-analizov/" >Все виды анализов</a></li>
+        <li><a href="/service/analizi-dnk/" >Анализы ДНК</a></li>
+       				</ul>
+     				 
+      <ul class="bottom-menu-list"> 					 
+        <li><a href="/service/kz14/" >УЗИ (все виды)</a></li>
+       					 
+        <li><a href="/service/gastroendokrenologija/" >Гастроэнтерология</a></li>
+       					 
+        <li><a href="/service/stomatologija/" >Стоматология</a></li>
+       					 
+        <li><a href="/service/kz16/" >Медицинские справки</a></li>
+       					 
+        <li><a href="/price/ortodontija/" >Ортодонтия</a></li>
+       					 
+        <li><a href="/service/kz33/" >Эндокринология</a></li>
+       				</ul>
+     				 
+      <ul class="bottom-menu-list"> 					 
+       					 
+        <li><a href="/service/kz39/" >Флебология</a></li>
+       					 
+        <li><a href="/service/massage/" >Лечебный массаж</a></li>
+       				</ul>
+     			</div>
+   			 
+    <div class="bottom-menu-item"> 				 
+      <p class="bottom-menu-title"><img src="/images/new_template/footer-tooth.png" />Стоматология</p>
+     				 
+      <ul class="bottom-menu-list"> 					 
+        <li><a href="/service/terapevt-stomatologia/" >Терапевтическая стоматология</a></li>
+       					 
+        <li><a href="/service/dentistry13/" >Протезирование зубов</a></li>
+       					 
+        <li><a href="/service/paradontologija/" >Пародонтология</a></li>
+       					 
+        <li><a href="/price/ortodontija/" >Ортодонтия</a></li>
+       					 
+        <li><a href="/service/hirurgicheskaja-stomatologija/" >Хирургическая стоматология</a></li>
+       				</ul>
+     				 				 
+      <ul class="bottom-menu-list"> 					 
+        <li><a href="/service/dentistry21/" >Имплантация зубов</a></li>
+       					 
+        <li><a href="/service/radioviziografija/" >Радиовизиография</a></li>
+		
+		<li><a href="/art/" >Материалы</a></li>
+       				</ul>
+     			</div>
+
+   		</div>
+         
+     <!--  <div id="relpos"> -->
+      <a id="top" href="#" style="display:none"><img src="/img/button3.png" alt=""></a>
+    <!--   </div> -->
+
+
+ 	</div> 
+ 	 
+<div id="footer"> 		 
+  <div class="footer"> 			 
+    <div class="footer-left"> 				 
+      <p class="footer-copyright">&copy; 2016 Клиника Здоровья</p>
+     				 
+      <p class="footer-license">
+<!-- 	  Лицензия № ЛО-77-01-006653 от 10 сентября 2013 г. на осуществление медицинской деятельности 
+        <br />
+       Имеются противопоказания. Необходима консультация специалиста -->
+	   <img src="/images/visa-mastercard.png" class="kards-logos" />
+	   </p>
+     			</div>
+   			 
+    <div class="footer-right"> 				 
+      <div id="footer-center"> 					 
+        <div class="footer-contacts">
+
+       
+
+          <p class="footer-contacts-phone">
+                        8-800-222-22-03
+                    </p>
+         						 <p class="footer-contacts-time" style="margin-top:7px;">ЗВОНОК БЕСПЛАТНЫЙ </p>
+          <p class="footer-contacts-time">пн-сб: <span>9:00 - 21:00</span> вс: <span>10:00 - 20:00</span></p>
+         					</div>
+       					 
+        <div class="footer-button"><img class="footer-feedback" src="/images/new_template/footer-feedback.png" alt="записаться на прием" /></div>
+       		
+			
+<!--         
+<div class="aweb"> 						 
+          <p><a href="http://aweb.ru/" >Создание сайта</a> 
+            <br />
+           Aweb Systems</p>
+         </div>
+					 -->		
+							
+       				</div>
+     			</div>
+
+<!-- Yandex.Metrika counter -->
+ 			 
+<script type="text/javascript">
+			(function (d, w, c) {
+				(w[c] = w[c] || []).push(function() {
+					try {
+						w.yaCounter14537995 = new Ya.Metrika({id:14537995, enableAll: true, webvisor:true});
+					} catch(e) {}
+				});
+
+				var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function () { n.parentNode.insertBefore(s, n); };
+				s.type = "text/javascript";
+				s.async = true;
+				s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+				if (w.opera == "[object Opera]") {
+					d.addEventListener("DOMContentLoaded", f);
+				} else { f(); }
+			})(document, window, "yandex_metrika_callbacks");
+			</script>
+ 			<noscript> 
+      <div><img src="//mc.yandex.ru/watch/14537995" style="position: absolute; left: -9999px;" alt="" /></div>
+     </noscript> 			 
+<!-- /Yandex.Metrika counter -->
+		 
+<!--LiveInternet counter-->
+ 			 
+<script type="text/javascript"><!--
+			document.write("<a href='http://www.liveinternet.ru/click' "+
+				"target=_blank><img src='//counter.yadro.ru/hit?t44.15;r"+
+				escape(document.referrer)+((typeof(screen)=="undefined")?"":
+					";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+						screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+				";"+Math.random()+ "' alt='' title='LiveInternet' style='display:none;' "+ "border='0' width='31' height='31'><\/a>")
+				//-->
+			</script>
+ 			 
+<!--/LiveInternet-->
+ 		</div>
+ 	</div>
+ 
+<!-- BEGIN JIVOSITE CODE {literal} -->
+ 
+<script type='text/javascript'>
+(function(){ var widget_id = '100302';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+ 
+<!-- {/literal} END JIVOSITE CODE -->
+ 
+<script>
+	jQuery('.control_set_2').remove();
+</script>

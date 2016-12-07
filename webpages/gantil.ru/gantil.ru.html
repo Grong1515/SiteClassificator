@@ -1,0 +1,813 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="google-site-verification" content="T5rDwknP9s7en6kWDf7ysjxgANG786O2Ef-yYwULeNs" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Жантиль - салон красоты в Москве</title>
+<meta name="keywords" content="cалон красоты в Москве. Стрижка макияж тайский и балийский массаж маникюр педикюр" />
+<meta name="description" content="Жантиль - сеть салонов красоты в Москве. Стрижка, макияж, тайский и балийский массаж, маникюр, педикюр и многое другое в наших салонах по всей Москве" />
+<!--<title>Жантиль - салон красоты в Москве</title>
+<meta name="description" content="Жантиль - сеть салонов красоты в Москве. Стрижка, макияж, тайский и балийский массаж, маникюр, педикюр и многое другое в наших салонах по всей Москве" /> 
+-->
+<!--	datepicker	-->
+<link rel="stylesheet" href="/css/datepicker/themes/base/jquery.ui.all.css" type="text/css" />
+<!--	/datepicker	-->
+
+<link href="/css/style2.css?88271" rel="stylesheet" type="text/css" />
+
+<!--	dialog	-->
+<link rel="stylesheet" href="/css/datepicker/themes/base/jquery.ui.dialog.css" type="text/css" />
+<!--	/dialog	-->
+
+<!--	fancy	-->
+<link type="text/css" href="/css/fancy/jquery.fancybox-1.3.4.css" rel="stylesheet" media="all" />
+<!--	/fancy	-->
+
+
+<script language="javascript" type="text/javascript" src="/js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="/js/ui.core.js"></script>
+<script type="text/javascript" src="/js/ui.widget.js"></script>
+<script type="text/javascript" src="/js/ui.position.js"></script>
+<script type="text/javascript" src="/js/ui.dialog.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/jquery.form.js"></script>
+
+<script type="text/javascript" src="/js/font/cufon-yui.js"></script>
+<script type="text/javascript" src="/js/font/georgia_italic_400.font.js"></script>
+
+<script language="javascript">
+
+// функция удаления всех cookie с настройками виджетов при выходе пользователя
+function delCookie()
+{
+		$.cookie("widget18", null, {path : "/"});
+			$.cookie("widget1", null, {path : "/"});
+			$.cookie("widget9", null, {path : "/"});
+				
+	$.cookie("widgetShow", null, {path : "/"});
+	$.cookie("theme", null, {path : "/"});
+}
+
+// функция отправки ajax'ом cookie с настройками виджетов
+function setCookie(redirect)
+{
+			 if(redirect != null) window.location.href = redirect;
+		 }
+
+
+
+
+$(document).ready(function()
+{
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+	/* установка начальных значений настроек сайта*/
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+	
+	// какие показывать виджеты
+			
+		if($.cookie("widget18") == null) 
+			$.cookie("widget18", "active", {path : "/"});				
+			
+		$("#widget18, #itemwidget18").addClass($.cookie("widget18"));
+				
+		if($.cookie("widget1") == null) 
+			$.cookie("widget1", "active", {path : "/"});				
+			
+		$("#widget1, #itemwidget1").addClass($.cookie("widget1"));
+				
+		if($.cookie("widget9") == null) 
+			$.cookie("widget9", "active", {path : "/"});				
+			
+		$("#widget9, #itemwidget9").addClass($.cookie("widget9"));
+			
+	// фоновые картинки на главной
+	var themeBg = new Array(
+		"/pic_catalogue/gantil_pic_41/74.jpg",
+			"/pic_catalogue/gantil_pic_41/73.jpg",
+			"/pic_catalogue/gantil_pic_41/67.jpg",
+			"/pic_catalogue/gantil_pic_41/64.jpg",
+			"/pic_catalogue/gantil_pic_41/34.jpg",
+			"/pic_catalogue/gantil_pic_41/29.jpg",
+			"/pic_catalogue/gantil_pic_41/30.jpg",
+			"/pic_catalogue/gantil_pic_41/26.jpg",
+			"/pic_catalogue/gantil_pic_41/10.jpg",
+			"/pic_catalogue/gantil_pic_41/23.jpg",
+			"/pic_catalogue/gantil_pic_41/17.jpg",
+			"/pic_catalogue/gantil_pic_41/19.jpg",
+			"/pic_catalogue/gantil_pic_41/20.jpg",
+			"/pic_catalogue/gantil_pic_41/21.jpg",
+			"/pic_catalogue/gantil_pic_41/54.png",
+			"/pic_catalogue/gantil_pic_41/57.jpg",
+			"/pic_catalogue/gantil_pic_41/58.jpg",
+			"/pic_catalogue/gantil_pic_41/65.jpg",
+			"/pic_catalogue/gantil_pic_41/66.jpg",
+			"/pic_catalogue/gantil_pic_41/70.jpg",
+			"/pic_catalogue/gantil_pic_41/68.jpg",
+			"/pic_catalogue/gantil_pic_41/69.jpg",
+			"/pic_catalogue/gantil_pic_41/75.jpg"	
+	);
+	
+	
+	// установка где показывать виджеты
+	if($.cookie("widgetsShow") == null)	$.cookie("widgetsShow", "all", {path : "/"});
+	
+	// тема по умолчанию (белый фон, цветная картинка)
+	if($.cookie("theme") == null) $.cookie("theme", "themeWhite "+themeBg[0], {path : "/"});
+	
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/		
+	/* /установка начальных значений настроек сайта*/	
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/		
+	
+	$(".userExit a, .exit").click(function(){
+		delCookie();
+	})
+	
+	$(".setCookie").click(function()
+	{
+		 setCookie();
+		 return false;
+	})
+})
+
+
+</script>
+<script type="text/javascript" src="/js/script2.js"></script>
+
+<!--	стилизация <select>	-->
+<script type="text/javascript" src="/js/select/jquery.selectBox.js"></script>
+<link type="text/css" rel="stylesheet" href="/css/select/jquery.selectBox.css">
+<!--	/стилизация <select>	-->
+
+<!--	скролл и fancy галереи	-->
+<script language="javascript" type="text/javascript" src="/js/scroll_gallery/jquery.tools.min(1).js"></script>
+<script language="javascript" type="text/javascript" src="/js/fancy/jquery.fancybox-1.3.4.js"></script>
+<!--	/скролл и fancy галереи	-->
+
+
+<script language="javascript" type="text/javascript">
+function doSomething1()
+{
+	resizeContent("page_main");	
+	setImgBg();		
+}
+
+$(document).ready(function(){	
+
+	if($('body').attr('class') == 'themeWhite')
+	{
+		$('.promoLink img').attr('src', '/img/pic/Logo-LP-white.png')
+		//$('.logo img').attr('src', '/img/tpl/logo-new-white.png')
+	}
+	else
+	{
+		$('.promoLink img').attr('src', '/img/pic/Logo-LP-black.png')
+		//$('.logo img').attr('src', '/img/tpl/logo-new-black.png')
+	}
+	if($.cookie("widgetsShow") == "main_only" || $.cookie("widgetsShow") == "all")
+	{
+		$(".widgetBlock, .serviceLinks").show();
+			//resizeContent();		
+	}
+	/* ресайз страницы */	
+	//alert('resize')	
+	resizeContent("page_main");	
+	setImgBg();
+	
+	var resizeTimer = null;
+	
+	$(window).bind('resize', function()
+	{
+		if (resizeTimer != null) 
+		{
+			clearTimeout(resizeTimer);
+			resizeTimer = null;
+		}
+ 	   resizeTimer = setTimeout(doSomething1, 100);
+	})	
+	/* /ресайз страницы */
+	
+	
+	/* слоган на главной */
+	var sloganText = $(".slogan").text();
+	var sloganLen  = sloganText.length;
+	var cufonSize = ($("#content").width() / sloganLen * 1.8);
+	//alert(cufonSize)
+	if(cufonSize > 82) cufonSize = 82;
+	Cufon.replace($('.slogan'), {fontFamily: 'Georgia', fontSize:cufonSize + 'px'});
+	/* /слоган на главной */
+})
+</script>
+
+</head>
+
+
+<body class="themeWhite">
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-47810530-1']);
+  _gaq.push(['_setDomainName', 'gantil.ru']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter23866621 = new Ya.Metrika({id:23866621,
+                    webvisor:true,
+                    clickmap:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/23866621" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<div id="main" class="pageMain tpl2" style="border:0px solid blue">
+
+	<!-- BEGIN верхний блок -->
+	<div class="topBlock">
+		<div class="logo">
+			<a href="/"><img src="/img/tpl/logo-new-white.png" width="260" height="131"  /></a>
+		</div>	
+		
+		<div class="menuMain">
+			 
+
+
+<ul>
+			<li ><a href="/philosophy/">О нас</a><span></span></li>
+				<li ><a href="/salons/">Салоны</a><span></span></li>
+				<li ><a href="/services/">Услуги</a><span></span></li>
+				<li ><a href="/77/23/">Бутик</a><span></span></li>
+				<li ><a href="/prices/">Цены</a><span></span></li>
+				<li ><a href="/48/">Галерея</a><span></span></li>
+				<li ><a href="/news_list/">Новости</a><span></span></li>
+				<li ><a href="/action_by_list/">Акции</a><span></span></li>
+				<li ><a href="/contacts/">Контакты</a><span></span></li>
+			<div style="clear:left"></div>
+</ul>
+<div style="clear:left"></div>		</div>	
+		
+		<div class="serviceLinks">
+			
+<ul>
+	<li class="lk"><a  href="/auth/">Личный кабинет</a></li>	
+	<li class="makeCall"><a class="makeCall" href="/">Заказать звонок</a></li>
+	<li class="makeOrder"><a href="/claim/">Заявка на услугу</a></li>
+</ul>
+
+<style>
+
+</style>
+
+<script  language="javascript">
+function setTheme(bg, themeBg, themeColor, color, sex)
+{
+	var bg = $('#bgPic img');
+	$('body').attr('class', themeColor)
+	themeImg = themeBg[color+sex];
+	$(bg).hide().attr('src', themeImg).fadeIn('slow')	
+	
+	$('.logo img').attr('src', '/img/tpl/logo-new-'+color+'.png')
+	$('.promoLink img').attr('src', '/img/pic/Logo-LP-'+color+'.png')
+	
+	$.cookie("theme", themeColor + " " + themeImg + " " + color+sex, {path: "/"});	
+}
+
+
+$(document).ready(function()
+{
+	// фоновая картинка (для главной страницы) - текущая
+	themeImg = $('#bgPic img').attr('src')
+	
+	// цветовая тема - текущая
+	themeColor = $('body').attr('class');
+	
+	// цвет темы - текущий
+	if(themeColor.indexOf('Black') + 1)
+		color = 'black'
+	else
+		color = 'white'
+
+	// массив картинок для фона главной страницы
+	themeBg = {'whitewoman' : '/pic_catalogue/gantil_pic_41/67.jpg',
+			'blackwoman' : '/pic_catalogue/gantil_pic_41/20.jpg',
+			'whiteman' : '/pic_catalogue/gantil_pic_41/75.jpg',
+			'blackman' : '/pic_catalogue/gantil_pic_41/68.jpg',
+			'whitedefault' : '/pic_catalogue/gantil_pic_41/74.jpg',
+			'blackdefault' : '/pic_catalogue/gantil_pic_41/74.jpg',
+			}		
+	function setColor(themeColor)
+	{
+		if(themeColor == 'themeBlack')
+		{
+			themeColor = 'themeWhite'
+			color = 'white'
+		}
+		else
+		{
+			themeColor = 'themeBlack'
+			color = 'black'
+		}	
+		
+		return Array(themeColor, color);
+	}
+	
+	
+	
+	var bg = $('#bgPic img');
+	var i = 0;
+	
+	//$('.fieldSearch').attr('value',i);
+		
+	$('#wm-switch-woman, #wm-switch-man').click(function()
+	{
+		//$('.fieldSearch').attr('value',i);
+		// определим какая тема активна (м или ж)
+		if($(bg).length) 		
+ 			var str = $(bg).attr('class')
+		else
+			var str = $.cookie("theme")
+			
+		// найдем есть ли вхождение woman
+		var woman = str.indexOf('woman') + 1
+		
+		// определим по какой кнопке щелкаем (м||ж)
+		var id = $(this).attr('id').split('-')
+		var sex = id[2]
+		
+		if(i > 1)
+		{
+			sex = 'default'
+			arr = setColor('themeBlack');
+			themeColor = arr[0];
+			color = arr[1];		
+			i = 0;
+		}
+		
+		
+		switch(sex)
+		{
+			case 'woman' : 						
+						
+					// если текущая тема М и щелкаем по Ж, то установим текущую тему Ж и текущий цвет
+					if(!woman)
+					{
+						//alert('!woman')
+						i = 0;
+						$(bg).attr('class', color+sex)	
+						i = 1;
+					}		
+					// иначе оставляем Ж, но меняем цвет		
+					else
+					{		
+						//alert('woman')				
+						arr = setColor(themeColor);
+						themeColor = arr[0];
+						color = arr[1];		
+						i++;				
+					}	
+					
+					break;
+					
+					
+					
+			case 'man' : 
+			
+				// если текущая тема Ж и щелкаем по М, то установим текущую тему М и текущий цвет
+				if(woman)
+				{
+					i = 0;
+					$(bg).attr('class', color+sex)	
+					i = 1;
+				}	
+				// иначе оставляем М, но меняем цвет	 	
+				else
+				{
+					arr = setColor(themeColor);
+					themeColor = arr[0];
+					color = arr[1];
+					i++;
+				}	
+				
+				break;			
+		}
+		
+		
+//		alert(i)
+		//$('.fieldSearch').attr('value',i);
+		// устанавливаем тему
+		setTheme(bg, themeBg, themeColor, color, sex)
+		
+	})
+})
+</script>
+
+
+<div class="service-icons">
+	<a href="/basket/" class="basket-link"></a>
+	
+	<div class="sw">		
+		<a href="#" id="wm-switch-man"></a>
+		<a href="#" id="wm-switch-woman"></a>
+	</div>
+
+</div>
+
+
+
+
+<script language="javascript">
+/*function fill()
+{
+	var n = 0;
+	var s = '';
+	
+	$('.dialogField input').each(function()
+	{
+		n += $(this).val().length;
+		s += $(this).val()
+	})
+	
+	if(n == 10)
+		return s
+	else
+		return false	
+}*/
+
+$(document).ready(function(){
+
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+	/* диалоговое окно "Оставить отзыв" */
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+	/*$(".dialogField input").click(function(){
+		$(this).attr('value', '');
+	})*/
+	
+	
+	/* ВВОД НОМЕРА ТЕЛЕФОНА */
+	
+	$('.fieldNum input').attr('disabled', true)
+		
+	$('.dialogField input').keyup(function()
+	{
+		var thisLen = $(this).val().length;
+		var maxLen  = $(this).attr('maxlength')
+		
+		if(thisLen == maxLen)
+		{
+			//alert(thisLen)
+			$('.fieldNum input').attr('disabled', false).focus()
+		}
+		
+		//var filled = fill();
+		
+		/*if(filled != false)
+			$('#userPhone').attr('value', '+7 '+filled)*/
+			
+		
+	})
+		
+	/* /ВВОД НОМЕРА ТЕЛЕФОНА */
+	
+	
+	
+	
+	$("#dialogCall").dialog({
+		autoOpen	: false,
+		closeText	: "закрыть",	
+		minWidth	: 520,
+		minHeight	: 200,
+		beforeClose : function(){
+			$('#fancybox-overlay').removeClass('overlay');
+		}			
+	});
+	
+	$(".makeCall").click(function(){
+	    $("#dialogCall").dialog("open");
+		$('#fancybox-overlay').addClass('overlay');
+		return false;
+	  });
+	  
+	  var options = {
+		  target: ".resultCall",
+		  clearForm : true
+		};
+	  
+	  $(".formSendCall").click(function(){
+	  //	alert("#formAddCall")
+	  	$("#formAddCall").ajaxSubmit(options);
+		
+		//$('select').selectBox('destroy');
+		$('#selectCall').selectBox('value', '0');		
+		return false;
+	  })
+	  
+	  $('#selectCall').selectBox();
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+	/* /диалоговое окно "Оставить отзыв" */
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+})
+</script>
+
+
+<div id="dialogCall" title="Заказать звонок">
+	<p>Укажите свои данные и администратор выбранного Вами салона обязательно перезвонит Вам в ближайшее время.</p>
+	<form action="/blocks/ajax.add.call.php" method="post" id="formAddCall">
+		<table>
+			<tr>
+				<td>
+					<select id="selectCall" name="msgSalon">
+						<option value="0" >Выбор салона</option><option value="salon_leninsky" >Салон на Ленинском</option><option value="salon_kolom" >Салон на Коломенской</option><option value="salon_bratis" >Салон на Братиславской</option><option value="salon_sokol" >Салон на Соколе</option><option value="salon_shodnya" >Салон на Сходненской</option><option value="salon_dom_krasoty" >Дом красоты м.Аэропорт</option>					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><div class="dialogField"><input type="text" name="userName" value="" placeholder="Ваше имя" /></div></td>
+			</tr>
+			<tr>
+				<td>
+					<span class="fieldCodeC">+7</span>
+					<div class="dialogField fieldCode"><input type="text" name="addCallCode" maxlength="3" value="" placeholder="xxx" /></div>
+					<div class="dialogField fieldNum"><input type="text" name="addCallNum" maxlength="7" value="" placeholder="xxxxxxx" /></div>					
+				</td>
+			</tr>
+		</table>		
+		<a class="formSendCall" style="font-size:11px" href="#">Заказать звонок</a>
+	</form>
+	<div class="result resultCall">&nbsp;</div>
+</div>		</div>
+		
+		
+		<div style="clear:left"></div>
+	</div>
+	<!-- END верхний блок -->
+	
+	
+	
+	<!-- BEGIN основной блок -->
+	<div id="contentBlock">
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr valign="top">
+				<td width="100%" valign="top" class="contentTD">
+					
+					
+					<div class="contentBlock">						
+						<div id="content">
+							<h1 class="slogan">Жантиль - ваш любимый салон красоты в Москве</h1>						</div>						
+					</div>				
+					
+				</td>
+				<td class="widgetTD">
+					<div class="widgetBlock">
+						<!--place0-->
+	<div id="place0" class="place">
+	
+		<div id="widget18" class="widget2">
+			<div class="widgetHeader">
+				<span>БУДЬ В КУРСЕ</span>				
+				<div style="clear:both"></div>
+			</div>			
+			<div class="widgetContent">
+				<a href="http://gentille.ru/webinar/" class="widgetTitle"><span >Красота и Стиль от Жантиль</span></a>
+<a class="widgetLink" href="http://gentille.ru/webinar/"><img class="widgetBanner" src="/pic_catalogue/gantil_pic_3/44-180x88-mono.png" width="180" height="88"   /></a>			</div>		
+		</div>		
+	</div>
+	
+		<!--place1-->
+	<div id="place1" class="place">
+	
+		<div id="widget1" class="widget2">
+			<div class="widgetHeader">
+				<span>Новости</span>				
+				<div style="clear:both"></div>
+			</div>			
+			<div class="widgetContent">
+				
+
+<!--<span class="widgetTitle">Ambassador-день в жантиль на б</span>-->
+<a class="widgetTitle" href="/news_one/487/" style="color:#FFFFFF; background:rgba(61, 61, 61, 0.7)"><span>AMBASSADOR-ДЕНЬ В ЖАНТИЛЬ</span></a>
+<a class="widgetLink" href="/news_one/487/"  style="background:#3D3D3D">
+	<img src='/pic_catalogue/gantil_pic_2/162-236x115-mono.jpg' class='widgetBanner' width="236" height="115" title='' alt='' align='' /></a>			</div>		
+		</div>		
+	</div>
+	
+		<!--place2-->
+	<div id="place2" class="place">
+	
+		<div id="widget9" class="widget2">
+			<div class="widgetHeader">
+				<span>Акции</span>				
+				<div style="clear:both"></div>
+			</div>			
+			<div class="widgetContent">
+				
+<a class="widgetTitle" href="/action_one/485/" style="color:#FFFFFF; background:rgba(87, 87, 87, 0.7)"><span>День Преображения от Kerastase в Жантиль на Коломенской</span></a>
+<a class="widgetLink" href="/action_one/485/"  style="background:#575757">
+	<img src='/pic_catalogue/gantil_pic_2/273-236x115-mono.jpg' class='widgetBanner' width="236" height="115" title='' alt='' align='' /> 
+</a>			</div>		
+		</div>		
+	</div>
+	
+	 							<!--
+					<div id='widgetAdd'>
+						<a href='#'><img src='/img/tpl/widget_add.png' width='13' height='13' alt='+' /></a>
+					</div>-->
+					</div>				
+				</td>
+			</tr>
+		</table>	
+	</div>
+	<!-- END  основной блок -->
+	
+	
+	
+	<!-- BEGIN нижний блок -->
+	<div id="footBlock" class="frameBlock">
+		<script language="javascript">
+$(document).ready(function()
+{
+	$('#printPage').click(function()
+	{
+		window.print();
+	})
+})
+</script>
+		
+		<div id="footBlockLeft" class="part">
+			<table width="100%">
+				<tr>
+				<td><a class="promoLink" target="_blank" href="http://lorealprofessionnel.ru/"><img src="/img/pic/Logo-LP-black.png" /></a></td>
+				<td>
+					<ul class="footMenu">
+						<li><a class="orange" href="/blocks/mobile/switch.mobile.php">Мобильная версия</a></li>
+						<li><a href="/site_ref/">Отзыв о сайте</a></li>
+						<li><a href="/54/">Возможности сайта</a></li>
+						<!--<li><a href="/settings/">Настройки сайта</a></li>-->
+						<li><a href="/links/">Ссылки</a></li>
+						<li><a href="/site_map/">Карта сайта</a></li>
+						
+						<!--<li><a id="printPage" href="#">печать</a></li>-->
+						<div style="clear:left"></div>
+					</ul>	
+					<div style="clear:left"></div>
+				</td>
+				<td style="padding-left:50px">
+					<div class="form">
+						<form id="formSearch" action="/search/" method="post">
+														<input type="text" name="fieldSearch" class="fieldSearch" value="поиск" />
+						</form>
+					</div>
+				</td>
+				
+				<td>
+				<div id="footBlockRight" class="">
+			
+			<div class="socialLinks">
+				<a target="_blank" class="social okk" href="http://www.odnoklassniki.ru/gantil.salon"><img alt="" name="/img/tpl/icon_ok_2.png" src="/img/tpl/gantil_icon_ok.png" /></a><a href="https://vk.com/gantil_salon" target="_blank"><img name="/img/tpl/vkontakte.png" alt="" src="/img/tpl/gantil_vkontakte.png" /></a><a class="social tw" target="_blank" href="https://twitter.com/#!/GantilSalon"><img name="/img/tpl/twitter.png" alt="" src="/img/tpl/gantil_twitter.png" /></a><a target="_blank" class="social fb" href="http://www.facebook.com/gantil.salon"><img name="/img/tpl/facebook.png" alt="" src="/img/tpl/gantil_facebook.png" /></a><a target="_blank" class="social" href=""><img alt="" src="/img/tpl/gantil_yt.png" /></a><a target="_blank" class="social" href="https://www.instagram.com/gantil_salon/"><img alt="" src="/img/tpl/gantil_inst.png" /></a><a href="//www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?44.7" title="LiveInternet" alt="" border="0" width="31" height="31" /></a>			
+			</div>
+		</div>
+				</td>
+			</tr>
+			</table>
+		</div>
+		
+		
+		<!--<div id="footBlockRight" class="">
+			
+			<div class="socialLinks">
+				<a target="_blank" class="social okk" href="http://www.odnoklassniki.ru/gantil.salon"><img alt="" name="/img/tpl/icon_ok_2.png" src="/img/tpl/gantil_icon_ok.png" /></a><a href="https://vk.com/gantil_salon" target="_blank"><img name="/img/tpl/vkontakte.png" alt="" src="/img/tpl/gantil_vkontakte.png" /></a><a class="social tw" target="_blank" href="https://twitter.com/#!/GantilSalon"><img name="/img/tpl/twitter.png" alt="" src="/img/tpl/gantil_twitter.png" /></a><a target="_blank" class="social fb" href="http://www.facebook.com/gantil.salon"><img name="/img/tpl/facebook.png" alt="" src="/img/tpl/gantil_facebook.png" /></a><a target="_blank" class="social" href=""><img alt="" src="/img/tpl/gantil_yt.png" /></a><a target="_blank" class="social" href="https://www.instagram.com/gantil_salon/"><img alt="" src="/img/tpl/gantil_inst.png" /></a><a href="//www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?44.7" title="LiveInternet" alt="" border="0" width="31" height="31" /></a>			
+			</div>
+		</div>-->
+
+	<div style="clear:left"></div>
+	
+	</div>
+	<!-- END нижний блок -->
+</div>
+
+<style>
+.contentTextMain{font-size:12px;     padding: 20px 45px 25px;}
+.contentTextMain a{color:#f30}
+</style>
+
+<div class="contentTextMain"><p>Жантиль - это сеть салонов красоты по всей Москве. Наши салоны работают для Вас на <a href="http://gantil.ru/salon_leninsky/">Ленинском проспекте</a>, недалеко от метро <a href="http://gantil.ru/salon_kolom/">Коломенская </a>и <a href="http://gantil.ru/salon_bratis/">Братиславская</a>, а также на <a href="http://gantil.ru/salon_shodnya/">Сходненской </a>и на <a href="http://gantil.ru/salon_sokol/">Соколе</a>. А на метро Аэропорт для Вас открыт <a href="http://gantil.ru/salon_dom_krasoty/">Дом красоты Жантиль</a>. Везде наших гостей ждут радушный прием и широкий спектр парикмахерских услуг, маникюр и педикюр, косметология и макияж, студия загара, а также тайский и балийский массаж. Наши мастера постоянно развиваются и гарантируют превосходный результат оказания услуг.</p></div>
+
+<div id="bgPic" class="#FFFFFF"><img src="/pic_catalogue/gantil_pic_41/74.jpg" class="" width="1200" height="800" /></div>
+
+<div id="sertif">
+	<span>Купить сертификат online</span>
+	<a href="/sertif/"><img src="/img/tpl/sertif.png" width="100%" /></a>
+</div>
+<style>
+#widjet-webinar{
+position: absolute;
+    width: 295px;
+    top: 50%;
+    margin-top: 20px;
+    left: 0px;
+    border: 0px solid red;
+}
+</style>
+<div id="widjet-webinar">
+	<a href="/webinar/"><img src="/img/tpl/banner-webinar.png" width="100%" /></a>
+</div>
+<style>
+.tab-slide{background:url(/img/pic/tab2.png); display:block; position:fixed; left:0; top:50%; width:40px; height:222px; margin-top: -215px;}
+
+
+#banner-back{ position: fixed; display:none;    top: 0;    left: 0;    width: 100%;    height: 100%;	background:#000;	opacity: 0.7;    z-index: 10;}
+
+#banner-main{position: fixed; display:none;    top: 0;    left: 0;    width: 100%;    height: 100%;	z-index: 11;}
+.banner-inner{width:90%; height:80%; margin:5% 5% !important; text-align:center}
+.banner-inner > div{position:relative; margin: auto; /*background:#00FF33;*/ height:100%; text-align:center}
+.banner-inner > div img{max-height:100%; width:auto; height:auto; max-width: 100%; /*vertical-align:middle;*/ /*display:block;*/ /*position:relative; margin: auto;*/ }
+
+.banner-close{display:block; position:absolute; top:-15px; right: -25px; }
+.banner-close img{max-width: 50px}
+.banner-close-div{max-width:900px; margin:auto !important; background:#00CCFF; position:relative}	
+
+.banner-button{display: block;     max-width: 100%;    margin: auto;    height: 10%;    position: relative;    /* background: #006633; */    bottom: 20%;    padding: 10px;}
+
+</style>
+
+<script language="javascript">
+function showBanner()
+{
+	$('#banner-main, #banner-back').show();
+}
+
+$(document).ready(function()
+{
+
+	/*var x = $.cookie('gantil_first_visit');
+	
+	
+	if(x != null)
+	{
+		if(x == 'true')
+		{			
+			showBanner()
+		}		
+	}
+	else
+	{
+		showBanner()
+		$.cookie('gantil_first_visit', 'true', {path: '/'});
+	}*/
+
+
+	$('.tab-slide').click(function()
+	{
+		$('#banner-back, #banner-main').show('slow')
+		//$.cookie('gantil_first_visit', 'false', {path: '/'});
+	})
+	
+	$('.banner-close, .banner-button').click(function()
+	{
+		$('#banner-main, #banner-back').hide('fast')
+		//$.cookie('gantil_first_visit', 'false', {path: '/'});
+	})
+})
+</script>
+
+<a class="tab-slide" href="#"></a>
+
+<div id="banner-main">
+	<div class="banner-inner">
+		<div>
+			<div class="banner-close-div">
+				<a class="banner-close" href="#"><img  src="/img/banner-close-2.png" width="50"></a>
+			</div>
+		
+			<img src="/img/banner2.jpg">
+			<a class="banner-button" href="/giftrule/"><img src="/img/banner-button-2.png"></a>		
+		</div>
+	</div>
+</div>
+
+<div id="banner-back"></div>
+</body>
+</html> 
+

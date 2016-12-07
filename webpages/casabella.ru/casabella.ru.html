@@ -1,0 +1,1205 @@
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="keywords" content="ìåáåëü, ìåáåëü Èòàëèè, èòàëüÿíñêàÿ ìåáåëü, ìåáåëüíûé êàòàëîã, ýêñêëþçèâíàÿ ìåáåëü, ìåáåëüíûé ñàëîí, äèçàéí èíòåðüåðîâ, àðõèòåêòóðà"/>
+<title>Ñàëîí ìåáåëè CASABELLA</title>
+<link href="/css/main.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="/js/highslide/highslide-full.js"></script>
+
+
+<script src="/Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script src="/Scripts/swfobject.js"          type="text/javascript"></script>
+<script src="/SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+<link href="/SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/css/highslide.css" />
+
+<script type="text/javascript">
+	
+//------------------------------------------------------------------------------------------
+function getElementsByClass(searchClass, node, tag) 
+{
+ var classElements = new Array();
+ if ( node == null )
+  node = document;
+ if ( tag == null )
+  tag = '*';
+ var els = node.getElementsByTagName(tag);
+ var elsLen = els.length;
+
+ var pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)");
+ for (i = 0, j = 0; i < elsLen; i++) {
+   if ( pattern.test(els[i].className) ) {
+   classElements[j] = els[i];
+   j++;
+  }
+ }
+ return classElements;
+}
+//--------------------------------------------------------
+
+</script>
+<link href="/css/MyTP.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="MainContainer">
+
+<script type="text/javascript">
+    hs.graphicsDir = '/images/graphics/';
+  //  hs.outlinesDir = 'outlines_red/';
+  //  hs.outlinesDir = 'outlines_green/';
+  //  hs.outlinesDir = 'outlines_white/';	
+  //  hs.outlinesDir = 'outlines_blue/';
+  //  hs.outlinesDir = 'outlines_dblue/';	
+  //  hs.outlinesDir = 'outlines_magenta/';	
+    hs.blockRightClick = true;
+    hs.outlineType = 'outer-glow';
+	hs.wrapperClassName = 'draggable-header';
+	hs.showCredits = false;
+
+//-------------------------------------------------------------------------------------------------	
+function ajaxGetTrashInfo(l, op, idc)
+{
+	 op  = op || 'v'; //Çíà÷åíèå ïî óìîë÷àíèþ
+	 idc = idc || 0; //Çíà÷åíèå ïî óìîë÷àíèþ	 
+	 
+     xmlHttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("MSXML2.XMLHTTP.3.0");
+     if(!xmlHttp ) {
+            alert("Error initializing XMLHttpRequest!");
+            return;
+     }
+     var xmlS = encodeURI("lng=" + l + "&oper=" + op + "&idc=" + idc);
+     var url = "load_trash.php";
+     xmlHttp.open("POST", url, true);
+     xmlHttp.onreadystatechange = function()
+     {
+     if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+		var elem = document.getElementById('trash_cnt');
+		var elemb = document.getElementById('trash_btn');
+		var elemn = document.getElementById('trash_n');	
+		
+		var resp = xmlHttp.responseText;
+		var op = resp.slice(0, 1);
+		var rt = resp.slice(1, resp.indexOf('!end!'));
+		var sec_part = resp.slice(rt.length + 6);
+		var idc = sec_part.slice(0, sec_part.indexOf('!end!'));
+		var html_text = sec_part.slice(idc.length + 5);		
+		if (!isNumber(idc)) {
+			alert(idc);
+			return;
+		}
+		if (elem != null) {
+            elem.innerHTML  = html_text;			
+            elemn.innerHTML = rt;			
+			if (op === 'v') {
+			    hs.Expander.prototype.onAfterExpand = function(sender){ sender.reflow(); }
+				hs.htmlExpand(elemb, {maincontentId: 'trash_cnt', wrapperClassName: 'user-wrapper-class', headingText: elemb.alt, width: 670} );
+			} else {			
+		      hs.Expander.prototype.onAfterExpand = null;			
+			  var first_tp = document.getElementById('TPT1');
+			  var expander = hs.getExpander(first_tp);
+			  if (expander != null) expander.reflow();
+			}
+		} else {
+			alert('Ýëåìåíò îòñóòñòâóåò');
+			return;
+		}
+     }
+     else
+     {
+        //alert("readyState = " + xmlHttp.readyState + "\n" + "Status = " + xmlHttp.status);
+     }
+     }
+     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+     xmlHttp.send(xmlS);
+}
+//-------------------------------------------------------------------------------------------------
+function ajaxGetSearchInfo(l)
+{	 
+     xmlHttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("MSXML2.XMLHTTP.3.0");
+     if(!xmlHttp ) {
+            alert("Error initializing XMLHttpRequest!");
+            return;
+     }
+     var xmlS = encodeURI("lng=" + l);
+     var url = "load_search.php";
+     xmlHttp.open("POST", url, true);
+     xmlHttp.onreadystatechange = function()
+	 {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+		  var elem = document.getElementById('srch_catalog_dlg');
+		  var elemb = document.getElementById('srch_btn');		  
+		  if (elem != null) {
+            elem.innerHTML = xmlHttp.responseText;
+		    hs.Expander.prototype.onAfterExpand = function(sender){ sender.reflow(); }			
+			hs.htmlExpand(elemb, {maincontentId: 'srch_catalog_dlg', wrapperClassName: 'user-wrapper-class', headingText: elemb.alt, width: 890} );
+		  } else {
+			alert('Ýëåìåíò îòñóòñòâóåò');
+			return;
+		  }
+       }
+       else
+       {
+        //alert("readyState = " + xmlHttp.readyState + "\n" + "Status = " + xmlHttp.status);
+       }		 
+	 }
+     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+     xmlHttp.send(xmlS);
+}
+//-------------------------------------------------------------------------------------------------
+function LoadCatalogPage(el, pag)
+{
+  document.body.style.cursor = 'wait';
+  el.style.cursor = 'wait';
+  function fun() {  
+    xmlPHttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("MSXML2.XMLHTTP.3.0");
+    if(!xmlPHttp ) {
+            alert("Error initializing XMLHttpRequest!");
+            return;
+    }
+    var xmlS = encodeURI("pag=" + pag);
+    var url = "load_srch_catalog.php";
+    xmlPHttp.open("POST", url, true);
+	//alert(xmlS);
+    xmlPHttp.onreadystatechange = function()
+	   {
+          if (xmlPHttp.readyState == 4 && xmlPHttp.status == 200) {
+		    var sh_catalog = document.getElementById('Selected_catalog');
+		    if (sh_catalog != null) {
+              sh_catalog.innerHTML = xmlPHttp.responseText;
+			  document.body.style.cursor = 'auto';
+			  el.style.cursor = 'auto';
+              hs.getExpander(sh_catalog).reflow();
+		    } else {
+			  alert('Ýëåìåíò îòñóòñòâóåò');
+		 	  return;
+		    }
+         }
+         else
+         {
+        //alert("readyState = " + xmlHttp.readyState + "\n" + "Status = " + xmlHttp.status);
+         }		 
+	   }
+    xmlPHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlPHttp.send(xmlS);	
+   }    
+   setTimeout(fun, 30);
+}
+//-------------------------------------------------------------------------------------------------
+function LoadCatalogPageN(el, pag)
+{
+  document.body.style.cursor = 'wait';
+  el.style.cursor = 'wait';
+  function fun() {  
+    var xmlPHttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("MSXML2.XMLHTTP.3.0");
+    if(!xmlPHttp ) {
+            alert("Error initializing XMLHttpRequest!");
+            return;
+    }
+    var xmlS = encodeURI("pag=" + pag);
+    var url = "load_cat_position_group.php";
+    xmlPHttp.open("POST", url, true);
+	//alert(xmlS);
+    xmlPHttp.onreadystatechange = function()
+	   {
+          if (xmlPHttp.readyState == 4 && xmlPHttp.status == 200) {
+		    var cat_position_group = document.getElementById('Cat_position_group');
+		    if (cat_position_group != null) {
+              cat_position_group.innerHTML = xmlPHttp.responseText;
+			  document.body.style.cursor = 'auto';
+			  el.style.cursor = 'auto';
+              //hs.getExpander(cat_position_group).reflow();
+		    } else {
+			  alert('Ýëåìåíò îòñóòñòâóåò');
+		 	  return;
+		    }
+         }
+         else
+         {
+        //alert("readyState = " + xmlHttp.readyState + "\n" + "Status = " + xmlHttp.status);
+         }		 
+	   }
+    xmlPHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlPHttp.send(xmlS);	
+   }    
+   setTimeout(fun, 30);
+}
+//-------------------------------------------------------------------------------------------------
+function SetSearch(e, lng, tp, id, op, atp)
+{
+  op = op || 's';
+  document.body.style.cursor = 'wait';
+  e.style.cursor = 'wait';
+  function fun() { 	
+     xmlHttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("MSXML2.XMLHTTP.3.0");
+     if(!xmlHttp ) {
+            alert("Error initializing XMLHttpRequest!");
+            return;
+     }
+     style="cursor:wait;";
+     
+	 var xmlS = encodeURI("tp=" + tp + "&id=" + id + "&l=" + lng + "&op=" + op + "&atp=" + atp);
+     var url = "set_search.php";
+     xmlHttp.open("POST", url, true);
+     xmlHttp.onreadystatechange = function()
+	 {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+		  var b_resp = xmlHttp.responseText;		  
+	      var elem = document.getElementById('srch_catalog_dlg');		  
+		  elem.innerHTML = b_resp;			 
+  	      //var elem = document.getElementById('srch_catalog_dlg');
+          hs.getExpander(elem).reflow();		  
+          document.body.style.cursor = 'default';		  
+          e.style.cursor = 'pointer';			 
+        }
+        else
+        {
+        //alert("readyState = " + xmlHttp.readyState + "\n" + "Status = " + xmlHttp.status);
+        }		 
+	 }
+	 //document.body.style.cursor = '';
+     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+     xmlHttp.send(xmlS);
+  }
+  setTimeout(fun, 30);
+}
+//-------------------------------------------------------------------------------------------------
+function ShowCriteria(e)
+{
+	 var r=document.getElementById('show_selected').style;
+     r.display=(r.display=='none')?'':'none';						  
+	 var shc = (r.display=='none')?0:1;						  
+	 e.parentNode.className=(r.display=='none')?'show_more':'hide_more';
+     try {
+        hs.getExpander(e).reflow();
+	 } catch(e){};	
+     xmlHttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("MSXML2.XMLHTTP.3.0");
+     if(!xmlHttp ) {
+            alert("Error initializing XMLHttpRequest!");
+            return;
+     }
+	 var xmlS = encodeURI("shc=" + shc);
+     var url = "set_show_criter.php";
+     xmlHttp.open("POST", url, true);
+     //xmlHttp.onreadystatechange = function()
+	 //{
+
+	 //}
+	 //document.body.style.cursor = '';
+     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+     xmlHttp.send(xmlS);	
+    return false;
+}
+//-------------------------------------------------------------------------------------------------
+function myfunc_cloud(c_id, id_purl)
+{
+	//alert(c_id + ' ' + purl);
+	var cid = c_id;
+	var l = 'rus';
+	if (isNaN(c_id)) {
+	} else {
+          xmlHttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("MSXML2.XMLHTTP.3.0");
+          if(!xmlHttp ) {
+            alert("Error initializing XMLHttpRequest!");
+            return;
+          }
+          var xmlS = encodeURI("id_sl=" + cid + "&lng=" + l + '&pg=' + id_purl);
+          var url = "load_cloud.php";
+          xmlHttp.open("POST", url, true);
+          xmlHttp.onreadystatechange = function()
+          {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+		       var elem = document.getElementById('Right_Cloud');
+		       if (elem != null) {
+                  elem.innerHTML = xmlHttp.responseText;
+//Äëÿ âûïîëíåíèÿ js-êîäà èç âîçâðàùåííîãî ---------------------------------
+		          var obj = document.createElement('div');
+		          obj.innerHTML = xmlHttp.responseText;
+		          var elts = obj.getElementsByTagName('script');
+		          for(var i = 0; i < elts.length; i++) {
+			         eval(elts[i].text); //ïîñòðî÷íîå ïðèíóäèòåëüíî âûïîëíåíèå êîäà âíóòðè òåãà script
+			         elts[i].parentNode.removeChild(elts[i]);
+		          }
+//Äëÿ âûïîëíåíèÿ js-êîäà èç âîçâðàùåííîãî ---------------------------------			
+		       } else {
+			     alert('Ýëåìåíò îòñóòñòâóåò');
+			     return;
+		       }
+            }
+            else
+            {
+            //alert("readyState = " + xmlHttp.readyState + "\n" + "Status = " + xmlHttp.status);
+            }
+          }		  
+	      xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          xmlHttp.send(xmlS);
+	   }	
+}
+//-------------------------------------------------------------------------------------------------
+function myfunc(c_id)
+{
+	//alert(c_id);
+	var cid = c_id;
+	var l = 'rus';
+	if (isNaN(c_id)) {
+	} else {
+          xmlHttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("MSXML2.XMLHTTP.3.0");
+          if(!xmlHttp ) {
+            alert("Error initializing XMLHttpRequest!");
+            return;
+          }
+          var xmlS = encodeURI("id_sl=" + cid + "&lng=" + l);
+          var url = "load_slider.php";
+          xmlHttp.open("POST", url, true);
+          xmlHttp.onreadystatechange = function()
+          {
+	        var el_cnt = document.getElementById("slider_content_loading");
+	        el_cnt.style.left = document.body.clientWidth/2 - 20;
+	        el_cnt.style.top = 100;
+	        el_cnt.style.display = 'block';
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+		      var elem = document.getElementById('slider_content');
+		      if (elem != null) {
+                  elem.innerHTML = xmlHttp.responseText;
+			      el_cnt.style.display = 'none';
+			      var ht = document.getElementById("header_text");
+				  var wh = document.getElementById("popup_width").value;
+			      hs.htmlExpand(null, {maincontentId: "s" + cid, width: wh, headingText: ht.innerHTML, wrapperClassName: 'draggable-header', preserveContent: false});			
+		      } else {
+			      alert('Ýëåìåíò îòñóòñòâóåò');
+			      return;
+		      }
+            }
+            else
+            {
+                //alert("readyState = " + xmlHttp.readyState + "\n" + "Status = " + xmlHttp.status);
+            }
+          }		  
+	      xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          xmlHttp.send(xmlS);
+    }
+}
+//--------------------------------------------------------------------------------------
+
+</script>
+<div id="slider_content_loading" style="display: none;"><table width=100% height=100%><tr valign="middle"><td allign="center">Çàãðóçêà ...</td></tr></table></div><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+        &nbsp;        </td>
+        <td width="140" height="30" align="center" valign="middle">
+            <a href='#' style='color:#ffffff; font-weight: bold'>Ðóñ</a> | <a href='/index.php?l=eng'>Eng</a> | <a href='/index.php?l=ita'>Ita</a>        </td>
+      </tr>
+</table> <!-- ßçûêîâàÿ ïàíåëü  -->          
+<div id="hdr">
+          <p> Äëÿ îòîáðàæåíèÿ ýëåìåíòà íåîáõîäèìî óñòàíîâèòü Flash-ïëååð è âêëþ÷èòü ïîääåðæêó Java-ñêðèïòîâ!</p>
+                    <script type="text/javascript">
+          var flashvars = {
+			 links : "%3Clinks%3E%3Clnk+href%3D%27%27+tc%3D%270xcccccc%27%3E%3C%2Flnk%3E%3Clnk+href%3D%27%27+tc%3D%270xcccccc%27%3E%3C%2Flnk%3E%3Clnk+href%3D%27%23%27+tc%3D%270xcccccc%27%3E%3C%2Flnk%3E%3C%2Flinks%3E"
+	            };
+          var params = {};
+            //params.wmode = 'opaque';
+            params.wmode = 'transparent';
+            //params.bgcolor = '#000000';
+            params.quality = 'medium';
+            params.allowscriptaccess = 'always';
+          var attributes = {};
+              attributes.id = 'hdr';  
+          swfobject.embedSWF('/swf/Header.swf', 'hdr', '0', '0', '10.0.0', true, flashvars, params, attributes);
+          </script>
+</div> <!-- Âåðõíèå ññûëêè -->
+<div id="header">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="30"  colspan="4">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr  align="center" valign="middle">
+          <td height="30" width="4" background="/images/bt_left.png">&nbsp;</td>
+                            <td height="30" align="center"  background="/images/bt_cnt.png">                
+				<div style="margin-bottom:2px;"><a href="#" style="color:#ffffff;">Êàñàáåëëà</a></div>                </td>
+                 <td  width="2" background="/images/bt_spr.png"></td>                            <td height="30" align="center"  background="/images/bt_cnt.png">                
+				<div style="margin-bottom:2px;"><a href=/articles.php>Ñòàòüè</a></div>                </td>
+                 <td  width="2" background="/images/bt_spr.png"></td>                            <td height="30" align="center"  background="/images/bt_cnt.png">                
+				<div style="margin-bottom:2px;"><a href=/design.php>Casabella - design</a></div>                </td>
+                 <td  width="2" background="/images/bt_spr.png"></td>                            <td height="30" align="center"  background="/images/bt_cnt.png">                
+				<div style="margin-bottom:2px;"><a href=/servises.php>Óñëóãè</a></div>                </td>
+                 <td  width="2" background="/images/bt_spr.png"></td>                            <td height="30" align="center"  background="/images/bt_cnt.png">                
+				<div style="margin-bottom:2px;"><a href=/catalog.php>Êàòàëîã</a></div>                </td>
+                 <td  width="2" background="/images/bt_spr.png"></td>                          <td width="39%" background="/images/bt_cnt.png"></td>
+              <td width="4" background="/images/bt_right.png"></td>
+          </tr>
+          </table><!-- Íàâèãàöèÿ (ññûëêè íà îñíîâíûå ðàçäåëû ñàéòà)   -->    
+        </td>
+      </tr><!-- Íàâèãàöèÿ --> 
+      <tr>
+        <td width="25" >&nbsp;</td>
+        <td>
+         <div id="logo">
+         
+          <p> Äëÿ îòîáðàæåíèÿ ýëåìåíòà íåîáõîäèìî óñòàíîâèòü Flash-ïëååð è âêëþ÷èòü ïîääåðæêó Java-ñêðèïòîâ!</p>
+          <script type="text/javascript">
+          var flashvars = {};
+          var params = {};
+            params.wmode = 'opaque';
+            params.wmode = 'transparent';
+            //params.bgcolor = '#cccc55';
+            params.quality = 'higth';
+            params.allowscriptaccess = 'always';
+          var attributes = {};
+              attributes.id = 'logo';  
+          swfobject.embedSWF('/swf/logo.swf', 'logo', '500', '200', '9.0.0', false, flashvars, params, attributes);
+          </script>
+          </div><!-- Ëîãîòèï CASABELLA -->
+        </td>
+        <td>
+               <div id="c_limit" style="width: 190px;">&nbsp;</div>
+        </td><!-- Ðàñøèðèòåëü â ñåðåäèíå òàáëèöû -->
+        <td width="560" height="260">
+                 <div id="r_up">
+          <p> Äëÿ îòîáðàæåíèÿ ýëåìåíòà íåîáõîäèìî óñòàíîâèòü Flash-ïëååð è âêëþ÷èòü ïîääåðæêó Java-ñêðèïòîâ!</p>
+          <script type="text/javascript">
+          var flashvars = {
+            imgs : " %3Cimgs%3E%3Cimg+titl%3D%27%D0%9E%D1%84%D0%B8%D1%81%D0%BD%D0%B0%D1%8F+%D0%BC%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C+Las%27+hrf%3D%22javascript%3Amyfunc%28250%29%3B%22+tcolor%3D%270xffffff%27%3E..%2Fimages%2Fdb_images%2Fbig%2Fimgb_250.jpg%3C%2Fimg%3E%3Cimg+titl%3D%27%D0%A1%D0%BF%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8+CorteZari%27+hrf%3D%22javascript%3Amyfunc%28288%29%3B%22+tcolor%3D%270x22aa99%27%3E..%2Fimages%2Fdb_images%2Fbig%2Fimgb_288.jpg%3C%2Fimg%3E%3Cimg+titl%3D%27%D0%9C%D1%8F%D0%B3%D0%BA%D0%B0%D1%8F+%D0%BC%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C+Formitalia%27+hrf%3D%22javascript%3Amyfunc%28100%29%3B%22+tcolor%3D%270xcccc00%27%3E..%2Fimages%2Fdb_images%2Fbig%2Fimgb_100.jpg%3C%2Fimg%3E%3Cimg+titl%3D%27%D0%94%D0%B5%D1%82%D1%81%D0%BA%D0%B0%D1%8F+Pentamobili%27+hrf%3D%22javascript%3Amyfunc%28270%29%3B%22+tcolor%3D%270xdd5500%27%3E..%2Fimages%2Fdb_images%2Fbig%2Fimgb_270.jpg%3C%2Fimg%3E%3Cimg+titl%3D%27%D0%94%D0%B8%D0%B2%D0%B0%D0%BD%D1%8B%27+hrf%3D%22javascript%3Amyfunc%28395%29%3B%22+tcolor%3D%270xffffff%27%3E..%2Fimages%2Fdb_images%2Fbig%2Fimgb_395.jpg%3C%2Fimg%3E%3Cimg+titl%3D%27%D0%AD%D0%BA%D1%81%D0%BA%D0%BB%D1%8E%D0%B7%D0%B8%D0%B2%D0%BD%D0%B0%D1%8F+%D0%BC%D1%8F%D0%B3%D0%BA%D0%B0%D1%8F+%D0%BC%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C%27+hrf%3D%22javascript%3Amyfunc%2841%29%3B%22+tcolor%3D%270xffffff%27%3E..%2Fimages%2Fdb_images%2Fbig%2Fimgb_41.jpg%3C%2Fimg%3E%3Cimg+titl%3D%27%D0%96%D1%83%D1%80%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5+%D1%81%D1%82%D0%BE%D0%BB%D0%B8%D0%BA%D0%B8%27+hrf%3D%22javascript%3Amyfunc%2873%29%3B%22+tcolor%3D%270xffffff%27%3E..%2Fimages%2Fdb_images%2Fbig%2Fimgb_73.jpg%3C%2Fimg%3E%3C%2Fimgs%3E", 
+	        tw: 2,
+	        ts: 1,
+			mt: 1,    //Ìàêñèìàëüíàÿ ïðîçðà÷íîñòü
+			mm: 1     //Íàëè÷èå ìàñêè-ïðîçðà÷íîñòè ïî ëåâîìó êðàþ ñëàéäåðà  1-åñòü, 0-íåò
+          };
+          var params = {};
+              params.wmode = 'opaque';
+              params.wmode = 'transparent';
+            //params.bgcolor = '#cccc55';
+              params.quality = 'higth';
+              params.allowscriptaccess = 'always';
+          var attributes = {};
+              attributes.id = 'r_up';  
+          swfobject.embedSWF('/swf/r_up.swf', 'r_up', '100%', '100%', '9.0.0', false, flashvars, params, attributes);
+          </script>          
+          </div><!-- Âåðõíèé ñëàéäåð -->
+          <div id="slider_content" style="display: none;"></div>                         
+        </td>
+      </tr><!-- Ëîãîòèï è âåðõíèé ñëàéäåð --> 
+      <tr>
+        <td colspan=4>
+           <table width="100%" height=30 border="0" cellspacing="0" cellpadding="0">
+             <tr>
+               <td height="30" width="4" background="/images/bt_left.png">
+               </td>
+               <td height="30" align="center"  background="/images/bt_cnt.png">
+                  <div id="UserPanel" style="color: #707070; padding-left:10px; text-align: left;">                  
+                  <img style="vertical-align: middle; cursor:pointer;" id="trash_btn" src="/images/cart_16.png" alt="Çàïðîñ äîï. èíôîðìàöèè" 
+					           onclick="ajaxGetTrashInfo('rus')">
+					<span class="TrashComm" style="cursor:pointer;" onclick="ajaxGetTrashInfo('rus')">Êîðçèíà çàïðîñà</span>		   
+                    <span id="trash_n" class="TrashComm" style="color:#a0a090;	padding-left: 0px;	font-weight: bold;">
+					        (ïóñòà)
+				    </span>
+				    <div class="highslide-maincontent" id="trash_cnt"></div>                  </div>
+                </td><!-- Êîðçèíà --> 
+                <td align="right"  background="/images/bt_cnt.png">
+                  <div id="SrchPanel" style="color: #707070; padding-left:10px; text-align: right;">                  
+                  <span class="TrashComm" style="cursor:pointer;" onclick="ajaxGetSearchInfo('rus')">Ïîèñê â êàòàëîãå...</span>
+					<img style="margin-right:10px; vertical-align: middle; cursor:pointer;" id="srch_btn" src="/images/srch_16.png" alt="Ïîèñê â êàòàëîãå..." 
+					           onclick="ajaxGetSearchInfo('rus')">
+				    <div class="highslide-maincontent" id="srch_catalog_dlg"></div>                  </div>                
+                </td><!-- Ïîèñê --> 
+               <td height="30" width="4" background="/images/bt_right.png">&nbsp;
+               </td>
+             </tr>
+           </table> <!-- Ðàçäåëèòåëü õåäåðà îò îñíîâíîãî êîíòåíòà -->       
+        </td>
+      </tr><!-- Ðàçäåëèòåëü õåäåðà îò îñíîâíîãî êîíòåíòà -->     
+</table><!-- Òàáëèöà õåäåðà (Íàâèãàöèÿ, Ëîãîòèï, Âåðõíèé ñëàéäåð, ðàçäåëèòåëü õåäåðà è îñíîâíîãî êîíòåíòà) -->
+</div> <!-- Áëîê õåäåðà (Íàâèãàöèÿ, Ëîãîòèï, Âåðõíèé ñëàéäåð, ðàçäåëèòåëü õåäåðà è îñíîâíîãî êîíòåíòà) -->
+
+<div id="mainContent">
+  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" background="/images/bt_main.png">
+    <tr valign="top" >
+    <td>
+      <div id="Left_w"></div>      <div id="Left">
+            <h1>Àíîíñû íîâîñòåé</h1> 
+         <div style="padding-top:10px; padding-left:10px;">
+         <table width="100%" border="0" cellpadding="2" cellspacing="2" style="margin-left:5px;">
+                   </table>                
+         </div><!-- Àíîíñû íîâîñòåé -->
+      </div><!--Îñíîâíîé êîíòåíò ëåâûé áëîê -->
+      <div id="Left" style="padding-left:30px; padding-top:10px;">
+         <div id="LeftTitle" style="padding-bottom:10px;">
+            <h1>Ñàëîíû ìåáåëè Casabella</h1> 
+         </div><!-- Çàãîëîâîê ëåâîãî áëîêà îñíîâíîãî êîíòåíòà -->
+         <table width="100%" border="0" cellpadding="2" cellspacing="2">                   
+         <tr><td align="left">
+				      <div style="padding-bottom:10px; padding-left:10px;"><div style="color:#ee2222; font-weight: bold;	margin-bottom: -10px;"><li>Casabella - Ìîñêâà</li></div><br><span style="padding-left: 16px; line-height: 16px;"><b>Àäðåñ:</b>&nbsp;&nbsp;Ìîñêâà, ïð-êò Âåðíàäñêîãî ä.29</span><br><span style="padding-left: 16px; line-height: 16px;"><b>òåë:</b>&nbsp;&nbsp;+7(499)133-53-71;  +7(495)787-74-25</span><br><span style="padding-left: 16px; line-height: 16px;"><b>ôàêñ:</b>&nbsp;&nbsp;+7(495)926-99-12</span><br><span style="padding-left: 16px; line-height: 16px;"><b>âðåìÿ ðàáîòû:</b> ñ 11-00 äî 20-00 áåç âûõîäíûõ</span><br><span style="padding-left: 16px;">
+								      <a id="thumb1" href="/images/map1_b.jpg" class="highslide" onclick="return hs.expand(this)">[ Ñõåìà ïðîåçäà ]</a>
+						   </span></div>
+				      </td></tr><tr><td align="left">
+				      <div style="padding-bottom:10px; padding-left:10px;"><div style="color:#ee2222; font-weight: bold;	margin-bottom: -10px;"><li>Casabella - Ñàíêò-Ïåòåðáóðã</li></div><br><span style="padding-left: 16px; line-height: 16px;"><b>Àäðåñ:</b>&nbsp;&nbsp;Ñóâîðîâñêèé ïðîñïåêò, ä.17</span><br><span style="padding-left: 16px; line-height: 16px;"><b>òåë:</b>&nbsp;&nbsp;+7(812)271-44-92; +7(812)710-39-91</span><br><span style="padding-left: 16px; line-height: 16px;"><b>ôàêñ:</b>&nbsp;&nbsp;+7(812)271-44-92</span><br><span style="padding-left: 16px; line-height: 16px;"><b>âðåìÿ ðàáîòû:</b> ñ 11-00 äî 20-00 áåç âûõîäíûõ</span><br><span style="padding-left: 16px;">
+								      <a id="thumb1" href="/images/map2_b.jpg" class="highslide" onclick="return hs.expand(this)">[ Ñõåìà ïðîåçäà ]</a>
+						   </span></div>
+				      </td></tr><tr><td align="left">
+				      <div style="padding-bottom:10px; padding-left:10px;"><div style="color:#ee2222; font-weight: bold;	margin-bottom: -10px;"><li>Casabella - Êåìåðîâî</li></div><br><span style="padding-left: 16px; line-height: 16px;"><b>Àäðåñ:</b>&nbsp;&nbsp;Êåìåðîâî, Óë. Ðóêàâèøíèêîâà, 6</span><br><span style="padding-left: 16px; line-height: 16px;"><b>òåë:</b>&nbsp;&nbsp;+7(3842)75-17-45</span><br><span style="padding-left: 16px; line-height: 16px;"><b>ôàêñ:</b>&nbsp;&nbsp;+7(3842)75-17-45</span><br><span style="padding-left: 16px; line-height: 16px;"><b>âðåìÿ ðàáîòû:</b> ñ 11-00 äî 20-00 áåç âûõîäíûõ</span><br></div>
+				      </td></tr>         </table>             
+      </div><!--Îñíîâíîé êîíòåíò ëåâûé áëîê 2-->      
+    </td>    <!--Îñíîâíîé êîíòåíò âåñü ëåâûé áëîê -->
+    <td align="center" width="650" class="Border_Left_Right">
+      <div id="Center_w">&nbsp;</div><div id="Center">    
+<!--<div  id="Center">-->
+                <div id="TabbedPanels1" class="TabbedPanels">
+          <ul class="TabbedPanelsTabGroup">
+                            
+                     <li class="TabbedPanelsTab" tabindex="0">Î ôèðìå</li>
+                            
+                     <li class="TabbedPanelsTab" tabindex="0">Êîíòàêòû</li>
+                      </ul>
+          <div class="TabbedPanelsContentGroup">          
+            <div class="TabbedPanelsContent"><table width="100%" cellpadding="10">
+<tr>
+<td>
+<h1 id="h1_1">Î ÊÎÌÏÀÍÈÈ</h1>
+<table width="100%" border="0" cellspacing="0" cellpadding="1">
+<tr>
+<td>
+<p style="margin-top:0px; margin-bottom:0px; text-indent:20px">
+Êîìïàíèÿ «Casabella» ïðåäëàãàåò Âàøåìó âíèìàíèþ óäîáíóþ, ñòèëüíóþ è àâàíòàæíóþ ìåáåëü ëó÷øèõ ôàáðèê Èòàëèè. Ìåáåëü, ïðåäñòàâëåííàÿ â íàøèõ ñàëîíàõ,  ýðãîíîìè÷íà, íàäåæíà è èíòåðåñíà. Áîëåå òîãî â íàøåì ñàëîíå Âàñ ïðèÿòíî óäèâÿò ñáàëàíñèðîâàííîå ñî÷åòàíèå öåíû, êà÷åñòâà è øèðîêîãî àññîðòèìåíòà ïðåäëàãàåìîé ìåáåëè. Ìû ïîìîæåì Âàì ïîäîáðàòü è  óêîìïëåêòîâàòü ëþáîé îáúåêò - êâàðòèðó, êîòòåäæ, îôèñ, îáùåñòâåííîå ïîìåùåíèå âñåì íåîáõîäèìûì. Îáðàòèâøèñü ê íàì, Âû ñìîæåòå âûáðàòü ìåáåëü äëÿ êóõíè, ãîñòèíîé è ñïàëüíè, ìåáåëü äëÿ êàáèíåòà è ïðèõîæåé, ìåáåëü äëÿ âàííîé êîìíàòû, àêñåññóàðû è îñâåùåíèå îò áîëåå, ÷åì 250 ïðîèçâîäèòåëåé Èòàëèè. </p>
+</td>
+    <td valign="middle"><div style="margin-left:20px;"><img src="/images/dip2.jpg" width="160"/></div>
+</td>
+</tr>
+<tr>
+    <td colspan=2>
+Ïîìèìî ìåáåëè êîìïàíèÿ ðàáîòàåò ñ ôàáðèêàìè, çàíèìàþùèìèñÿ ïðîèçâîäñòâîì ñàíòåõíè÷åñêîãî îáîðóäîâàíèÿ, âõîäíûõ è ìåæêîìíàòíûõ äâåðåé è îòäåëî÷íûõ ìàòåðèàëîâ (ïàðêåòíûå ïîêðûòèÿ, íàòóðàëüíûå è èñêóññòâåííûå êàìíè, ëàêîêðàñî÷íûå ìàòåðèàëû è øòóêàòóðêà).
+    </td>
+</tr>
+<tr>
+    <td colspan=2>
+<p style="margin-top:10px; margin-bottom:10px; text-indent:20px">
+Íàøà îðãàíèçàöèÿ óæå áîëåå 17 ëåò, ñ 1993 ãîäà, çàíèìàåòñÿ ïîñòàâêàìè èòàëüÿíñêîé ìåáåëè â Ðîññèþ è çàðåêîìåíäîâàëà ñåáÿ â êà÷åñòâå íàäåæíîãî ïàðòíåðà òàêèì êëèåíòàì, êàê ÇÀÎ «Äîí-Ñòðîé Èíâåñò», ÇÀÎ «Êîíñòàíòèíîâñêèé äâîðåö», Àýðîïîðò «Ïóëêîâî», ãîñòèíèöà «Ýìåðàëüä», ÿõò-êëóá «Òåðèéîêè», Êîìïàíèÿ ËÝÊ, à òàêæå ìíîãèì äðóãèì èçâåñòíûì ôèçè÷åñêèì è þðèäè÷åñêèì ëèöàì. </p>
+    </td>
+</tr>
+</table>
+<hr size=1 color="#434343" noshade />
+<p style="margin-top:10px; margin-bottom:10px; text-indent:20px">
+Ïîä áðåíäîì «Casabella» îáúåäèíåíû ñàëîíû èíòåðüåðîâ â Ìîñêâå, Ñàíêò-Ïåòåðáóðãå è Êåìåðîâî, à òàêæå àðõèòåêòóðíîå è äèçàéí-áþðî, ñîòðóäíèêè êîòîðîãî ðàçðàáîòàþò è âíåäðÿò â æèçíü ïðîåêò â ñîîòâåòñòâèè ñ Âàøèìè ïîæåëàíèÿìè è ïðåäïî÷òåíèÿìè, ïðåäëîæèâ íàèëó÷øèé âàðèàíò åãî âîïëîùåíèÿ</p>
+<p style="margin-top:10px; margin-bottom:10px; text-indent:20px">
+</p>
+<hr size=1 color="#434343" noshade />
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr>
+    <td><img src="/images/dip1.jpg" width="230"/></td>
+    <td><p style="margin-top:10px; margin-bottom:10px; text-indent:20px">
+Â çàêëþ÷åíèå îòìåòèì, ÷òî íåîòúåìëåìûìè äîñòîèíñòâàìè ñàëîíîâ èòàëüÿíñêîé ìåáåëè «Casabella» ÿâëÿåòñÿ íå òîëüêî ïðîôåññèîíàëèçì ñîòðóäíèêîâ è îðãàíèçàöèîííûé òàëàíò ðóêîâîäñòâà, íî è íàñòîÿùàÿ íàäåæíîñòü è îòâåòñòâåííîñòü, îáåñïå÷åííàÿ âûñîêîé êîðïîðàòèâíîé ýòèêîé êîëëåêòèâà è ïîäòâåðæäåííàÿ äëèòåëüíûì ïëîäîòâîðíûì ïàðòíåðñòâîì ñ âåäóùèìè ïðîèçâîäèòåëÿìè Èòàëèè.</p> </td>
+  </tr>
+</table>           
+<hr size=1 color="#434343" noshade />
+<h1 id="h1_1">Èòàê, Casabella ýòî::</h1>
+<ul style="margin-top:5px">
+<li>Ïðÿìûå ïîñòàâêè ìåáåëè, ñâåòà, àêñåññóàðîâ è ìàòåðèàëîâ èç Èòàëèè 
+<li>Âûñîêîêëàññíûå ñïåöèàëèñòû, èìåþùèå ìíîãîëåòíèé îïûò ðàáîòû è ïðîøåäøèå ïðîôåññèîíàëüíîå îáó÷åíèå 
+<li>Ïîëíàÿ èëè ÷àñòè÷íàÿ ðàçðàáîòêà äèçàéí-ïðîåêòà æèëûõ è îáùåñòâåííûõ ïîìåùåíèé 
+<li>Ïîëíàÿ èëè ÷àñòè÷íàÿ êîìïëåêòàöèÿ è äåêîðèðîâàíèå ëþáûõ æèëûõ è îáùåñòâåííûõ ïîìåùåíèé ìåáåëüþ, ñâåòîì, àêñåññóàðàìè, òêàíÿìè 
+<li>Êà÷åñòâåííàÿ ñáîðêà è ìîíòàæ ìåáåëè ñïåöèàëèñòàìè êîìïàíèè 
+<li>Ãàðàíòèÿ íà ïîñòàâëåííûé òîâàð è îêàçàííûå óñëóãè 
+<li>Õðàíåíèå íà ñêëàäå è äîñòàâêà ïî Ñàíêò-Ïåòåðáóðãó è Ìîñêâå.
+</ul>
+</td>
+</tr>
+</table></div><div class="TabbedPanelsContent"><table width="100%" cellpadding="10">
+<tr>
+   <td>
+     <li><span style="color:#dddddd; font-weight: bold;">Ìîñêîâñêèé îôèñ:</span>
+     <p style="margin-left:25px;margin-top:15px;margin-bottom:15px;">
+            <b>àäðåñ:</b> Ìîñêâà, Ïðîñïåêò Âåðíàäñêîãî,29 (öîêîëüíûé ýòàæ)<br>
+            <b>òåë.:</b> +7(499)131-48-00; +7(499)133-53-71<br>
+            <b>Ôàêñ:</b> +7(495)626-99-12<br>
+            <b>e-mail:</b> sales@casabella.ru<br>
+            <b>ñàéò:</b> www.casabella.ru
+     </p>
+  </td>
+   <td>
+        <a  href="/images/other_images/csb_msk_b.jpg" class="highslide" onclick="return hs.expand(this)">
+            <img src="/images/other_images/csb_msk_s.jpg" width=150/>
+        </a>
+   </td>
+</tr>
+<tr>
+   <td  colspan=2>
+       <div style="border-top-width: 1px;  border-top-style: dotted; border-top-color: #808080;  width=100%;
+                          margin-top:10px;">
+              
+       </div>
+   </td>
+</tr>
+<tr>
+   <td>
+      <li><span style="color:#dddddd; font-weight: bold;">Îôèñ â Ñàíêò-Ïåòåðáóðãå:</span>
+ <p style="margin-left:25px;margin-top:15px;margin-bottom:15px;">
+    <b>àäðåñ:</b> Ñàíêò-Ïåòåðáóðã, Ñóâîðîâñêèé Ïðîñïåêò, 17<br>
+    <b>òåë.:</b> +7(812)271-44-92; +7(812)710-39-91<br>
+    <b>Ôàêñ:</b> +7(812)271-44-92<br>
+    <b>e-mail:</b> sales@casabella.ru<br>
+    <b>ñàéò:</b> www.casabella.ru
+   </td>
+   <td>
+      <a  href="/images/other_images/csb_spb_b.jpg" class="highslide" onclick="return hs.expand(this)">
+         <img src="/images/other_images/csb_spb_s.jpg" width=150/>
+      </a>
+   </td>
+</tr>
+<tr><td  colspan=2> 
+            <div style="border-top-width: 1px;  border-top-style: dotted; border-top-color: #808080;  width=100%;
+                          margin-top:10px;">
+                
+            </div>
+   </td>
+</tr>  
+<tr>
+ <td>
+<li><span style="color:#dddddd; font-weight: bold;">Îôèñ â Êåìåðîâî:</span>
+<p style="margin-left:25px;margin-top:15px;margin-bottom:15px;">
+    <b>àäðåñ:</b> Êåìåðîâî, Óë. Ðóêàâèøíèêîâà, 6<br>
+    <b>òåë.:</b> +7(3842)75-17-45<br>
+    <b>Ôàêñ:</b> +7(3842)75-17-45<br>
+    <b>e-mail:</b> kmobel@front.ru <br>
+    <b>ñàéò:</b> www.casabella.ru
+ </td>
+   <td>
+      <a  href="/images/other_images/csb_kmr_b.jpg" class="highslide" onclick="return hs.expand(this)">
+         <img src="/images/other_images/csb_kmr_s.jpg" width=150/>
+      </a>
+   </td>
+</tr>
+</table>
+
+</div>          
+          </div>
+        </div>
+        </div> <!--Îñíîâíîé êîíòåíò öåíòð -->
+    </td>    <!--Îñíîâíîé êîíòåíò âåñü öåíòð -->
+        <td align="center" valign="top">
+     <div id="Right_w">&nbsp;</div> <!--Îãðàíè÷èòåëü ïðàâîãî áëîêà -->
+     <div id="Right">           
+            <div id="Right_Cloud">
+            <div style="color:#ff5555; 
+					                  font-weight: bold;
+									  margin: 5px;">Ñêèäêè äî 30%!</div>
+            <div id="oblapics" style="width:100%;">
+              <p>Äëÿ îòîáðàæåíèÿ ýëåìåíòà íåîáõîäèìî óñòàíîâèòü Flash-ïëååð è ïîääåðæêó Java-ñêðèïòîâ!</p>
+              <script type="text/javascript">
+               var flashvars = {
+                    mode : "images",
+                    thumbcloud : " %3Cimages%3E%3Cimage+href%3D%27javascript%3Amyfunc%28331%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_331.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%28190%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_190.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%28138%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_138.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%28278%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_278.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%2882%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_82.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%2883%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_83.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%28203%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_203.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%28334%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_334.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%28333%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_333.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%28332%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_332.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%28261%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_261.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%2812%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_12.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%28185%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_185.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%2870%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_70.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%28335%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_335.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%28336%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_336.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%28337%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_337.jpg%3C%2Fimage%3E%3Cimage+href%3D%27javascript%3Amyfunc%28338%29%3B%27+target%3D%27_self%27%3E..%2Fimages%2Fdb_images%2Fsmall%2Fimgs_338.jpg%3C%2Fimage%3E%3C%2Fimages%3E"
+               };
+               var params = {};
+               //params.wmode = 'opaque';
+               params.wmode = 'transparent';
+               params.bgcolor = '#cccc55';
+               //params.quality = 'medium';
+               params.quality = 'hight';
+               params.allowscriptaccess = 'always';
+               var attributes = {};
+               attributes.id = 'oblapics';
+               attributes.name = 'thumbcloud';   
+               swfobject.embedSWF('/swf/photowidget.swf', 'oblapics', '345', '345', '9.0.0', false, flashvars, params, attributes);
+              </script>
+            </div>  <!-- Îáëàêî -->
+            <div style="text-align: left; border-top-width: 1px;  border-top-style: dotted; border-top-color: 434343;"><ul id="Right_list"><li style="color:#474747; cursor: default;">Ñêèäêè äî 30%!</li><li onclick="myfunc_cloud(68,'1')">Íåìíîãî êëàññèêè</li></ul></div>            </div>       <!-- Right_Cloud -->
+       </div><!--Îñíîâíîé êîíòåíò ïðàâûé áëîê -->
+    </td>    <!--Îñíîâíîé êîíòåíò ïðàâûé áëîê -->
+      </tr>
+</table>
+</div> <!-- Îñíîâíîé êîíòåíò -->
+ <div id="footer">
+<table width="100%" height=30 border="0" cellspacing="0" cellpadding="0">
+             <tr>
+               <td height="30" width="4" background="/images/bt_left.png"></td>
+               <td height="30" align="center"  background="/images/bt_cnt.png"><div id="fool_len">&nbsp;</div></td>
+               <td height="30" width="4" background="/images/bt_right.png"></td>
+             </tr>
+</table>
+<table width="100%" height=30 border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width=95% align="center" valign="top">
+              <div style="padding-top:10px;"><!-- Ñ÷åò÷èêè -->
+         <span id="counter2" style="margin-left:20px;">  
+          <!-- begin of Top100 code -->
+               <script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?2273141"></script>
+               <noscript>
+               <a href="http://top100.rambler.ru/navi/2273141/">
+                 <img src="http://counter.rambler.ru/top100.cnt?2273141" alt="Rambler's Top100" border="0" />
+               </a>
+               </noscript>
+          <!-- end of Top100 code -->         
+         </span>    <!-- Ñ÷åò÷èê Rambler TOP100 -->  
+         <span id="counter1" style="margin-left:20px;">  
+          <!--Openstat--><span id="openstat2119118"></span><script type="text/javascript">
+               var openstat = { counter: 2119118, image: 49, next: openstat }; document.write(unescape("%3Cscript%20src=%22http" +
+               (("https:" == document.location.protocol) ? "s" : "") +
+               "://openstat.net/cnt.js%22%20defer=%22defer%22%3E%3C/script%3E"));
+               </script>
+          <!--/Openstat-->                     
+         </span>    <!-- Ñ÷åò÷èê OpenStat () -->
+        </div><!-- Ñ÷åò÷èêè -->
+              
+      </td>
+      <td align="right" style="white-space:nowrap;" valign="top">© Casabella 2010ã.&nbsp;</td>
+      <td width=10>&nbsp;</td>
+      <td style="white-space:nowrap;" valign="top">Design by «ArtInSoft» ltd.</td>
+    </tr>
+</table> <!-- Ïîäâàë ñ êîïèðàéòîì -->
+</div> <!-- Ôóòåð -->
+<script type="text/javascript">
+//--------------------------------------------------------
+if(document.getElementById('TabbedPanels1')) {
+  var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1", { defaultTab: 1 });
+}
+
+var xmlHttp = null;
+var xmlHttp1 = null;
+var idi = '';
+var t_v = '';
+
+//--------------------------------------------------------
+function isNumber(x) 
+{  
+   var anum=/(^\d+$)|(^\d+\.\d+$)/  
+   if (anum.test(x)) {  
+        return true;  
+    }  
+    //alert("Please input a valid number!");  
+    return false;  
+} 
+//--------------------------------------------------------
+function  Strip_Tags(str, allowed_tags) //Óáèðàåì òåãè èç òåêñòà
+{
+            var key = '', allowed = false;
+            var matches = [];
+            var allowed_array = [];
+            var allowed_tag = '';
+            var i = 0;
+            var k = '';
+            var html = ''; 
+            var replacer = function(search, replace, str) {
+                return str.split(search).join(replace);
+            };
+            // Build allowes tags associative array
+            if (allowed_tags) {
+                allowed_array = allowed_tags.match(/([a-zA-Z]+)/gi);
+            } 
+            str += '';
+ 
+            // Match tags
+            matches = str.match(/(<\/?[\S][^>]*>)/gi);
+ 
+            // Go through all HTML tags
+            for (key in matches) {
+                if (isNaN(key)) {
+                    // IE7 Hack
+                    continue;
+                }
+ 
+                // Save HTML tag
+                html = matches[key].toString();
+ 
+                // Is tag not in allowed list? Remove from str!
+                allowed = false;
+ 
+                // Go through all allowed tags
+                for (k in allowed_array) {
+                    // Init
+                    allowed_tag = allowed_array[k];
+                    i = -1;
+ 
+                    if (i != 0) { i = html.toLowerCase().indexOf('<'+allowed_tag+'>');}
+                    if (i != 0) { i = html.toLowerCase().indexOf('<'+allowed_tag+' ');}
+                    if (i != 0) { i = html.toLowerCase().indexOf('</'+allowed_tag)   ;}
+ 
+                    // Determine
+                    if (i == 0) {
+                        allowed = true;
+                        break;
+                    }
+                }
+ 
+                if (!allowed) {
+                    str = replacer(html, "", str); // Custom replace. No regexing
+                }
+            }
+ 
+            return str;
+}
+//--------------------------------------------------------
+function SetActiveTP(ida, idgr, idcn, idli, need_show_catalog)
+{
+    idgr = idgr || 'TP';  //Ïðåôèêñ âñåé ãðóïïû òàáîâ
+    idcn = idcn || 'TPC'; //Ïðåôèêñ êîíòåíòà òàáà
+	idli = idli || 'u';   //Ïðåôèêñ òàáà
+	need_show_catalog = need_show_catalog || 0; //1 - íàäî âûâîäèòü êàòàëîã
+	var idn;
+	var tp = document.getElementById(idgr);
+	el = getElementsByClass('TP_tab_active', tp);
+	//Óñòàíàâëèâàåì òàáû
+	var eln = el[0].id.slice(idli.length);
+	if (ida == '>') {
+//      if (document.getElementById('d'+ (1 + eval(el[0].id.substring(1)))) != null) {
+        if (document.getElementById('d'+ (1 + eval(eln))) != null) {			
+//			idn = 1 + eval(el[0].id.substring(1));
+			idn = 1 + eval(eln);
+		} else {
+			return 0;
+		}		
+	} else if (ida == '<') {
+//		if (document.getElementById('d'+ (-1 + eval(el[0].id.substring(1)))) != null) {
+		if (document.getElementById('d'+ (-1 + eval(eln))) != null) {	
+			idn = -1 + eval(eln);
+		} else {
+			return 0;
+		}		
+	} else {
+		idn = ida;
+	}
+	
+	el[0].className='TP_tab'; 
+    var elem = document.getElementById(idli + idn);	
+    elem.className='TP_tab_active';		
+	if (el.length > 1) {
+		el[1].className='TP_tab';
+	    var elem_d = document.getElementById('d'+idn);
+	    elem_d.className='TP_tab_active';			
+	}
+	//Óñòàíàâëèâàåì âèäèìîñòü ñòðàíèö	
+//	var tpc_old = document.getElementById(idcn + el[0].id.substring(1));
+	var tpc_old = document.getElementById(idcn + eln);
+	tpc_old.className = 'TP_content_hidden';	
+//	var tpc_new = document.getElementById(idcn + elem.id.substring(1));
+	var tpc_new = document.getElementById(idcn + elem.id.slice(idli.length));
+	tpc_new.className = 'TP_content_visible';
+	if (need_show_catalog==1) {	 
+       
+    }		
+	if ((idgr === 'TP_Trash')||(idgr === 'TP_Search')) {
+           hs.getExpander(tpc_new).reflow();
+	}
+} 
+//--------------------------------------------------------
+function CheckInput(e, err_txt)
+{
+	//preg_replace('/<[^>]+>/i',' ',$text); Óáèâàåò âñå òåãè
+
+	err_txt = err_txt || 'Íåêîððåêòíûé ââîä!';
+	var re_email = /^\w+([\.-]?\w+)*@(((([a-z0-9]{2,})|([a-z0-9][-][a-z0-9]+))[\.][a-z0-9])|([a-z0-9]+[-]?))+[a-z0-9]+\.([a-z]{2}|(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum))$/i;
+	var re_phone = /^[0-9,\s]{0,20}$/;				  				  	
+	var re_name = /^[A-Za-zÀ-ßà-ÿ]{4}[A-Za-zÀ-ßà-ÿ ]{0,96}$/;
+	var re_txt  = /^[A-Za-zÀ-ßà-ÿ0-9 _]{0,50}$/;	
+	switch (e.id){
+		case 'u_name':
+            if (!e.value.match(re_name)) {
+				alert(err_txt); 
+				e.value = e.defaultValue;
+				return;
+			}  else {
+				SaveSession(e);
+			}
+		break;
+		case 'u_phone':
+            if (!e.value.match(re_phone)) {
+				alert(err_txt); 
+				e.value = e.defaultValue;
+				return;				
+			}  else {
+				SaveSession(e);
+			}
+		break;
+		case 'u_email':           
+            if (!e.value.match(re_email)) {
+				alert(err_txt); 
+				e.value = e.defaultValue;
+				return;				
+			}  else {
+				SaveSession(e);
+			}
+		break;
+		case 'u_text':
+            var req_txt = Strip_Tags(e.value);
+			//alert(req_txt.length);
+			if (req_txt.length > 600) req_txt = req_txt.slice(0, 600);		    
+			e.value = req_txt;
+			SaveSession(e);
+		break;
+		case 'src_txt':
+            //e.value = trim(e.value);
+            if (!e.value.match(re_txt)) {
+				alert(err_txt); 
+				e.value = e.defaultValue;
+				return;				
+			}  else {
+				SaveSession(e);
+			}
+		break;		
+		case 'u_chk':
+			SaveSession(e);
+		break;		
+	}
+}
+//--------------------------------------------------------
+function SaveSession(e)
+{
+     xmlHttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("MSXML2.XMLHTTP.3.0");
+     if(!xmlHttp ) {
+            alert("Error initializing XMLHttpRequest!");
+            return;
+     }
+	 //alert(e.value);
+	 if (e.id != 'src_txt') {
+	    var chk = (document.getElementById('u_chk').checked)?(1):(0);
+        var xmlS = "sn=" + e.id + "&sv=" + encodeURIComponent(e.value) + "&chk=" + chk;
+	    if ((e.id == 'u_name')||(e.id == 'u_phone')||(e.id == 'u_email')) {
+	       var elem = document.getElementById(e.id + 'chk');	 
+           elem.src = 'images/graphics/loader_tr.gif';
+	    }
+        var url = "update_session.php";
+        xmlHttp.open("POST", url, true);
+        xmlHttp.onreadystatechange = ResponceSaveSession;  // !!! ÂÀÆÍÎ ÈÌÅÍÍÎ ÇÄÅÑÜ !!!
+	 } else {
+	    //alert(e.value);		 
+        var xmlS = "src_txt=" + encodeURIComponent(e.value) + "&id=0&tp=c&atp=3";
+        var url = "set_search.php";
+        xmlHttp.open("POST", url, true);
+        xmlHttp.onreadystatechange = function() 
+		{
+           if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+		     var b_resp = xmlHttp.responseText;		  
+	         var elem = document.getElementById('srch_catalog_dlg');		  
+		     elem.innerHTML = b_resp;			 
+             hs.getExpander(elem).reflow();		  			 
+           }
+            else
+           {
+            //alert("readyState = " + xmlHttp.readyState + "\n" + "Status = " + xmlHttp.status);
+           }				
+		}
+	 }
+     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+     xmlHttp.send(xmlS);	
+}
+//--------------------------------------------------------
+function ResponceSaveSession()
+{
+    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+	 var rt = xmlHttp.responseText;
+	 if ((rt == 'u_namechk')||(rt == 'u_phonechk')||(rt == 'u_emailchk')) {
+		var elem = document.getElementById(rt);
+		if (elem != null) {
+            elem.src = '../images/opts_12.png';
+		} else {
+			alert('Ýëåìåíò îòñóòñòâóåò');
+			return;
+		}
+	 }
+    }
+    else
+    {
+        //alert("readyState = " + xmlHttp.readyState + "\n" + "Status = " + xmlHttp.status);
+    }
+
+}
+//------------------------------------------------------------------------
+function ajaxLoadMan(t, v, id_man, logo, lng, s_url) 
+{
+    xmlHttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("MSXML2.XMLHTTP.3.0");
+    if(!xmlHttp ) {
+        alert("Error initializing XMLHttpRequest!");
+        return;
+    }
+    var xmlS = encodeURI("idman=" + id_man + "&logo=" + logo + "&lng=" + lng + "&site_url=" + s_url);
+    var url = "load_man.php";
+    xmlHttp.open("POST", url, true);
+    xmlHttp.onreadystatechange = function()
+    {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+        //alert(idi + ' -> ' + xmlHttp.responseText);
+		    var elem = document.getElementById('man_' + id_man);
+ 		    if (elem != null) {
+                elem.innerHTML = xmlHttp.responseText;
+			//elem.parentNode.height = (elem.offsetHeight + 100)+'px';
+			//alert('h -> ' + elem.parentNode.id);
+	            hs.htmlExpand(t, { headingText: v, wrapperClassName: 'draggable-header'});
+		        hs.getExpander(elem).reflow();			
+		    } else {
+			    alert('Ýëåìåíò îòñóòñòâóåò');
+			    return;
+		    }
+        }
+        else
+        {
+        //alert("readyState = " + xmlHttp.readyState + "\n" + "Status = " + xmlHttp.status);
+        }
+    }	
+	xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlHttp.send(xmlS);
+}
+//--------------------------------------------------------
+function ajaxLoadImg(t, v, pref, id_img, rnd, idm, childs, lng, wb) 
+{
+	
+    var xmlHttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("MSXML2.XMLHTTP.3.0");
+    if(!xmlHttp ) {
+        alert("Error initializing XMLHttpRequest!");
+        return;
+    }
+    var xmlS = "bimg=" + encodeURI(id_img) + "&idm=" + idm + "&childs=" + childs + "&lng=" + encodeURI(lng);
+    var url = "load_bimg.php";
+    xmlHttp.open("POST", url, true);
+    xmlHttp.onreadystatechange = function()
+    {
+      if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+		var elem = document.getElementById(pref + id_img + '_' + rnd);
+		if (elem != null) {
+            elem.innerHTML = xmlHttp.responseText;
+  	        var wc = (childs > 0)?(wb + 200):(wb + 40);
+	        hs.htmlExpand(t, { headingText: v, wrapperClassName: 'draggable-header', preserveContent: true, width: wc});			
+		} else {
+			alert('Ýëåìåíò îòñóòñòâóåò');
+			return;
+		}
+      }
+      else
+      {
+        //alert("readyState = " + xmlHttp.readyState + "\n" + "Status = " + xmlHttp.status);
+      }
+    }	
+	xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlHttp.send(xmlS);
+
+}
+//--------------------------------------------------------
+function ajaxLoadCatalog(lang) 
+{
+	var s_where    = '';
+	var s_id_man   = '';
+	var s_id_type  = '';
+	var s_id_style = '';
+	var s_id_spec  = '';
+	//alert(getRadioGroupValue(document.getElementsByName('sort')));
+	c_boxes = document.getElementsByName('cb');
+	for (var i=0; i<c_boxes.length; i++ ) {
+		if (c_boxes[i].checked) {
+			if (c_boxes[i].id=='id_man')   s_id_man   += (s_id_man=='') ? (c_boxes[i].value) : (', ' + c_boxes[i].value);
+			if (c_boxes[i].id=='id_type')  s_id_type  += (s_id_type=='') ? (c_boxes[i].value) : (', ' + c_boxes[i].value);
+			if (c_boxes[i].id=='id_style') s_id_style += (s_id_style=='') ? (c_boxes[i].value) : (', ' + c_boxes[i].value);
+			if (c_boxes[i].id=='id_spec')  s_id_spec  += (s_id_spec=='') ? (c_boxes[i].value) : (', ' + c_boxes[i].value);
+		}
+	}
+	if (s_id_man != '') s_id_man = 'catalog.id_man in (' + s_id_man + ')';
+	else s_id_man = '1';
+	if (s_id_type != '') s_id_type = 'catalog.id_type in (' + s_id_type + ')';
+	else s_id_type = '1';	
+	if (s_id_style != '') s_id_style = 'catalog.id_style in (' + s_id_style + ')';	
+	else s_id_style = '1';	
+	if (s_id_spec != '') s_id_spec = 'catalog.id_spec in (' + s_id_spec + ')';	
+	else s_id_spec = '1';	
+	
+	if ((s_id_style == '1') && (s_id_type == '1') && (s_id_man == '1') && (s_id_spec == '1'))
+	    s_where = '(1=0)';
+	else
+	    s_where = '(' + s_id_man + ' and ' + s_id_type + ' and ' + s_id_style + ' and ' + s_id_spec + ')';
+
+    xmlHttp1 = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("MSXML2.XMLHTTP.3.0");
+    if(!xmlHttp1 ) {
+        alert("Error initializing XMLHttpRequest!");
+        return;
+    }
+    var xmlS = encodeURI("s_where=" + s_where + "&l=" + lang + "&srt=" + getRadioGroupValue(document.getElementsByName('sort')));
+    var url = "load_catalog.php";
+	//alert(s_where);
+    xmlHttp1.open("POST", url, true);
+    xmlHttp1.onreadystatechange = function()
+    {
+	   var el_cnt = document.getElementById("RTCNT");
+	   el_cnt.innerHTML = '<img src="images/graphics/loader_tr.gif">';
+       if (xmlHttp1.readyState == 4 && xmlHttp1.status == 200) {
+		   var elem = document.getElementById("catalog");
+           elem.innerHTML = xmlHttp1.responseText;
+		   var el = document.getElementsByName("AJAX_CNT");	    
+	       el_cnt.innerHTML = el[0].value;
+       }
+       else
+       {
+        //alert("readyState = " + xmlHttp.readyState + "\n" + "Status = " + xmlHttp.status);
+       }
+    }	
+	xmlHttp1.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlHttp1.send(xmlS);
+}
+//--------------------------------------------------------
+function getRadioGroupValue(radioGroupObj)
+{  
+     for (var i=0; i < radioGroupObj.length; i++)    
+	        if (radioGroupObj[i].checked) 
+			      return radioGroupObj[i].value;  return null;
+}
+//--------------------------------------------------------
+function SendTrash(trash_str, l, trempt, err_msg)
+{
+
+	var user_name = document.getElementById('u_name').value;
+	var user_phone = document.getElementById('u_phone').value;
+	var user_email = document.getElementById('u_email').value;
+	var user_text = document.getElementById('u_text').value;
+	var user_trash = trash_str;	
+	
+	if ((user_name=='') || ((user_phone=='') && (user_email==''))) {
+		alert(err_msg);
+		return;
+	}
+	
+    xmlHttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("MSXML2.XMLHTTP.3.0");
+    if(!xmlHttp ) {
+        alert("Error initializing XMLHttpRequest!");
+        return;
+    }
+    var xmlS = "user_name=" + encodeURIComponent(user_name) + 
+	           "&user_phone=" + encodeURIComponent(user_phone) + 
+			   "&user_email=" + encodeURIComponent(user_email) + 
+			   "&user_text=" + encodeURIComponent(user_text) + 
+			   "&user_trash=" + encodeURIComponent(user_trash) +
+			   "&lng=" + l;
+			   
+    var url = "add_request.php";
+    xmlHttp.open("POST", url, true);
+    xmlHttp.onreadystatechange = function() 
+	  //-----------------------
+	  {
+       if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+		  var elem = document.getElementById('TrashView');
+	      var sbtn = document.getElementById('send_trash');
+  		  var elemn = document.getElementById('trash_n');
+		  if (elem != null) {
+            elem.innerHTML = xmlHttp.responseText;						
+			sbtn.innerHTML ='<a></a>';
+			elemn.innerHTML = trempt;
+		  } else {
+			alert('Ýëåìåíò îòñóòñòâóåò');
+			return;
+		  }
+  	      SetActiveTP(1, 'TP_Trash', 'TPT', 't');
+		  var to_id = setTimeout(function() {hs.close(elem)}, 4000);
+		  //setTimeout(function() {clearTimeout(to_id)}, 4100);
+      }
+      else
+      {
+        //alert("readyState = " + xmlHttp.readyState + "\n" + "Status = " + xmlHttp.status);
+      }
+     }
+	 //-----------------------
+	xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlHttp.send(xmlS);
+}
+//--------------------------------------------------------
+</script><script type="text/javascript">
+<!--
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1", { defaultTab: 1 });
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,1111 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<meta http-equiv="content-type" content="text/html; charset=windows-1251"/>
+
+			<title>Ñåðâåðû è ñåòåâîå îáîðóäîâàíèå WIT Company, ïðîäàæà ñåðâåðîâ, ñåòåâîå îáîðóäîâàíèå, ëèöåíçèîííîå ïðîãðàììíîå îáåñïå÷åíèå</title> 
+			<meta name="description" content="Ïðîèçâîäñòâî è ïðîäàæà ñåðâåðîâ, ñåðâåðíîãî, êîìïþòåðíîãî, òåëåêîììóíèêàöèîííîãî, ñåòåâîãî îáîðóäîâàíèÿ âåäóùèõ ìèðîâûõ ïðîèçâîäèòåëåé"/> 
+			<meta name="keywords" content="ñåðâåð, ñåðâåðà, ñåòåâîå îáîðóäîâàíèå, intel, èíòåë, UPS, òåðìîøêàôû, ñèñòåìû õðàíåíèÿ äàííûõ, ïðîãðàììíîå îáåñïå÷åíèå"/>
+			
+			<meta name="robots" content="index, follow"/>
+			<meta name="revisit-after" content="after 14 days"/>
+			<meta name='yandex-verification' content='42b321b03ddd3ff7' />
+
+			<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+			<link href="/css/thewhole.css" rel="stylesheet" type="text/css" media="screen" />
+			<link rel="stylesheet" type="text/css" href="/css/highslide.css" />
+			<link rel="stylesheet" type="text/css" href="/css/hsvideo.css" />
+			<link rel="stylesheet" type="text/css" href="/css/tabs.css" />
+
+			<script type="text/javascript" src="/js/hshs.js"></script>
+			<script type="text/javascript" src="/js/hs.init.js"></script>
+
+			<script type="text/javascript" src="/js/treeview.js"></script>
+			<script type="text/javascript" src="/js/jquery.js"></script>
+			<script type="text/javascript" src="/js/eqheight.js"></script>
+			<script type="text/javascript" src="/js/popmenu.js"></script>
+
+			<script type="text/javascript">
+				$(document).ready(function() 
+					{
+					setEqual();
+
+					$(window).resize(function() 
+						{
+						SetResizeTimeout();
+ 						});
+					});
+			</script>
+			<script type="text/javascript">
+				 hs.width = 1000;
+				hs.wrapperClassName = 'draggable-header';
+			</script>
+
+			<link rel="stylesheet" type="text/css" href="/css/dhtmlxslider.css" />
+			<script type="text/javascript" src="/js/dhtmlxslider.js"></script>
+
+			<script type="text/javascript">
+
+				var MinPrice = 50000;
+				var MaxPrice = 999000;
+				var StartPrice = 99000;
+
+				var mySlider;
+
+				function doOnLoad(){
+
+				    mySlider = new dhtmlXSlider("sliderObj", 450, "", false, MinPrice, MaxPrice, StartPrice, 500);
+				    mySlider.linkTo("sliderLink");
+
+//                  Äîáàâëÿåì ôóíêöèþ-îáðàáîò÷èê ñîáûòèÿ "Êîí÷èëè òÿíóòü ñëàéäåð"
+				    mySlider.attachEvent("onSlideEnd", 
+						function(newValue, sliderObj)
+							{
+//							Ôîðìàòèðóåì ðåçóëüòàò â ðóáëè			
+							var sl = document.getElementById("sliderLink");
+							sl.value = newValue.toFixed(0).replace(/./g, function(c, i, a) { return i && c !== "." && ((a.length - i) % 3 === 0) ? ' ' + c : c; }) + ' ð.';
+
+							var sl = document.getElementById("price");
+							sl.value = newValue;
+
+//							Ìåíÿåì øèðèíó ñîîòâåòñòâåííî
+							sliderInnerDiv.style.width = Math.max(Math.round((newValue-MinPrice)*sliderWidth/(MaxPrice-MinPrice))-5, 0) + "px";
+							}	
+			                );
+
+//                  Äîáàâëÿåì ôóíêöèþ-îáðàáîò÷èê ñîáûòèÿ "Ïåðåìåñòèëè ñëàéäåð"
+				    mySlider.attachEvent("onChange", 
+						function(newValue, sliderObj)
+							{
+//							Ôîðìàòèðóåì ðåçóëüòàò â ðóáëè			
+							var sl = document.getElementById("sliderLink");
+							sl.value = newValue.toFixed(0).replace(/./g, function(c, i, a) { return i && c !== "." && ((a.length - i) % 3 === 0) ? ' ' + c : c; }) + ' ð.';
+
+							var sl = document.getElementById("price");
+							sl.value = newValue;
+
+//							Ìåíÿåì øèðèíó ñîîòâåòñòâåííî
+							sliderInnerDiv.style.width = Math.max(Math.round((newValue-MinPrice)*sliderWidth/(MaxPrice-MinPrice))-5, 0) + "px";
+               				}
+                        	);
+                        
+//                  Çäåñü ïðîäîëæàåòñÿ èíèöèàëèçàöèÿ îáúåêòà
+					var sl = document.getElementById("sliderLink");
+					sl.value = StartPrice.toFixed(0).replace(/./g, function(c, i, a) { return i && c !== "." && ((a.length - i) % 3 === 0) ? ' ' + c : c; }) + ' ð.';  
+
+					var sl = document.getElementById("price");
+					sl.value = StartPrice 
+
+//                  Ñîçäàåì âëîæåííûé DIV è - èçíà÷àëüíàÿ ðàñêðàñêà
+					var sliderDiv = document.getElementsByClassName("dhxsl_track")[0];
+					sliderWidth = sliderDiv.clientWidth;
+
+					sliderInnerDiv = document.createElement("div");
+					sliderInnerDiv.style.width = Math.max(Math.round((StartPrice-MinPrice)*sliderWidth/(MaxPrice-MinPrice))-5, 0) + "px";
+					sliderInnerDiv.style.height = "20px";
+					sliderInnerDiv.style.backgroundColor = "#e00000";
+					sliderDiv.appendChild(sliderInnerDiv);
+
+					sl = document.getElementById("fromprice");
+					sl.innerHTML=MinPrice.toFixed(0).replace(/./g, function(c, i, a) { return i && c !== "." && ((a.length - i) % 3 === 0) ? ' ' + c : c; }) + '&#8381;';  
+					
+					sl = document.getElementById("toprice");
+					sl.innerHTML=MaxPrice.toFixed(0).replace(/./g, function(c, i, a) { return i && c !== "." && ((a.length - i) % 3 === 0) ? ' ' + c : c; }) + '&#8381;';  
+
+					var mp = document.getElementById("minprice");
+					mp.value = MinPrice;
+
+					var mp = document.getElementById("maxprice");
+					mp.value = MaxPrice;
+				};
+			
+				function doOnUnload(){
+					if (mySlider != null){
+						mySlider.unload();
+						mySlider = null;
+					}
+				};
+			</script>
+
+		</head>
+
+		<body>
+			<div id="content">
+
+				<div id="rightcontent">
+
+			                <h1> Ñåðâåðû WIT Company</h1> 
+					<table width="100%" class="invis">
+						<tr>
+							<td width="25%" class="invis">
+								<p><a style="font-weight:bold" href="/equipment/server/servery-Intel.asp">&#9658; Ñåðâåðû</a></p>
+								<p><a style="font-weight:bold" href="/equipment/computer/komputery-Intel.asp">&#9658; Êîìïüþòåðû Intel</a></p>
+							</td>
+							<td width="25%" class="invis">
+						  		<p><a style="font-weight:bold" href="/equipment/sannas/systemy-hraneniya-dannyh.asp">&#9658; Ñèñòåìû õðàíåíèÿ äàííûõ</a></p>
+                                <p><a style="font-weight:bold" href="/equipment/network/oborudovanie-cisco.asp">&#9658; Ñåòåâîå îáîðóäîâàíèå</a></p>
+							</td>
+							<td width="25%" class="invis">
+								<p><a style="font-weight:bold" href="/equipment/software/programmnoe-obespechenie.asp">&#9658; Ïðîãðàììíîå îáåñïå÷åíèå</a></p>
+								<p><a style="font-weight:bold" href="/equipment/ups/ups.asp">&#9658; Èñòî÷íèêè áåñïåðåáîéíîãî ïèòàíèÿ</a></p></td>
+							<td width="25%" class="invis">
+								<p><a style="font-weight:bold" href="/equipment/cases/shkafy.asp">&#9658; Øêàôû, ñòîéêè, KVM</a></p>
+								<p><a style="font-weight:bold" href="/equipment/termoshkaf/termoshkafy.asp">&#9658; Òåðìîøêàôû</a></p>
+							</td>
+						</tr>
+					</table>
+
+					<div class="fulldescript">
+						<div class="subheader"><h3><a style="font-weight:bold; text-align:left" href="/equipment/server/servery-Intel.asp">Ñåðâåðû WIT VV íà ïëàòôîðìå Intel</a></h3></div>
+
+						<div class="descontent">
+
+							<table>
+								<tr>
+									<td class="invis" colspan="2">
+										<p><b>Îïèñàíèå:</b></p>
+										<p>Ñåðâåðû Intel - íàäåæíîå è äîñòóïíîå ïî öåíå ðåøåíèå äëÿ ðàçìåùåíèÿ ïðèëîæåíèé, ïîääåðæêè êîðïîðàòèâíûõ 
+										áàç äàííûõ è ñèñòåì óïðàâëåíèÿ ïðåäïðèÿòèåì (ERP).<br/>
+
+										Ëèíåéêà ñåðâåðîâ WIT VV íà ïëàòôîðìå Intel âêëþ÷àåò îäíî è äâóõïðîöåññîðíûå ìîäåëè, êîòîðûå ìîãóò áûòü ïîñòàâëåíû
+										êàê â âåðòèêàëüíîì èñïîëíåíèè, òàê è â êîðïóñàõ äëÿ óñòàíîâêè â øêàô 19". Ñåðâåðû ïîääåðæèâàþò áîëüøîé îáúåì 
+										îïåðàòèâíîé ïàìÿòè è ìîãóò áûòü óêîìïëåêòîâàíû áîëüøèì êîëè÷åñòâîì æåñòêèõ äèñêîâ è ïëàò ðàñøèðåíèÿ.</p>
+									</td>
+									<td class="invis" colspan="2">
+										<p><b>Ïðåèìóùåñòâà ìîäåëåé:</b></p>
+										<ul>
+											<li>Ïîääåðæêà âèðòóàëèçàöèè,</li>
+											<li>Áîëüøàÿ âû÷èñëèòåëüíàÿ ìîùíîñòü çà ñ÷åò èñïîëüçîâàíèÿ 6, 8, 12 è 14-ÿäåðíûõ ïðîöåññîðîâ Intel Xeon,</li>
+											<li>Îòêàçîóñòî÷èâîñòü êàæäîãî ñèñòåìû áëàãîäàðÿ äóáëèðîâàíèþ áëîêîâ ïèòàíèÿ, ïàìÿòè ñ êîððåêöèåé îøèáîê, RAID-êîíòðîëëåðàì
+											 è êîðçèíàì äëÿ ãîðÿ÷åé çàìåíû äèñêîâ,</li>
+											<li>Óïðàâëÿåìîñòü ñ ïîìîùüþ ñïåöèàëüíûõ ìîäóëåé ìåíåäæìåíòà è áåñïëàòíîãî ÏÎ îò Intel.</li>
+										</ul>	
+									</td>
+								</tr>
+								<tr>
+									<td class="invis" colspan="4">
+<br/>
+									            <ul class="tabs" style="text-align: left;font-weight:normal;">
+										                <li class="active_tab">Ïîäîáðàòü ñåðâåð ïî áþäæåòó</li>
+										                <li class="inactive_tab"><a href="/equipment/server/alt-new.asp" title="Ïîäáîð ñåðâåðà ïî õàðàêòåðèñòèêàì" >Ïîäîáðàòü ñåðâåð ïî õàðàêòåðèñòèêàì</a></li>
+										                <li class="inactive_tab"><a href="/equipment/server/all-servery-intel.asp" title="Ñïèñîê âñåõ ìîäåëåé ñåðâåðîâ WIT" >Âñå ìîäåëè ñåðâåðîâ WIT</a></li>
+									            </ul>
+        
+        										    <div id="content_1" class="content">
+
+
+									<form method="post" action="/equipment/server/servery-Intel.asp">
+										<table class="choose">
+											<tr>
+												<td class="choose" ><strong><span id="fromprice">40 000ð.</span></strong></td>
+												<td class="choose"><div id="sliderObj"></div></td>
+												<td class="choose"><strong><span id="toprice">440 000ð.</span></strong></td>
+												<td  class="choose" colspan="2" style="text-align: right;">
+
+													<input name="task" id="task" type="hidden" value="0"/>
+													<input name="formfactor" id="formfactor" type="hidden" value="0"/>
+
+													<input id="price" name="price" type="hidden" value="0"/>
+													<input id="minprice" name="minprice"  type="hidden" value=""/>
+													<input id="maxprice" name="maxprice"  type="hidden" value=""/>
+													<input id="sliderLink" type="text" size="10" class="biginput"/> 
+													<input type="image" src="/images/choose.gif"/>
+
+												</td>
+												<td class="choose">&nbsp;</td>
+											</tr>
+										</table>
+									</form>
+
+									            </div>
+									</td>
+								</tr>
+								<tr>
+									<td class="invis" colspan="4" style="align:center">
+
+										<br/><p><strong>Ïîñìîòðèòå âèäåîðîëèêè ñ ïîäðîáíîé äåìîíñòðàöèåé cåðâåðîâ WIT VV (ùåëêíèòå ìûøêîé äëÿ ïðîñìîòðà):</strong></p><br/>
+									</td>
+								</tr>
+								<tr>
+									<td class="invis">
+										<a href="//player.vimeo.com/video/92511800?autoplay=1" class="highslide" onclick="return hs.htmlExpand(this, { objectType: 'iframe', objectWidth: 1000, objectHeight: 562 })">
+											<img alt="" src="/images/video/server-1u-1cpu.png"/>
+										</a>
+									</td>
+									<td class="invis">
+										<a href="//player.vimeo.com/video/92511801?autoplay=1" class="highslide" onclick="return hs.htmlExpand(this, { objectType: 'iframe', objectWidth: 1000, objectHeight: 562 })">
+											<img alt="" src="/images/video/server-1u-2cpu.png"/>
+										</a>
+									</td>
+									<td class="invis">
+										<a href="//player.vimeo.com/video/108461206?autoplay=1" class="highslide" onclick="return hs.htmlExpand(this, { objectType: 'iframe', objectWidth: 1000, objectHeight: 562 })">
+											<img alt="" src="/images/video/server-tower-2cpu.png"/>
+										</a>
+									</td>
+									<td class="invis">
+										<a href="//player.vimeo.com/video/92511802?autoplay=1" class="highslide" onclick="return hs.htmlExpand(this, { objectType: 'iframe', objectWidth: 1000, objectHeight: 562 })">
+											<img alt="" src="/images/video/server-2u-2cpu.png"/>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="invis">
+										<p><a href="/equipment/server/server-Intel-1cpu-e3.asp"><strong>Ñåðâåðû Intel Xeon Å3</strong></a></p>
+										<p>Ñåðâåðû íà÷àëüíîãî óðîâíÿ íà íîâûõ 4-ÿäåðíûõ ïðîöåcñîðàõ Intel Xeon ñåðèè E3! Ìîãóò áûòü óñòàíîâëåíû äî 4 äèñêîâ 
+										ñòàíäàðòà SATA (ñ îáúåäèíåíèåì â RAID), äî 32 ãèãàáàéò îïåðàòèâíîé ïàìÿòè ñ êîððåêöèåé îøèáîê, ðàçëè÷íûå ïëàòû ðàñøèðåíèÿ 
+										(äîïîëíèòåëüíûå ïîðòû Gigabit Ethernet, êîíòðîëëåðû FibreChannel è äð.).</p>
+									</td>
+									<td class="invis">
+										<p><a href="/equipment/server/server-Intel-2cpu-e5-1u-35.asp"><strong>Îäíîþíèòîâûå íà Intel Xeon E5-2600</strong></a></p>
+										<p>Ñåðâåðû íà 4, 6, 8 è 10-ÿäåðíûõ ïðîöåcñîðàõ Intel Xeon ñåðèè E5-2600. Âàðèàíòû ïîñòàâêè: 4 äèñêà ôîðìàòà 3"5 èëè
+										8 äèñêîâ ôîðìàòà 2"5. Èìåþò èçáûòî÷íóþ ñèñòåìó ïèòàíèÿ è 4 âñòðîåííûõ ãèãàáèòíûõ ñåðâåðíûõ ñåòåâûõ àäàïòåðà.
+										Ìàêñèìàëüíûé îáúåì îïåðàòèâíîé ïàìÿòè - 768 ãèãàáàéò.</p>
+									</td>
+									<td class="invis">
+										<p><a href="/equipment/server/server-Intel-2cpu-e5.asp"><strong>Ñåðâåðû â âåðòèêàëüíîì èñïîëíåíèè</strong></a></p>
+										<p>Ïîëíîðàçìåðíûå äâóõïðîöåññîðíûå ñåðâåðû îáëàäàþò òåì æå ôóíêöèîíàëîì, ÷òî è ìîäåëè â êîðïóñàõ
+										1U/ 2U, íî ïîçâîëÿþò óñòàíîâêó áîëüøåãî êîëè÷åñòâà ïëàò ðàñøèðåíèÿ. Ñîäåðæàò äâà 4-6-8 ÿäåðíûõ 
+										ïðîöåññîðà Intel Xeon ñåðèè E5-2600, è ìîãóò áûòü ïðåîáðàçîâàíû â ðýê äëÿ óñòàíîâêè â ñòàíäàðòíûé 19-äþéìîâûé 
+										øêàô (âûñîòà â ñòîéêå - 4U).</p>
+									</td>
+									<td class="invis">
+										<p><a href="/equipment/server/server-Intel-2cpu-e5-2u-35.asp"><strong>Äâóõþíèòîâûå ñ áîëüøèì êîëè÷åñòâîì âàðèàíòîâ ïîñòàâêè</strong></a></p>
+										<p>Ñåðâåðû ïîñòðîåíû íà 4, 6, 8 è 10-ÿäåðíûõ ïðîöåcñîðàõ Intel Xeon ñåðèè E5-2600. Âàðèàíòû äèñêîâîé ïîäñèñòåìû:  8 äèñêîâ ôîðìàòà 3"5 èëè
+										8, 16, 24 äèñêà ôîðìàòà 2"5. Èìåþò èçáûòî÷íóþ ñèñòåìó ïèòàíèÿ è 4 âñòðîåííûõ ãèãàáèòíûõ ñåðâåðíûõ ñåòåâûõ àäàïòåðà.
+										Ìàêñèìàëüíûé îáúåì îïåðàòèâíîé ïàìÿòè - 768 ãèãàáàéò.</p>
+									</td>
+								</tr>
+
+							</table>
+						</div>
+					</div>
+	
+					<div class="fulldescript">
+					  	<div class="subheader"><h3><a href="/news/news.asp"><strong>Ïîñëåäíèå íîâîñòè</strong></a></h3></div>
+
+						<div class="descontent">
+
+							<p><strong>01.09.2016 .&nbsp; Îíëàéí-êîíôèãóðàòîð ñèñòåì õðàíåíèÿ äàííûõ</strong> <br/>Äëÿ òîãî, ÷òîáû òî÷íî ïîñ÷èòàòü ñòîèìîñòü õðàíèëèùà íóæíîãî âàì îáúåìà óäîáíî âîñïîëüçîâàòüñÿ íîâåéøèì <a href="/equipment/sannas/storage-configurator.asp">êîíôèãóðàòîðîì ñèñòåì õðàíåíèÿ äàííûõ</a>. Çàäàéòå òèï äèñêîâ, âèä âíåøíåãî  èíòåðôåéñà õðàíèëèùà è íóæíóþ ïðîèçâîäèòåëüíîñòü êîíòðîëëåðà - è êîíôèãóðàòîð ïðåäëîæèò îïòèìàëüíûé âàðèàíò, ðàññ÷èòàâ åãî ïî ëó÷øåìó ñîîòíîøåíèþ "öåíà/ åìêîñòü".</p>
+
+							<p><strong>25.05.2016 .&nbsp; Îäíîïðîöåññîðíûå ñåðâåðû íà íîâåéøèõ Intel Xeon E3-1200 v5</strong> <br/>Íà ñàéòå ðàçìåùåíû îïèñàíèÿ è êîíôèãóðàòîðû 2 íîâûõ ìîäåëåé  ñåðâåðîâ WIT VV íà ïëàòôîðìå Intel. Ñåðâåðû îñíàùåíû ïðîöåññîðàìè Intel Xeon 5-ãî ïîêîëåíèÿ ñ ïîääåðæêîé ïàìÿòè ñòàíäàðòà  DDR4-2133 ECC. 
+Â ìëàäøóþ ìîäåëü  ìîãóò áûòü óñòàíîâëåíû 4 äèñêà ñ ãîðÿ÷åé çàìåíîé ôîðì-ôàêòîðà  2"5 èëè 3"5, â ñòàðøóþ - 8 äèñêîâ ôîðì-ôàêòîðà  2"5 . Òàêæå, ñòàðøàÿ ìîäåëü èìååò 2 áëîêà ïèòàíèÿ ïî 460 Âàòò ñ ãîðÿ÷åé çàìåíîé.
+
+<a href="/equipment/server/server-Intel-1cpu-e3v5-1u.asp">Îäíîïðîöåññîðíûé ñåðâåð 1U CPU E5-1200v5</a>
+
+<a href="/equipment/server/server-Intel-1cpu-e3v5-1u-2psu.asp">Îäíîïðîöåññîðíûé  ñåðâåð 1U CPU E5-1200v5 2x PSU</a></p>
+
+							<p><strong>09.09.2015 .&nbsp; Íîâûå âíåøíèå äèñêîâûå ìàññèâû Infortrend</strong> <br/>Â ñåìåéñòâî äèñêîâûõ ìàññèâîâ EonStor DS äîáàâ ëåíû íàèáîëåå ïðîèçâîäèòåëüíûå ìîäåëè ñåðèè 4000. Ïèêîâà ÿ ïðîèçâîäèòåëüíîñòü EonStor 4000 ñîòàâëÿò 1 500 000 îïåðàöèé ââîäà-âûâîäà â ñåêóíäó (IOPs). Ñåðèÿ 4000 âïåðâûå ïîääåðæèâàåò äèñêè è âíåøíèå èíòåðôåéñû íîâîãî ñêîðîñòíîãî ñòàíäàðòà SAS 12G. Äîñòóïíû ìîäåëè ñ îäíèì è äâóìÿ RAID-êîíòðîëëåðàìè äëÿ ñîçäàíèÿ èçáûòî÷íûõ ñõåì ïîäêëþ÷åíèÿ. 
+
+<a href="/equipment/sannas/infortrend-4000.asp">Îïèñàíèå ìîäåëåé Infortrend EonStor DS 4000</a>
+
+<a href="/equipment/sannas/Infortrend-eonstor.asp">Ïîëíàÿ ëèíåéêà ìîäåëåé Infortrend EonStor DS </a></p>
+
+							<p><strong>01.08.2015 .&nbsp; MS Windows 10  â ïðîäàæå!</strong> <br/>Êàê èçâåñòíî, áåñïëàòíîå îáíîâëåíèå äî MS Windows 10 ïîëó÷àò âñå ïîëüçîâàòåëè äîìàøíèõ âåðñèé îïåðàöèîííûõ ñèñòåì Windows 7 è  Windows 8. Ïðîôåññèîíàëüíûå âåðñèè Windows 7 Professional òðåáóþò ïîêóïêè îáíîâëåíèÿ, êîòîðîå òåïåðü <a href="/fulprice.asp?id=1451">äîñòóïíî â íàøåì ïðàéñ-ëèñòå</a>.</p>
+
+						</div>
+					</div>
+
+					<div class="fulldescript">
+						<div class="subheader"><h3><a style="font-weight:bold; text-align:left" href="/equipment/software/programmnoe-obespechenie.asp">Ëèöåíçèîííîå ïðîãðàììíîå îáåñïå÷åíèå</a></h3></div>
+
+						<div class="descontent">
+
+							<table class="invis">
+								<tr>
+									<td class="invis" colspan="2">
+										<p><b>Îïèñàíèå ïðîãðàììíîãî îáåñïå÷åíèÿ:</b></p>
+										<p>Ïðîãðàììíîå îáåñïå÷åíèå äëÿ þðèäè÷åñêèõ ëèö óäîáíåå âñåãî ïðèîáðåòàòü ïî ïðîãðàììàì êîðïîðàòèâíîãî ëèöåíçèðîâàíèÿ.</p>
+										<p>Ïðåèìóùåñòâàìè êîðïîðàòèâíûõ ëèöåíçèé ÿâëÿþòñÿ ãèáêîñòü, âîçìîæíîñòü ïîêóïêè â ðàññðî÷êó, öåíòðàëèçîâàííûé ó÷åò èñïîëüçóåìîãî 
+										ïðîãðàììíîãî îáåñïå÷åíèÿ, ïåðåíîñ êóïëåííûõ ïðîãðàìì íà ïðèîáðåòåííûå ïîçæå êîìïüþòåðû è ñåðâåðà.</p>
+										<p>WIT Company îñóùåñòâëÿåò ëèöåíçèðîâàíèå ïðîãðàììíûõ ïðîäóêòîâ íàèáîëåå ïîïóëÿðíûõ è âîñòðåáîâàííûõ â êîðïîðàòèâíîì ñåêòîðå ïðîèçâîäèòåëåé ïðîãðàìì.</p>
+									</td>
+									<td class="invis" colspan="2">
+										<p><b>Ïðåäëàãàåìîå ïðîãðàììíîå îáåñïå÷åíèå:</b></p>
+										<ul>
+											<li>Ïðîãðàììíîå îáåñïå÷åíèå Microsoft: <a href="/equipment/software/windows-8.asp">Windows 8</a>, Windows Server 2003, 
+											Windows Server 2008 R2, <a href="/equipment/software/windows-server-2012.asp">Windows Server 2012R2</a>,
+											<a href="/equipment/software/sql2008.asp">MS SQL Server 2014</a>, <a href="/equipment/software/exchange-server-2013.asp">MS Exchange Server 2013</a>
+											</li>
+											<li><a href="/equipment/software/kaspersky-2013.asp">Àíòèâèðóñ Êàñïåðñêîãî</a></li>
+											<li>Ïàêåòû îáðàáîòêè ðàñòðîâîé è âåêòîðíîé ãðàôèêè ôèðì <a href="/equipment/software/adobe.asp">Adobe</a> è <a href="/equipment/software/corel.asp">Corel</a></li>
+											<li>Ïðîãðàììû ðàñïîçíàâàíèÿ òåêñòîâ è îáðàáîòêè äîêóìåíòîâ <a href="/equipment/software/abbyy.asp">Abbyy FineReader</a></li>
+										</ul>
+								  	</td>
+								</tr>
+								<tr>
+									<td class="invis" colspan="4">
+										<p><strong>Ïîïóëÿðíîå â ðàçäåëå ïðîãðàììû: </strong><a href="/equipment/software/windows-server-2012.asp">Windows Server 2012R2</a> | <a href="/equipment/software/kaspersky.asp">Àíòèâèðóñ Êàñïåðñêîãî</a> | <a href="/equipment/software/office-2013.asp">Microsoft Office 2013</a> | <a href="/equipment/software/configurator.asp">Îíëàéí-êàëüêóëÿòîð öåí íà ëèöåíçèè</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td class="invis">
+										<br/><div><img align="middle" alt="" width="177" height="142" src="/images/software/software.jpg"/></div>
+									</td>
+									<td class="invis">
+										<br/><div align="center"><img alt="" width="183" height="50" src="/images/software/kaspersky.gif"/></div>
+								    	</td>
+									<td class="invis">
+										<br/><div align="center"><img alt="" width="120" height="160" src="/images/software/CorelDRAW-X5.jpg"/></div>
+									</td>
+									<td class="invis">
+										<br/><div align="center"><img alt="" width="150" height="150" src="/images/software/ABBYY-FineReader-10.png"/></div>
+								    	</td>
+								</tr>
+								<tr>
+									<td class="invis">
+										<p><a href="/equipment/software/programmnoe-obespechenie.asp">Ïðîãðàììíîå îáåñïå÷åíèå Microsoft</a></p>
+										<p>Ïðîãðàììíîå îáåñïå÷åíèå Microsoft äëÿ êîìïüþòåðîâ: îïåðàöèîííûå ñèñòåìû ñåìåéñòâà <a href="/equipment/software/windows-8.asp">Windows 8</a>, à òàêæå îôèñíûå ïðîãðàììû <a href="/equipment/software/office-2013.asp">MS Office 2013</a>.</p>
+										<p><b>Ñåðâåðíûå ïðèëîæåíèÿ Microsoft:</b>
+										<br/>MS Windows Server - îïåðàöèîííàÿ ñèñòåìà äëÿ ïîääåðæêè äîìåíà Windows (Active Directory) è äëÿ õîñòèíãà ñåðâåðíûõ ïðèëîæåíèé, 
+										MS SQL Server - áàçà äàííûõ êîðïîðàòèâíîãî óðîâíÿ, 
+										MS Exchange Server - ñåðâåð äëÿ îðãàíèçàöèè êîðïîðàòèâíîé ýëåêòðîííîé ïî÷òû è âíóòðèôèðìåííîãî äîêóìåíòîîáðîòà.
+										</p>
+										<p>Ñòîèìîñòü ëèöåíçèðîâàíèÿ ÏÎ Microsoft ìîæíî ïîñ÷èòàòü ñ ïîìîùüþ <a href="/equipment/software/configurator.asp">îíëàéí-êàëüêóëÿòîðà öåí íà ëèöåíçèè</a>.</p>
+								      	</td>
+									<td class="invis">
+                                    						<p><a href="/equipment/software/kaspersky-2013.asp">Ïðîãðàììû àíòèâèðóñíîé çàùèòû</a></p>
+										<p>Ïðîãðàììû ëàáîðàòîðèè Êàñïåðñêîãî - îäèí èç ëó÷øèõ â ìèðå àíòèâèðóñíûõ ïàêåòîâ, à òàêæå ïðèëîæåíèÿ äëÿ ïðåäîòâðàùåíèÿ èíòåðíåò-àòàê, äëÿ çàùèòû îò ïðîíèêíîâåíèÿ 
+										â êîðïîðàòèâíûå èíôîðìàöèîííûå ñèñòåìû ñåòåâûõ ÷åðâåé, áîòíåòîâ è ïðî÷åé íå÷èñòè.</p>
+										<p>Ïðîãðàììû ëàáîðàòîðèè Êàñïåðñêîãî çàùèùàþò âñå âèäû êîìïüþòåðíûõ óñòðîéñòâ: êîìïüþòåðû è íîóòáóêè, ñìàðòôîíû, ñåðâåðû ïîä óïðàâëåíèåì 
+										îïåðàöèîííûõ ñèñòåì Windows, Linux, Novell, à òàêæå ñåòåâûå øëþçû è ïî÷òîâûå ñåðâåðà.</p>
+										<p>Ó íàñ âû ìîæåòå êóïèòü ïðàâà ïîëüçîâàíèÿ íà Kaspersky OpenSpace â êîëè÷åñòâå îò 10 ëèöåíçèé.</p>
+									</td>
+									<td class="invis">
+                                    						<p><a href="/equipment/software/programmnoe-obespechenie.asp">Ãðàôè÷åñêèå ïàêåòû Adobe è Corel</a></p>
+										<p>Ïðîãðàììû ôèðìû Adobe ïðåäíàçíà÷åíû äëÿ ñîçäàíèÿ èëëþñòðàöèé, îáðàáîòêè öèôðîâûõ ôîòîãðàôèé, âåðñòêè, îôîðìëåíèÿ îðèãèíàë-ìàêåòîâ è ðàçðàáîòêè èíòåðíåò-ñàéòîâ, à òàêæå äëÿ ñîçäàíèÿ äîêóìåíòîâ â ïîïóëÿðíîì â èíòåðíåò PDF-ôîðìàòå.</p>
+										<p><a href="/equipment/software/corel.asp">CorelDRAW Graphics Suite X6</a> - ïîëíûé íàáîð èíñòðóìåíòîâ äëÿ ñîçäàíèÿ èëëþñòðàöèé âåêòîðíîé ãðàôèêè.</p>
+										<p><a href="/equipment/software/adobe.asp">Adobe Creative Suite 6</a> - íàáîð ïðîãðàìì äëÿ îáðàáîòêè ðàñòðîâîé ãðàôèêè, ïðåäïå÷àòíîé ïîäãîòîâêè, ðàáîòû ñ âèäåîìàòåðèàëàìè.<br/>
+										Ó íàñ âû ìîæåòå êóïèòü ÏÎ Adobe: <a href="/equipment/software/adobe.asp#photoshop">Adobe Photoshop</a>, <a href="/equipment/software/adobe.asp#illustrator">Adobe Illustrator</a>, <a href="/equipment/software/adobe.asp#indesign">Adobe InDesign</a>,
+										<a href="/equipment/software/adobe.asp#acrobat">Adobe Acrobat</a>, <a href="/equipment/software/adobe.asp#flash">Adobe Flash</a>,
+										<a href="/equipment/software/adobe.asp#dreamweaver">Adobe Dreamweaver</a>, <a href="/equipment/software/adobe.asp#fireworks">Adobe Fireworks</a>,
+										<a href="/equipment/software/adobe.asp#premier">Adobe Premiere</a>, <a href="/equipment/software/adobe.asp#aftereffects">Adobe After Effects</a></p>
+								      </td>
+									<td class="invis">
+        									<p><a href="/equipment/software/abbyy.asp">Ïðîãðàììû îáðàáîòêè äîêóìåíòîâ ABBYY FineReader</a></p>
+										<p>Ëó÷øèé â ìèðå ïðîãðàììíûé ïàêåò ðàñïîçíàâàíèÿ ïå÷àòíîãî òåêñòà è ïîòîêîâîãî ââîäà çàïîëíåííûõ ôîðì.</p>
+										<p>ABBYY FineReader ðàñïîçíàåò òåêñòû íà 186 ÿçûêàõ ìèðà, èç íèõ 39 ñ ïîääåðæêîé ñëîâàðÿ. Òàêæå ðàñïîçíàþòñÿ òåêñòû, 
+										ñîäåðæàùèå êîäû ïðîãðàìì íà îñíîâíûõ ÿçûêàõ ïðîãðàììèðîâàíèÿ è õèìè÷åñêèå ôîðìóëû.</p>
+										<p>Òåõíîëîãèè îïòè÷åñêîãî ðàñïîçíàâàíèÿ ñèìâîëîâ äîïîëíåíû ïîëíîöåííûìè ñëîâàðÿìè ðàçíîîáðàçíûõ òåìàòèê è íà ìíîãèõ ÿçûêàõ, 
+										÷òî çàìåòíî ïîâûøàåò êà÷åñòâî ðàñïîçíàâàíèÿ ïå÷àòíîãî òåêñòà.</p>
+									</td>
+								</tr>
+							</table>
+
+						</div>
+					</div>
+
+					<div class="fulldescript">
+						<div class="subheader"><h3><a style="font-weight:bold; text-align:left" href="/equipment/network/oborudovanie-cisco.asp">Ñåòåâîå îáîðóäîâàíèå Cisco</a></h3></div>
+
+						<div class="descontent">
+
+							<table class="invis">
+								<tr>
+									 <td class="invis" colspan="2">
+										<p><b>Îïèñàíèå îáîðóäîâàíèÿ Cisco:</b></p>
+										<p>Cisco Systems - ïðèçíàííûé ìèðîâîé ëèäåð â ïðîèçâîäñòâå êîììóòàòîðîâ ñòàíäàðòà Ethernet, ìàðøðóòèçàòîðîâ, áåñïðîâîäíîãî îáîðóäîâàíèÿ è 
+										ñèñòåì îáåñïå÷åíèÿ áåçîïàñíîñòè ïðè ðàáîòå â ñåòè èíòåðíåò.</p>
+										<p>Ñåòåâîå îáîðóäîâàíèå Cisco ïîçâîëÿåò ñòðîèòü ìóëüòèñåðâèñíûå ñåòè ïåðåäà÷è äàííûõ, ãîëîñà è âèäåî, ñîçäàâàòü ñèñòåìû êîìïüþòåðíîé òåëåôîíèè, 
+										ðàçâîðà÷èâàòü áåñïðîâîäíûå çàùèùåííûå ñåòè è VPN-ñîåäèíåíèÿ ÷åðåç èíòåðíåò.</p>
+									  </td>
+									  <td class="invis" colspan="2">
+										<p><b>Âîçìîæíîñòè îáîðóäîâàíèÿ Cisco:</b></p>
+										<p>Ñåòåâûå ïðîåêòû ðàçëè÷íîãî óðîâíÿ ñëîæíîñòè íà îñíîâå îáîðóäîâàíèÿ Cisco Systems îò WIT Company<br/></p>
+										<ul>
+											<li>Ðåøåíèÿ ïî ðàçâîðà÷èâàíèþ êîðïîðàòèâíîé IP-òåëåôîíèè,</li>
+											<li>Ñîçäàíèå VPN-òîííåëåé äëÿ ñâÿçè ãîëîâíîãî îôèñà, ôèëèàëîâ è óäàëåííî ðàáîòàþùèõ ñîòðóäíèêîâ,</li>
+											<li>Ïðîåêòèðîâàíèå ñåòåé Ethernet ñ áîëüøèì êîëè÷åñòâîì ïîðòîâ.</li>
+									    	</ul>
+									  </td>
+								</tr>
+								<tr>
+									<td class="invis" colspan="4">
+										<p><strong>Ïîïóëÿðíîå â ðàçäåëå ñåòåâîå îáîðóäîâàíèå: </strong><a href="/equipment/network/cisco-catalyst-2960.asp">Cisco Catalyst 2960</a> | <a href="/equipment/network/cisco-asa-5500.asp">Cisco ASA 5500</a> | <a href="/equipment/network/cisco-isr-2900.asp">Ìàðøðóòèçàòîðû Cisco ISR 2900</a> | <a href="/equipment/network/cisco-isr-800.asp">Ìàðøðóòèçàòîðû ïîïðîùå Cisco 800</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td align="center" class="invis">
+										<div align="center"><br/><img alt="" width="175" height="101" src="/images/network/cisco.3560e.jpg"/></div>
+								    	</td>
+									<td class="invis">
+										<div align="center"><br/><img alt="" width="175" height="57" src="/images/network/cisco.2821.jpg"/></div>
+								    	</td>
+									<td class="invis">
+										<div align="center"><br/><img alt="" width="177" height="92" src="/images/network/cisco-asa-5500.jpg"/></div>
+								    	</td>
+									<td class="invis">
+										<div align="center"><br/><img alt="" width="175" height="122" src="/images/network/cisco.ipphone.jpg"/></div>
+								    	</td>
+								</tr>
+							  	<tr>
+									<td class="invis">
+										<p><a href="/equipment/network/cisco-catalyst-2960.asp">Êîììóòàòîðû Cisco Catalyst</a></p>
+										<p>Áîëüøîå ðàçíîîáðàçèå ìîäåëåé êîììóòàòîðîâ Cisco Catalyst ôèêñèðîâàííîé êîíôèãóðàöèè è ìîäóëüíûõ ðàñøèðÿåìûõ. Âîçìîæíîñòü 
+										îáúåäèíåíèÿ â ñòýê, ïîääåðæêà êîììóòàöèè 3ãî óðîâíÿ. Ïîðòû Ethernet ñî ñêîðîñòüþ 100/1000 MBit è 10G, ïåðåõîä â îïòèêó.</p>
+										<p>Ëèíåéêà ìîäåëåé âêëþ÷àåò â ñåáÿ:</p>
+										<ul>
+											<li>Cisco 2960 è Cisco 2960S,</li>
+											<li>Cisco 3560 (v2), Cisco 3560-E è Cisco 3560-X,</li>
+											<li>Cisco 3750, Cisco 3750-E è Cisco 3750-X,</li>
+											<li>Ìîäóëüíûå Cisco 4500 è Cisco 6500.</li>
+								              </ul>
+							                 </td>
+									<td class="invis">
+										<p><a href="/equipment/network/cisco-isr-800.asp">Ìàðøðóòèçàòîðû Cisco</a></p>
+										<p>Ìàðøðóòèçàòîðû Cisco ISR âòîðîãî ïîêîëåíèÿ äëÿ äîñòóïà â ãëîáàëüíûå ñåòè, îáúåäèíåíèÿ ñðåä ñ ðàçíûìè ñòàíäàðòàìè ïåðåäà÷è 
+										äàííûõ, çàùèòîé îò èíòåðíåò-àòàê, ïîääåðæêîé IP-òåëåôîíèè.</p>
+										<p>Ìîäåëè ìàðøðóòèçàòîðîâ Cisco:</p>
+										<ul>
+											<li>Cisco 800,</li>
+											<li>Cisco 1900,</li>
+											<li>Cisco 2900,</li>
+											<li>Cisco 3900,</li>
+											<li>Cisco 7200.</li>
+								                 </ul>
+									</td>
+									<td class="invis">
+										<p><a href="/equipment/network/cisco-asa-5500.asp">Ìåæñåòåâûå ýêðàíû Cisco</a></p>
+										<p>Ìåæñåòåâûå ýêðàíû (Firewall, áðàíäìàóýð) ñåìåéñòâà Cisco ASA (ïðåäûäóùåå íàçâàíèå - PIX Firewall) îáåñïå÷èâàþò çàùèòó îò âñåõ âèäîâ èíòåðíåò-àòàê, ïîïûòîê âçëîìà è íåñàíêöèîíèðîâàííîãî äîñòóïà.</p>
+										<p>Ìåæñåòåâûå ýêðàíû Cisco ASA òàêæå ðàáîòàþò â êà÷åñòâå VPN-êîíöåíòðàòîðîâ äëÿ ñîçäàíèÿ øèôðîâàííûõ òîííåëåé è îáåñïå÷åíèÿ áåçîïàñíîé ñâÿçè ÷åðåç ñåòü èíòåðíåò.</p>
+							                </td>
+								  	<td class="invis">
+										<p><a href="/equipment/network/cisco-ipphone.asp">Ðåøåíèÿ Cisco ïî IP-òåëåôîíèè</a></p>
+									  	<p>Cisco ïîñòàâëÿåò âñå íåîáõîäèìûå êîìïîíåíòû äëÿ ñîçäàíèÿ çàêîí÷åííûõ ðåøåíèé â îáëàñòè êîðïîðàòèâíîé IP-òåëåôîíèè.</p><br/>
+										<p>Îïèñàíèå àïïàðàòîâ Cisco IP Phones:</p>
+										<ul>
+											<li>Âñòðîåííàÿ â ìàðøðóòèçàòîðû Cisco Call Manager Express,</li>
+											<li>Ïîëíîöåííàÿ IP PBX Cisco Call Manager.</li>
+										 </ul>
+									</td>
+							  	</tr>
+							</table>
+						</div>
+					</div>
+
+					<div class="fulldescript">
+						<div class="subheader"><h3><a style="font-weight:bold; text-align:left" href="/equipment/sannas/systemy-hraneniya-dannyh.asp">Ñèñòåìû õðàíåíèÿ äàííûõ è ñåòè FibreChannel</a></h3></div>
+
+						<div class="descontent">
+
+							<table class="invis">
+								<tr>
+								  	<td class="invis" colspan="2">
+									<p><b>Îïèñàíèå ñèñòåì õðàíåíèÿ äàííûõ:</b></p>
+									<p>Ñîçäàíèå íåçàâèñèìîé îò ñåðâåðîâ ñåòè õðàíåíèÿ äàííûõ ïîçâîëÿåò íàäåæíî ðàçìåùàòü êîðïîðàòèâíóþ èíôîðìàöèþ è îáåñïå÷èâàòü íåïðåðûâíûé 
+									äîñòóï ê íåé, à òàêæå ðàçâîðà÷èâàòü âèðòóàëèçîâàííûå ñðåäû.</p>
+									<p>Èíôðàñòðóêòóðà SAN îáåñïå÷èâàåò îäíîâðåìåííûé äîñòóï ê äàííûì ñî ñòîðîíû âñåõ ñåðâåðîâ ñåòè è äàåò âîçìîæíîñòü öåíòðàëèçîâàííîãî ñîçäàíèÿ ðåçåðâíûõ êîïèé.</p>
+								  	</td>
+									<td class="invis" colspan="2">
+									<p><b>Ïðåäëàãàåìûå ñèñòåìû õðàíåíèÿ äàííûõ:</b></p>
+									<ul>
+										<li>Îáîðóäîâàíèå äëÿ ñîçäàíèÿ èíôðàñòðóêòóðû FibreChannel - àäàïòåðû è êîììóòàòîðû,</li>
+										<li>Âíåøíèå íàðàùèâàåìûå äèñêîâûå õðàíèëèùà òèïà SAN è NAS,</li>
+										<li>Ñòðèìåðû è ëåíòî÷íûå áèáëèîòåêè äëÿ ðåçåðâíîãî êîïèðîâàíèÿ äàííûõ.</li>
+									</ul>
+								  	</td>
+								</tr>
+								<tr>
+									<td class="invis" colspan="4">
+										<p><strong>Ïîïóëÿðíîå â ðàçäåëå ÑÕÄ:</strong> <a href="/equipment/sannas/axus-yotta.asp">Õðàíèëèùå AXUS Yotta</a> | <a href="/equipment/sannas/netgear-readynas.asp">NAS ñèñòåìû Netgear</a> | <a href="/equipment/sannas/qlogic-fibrechannel.asp">FC è iSCSI àäàïòåðû QLogic</a> | <a href="/equipment/sannas/library-quantum.asp">Ëåíòî÷íûå áèáëèîòåêè Quantum</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td align="center" class="invis">
+										<div align="center"><br/><img alt="" width="175" height="63" src="/images/sannas/axus-yotta-b.jpg"/></div>
+								    	</td>
+									<td class="invis">
+										<div align="center"><br/><img alt="" width="175" height="88" src="/images/sannas/qlogic-sanbox-5600.png"/></div>
+								    	</td>
+									<td class="invis">
+										<div align="center"><br/><img alt="" width="175" height="53" src="/images/sannas/promise-vessraid-1840.jpg"/></div>
+								    	</td>
+									<td class="invis">
+										<div align="center"><br/><img alt=""  width="175" height="93" src="/images/sannas/EH854A.jpg"/></div>
+								    	</td>
+								</tr>
+								 <tr>
+									<td class="invis">
+										<p><a href="/equipment/sannas/systemy-hraneniya-dannyh.asp">Âíåøíèå äèñêîâûå õðàíèëèùà</a></p>
+										<p>Õðàíåíèå äàííûõ íà âíåøíèõ äèñêîâûõ ìàññèâàõ - îòäåëüíî îò ñåðâåðîâ - äàåò áèçíåñó áîëüøèå ïðåèìóùåñòâà, ñðåäè êîòîðûõ íåïðåðûâíàÿ äîñòóïíîñòü èíôîðìàöèè, âîçìîæíîñòü îðãàíèçàöèè îòêàçîóñòîé÷èâûõ êëàñòåðíûõ ñèñòåì, ïîëíàÿ âèðòóàëèçàöèÿ ñåðâåðíîãî îáîðóäîâàíèÿ.</p>
+										<p><b>Äèñêîâûå õðàíèëèùà:</b></p><br/>
+										<ul>
+											<li><a href="/equipment/sannas/axus-yotta.asp">AXUS Yotta</a> - äåñêòîïíûå è ñòîå÷íûå ñèñòåìû íà 6/12/16/24 äèñêîâ ñ âîçìîæíîñòüþ íàðàùèâàíèÿ åìêîñòè, â ñðåäàõ VMWare,</li>
+											<li><a href="/equipment/sannas/dothill-revolution.asp">DotHill R/Evolution</a> - 12-è è 24-õ äèñêîâûå íàðàùèâàåìûå ñèñòåìû ñ áîëüøîé ñêîðîñòüþ îïåðàöèé ââîäà/ âûâîäà (IOPs).</li>
+										</ul>
+									</td>
+									<td class="invis">
+										<p><a href="/equipment/sannas/qlogic-fibrechannel.asp">Àäàïòåðû è êîììóòàòîðû</a></p>
+									  	<p>Ñåòè õðàíåíèÿ äàííûõ SAN (Storage Area Network) ñâÿçûâàþò ìåæäó ñîáîé ñåðâåðû, âíåøíèå äèñêîâûå õðàíèëèùà, ëåíòî÷íûå áèáëèîòåêè è äðóãèå óñòðîéñòâà õðàíåíèÿ èíôîðìàöèè.</p>
+										<p><b>Äëÿ îðãàíèçàöèè èíôðàñòðóêòóðû SAN íåîáõîäèìû:</b></p>
+										<ul>
+											<li>FC-àäàïòåðû QLogic äëÿ óñòàíîâêè â ñåðâåðà è îðãàíèçàöèè ïîäêëþ÷åíèÿ ê ñåòè SAN,</li>
+											<li>FC-êîììóòàòîðû QLogic äëÿ ñîçäàíèÿ FC-ñåòè è ñâÿçè ñåðâåðîâ ñ ñèñòåìàìè õðàíåíèÿ äàííûõ è ïðî÷èìè óñòðîéñòâàìè.</li>
+										</ul>
+									</td>
+									<td class="invis">
+										<p><a href="/equipment/sannas/promise-nas.asp">NAS è iSCSI õðàíèëèùà</a></p>
+										<p>Íåäîðîãîé è äîñòàòî÷íî ïðîèçâîäèòåëüíûé ñïîñîá õðàíåíèÿ äàííûõ îòäåëüíî îò ñåðâåðíîé ãðóïïû ïðåäîñòàâëÿþò ócòðîéñòâà ñòàíäàðòà NAS è iSCSI.</p>
+										<p><b>Óñòðîéñòâà ñòàíäàðòà NAS iSCSI:</b></p>
+										<ul>
+											<li>iSCSI àäàïòåðû QLogic äëÿ ñâÿçè ñ õðàíèëèùàìè iSCSI ÷åðåç ëîêàëüíóþ ñåòü,</li>
+											<li>NAS-ñèñòåìû NETGEAR ReadyNAS íà 4, 6 è 12 äèñêîâ ñ ãèãàáèòíûìè ñåòåâûìè èíòåðôåéñàìè,</li>
+											<li>NAS/ iSCSI ñèñòåìû Promise VessRAID - óíèâåðñàëüíûå õðàíèëèùà íà 12/ 16 äèñêîâ, ðàñøèðÿåìûå äîáàâî÷íûìè ïîëêàìè.</li>
+										</ul>
+							                </td>
+									<td class="invis">
+								    		<p><a href="/equipment/sannas/hp-streamer.asp">Ñòðèìåðû</a></p>
+									  	<p>Óñòðîéñòâà çàïèñè íà ìàãíèòíóþ ëåíòó (ñòðèìåðû) äëÿ äîëãîâðåìåííîãî íàäåæíîãî õðàíåíèÿ áîëüøèõ ìàññèâîâ èíôîðìàöèè â íàñòîÿùèé 
+										ìîìåíò ïðåäñòàâëåíû ñòàíäàðòîì LTO-5, êîòîðûé ïîçâîëÿåò ñîõðàíÿòü íà îäíîì êàðòðèäæå äî 1.5 òåððàáàéò íåñæàòûõ äàííûõ.</p>
+										<p><b>Ñòðèìåðû è ñòðèìåðíûå áèáëèîòåêè:</b></p>
+										<ul>
+											<li><a href="/equipment/sannas/hp-streamer.asp">Ñòðèìåðû HP</a> - âíåøíèå è âíóòðåííèå ìîäåëè, ïîäêëþ÷àåìûå íåïîñðåäñòâåííî ê ñåðâåðàì
+											 äëÿ îðãàíèçàöèè àâòîìàòè÷åñêîãî ðåãóëÿðíîãî ðåçåðâíîãî êîïèðîâàíèÿ,</li>
+											<li>Ñòðèìåðíûå áèáëèîòåêè <a href="/equipment/sannas/library-overland.asp">Overland</a> ñ 2-12 âíóòðåííèìè ïðèâîäàìè ñòàíäàðòà LTO, îáúåäèíÿåìûå â ñòýê,</li>
+											<li>Ñòðèìåðíûå áèáëèîòåêè <a href="/equipment/sannas/library-quantum.asp">Quantum</a> íà 25-80 ñëîòîâ ïîä êàðòðèäæè è ñ ìàêñèìàëüíîé åìêîñòüþ äî 64 òåððàáàéò íà øàññè.</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+					<div class="fulldescript">
+						<div class="subheader"><h3><a style="font-weight:bold; text-align:left" href="/equipment/termoshkaf/termoshkafy.asp">Òåðìîøêàôû äëÿ óñòàíîâêè âíå ïîìåùåíèé</a></h3></div>
+
+						<div class="descontent">
+
+							<table class="invis">
+								<tr>
+									<td class="invis" width="50%">
+										<p><b>Òåðìîøêàôû, îïèñàíèå:</b></p>
+					                                      	<p>Áåçîòêàçíîñòü è íàäåæíóþ ðàáîòó îáîðóäîâàíèÿ â ëþáûõ êëèìàòè÷åñêèõ è ïðîèçâîäñòâåííûõ óñëîâèÿõ îáåñïå÷èâàþò òåðìîøêàôû ôèðìû IPProm. Òåðìîøêàôû ïîçâîëÿþò ðàáîòàòü ëþáîé ñåðâåðíîé è òåëåêîììóíèêàöèîííîé 
+										àïïàðàòóðå íà ñèëüíî çàïûëåííûõ ó÷àñòêàõ ïðîìûøëåííûõ ïðîèçâîäñòâ èëè âíå ïîìåùåíèé íà óëèöå. Âîçìîæíà ðàáîòà â óñëîâèÿõ êðàéíåãî ñåâåðà, 
+										òðîïè÷åñêîé æàðû è î÷åíü âûñîêîé âëàæíîñòè.</p>
+									</td>
+									<td class="invis" width="50%">
+										<p><b>Àññîðòèìåíò òåðìîøêàôîâ:</b></p>
+					                	                <p>Òåðìîøêàôû IPprom îòâå÷àþò ñàìûì ðàçíîîáðàçíûì òðåáîâàíèÿì çàùèòû è ïðåäñòàâëåíû î÷åíü øèðîêèì ìîäåëüíûì è ðàçìåðíûì ðÿäîì.</p>
+										<ul>
+											<li>Òåðìîøêàôû äëÿ âíóòðåííèõ ïîìåùåíèé - äëÿ ðàçìåùåíèÿ è çàùèòû îáîðóäîâàíèÿ ïðè òåìïåðàòóðàõ îêðóæàþùåãî âîçäóõà îò +5°Ñ äî +50°Ñ</li>
+											<li>Òåðìîøêàôû âñåïîãîäíûå - äëÿ ðàçìåùåíèÿ îáîðóäîâàíèÿ âíå ïîìåùåíèé íà óëèöå, êîãäà ïðåäïîëàãàåòñÿ ýêñïëóàòàöèÿ îáîðóäîâàíèÿ ïðè òåìïåðàòóðàõ 
+											îêðóæàþùåãî âîçäóõà îò -50°Ñ äî +50°</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td class="invis" colspan="2"><br/><p><strong>Ïîïóëÿðíîå â ðàçäåëå Òåðìîøêàôû:</strong><a href="/equipment/termoshkaf/termoshkaf-tjnm-66.asp">Òåðìîøêàô ñ íàãðåâîì (ÒÆÍÌ-66)</a> | <a href="/equipment/termoshkaf/termoshkaf-tjm-66.asp">Òåðìîèçîëÿöèîííûé øêàô (ÒÆÌ-66)</a> | <a href="/equipment/termoshkaf/termoshkaf-tnvm-55.asp">Òåðìîøêàô ñ íàãðåâîì è âåíòèëÿöèåé (ÒÍÂÌ-55)</a></p></td>
+								</tr>
+								<tr>
+									<td class="invis" width="50%">
+								  		<div align="center"><img alt="" width="175" height="124" src="/images/termoshkaf/naruzh.jpg"/></div>
+									</td>
+									<td class="invis" width="50%">
+										<div align="center"><img src="/images/termoshkaf/vnutr.jpg" alt="" width="175" height="124" align="middle"/></div>
+									</td>
+								</tr>
+								<tr>
+									<td class="invis" width="50%">
+										<p><a href="/equipment/termoshkaf/termoshkaf-tnm-55.asp">Òåðìîøêàôû âñåïîãîäíûå</a></p>
+					                                      	<p align="left">Òåðìîøêàôû âñåïîãîäíûå ïðåäíàçíà÷åíû äëÿ ðàçìåùåíèÿ îáîðóäîâàíèÿ è ñåðâåðîâ âíå ïîìåùåíèé íà óëèöå, 
+										êîãäà ïðåäïîëàãàåòñÿ ýêñïëóàòàöèÿ îáîðóäîâàíèÿ ïðè òåìïåðàòóðàõ îêðóæàþùåãî âîçäóõà îò -50°Ñ äî +50°Ñ. Ïðè íåîáõîäèìîñòè 
+										òåðìîøêàôû ìîãóò êîìïëåêòîâàòüñÿ êðåïëåíèÿìè íà ìà÷òó, êîíñîëüíûìè ïîëêàìè, ãåðìîââîäàìè, ñèñòåìàìè êîíòðîëÿ.</p>
+					                                </td>
+									<td class="invis"  width="50%">
+								    		<p><a href="/equipment/termoshkaf/termoshkaf-tm-66.asp">Òåðìîøêàôû äëÿ âíóòðåííèõ ïîìåùåíèé</a></p>
+                                    						<p>Òåðìîøêàôû äëÿ âíóòðåííèõ ïîìåùåíèé ïðåäíàçíà÷åíû äëÿ ðàçìåùåíèÿ è çàùèòû îáîðóäîâàíèÿ ïðè òåìïåðàòóðàõ îêðóæàþùåãî âîçäóõà îò +5°Ñ äî +50°Ñ. 
+										Ïðè íåîáõîäèìîñòè òåðìîøêàôû ìîãóò êîìïëåêòîâàòüñÿ êîíñîëüíûìè ïîëêàìè, ãåðìîââîäàìè è ñèñòåìàìè êîíòðîëÿ.</p>
+									</td>
+								</tr>
+							</table>
+
+						</div>
+					</div>
+				
+					<div class="fulldescript">
+						<div class="subheader"><h3><a style="font-weight:bold; text-align:left" href="/equipment/ups/ups.asp">Èñòî÷íèêè áåñïåðåáîéíîãî ïèòàíèÿ (UPS) APC</a></h3></div>
+
+						<div class="descontent">
+
+						  <table class="invis">
+							<tr>
+								<td class="invis" colspan="4">
+									<p><strong>Îïèñàíèå UPS:</strong></p>
+									<p>Øèðîêèé ìîäåëüíûé ðÿä èñòî÷íèêîâ áåñïåðåáîéíîãî ïèòàíèÿ ôèðìû APC äëÿ ñåðâåðîâ, ñåòåâîãî îáîðóäîâàíèÿ, òåëåôîííûõ ñòàíöèé è äðóãîãî îáîðóäîâàíèÿ, êðèòè÷íîãî ê âðåìåíè ïðîñòîÿ.</p>
+									<p>ÈÁÏ ôèðìû APC ïîñòàâëÿþòñÿ êàê â âåðòèêàëüíîì èñïîëíåíèè, òàê è äëÿ óñòàíîâêè â ñòàíäàðòíûé 19-äþéìîâûé øêàô. ÈÁÏ ñåðèè XL èìåþò óâåëè÷åííîå âðåìÿ 
+									àâòîíîìíîé ðàáîòû è ìîãóò íàðàùèâàòüñÿ äîïîëíèòåëüíûìè áàòàðåÿìè, ïîäêëþ÷àåìûìè ê îñíîâíîìó áëîêó â ñòýê.</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="invis" colspan="4">
+									<p>&nbsp;</p><p><strong>Ïîïóëÿðíîå â ðàçäåëå ÈÁÏ APC:</strong> <a href="/equipment/ups/apc-smart-ups-rt.asp">APC Smart-UPS RT äëÿ óñòàíîâêè â øêàôû</a> | <a href="/equipment/ups/apc-batteries.asp">APC - ìîäåëè cìåííûõ áàòàðåé</a> | <a href="/equipment/ups/apc-time.asp">Ðàñ÷åòíîå âðåìÿ ðàáîòû APC</a></p>
+								</td>
+							</tr>
+							<tr>
+								<td align="center" class="invis">
+									<div align="center"><br/><img alt="" width="175" height="82" src="/images/ups/apc-smart-ups.jpg"/></div>
+								</td>
+								<td class="invis">
+									<div align="center"><br/><img alt="" width="175" height="94" src="/images/ups/apc-smart-ups-sc.jpg"/></div>
+								</td>
+								<td class="invis">
+									<div align="center"><br/><img alt="" width="175" height="78" src="/images/ups/apc-smart-ups-rt.jpg"/></div>
+								</td>
+								<td class="invis">
+									<div align="center"><br/><img alt=""  width="175" height="79" src="/images/ups/apc-smart-ups-xl.jpg"/></div>
+								</td>
+							</tr>
+							<tr>
+								<td class="invis">
+										<p><a href="/equipment/ups/apc-smart-ups.asp">ÈÁÏ APC Smart-UPS</a></p>
+										<p>Íàêîïëåííûå äàííûå, õðàíÿùèåñÿ íà ñåðâåðå, çà÷àñòóþ ñòîÿò áîëüøå, ÷åì ñàìî îáîðóäîâàíèå.</p>
+										<p>Ïðè îòêëþ÷åíèè ýíåðãèè Smart-UPS çàùèùàåò Âàøè äàííûå íà ñåòåâîì óðîâíå ïóòåì ïîäêëþ÷åíèÿ ðåçåðâíûõ áàòàðåé, à òàêæå îáåñïå÷èò ñîõðàíåíèå äàííûõ 
+										è îòêëþ÷åíèå ñåðâåðà è ñåòåâîé îïðåàöèîííîé ñèñòåìû ïðåæäå, ÷åì áàòàðåè ïîëíîñòüþ ðàçðÿäÿòñÿ, íåçàâèñèìî îò òîãî, íàõîäèòåñü ëè Âû íà ðàáî÷åì ìåñòå èëè íåò.<br/></p>
+				                  		</td>
+								<td class="invis">
+									<p><a href="/equipment/ups/apc-smart-ups-sc.asp">ÈÁÏ APC Smart-UPS SC</a></p>
+									<p>ÈÁÏ íà÷àëüíîãî óðîâíÿ Smart-UPS SC  ýêîíîìè÷íûé âûáîð äëÿ ìàëûõ è ñðåäíèõ ïðåäïðèÿòèé, ñòðåìÿùèõñÿ çàùèòèòü íåáîëüøèå êîììóòàòîðû, ñåòåâûå óñòðîéñòâà è îáîðóäîâàíèå òî÷åê ïðîäàæ.</p>
+									<p>Â äàííîé ëèíåéêå ÈÁÏ ïðèñóòñòâóþò ìîäåëè ïîâûøåííîé ìîùíîñòè, êîòîðûå îáåñïå÷èâàþò íåîáõîäèìûå ïàðàìåòðû ìîùíîñòè è ïðîäîëæèòåëüíîñòè 
+									ïèòàíèÿ îò àêêóìóëÿòîðîâ äëÿ òðåáóþùåé òàêîé çàùèòû àïïàðàòóðû, à äëÿ ìåíåå îòâåòñòâåííîãî îáîðóäîâàíèÿ  òîëüêî ïîäàâëåíèå âñïëåñêîâ íàïðÿæåíèÿ.<br/>
+									</p>
+								</td>
+								<td class="invis">
+									<p><a href="/equipment/ups/apc-smart-ups-rt.asp">ÈÁÏ APC Smart-UPS RT</a></p>
+									<p>Â îñíîâå ðàáîòû ÈÁÏ APC Smart-UPS RT ëåæèò ïðèíöèï íåïðåðûâíîãî (on-line) äâîéíîãî ïðåîáðàçîâàíèÿ íàïðÿæåíèÿ ñåòè ïåðåìåííîãî òîêà 220Â â ïîñòîÿííîå íàïðÿæåíèå äëÿ ïîäçàðÿäêè àêêóìóëÿòîðíîé áàòàðåè (ðåàëèçóåìîå âûïðÿìèòåëåì) è ïðåîáðàçîâàíèå ïîñòîÿííîãî íàïðÿæåíèÿ àêêóìóëÿòîðíîé áàòàðåè â ñòàáèëüíîå âûõîäíîå íàïðÿæåíèå ïåðåìåííîãî òîêà 220Â (ðåàëèçóåìîå èíâåðòîðîì).<br/>
+									Âñå ÈÁÏ APC Smart-UPS RT ïðîèçâîäÿòñÿ â òðàíñôîðìèðóåìîé ñòîå÷íî-âåðòèêàëüíîé êîíñòðóêöèè è èìåþò î÷åíü øèðîêèé ìîäåëüíûé ðÿä îò 1 äî 20 êÂÀ â 
+									ìîäèôèêàöèÿõ îò 2U äî 12U.</p>
+				                  		</td>
+								<td class="invis">
+									<p><a href="/equipment/ups/apc-smart-ups-xl.asp">ÈÁÏ APC Smart-UPS XL</a></p>
+									<p>Ìîäåëè ÈÁÏ ñ âîçìîæíîñòüþ óâåëè÷åíèÿ âðåìåíè àâòîíîìíîé ðàáîòû APC Smart UPS-XL è RMXL èäåàëüíî ïîäõîäÿò äëÿ ïðèëîæåíèé ñ âûñîêèìè òðåáîâàíèÿìè ê íàäåæíîñòè, â êîòîðûõ íåïðåðûâíîñòü ðàáîòû î÷åíü âàæíà. Ýòî ìîãóò áûòü, íàïðèìåð, òåëåôîííûå ñòàíöèè, ñåðâåðû áàç äàííûõ, êîìïüþòåðû, îáñëóæèâàþùèå ïðîèçâîäñòâî èëè ñåðâèñíûå îïåðàöèè è êàíàëû ïåðåäà÷è êðèòè÷åñêèõ äàííûõ. Ñ ïîìîùüþ APC Smart-UPS XL âðåìÿ ðàáîòû ìîæåò áûòü óâåëè÷åíî çà ñ÷åò ïîäêëþ÷åíèÿ äîïîëíèòåëüíûõ áàòàðåé.</p>
+						                </td>
+						    	</tr>
+						  </table>
+
+						</div>
+					</div>
+
+					<h2>Ïðîäàæà ñåðâåðîâ WIT</h2>
+					<p>Îñíîâíîå íàïðàâëåíèå äåÿòåëüíîñòè êîìïàíèè WIT  ïðîäàæà ñåðâåðîâ. Ìû òàêæå çàíèìàåìñÿ íàñòðîéêîé è ñîïðîâîæäåíèåì ðàçíîîáðàçíîãî êîìïüþòåðíîãî, ñåòåâîãî, òåëåêîììóíèêàöèîííîãî 
+					îáîðóäîâàíèÿ. Îñíîâíîé íàøåé öåëüþ ÿâëÿåòñÿ ñîçäàíèå íàäåæíûõ è çàùèùåííûõ èíôîðìàöèîííûõ ñèñòåì äëÿ îáåñïå÷åíèÿ áåñïåðåáîéíîé ðàáîòû âàøåãî áèçíåñà. Íàøè ñîòðóäíèêè èìåþò êîìïåòåíöèè 
+					ïî íàñòðîéêå è ðàçâåðòûâàíèþ ñåðâåðíîãî è ñåòåâîãî îáîðóäîâàíèÿ, ñîçäàíèþ âèðòóàëèçîâàííûõ ñðåä VMWare, çàùèòå êîðïîðàòèâíûõ ñåòåé îò âòîðæåíèÿ èçâíå è óòå÷åê äàííûõ. </p>
+
+
+
+					<h2>Êóïèòü ñåðâåð WIT</h2>
+					<p>Åñëè Âû çàäàåòåñü âîïðîñîì, ãäå <a href="/equipment/server/servery-Intel.asp"><strong>êóïèòü ñåðâåð</strong></a>, òî ïðåäëàãàåì Âàì îáðàòèòü âíèìàíèå íà íàø êàòàëîã ñåðâåðîâ.</p>
+
+					<p><strong>Ñåðâåðû ïîñòàâëÿþòñÿ â ìîäèôèêàöèÿõ:</strong></p>
+
+					<ul>
+						<li>Ìèêðîñåðâåðà,</li>
+						<li>Ñåðâåðû Intel íà÷àëüíîãî óðîâíÿ,</li>
+						<li>Ñåðâåðû íà ïðîöåññîðàõ E5 1U-2U, âåðòèêàëüíûå,</li>
+						<li>×åòûðåõïðîöåññîðíûå ñåðâåðíûå ñèñòåìû,</li>
+						<li>Ìîäóëüíûé ñåðâåð Intel Flex.</li>
+					</ul>
+
+					<p>Â ñåðâåðû (2õ-ïðîöåññîðíûå èëè 4õ-ïðîöåññîðíûå) ìîãóò áûòü óñòàíîâëåíû äî 4 äèñêîâ ñòàíäàðòà SAS èëè SATA. Åñëè Âû ðåøèëè êóïèòü ñåðâåð öåíà íà íåãî áóäåò 
+					çàâèñåòü îò êîíôèãóðàöèè. Â <a href="/equipment/server/server-configurator.asp">êîíôèãóðàòîðå ñåðâåðîâ</a> ìîæíî ïîäîáðàòü ðàçëè÷íûå âàðèàíòû ïðîöåññîðîâ, ìàòåðèíñêîé ïëàòû, æåñòêèõ äèñêîâ, ìîæíî ñîáðàòü ñåðâåð, 
+					êîòîðûé áóäåò íàèáîëåå ïîëíî ñîîòâåòñòâîâàòü ïîñòàâëåííûì çàäà÷àì.</p>
+
+					<h2>Ñåðâåðû WIT</h2>
+					<p>Îäíî èç íàïðàâëåíèé äåÿòåëüíîñòè íàøåé êîìïàíèè - ïðîèçâîäñòâî ñåðâåðîâ ïîä ñîáñòâåííîé òîðãîâîé ìàðêîé. </p>
+
+					<p><strong>WIT ïðîèçâîäèò: </strong></p>
+					<ul>
+						<li>ñåðâåðû Intel, </li>
+						<li>òåðìèíàëû äëÿ óäàëåííîé ðàáîòû ñ ñåðâåðàìè, </li>
+						<li>êîìïüþòåðû ñîâðåìåííîãî ôîðìàòà "íåòòîï" è "ìîíîáëîê".</li>
+					</ul>
+
+					<p>Ïðîäàæà ñåðâåðîâ Intel ïîä ìàðêîé WIT VV ÿâëÿåòñÿ ïðèîðèòåòíûì íàïðàâëåíèåì äåÿòåëüíîñòè êîìïàíèè, íàøè ñåðâåðû èìåþò îïòèìàëüíîå 
+					ñîîòíîøåíèå öåíà-êà÷åñòâî-íàäåæíîñòü è ïîñòàâëÿþòñÿ íà ðûíîê Ðîññèè ñ 1996 ãîäà.</p>
+
+
+					<p><strong>Äðóãèå íàïðàâëåíèÿ:</strong></p>
+					<ul>
+						<li>ñåòåâîå îáîðóäîâàíèå Cisco Systems, </li>
+						<li>ïîñòàâêà ñèñòåì õðàíåíèÿ äàííûõ AXUS, Netgear è DotHill, </li>
+						<li>êîìïîíåíòû ñåòåé FibreChannel ïðîèçâîäñòâà QLogic è Mellanox</li>
+						<li>êîðïîðàòèâíîå ëèöåíçèðîâàíèå ïðîãðàììíîãî îáåñïå÷åíèÿ ôèðì Microsoft, Adobe, Corel, ABBYY è Ëàáîðàòîðèÿ Êàñïåðñêîãî.</li>
+					</ul>
+
+					<h3>Êîíñóëüòàöèè</h3>
+					<p>Êîìïåòåíòíûå ñîòðóäíèêè WIT Company ïîìîãóò âàì ïîäîáðàòü íåîáõîäèìîå ñåòåâîå îáîðóäîâàíèå, <b>ñåðâåð</b>, ïðîêîíñóëüòèðóþò ïî èìåþùèìñÿ òåõíè÷åñêèì âîïðîñàì. Åñëè Âû ðåøèëè êóïèòü 
+					ñåðâåð â Ìîñêâå, ãîòîâû îáñóäèòü ýòî â íàøåì îôèñå. </p>
+
+					<p><b>Åñëè öåíà ñåðâåðà äëÿ Âàñ âàæíûé ïàðàìåòð, çâîíèòå ïî òåëåôîíó (495) 234-3379 (ìíîãîêàíàëüíûé).</b></p>
+				</div>
+
+				<div id="leftbar">
+					
+					<div id="leftmenu">
+
+						<h6>ÑÀÌÎÅ ÏÎÏÓËßÐÍÎÅ</h6>
+						<ul>
+							<li class="sh">Ñåðâåðû</li>
+							<li>
+								<ul>
+									<li><a href="/equipment/server/new-servers-e5-2600v3.asp">Ñåðâåðû Intel íîâîãî ïîêîëåíèÿ</a></li>
+									<li><a href="/equipment/server/server-Intel-1cpu-e3-1u.asp">Ñåðâåð äëÿ WEB-õîñòèíãà</a></li>
+									<li><a href="/equipment/server/server-Intel-2cpu-e5-2u-35.asp">Êîðïîðàòèâíûé ñåðâåð 2U</a></li>								</ul>							</li>
+							<li class="sh">Ïðîãðàììíîå îáåñïå÷åíèå</li>
+							<li>
+								<ul>
+									<li><a href="/equipment/software/configurator.asp">ÎÍËÀÉÍ-ÊÀËÜÊÓËßÒÎÐ  Microsoft</a></li>
+									<li><a href="/equipment/software/kaspersky-2013.asp">Àíòèâèðóñ Êàñïåðñêîãî 2013</a></li>								</ul>							</li>
+							<li class="sh">Ñèñòåìû õðàíåíèÿ äàííûõ</li>
+							<li>
+								<ul>
+									<li><a href="/equipment/sannas/infortrend-3000.asp">Äèñêîâûå ìàññèâû Infortrend 3000</a></li>
+									<li><a href="/equipment/sannas/netgear-readynas.asp">NAS-óñòðîéñòâà Netgear</a></li>
+									<li><a href="/equipment/sannas/hp-streamer.asp">Ñòðèìåðû Hewlett-Packard</a></li>								</ul>							</li>
+							<li class="sh">Ñåòåâîå îáîðóäîâàíèå Cisco</li>
+							<li>
+								<ul>
+									<li><a href="/equipment/network/cisco-catalyst-2960.asp">Êîììóòàòîðû 2960</a></li>
+									<li><a href="/equipment/network/cisco-asa-5500.asp">Ìåæñåòåâûå ýêðàíû Cisco ASA</a></li>
+									<li><a href="/equipment/network/cisco-isr-1900.asp">Ìàðøðóòèçàòîðû Cisco 1900</a></li>
+									<li><a href="/equipment/network/cisco-catalyst-6500.asp">Ìîäóëüíûå êîììóòàòîðû 6500</a></li>								</ul>							</li>
+							<li class="sh">Èñòî÷íèêè áåñïåðåáîéíîãî ïèòàíèÿ</li>
+							<li>
+								<ul>
+									<li><a href="/equipment/ups/apc-smart-ups-sc.asp">APC Smart-UPS SC</a></li>
+									<li><a href="/equipment/ups/apc-batteries.asp">APC cìåííûå áàòàðåè</a></li>								</ul>							</li>
+							<li class="sh">Òåðìîøêàôû</li>
+							<li>
+								<ul>
+									<li><a href="/equipment/termoshkaf/termoshkaf-tns-55.asp">Òåðìîøêàôû ñ íàãðåâîì</a></li>
+									<li><a href="/equipment/termoshkaf/termoshkaf-tnvm-54.asp">Òåðìîøêàôû ñ âåíòèëÿöèåé</a></li>
+									<li><a href="/equipment/ups/apc-time.asp">Ðàñ÷åòíîå âðåìÿ ðàáîòû</a></li>								</ul>							</li>
+							<li class="sh">Î ôèðìå</li>
+							<li>
+								<ul>
+									<li><a href="/about.asp">Ñõåìà ïðîåçäà</a></li>
+									<li><a href="/support.asp">Îôîðìëåíèå ãàðàíòèè</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="hor"></div>
+					
+					<div id="contact">
+						<p>ÊÎÍÑÓËÜÒÀÖÈÈ Ó ÌÅÍÅÄÆÅÐÎÂ</p>
+
+						<ul>
+							<li>Àëåêñàíäð Êðþêîâ
+							<table>
+								<tr>
+									<td>e-mail:</td>
+									<td><!--noindex--><a rel="nofollow" href="mailto:ak@wit.ru" title="Íàïèñàòü ïèñüìî">ak@wit.ru</a><!--/noindex--></td>
+								</tr>
+								<tr>
+									<td>cell:</td>
+									<td>+7 (916) 158-0005</td>
+								</tr>
+								<tr>
+									<td>ICQ:</td>
+									<td><!--noindex--><a rel="nofollow" href="http://wwp.icq.com/scripts/contact.dll?msgto=429022624" title="Ñâÿçàòüñÿ ïî ICQ">429-022-624</a><!--/noindex--></td>
+								</tr>
+								<tr>
+									<td>Skype:</td>
+									<td><!--noindex--><a rel="nofollow" href="skype:akwit74?call" title="Âûçâàòü ïî Skype">akwit74</a><!--/noindex--></td>
+								</tr>
+							</table>
+							</li>
+
+							<li>Âëàäèìèð Êîìåí
+							<table>
+								<tr>
+									<td>e-mail:</td>
+									<td><!--noindex--><a rel="nofollow" href="mailto:vkomen@wit.ru" title="Íàïèñàòü ïèñüìî">vkomen@wit.ru</a><!--/noindex--></td>
+								</tr>
+								<tr>
+									<td>cell:</td>
+									<td>+7 (985) 768-8583</td>
+								</tr>
+								<tr>
+									<td>ICQ:</td>
+									<td><!--noindex--><a rel="nofollow" href="http://wwp.icq.com/scripts/contact.dll?msgto=93685979" title="Ñâÿçàòüñÿ ïî ICQ">93-685-979</a><!--/noindex--></td>
+								</tr>
+								<tr>
+									<td>Skype:</td>
+									<td><!--noindex--><a rel="nofollow" href="skype:vkomen1?call" title="Âûçâàòü ïî Skype">vkomen1</a><!--/noindex--></td>
+								</tr>
+							</table>
+							</li>
+						</ul>
+
+						<p>ÒÅËÅÔÎÍ +7 (495) 234-3379</p>
+
+						<div class="hor"></div>
+
+						<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+						<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="link" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,gplus"></div>
+
+					</div>
+				</div>
+			</div>
+			<!-- end body -->
+
+			<!-- header -->
+				<?xml version="1.0" encoding="windows-1251"?>
+			<div id="login">
+				<p>Áåñïëàòíûé òåëåôîí äëÿ çâîíêîâ ïî Ðîññèè 8 (800) 250-3379<br/>
+				Äëÿ çâîíêîâ ïî Ìîñêâå 8 (495) 234-3379</p>
+			</div>
+
+			<div id="header">
+				<div id="leftlogo">
+					<a href="/"><img alt="" src="/images/wit_logo.gif" title="Íà ãëàâíóþ ñòðàíèöó wit.ru"/></a>
+				</div>
+
+
+				<div id="mainmenu">
+					<ul>
+						<li id="mm15"><a href="/equipmnt.asp" onmouseover="MouseOverMenu(15)" onmouseout="MouseOutOfDiv(event, 15)">Îáîðóäîâàíèå è ÏÎ</a></li>
+						<li id="mm9"><a href="/fulprice.asp" onmouseover="MouseOverMenu(9)" onmouseout="MouseOutOfDiv(event, 9)">Ïðàéñ-ëèñò</a></li>
+						<li id="mm3"><a href="/news/news.asp" onmouseover="MouseOverMenu(3)" onmouseout="MouseOutOfDiv(event, 3)">Íîâîñòè</a></li>
+						<li id="mm13"><a href="/solution/solution.asp" onmouseover="MouseOverMenu(13)" onmouseout="MouseOutOfDiv(event, 13)">Ðåøåíèÿ</a></li>
+						<li id="mm21"><a href="/" onmouseover="MouseOverMenu(21)" onmouseout="MouseOutOfDiv(event, 21)">Êëèåíòàì</a></li>
+						<li id="mm18"><a href="/clients/login.asp" onmouseover="MouseOverMenu(18)" onmouseout="MouseOutOfDiv(event, 18)">Âõîä äëÿ ïàðòíåðîâ</a></li>
+
+					</ul>
+				</div>
+
+				<script type="text/javascript">
+					var firstmm='mm15';
+					var lastmm='mm18';
+				</script>
+
+				<div id="basket">
+					<img   src="/images/sbasket.gif" alt=""/><a href="/basket.asp" title="Ïåðåéòè â êîðçèíó äëÿ îôîðìëåíèÿ çàêàçà">
+					Â êîðçèíå 0&nbsp;ïîçèöèé íà ñóììó 0 ð. ($0)</a>
+				</div>
+			</div>
+
+			<!-- end header -->
+			<script type="text/javascript">doOnLoad(); </script>
+			
+			<div id="pop15" class="pop" onmouseout="MouseOutOfDiv(event, 15)">
+				<table>
+					<tr>
+
+						<td>
+							<ul>
+								<li>
+									<a href="/equipment/server/servery-Intel.asp"><b>Ñåðâåðû</b></a>
+								</li>
+							</ul>
+						</td>
+
+						<td>
+							<ul>
+								<li>
+									<a href="/equipment/computer/komputery-Intel.asp"><b>Êîìïüþòåðû Intel</b></a>
+								</li>
+							</ul>
+						</td>
+
+					</tr>
+					<tr>						
+
+						<td>
+							<ul>
+								<li>
+									<a href="/equipment/sannas/systemy-hraneniya-dannyh.asp"><b>Ñèñòåìû õðàíåíèÿ äàííûõ</b></a>
+								</li>
+							</ul>
+						</td>
+
+						<td>
+							<ul>
+								<li>
+									<a href="/equipment/network/oborudovanie-cisco.asp"><b>Ñåòåâîå îáîðóäîâàíèå</b></a>
+								</li>
+							</ul>
+						</td>
+
+					</tr>
+					<tr>						
+
+						<td>
+							<ul>
+								<li>
+									<a href="/equipment/software/programmnoe-obespechenie.asp"><b>Ïðîãðàììíîå îáåñïå÷åíèå</b></a>
+								</li>
+							</ul>
+						</td>
+
+						<td>
+							<ul>
+								<li>
+									<a href="/equipment/ups/ups.asp"><b>Èñòî÷íèêè áåñïåðåáîéíîãî ïèòàíèÿ</b></a>
+								</li>
+							</ul>
+						</td>
+
+					</tr>
+					<tr>						
+
+						<td>
+							<ul>
+								<li>
+									<a href="/equipment/cases/shkafy.asp"><b>Øêàôû, ñòîéêè, KVM</b></a>
+								</li>
+							</ul>
+						</td>
+
+						<td>
+							<ul>
+								<li>
+									<a href="/equipment/termoshkaf/termoshkafy.asp"><b>Òåðìîøêàôû</b></a>
+								</li>
+							</ul>
+						</td>
+
+					</tr>
+					<tr>						
+					</tr>
+				</table>
+			</div>
+
+			<div id="pop21" class="pop" onmouseout="MouseOutOfDiv(event, 21)">
+				<table>
+					<tr>
+
+						<td>
+							<ul>
+								<li>
+									<a href="/about.asp"><b>Î êîìïàíèè</b></a>
+								</li>
+							</ul>
+						</td>
+
+						<td>
+							<ul>
+								<li>
+									<a href="/support.asp"><b>Ïîääåðæêà</b></a>
+								</li>
+							</ul>
+						</td>
+
+					</tr>
+					<tr>						
+
+						<td>
+							<ul>
+								<li>
+									<a href="/delivery.asp"><b>Äîñòàâêà</b></a>
+								</li>
+							</ul>
+						</td>
+
+						<td>
+							<ul>
+								<li>
+									<a href="/leasing.asp"><b>Ïîñòàâêà â ëèçèíã</b></a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+
+			<!-- footer -->			
+							<div id="footer">
+
+				<div class="hor"></div>
+				<ul>
+					<li><h4> Îáîðóäîâàíèå è ÏÎ</h4></li>
+
+					<li><a href="/fulprice.asp"> Ïðàéñ-ëèñò </a></li>
+					<li><a href="/news/news.asp"> Íîâîñòè</a></li>
+					<li><a href="/solution/solution.asp"> Ðåøåíèÿ</a></li>
+					<li><a href="/">Êëèåíòàì</a></li>
+					<li><a href="/clients/login.asp">Âõîä äëÿ ïàðòíåðîâ</a></li>
+				</ul>
+
+				<p>WIT&nbsp;Company © 1994-2014, e-mail: 
+				<a title="Îòïðàâèòü ïèñüìî â WIT" href="mailto:welcome@wit.ru?subject=WEB-Çàïðîñ">welcome@wit.ru</a></p> 
+				<p>Òåëåôîí/ ôàêñ: (495) 234-3379 (ìíîãîêàíàëüíûé)<br/>
+				Áåñïëàòíûé òåëåôîí äëÿ çâîíêîâ ïî Ðîññèè 8 (800) 250-3379</p>
+
+				<p>Êîïèðîâàíèå, òèðàæèðîâàíèå, ïåðåïå÷àòêà, à ðàâíî ðàçìåùåíèå â èíòåðíåòå ìàòåðèàëîâ, ïðåäñòàâëåííûõ íà ñàéòå, 
+				âîçìîæíî òîëüêî ñ ïèñüìåííîãî ðàçðåøåíèÿ âëàäåëüöåâ ðåñóðñà www.wit.ru</p>
+
+
+				<!--noindex-->
+
+				<!-- begin of Top100 code -->
+					<script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?2565945"></script>
+					<noscript>
+						<a href="http://top100.rambler.ru/navi/2565945/">
+							<img src="http://counter.rambler.ru/top100.cnt?2565945" alt="Rambler's Top100" border="0" />
+						</a>
+					</noscript>
+				<!-- end of Top100 code -->
+
+				<!-- Rating@Mail.ru counter -->
+					<script type="text/javascript">//<![CDATA[
+					var a='';js=10;d=document;
+					try{a+=';r='+escape(d.referrer);}catch(e){}try{a+=';j='+navigator.javaEnabled();js=11;}catch(e){}
+					try{s=screen;a+=';s='+s.width+'*'+s.height;a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;}catch(e){}
+					try{if(typeof((new Array).push('t'))==="number")js=13;}catch(e){}
+					try{d.write('<a href="http://top.mail.ru/jump?from=1233340"><img src="http://d1.cd.b2.a1.top.mail.ru/counter?id=1233340;t=216;js='+js+
+					a+';rand='+Math.random()+'" alt="Ðåéòèíã@Mail.ru" style="border:0;" height="31" width="88" \/><\/a>');}catch(e){}//]]></script>
+					<noscript><p><a href="http://top.mail.ru/jump?from=1233340"><img src="http://d1.cd.b2.a1.top.mail.ru/counter?js=na;id=1233340;t=216" 
+					style="border:0;" height="31" width="88" alt="Ðåéòèíã@Mail.ru" /></a></p></noscript>
+				<!-- //Rating@Mail.ru counter -->
+
+				<!--LiveInternet counter--><script type="text/javascript"><!--
+					document.write("<a href='http://www.liveinternet.ru/click' "+
+					"target=_blank><img src='//counter.yadro.ru/hit?t44.2;r"+
+					escape(document.referrer)+((typeof(screen)=="undefined")?"":
+					";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+					screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+					";"+Math.random()+
+					"' alt='' title='LiveInternet' "+
+					"border='0' width='31' height='31'><\/a>")
+				//--></script><!--/LiveInternet-->
+
+				<!--/noindex-->
+
+				<!--noindex-->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter22701025 = new Ya.Metrika({id:22701025,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/22701025" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+				<!--/noindex-->
+
+
+			</div>
+
+			<!-- end footer -->
+	</body>
+</html>

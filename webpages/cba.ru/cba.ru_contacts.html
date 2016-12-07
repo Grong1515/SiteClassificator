@@ -1,0 +1,729 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+		<title>Контакты</title>
+		<link rel="stylesheet" type="text/css" href="/css/newmeta.css" />
+		<link rel="stylesheet" type="text/css" href="/css/newlayout.css" />
+                <!--[if IE 6]>
+		<link rel="stylesheet" type="text/css" href="/css/ie6fix.css" />
+                <![endif]-->
+		<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+		<script type="text/javascript" language="javascript" src="/js/jquery.js"></script>
+		<script type="text/javascript" language="javascript" src="/js/jquery.scrollTo.js"></script>
+		<script type="text/javascript" language="javascript" src="/js/jquery.localscroll.js"></script>
+		<script type="text/javascript" language="javascript" src="/js/jquery.form.js"></script>
+		<script type="text/javascript" language="javascript" src="/js/common.js"></script>
+                <script type="text/javascript" language="javascript" src="/js/jquery-1.4.2.js"></script>
+		<script type="text/javascript" language="javascript" src="/js/jquery.hoverIntent.minified.js"></script>
+
+<script type="text/javascript">
+<!--
+
+var ignoreFields = new Array("additional","middlename");
+var loginAccepted = false;
+
+function SendForm() {
+	var i,j,b,a;
+	a = true;
+	for (i=0; i<document.regForm.length; i++) {
+		b = true;
+		for(j=0; j<ignoreFields.length; j++)
+		{
+			if(ignoreFields[j] == document.regForm.elements[i].name)
+			{
+				b=false;
+			}
+			if(document.regForm.elements[i].type == "submit")
+			{
+                                b=false;
+			}
+		}
+		if(b)
+                {
+                     //alert(document.regForm.elements[i].type);
+                     var s = "" + document.regForm.elements[i].name + "feed";
+                     if (document.regForm.elements[i].value == "")
+		     {
+
+				//alert(document.getElementById(s).innerHTML);
+				document.getElementById(s).innerHTML = "<font color=\"#ED5C22\">Заполните поле!</font>";
+				a = false;
+                     }
+                     else
+                     {
+                         if((document.regForm.elements[i].name =="surname" &&
+                            !(/^[a-zа-яA-ZА-Я\-]*$/i).test(document.regForm.elements[i].value) ) ||
+                            (document.regForm.elements[i].name =="name" &&
+                            !(/^[a-zа-яA-ZА-Я\-]*$/i).test(document.regForm.elements[i].value) ) ||
+                            (document.regForm.elements[i].name =="middlename" &&
+                            !(/^[a-zа-яA-ZА-Я\-]*$/i).test(document.regForm.elements[i].value) ) ||
+                            (document.regForm.elements[i].name =="city" &&
+                            !(/^[a-zа-яA-ZА-Я0-9\-\s]*$/i).test(document.regForm.elements[i].value) ) ||
+                            (document.regForm.elements[i].name =="organization" &&
+                            !(/^[a-zа-яA-ZА-Я0-9.\-\"\s]*$/i).test(document.regForm.elements[i].value) ) ||
+                            (document.regForm.elements[i].name =="phone" &&
+                            !(/^[0-9()\-\+]*$/i).test(document.regForm.elements[i].value) ) ||
+                            (document.regForm.elements[i].name =="pass" &&
+                            !(/^[a-zа-яA-ZА-Я0-9_]*$/i).test(document.regForm.elements[i].value) ))
+                         {
+                            document.getElementById(s).innerHTML = "<font color=\"#ED5C22\">Неверные символы!</font>";
+                         }
+                         else if(document.regForm.elements[i].name != "login")
+                         {
+                          document.getElementById(s).innerHTML = "";
+                         }
+                     }
+		}
+	}
+	return a && loginAccepted;
+}
+
+function getOffset(elem) {
+    /*if (elem.getBoundingClientRect) {
+        // "правильный" вариант
+        return getOffsetRect(elem)
+    } else {
+        // пусть работает хоть как-то
+        return getOffsetSum(elem)
+    }*/
+	return getOffsetSum(elem)
+}
+
+function getOffsetSum(elem) {
+    var top=0, left=0
+    while(elem) {
+        top = top + parseInt(elem.offsetTop)
+        left = left + parseInt(elem.offsetLeft)
+        elem = elem.offsetParent
+    }
+
+    return {top: top, left: left}
+}
+
+function getOffsetRect(elem) {
+    // (1)
+    var box = elem.getBoundingClientRect()
+
+    // (2)
+    var body = document.body
+    var docElem = document.documentElement
+
+    // (3)
+    var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop
+    var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft
+
+    // (4)
+    var clientTop = docElem.clientTop || body.clientTop || 0
+    var clientLeft = docElem.clientLeft || body.clientLeft || 0
+
+    // (5)
+    var top  = box.top +  scrollTop - clientTop
+    var left = box.left + scrollLeft - clientLeft
+
+    return { top: Math.round(top), left: Math.round(left) }
+}
+
+$(function () {
+    $('.bubbleInfo').each(function () {
+        var distance = 10;
+        var time = 250;
+        var hideDelay = 500;
+
+        var hideDelayTimer = null;
+
+        var beingShown = false;
+        var shown = false;
+if($('.trigger').length > 0)
+{
+        var trigger = $('.trigger', this);
+        var info = $('.popup', this).css('opacity', 0);
+
+       $([trigger.get(0), info.get(0)]).mouseover(function () {
+            if (hideDelayTimer) clearTimeout(hideDelayTimer);
+            if (beingShown || shown) {
+                // don't trigger the animation again
+                return;
+            } else {
+                // reset position of info box
+                beingShown = true;
+
+		var curleft = curtop = 0;
+
+
+		curleft = getOffset(document.getElementById('loginImage')).left - 353;
+		curtop = document.getElementById('loginImage').offsetTop + 12;
+		if(jQuery.browser.msie && jQuery.browser.version.substr(0,1) == "6")
+		{
+			curleft -= 535;
+		}
+
+                info.css({
+                    top: curtop,
+                    left: curleft,
+                    display: 'block'
+                }).animate({
+                    top: '+=' + distance + 'px',
+                    opacity: 1
+                }, time, 'swing', function() {
+                    beingShown = false;
+                    shown = true;
+                });
+            }
+
+            return false;
+        }).mouseout(function () {
+            if (hideDelayTimer) clearTimeout(hideDelayTimer);
+            hideDelayTimer = setTimeout(function () {
+                hideDelayTimer = null;
+                info.animate({
+                    top: '+=' + distance + 'px',
+                    opacity: 0
+                }, time, 'swing', function () {
+                    shown = false;
+                    info.css('display', 'none');
+                });
+
+            }, hideDelay);
+
+            return false;
+        });
+  }
+    });
+
+	/*$('input').keydown(function(e){
+	        if (e.keyCode == 13) {
+        	    $(this).parents('form').submit();
+	            return false;
+        	}
+	    });*/
+
+});
+
+$(document).ready(function() {
+  //$('#feed').load('http://cba.ru/check.php');
+  $('#login_input').keyup(function() {
+    $.post('http://cba.ru/check.php', {username: document.getElementById('login_input').value },
+    function(result) {
+      $('#loginfeed').html(result).show();
+      if(result.indexOf("608F0F") >= 0)
+      {
+          loginAccepted = true;
+      }
+      else
+      {
+          loginAccepted = false;
+      }
+    });
+  });
+
+  $('#surname').keyup(function() {
+    if(document.getElementById('surname').value == "")
+     $('#surnamefeed').html("<font color=\"#ED5C22\">Заполните поле!</font>").show();
+    else if(!(/^[a-zа-яA-ZА-Я\-]*$/i).test(document.getElementById('surname').value))
+     $('#surnamefeed').html("<font color=\"#ED5C22\">Неверные символы!</font>").show();
+    else
+     $('#surnamefeed').html("").show();
+  });
+
+  $('#name').keyup(function() {
+    if(document.getElementById('name').value == "")
+     $('#namefeed').html("<font color=\"#ED5C22\">Заполните поле!</font>").show();
+    else if(!(/^[a-zа-яA-ZА-Я\-]*$/i).test(document.getElementById('name').value))
+     $('#namefeed').html("<font color=\"#ED5C22\">Неверные символы!</font>").show();
+    else
+     $('#namefeed').html("").show();
+  });
+
+  $('#middlename').keyup(function() {
+    if(!(/^[a-zа-яA-ZА-Я\-]*$/i).test(document.getElementById('middlename').value))
+     $('#middlenamefeed').html("<font color=\"#ED5C22\">Неверные символы!</font>").show();
+    else
+     $('#middlenamefeed').html("").show();
+  });
+
+
+  $('#city').keyup(function() {
+    if(document.getElementById('city').value == "")
+     $('#cityfeed').html("<font color=\"#ED5C22\">Заполните поле!</font>").show();
+    else if(!(/^[a-zа-яA-ZА-Я0-9\-\s]*$/i).test(document.getElementById('city').value))
+     $('#cityfeed').html("<font color=\"#ED5C22\">Неверные символы!</font>").show();
+    else
+     $('#cityfeed').html("").show();
+  });
+
+  $('#organization').keyup(function() {
+    if(document.getElementById('organization').value == "")
+     $('#organizationfeed').html("<font color=\"#ED5C22\">Заполните поле!</font>").show();
+    else if(!(/^[a-zа-яA-ZА-Я0-9.\-\"\s]*$/i).test(document.getElementById('organization').value))
+     $('#organizationfeed').html("<font color=\"#ED5C22\">Неверные символы!</font>").show();
+    else
+     $('#organizationfeed').html("").show();
+  });
+
+  $('#phone').keyup(function() {
+    if(document.getElementById('phone').value == "")
+     $('#phonefeed').html("<font color=\"#ED5C22\">Заполните поле!</font>").show();
+    else if(!(/^[0-9()\-\+]*$/i).test(document.getElementById('phone').value))
+     $('#phonefeed').html("<font color=\"#ED5C22\">Неверные символы!</font>").show();
+    else
+     $('#phonefeed').html("").show();
+  });
+
+  $('#pass').keyup(function() {
+    if(document.getElementById('pass').value == "")
+     $('#passfeed').html("<font color=\"#ED5C22\">Заполните поле!</font>").show();
+    else if(!(/^[a-zа-яA-ZА-Я0-9_]*$/i).test(document.getElementById('pass').value))
+     $('#passfeed').html("<font color=\"#ED5C22\">Неверные символы!</font>").show();
+    else if(document.getElementById('pass').value.length < 6)
+     $('#passfeed').html("<font color=\"#ED5C22\">Короткий пароль!</font>").show();
+    else
+     $('#passfeed').html("").show();
+  });
+
+
+});
+
+
+
+//-->
+</script>
+
+
+<script>
+$(document).ready(function(){
+$(".alphpopup a").hoverIntent(function() {selectLettertd(this.id)},
+function() {});
+});
+
+$(function () {
+
+
+	$('#searchInput').keydown(function(e){
+	        if (e.keyCode == 13) {
+        	    document.forms["myform"].submit();
+	            return false;
+        	}
+	    });
+
+        var distance = 10;
+        var time = 250;
+        var hideDelay = 500;
+
+        var hideDelayTimer = null;
+
+        var beingShown = false;
+        var shown = false;
+if($('.atoja').length > 0)
+{
+        var trigger = $('.atoja', this);
+        var info = $('.alphpopup', this).css('opacity', 0);
+
+       $([trigger.get(0), info.get(0)]).mouseover(function () {
+            if (hideDelayTimer) clearTimeout(hideDelayTimer);
+            if (beingShown || shown) {
+                // don't trigger the animation again
+                return;
+            } else {
+                // reset position of info box
+                beingShown = true;
+
+		var curleft = curtop = 0;
+
+
+		curleft = 20;
+		curtop = 32;
+                info.css({
+                    top: curtop,
+                    left: curleft,
+                    display: 'block'
+                }).animate({
+                    top: '+=' + distance + 'px',
+                    opacity: 1
+                }, time, 'swing', function() {
+                    beingShown = false;
+                    shown = true;
+                });
+            }
+
+            return false;
+        }).mouseout(function () {
+            if (hideDelayTimer) clearTimeout(hideDelayTimer);
+            hideDelayTimer = setTimeout(function () {
+                hideDelayTimer = null;
+                info.animate({
+                    top: '+=' + distance + 'px',
+                    opacity: 0
+                }, time, 'swing', function () {
+                    shown = false;
+                    info.css('display', 'none');
+                });
+
+            }, hideDelay);
+
+            return false;
+        });
+  }
+});
+</script>
+
+
+
+<script>
+
+function countdown(hours, minutes, seconds){
+seconds--;
+if(seconds == -1)
+{
+	seconds = 59;
+	minutes--;
+}
+if(minutes == -1)
+{
+	minutes = 59;
+	hours--;
+}
+thehours = hours;
+theminutes = minutes;
+theseconds = seconds;
+secString = seconds <= 9 ? "0" + seconds : seconds;
+minString = minutes <= 9 ? "0" + minutes : minutes;
+hoursString = hours <= 9 ? "0" + hours : hours;
+newValue = "" + hoursString + ":" + minString + ":" + secString;
+document.getElementById('count3').value=newValue;
+setTimeout("countdown(thehours,theminutes,theseconds)",1000);
+}
+
+function setLetter()
+{
+ alert('7');
+}
+function removeLetter()
+{
+}
+
+function selectLetter(sText)
+{
+ removeLetterText();
+ var tbody = document.getElementById('dpop').getElementsByTagName('TBODY')[0];
+ var r = document.createElement("TR");
+ r.setAttribute("id", "letterText");
+ tbody.appendChild(r);
+ var d = document.createElement("TD");
+ d.setAttribute("colspan", "33");
+ d.setAttribute("id", "letterText");
+ r.appendChild(d);
+ d.innerHTML = sText;
+ return false;
+}
+
+function selectLettertd(sText)
+{
+ var d = document.getElementById('letterText');
+ d.innerHTML = sText;
+ return false;
+}
+
+function removeLetterText()
+{
+ var tbody = document.getElementById('dpop').getElementsByTagName('TBODY')[0];
+ var r = document.getElementById('letterText');
+ if(r)
+ {
+  tbody.removeChild(r);
+ }
+ return false;
+}
+</script>
+
+
+		<style type="text/css">
+					#MetaLayout		{ background: url('/i/bg_contacts.gif') no-repeat 60% 0; }
+							#ContentBox		{ background: url('/i/BigLetters/K.png') no-repeat 0 125px; }
+				</style>
+		        <script type="text/javascript" src="http://www.cba.ru/slide/swfobject.js"></script>
+                
+                        <script type="text/javascript">
+                            <!-- For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. -->
+                            var swfVersionStr = "10.0.0";
+                            <!-- To use express install, set to playerProductInstall.swf, otherwise the empty string. -->
+                            var xiSwfUrlStr = "playerProductInstall.swf";
+                            var flashvars = {};
+                            var params = {};
+                            params.quality = "high";
+                            params.bgcolor = "#ffffff";
+                            params.allowscriptaccess = "sameDomain";
+                            params.allowfullscreen = "true";
+                            params.wmode = "opaque";
+                            var attributes = {};
+                            attributes.id = "Slideshow";
+                            attributes.name = "Slideshow";
+                            attributes.align = "middle";
+                            swfobject.embedSWF(
+                                "http://www.cba.ru/slide/Slideshow.swf", "flashContent",
+                                "700", "277",
+                                swfVersionStr, xiSwfUrlStr,
+                                flashvars, params, attributes);
+                			<!-- JavaScript enabled so display the flashContent div in case it is not replaced with a swf object. -->
+                			swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+                        </script>
+                
+	
+</head>
+	<body>
+<table>
+<tr>
+<td id="leftborder">
+</td>
+<td>
+		<div id="MainLayout">
+                                        <div class="header">
+                                        <table style="margin-bottom:10px;">
+                                        <tr>
+                                          <td>
+                                              <table style="width:260px;">
+                                                  <tr>
+                                                      <form name="myform" action="http://www.cba.ru/search/" method="get">
+                                                      <td style="border:solid #999999;border-width:1px 0 1px 1px;background-color:#FFFFFF;">
+                                                          <input type="image" style="width:18px;height:18px;border:0;background-color:#FFFFFF;margin:1px;" src="http://www.cba.ru/i/lupa.jpg" alt="Поиск"/>
+                                                      </td>
+                                                      <td style="width:100%;vertical-align:middle;border:solid #999999;border-width:1px 1px 1px 0px;background-color:#FFFFFF;">
+                                                          <input id="searchInput" style="width:100%;height:18px;border:0;font-size:0.8em;vertical-align:middle;color:#CC0000;" type="text" name="SearchText" value="Поиск философии здравого смысла" onfocus="if(this.value=='Поиск философии здравого смысла')this.value='';"/>
+                                                      </td>
+                                                      </form>
+                                                      <td style="vertical-align:middle;white-space:nowrap;padding-left:5px;">
+                                                          <a class="atoja" href="" onclick="return false;"><strong>от А до Я</strong></a>
+    						          <table style="opacity: 0;text-align:right;" id="dpop" class="alphpopup">
+    		                                          <tbody>
+    		                                          <tr>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">А</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Б</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">В</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Г</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Д</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Е</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ё</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ж</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">З</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">И</a></td>
+              							<td><a href="" style="color:#CCBBBB;" onclick="return false;">Й</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">К</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Л</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">М</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Н</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">О</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">П</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Р</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">С</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Т</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">У</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ф</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Х</a></td>
+        							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ц</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ч</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ш</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Щ</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ъ</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ы</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ь</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Э</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ю</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Я</a></td>
+    		                                          </tr>
+    		                                          <tr><td colspan="33" id="lettertd" style="height:80px;padding-left:5px;"><span style="white-space:nowrap" id="letterText"></span></td></tr>
+                                                          </tbody>
+                                                          </table>
+   						           </div>
+                                                      </td>
+                                                  </tr>
+                                              </table>
+
+                                          </td>
+                                          <td style="width:100%;text-align:right;padding-bottom:5px;">
+                                              <table style="width:100%;text-align:right;color:#073763;font-size:1.1em;">
+                                                     <tr>
+                                                     <td style="width:100%;text-align:right;">
+                                                         <strong>+7 (495) 380-24-88</strong>
+                                                     </td>
+                                                     </tr>
+                                                     <tr>
+                                                     <td style="width:100%;text-align:right;">
+                                                         <strong>+7 (495) 783-37-35</strong>
+                                                     </td>
+                                                     </tr>
+                                              </table>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                        <td>
+                                        <a href="/"><img style="margin:0;" src="/i/LogotypeFull.gif" alt="ЦБА. Центр бизнес-консалтинга и аудита" id="Logotype" /></a>
+                                        </td>
+                                        <td style="width:100%;text-align:right;">
+                                                                                    <form name="loginform" action="./" METHOD="POST">
+                                            <div style="width:100%;" align="right">
+                                            <table>
+                                            <tr>
+                                            <td colspan=2 style="text-align:right;">
+                                            <input style="height:20px;margin-right:2px;font-size:0.9em;" type="text" name="sLogin" value="Логин" onfocus="if(this.value=='Логин')this.value='';" /><input style="height:20px;font-size:0.9em;" type="password" name="sPass" value="Пароль" onfocus="if(this.value=='Пароль')this.value='';" />
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                            <td style="text-align:left;padding-top:5px;">
+                                            <a href="http://www.cba.ru/registration" class="loginlink">Регистрация</a>&nbsp;&nbsp;&nbsp;<a href="http://www.cba.ru/recovery" class="loginlink">Забыли пароль?</a>
+                                            </td>
+                                            <td style="height:20px;width:40px;padding:5px 0 0 20px;vertical-align: middle;">
+                                            <a href="javascript: void(0);" onclick="document.loginform.submit();return false;" class="enterlogin">Вход</a>
+                                            </td>
+                                            </tr>
+                                            </table>
+                                            </div>
+                                            </form>
+                                                                                </td>
+                                        </tr>
+                                        </table>
+                                        </div>
+                                        <ul class="mainul">
+                                             <li><a class="current" href="http://cba.ru" accesskey="1">Главная</a></li>
+                                             <li><a href="http://www.cba.ru/services" accesskey="2">Услуги</a></li>
+                                             <li><a href="http://www.cba.ru/results" accesskey="3">Результаты</a></li>
+                                             <li><a href="http://www.cba.ru/events" accesskey="4">Новости</a></li>
+                                             <li><a href="http://www.cba.ru/knowledge" accesskey="5">Знания</a></li>
+                                             <li><a href="http://www.cba.ru/company/career" accesskey="6">Карьера</a></li>
+                                             <li><a href="http://www.cba.ru/company" accesskey="7">Компания</a></li>
+                                             <li class="lasthead"><a href="http://www.cba.ru/contacts" accesskey="8">Контакты</a></li>
+                                        </ul>
+                                        <br/><br/><br/>
+					<div class="maincontent">
+			</div>
+			<br class="Clear" />
+			<div id="ContentBox">
+				<table id="ContentTable">
+					<tr>
+						<td colspan="2">
+							<ul id="MenuLeft">
+																</ul>
+							<br /><br />
+														<div id="LetterServices">
+								<div>
+									<span id="LetterBtn" class="Opened">Услуги от А &mdash; Я</span>
+								</div>
+								<div id="ServicesByLetter">
+									<ul>
+																																																						<li>
+																									<a href="/services/audit/">Аудит</a>
+																								</li>
+																																												<li>
+																									<a href="/services/autsorsing_buhuchet/">Аутсорсинг бухгалтерского учета</a>
+																								</li>
+																																												<li>
+																									<a href="/services/autsorsing/">Аутсорсинг МСФО</a>
+																								</li>
+																																												<li>
+																									<a href="/services/business_tourism/">Интеллектуальный туризм</a>
+																								</li>
+																																												<li>
+																									<a href="/services/systems_consulting/">Консалтинг учетных систем</a>
+																								</li>
+																																												<li>
+																									<a href="/services/dual pricing/">Консолидированная отчетность</a>
+																								</li>
+																																												<li>
+																									<a href="/services/msfo/">МСФО</a>
+																								</li>
+																																												<li>
+																									<a href="/services/Tax disputes/">Налоговые споры</a>
+																								</li>
+																																												<li>
+																									<a href="/services/grade/">Оценка</a>
+																								</li>
+																																												<li>
+																									<a href="/services/prav/">Правовой и налоговый консалтинг</a>
+																								</li>
+																																												<li>
+																									<a href="/services/education/">Профессиональное образование</a>
+																								</li>
+																																																																	<li>
+																									<a href="/services/management_consulting/">Управленческий консалтинг</a>
+																								</li>
+																																																			</ul>
+																	</div>
+							</div>						</td>
+						<td colspan="6">
+							<div id="BreadCrumbs">
+					<a href="/">от А до Я</a>&nbsp;/
+				</div>							<h1>Контакты</h1>
+							<div class="Content">
+								<div id="ContactsFull">129085, Москва, пр-т Мира, д. 101, стр. 1, 7 этаж, офис 711. e-mail: <a href="mailto:info@cba.ru">mail@cba.ru</a><br />
+<nobr> (495)380-24-88, (495)380-24-89, (495)783-37-35 </nobr></div>
+																<div id="MapBox">
+									<div class="AutoLine"></div>
+									<img id="Map" src="/upload/i/208.gif" width="430" height="416" alt="" />
+									<div class="Additional">
+										<h4>На автомобиле из&nbsp;центра</h4>
+										<p>Не доезжая станции метро ВДНХ, развернитесь под эстакадой.</p>
+										<h4 class="Walk">Пешеходный маршрут</h4>
+										<p>Доезжаете до&nbsp;станции метро &laquo;Алексеевская&raquo; и&nbsp;выходите из&nbsp;метро направо в&nbsp;сторону ВДНХ. Через 200&nbsp;метров перейдите на&nbsp;противоположную сторону проспекта Мира и&nbsp;продолжайте движение в&nbsp;том же направлении. Еще через 50&nbsp;метров вы&nbsp;увидите отдельно стоящее здание института &laquo;Гипромез&raquo; с&nbsp;единственным парадным входом.</p>
+									</div>
+									<br class="Clear" />
+								</div>
+								<div class="MapImportant">
+									<h2>Важно!</h2>
+									<p>Вход в&nbsp;здание строго по&nbsp;пропускам, поэтому необходимо заранее заказать пропуск по&nbsp;телефону через секретаря и&nbsp;иметь при себе паспорт.</p>
+								</div>
+
+
+							</div>
+						</td>
+					</tr>
+					<tr class="GridCells"><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td><td><div></div></td></tr>
+				</table>
+			</div>
+			
+			
+<table>
+        <tr>
+        <td style="padding-top:30px;font-size:0.85em;">
+        <hr class="redhr"/>
+        <ul class="linkslist">
+         <li class="firstli"><a href="http://cba-online.livejournal.com/">ЦБА в livejournal</a></li>
+         <li><a href="">facebook</a></li>
+         <li><a href="http://twitter.com/cba_online">twitter</a></li>
+         <li><a href="http://www.cba.ru/contacts">Контакты</a></li>
+         <li><a href="http://www.cba.ru/sitemap">Карта сайта</a></li>
+         <li><a href="" onclick="return false;">Оставайтесь в курсе событий</a></li>
+         <li >&copy; ЦБА 2008-2016</li>
+         <li><!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t44.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+</li>
+         </ul>
+        </td>
+        </tr>
+    </table>
+    </div>
+</div>
+</td>
+<td id="rightborder">
+</td>
+</tr>
+</table>
+			</div>
+		</div>
+	</body>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5140444-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</html>

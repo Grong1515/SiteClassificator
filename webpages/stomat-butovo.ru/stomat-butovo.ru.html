@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+		<head>
+		<title>Стоматология в Бутово. Стоматологическая клиника в Южном Бутово, детская стоматология, протезирование, лечение зубов.</title>
+		<meta charset="utf-8">
+		<meta name = "format-detection" content = "telephone=no" />
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="/fancy/jquery.fancybox.css" type="text/css" />
+        
+
+
+        
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-migrate-1.2.1.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/scroll_to_top.js"></script>
+	 <script src="js/script.js"></script>
+		<script src="js/jquery.equalheights.js"></script>
+		<script src="js/superfish.js"></script>
+		<script src="js/jquery.mobilemenu.js"></script>
+		<script src="js/touchTouch.jquery.js"></script>
+		<script src="js/jquery.tools.min.js"></script>
+		<script src="js/tmStickUp.js"></script>
+        
+        <script type="text/javascript" src="fancy/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript" src="fancy/jquery.fancybox.js"></script>
+        
+        
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic" rel="stylesheet"/>
+		<!-- font-awesome font -->
+		<link rel="stylesheet" href="fonts/font-awesome.css" type="text/css" media="screen">
+		<!-- fontello font -->
+
+		<script src="js/owl.carousel.js"></script> 
+		 <script>
+			 $(document).ready(function(){
+				/*carousel*/
+				var owl = $("#owl"); 
+						owl.owlCarousel({
+						items : 1, //10 items above 1000px browser width
+						itemsDesktop : [995,1], //5 items between 1000px and 901px
+						itemsDesktopSmall : [767, 1], // betweem 900px and 601px
+						itemsTablet: [700, 1], //2 items between 600 and 0
+						itemsMobile : [479, 1], // itemsMobile disabled - inherit from itemsTablet option
+						navigation : false,
+						pagination :  true
+						});
+
+						
+		 }); 
+		 </script>
+         
+         <script>
+			$(document).ready(function () 
+			{
+			  	$(window).load(function () 
+				{
+					$('.fancybox').fancybox();
+					
+					$('.call').fancybox(
+					{
+						padding: 30,
+						minHeight: 20,
+						fitToView: false,
+						width: 161,
+						autoSize: true,
+						closeClick: false,
+						openEffect: 'none',
+						closeEffect: 'none'
+					});	
+					
+					$('.origami').origami();
+					
+					//Printmap
+
+					$(".printmap").click(function(){
+						popup = window.open();
+						popup.document.write("<img src='" + $(this).closest("article").find("img").attr("src") + "' alt='' border='0'>");
+						popup.print();
+					});
+				});
+			});
+		</script>
+
+
+
+
+		<!--[if lt IE 8]>
+		 <div style=' clear: both; text-align:center; position: relative;'>
+			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+				<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+			</a>
+		</div>
+	 <![endif]-->
+	 <!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+		<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+	 <![endif]-->
+		</head>
+<body>
+<!--button back top-->
+<div id="back-top"><i class="fa fa-arrow-up"></i></div>    
+<div class="main">
+	<div class="div-content">  
+
+<!--==============================header=================================-->
+			<div id="stuck_container">
+				
+						<header>
+							<div class="container">
+								<div class="row">
+									<div class="grid_12">
+										<a href="index.html"><img vspace="17" align="left" src="images/logo_big.jpg" alt="Клиника Эстетической Стоматологии Южное Бутово" title="Клиника Эстетической Стоматологии Южное Бутово"></a>
+                                        
+                                        <p style="color:#8e8e8e;" align="right"><font color="#666666" size="+2"><b>+7 (495) 714-16-72</b></font><br/><b>г.Москва, улица Южнобутовская, д. 50</b><br/>Метро:<b> улица Горчакова</b>, Южное Бутово</p> 
+										<nav>
+											<ul class="sf-menu header_menu">
+												<li><a href="about.html"><span></span>О нас<strong></strong></a> </li>
+												 <li><a href="services.html">Услуги<strong></strong></a>
+                                                 <!--<ul class='submenu'>
+															<li><a href="#">Терапия</a></li>
+															<li><a href="#">Ортодонтия</a></li>
+															<li class='sub-menu'><a href="#">Наши специалисты</a>
+																 <ul class='submenu2'>
+																		<li><a href="#">Иванов</a></li>
+																		<li><a href="#">Петров</a></li>
+																 </ul>
+															</li>
+														</ul>-->
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 </li>
+                                                 <li><a href="price.html">Цены<strong></strong></a></li>
+												 <li><a href="doctors.html">Наши специалисты<strong></strong></a></li>
+												 <li><a href="fotogalereya.html">Фотогалерея<strong></strong></a></li>
+                                                 <li><a href="vopros_otvet.html">Вопрос-ответ<strong></strong></a></li>
+												 <li id="last-li"><a href="map.html">Контакты<strong></strong></a></li>
+											</ul>
+										</nav>
+
+
+										<div class="clear"></div>
+
+									</div>
+
+								</div>
+							</div>
+
+							
+
+						</header>
+			</div>
+
+
+			<div class="box-1">
+				<div class="container">
+					<div class="owl_main">
+						
+							
+							<div id="owl">
+									<div class="item">
+										<p class="txt1"><span>Лечение зубов</span></p>
+										<p class="txt2">бережное лечение зубов современными материалами</p>
+										<a href="/ter_stom.html" class="more_btn">Подробнее</a>
+									</div>
+
+									<div class="item">
+										<p class="txt1"><span>Протезирование</span></p>
+										<p class="txt2">съёмное и несъёмное протезирование зубов с применением новейших <br/>технологий</p>
+										<a href="/protzub.html" class="more_btn">Подробнее</a>
+									</div>
+
+									<div class="item">
+										<p class="txt1"><span>Имплантация</span></p>
+										<p class="txt2">имплантация зубов позволяет установить коронки на месте отсутствующих зубов</p>
+										<a href="/implant.html" class="more_btn">Подробнее</a>
+									</div>
+
+								
+
+								</div>
+
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+<!--=======content================================-->
+
+			<div class="box-2">
+				<div class="container marTop1">
+					<div class="row">
+						<div class="grid_4">
+							<div class="banner1">
+								<img src="images/page1_icon1.png" alt="" class="no_resize">
+								<p class="txt3">Акция</p>
+								<div class="clear"></div>
+							</div>
+							<div class="hline2"></div>
+							<p class="txt11"><span class="color1">Профессиональная чистка зубов <br/><font style="font-weight:bold;">5 000 рублей!</font></span></p>
+							<a href="/akcii.html#akciya1" class="more_btn2">Подробнее</a>
+						</div>
+
+						<div class="grid_4">
+							<div class="banner1 bg2">
+								<img src="images/page1_icon2.png" alt="" class="no_resize">
+								<p class="txt3">Акция</p>
+								<div class="clear"></div>
+							</div>
+							<div class="hline2"></div>
+							<p class="txt11"><span class="color1">Консультация ортодонта <font style="font-weight:bold;">бесплатно</font></span></p>
+							<a href="/akcii.html#akciya4" class="more_btn2">Подробнее</a>
+						</div>
+
+						<div class="grid_4">
+							<div class="banner1 bg3">
+								<img src="images/page1_icon3.png" alt="" class="no_resize">
+								<p class="txt3">Часы работы</p>
+								<div class="clear"></div>
+							</div>
+							<div class="hline2"></div>
+							<p class="txt11">
+								<span class="color1">
+									Ежедневно 9:00 - 21:00<br/>
+									Записаться по телефону:<br/>
+									<font style="font-weight:bold;">+7 (495) 714-16-72</font>
+								</span>
+								<br>
+								<!--<span style="font-size: 20px; color: red; display: block; border-bottom: 1px dotted; cursor: pointer;">
+									График работ в новогодние праздники
+								</span>
+								<div style="font-size: 20px; color: gray;">
+									1 января - выходной<br>
+									2 - 4 января - с 10.00 до 18.00<br>
+									5 - 6 января - с 10.00 до 20.00<br>
+									7 января - выходной<br>
+									8 - 10 января - с 10.00 до 20.00
+								</div>-->
+							</p>
+							
+							<a href="/map.html" class="more_btn2">Подробнее</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="box-3">
+				<div class="container">
+					<div class="row">
+						<div class="grid_7 preffix_5 txt_cntr">
+							<p class="txt5">Специально для детей</p>
+							<p class="txt6">Детская стоматология для Вас</p>
+							<a href="/det_stom.html" class="more_btn2">Подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="box-4">
+				<div class="container">
+					<div class="row">
+						<div class="grid_6">
+							<img src="images/page1_pic1.jpg" alt="" class="img1">
+							<div class="box3">
+								<h2 class="v2">Советы по уходу</h2>
+								<p class="txt7">При визите в клинику в Южном Бутово на консультацию, наш специалист даст вам несколько ценных советов по уходу за Вашими зубками</p>
+								<p class="txt8"><a href="sovety_po_uhodu.html">Узнать больше</a></p>
+							</div>
+						</div>
+
+						<div class="grid_6">
+							<img src="images/page1_pic2.jpg" alt="" class="img1">
+							<div class="box3">
+								<h2 class="v2">Лечение без боли</h2>
+								<p class="txt7">В нашей клинике в Бутово используется самое современное оборудование, которое позволяет производить лечение практически безболезненно</p>
+								<p class="txt8"><a href="ter_stom.html">Узнать больше</a></p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="box-5">
+				<div class="hline3"></div>
+				<div class="container">
+					<div class="row">
+						<div class="grid_6 preffix_3">
+							<p class="txt9">Хотите получить консультацию у специалиста?</p>
+							<p class="txt10">Мы запишем Вас на удобное для Вас время и максимально удобный для Вас день!</p>
+						</div>
+						<div class="grid_3">
+							<!--<a href="call_back1-1.html" class="more_btn3 call fancybox.ajax">Записаться</a>-->
+                            <a href="/map.html" class="more_btn3">Записаться</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="hline4">
+				<div class="container">
+					<div class="row">
+						<div class="grid_6">
+							<div class="bg4">
+								<img src="images/a_58.jpg" alt="" class="img2">
+								<div class="box3">
+									<p class="txt14"><a href="estet_stom.html">Косметическая стоматология</a></p>
+									<p class="txt12">Революционные технологии и неограниченные возможности современных материалов позволяют сделать улыбку идеальной...<p class="txt8" align="right"><a href="estet_stom.html">Подробнее</a> &nbsp;</p></p>
+								</div>
+							</div>
+						</div>
+	
+						<div class="grid_6">
+							<div class="bg4">
+								<img src="images/a_61.jpg" alt="" class="img2">
+								<div class="box3">
+									<p class="txt14"><a href="otbelzub.html">ZOOM - супер отбеливание</a></p>
+									<p class="txt12">Помочь вернуть белизну улыбке могут современные безопасные методики отбеливания зубов. Результат заметен через час...<p class="txt8" align="right"><a href="otbelzub.html">Подробнее</a> &nbsp;</p></p>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="container">
+					<div class="row">
+						<div class="grid_4">
+							<h3>Статьи</h3>
+							<p class="txt14"><font color="#8661c0"><span>Ортодонтическое лечение</span></font></p>
+							<p class="txt4 txt_upp">Скученное положение передних зубов считается наиболее распространенной аномалией зубов и зубных рядов...
+</p><br/>
+							<a href="/ortodont_lechenie_scuch.html" class="more_btn2 v2">Подробнее</a><br/>
+						</div>
+
+						<div class="grid_6">
+							<img src="images/page1_pic5.jpg" alt="" class="img3">
+							<div class="box3">
+								<h3>Отзывы</h3>
+								<p class="txt14">Светлана Мельникова</p>
+								<p class="txt4 txt_upp">Благодарим Клинику Эстетической стоматологии в Бутово. Уже не первый год приходим лечить зубки всей семьёй.</p>
+							</div>
+							<div class="wrapper marTop2">
+								<a href="/otzyvy.html" class="more_btn2 v2">Все отзывы</a>
+							</div>
+						</div>
+                        
+                        <div class="grid_2">
+							<h3>Вакансии</h3>
+							<p class="txt14"><font color="#4ddf98"><span>Приглашаем</span></font></p>
+								<p class="txt4 txt_upp">На работу специалистов</p><br/>
+                                <a href="/vacancy.html" class="more_btn2 v2">Подробнее</a>
+							
+							
+                            
+						</div>
+                        
+
+						<!--<div class="grid_2">
+							<h3>Contacts</h3>
+							<div class="hline2 v2">
+								<p class="txt15">28 Jackson Blvd Ste 151<br>Chicago <br>IL 60604-2340</p>
+							</div>
+							<a href="#" class="more_btn4">info@demolink.org</a>
+                            
+						</div>-->
+
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+	</div>
+
+
+	<!--FOOTER-->
+<footer>
+		<div class="footer_priv">
+
+				<div class="container">
+                
+                <p class="txt_priv">Наш адрес: <font style="font-weight:bold;">г.Москва, улица Южнобутовская, д. 50</font> <span class="vline2"></span> <a href="map.html" class="link2">контакты</a><br>Телефон: <font style="font-weight:bold;">+7 (495) 714-16-72</font>, <a rel="nofollow" href="mailto:info@stomat-butovo.ru">info@stomat-butovo.ru</a></p>
+						
+
+						<ul class="list_footer">
+							 <li><a href="https://www.facebook.com/pages/Клиника-Эстетической-Стоматологии-в-Бутово/918332844861218" target="_blank">facebook</a></li>
+							 <li><a href="https://twitter.com/Stomat_Butovo	" target="_blank">twitter</a></li>
+							 <li><a href="https://plus.google.com/u/0/101497796887679617492/about" target="_blank">google+</a></li>
+							 <li class="last"> <a href="http://itfgo.ru?itfcode=627e92611634" target="_blank" title="Polypromotion ITF Russia"><i><img src="/images/logo_itf_black.png" height="22" border="0"></i></a></li>
+						</ul>
+						
+		<p align="center"><!--LiveInternet counter--><script type="text/javascript"><!--
+			document.write("<a href='http://www.liveinternet.ru/click' "+
+			"target=_blank><img src='http://counter.yadro.ru/hit?t21.1;r"+
+			escape(document.referrer)+((typeof(screen)=="undefined")?"":
+			";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+			screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+			";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+			"' alt='' title='LiveInternet: показано число просмотров за 24"+
+			" часа, посетителей за 24 часа и за сегодня' "+
+			"border=0 width=88 height=31><\/a>")//--></script><!--/LiveInternet-->
+			
+			&nbsp;
+            <!-- begin of Top100 code -->
+            <a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?1272417" alt="" width="1" height="1" border="0" /></a>
+            <!-- end of Top100 code -->
+                        <!-- begin of Top100 logo -->
+            <a href="http://top100.rambler.ru/top100/"><img src="http://top100-images.rambler.ru/top100/w6.gif" alt="Rambler's Top100" width="88" height="31" border="0" /></a>
+            <!-- end of Top100 logo -->
+        </p>
+				</div>
+
+		</div>
+	</footer>
+<!--/FOOTER-->
+
+</div>
+<!--=======footer=================================-->
+			
+<script type="text/javascript">
+
+	 $(document).ready(function(){
+		// Initialize the gallery
+		$('.magnifier2').touchTouch();
+	 });
+
+	 function myFocus(element){
+			 if (element.value == element.defaultValue){
+					 element.focus();
+					 element.value = '';
+			 }
+		}
+		function myBlur(element){
+			 if (element.value == ''){
+					 element.blur();
+					 element.value = element.defaultValue;
+			 }
+		}
+
+
+</script>
+</body>
+</html>

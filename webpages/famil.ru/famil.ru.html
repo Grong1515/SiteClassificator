@@ -1,0 +1,407 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title>Familia - сеть off-price магазинов. Главная</title>
+    <meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="wot-verification" content="8dce9165e0305a75a195"/>
+	<meta name="yandex-verification" content="1d0af37b868e6540" />	
+	<meta name="robots" content="noyaca"/>
+	<meta name="robots" content="noodp"/>	  	
+    <link rel="stylesheet" href="/static/css/styles.css"/>
+    
+    <script src="/static/js/min/app.min.js"></script>
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54853818-1', 'auto');
+  ga('send', 'pageview');
+</script>
+	
+</head>
+<body>
+<script type="text/javascript"> 
+    (function (d) {
+        var pxl = d.createElement("script");
+        pxl.setAttribute("src", "https://d1liodi4jwakek.cloudfront.net/containers/290/smartPixel.min.js"); pxl.setAttribute("type", "text/javascript"); pxl.async = true;
+        var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(pxl, s);
+    }(document));
+</script>
+
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "2733606", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=2733606;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+<div class="wrapper">
+    <div class="container">
+        <div class="row header">
+            <div class="col-md-8 col-sm-8 col-xs-8 col-lg-8">
+                
+                    <a href="/ru/"><img src="/static/images/logo.png" alt="Фамилия"/></a>
+                
+				<a style="margin: 0 0 0 20px;" href="/ru/partnership/familnaya-gordost/"><img src="/static/images/сompanya_goda_logo.jpg" style="height: 62px;" alt="Компания года"/></a>				
+            </div>
+            <div class="col-md-16 col-sm-16 col-xs-16 col-lg-16">
+                <div class="service-links">
+
+                    <div class="link lang">
+
+                        <a class="current" href="/ru/"><img src="/static/images/flag_ru.png"/></a>
+
+
+
+                        <a href="/en/"><img src="/static/images/flag_gb.png"/></a>
+                    </div>
+
+                    <!--<div class="link shops">-->
+                        <!--<a href="/ru/shops/">Магазины</a>-->
+                    <!--</div>-->
+
+                </div>
+                <div class="top-menu">
+                    <ul class="nav nav-pills">
+                        
+                        <li><a class="" href="/ru/shops/">МАГАЗИНЫ</a></li>
+						
+
+							<li><a class="" href="/news/">НОВОСТИ</a></li>							
+						
+						
+                        						
+						
+						
+                        <li><a class="" href="/ru/purchase/">ПОКУПКИ В FAMILIA</a></li>
+                        <li><a class="" href="/ru/jobs/">РАБОТА У НАС</a></li>
+                        <li><a class="" href="/ru/partnership/">СОТРУДНИЧЕСТВО</a></li>
+                        <li><a class="" href="/ru/contacts/">КОНТАКТЫ</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+<link rel="stylesheet" href="/static/rotate/styles.css"/>
+<script src="/static/rotate/jquery.rotator.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+<script type="text/javascript">
+ymaps.ready(init_yandex_api);
+function init_yandex_api() {
+    var geolocation = ymaps.geolocation;
+	var ya_city=geolocation.city;
+	$("#ya_city").val(ya_city);
+	if (ya_city=="Москва")
+		$("#img_purchase").attr('src','/data/main/geo/14102016/big_2000.png');
+	else if (ya_city=="Санкт-Петербург")
+		$("#img_purchase").attr('src','/data/main/geo/14102016/big_2000.png');
+	else
+		$("#img_purchase").attr('src','/data/main/geo/14102016/big_1500.png');
+}
+</script>
+<script type="text/javascript">
+$(function(){
+    $('#rotator').rotator({
+        slides: [
+                {
+                    url:'/ru/shops/',
+                    img:'/static/rotate/b/small_19102016.png'
+                },
+		
+/*						
+
+
+				Не забыть включить autorun
+                {
+                    url:'/ru/shops/',
+                    img:'/static/rotate/b/small_20022016.png'
+                },
+                {
+                    url:'/ru/shops/',
+                    img:'/static/rotate/b/small_21022016.png'
+                }
+*/				
+				],
+        speed: 1000,
+        timeout: 5000,
+        width: 240,
+        height: 357,
+        random: true, 
+        autorun: false,
+        fx: 'slide',
+        nav: false
+    });
+    $('#rotator_main').rotator({
+        slides: [
+                {
+                    url:'/ru/shops/',
+                    img:'/data/main/201609/main.jpg'
+                },
+                {
+                    url:'/ru/shops/',
+                    img:'/data/main/201609/main_kor.png'
+                }
+				],
+        speed: 1000,
+        timeout: 5000,
+        width: 940,
+        height: 500,
+        random: true, 
+        autorun: true,
+        fx: 'slide',
+        nav: false
+    });
+    $('#rotator_left').rotator({
+        slides: [
+                {
+                    url:'/ru/purchase/',
+                    img:'/data/main/201609/left.png'
+                },
+                {
+                    url:'/ru/purchase/',
+                    img:'/data/main/201609/01092016/sunlight.jpg'
+                }
+				],
+        speed: 1000,
+        timeout: 5000,
+        width: 690,
+        height: 357,
+        random: true, 
+        autorun: true,
+        fx: 'slide',
+        nav: false
+    });
+
+})
+$(function(){
+	$('#rotator').rotator({fx:'fade',nav: false});
+	$('#rotator_main').rotator({fx:'fade',nav: false});
+	$('#rotator_left').rotator({fx:'fade',nav: false});
+})
+</script>
+    <div class="row start-page-banner">
+        <div class="col-xs-24 col-sm-24 col-md-24 col-lg-24">
+			
+			<div id='rotator_main'>
+				<a href="/ru/shops/"><img src="/data/main/201609/main_092016_center_banner.jpg" alt="Баннер"/></a>
+			</div>
+			
+        </div>
+    </div>
+
+    <div class="row sections-block">
+        <div class="col-xs-24 col-sm-24 col-md-24 col-lg-24">
+            <div class="big">
+			
+				<a href="/ru/purchase/"><img src="" id="img_purchase"></a>			
+			
+			</div>
+			
+			
+			<div class="small">
+			<a onclick="ga('send', 'event', 'button', 'click', 'Баннер_правый');" href="/ru/shops/"><img src="/data/main/home3.png" alt="Найти магазин"/>
+			
+			</a></div>
+        </div>
+    </div>
+
+    <div class="row text-blocks">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <h3>НАЙТИ МАГАЗИН</h3>
+            <form class="search" method="get" action="/ru/shops/">
+                <input type="text" name="q" id=""/>
+                <input type="submit" value=""/>
+            </form>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <h3><a href="purchase/">ПОКУПКИ В FAMILIA</a></h3>
+            
+            <p>Каталог</p>
+            <p>Секреты выгодных покупок</p>
+            <p>Как мы это делаем</p>
+            
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <h3 id="showSubscribeModal">ПОДПИСАТЬСЯ НА НОВОСТИ</h3>
+            <p>Получать предварительные уведомления об открытии новых магазинов, акциях, скидках, распродажах</p>
+        </div>
+        
+		
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="padding-left: 20px; padding-top: 20px;">
+		<a onClick="ga('send', 'event', { eventCategory: 'social_vk', eventAction: 'click'});" href="https://vk.com/familiaoffprice" target=_blank><img src="/static/images/pic/pic_vk.gif"  style="width: 60px;padding: 5px;"></a>
+		<a onClick="ga('send', 'event', { eventCategory: 'social_fb', eventAction: 'click'});" href="https://www.facebook.com/Familia-%D0%BB%D0%B8%D0%B4%D0%B5%D1%80-off-price-%D0%B2-%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8-1704314126465476/?fref=ts" target=_blank><img src="/static/images/pic/pic_fb.gif"  style="width: 60px;padding: 5px;"></a><br>
+		<a onClick="ga('send', 'event', { eventCategory: 'social_ok', eventAction: 'click'});" href="http://ok.ru/familaoffprice" target=_blank><img src="/static/images/pic/pic_ok.gif"  style="width: 60px;padding: 5px;"></a>
+		<a onClick="ga('send', 'event', { eventCategory: 'social_inst', eventAction: 'click'});" href="https://www.instagram.com/familia_shop/" target=_blank><img src="/static/images/pic/pic_im.gif"  style="width: 60px;padding: 5px;"></a>		
+<!--		
+            
+            
+            <h3><a href="jobs/">РАБОТА У НАС</a></h3>
+            
+            <p>Офис</p>
+            <p>Склад</p>
+            <p>Магазины</p>
+            
+            
+--->			
+        </div>
+        
+    </div>
+
+
+
+        <div class="row footer">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="copy">&copy;2014 - 2016 FAMILIA</span></div>
+            <div class="col-xs-18 col-sm-18 col-md-18 col-lg-18">
+                <ul class="nav nav-pills nav-justified">
+                    
+                    <li><a class="" href="/ru/shops/">МАГАЗИНЫ</a></li>
+                    <li><a class="" href="/ru/purchase/">ПОКУПКИ В FAMILIA</a></li>
+                    <li><a class="" href="/ru/jobs/">РАБОТА У НАС</a></li>
+                    <li><a class="" href="/ru/partnership/">СОТРУДНИЧЕСТВО</a></li>
+                    <li><a class="" href="/ru/contacts/">КОНТАКТЫ</a></li>
+                    
+                </ul>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 phone">
+                8-800-100-33-90
+                <div>
+                    <!--LiveInternet counter--><script type="text/javascript"><!--
+                document.write("<a href='//www.liveinternet.ru/click' "+
+                        "target=_blank><img src='//counter.yadro.ru/hit?t26.9;r"+
+                        escape(document.referrer)+((typeof(screen)=="undefined")?"":
+                        ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                        screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+                        ";"+Math.random()+
+                        "' alt='' title='LiveInternet: показано число посетителей за"+
+                        " сегодня' "+
+                        "border='0' width='88' height='15'><\/a>")
+                //--></script><!--/LiveInternet-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="anketaModal" style="display:none;">
+	<p style="margin-top: 0;" class="text-center hdr">Обратите внимание</p>
+	<p>Для улучшения качества обслуживания в наших магазинах предлагаем Вам пройти небольшое анкетирование.<br><br></p>
+	<div class="text-center">
+		<a href="http://www.famil.ru/app/opros_052016.php" target="_blank" class="btn btn-success">Мне интересно</a>
+		<a href="#" data-dismiss="modal" class="btn bclose" onclick="$.fancybox.close()">Нет, спасибо</a>
+	</div>
+</div>
+<script src="/static/js/modal.js"></script>
+<script src="/static/js/min/modal.min.js"></script>
+<script src="/static/js/min/jquery.cookie.min.js"></script>
+
+
+
+    
+<div id="subscribeForm">
+    <p class="text-center hdr">Подписка на рассылку</p>
+    <form enctype="multipart/form-data" id="subscribe" action="/ru/mail/register" method="post" class="jClever" novalidate="novalidate">
+        <input type='hidden' name='csrfmiddlewaretoken' value='0jxQa6y8Rv5qJbeaR0qrltS08XKIol3b' />
+        <table>
+            <tr>
+                <td>Имя</td>
+                <td>
+                    
+                    <input id="id_first_name" maxlength="30" name="first_name" placeholder="Имя" type="text" />
+                    <p class="errorMsg"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Фамилия</td>
+                <td>
+                    
+                    <input id="id_last_name" maxlength="30" name="last_name" placeholder="Фамилия" type="text" />
+                    <p class="errorMsg"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>E-mail</td>
+                <td>
+                    <input id="id_email" name="email" placeholder="E-mail" type="email" />
+                    <p class="errorMsg"></p>
+                </td>
+            </tr>
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="text-center"><button id="send" class="btn btn-success">Отправить</button></div>
+    </form>
+</div>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter26209488 = new Ya.Metrika({id:26209488,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<!-- /Yandex.Metrika counter -->
+<!--<div id="ok_group_widget"></div> --->
+<script>
+!function (d, id, did, st) {
+  var js = d.createElement("script");
+  js.src = "https://connect.ok.ru/connect.js";
+  js.onload = js.onreadystatechange = function () {
+  if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
+    if (!this.executed) {
+      this.executed = true;
+      setTimeout(function () {
+        OK.CONNECT.insertGroupWidget(id,did,st);
+      }, 0);
+    }
+  }}
+  d.documentElement.appendChild(js);
+}(document,"ok_group_widget","50582132228315","{width:250,height:335}");
+</script>
+
+</body>
+</html>

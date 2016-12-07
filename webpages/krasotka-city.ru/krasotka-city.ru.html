@@ -1,0 +1,532 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name=’SKYPE_TOOLBAR’ content=’SKYPE_TOOLBAR_PARSER_COMPATIBLE’ />
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Магазин женской одежды Красотка</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<link href="/bitrix/cache/css/s1/main/kernel/kernel.css?1376204875" type="text/css" rel="stylesheet" />
+<script type="text/javascript"> var arKernelCSS = new Array('/bitrix/js/main/core/css/core.css','/bitrix/js/main/core/css/core_panel.css','/bitrix/js/fileman/sticker.css','/bitrix/js/main/core/css/core_popup.css','/bitrix/js/main/core/css/core_date.css'); </script><link href="/bitrix/cache/css/s1/main/template_f7343e4d8cdf9684ea69c5fb04fe2602/template_f7343e4d8cdf9684ea69c5fb04fe2602_85296709ebdfa2e4671ca063c31b0521.css?1432024760" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script><script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1477476031','SERVER_TZ_OFFSET':'10800','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'2369e41662ea842cd616171c26ac7300','SITE_ID':'s1'});(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript" src="/bitrix/cache/js/s1/main/kernel/kernel.js?1376338332"></script>
+<script type="text/javascript"> BX.setKernelJS(['/bitrix/js/main/core/core.js','/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/core/core_fx.js','/bitrix/js/main/session.js','/bitrix/js/main/core/core_window.js','/bitrix/js/main/core/core_admin.js','/bitrix/js/fileman/sticker.js','/bitrix/js/main/utils.js','/bitrix/js/main/admin_tools.js','/bitrix/js/main/popup_menu.js','/bitrix/js/main/admin_search.js','/bitrix/js/main/hot_keys.js','/bitrix/js/main/public_tools.js','/bitrix/js/main/core/core_popup.js','/bitrix/js/main/core/core_date.js','/bitrix/js/main/ajax.js']); </script><script type="text/javascript">
+bxSession.Expand(86400, '2369e41662ea842cd616171c26ac7300', false, 'a95639908d8d163c5c026f7b754de670');
+</script>
+
+
+
+    <script src="/bitrix/templates/main/j/jquery-1.7.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bitrix/templates/main/cloud-zoom.cs" />
+    <script type="text/javascript" src="/bitrix/templates/main/j/cloud-zoom.1.0.2.min.js"></script>
+<!--    <script type="text/javascript" src="/bitrix/templates/main/j/jquery.scrollTo-min.js"></script>-->
+<!--    <script type="text/javascript" src="/bitrix/templates/main/j/jquery.rating.pack.js"></script>-->
+
+
+
+    <script type="text/javascript" src="/bitrix/templates/main/a.js"></script>
+<!--
+  jQuery library
+-->
+<!--<script type="text/javascript" src="/bitrix/templates/main/lib/jquery-1.2.3.pack.js"></script>-->
+<!--<script type="text/javascript" src="/bitrix/templates/main/lib/multizoom.js"></script>-->
+<!-- a56cec093ae400a3 -->
+<!--
+  jCarousel library
+-->
+<script type="text/javascript" src="/bitrix/templates/main/lib/jquery.jcarousel.pack.js"></script>
+
+<!--
+  jCarousel core stylesheet
+-->
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/main/lib/jquery.jcarousel.css" />
+
+<!--
+  jCarousel skin stylesheet
+-->
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/main/skins/ie7/skin.css" />
+
+
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/main/lib/fancybox/jquery.fancybox.css" />
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/main/multizoom.css" />
+
+ 
+<script type="text/javascript">
+
+function mycarousel_itemLoadCallback(carousel, state)
+{
+    // Check if the requested items already exist
+    if (carousel.has(carousel.first, carousel.last)) {
+        return;
+    }
+
+    jQuery.get(
+        '/bitrix/templates/main/dynamic_ajax_php.php',
+        {
+            first: carousel.first,
+            last: carousel.last
+        },
+        function(xml) {
+            mycarousel_itemAddCallback(carousel, carousel.first, carousel.last, xml);
+        },
+        'xml'
+    );
+};
+
+function mycarousel_itemAddCallback(carousel, first, last, xml)
+{
+    // Set the size of the carousel
+    carousel.size(parseInt(jQuery('total', xml).text()));
+
+    jQuery('image', xml).each(function(i) {
+        carousel.add(first + i, mycarousel_getItemHTML(jQuery(this).text()));
+    });
+};
+
+/**
+ * Item html creation helper.
+ */
+function mycarousel_getItemHTML(url)
+{
+    return '<img src="' + url + '" width="75" height="75" alt="" />';
+};
+
+jQuery(document).ready(function() {
+	if(jQuery('#mycarousel').length)
+    jQuery('#mycarousel').jcarousel({
+        // Uncomment the following option if you want items
+        // which are outside the visible range to be removed
+        // from the DOM.
+        // Useful for carousels with MANY items.
+
+        // itemVisibleOutCallback: {onAfterAnimation: function(carousel, item, i, state, evt) { carousel.remove(i); }},
+        itemLoadCallback: mycarousel_itemLoadCallback
+    });
+});
+
+</script>
+<!--[if lt IE 7]>
+<script type="text/javascript" src="/bitrix/templates/main/minmax.js"></script>
+	<style media="screen" type="text/css">
+	#container {
+		height:100%;
+	}
+
+
+.jcarousel-skin-ie7 .jcarousel-item-horizontal {
+    margin-right: 0px;}
+.jcarousel-skin-ie7 .jcarousel-container-horizontal, .jcarousel-skin-ie7 .jcarousel-clip-horizontal  {
+ width: 400px;}    
+}
+	</style>
+	<![endif]-->
+
+
+
+
+
+    <script type="text/javascript">
+        function slide($i, $delay){
+            $current=$i;
+            $limit=$("#wrapper img").size()-1;
+            $("#wrapper img").hide();
+            $("#wrapper img").eq($current).fadeIn();
+            if($current==$limit) $current=0; else $current++;
+            setTimeout("slide("+$current+", "+$delay+")", $delay);
+        }
+        $(document).ready(function(){
+            slide(0, 5000);
+        });
+    </script>
+
+
+
+</head>
+<body>
+<div id="container">
+ 
+   <div id="header">
+	   <div id="left-hdr">
+	   	   </div>
+	   <div id="right-hdr">
+<!--	      <a id="reg" href="/personal/register.php">Регистрация</a> -->
+		  <a id="forclient" href="/forclients/">Для клиентов</a>	  
+	   </div>
+ 
+ 
+<div id="topmenu">
+ 
+	
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr height="55">
+  <td width="700">
+
+
+ 
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td>
+			<a href="/index.php" class="selected">Главная</a>
+		</td>
+<td>
+			<a href="/catalog/">Каталог</a>
+		</td>
+<td>
+			<a href="/contacts/">Магазины</a>
+		</td>
+<td>
+			<a href="/personal/basket.php">Ваша корзина</a>
+		</td>
+
+</tr>
+</table>
+
+</td>
+<td>
+
+  <div id="search">
+<form action="/search/index.php">
+	<table border="0" cellspacing="0" cellpadding="2" align="center">
+		<tr>
+			<td align="center"><input style="background: none repeat scroll 0% 0% transparent; border: 1px dotted rgb(255, 255, 255);"  type="text" name="q" value=""  maxlength="50" /></td><td align="right"><input name="s" class="button" type="submit" value="Поиск по сайту" /></td>
+		</tr>
+		
+	</table>
+</form>
+</div> </td>
+
+  </tr>
+  </table>
+	   
+	</div>   
+		
+  </div>
+
+   <div id="body">
+   
+  <table cellpadding="0" cellspacing="0" border="0" width="100%" >
+    <tr>
+	 <td width="340" id="leftcolumn">
+     <div id="news">
+ <h1>Новости</h1>
+ <div id="news_body">  	   
+			<div class="date">31.01.2016</div>
+		<div class="name"><a href="/news/9599/">Cristina Gavioli</a><br /></div>
+		<div class="news_item"><p>СКОРО!!!<br />
+Новое поступление Cristina Gavioli лето 2016</p></div>
+			<div class="date">01.01.2016</div>
+		<div class="name"><a href="/news/16318/">Cop Copine - 70%</a><br /></div>
+		<div class="news_item"><p>Тотальная ликвидация коллекций Cop Copine всех лет - 70&#37; на все что осталось.</p></div>
+			<div class="date">01.01.2016</div>
+		<div class="name"><a href="/news/16317/">80% СКИДКИ</a><br /></div>
+		<div class="news_item"><p>Скидка 80&#37; предоставляется на остатки коллекций тех марок, которые больше не будут продаваться в наших магазинах.</p></div>
+			<div class="date">03.04.2013</div>
+		<div class="name"><a href="/news/6463/">Снижение порога присвоения скидок!</a><br /></div>
+		<div class="news_item"><p></p></div>
+		</div>
+</div><br />
+
+
+
+
+
+	
+	 
+	  <div id="action">
+	 <div class="sots">
+<H2>Присоединяйтесь</H2>
+<a href="http://vk.com/id214172316"><img src="/i/vk.png"></a>
+<a href="http://www.odnoklassniki.ru/profile/544140682751"><img src="/i/od.png"></a>
+<a href="http://www.facebook.com/krasotkacity"><img src="/i/fb.png"></a>
+</div>
+<div id="actions">
+ <h1>Акции</h1>
+ <div id="actions_body">  	   
+			<div class="date">17.10.2013</div>
+		<div class="name"><a href="/actions/10360/">500 рублей в подарок! </a><br /></div>
+		<div class="news_item"><p>Регистрируйтесь на сайте и получите в подарок 500 рублей! </p></div>
+			<div class="date">01.10.2009</div>
+		<div class="name"><a href="/actions/9/">Скидка 5 % ПОДАРОК на день рождения.</a><br /></div>
+		<div class="news_item"><p></p></div>
+			<div class="date"></div>
+		<div class="name"><a href="/actions/4158/"> </a><br /></div>
+		<div class="news_item"><p><a href="http://krasotka-city.ru/actions/4158/"><img src="/i/card.png" title="Дисконтная карта Красотка" alt="Дисконтная карта "Красотка"" /></a></p></div>
+	<div class="reso"><a href="#"><img onmouseover="this.src='/i/str1.gif';" onmouseout="this.src='/i/str2.gif';" alt="" src="/i/str2.gif" /></a></div>
+	</div>
+</div>
+	   </div><div class="ssil"></div>	  
+	 </td> 
+	  
+	 <td id="rightcolumn" width="100%">
+
+
+
+
+
+
+
+ 
+<table cellspacing="1" cellpadding="1" border="0" align="center" style="height: 440px; width: 690px;"> 
+  <tbody> 
+    <tr> <td colspan="3"> 
+        <div id="wrapper"> <img src="/images/slider/scop.jpg"  /> <img src="/images/slider/sfue.jpg"  /> </div> 
+       </td><td><a href="http://krasotka-city.ru/personal/skidka/" ><img width="175" height="310" src="/images/banner-mylt.gif"  /></a></td> </tr>
+   
+    <tr> <td><a href="http://krasotka-city.ru/catalog/52/" ><img width="175" height="120" onmouseover="this.src='i/cc.gif';" onmouseout="this.src='i/cc0.gif';" alt="COP COPINE" src="i/cc0.gif"  /></a></td> <td><a href="http://krasotka-city.ru/catalog/57/" ><img width="175" height="120" onmouseover="this.src='i/fu.gif';" onmouseout="this.src='i/fu0.gif';" alt="fuego woman" src="i/fu0.gif"  /></a></td> <td><a href="/catalog/222/" ><img width="175" height="120" onmouseover="this.src='i/alc.gif';" onmouseout="this.src='i/alc0.gif';" alt="Australia Lux Collective" src="i/alc0.gif"  /></a></td> <td><a href="http://krasotka-city.ru/catalog/164/" ><img width="175" height="120" onmouseover="this.src='i/logo-home2.png';" onmouseout="this.src='i/logo-home2b.png';" src="i/logo-home2b.png"  /></a></td> </tr>
+   
+    <tr><td colspan="4"> 
+        <div class="hjutyytj"> <a href="http://krasotka-city.ru/catalog/212/" ><img onmouseover="this.src='i/nnov.png';" onmouseout="this.src='i/nnovb.png';" src="i/nnovb.png"  /></a> <a href="/catalog/220/" ><img onmouseover="this.src='i/1-one.png';" onmouseout="this.src='i/1-oneb.png';" src="i/1-oneb.png"  /></a> <a href="http://krasotka-city.ru/catalog/139/" ><img onmouseover="this.src='i/adtm2.png';" onmouseout="this.src='i/adtm2b.png';" alt="Aventures Des Toiles" src="i/adtm2b.png"  /></a> </div>
+       </td> </tr>
+   </tbody>
+ </table>
+ 
+<table border="0"> 
+  <tbody> 
+    <tr><td colspan="3"></td><td></td></tr>
+   <a href="http://krasotka-city.ru/shop/" > </a>
+    <tr><td></td><td></td><td></td><td></td></tr>
+   </tbody>
+ </table>
+ 
+
+<div id="mycarousel"  class="jcarousel-skin-ie7">
+    <ul>
+                  <li>
+						<a href="/catalog/241/7071"><img border="0" src="/upload/iblock/87f/87f9c9b9e2655b38678ffcdb2eef2ed7.jpeg" height="219" width="127" alt="Платье" title="Платье" />
+                         
+                        <div style="text-align:center; width:90px;">Платье</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/241/7070"><img border="0" src="/upload/iblock/6b0/6b0190856d8e6d5b57e88156dbbd298e.jpeg" height="219" width="127" alt="Платье" title="Платье" />
+                         
+                        <div style="text-align:center; width:90px;">Платье</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/275/7884"><img border="0" src="/upload/iblock/672/672b1cfed7edfabed71810b752378a55.jpeg" height="219" width="127" alt="Платье" title="Платье" />
+                         
+                        <div style="text-align:center; width:90px;">Платье</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/275/7882"><img border="0" src="/upload/iblock/abe/abe5001ef479bb078baa45aa04437148.jpeg" height="219" width="127" alt="Платье" title="Платье" />
+                         
+                        <div style="text-align:center; width:90px;">Платье</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/275/7879"><img border="0" src="/upload/iblock/852/8528f503cda7ae9143b702dd081faa1d.jpeg" height="219" width="127" alt="Платье" title="Платье" />
+                         
+                        <div style="text-align:center; width:90px;">Платье</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/243/7660"><img border="0" src="/upload/iblock/726/72676e3e1e32d93b3e68db5957a356e8.jpeg" height="219" width="127" alt="Платье" title="Платье" />
+                         
+                        <div style="text-align:center; width:90px;">Платье</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/243/7657"><img border="0" src="/upload/iblock/863/863748375cdcd5501630560336af5048.jpeg" height="219" width="127" alt="Платье" title="Платье" />
+                         
+                        <div style="text-align:center; width:90px;">Платье</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/241/7069"><img border="0" src="/upload/iblock/2c4/2c43e13df05e6800a16ecde60c739811.jpeg" height="219" width="127" alt="Пальто" title="Пальто" />
+                         
+                        <div style="text-align:center; width:90px;">Пальто</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/238/6895"><img border="0" src="/upload/iblock/10e/10e9c7c1ff55fd8f992adc8d9ef3f736.jpeg" height="219" width="127" alt="Платье" title="Платье" />
+                         
+                        <div style="text-align:center; width:90px;">Платье</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/238/6894"><img border="0" src="/upload/iblock/2e5/2e5ce817b4d39cc201056922fcf46a67.jpeg" height="219" width="127" alt="Платье" title="Платье" />
+                         
+                        <div style="text-align:center; width:90px;">Платье</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/240/6834"><img border="0" src="/upload/iblock/734/734e8fd03526932ba9fc32b2feb91f98.jpeg" height="219" width="127" alt="Юбка" title="Юбка" />
+                         
+                        <div style="text-align:center; width:90px;">Юбка</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/240/6832"><img border="0" src="/upload/iblock/3c5/3c55590265fa82c9e7df65909e1c5675.jpeg" height="219" width="127" alt="Пальто" title="Пальто" />
+                         
+                        <div style="text-align:center; width:90px;">Пальто</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/240/6831"><img border="0" src="/upload/iblock/3cd/3cd6fd3e3ec35067a3d6597c33347962.jpeg" height="219" width="127" alt="Палантин" title="Палантин" />
+                         
+                        <div style="text-align:center; width:90px;">Палантин</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/240/6829"><img border="0" src="/upload/iblock/a7b/a7b03de8aed3629577b57316437e9faf.jpeg" height="219" width="127" alt="Джемпер" title="Джемпер" />
+                         
+                        <div style="text-align:center; width:90px;">Джемпер</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/238/6824"><img border="0" src="/upload/iblock/8c1/8c1ce09275f2d7fe5a8075dcda2553d3.jpeg" height="219" width="127" alt="Юбка" title="Юбка" />
+                         
+                        <div style="text-align:center; width:90px;">Юбка</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/238/6820"><img border="0" src="/upload/iblock/ec0/ec07608a26ee0136000f62b82e6ea7db.jpeg" height="219" width="127" alt="Рубашка" title="Рубашка" />
+                         
+                        <div style="text-align:center; width:90px;">Рубашка</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/238/6819"><img border="0" src="/upload/iblock/1c7/1c7d7dfe76a79de8f46b195e58d7e78f.jpeg" height="219" width="127" alt="Платье" title="Платье" />
+                         
+                        <div style="text-align:center; width:90px;">Платье</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/238/6818"><img border="0" src="/upload/iblock/d16/d161c141e7a24540430bbf407295fe09.jpeg" height="219" width="127" alt="Платье" title="Платье" />
+                         
+                        <div style="text-align:center; width:90px;">Платье</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/238/6817"><img border="0" src="/upload/iblock/42b/42be072139ce0b84b2d9b0c18a1162c6.jpeg" height="219" width="127" alt="Платье" title="Платье" />
+                         
+                        <div style="text-align:center; width:90px;">Платье</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/176/5852"><img border="0" src="/upload/iblock/cb3/cb3778e8e8e68e71764db610fd9a4661.jpg" height="219" width="127" alt="Сапоги " title="Сапоги " />
+                         
+                        <div style="text-align:center; width:90px;">Сапоги </div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/176/5843"><img border="0" src="/upload/iblock/5b5/5b5e485fbca62b7662b22ec104cf46a1.jpg" height="219" width="127" alt="Ботинки" title="Ботинки" />
+                         
+                        <div style="text-align:center; width:90px;">Ботинки</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/176/5842"><img border="0" src="/upload/iblock/f70/f70e5d6a9a1bf28472c7b2b9e2471b14.jpg" height="219" width="127" alt="Ботинки" title="Ботинки" />
+                         
+                        <div style="text-align:center; width:90px;">Ботинки</div>
+                        </a>
+				
+                </li>    
+                          <li>
+						<a href="/catalog/176/5841"><img border="0" src="/upload/iblock/3be/3be073c3acd72e8d67cfd499037b1b83.jpg" height="219" width="127" alt="Ботинки" title="Ботинки" />
+                         
+                        <div style="text-align:center; width:90px;">Ботинки</div>
+                        </a>
+				
+                </li>    
+                  <!-- The content will be dynamically loaded in here -->
+    </ul>
+</div>  
+
+
+	
+	 </td>
+	</tr>
+  </table> 
+
+
+   </div>
+   <div id="footer">
+      <div id="foot-left"><span>
+<table height="96" width="737" cellspacing="1" cellpadding="1" border="0" class="ttt"> 
+  <tbody> 
+    <tr><td> <a href="/" >Главная </a> 
+        <br />
+       <a href="/catalog/" >Каталог </a> 
+        <br />
+       <a href="/contacts/" >Магазины </a></td><td> <a href="/news/" >Новости </a> 
+        <br />
+       <a href="/about/" >Партнеры</a> 
+        <br />
+       <a href="/articles/2015/" >Статьи</a>  </td><td>   Мы принимаем: 
+        <br />
+        <img width="59" height="32" src="/i/visa.gif"  /> <img width="60" height="32" src="/i/mastercard.gif" alt="mastercard"  /> </td></tr>
+   </tbody>
+ </table>
+
+
+
+
+
+
+
+
+
+
+
+
+</span></div>
+      <div id="foot-right"><div id="counter"><div class="ttt1">
+<!-- begin of Top100 logo -->
+ <a target="_blank" href="http://top100.rambler.ru/home?id=1455146"><img width="88" height="31" border="0" src="https://scounter.rambler.ru/img/top100/w5.gif" alt="Rambler's Top100" /></a> 
+<!-- end of Top100 logo -->
+ 
+<!-- begin of Top100 code -->
+ 
+<script type="text/javascript" src="http://cnt.rambler.ru/top100.jcn?1455146"></script>
+ <noscript><a href="http://top100.rambler.ru/top100/"><img width="81" height="63" border="0" src="http://cnt.rambler.ru/top100.cnt?1455146" alt="Rambler's Top100" /></a></noscript> 
+<!-- end of Top100 code -->
+ 
+<br />
+ 
+<!--LiveInternet counter-->
+ 
+<script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t17.18;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script>
+ 
+<!--/LiveInternet-->
+</div></div></div>
+   </div>
+</div>
+<script async="async" src="https://w.uptolike.com/widgets/v1/zp.js?pid=tlcc3b841c6b4e75190075f08d22e9716c3a8cef02" type="text/javascript"></script></body>
+</html>
+
+
+

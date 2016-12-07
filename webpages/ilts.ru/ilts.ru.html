@@ -1,0 +1,720 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+	<link href="/style.css" rel="stylesheet" type="text/css" />
+	<link href="/css/style.css" rel="stylesheet" type="text/css" />
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="/js/jquery.highlight.js" type="text/javascript"></script>
+    <title>О компании ЗАО "И.Л.Т.С." (I.L.T.S.)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="keywords" content="Компания, помощь, консультация, консалтинг, юридич" />
+<link href="/bitrix/templates/.default/components/bitrix/menu/left/style.css?1281020122" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/.default/components/bitrix/news.list/list_small/style.css?1281020122" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/.default/ajax/ajax.css" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/.default/components/ilts/news.calendar/news_small/style.css?1281020124" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/index/styles.css" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/index/template_styles.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="/bitrix/js/main/ajax.js"></script>
+<style>
+div#adv {
+	background-color: #dee1e7; 	
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt;  
+	line-height: 12pt;
+	font-style: normal; 
+	font-weight: 500;  
+	color: black; 
+	position:absolute; 
+	top: 20px; 
+	right:220px; 
+	padding:0px;
+	_padding:5px;
+	overflow:hidden;
+}
+div#adv a{
+	font-weight: 800;  	
+	text-decoration: none;
+	color: rgb(195, 95, 95); 
+}
+</style>
+ <!--[if IE]><link href="/css/ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 6]><script src="/css/DD_belatedPNG.js"></script> <script> DD_belatedPNG.fix('img, .block_name, .txt_name, .prs, .redtop, .cos, .ps1, .ps2, .ps3, .ps4, .ps_p');</script><![endif]-->
+<script type="text/javascript">
+var f="";
+$(document).ready(function(){if (f == '') $('div.content>div:last').removeHighlight();
+else $('div.content>div:last').removeHighlight().highlight(f);});
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+DOM_NN6 = (document.getElementById&&navigator.appName=="Netscape") ? true : false;
+DOM_IE5 = (document.getElementById&&navigator.appName=="Microsoft Internet Explorer") ? true : false;
+IE4 = (document.all&&!DOM_IE5) ? true : false;
+NN4 = (document.layers) ? true : false;
+infoLayers	= [];
+//=======================================================
+if( NN4 )
+{
+	getLayer = new Function( "name", "return document.layers[name];");
+	layerTopShift = new Function( "layerID", "return getLayer( layerID ).top - window.pageYOffset;");
+}
+else
+{
+	if(DOM_NN6||DOM_IE5)
+		getLayer = new Function( "name", "return document.getElementById(name);");
+	else
+		getLayer = new Function( "name", "return document.all(name);");
+
+	if( DOM_NN6 )
+	    layerTopShift = new Function( "layerID", "return getLayer( layerID ).style.top.substring(0, getLayer( layerID ).style.top.indexOf('px')) - window.pageYOffset;");
+	else
+	    layerTopShift = new Function( "layerID", "return getLayer( layerID ).style.pixelTop - document.body.scrollTop;");
+}
+
+
+//=======================================================
+function infoLayer( layerID, vis )
+{
+    this.id		= layerID;
+    this.index		= infoLayers.length;    
+    this.shiftTimerID	= 0;
+    this.scrollTimerID	= 0;
+    this.topShift	= 220;    
+    
+    infoLayers[ this.index ]	= this;    
+    if( vis == true )
+        infoLayers[ this.index ].shiftTimerID	= setInterval( 'testLayerShift(' + this.index +')' , 50 );        
+}
+//=======================================================
+
+function	testLayerShift( layerIndex )
+{
+    var layerObj	= infoLayers[ layerIndex ];
+   
+    if( layerTopShift( layerObj.id ) != layerObj.topShift )
+    {
+        if( layerObj.scrollTimerID == 0 )
+		layerObj.scrollTimerID	=     setInterval ( 'scrollLayer(' + layerIndex + ')', 25 );
+    }
+    else
+    {
+	if( layerObj.scrollTimerID != 0 )
+	{
+	    clearInterval( layerObj.scrollTimerID );
+	    layerObj.scrollTimerID	= 0;
+	}
+    }
+}
+
+//=======================================================
+
+function	scrollLayer( layerIndex )
+{
+    var layerObj	= infoLayers[ layerIndex ];
+    var delta		= layerTopShift( layerObj.id ) - layerObj.topShift;
+
+    if( delta == 0 )
+	return;
+
+    if( delta > 0 )
+    {
+	delta	= ( (delta < 3 )? delta : 3 );
+	if( NN4 )
+	    getLayer( layerObj.id ).top	-= delta;
+	else
+	{
+	    if( DOM_NN6 )
+	    {
+		delta	= getLayer( layerObj.id ).style.top.substring(0, getLayer( layerObj.id ).style.top.indexOf('px')) - delta;
+		getLayer( layerObj.id ).style.top	=  delta + 'px';
+	    }	    
+	    else
+		getLayer( layerObj.id ).style.pixelTop	-= delta;
+	}
+    }
+    else
+    {
+	delta	= -delta;
+	delta	= ( (delta < 3 )? delta : 3 );	
+	if( NN4 )
+	    getLayer( layerObj.id ).top	+= delta;
+	else
+	{
+	    if( DOM_NN6 )
+	    {		
+		delta	= Math.floor(getLayer( layerObj.id ).style.top.substring(0, getLayer( layerObj.id ).style.top.indexOf('px'))) + delta;
+		getLayer( layerObj.id ).style.top	=  delta + 'px';		
+	    }
+	    else
+	        getLayer( layerObj.id ).style.pixelTop	+= delta;
+	}
+    }
+}
+
+function HideAdv()
+{
+	getLayer('adv').style.zIndex = -1;
+	getLayer('adv').style.display = 'none';
+}
+//-->
+</script>
+</HEAD>
+<BODY onLoad="infoLayer( 'adv', true );">
+
+
+
+<!-- осн. блок -->
+<div class="main">
+	<!-- хедер -->
+	<div id="head">
+		<div class="redtop">
+			<img src="/images/name.png" alt="" title=""/>
+			<div class="eng"><a href="/en"><img src="/images/eng.png" alt="" title=""/></a></div>
+		</div>
+		<div class="slogan">International Law and Tax Services Association</div>
+		<div class="topmenu">
+			<div class="ttm">
+			<ul>
+					<li><a href="/">На главную</a></li>
+					<li><a href="/feedback/">Написать письмо</a></li>
+					<li><a href="/map/">Карта сайта</a></li>
+					<li class="last"><a href="/search/">Поиск</a></li>
+			</ul>
+			 
+			</div>
+		</div>
+	
+	</div>
+	
+	<!-- конец хедера -->
+	<!-- центр блок -->
+	<div class="middle">
+		<div class="container">
+			<div class="content">
+ 
+<!--текстовый блок -->
+ 
+<div class="tex"> 
+  <div class="prs"><i class="ps1"></i><i class="ps2"></i><i class="ps3"></i><i class="ps4"></i> 
+    <div class="ps_top"></div>
+   
+    <div class="cos"> 
+      <div align="center" class="prs_tx"> 
+        <h2>МЕЖДУНАРОДНАЯ АССОЦИАЦИЯ ПО ПРАВОВЫМ И НАЛОГОВЫМ ВОПРОСАМ</h2>
+       
+<!-- <img align="left" complete="complete" src="images/man.jpg" alt="" title="" /> 
+        <p><span ;="" 11px;="" class="Apple-style-span">Уважаемые господа! </span></p>
+       
+        <br />
+       
+        <p align="justify">Мы далеки от мысли, что в наше перегруженное информацией время, Вы открыли наш сайт из чисто праздного любопытства, так сказать &quot;для чтения&quot;.</p>
+       
+        <br />
+       
+        <p align="justify">Вам, безусловно, нужна помощь: профессиональная, консультативная, юридическая.</p>
+       
+        <div style="text-align: justify;"> 
+          <br />
+         </div>
+      
+        <p align="justify">Вы обратились по адресу. Когда Вы ознакомитесь с нашим текстом, Вы определите для себя параметры нашей совместной работы. Ждем.</p>
+       
+        <div style="text-align: justify;"> 
+          <br />
+         </div>
+       
+        <p align="right"><em><span style="font-style: normal;" class="Apple-style-span">В.К. Бояров 
+              <br />
+             Президент ЗАО &quot;И.Л.Т.С.</span>&quot;</em></p>
+       
+        <p></p>
+  
+        <div class="clc"></div> -->
+ </div>
+     </div>
+   
+    <div class="ps_bot"></div>
+   
+    <div class="ps_p"></div>
+   </div>
+ 
+  <div class="txt_name"> 
+    <h1>наша история</h1>
+   </div>
+ 
+  <div></div>
+ 
+  <div class="txt"> 
+    <div class="hist_dat"> 
+      <div class="dat_year">2014</div>
+     
+      <p style="text-align: justify;">В связи с поправками, внесенными в Гражданский кодекс РФ с 1 сентября 2014 года в соответствии с Федеральным законом от 05.05.2014 № 99-ФЗ Закрытое акционерное общество &laquo;Международная ассоциация по правовым и налоговым вопросам&raquo; (ЗАО &laquo;И.Л.Т.С.&raquo;) с 07.10.2014 было преобразовано в Общество с ограниченной ответственностью &laquo;Международная ассоциация по правовым и налоговым вопросам&raquo; (ООО &laquo;И.Л.Т.С.&raquo;).<br><br> Руководителем ООО &laquo;И.Л.Т.С.&raquo; с 07.10.2014 является Генеральный директор Машковцев Александр Борисович.<br><br> В связи с преобразованием фирмы присвоены следующие реквизиты: ОГРН 5147746193865 ИНН 7701409852 </p>
+     </div>
+   
+    <div class="hist_dat"> 
+      <div class="dat_year">2010-2012 год</div>
+     
+      <p style="text-align: justify;">ЗАО &quot;Международная ассоциация по правовым и налоговым вопросам&quot; (ЗАО &quot;И.Л.Т.С.&quot;) принимало участие в оказании консультационных услуг в рамках проекта развития таможенной службы Республики Казахстан, финансируемому Всемирным банком (контракт &quot;Развитие Учебно-методического центра&quot;). 
+        <br />
+       
+        <br />
+       Консультанты ЗАО &quot;И.Л.Т.С.&quot; совместно с консультантами и специалистами компании &quot;Краун Эйджентс&quot; (Великобритания) и Института информационных технологий &quot;АйТи&quot; (Россия): 
+        <br />
+       
+        <br />
+       - разработали всестороннюю стратегию обучения (учебные планы, программы и материалы), позволяющие наращивать и поддерживать потенциал сотрудников Комитета таможенного контроля Министерства финансов Республики Казахстан; 
+        <br />
+       - предложили структуру учебной организации, способствующую реализации учебной стратегии и учебных планов в соответствии с образовательными стандартами казахстанских и зарубежных образовательных учреждений; 
+        <br />
+       - обучили тренинг-менеджеров и персонал КТК МФ РК современным методам планирования тренингов; 
+        <br />
+       - разработали систему дистанционного обучения на основе информационных технологий с соответствующим программным обеспечением и учебным материалом для решения вопросов, связанных с обучением сотрудников на местах и др. 
+        <br />
+       </p>
+     </div>
+   
+    <div class="hist_dat"> 
+      <div class="dat_year">2004-2007 </div>
+     
+      <p style="text-align: justify;">Участие совместно с другими российскими и зарубежными компаниями в реализации проекта &quot;Модернизация информационной системы таможенных органов&quot;. В рамках указанного проекта ЗАО &quot;И.Л.Т.С.&quot; участвовала в исполнении следующих контрактов &ndash; &quot;Разработка программы подготовки кадров для ФТС России, учебных материалов, методик и пособий&quot;, &quot;Совершенствование ведомственного инспектирования и мониторинга таможенной деятельности, включая процедуры рассмотрения жалоб&quot;  и др.</p>
+     </div>
+   
+    <div class="hist_dat"> 
+      <div class="dat_year">2003 год</div>
+     
+      <p style="text-align: justify;">Предоставление услуг по обучению, российских предпринимателей новым таможенным правилам в связи с принятием нового Таможенного кодекса Российской Федерации совместно с ООО &quot;Центр информации и таможенно-правовых оценок&quot; (ООО &quot;ЦИТПО&quot;) и привлекаемыми для этих целей ведущими специалистами ГТК России.</p>
+     </div>
+   
+    <div class="hist_dat"> 
+      <div class="dat_year">2002 год</div>
+     
+      <p style="text-align: justify;">Предоставление услуг российским предпринимателям при подготовке к работе в новых конкурентных условиях, связанных с предстоящим присоединением России к Всемирной торговой организации (ВТО). Предоставление комплексных услуг по защите прав интеллектуальной собственности.</p>
+     </div>
+   
+    <div class="hist_dat"> 
+      <div class="dat_year">2000 год</div>
+     
+      <p style="text-align: justify;">Предоставление комплексных услуг в области бизнес-консалтинга. Оказание услуг по оценке состояния и качества корпоративного управления объекта инвестиций, повышению инвестиционной привлекательности компаний, проведению преддоговорного/предпроектного исследования &ndash; due diligence, (корпоративное управление, правовое обеспечение имущественного состояния, финансовое и налоговое положение компании и т. д.).</p>
+     </div>
+   
+    <div class="hist_dat"> 
+      <div class="dat_year">1998 год</div>
+     
+      <p style="text-align: justify;">Создание дочерней фирмы ООО &quot;Центр информации и таможенно-правовых оценок&quot; (ООО &quot;ЦИТПО&quot;) для оказания дополнительных услуг в области таможенного дела российским и зарубежным предпринимателям. Привлечение к этой работе высококвалифицированных специалистов практиков, имеющих необходимый опыт работы в таможенных органах, в том числе в Российской таможенной академии. </p>
+     </div>
+   
+    <div class="hist_dat"> 
+      <div class="dat_year">1997 год</div>
+     
+      <p style="text-align: justify;">Повышение уровня и расширение объема оказываемых услуг в сфере таможенных правоотношений.  ЗАО &quot;И.Л.Т.С.&quot; приступило к комплексному обслуживанию всего цикла внешнеторговой сделки &ndash; от ее правового и консультационного обеспечения до практической реализации (таможенного оформления товаров, их сопровождения и доставки получателю). Создание дочерней фирмы ЗАО &quot;И.Л.Т.С.&ndash;Аудит&quot; (член Московской Аудиторской Палаты с 1999 года). Осуществление проверок финансово-хозяйственной деятельности клиентов, проведение общего аудита, постановка бухгалтерского учета и отчетности. </p>
+     </div>
+   
+    <div class="hist_dat"> 
+      <div class="dat_year">1994 год</div>
+     
+      <p style="text-align: justify;">Предоставление услуг в области разработки стратегии и совершенствовании организации бизнеса (в том числе покупка и реорганизация предприятий, создание совместных предприятий). Услуги в сфере таможенного дела.</p>
+     </div>
+   
+    <div class="hist_dat"> 
+      <div class="dat_year">1993 год</div>
+     
+      <p style="text-align: justify;">Защита интересов клиентов в судах общей юрисдикции и арбитражных судах при разрешении споров в области налогового, финансового права, а также по спорам, вытекающим из договорных и других гражданско-правовых отношений, в том числе возникающих при осуществлении внешнеторговой деятельности.  Формирование профессионального коллектива, обладающего опытом работы в области юриспруденции, финансов, таможенного дела. </p>
+     </div>
+   
+    <div class="hist_dat"> 
+      <div class="dat_year">1991 год</div>
+     
+      <p></p>
+     
+      <div style="text-align: justify;">Создание ЗАО &quot;Международная ассоциация по правовым и налоговым вопросам&quot; (ЗАО &quot;И.Л.Т.С.&quot;). Оказание юридических услуг, связанных с применением норм различных отраслей права. Представительство интересов иностранных клиентов, содействие им в установлении и развитии деловых отношений с российскими предпринимателями. </div>
+     
+      <div style="text-align: justify;"> 
+        <br />
+       </div>
+     
+      <div style="text-align: justify;">ЗАО &quot;Международная ассоциация по правовым и налоговым вопросам&quot; (ЗАО &quot;И.Л.ТС.&quot;) - член Российского союза промышленников и предпринимателей, Ассоциации Европейского Бизнеса, Американской торговой палаты в России. </div>
+     
+      <div style="text-align: justify;"> 
+        <br />
+       </div>
+     
+      <div style="text-align: justify;">Богатый и разносторонний опыт в области консалтинговой деятельности позволяет ЗАО &quot;И.Л.Т.С.&quot; с уверенностью предлагать свои услуги предприятиям разных отраслей экономики и различных форм собственности.  Рабочие языки: русский, английский, немецкий.</div>
+     
+      <p></p>
+     </div>
+   
+    <div class="read_more"> 
+      <div class="read_t"> 
+        <div class="read_s"> 
+          <br />
+         </div>
+       </div>
+     </div>
+   
+    <div></div>
+   
+    <div></div>
+   
+<!--текстовый блок, конец -->
+ </div>
+ 
+  <div></div>
+ 
+  <div></div>
+ </div>
+ </div>
+		</div>
+		<!--левый блок -->
+		<div class="sl">
+		<div class="block_name"><h3>о компании</h3></div>
+		<dl>
+<dt><a href="/index.php" class="active">О компании</a></dt>
+<dt><a href="/services/" class="active">Услуги</a></dt>
+<dd>
+	<ul>
+		<li><a href="/services/busines/">Бизнес-консалтинг</a></li>
+	</ul>
+</dd>
+<dd>
+	<ul>
+		<li><a href="/services/defence/">Юридическая защита</a></li>
+	</ul>
+</dd>
+<dd>
+	<ul>
+		<li><a href="/services/security.php">Безопасность</a></li>
+	</ul>
+</dd>
+<dt><a href="/feedback/" class="active">Комментарии экспертов</a></dt>
+<dd>
+	<ul>
+		<li><a href="/feedback/">Консультация On-Line</a></li>
+	</ul>
+</dd>
+<dt><a href="/information/" class="active">Полезная информация</a></dt>
+<dd>
+	<ul>
+		<li><a href="/information/dictionary.php">Таможенный словарь</a></li>
+	</ul>
+</dd>
+<dd>
+	<ul>
+		<li><a href="/files/file20.pdf">Налоговый словарь </a></li>
+	</ul>
+</dd>
+<dd>
+	<ul>
+		<li><a href="/information/reviews/">Обзоры законодательства</a></li>
+	</ul>
+</dd>
+<dd>
+	<ul>
+		<li><a href="/information/link.php">Полезные ссылки</a></li>
+	</ul>
+</dd>
+<dt><a href="/contacts/" class="active">Контакты</a></dt>
+</dl>
+			<div class="contacts">
+				<i class="co1"></i><i class="co2"></i>
+				<div class="phones">
+					<p><nobr>Телефоны: (495) 625-60-43</nobr></p>
+					<p align="right">621-30-73</p>
+				</div>
+				<div class="mail">
+					<span class="b">E-mail:</span> <span><a href="mailto:ilts@ilts.ru">ilts@ilts.ru</a></span>
+					<div class="clc"></div>
+				</div>	
+				<div class="mail_b"></div>
+			</div>		
+		</div>
+		<!--левый блок, конец -->
+		
+		<!--правый блок -->
+		<div class="sr">
+<div style="margin-top:-22px;padding-bottom:10px;"><a style="background:white;color:Brown;font-size:9px;padding:1px 10px;" href="/index.php?print=Y" target="_blank">Версия для печати</a></div>
+			<div class="block_name"><h3>новости</h3></div>
+			<div class="newsblock">
+			
+		<div class="news_item"><a href="/press/index.php?ELEMENT_ID=15205">
+					<span>01.06.2016</span>
+						В конце июня вступают в силу поправки к Налоговому кодексу, упрощающие возврат НДС экспортерам.				</a> 
+		</div>
+		<div class="news_item"><a href="/press/index.php?ELEMENT_ID=15204">
+					<span>31.05.2016</span>
+						К 2025 г. планируется создать единый энергорынок ЕАЭС.				</a> 
+		</div>
+		<div class="news_item"><a href="/press/index.php?ELEMENT_ID=15203">
+					<span>30.05.2016</span>
+						Украина проводит антидемпинговое расследование импорта шоколада из России.				</a> 
+		</div>
+		<div class="news_item"><a href="/press/index.php?ELEMENT_ID=15202">
+					<span>24.05.2016</span>
+						Таможенный кодекс ЕАЭС должен быть подписан до конца октября текущего года.				</a> 
+		</div>
+		<div class="news_item"><a href="/press/index.php?ELEMENT_ID=15201">
+					<span>24.05.2016</span>
+						В рамках ЕАЭС готовится проект договора о механизме прослеживаемости товара.				</a> 
+		</div>
+			</div>
+			<div class="news_item"><a href="/press/">Посмотреть все новости</a></div>
+			<div class="archive">
+				<div class="arch_name">
+					<i class="ara1"></i><i class="ara2"></i>
+					<p>Архив</p><p>новостей</p>
+				</div>
+				<div class="arch_tx">
+				<div id="comp_f4c127447cac8f04cbfa7a5af853bad2"><style type="text/css">
+.calendar {
+	FONT-SIZE: 7pt; COLOR: #c35f5f; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+}
+A.calendar {
+	FONT-SIZE: 7pt; COLOR: #c35f5f; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+}
+TD.calendar {
+	FONT-SIZE: 7pt; COLOR: #c35f5f; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+}
+.calendark {
+	FONT-SIZE: 7pt; COLOR: #000000; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+}
+A.calendark {
+	FONT-SIZE: 7pt; COLOR: #000000; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+}
+TD.calendar {
+	FONT-SIZE: 7pt; COLOR: #000000; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+}
+A.calendar:hover {
+	FONT-SIZE: 7pt; COLOR: red
+}
+A.calendar:visited {
+	FONT-SIZE: 7pt; COLOR: #c35f5f
+}
+</style>
+<div class="news-calendar-compact" style="padding: 0pt 5px">
+	<table border='0' cellspacing='0' cellpadding='0' width="205px" align="center">
+	<tr>
+			<td align="center" class='NewsCalHeader'>Пн</td>
+			<td align="center" class='NewsCalHeader'>Вт</td>
+			<td align="center" class='NewsCalHeader'>Ср</td>
+			<td align="center" class='NewsCalHeader'>Чт</td>
+			<td align="center" class='NewsCalHeader'>Пт</td>
+			<td align="center" class='NewsCalHeader'>Сб</td>
+			<td align="center" class='NewsCalHeader'>Вс</td>
+		</tr>
+		<tr>
+				  		<td align="right" valign="top" class='NewsCalOtherMonth' width="14%">
+		      &nbsp;
+		</td>
+		  				  		<td align="right" valign="top" class='NewsCalOtherMonth' width="14%">
+		      &nbsp;
+		</td>
+		  				  		<td align="right" valign="top" class='NewsCalOtherMonth' width="14%">
+		      &nbsp;
+		</td>
+		  				  		<td align="right" valign="top" class='NewsCalOtherMonth' width="14%">
+		      &nbsp;
+		</td>
+		  				  		<td align="right" valign="top" class='NewsCalOtherMonth' width="14%">
+		      &nbsp;
+		</td>
+		  				  		  <td align="right" valign="top" class='NewsCalWeekend' style="text-align:center;" width="14%">
+			 				1			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalWeekend' style="text-align:center;" width="14%">
+			 				2			 		  </td>
+		  			</tr >
+		<tr>
+				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				3			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				4			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				5			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				6			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				7			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalWeekend' style="text-align:center;" width="14%">
+			 				8			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalWeekend' style="text-align:center;" width="14%">
+			 				9			 		  </td>
+		  			</tr >
+		<tr>
+				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				10			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				11			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				12			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				13			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				14			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalWeekend' style="text-align:center;" width="14%">
+			 				15			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalWeekend' style="text-align:center;" width="14%">
+			 				16			 		  </td>
+		  			</tr >
+		<tr>
+				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				17			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				18			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				19			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				20			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				21			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalWeekend' style="text-align:center;" width="14%">
+			 				22			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalWeekend' style="text-align:center;" width="14%">
+			 				23			 		  </td>
+		  			</tr >
+		<tr>
+				  		  <td align="right" valign="top" class='NewsCalToday' style="text-align:center;" width="14%">
+			 				24			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				25			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				26			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				27			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				28			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalWeekend' style="text-align:center;" width="14%">
+			 				29			 		  </td>
+		  				  		  <td align="right" valign="top" class='NewsCalWeekend' style="text-align:center;" width="14%">
+			 				30			 		  </td>
+		  			</tr >
+		<tr>
+				  		  <td align="right" valign="top" class='NewsCalDefault' style="text-align:center;" width="14%">
+			 				31			 		  </td>
+		  				  		<td align="right" valign="top" class='NewsCalOtherMonth' width="14%">
+		      &nbsp;
+		</td>
+		  				  		<td align="right" valign="top" class='NewsCalOtherMonth' width="14%">
+		      &nbsp;
+		</td>
+		  				  		<td align="right" valign="top" class='NewsCalOtherMonth' width="14%">
+		      &nbsp;
+		</td>
+		  				  		<td align="right" valign="top" class='NewsCalOtherMonth' width="14%">
+		      &nbsp;
+		</td>
+		  				  		<td align="right" valign="top" class='NewsCalOtherMonth' width="14%">
+		      &nbsp;
+		</td>
+		  				  		<td align="right" valign="top" class='NewsCalOtherMonth' width="14%">
+		      &nbsp;
+		</td>
+		  			</tr >
+		</table>
+	<table width="215px" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td class="NewsCalMonthNav" align="center">
+<nowrap>
+					&nbsp;&nbsp;
+<select class=input onChange="y_result()" name="YEAR_SELECT" id="year_sel">
+                                                <option value="?month=10&year=2016&bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" selected>2016</option>
+                                                <option value="?month=10&year=2015&bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >2015</option>
+                                                <option value="?month=10&year=2014&bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >2014</option>
+                                                <option value="?month=10&year=2013&bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >2013</option>
+                                                <option value="?month=10&year=2012&bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >2012</option>
+						<option value="?month=10&year=2011&bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >2011</option>
+						<option value="?month=10&year=2010&bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >2010</option>
+						<option value="?month=10&year=2009&bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >2009</option>
+						<option value="?month=10&year=2008&bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >2008</option>
+						<option value="?month=10&year=2007&bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >2007</option>
+						<option value="?month=10&year=2006&bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >2006</option>
+						<option value="?month=10&year=2005&bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >2005</option>
+						<option value="?month=10&year=2004&bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >2004</option>
+					</select>
+					&nbsp;&nbsp;
+					<select class=input onChange="b_result()" name="MONTH_SELECT" id="month_sel">
+													<option value="/index.php?month=1&amp;year=2016&amp;bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >Январь</option>
+													<option value="/index.php?month=2&amp;year=2016&amp;bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >Февраль</option>
+													<option value="/index.php?month=3&amp;year=2016&amp;bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >Март</option>
+													<option value="/index.php?month=4&amp;year=2016&amp;bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >Апрель</option>
+													<option value="/index.php?month=5&amp;year=2016&amp;bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >Май</option>
+													<option value="/index.php?month=6&amp;year=2016&amp;bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >Июнь</option>
+													<option value="/index.php?month=7&amp;year=2016&amp;bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >Июль</option>
+													<option value="/index.php?month=8&amp;year=2016&amp;bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >Август</option>
+													<option value="/index.php?month=9&amp;year=2016&amp;bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >Сентябрь</option>
+													<option value="/index.php?month=10&amp;year=2016&amp;bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" selected>Октябрь</option>
+													<option value="/index.php?month=11&amp;year=2016&amp;bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >Ноябрь</option>
+													<option value="/index.php?month=12&amp;year=2016&amp;bxajaxid=f4c127447cac8f04cbfa7a5af853bad2" >Декабрь</option>
+											</select>
+</nowrap>
+
+					<script language="JavaScript" type="text/javascript">
+					<!--
+					function b_result()
+					{
+						var idx=document.getElementById("month_sel").selectedIndex;
+													jsAjaxUtil.InsertDataToNode(document.getElementById("month_sel").options[idx].value, 'comp_f4c127447cac8f04cbfa7a5af853bad2', true);
+											}
+					function y_result()
+					{
+						var idx=document.getElementById("year_sel").selectedIndex;
+													jsAjaxUtil.InsertDataToNode(document.getElementById("year_sel").options[idx].value, 'comp_f4c127447cac8f04cbfa7a5af853bad2', true);
+											}
+					-->
+					</script>
+			</td>
+		</tr>
+	</table>
+</div></div>				</div>
+				<div class="arch_b"></div>
+				<i class="arb1"></i><i class="arb2"></i>
+			</div>
+			
+		</div>
+		<!--правый блок, конец -->
+	</div>
+	
+	<div class="logo"><a href="#"><img src="/images/logo.jpg" alt="" title=""/></a></div>
+	<div class="footer_blank"></div>
+	
+	<!-- конец центр блока -->
+	
+</div>
+<!-- конец осн. блок -->
+
+<!-- подвал -->	
+<div class="footer">
+	<div class="fright">
+		<p>Телефоны: (495) 625-60-43, 621-30-73.</p>
+		<p>E-mail: <a href="mailto:ilts@ilts.ru">ilts@ilts.ru</a></p>
+	</div>
+	<div class="fleft">
+	<br><br>
+	<!--LiveInternet counter--><script type="text/javascript"><!--
+	document.write('<a href="http://www.liveinternet.ru/click" '+
+	'target=_blank><img src="http://counter.yadro.ru/hit?t23.4;r'+
+	escape(document.referrer)+((typeof(screen)=='undefined')?'':
+	';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+	screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+	';'+Math.random()+
+	'" alt="" title="LiveInternet: показано число посетителей за сегодн\я" '+
+	'border=0 width=88 height=15></a>')//--></script><!--/LiveInternet-->
+	</div>
+	<div class="clc"></div>
+</div>
+
+<!-- конец подвала -->	
+
+<div style="clear:both;"></div><div class="atll"></div>
+<style>
+	.atll{
+		font-size:0px;
+	}
+
+</style>
+
+
+</body></html>

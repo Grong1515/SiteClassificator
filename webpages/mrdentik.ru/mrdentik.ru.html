@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MrDentik — стоматология на Академической и Профсоюзной, лучшая стоматологическая клиника в Москве</title>
+<meta name="Description" content="Зубная клиника MrDentik — современная стоматологическая поликлиника в Москве, метро Академическая и Профсоюзная. Звоните ☎ +7 (499) 125-0-125.">
+<meta name="Keywords" content="">
+<link href="/css/stl.css" rel="stylesheet" type="text/css" />
+<link href="/css/magnifier.css" rel="stylesheet" type="text/css" />
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/css/ie6.css"/><![endif]-->
+<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/js/utils/build/utils.js"></script>
+<script type="text/javascript" src="/js/magnifier/build/magnifier.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42266574-1', 'mrdentik.ru');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+
+<body>
+<div class="min">
+<table width="100%">
+  <tr>
+    <td class="head_l"><img src="/img/0.gif" alt="" /></td>
+    <td class="head">
+              <div class="head_t"><img src="/img/head_t_empty.png" title="Частная стоматологическая клиника «Мистер Дент и К»" alt="MrDentik — стоматологическая поликлиника в Москве" border="0" /></div>
+        <div class="head_t_label">
+            <div class="left_top">Стоматологическая клиника</div>
+            <div class="left_bottom">Мистер Дент и Ко</div>
+            <a class="home_button" href="/"></a>
+            <div class="right_top">(499) 125-01-25, +7 985 227-20-19, +7 926 411-44-27</div>
+            <div class="right_bottom">ул. Профсоюзная, д.9</div>
+        </div>
+        <table width="100%">
+          <tr>
+            <td width="298">
+              <div class="relative">
+                <div class="consult_form">
+                  <a href="#" class="close" onclick="$('.consult_form').slideUp(); return false;"><img src="/img/close.gif" alt="" /></a>
+                    <div class="ttl">
+                        Запись на консультацию
+                        <span>Мы свяжемся с Вами для уточнения деталей</span>
+                    </div>
+                    <form id="feedback-mh">
+                        Представьтесь, пожалуйста
+                        <div class="field"><input name="name" type="text" /></div>
+                        Оставьте Ваш контактный телефон
+                        <div class="field"><input name="tel" type="text" /></div>
+                        Коротко о проблеме
+                        <div class="textarea"><textarea name="msg" cols="" rows=""></textarea></div>
+                        <div class="div-cons-send">
+                            <button type="submit" class="btn-cons-send">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+                </div>
+              <a href="#" class="consult" onclick="$('.consult_form').slideDown(); return false;">Запись на консультацию</a>
+            </td>
+            <td>
+              <div class="menu">
+                <div>
+
+<div class="user_content">
+  
+    <a  href="/about/"><span>О клинике</span></a>
+  
+    <a  href="/stomatologicheskie-uslugi/"><span>Услуги</span></a>
+  
+    <a  href="/vrachi/"><span>Врачи</span></a>
+  
+    <a  href="/license/"><span>Лицензии  и сертификаты</span></a>
+  
+    <a  href="/contacts/"><span>Контакты</span></a>
+  
+</div>
+
+</div>
+              </div>
+            </td>
+            <td width="108" class="quick_links">
+              <!--a href="#"><img src="/img/ico1.gif" alt="" /></a-->
+<a href="/contacts/"><img src="/img/ico2.gif" alt="" /></a>
+<a href="/site_map/"><img src="/img/ico3.gif" alt="" /></a>
+            </td>
+          </tr>
+        </table>
+        
+<script>
+$('#feedback-mh').submit(function(event) {
+    event.preventDefault();
+    var formData = {},
+        form = 'feedback-mh';
+    $('#' + form + ' input, #' + form + ' select, #' + form + ' checkbox, #' + form + ' radio, #' + form + ' textarea').each(
+        function(index) {
+            var input = $(this);
+            if (input.attr('type') !== 'submit' && input.attr('id') !== 'inputTypeForm')
+                formData[input.attr('name')] = ['checkbox', 'radio'].indexOf(input.attr('type')) !== -1 ? input.prop('checked') : input.val();
+        }
+    );
+    $.ajax({
+        url: '/contacts/feedback/',
+        type: 'POST',
+        contentType: 'application/x-www-form-urlencoded',
+        data: {
+                name: formData.name,
+                tel: formData.tel,
+                msg: formData.msg
+        },
+        success: function(response) {
+            //console.log('response', response);
+            $('#feedback-mh').empty().append('<h5>' + response + '</h5>');
+            ga('send', 'event', 'form', 'zapis-na-konsultatsiyu');
+        },
+        error: function(err, t) {
+            console.log('error', t);
+        }
+    });
+});
+</script>
+    </td>
+    <td class="head_r"><img src="/img/0.gif" alt="" /></td>
+  </tr>
+</table>
+<div class="relative">
+<div class="block_pos main_pos">
+  <!--<div class="block_bg"></div>
+
+<div class="block">
+<table width="960">
+  <tr>
+    <td class="scissors"><img src="/img/block_line.gif" alt="" /></td>
+    
+		<td class="specials">
+      <a href="/bnrs/7/" class="block_pic1 user_content">
+          <img src="/upload/bimages/dent524.png" alt="Отбеливание зубов" />
+            <span class="text">
+              <span>Отбеливание зубов</span>
+              
+            </span>
+        </a>
+    </td>
+		<td class="scissors"><img src="/img/block_line.gif" alt="" /></td>
+	  
+		<td class="specials">
+      <a href="/bnrs/6/" class="block_pic1 user_content">
+          <img src="/upload/bimages/doc.png" alt="Скидка 5% для посетителей сайта" />
+            <span class="text">
+              <span>Скидка 5% для посетителей сайта</span>
+              
+            </span>
+        </a>
+    </td>
+		<td class="scissors"><img src="/img/block_line.gif" alt="" /></td>
+	  
+		<td class="specials">
+      <a href="/bnrs/2/" class="block_pic1 user_content">
+          <img src="/upload/bimages/3.jpg" alt="Ортопантомограмма" />
+            <span class="text">
+              <span>Ортопантомограмма</span>
+              
+            </span>
+        </a>
+    </td>
+		
+	
+    <td class="scissors"><img src="/img/block_line.gif" alt="" /></td>
+  </tr>
+</table>
+</div>
+-->
+
+<!-- <div class="block_bg"></div>
+<div class="block">
+<table width="960">
+  <tr>
+    <td class="specials">
+      <a href="http://www.mrdentik.ru/stomatologicheskie-uslugi/implantologija/" class="block_pic1 user_content" style="text-align: center; margin-top: 0.7%;">
+          <img src="/upload/bimages/imgo.jpg" alt="Имплантация зубов" style="float: none;" />
+      </a>
+    </td>
+  </tr>
+</table>
+</div> -->
+
+<div class="block_bg"><img src="/upload/bimages/imgo.jpg" alt="Имплантация зубов" style="margin-top: 8px;height: 85%;margin-left: 16.87%;"></div>  
+</div>
+</div>
+<div class="main user_content">
+  <div class="relative">
+    <div class="text1">
+      <span>Лечение зубов</span>
+        Лечение зубов от простых пломб до лечения каналов зубов    
+    </div>
+  </div>
+  <h1>&laquo;Мистер Дент и К&raquo; &mdash; самая скорая стоматологическая помощь в Москве</h1>
+<div style="text-indent:20px;">
+<div class="text">Мы не говорим, что мы совершенны и не будем пытаться рассказать Вам,<br /> чем клиника &laquo;Мистер Дент и К&raquo; лучше других.<br />Мы предлагаем Вам самим познакомиться с нашими возможностями.</div>
+<p>Беспокоят зубы? С раннего детства мы знаем, что зубная боль невыносима, что нужно вовремя лечить зубы и тщательно следить за ротовой полостью. Когда во рту начинаются болевые процессы, которые невозможно унять, возникает необходимость срочно найти зубную клинику в Москве, а в особо запущенных случаях &mdash; вызывать скорую стоматологическую помощь.</p>
+<p>Одно понятно наверняка: проблемы с зубами лучше предупреждать заранее, а столкнувшись с ними лицом к лицу &mdash; мгновенно лечить. К счастью, в Москве есть ряд качественных стоматологических клиник и <em>&laquo;Мистер Дент и К&raquo;</em> с гордостью предлагает недорогую стоматологию возле станций Академическая и Профсоюзная. В нашей стоматологической поликлинике вас ждут профессионалы мирового уровня и передовое оборудование:</p>
+</div>
+<div style="background-color:#F7FEEC;padding:10px 0 10px 45px;">
+<ul>
+<li>собственная зуботехническая лаборатория; </li>
+<li>специальные диагностические микроскопы; </li>
+<li>ортопантомограмма (подробный снимок челюсти и зубов за несколько минут); </li>
+<li>компьютерное планирование лечения; </li>
+<li>анализ прикуса (T-scan); </li>
+<li>имплантация зубов; </li>
+<li>уверенные в себе частные стоматологи. </li>
+</ul>
+</div>
+<div style="text-indent:20px;">
+<p>Если вам нужен стоматолог недалеко от станций метро Академическая и Профсоюзная, в нашей стоматологической поликлинике вам обеспечат самый теплый прием и предоставят все услуги по лечению зубов, от семейной стоматологии до регулярных обследований.</p>
+<p>Практически сразу после записи к стоматологу и вашего визита, вас встретят наши дантисты и с первых же минут займутся вашим лечением. Нужна консультация? Вы ее получите. Болят зубы? Вылечим. Хотите заполучить яркую и ровную улыбку? Мы найдем лучший способ предоставить вам это.</p>
+<p>Методы нашей стоматологической клиники позволяют гарантировать высочайшее качество как элементарных процедур (от пломбирования до отбеливания), так и более сложных в перспективе операций (от коррекции прикуса до имплантации). Наши доктора регулярно проходят курсы повышения квалификации и посещают международные симпозиумы, обмениваясь опытом со звездами европейской и американской стоматологии.</p>
+<div style="background-color:#F7FEEC;padding:10px 0 10px 20px;">
+<p>Запись к стоматологу в клинике &laquo;Мистер Дент и К&raquo; можно провести как на сайте, так и по одному из телефонов, указанных выше. Посетители сайта могут рассчитывать на 5-процентную скидку.</p>
+</div>
+<p>Наша зубная клиника находится по адресу ул. Профсоюзная, 9. Ближайшие станции метро Профсоюзная и Академическая &mdash; в пяти минутах ходьбы от стоматологического центра MrDentik.</p>
+<p style="text-align:center;font-weight:bold;padding-top:10px;">Приходите с уверенностью в том, что обратно с зубной болью мы вас не отпустим. Наши частные стоматологи знают свое дело и обещают вам помочь. Ждем вас с нетерпением.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+  <table width="100%">
+  <tr>
+    <td width="208"><!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t14.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet--></td>
+    <td class="copy">
+      &copy; Copyright 2014. mrdentik.ru Все права охраняются законом.
+        <script type="text/javascript">
+var c1="mrdent1";var c2="mail.ru";var e=c1+"@"+c2;document.write('<a href="mailto:'+e+'">'+e+'<\/a>');</script>
+
+    </td>
+    <td class="magic" width="165">&nbsp;</td>
+  </tr>
+</table>
+</div>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter15023125 = new Ya.Metrika({id:15023125, enableAll: true, ut:"noindex", webvisor:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/15023125?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --> 
+
+</body>
+
+</html>

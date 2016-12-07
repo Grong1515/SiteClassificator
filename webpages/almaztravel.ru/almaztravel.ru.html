@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta name="description" content="Алмаз Тур. Главная"><meta name="keywords" content=""><meta http-equiv="Pragma" content="no-cache"><title>Алмаз Тур &raquo; Главная</title><meta name="Author" content="wintermute" /><meta name="Keywords" content="" /><meta name="Description" content="test passed: Mozilla Firefox 1, MSIE 5.01/5.5/6, Opera 7" /><link rel="stylesheet" type="text/css" href="/css/main.css" media="all" /><script type="text/javascript"><!--
+function ShowWin(url,x,y,name,isscrollbars) {
+cx=screen.width/2-(x/2);
+cy=screen.height/2-(y/2);
+isscrollbars=(isscrollbars=="no")?"no":"yes";
+window.open(url,name,"toolbar=no,status=no,directories=no,menubar=no,resizable=yes,width="+x+",height="+y+",scrollbars="+isscrollbars+",top="+cy+",left="+cx);
+}
+//--></script></head><body><table width="100%" border="0" cellpadding="0" cellspacing="0" height=100%><tr><td><div id="top"><div id="topleft"><div id="topright"><a href="/"><img src="/i/toplogo.gif" width="344" height="199" border="0" alt="Алмаз Тур" /></a></div></div></div><div id="menus"><table border="0" cellspacing="0" cellpadding="0" align="center"><tr><td><a href="/main/catalogue.html"><img src="/i/menus/catalogue.gif" width="137" height="46" border="0" alt="Каталог отелей" /></a></td><td><a href="/main/contacts.html"><img src="/i/menus/contacts.gif" width="96" height="46" border="0" alt="Контакты" /></a></td><td><a href="/main/countries.html"><img src="/i/menus/countries.gif" width="74" height="46" border="0" alt="Страны" /></a></td><td><a href="/main/reports.html"><img src="/i/menus/reports.gif" width="152" height="46" border="0" alt="Отзывы туристов" /></a></td><td><a href="/main/news.html"><img src="/i/menus/news.gif" width="150" height="46" border="0" alt="Новости туризма" /></a></td><td><a href="/main/search.html"><img src="/i/menus/search.gif" width="104" height="46" border="0" alt="Поиск тура" /></a></td><td><a href="/main/section.html"><img src="/i/menus/section.gif" width="117" height="46" border="0" alt="Виды отдыха" /></a></td></tr></table></div><!-- скрипт тоже убирать не надо!--><script type="text/javascript"><!--
+var dom = document.getElementById?1:0;
+var ie4 = document.all && document.all.item;
+var opera = window.opera;
+var ie5 = dom && ie4 && !opera;
+timerID = 0;
+var Menus=new Array();
+var Submenus=new Array();
+function getLayer(layerName){
+if(dom) return document.getElementById(layerName);
+if(ie4 || ie5) return document.all[layerName];
+}
+function block_hide(){clearTimeout(timerID);}
+function hide(name){timerID = setTimeout("hideObject(\'" + name + "\')", 100);}
+function hide_all(){
+if(Menus.length){
+for(i=0; i<=Menus.length-1; i++){ 
+hide_all_sub(Menus[i]);
+obj = getLayer('Nav'+Menus[i]);
+if(null != obj){obj.style.display='none';}
+}
+}
+}
+function hide_all_sub(prefix){
+if(Submenus[prefix]){
+if(Submenus[prefix].length){
+for(i1=0; i1<=Submenus[prefix].length-1; i1++){
+obj1 = getLayer('Nav'+prefix+'_'+Submenus[prefix][i1]);
+//alert(prefix+i);
+if(null != obj1){obj1.style.display='none'; }
+}
+}
+}
+}
+function showObject(x) {
+hide_all();
+clearTimeout(timerID);
+obj=getLayer('Nav'+x);
+if(obj!=null){obj.style.display='block';}
+}
+function showSubObject(x,prefix) {
+hide_all_sub(prefix);
+clearTimeout(timerID);
+obj=getLayer('Nav'+prefix+'_'+x);
+if(obj!=null){obj.style.display='block'; } 
+}
+function hideSubObject(x,prefix) {
+clearTimeout(timerID);
+obj=getLayer('Nav'+prefix+'_'+x);
+if(obj!=null){obj.style.display='none'; } 
+}
+function hideObject(x) {
+hide_all_sub(x);
+obj=getLayer('Nav'+x);
+if(null!=obj){obj.style.display='none';}
+}
+//--></script></td></tr><tr valign=top><td height=100%><div id="maincontent"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="10%" valign="top" align="left" id="leftcol"><img src="/i/header-toursearch.gif" width="264" height="13" border="0" alt="Поиск тура" /><div style="width:264px; background-color:#ffc424; padding-left:15px"><div style="margin-left:-20px; padding-right:20px"><script type="text/javascript" language="JavaScript" src="http://tourclient.ru/f/jsboot/9812/find_tour_form?style=default&conf=default"></script></div></div></td><td width="90%" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="5%"><img src="/i/empty.gif" width="30" height="1" alt="" /></td><td width="93%" valign="top" align="left" id="rightcol"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="29%" ><a href="/main/wspecs/_ID-10.html" style="display:block"><img src="/i/empty.gif" width="150" height="84" border="0" alt="" /></a></td><td width="4%">&nbsp;</td></tr><tr><td width="29%" valign="top"><div class="photosub"><b></b><br /> 
+Наши телефоны (495)637-3738 и (495)637-7771. Ждём ваших звонков! <a href="/main/wspecs/_ID-10.html">Подробнее >></a></div></td><td width="4%">&nbsp;</td></tr></table><div style="margin:35px 0 20px 0;"><img src="/i/header-news.gif" width="165" height="18" border="0" alt="Новости" /></div><div style="padding:0 0 0 8px;"><p><a href="/main/news/_ID-60818.html"><b>Россия: На Камчатке обновляют горнолыжную базу «Морозная»</b></a><br />Одна из самых популярных у туристов горнолыжных баз Камчатки — база «Морозная» встречает новый зимний сезон в обновлённом виде. 
+<p><a href="/main/news/_ID-60819.html"><b>Финляндия: Финский фестиваль «Время Верла» уходит на Выборгскую дорогу</b></a><br />Средневековый фестиваль «Время Верла» лишился своей основной площадки – территории заводского музея Верла недалеко от города Коувола.
+<p><a href="/main/news/_ID-60817.html"><b>Россия: Омская крепость откроется в конце года</b></a><br />Все шесть объектов, входящих в историко-культурный комплекс "Омская крепость", будут сданы до конца 2016 года, сообщает «Интерфакс». 
+<p><a href="/main/news/_ID-60821.html"><b>Испания: Автопортрет на фоне кораблекрушения для туристов в Коста-Дорада</b></a><br />Навигационная станция Коста-Дорады в сотрудничестве с профильными компаниями недавно запустила программу «Дайвинг и сноркелинг» для соединения всех предложений в этой сфере.
+<p><a href="/main/news/_ID-60820.html"><b>Испания: На ипподроме Мадрида открылся музей</b></a><br />На ипподроме дворца Сарсуэла, который недавно отметил 75-й день рождения, открылся музей имени Эдуардо Торрохи, знаменитого инженера, спроектировавшего местные трибуны. 
+</div><p>&nbsp;</p><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="47%" align="right" valign="top" style="background:url(/i/headerback.gif);"><img src="/i/header-currency.gif" width="137" height="15" border="0" alt="Курсы валют" /></td><td width="6%">&nbsp;&nbsp;&nbsp;</td><td width="47%" align="right" valign="top" style="background:url(/i/headerback.gif);"><img src="/i/header-weather.gif" width="137" height="15" border="0" alt="Погода" /></td></tr><tr><td width="47%" align="center" valign="top" style="background-color:#ffc424;margin:15px;"><script src="http://pics.rbc.ru/js/rbc_indices.js"></script><script>print_ind('_USD_CB_-_GBP_CB_-_EUR_CB_-_TUL_CB_-_JPY_CB_');</script></td><td width="6%">&nbsp;&nbsp;&nbsp;</td><td width="47%" align="center" valign="top" style="background-color:#ffc424;margin:15px;"><script language="JavaScript"> document.write('<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" WIDTH="100" HEIGHT="100" id="100x100" ALIGN=""> <PARAM NAME=movie VALUE="http://img.gismeteo.ru/flash/100x100.swf"> <param name="FlashVars" value="noC=3&city0=27612&city1=94866&city2=76680"> <PARAM NAME=quality VALUE=high> <PARAM NAME=bgcolor VALUE=#FFFFFF> <EMBED src="http://img.gismeteo.ru/flash/100x100.swf?noC=3&city0=27612&city1=94866&city2=76680" quality=high bgcolor=#FFFFFF WIDTH="100" HEIGHT="100" NAME="100x100" ALIGN="" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED></OBJECT>'); </script>&nbsp;<script language="JavaScript"> document.write('<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" WIDTH="100" HEIGHT="100" id="100x100" ALIGN=""> <PARAM NAME=movie VALUE="http://img.gismeteo.ru/flash/100x100.swf"> <param name="FlashVars" value="noC=3&city0=27612&city1=94866&city2=76680"> <PARAM NAME=quality VALUE=high> <PARAM NAME=bgcolor VALUE=#FFFFFF> <EMBED src="http://img.gismeteo.ru/flash/100x100.swf?noC=3&city0=27612&city1=94866&city2=76680" quality=high bgcolor=#FFFFFF WIDTH="100" HEIGHT="100" NAME="100x100" ALIGN="" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED></OBJECT>'); </script></td></tr></table><p>&nbsp;</p></td><td width="2%"><img src="/i/empty.gif" width="12" height="1" alt="" /></td></tr></table></td></tr></table></div></td></tr><tr><td class="bottom"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="30%" align=center><!-- NetLog --><script language="javascript">
+netlog_js="1.0";
+netlog_r=""+Math.random()+"&s=2927&im=12&r="+escape(document.referrer)+"&pg="+
+escape(window.location.href);
+document.cookie="netlog=1; path=/"; netlog_r+="&c="+(document.cookie?"Y":"N");
+</script><script language="javascript1.1">
+netlog_js="1.1";netlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script><script language="javascript1.2">
+netlog_js="1.2";
+netlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+(((navigator.appName.substring(0,3)=="Mic"))?
+screen.colorDepth:screen.pixelDepth)</script><script language="javascript1.3">netlog_js="1.3"</script><script language="javascript">netlog_r+="&js="+netlog_js;
+document.write("<a href='http://www.topturizm.ru/?2927' target='_top'><img "+
+" src='http://click.topturizm.ru/count.php?"+
+netlog_r+"&' border=0 width=88 height=31 alt=TopTurizm></a>")</script><noscript><a href=http://www.topturizm.ru/?2927 target=_top><img
+src="http://click.topturizm.ru/count.php?s=2927&im=12" border=0 
+width="88" height="31" alt="TopTurizm"></a></noscript> 
+<!-- /NetLog --></td><td width="40%"><span style="color:#000000;">&copy; Туристическая компания &laquo;Алмаз Тур&raquo;</span><br /><a href="/main/contacts.html">Контактная информация</a></td><td width="30%" align=right style="padding-right:15px"><a href="http://www.lightsoft.ru/" target=_blank>Lightsoft Solution</a>,<br /><a href="http://www.touradmin.ru/" target=_blank>TourAdmin</a></td></tr></table></td></tr></table></body></html>
+
+

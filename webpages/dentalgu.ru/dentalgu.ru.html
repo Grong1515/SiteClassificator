@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Dental Guru</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+            <link rel="stylesheet" type="text/css" href="/minify_bx/?t=main-responsive&amp;g=css&amp;v=14"/>
+    <script type="text/javascript" data-skip-moving="true">(function(w, d, n) {var cl = "bx-core";var ht = d.documentElement;var htc = ht ? ht.className : undefined;if (htc === undefined || htc.indexOf(cl) !== -1){return;}var ua = n.userAgent;if (/(iPad;)|(iPhone;)/i.test(ua)){cl += " bx-ios";}else if (/Android/i.test(ua)){cl += " bx-android";}cl += (/(ipad|iphone|android|mobile|touch)/i.test(ua) ? " bx-touch" : " bx-no-touch");cl += w.devicePixelRatio && w.devicePixelRatio >= 2? " bx-retina": " bx-no-retina";var ieVersion = -1;if (/AppleWebKit/.test(ua)){cl += " bx-chrome";}else if ((ieVersion = getIeVersion()) > 0){cl += " bx-ie bx-ie" + ieVersion;if (ieVersion > 7 && ieVersion < 10 && !isDoctype()){cl += " bx-quirks";}}else if (/Opera/.test(ua)){cl += " bx-opera";}else if (/Gecko/.test(ua)){cl += " bx-firefox";}if (/Macintosh/i.test(ua)){cl += " bx-mac";}ht.className = htc ? htc + " " + cl : cl;function isDoctype(){if (d.compatMode){return d.compatMode == "CSS1Compat";}return d.documentElement && d.documentElement.clientHeight;}function getIeVersion(){if (/Opera/i.test(ua) || /Webkit/i.test(ua) || /Firefox/i.test(ua) || /Chrome/i.test(ua)){return -1;}var rv = -1;if (!!(w.MSStream) && !(w.ActiveXObject) && ("ActiveXObject" in w)){rv = 11;}else if (!!d.documentMode && d.documentMode >= 10){rv = 10;}else if (!!d.documentMode && d.documentMode >= 9){rv = 9;}else if (d.attachEvent && !/Opera/.test(ua)){rv = 8;}if (rv == -1 || rv == 8){var re;if (n.appName == "Microsoft Internet Explorer"){re = new RegExp("MSIE ([0-9]+[\.0-9]*)");if (re.exec(ua) != null){rv = parseFloat(RegExp.$1);}}else if (n.appName == "Netscape"){rv = 11;re = new RegExp("Trident/.*rv:([0-9]+[\.0-9]*)");if (re.exec(ua) != null){rv = parseFloat(RegExp.$1);}}}return rv;}})(window, document, navigator);</script>
+
+
+<link href="/bitrix/cache/css/s1/main-responsive/kernel_main/kernel_main.css?147706643844417" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/main-responsive/kernel_altasib.errorsend/kernel_altasib.errorsend.css?14770505954919" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/main-responsive/template_e3b4a16f7efdd08f020e979b579a0671/template_e3b4a16f7efdd08f020e979b579a0671.css?14770505954109" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/panel/main/popup.min.css?147616485020704" type="text/css"  data-template-style="true"  rel="stylesheet" />
+        
+
+
+<meta property="og:url" content="http://www.dentalgu.ru/" />
+    <meta name="format-detection" content="telephone=no">
+    
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+        <div class="container_main">
+        <header>
+            <div class="header_mobile">
+                <a class="gamburger mobile_panel_shower" href="javascript:void(0)" data-target="#top_menu"></a>
+                <a href="#" class="customFormLink call_back_mobile"
+                    data-params="YNYNN-NNYNN" 
+                    data-form-code="mobile_shapka_zvonok"
+                    data-success-text="Ваша заявка успешно принята!"
+                    data-title="Введите ваши данные, мы перезвоним"
+                    data-text=""
+                    data-btn-text="Отправить"
+                    data-service-form-name=""
+                    data-field-title-phone="" 
+                    data-field-title-name=""
+                    data-field-placeholder-name="Введите Ваше имя"
+                    data-field-placeholder-phone="Введите Ваш номер телефона"
+                    data-custom-textarea-title=""
+                    data-custom-textarea-placeholder="Ваш вопрос"
+                ></a>
+                <div class="logo">
+                    <a href="/"><img src="/upload/iblock/00c/00cbbb85182cbb8a40b52a91beb551f2.png" alt="Dental Guru"/></a>
+                </div>
+            </div>
+            <div id="mobile_panel_closer"></div>
+            <div class="header_nav mobile_panel mobile_panel_left nano" id="top_menu">
+                <div class="nano-content">
+                <div class="logo">
+                    <a href="/"><img src="/upload/iblock/00c/00cbbb85182cbb8a40b52a91beb551f2.png" alt="Dental Guru"/></a>
+                    <span>сеть cтоматологических клиник</span>
+                </div>
+                <a href="javascript:void(0)" class="mobile_panel_closer2"></a>
+                <div class="search">
+                    <form action="/poisk/">
+	<input class="search_text form-control" placeholder="Поиск" type="text" name="q" value="" maxlength="100" />
+    <input class="btn search_btn" name="s" type="submit" value="" />
+</form>                </div>
+                <div class="nav_div">
+                    <nav>
+                        <div class="nav_front">
+                            <ul>
+    <li>
+    		      <a href="#" data-id="o_klinike">О клинике</a>
+            </li><li>
+    		      <a href="#" data-id="uslugi">Услуги</a>
+            </li><li>
+    		      <a href="/price/" data-id="">Цены</a>
+            </li><li>
+    		      <a href="/speczialistyi/" data-id="">Cпециалисты</a>
+            </li><li>
+    		      <a href="/primery-rabot/" data-id="">Примеры работ</a>
+            </li><li>
+    		      <a href="#" data-id="otzivy">Отзывы</a>
+            </li><li>
+    		      <a href="/aktsii/" data-id="">Акции</a>
+            </li><li>
+    		      <a href="#" data-id="poleznoe">Полезное</a>
+            </li><li>
+    		      <a href="/kontakty/" data-id="">Контакты</a>
+            </li></ul>                        </div>
+                        <div class="nano nav_back" data-id="o_klinike">
+                            <div class="nano-content">
+                                <div class="title">О клинике<span></span></div>
+                                <ul>
+    <li>
+    		      <a href="/nashi-kliniki/" data-id="">Наши клиники</a>
+            </li><li>
+    		      <a href="/litsenzii-sertifikaty/" data-id="">Лицензии/сертификаты</a>
+            </li><li>
+    		      <a href="/nagrady-i-diplomy/" data-id="">Награды и дипломы</a>
+            </li><li>
+    		      <a href="/smi-o-nas/" data-id="">СМИ о нас</a>
+            </li><li>
+    		      <a href="/novosti/" data-id="">Новости клиники</a>
+            </li><li>
+    		      <a href="/uchebnyy-tsentr/" data-id="">Учебный центр</a>
+            </li><li>
+    		      <a href="/nashi-partnyery/" data-id="">Наши партнёры</a>
+            </li></ul>                            </div>
+                        </div>
+                        <div class="nav_back" data-id="otzivy">
+                            <div class="nano-content">
+                                <div class="title">Отзывы<span></span></div>
+                                <ul>
+    <li>
+    		      <a href="/otzyvy-klientov/" data-id="">Отзывы клиентов</a>
+            </li><li>
+    		      <a href="/blagodarstvennye-pisma/" data-id="">Благодарственные письма</a>
+            </li></ul>                            </div>
+                        </div>
+                        <div class="nav_back" data-id="poleznoe">
+                            <div class="nano-content">
+                                <div class="title">Полезное<span></span></div>
+                                <ul>
+    <li>
+    		      <a href="/statyi/" data-id="">Полезные статьи</a>
+            </li><li>
+    		      <a href="/tolkovatel-terminov/" data-id="">Толкователь терминов</a>
+            </li><li>
+    		      <a href="/poleznye-video/" data-id="">Полезные видео</a>
+            </li><li>
+    		      <a href="/chasto-zadavaemye-voprosy/" data-id="">Часто задаваемые вопросы</a>
+            </li></ul>                            </div>
+                        </div>
+                        <div class="nav_back" data-id="uslugi">
+                            <div class="nano-content">
+                                <div class="title">Услуги<span></span></div>
+                                    <ul>
+        <li><a href="/lechenie-zubov/">Лечение зубов</a></li><li><a href="/implantatsiya-zubov/">Имплантация зубов</a></li><li><a href="/restavratsiya-zubov/">Реставрация зубов</a></li><li><a href="/otbelivanie-zubov/">Отбеливание зубов</a></li><li><a href="/protezirovanie-zubov/">Протезирование зубов</a></li><li><a href="/kostnaya-plastika/">Костная пластика</a></li><li><a href="/ispravlenie-prikusa/">Исправление прикуса</a></li><li><a href="/lechenie-kanalov-pod-mikroskopom/">Лечение каналов под микроскопом</a></li>    </ul>
+                                </div>
+                        </div>
+                        <div class="nav_end"></div>
+                    </nav>
+                </div>
+                <div class="contacts">
+                    <div class="phones">
+                        <div>
+            <a href="tel:+7-495-649-1717"><span>+7 495</span> 649-17-17</a>
+            <i>Клиника на Покровке</i>
+        </div><div>
+            <a href="tel:+7-495-649-1770"><span>+7 495</span> 649-17-70</a>
+            <i>Клиника на Цветном бульваре</i>
+        </div>                    </div>
+                    <div class="question">
+                        <a href="#" class="customFormLink"
+                            data-params="YYYY-NNYN" 
+                            data-form-code="shapka_vorpos"
+                            data-title="Задать вопрос"
+                            data-text=""
+                            data-btn-text="Отправить"
+                            data-service-form-name=""
+                            data-field-title-phone="" 
+                            data-field-title-name=""
+                            data-field-title-email=""
+                            data-field-placeholder-name="Представьтесь пожалуйста"
+                            data-field-placeholder-phone="Ваш контактный телефон"
+                            data-field-placeholder-email="Ваш E-mail"
+                            data-custom-textarea-title=""
+                            data-custom-textarea-placeholder="Ваш вопрос"
+                        >Задать вопрос</a>
+                    </div>
+                    <a href="#" class="customFormLink call_back"
+                        data-params="YNYY-NNYN" 
+                        data-form-code="shapka_zvonok"
+                        data-title="Введите ваши данные, мы перезвоним"
+                        data-text=""
+                        data-btn-text="Отправить"
+                        data-service-form-name=""
+                        data-field-title-phone="" 
+                        data-field-title-name=""
+                        data-field-placeholder-name="Представьтесь пожалуйста"
+                        data-field-placeholder-phone="Ваш контактный телефон"
+                        data-custom-textarea-title=""
+                        data-custom-textarea-placeholder="Удобное время звонка"
+                    >Обратный звонок</a>
+                    <!--noindex--><div class="soc"><a href="https://vk.com/dentalguru" class="vk" rel="nofollow" target="_blank"></a><a href="https://www.facebook.com/%D0%A1%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F-%D0%94%D0%B5%D0%BD%D1%82%D0%B0%D0%BB-%D0%93%D1%83%D1%80%D1%83-203524246525513/" class="fb" rel="nofollow" target="_blank"></a><a href="https://www.instagram.com/dentalguru/" class="insta" rel="nofollow" target="_blank"></a><a href="https://ok.ru/group/57551154053155" class="ok" rel="nofollow" target="_blank"></a><a href="https://www.youtube.com/channel/UCOTqntfACGOQGzK9MwSBytg" class="yt" rel="nofollow" target="_blank"></a></div><!--/noindex-->                </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!--[if lte IE 9]><div class="container">Вы используете устаревший браузер.<br />Для корректной работы сайта загрузите и установите один из этих браузеров:<br /><br /><a href="https://www.google.com/chrome/" target="_blank" rel="nofollow">Google Chrome</a>, <a href="http://www.opera.com/" target="_blank" rel="nofollow">Opera</a>, <a href="http://www.mozilla.org/ru/firefox/new/" target="_blank" rel="nofollow">Mozilla Firefox</a></div><![endif]-->
+            <div class="index_page">
+    <div class="index-slider-container">
+        <a href="javascript:void(0)" class="to_calc">Рассчитать <span>стоимость импланта</span></a>
+        <div class="index-slider">            <div class="index-slider-item">
+                <div style="background-image: url(/upload/iblock/2bc/2bc3af2b5cb5b8be8fb12e63ff2a77a7.jpg);">
+                                            <div class="index-slider-offer col-sm-12 col-md-8 col-lg-6">
+                            <div>
+                            <div class="title">Счастье Вам к лицу</div>
+                                                            <div class="text_big">Мы знаем все о создании идеальных улыбок. Входим ТОП-20 лучших стоматологических клиник России* </div>
+                                                                <div class="text_small">*По версии авторитетного издания StartSmile</div>
+                                                                    <a href="#" class="btn small_btn customFormLink"
+                                        data-params="YNYN-NNYN" 
+                                        data-form-code="index_slider_form"
+                                        data-success-text="Ваша заявка успешно принята!"
+                                        data-title="Записаться на бесплатную консультацию Start Smile"
+                                        data-text=""
+                                        data-btn-text="Отправить"
+                                        data-service-form-name=""
+                                        data-field-title-phone="" 
+                                        data-field-title-name=""
+                                        data-field-placeholder-name="Представьтесь пожалуйста"
+                                        data-field-placeholder-phone="Ваш контактный телефон"
+                                        data-custom-textarea-title=""
+                                        data-custom-textarea-placeholder="Ваш вопрос"
+                                    >Записаться на бесплатную консультацию</a>
+                                                                </div>
+                        </div>
+                                                        <a href="#" class="btn big_btn customFormLink"
+                                    data-params="YNYN-NNYN" 
+                                    data-form-code="index_slider_form"
+                                    data-success-text="Ваша заявка успешно принята!"
+                                    data-title="Записаться на бесплатную консультацию Start Smile"
+                                    data-text=""
+                                    data-btn-text="Отправить"
+                                    data-service-form-name=""
+                                    data-field-title-phone="" 
+                                    data-field-title-name=""
+                                    data-field-placeholder-name="Введите Ваше имя"
+                                    data-field-placeholder-phone="Введите Ваш номер телефона"
+                                    data-custom-textarea-title=""
+                                    data-custom-textarea-placeholder="Ваш вопрос"
+                                >Записаться на бесплатную консультацию</a>
+                                                    <div class="slide_overlay"></div>
+                </div>
+            </div>
+                        <div class="index-slider-item">
+                <div style="background-image: url(/upload/iblock/558/banners_main3.jpg);">
+                                            <div class="index-slider-offer col-sm-12 col-md-8 col-lg-6">
+                            <div>
+                            <div class="title">Композитное  отбеливание зубов</div>
+                                                            <div class="text_big">Если Вы хотите максимальный результат отбеливания на всю жизнь, то мы Вам можем предложить реставрационное отбеливание. Отбеливание проводится композитным материалом, эффект сохраняется навсегда.</div>
+                                                                    <a class="btn small_btn" href="/restavratsiya-zubov/" target="_blank">Узнать больше</a>
+                                                                </div>
+                        </div>
+                                                        <a class="btn big_btn" href="/restavratsiya-zubov/" target="_blank">Узнать больше</a>
+                                                    <div class="slide_overlay"></div>
+                </div>
+            </div>
+                        <div class="index-slider-item">
+                <div style="background-image: url(/upload/iblock/cef/banners_main1.jpg);">
+                                            <div class="index-slider-offer col-sm-12 col-md-8 col-lg-6">
+                            <div>
+                            <div class="title">Имплантация &quot;под ключ&quot;  за 39 900 рублей!</div>
+                                                            <div class="text_big">Только до конца октября!</div>
+                                                                    <a href="#" class="btn small_btn customFormLink"
+                                        data-params="YNYN-NNYN" 
+                                        data-form-code="index_slider_form"
+                                        data-success-text="Ваша заявка успешно принята!"
+                                        data-title="Записаться на бесплатную консультацию"
+                                        data-text=""
+                                        data-btn-text="Отправить"
+                                        data-service-form-name=""
+                                        data-field-title-phone="" 
+                                        data-field-title-name=""
+                                        data-field-placeholder-name="Представьтесь пожалуйста"
+                                        data-field-placeholder-phone="Ваш контактный телефон"
+                                        data-custom-textarea-title=""
+                                        data-custom-textarea-placeholder="Ваш вопрос"
+                                    >Записаться на бесплатную консультацию</a>
+                                                                </div>
+                        </div>
+                                                        <a href="#" class="btn big_btn customFormLink"
+                                    data-params="YNYN-NNYN" 
+                                    data-form-code="index_slider_form"
+                                    data-success-text="Ваша заявка успешно принята!"
+                                    data-title="Записаться на бесплатную консультацию"
+                                    data-text=""
+                                    data-btn-text="Отправить"
+                                    data-service-form-name=""
+                                    data-field-title-phone="" 
+                                    data-field-title-name=""
+                                    data-field-placeholder-name="Введите Ваше имя"
+                                    data-field-placeholder-phone="Введите Ваш номер телефона"
+                                    data-custom-textarea-title=""
+                                    data-custom-textarea-placeholder="Ваш вопрос"
+                                >Записаться на бесплатную консультацию</a>
+                                                    <div class="slide_overlay"></div>
+                </div>
+            </div>
+                        <div class="index-slider-item">
+                <div style="background-image: url(/upload/iblock/197/banners_main2.jpg);">
+                                            <div class="index-slider-offer col-sm-12 col-md-8 col-lg-6">
+                            <div>
+                            <div class="title">Счастливые часы в ДенталГуру</div>
+                                                            <div class="text_big">У вас есть возможность получить скидку на лечение в клиниках &quot;Дентал Гуру&quot;. Запишитесь на прием на счастливые часы!</div>
+                                                                    <a class="btn small_btn" href="/restavratsiya-zubov/" target="_blank">Узнать больше</a>
+                                                                </div>
+                        </div>
+                                                        <a class="btn big_btn" href="/restavratsiya-zubov/" target="_blank">Узнать больше</a>
+                                                    <div class="slide_overlay"></div>
+                </div>
+            </div>
+            </div>
+     </div><div class="uslugi_index">
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col-lg-offset-1 col-lg-10">
+                <h2>Услуги клиники</h2>
+                <p>Профессиональная стоматология - это просто! Все врачи-стоматологи клиники Дентал Гуру обладают богатым опытом, имеют высокую профессиональную и научную квалификацию, длительный стаж клинической работы.</p>
+            </div>
+        </div>
+            <ul class="uslugi_index_list row">
+        <li class="col-vtop col-xxs-6 col-xs-4 col-lg-3">
+                <a href="/lechenie-zubov/">
+                    <span class="img" style="background-image: url(/upload/iblock/df8/icon_1_sprite.png);"></span>
+                    Лечение зубов                </a>
+            </li><li class="col-vtop col-xxs-6 col-xs-4 col-lg-3">
+                <a href="/implantatsiya-zubov/">
+                    <span class="img" style="background-image: url(/upload/iblock/1d3/icon_2_sprite.png);"></span>
+                    Имплантация зубов                </a>
+            </li><li class="col-vtop col-xxs-6 col-xs-4 col-lg-3">
+                <a href="/restavratsiya-zubov/">
+                    <span class="img" style="background-image: url(/upload/iblock/286/icon_3_sprite.png);"></span>
+                    Реставрация зубов                </a>
+            </li><li class="col-vtop col-xxs-6 col-xs-4 col-lg-3">
+                <a href="/otbelivanie-zubov/">
+                    <span class="img" style="background-image: url(/upload/iblock/cd1/icon_4_sprite.png);"></span>
+                    Отбеливание зубов                </a>
+            </li><li class="col-vtop col-xxs-6 col-xs-4 col-lg-3">
+                <a href="/protezirovanie-zubov/">
+                    <span class="img" style="background-image: url(/upload/iblock/844/icon_5_sprite.png);"></span>
+                    Протезирование зубов                </a>
+            </li><li class="col-vtop col-xxs-6 col-xs-4 col-lg-3">
+                <a href="/kostnaya-plastika/">
+                    <span class="img" style="background-image: url(/upload/iblock/017/icon_6_sprite.png);"></span>
+                    Костная пластика                </a>
+            </li><li class="col-vtop col-xxs-6 col-xs-4 col-lg-3">
+                <a href="/ispravlenie-prikusa/">
+                    <span class="img" style="background-image: url(/upload/iblock/b9c/icon_7_sprite.png);"></span>
+                    Исправление прикуса                </a>
+            </li><li class="col-vtop col-xxs-6 col-xs-4 col-lg-3">
+                <a href="/lechenie-kanalov-pod-mikroskopom/">
+                    <span class="img" style="background-image: url(/upload/iblock/485/icon_8_sprite.png);"></span>
+                    Лечение каналов под микроскопом                </a>
+            </li>    </ul>
+        </div>
+</div>
+<div class="container-fluid">
+<div class="spec_blocks spec_blocks_index">        <div class="spec_block_item">
+            <div class="col_img" style="background-image: url(/upload/iblock/32c/6.jpg);">   
+                <div class="spec_block_item_overlay"></div>
+                                    <div class="couter_spec" data-is-prolongate="Y" data-date-start="1476420960" data-cnt-days="3">
+                        <div class="col-vtop">
+                            <div class="couter_spec_title">До конца акции осталось:</div>
+                            <div class="counter_blocks"></div>
+                        </div>
+                    </div>
+                                </div><div class="col_info">
+                <div class="name">
+                    <a href="/protezirovanie-zubov/">Компьютерная томограмма всего</a>
+                </div>
+                <div class="price">
+                        за <span class="value">1&nbsp;900</span> <span class="icurrency">Р</span>
+                    </div><div class="anons">
+                        <b>При предъявлении купона.</b> В научно-исследовательской клинике «Дентал Гуру» используется компьютерный томограф последнего поколения Rayscan Symphony                    </div><a href="/protezirovanie-zubov/" class="btn btn_more">Узнать больше</a>                
+            </div>
+            <div class="clearfix"></div>
+        </div></div></div>
+<div class="o_klinike_index" style="background-image: url(/upload/iblock/b06/o_klinike_index.jpg);">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-offset-2 col-lg-8">
+                <h2>О клинике</h2>
+                <p class="o_klinike_text">В наше время все, что касается услуг в области стоматологии больше не вызывает у пациентов абсолютно никаких проблем и хлопот. Если пациент действительно будет соблюдать все рекомендации, полученные у наших профессионалов, то они на длительное время забудут о том, что у них когда-то были проблемы с зубами.</p>
+                <p>
+                    <a href="/nashi-kliniki/" class="btn">Узнать подробнее</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid"><div class="feedbacks_blocks feedbacks_blocks_index">        <div class="feedback_block_item">
+            <div class="col_info">
+                <div class="name">Семья Рыкуновых</div>
+                <div class="date_grade">
+                    <div class="col-vbottom date">17 августа 2016</div><div class="col-vbottom grade">
+                        <div class="fon">
+                            <div class="grade_item active"></div><div class="grade_item active"></div><div class="grade_item active"></div><div class="grade_item active"></div><div class="grade_item active"></div>                        </div>
+                    </div>                    
+                </div>
+                <p class="anons">
+                        Спасибо клинике Дентал Гуру, все сделали отлично и мне и моему сыну. А денег действительно хотелось бы поменьше отдавать)) Понятно конечно что не реально с таким качеством)                    </p>            </div><div class="col_img">   
+                <img src="/local/templates/main-responsive/img/nofoto2.png" alt="" />
+            </div>
+            <div class="clearfix"></div>
+        </div>        <div class="feedback_block_item">
+            <div class="col_info">
+                <div class="name">Иван Дёмин</div>
+                <div class="date_grade">
+                    <div class="col-vbottom date">09 августа 2016</div><div class="col-vbottom grade">
+                        <div class="fon">
+                            <div class="grade_item active"></div><div class="grade_item active"></div><div class="grade_item active"></div><div class="grade_item active"></div><div class="grade_item"></div>                        </div>
+                    </div>                    
+                </div>
+                <p class="anons">
+                        Хабиев конечно хорошо, но ждать 3 недели не смог, зуб болел сильно. Пошел к хирургу Аверьянову удалять. Поговорили, взяли кровь, удалили и даже установили имлантат на место удаленного и через час поехал домой, так до сих пор и не понял, боли не было потому что кровь взяли или у доктора рука легкая. Благодарю Вас! Через два месяца когда все заживет приеду на коронки.                    </p>            </div><div class="col_img">   
+                <img src="/local/templates/main-responsive/img/nofoto2.png" alt="" />
+            </div>
+            <div class="clearfix"></div>
+        </div>        <div class="feedback_block_item">
+            <div class="col_info">
+                <div class="name">Вероника</div>
+                <div class="date_grade">
+                    <div class="col-vbottom date">01 августа 2016</div><div class="col-vbottom grade">
+                        <div class="fon">
+                            <div class="grade_item active"></div><div class="grade_item active"></div><div class="grade_item active"></div><div class="grade_item active"></div><div class="grade_item active"></div>                        </div>
+                    </div>                    
+                </div>
+                <p class="anons">
+                        Перед приходом в Дентал Гуру был опыт неоднократного посещения недобросовестного посещения недобросовестных стоматологов, который заканчивался хорошей оплатой и плохим результатом. Пришла на консультацию к доктору Крым Айшат осмотрела, назначила лечение в течении 3 месяцев исправляла последствия моего так называемого предыдущего лечения, и не разу не опустилась до критики врачей, которые все это «сотворили». Спасибо доктору!                    </p>            </div><div class="col_img">   
+                <img src="/local/templates/main-responsive/img/nofoto2.png" alt="" />
+            </div>
+            <div class="clearfix"></div>
+        </div></div></div>    <div class="container-fluid worker_list_index_container">
+    <div class="text-center">
+        <h2>Наши специалисты</h2>
+    </div>
+    <div class="worker_list worker_list_index">
+        <div class="worker_item" onclick="location.href='/speczialistyi/khabiev-kamil-nailevich/'">
+                <a href="/speczialistyi/khabiev-kamil-nailevich/" class="img">
+                    <img src="/upload/resize_cache/iblock/d84/350_350_2/img_0847_edit480kh692.jpg" alt="Хабиев Камиль Наильевич" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/khabiev-kamil-nailevich/">    
+                            Хабиев<span>Камиль Наильевич</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Имплантолог                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/lysenko-andrey-anatolevich/'">
+                <a href="/speczialistyi/lysenko-andrey-anatolevich/" class="img">
+                    <img src="/upload/resize_cache/iblock/030/350_350_2/img_0153_edit.jpg" alt="Лысенко Андрей Анатольевич" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/lysenko-andrey-anatolevich/">    
+                            Лысенко<span>Андрей Анатольевич</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Имплантолог                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/ruzmetova-elmira-pulatovna/'">
+                <a href="/speczialistyi/ruzmetova-elmira-pulatovna/" class="img">
+                    <img src="/upload/resize_cache/iblock/c65/350_350_2/e8b6f8ba3221fb3ea5552feb16eb18d7.jpg" alt="Рузметова Эльмира Пулатовна" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/ruzmetova-elmira-pulatovna/">    
+                            Рузметова<span>Эльмира Пулатовна</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Стоматолог-терапевт                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/elizarova-natalya-leonidovna/'">
+                <a href="/speczialistyi/elizarova-natalya-leonidovna/" class="img">
+                    <img src="/upload/resize_cache/iblock/931/350_350_2/3832c782c15fcc374b3cfd283dd302b3.jpg" alt="Елизарова Наталья Леонидовна" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/elizarova-natalya-leonidovna/">    
+                            Елизарова<span>Наталья Леонидовна</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Стоматолог, специалист по эстетической реставрации                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/sarkisov-oleg-olegovich/'">
+                <a href="/speczialistyi/sarkisov-oleg-olegovich/" class="img">
+                    <img src="/upload/resize_cache/iblock/b90/350_350_2/fxk2vextnlm.jpg" alt="Саркисов Олег Олегович" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/sarkisov-oleg-olegovich/">    
+                            Саркисов<span>Олег Олегович</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Стоматолог-ортопед                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/kim-sergey-vyacheslavovich/'">
+                <a href="/speczialistyi/kim-sergey-vyacheslavovich/" class="img">
+                    <img src="/upload/resize_cache/iblock/d75/350_350_2/t2ah6xqyax4.jpg" alt="Ким Сергей Вячеславович" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/kim-sergey-vyacheslavovich/">    
+                            Ким<span>Сергей Вячеславович</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Стоматолог-ортопед                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/sidorov-vladimir-ivanovich/'">
+                <a href="/speczialistyi/sidorov-vladimir-ivanovich/" class="img">
+                    <img src="/upload/iblock/f8e/7.jpg" alt="Сидоров Владимир Иванович" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/sidorov-vladimir-ivanovich/">    
+                            Сидоров<span>Владимир Иванович</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Врач-стоматолог – ортопед                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/khvan-ekaterina-evgenevna/'">
+                <a href="/speczialistyi/khvan-ekaterina-evgenevna/" class="img">
+                    <img src="/upload/resize_cache/iblock/eca/350_350_2/khvan2.jpg" alt="Хван Екатерина Евгеньевна" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/khvan-ekaterina-evgenevna/">    
+                            Хван<span>Екатерина Евгеньевна</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Врач-ортодонт                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/vdovenko-vitaliy-viktorovich/'">
+                <a href="/speczialistyi/vdovenko-vitaliy-viktorovich/" class="img">
+                    <img src="/upload/resize_cache/iblock/5f9/350_350_2/0744_s.jpg" alt="Вдовенко Виталий Викторович" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/vdovenko-vitaliy-viktorovich/">    
+                            Вдовенко<span>Виталий Викторович</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Терапевт-эндодонтист                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/gugnina-elena-viktorovna/'">
+                <a href="/speczialistyi/gugnina-elena-viktorovna/" class="img">
+                    <img src="/upload/iblock/fa2/1233221.jpg" alt="Гугнина Елена Викторовна" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/gugnina-elena-viktorovna/">    
+                            Гугнина<span>Елена Викторовна</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Врач-ортодонт                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/malykhina-tatyana-mikhaylovna/'">
+                <a href="/speczialistyi/malykhina-tatyana-mikhaylovna/" class="img">
+                    <img src="/upload/resize_cache/iblock/609/350_350_2/img_4585.jpg" alt="Малыхина Татьяна Михайловна" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/malykhina-tatyana-mikhaylovna/">    
+                            Малыхина<span>Татьяна Михайловна</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Стоматолог-ортопед                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/kravtsov-andrey-anatolevich/'">
+                <a href="/speczialistyi/kravtsov-andrey-anatolevich/" class="img">
+                    <img src="/upload/resize_cache/iblock/cb1/350_350_2/w_6a8e232d_1_.jpg" alt="Кравцов Андрей Анатольевич" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/kravtsov-andrey-anatolevich/">    
+                            Кравцов<span>Андрей Анатольевич</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Хирург-имплантолог                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/grebnev-andrey-evgenevich/'">
+                <a href="/speczialistyi/grebnev-andrey-evgenevich/" class="img">
+                    <img src="/upload/iblock/243/13.jpg" alt="Гребнев Андрей Евгеньевич" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/grebnev-andrey-evgenevich/">    
+                            Гребнев<span>Андрей Евгеньевич</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Хирург-имплантолог                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/tkacheva-oksana-borisovna/'">
+                <a href="/speczialistyi/tkacheva-oksana-borisovna/" class="img">
+                    <img src="/upload/resize_cache/iblock/f85/350_350_2/1.jpg" alt="Ткачева Оксана Борисовна" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/tkacheva-oksana-borisovna/">    
+                            Ткачева<span>Оксана Борисовна</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Гигиенист                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/belousova-yuliya-andreevna/'">
+                <a href="/speczialistyi/belousova-yuliya-andreevna/" class="img">
+                    <img src="/upload/iblock/5e6/15.jpg" alt="Белоусова Юлия Андреевна" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/belousova-yuliya-andreevna/">    
+                            Белоусова<span>Юлия Андреевна</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Стоматолог-ортопед                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/papazyan-nare-avetikovna/'">
+                <a href="/speczialistyi/papazyan-nare-avetikovna/" class="img">
+                    <img src="/upload/iblock/e9b/16.jpg" alt="Папазян Наре Аветиковна" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/papazyan-nare-avetikovna/">    
+                            Папазян<span>Наре Аветиковна</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Стоматолог-терапевт                    </div>
+                </div>
+            </div><div class="worker_item" onclick="location.href='/speczialistyi/zaslavskiy-shostak-aleksandr-mikhaylovich/'">
+                <a href="/speczialistyi/zaslavskiy-shostak-aleksandr-mikhaylovich/" class="img">
+                    <img src="/upload/iblock/0e4/17.jpg" alt="Заславский-Шостак Александр Михайлович" />
+                </a>
+                <div class="info">
+                    <div class="name">
+                        <a href="/speczialistyi/zaslavskiy-shostak-aleksandr-mikhaylovich/">    
+                            Заславский-Шостак<span>Александр Михайлович</span>                        </a>
+                    </div>
+                    <div class="work">
+                        Челюстно-лицевой хирург                    </div>
+                </div>
+            </div>    </div></div>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-xxs-12 col-xs-5 col-sm-6 col_index_news">
+            <h2>Новости</h2>
+            <div class="news_index">        <div class="news_index_item">
+            <div class="date">06 мая 2016</div>
+            <div class="name"><a href="/novosti/6-kongress-dental-guru/">6 конгресс Дентал Гуру</a></div>
+        </div>        <div class="news_index_item">
+            <div class="date">01 апреля 2016</div>
+            <div class="name"><a href="/novosti/priglashenie-na-6-kongress-dental-guru-xii-kongress-megadzhen/">Приглашение на 6 конгресс Дентал Гуру (XII конгресс Мегаджен)</a></div>
+        </div>        <div class="news_index_item">
+            <div class="date">15 октября 2015</div>
+            <div class="name"><a href="/novosti/10-oktyabrya-2015-goda-sostoyalsya-5-mezhdunarodnyy-kongress-professionalnykh-implantologov-dental-guru/">10 октября 2015 года состоялся 5 международный конгресс профессиональных имплантологов Dental Guru</a></div>
+        </div>        <div class="news_index_item">
+            <div class="date">14 октября 2015</div>
+            <div class="name"><a href="/novosti/dental-guru-na-mezhdunarodnoy-vystavke-dental-ekspo/">Дентал Гуру на международной выставке Дентал Экспо</a></div>
+        </div></div>        </div>
+        <div class="col-xxs-12 col-xs-7 col-sm-6">
+                        <div class="video_index">
+            <div class="video_div" style="background-image: url(/upload/resize_cache/iblock/9b0/725_405_2/1.png);">
+                <span id="video_index" data-code="OmqSit3O80M" data-type=""></span>
+            </div>
+            <div class="name">
+                <a href="javascript:void(0)" onclick="$('#video_index').click()">Все об имплантации зубов. Рассказывает Хабиев Камиль Наильевич.</a>
+            </div>
+        </div>        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="index_calc">
+        <h2>Калькулятор стоимости имплантов</h2>
+        <div class="calc_selector">
+            <div class="legend l1">Верхняя правая</div>
+            <div class="legend l2">Верхняя левая</div>
+            <div class="legend l3">Нижняя правая</div>
+            <div class="legend l4">Нижняя левая</div>
+            <div class="calc_tooths">
+                <div class="top_right_1" data-nomer="1" data-pos-x="right" data-pos-y="top"></div>
+                <div class="top_right_2" data-nomer="2" data-pos-x="right" data-pos-y="top"></div>
+                <div class="top_right_3" data-nomer="3" data-pos-x="right" data-pos-y="top"></div>
+                <div class="top_right_4" data-nomer="4" data-pos-x="right" data-pos-y="top"></div>
+                <div class="top_right_5" data-nomer="5" data-pos-x="right" data-pos-y="top"></div>
+                <div class="top_right_6" data-nomer="6" data-pos-x="right" data-pos-y="top"></div>
+                <div class="top_right_7" data-nomer="7" data-pos-x="right" data-pos-y="top"></div>
+                
+                <div class="top_left_1" data-nomer="1" data-pos-x="left" data-pos-y="top"></div>
+                <div class="top_left_2" data-nomer="2" data-pos-x="left" data-pos-y="top"></div>
+                <div class="top_left_3" data-nomer="3" data-pos-x="left" data-pos-y="top"></div>
+                <div class="top_left_4" data-nomer="4" data-pos-x="left" data-pos-y="top"></div>
+                <div class="top_left_5" data-nomer="5" data-pos-x="left" data-pos-y="top"></div>
+                <div class="top_left_6" data-nomer="6" data-pos-x="left" data-pos-y="top"></div>
+                <div class="top_left_7" data-nomer="7" data-pos-x="left" data-pos-y="top"></div>
+                
+                <div class="bottom_right_1" data-nomer="1" data-pos-x="right" data-pos-y="bottom"></div>
+                <div class="bottom_right_2" data-nomer="2" data-pos-x="right" data-pos-y="bottom"></div>
+                <div class="bottom_right_3" data-nomer="3" data-pos-x="right" data-pos-y="bottom"></div>
+                <div class="bottom_right_4" data-nomer="4" data-pos-x="right" data-pos-y="bottom"></div>
+                <div class="bottom_right_5" data-nomer="5" data-pos-x="right" data-pos-y="bottom"></div>
+                <div class="bottom_right_6" data-nomer="6" data-pos-x="right" data-pos-y="bottom"></div>
+                <div class="bottom_right_7" data-nomer="7" data-pos-x="right" data-pos-y="bottom"></div>
+                
+                <div class="bottom_left_1" data-nomer="1" data-pos-x="left" data-pos-y="bottom"></div>
+                <div class="bottom_left_2" data-nomer="2" data-pos-x="left" data-pos-y="bottom"></div>
+                <div class="bottom_left_3" data-nomer="3" data-pos-x="left" data-pos-y="bottom"></div>
+                <div class="bottom_left_4" data-nomer="4" data-pos-x="left" data-pos-y="bottom"></div>
+                <div class="bottom_left_5" data-nomer="5" data-pos-x="left" data-pos-y="bottom"></div>
+                <div class="bottom_left_6" data-nomer="6" data-pos-x="left" data-pos-y="bottom"></div>
+                <div class="bottom_left_7" data-nomer="7" data-pos-x="left" data-pos-y="bottom"></div>
+                
+            </div>
+        </div>
+        <h3>Рассчитать стоимость имплантов просто.</h3>
+        <p>Достаточно выбрать на схеме отсутствующие зубы и указать контакты. На схеме 28 зубов, нет «зубов мудрости»</p>
+        <div class="customFormContainer" 
+            data-params="YNYN-NNYN" 
+            data-form-code="index_calc" 
+            data-title=""
+            data-service-form-name="Расчет стоимости имплантов на главной странице" 
+            data-text="" 
+            data-btn-text="Рассчитать стоимость"
+            data-success-text="Ваша заявка успешно принята!"
+            data-field-title-name=""
+            data-field-title-phone="" 
+            data-field-placeholder-name="Представьтесь пожалуйста"
+            data-field-placeholder-phone="Ваш контактный телефон"
+        ></div>
+        <p class="after_form">Мы перезвоним Вам с расчетом стоимости установки имплантов.</p>        
+    </div>
+</div>
+    <div class="container-fluid ">
+        <div class="index_bottom_text">
+            <h2 style="text-align: center;">Стоматология в Дентал Гуру</h2>
+<p>Стоматология «Дентал Гуру» выполняет полный комплекс лечения проблем полости рта. Врачи нашей клиники являются настоящими профессионалами своего дела, именно поэтому они помогут вам разрешить любую, даже самую сложную стоматологическую задачу. </p>
+<p>В нашей клинике вы сможете пройти весь путь восстановления ваших зубов шаг за шагом: начиная от ликвидации кариеса, и заканчивая имплантологией, моделированием и созданием белоснежной улыбки. Доверьтесь нам – и «голливудская улыбка» станет для вас не просто картинкой из журнала, а повседневной реальностью!</p>        </div>
+    </div>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-6 col-xs-push-6 col_index_zvezda">
+            <div class="index_zvezda">
+                <div class="index_zvezda_foto" style="background-image: url(/upload/resize_cache/iblock/6b3/500_500_2/borodiba_1.jpg);"></div>
+                <div class="index_zvezda_info">
+                    <h2>Звезды нам доверяют</h2>
+                    <img class="index_zvezda_foto_img" src="/upload/resize_cache/iblock/6b3/500_500_2/borodiba_1.jpg" alt="" />
+                    <p>Хочу выразить огромную благодарность Камилю Наильвиечу. Он самый лучший специалист в своем таком непростом деле!!!  <br /><br />Горжусь своей улыбкой благодаря ему!!!</p>
+                    <div class="row avtor_name">
+                        <div class="col-vmid col-xs-6">
+                            Ксения Бородина,                            <span>артист, телеведущая</span>
+                        </div><div class="col-vmid col-xs-6">
+                            <img src="/upload/iblock/2bd/rasp.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-xs-pull-6 col_index_voprosy">
+            <div class="index_voprosy">
+                <h2>Остались вопросы?</h2>
+                <p>Оставьте нам свой телефон и мы перезвоним Вам в течение 2-х часов.</p>
+                <div class="customFormContainer" 
+                    data-params="YNYN-NNYN" 
+                    data-form-code="index_voprosy" 
+                    data-title=""
+                    data-service-form-name="Вопрос с главной страницы" 
+                    data-text="" 
+                    data-btn-text="Оставить заявку"
+                    data-success-text="Ваша заявка успешно принята!"
+                    data-field-title-name=""
+                    data-field-title-phone="" 
+                    data-field-placeholder-name="Представьтесь пожалуйста"
+                    data-field-placeholder-phone="Ваш контактный телефон"
+                ></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="index_map">
+    <div class="map_info">
+        <div class="index_map_item" data-img="/upload/resize_cache/iblock/e06/200_999_1/pokrovka.jpg" data-map="55.762664962272,37.652587126984" data-metro-list="м. Курская**55.758723, 37.659577**55.758609, 37.659717**55.758394, 37.659280**55.758456, 37.658945**55.758456, 37.657551**55.761091, 37.657425**55.762492, 37.657010**55.763253, 37.656703**55.764045, 37.656108**55.763641, 37.655097**55.763289, 37.654357**55.762725, 37.653234**55.762546, 37.652915**;м. Красные Ворота**55.769080, 37.649100**55.768969, 37.648987**55.768700, 37.649768**55.768544, 37.649442**55.768391, 37.649825**55.768171, 37.650193**55.766975, 37.651990**55.765762, 37.653795**55.764976, 37.654937**55.764050, 37.656098**55.764045, 37.656108**55.763641, 37.655097**55.763289, 37.654357**55.762725, 37.653234**55.762546, 37.652915;м. Чистые пруды**55.764914, 37.638363**55.764737, 37.638878**55.764802, 37.639077**55.764808, 37.639326**55.764575, 37.639855**55.763603, 37.641917**55.762438, 37.644170**55.762407, 37.644216**55.762275, 37.644387**55.761408, 37.645325**55.760898, 37.645872**55.761052, 37.646425**55.761749, 37.648034**55.761858, 37.648796**55.762012, 37.649278**55.761623, 37.649836**55.761882, 37.650426**55.761680, 37.650711**55.762078, 37.651242**55.761843, 37.651725**55.762404, 37.652631**55.762546, 37.652915">
+            <div class="phone"><a href="tel:+7-495-649-1717"><span>+7 495</span> 649-17-17</a></div>
+            <div class="addr">
+                <div>г. Москва,</div>
+                <span>ул.Покровка, д.43, стр.2</span>
+            </div>
+                            <div class="metro">5 мин от м. Курская, Красные ворота</div>
+                            <div class="email hidden"><a href="mailto:pokrovka@dentalguru.ru">pokrovka@dentalguru.ru</a></div>
+        </div><div class="index_map_item" data-img="/upload/resize_cache/iblock/95e/200_999_1/tsvetnoy.jpeg" data-map="55.767899979476,37.624259313491" data-metro-list="м. Цветной бульвар**55.771676, 37.620701**55.771675, 37.621114**55.770288, 37.621117**55.770297, 37.622329**55.769265, 37.622542**55.769179, 37.622967**55.768690, 37.624527**55.767899, 37.624093;м. Трубная**55.767800, 37.621907**55.767752, 37.622009**55.767650, 37.621939**55.767484, 37.621923**55.767379, 37.622223**55.767274, 37.622126**55.767034, 37.623643**55.767899, 37.624093">
+            <div class="phone"><a href="tel:+7-495-649-1770"><span>+7 495</span> 649-17-70</a></div>
+            <div class="addr">
+                <div>г. Москва,</div>
+                <span>Колокольников пер., д.2</span>
+            </div>
+                            <div class="metro">5 мин от м. Цветной бульвар и Сухаревская</div>
+                            <div class="email hidden"><a href="mailto:1@1.ru">1@1.ru</a></div>
+        </div>    </div>
+    <div id="index_map"></div>
+</div>
+</div>
+<div class="clearfix"></div>
+</main>
+</div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-vmid col-xs-12 col-sm-6 col-md-4">© 2016 ООО «НИК Дентал Гуру»</div><!--
+                --><div class="col-vmid hidden-xs hidden-sm col-md-4 text-center col_find_error">
+                    Нашли ошибку в тексте?<br />Выделите и нажмите CTRL+ENTER
+                </div><!--
+                --><div class="col-vmid col-xs-12 col-sm-6 col-md-4 col_logos">
+                    <a href="#" target="_blank">
+                        <img src="/upload/logo1.png" alt="" />
+                        Дизайн,<br />продвижение
+                    </a>
+                    <a href="http://ameton.ru" target="_blank">
+                        <img src="/upload/logo2.png" alt="" />
+                        Верстка,<br />программинг
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <!--[if lt IE 9]><script data-skip-moving="true" src="/local/templates/main-responsive/js/html5shiv.js"></script><script data-skip-moving="true" src="/local/templates/main-responsive/js/respond.min.js"></script><![endif]-->
+<!--[if IE]><script data-skip-moving="true" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script data-skip-moving="true">var IS_GADGET=0, IS_PHONE=0, IS_TABLET=0;</script>
+<script data-skip-moving="true" src="/minify_bx/?t=main-responsive&amp;g=js&amp;v=15"></script>
+    <link type="text/css" rel="stylesheet" href="/local/templates/main-responsive/css/anim.css" property='stylesheet' />
+    <style>
+        .uslugi_index_list a:hover .img {
+            -webkit-animation: index_uslugi_animation 1.1s steps(38)infinite;
+            animation: index_uslugi_animation 1.1s steps(38)infinite;
+        }
+    </style>
+    
+<!-- Yandex.Metrika counter -->
+<noscript><div><img src="https://mc.yandex.ru/watch/40222859" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Rating@Mail.ru counter -->
+<noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=2827113;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'','SERVER_TIME':'1477471452','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'2289e8cb0373f5ec97fa657f1cdf7479'});</script><script type="text/javascript" src="/bitrix/cache/js/s1/main-responsive/kernel_main/kernel_main.js?1477066438269063"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js?147616484773480','/bitrix/js/main/core/core_ajax.js?147616484721031','/bitrix/js/main/json/json2.min.js?14761648483467','/bitrix/js/main/core/core_ls.js?14761648477365','/bitrix/js/main/session.js?14761648482511','/bitrix/js/main/core/core_window.js?147616484774754','/bitrix/js/main/core/core_popup.js?147616484729812','/bitrix/js/main/core/core_date.js?147616484734241','/bitrix/js/main/utils.js?147616484819858']); </script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css?14761648472854','/bitrix/js/main/core/css/core_popup.css?147616484729699','/bitrix/js/main/core/css/core_date.css?14761648479657','/bitrix/js/altasib.errorsend/css/window.css?14761648454771','/local/templates/main-responsive/styles.css?14769881873961']); </script>
+<script type="text/javascript">
+var ALXerrorLogoImgSrc='/bitrix/images/altasib.errorsend/altasib.errorsend.png';
+var ALXerrorSendMessages={
+	'head':'Найденная Вами ошибка в тексте',
+	'footer':'<b>Послать сообщение об ошибке автору?</b><br/><span style="font-size:10px;color:#7d7d7d">(ваш браузер останется на той же странице)</span>',
+	'comment':'Комментарий для автора (необязательно)',
+	'TitleForm':'Сообщение об ошибке',
+	'ButtonSend':'Отправить',
+	'LongText':'Вы выбрали слишком большой объем текста.',
+	'LongText2':'Попробуйте ещё раз.',
+	'text_ok':'Ваше сообщение отправлено.',
+	'text_ok2':'Спасибо за внимание!'
+}
+</script>
+<script type='text/javascript' async src='/bitrix/js/altasib.errorsend/error.js'></script>
+
+
+
+<script type="text/javascript">
+bxSession.Expand(1440, '2289e8cb0373f5ec97fa657f1cdf7479', false, '2dedfbd7b528e8b75be3881b4e3572d5');
+</script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "23ddb0836dacf6e7c9098c457291fde3"]); _ba.push(["host", "www.dentalgu.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW1OZ1XIMmLBgSWuJNM42vh0DiZzXf5f4"></script>
+<script type="text/javascript">(function(w,doc) {
+if (!w.__utlWdgt ) {
+    w.__utlWdgt = true;
+    var d = doc, s = d.createElement('script'), g = 'getElementsByTagName';
+    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+    s.src = ('https:' == w.location.protocol ? 'https' : 'http')  + '://w.uptolike.com/widgets/v1/uptolike.js';
+    var h=d[g]('body')[0];
+    h.appendChild(s);
+}})(window,document);
+</script>
+<script>
+var successRequestTitle='Ваш заявка успешно отправлена!';
+var successRequestBody='Ожидайте звонка, наш специалист перезвонит Вам в ближайшее время! Спасибо за обращение!';
+var successRequestTitleOtzyv='Спасибо за Ваш отзыв!';
+var successRequestBodyOtzyv='Ваш отзыв будет опубликован после модерации!';
+var themesTicket='Запись на приём<br />Консультация специалиста<br />Лечение кариеса<br />Имплантация<br />Реставрация<br />Протезирование<br />Отбеливание<br />Исправление прикуса';
+</script>
+
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter40222859 = new Ya.Metrika({
+                    id:40222859,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-85716534-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "2827113", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script></body>
+</html>  

@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<title>ÐÐµÑÐµÐ²Ð¾Ð´ Ð¿Ð¾Ð´ ÐºÐ»ÑÑ</title>
+	  <link href="favicon.ico.png"  rel="shortcut icon" type="favicon.icon" />
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css"  media="screen" />
+	
+	
+	
+	<script type="text/javascript" src="comm.js" ></script>
+	<script type="text/javascript" src="JsHttpRequest.js" ></script>
+	
+	
+	
+	<script type="text/javascript" src="script/jquery-1.7.2.min.js" ></script>
+	<script type="text/javascript" src="script/jquery.cookie.js" ></script>
+	<script type="text/javascript" src="script/script.js" ></script>
+
+	<script type="text/javascript" src="script/jquery-1.js" ></script>
+	<script type="text/javascript" src="script/tools.js" ></script>
+	<link rel="stylesheet" href="script/style.css"  type="text/css">
+	<script type="text/javascript" async="" src="script/watch.js" ></script>
+	<script type="text/javascript" src="script/jquery.cookie.js" ></script>
+	
+		<script type="text/javascript" src="jquery.validate.pack.js" ></script>
+	
+	
+
+		
+	<!-- Add fancyBox -->
+	<script type="text/javascript">
+	var myDate = new Date();
+	function returnEndDate(d,h,m){
+		myDate.setDate(myDate.getDate()+d);
+		myDate.setHours(myDate.getHours()+h);
+		myDate.setMinutes(myDate.getMinutes()+m);
+		return myDate;
+	}
+	if($.cookie("timer")){
+		var dateEnd = $.cookie("timer");
+	}else{
+		var dateEnd = returnEndDate(2,0,0);
+		$.cookie("timer", dateEnd, {expires: 2});
+	}
+	</script>
+	<script type="text/javascript" src="fancybox/jquery-1.3.2.min.js" ></script>
+	<script type="text/javascript" src="fancybox/jquery.easing.1.3.js" ></script>
+	<script type="text/javascript" src="fancybox/jquery.fancybox-1.2.1.pack.js" ></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("a.gallery, a.iframe").fancybox();
+		
+url = $("a.modalbox").attr('href').replace("for_spider","content2");
+$("a.modalbox").attr("href", url);	
+$("a.modalbox").fancybox(
+{								  
+			"frameWidth" : 400,	 
+			"frameHeight" : 400 
+								  
+});
+
+			$("a.gallery2").fancybox(
+			{						
+"padding" : 20, // Ð¾ÑÑÑÑÐ¿ ÐºÐ¾Ð½ÑÐµÐ½ÑÐ° Ð¾Ñ ÐºÑÐ°ÐµÐ² Ð¾ÐºÐ½Ð°
+"imageScale" : false, // ÐÑÐ¸Ð½Ð¸Ð¼Ð°ÐµÑ Ð·Ð½Ð°ÑÐµÐ½Ð¸Ðµ true - ÐºÐ¾Ð½ÑÐµÐ½Ñ(Ð¸Ð·Ð¾Ð±ÑÐ°Ð¶ÐµÐ½Ð¸Ñ) Ð¼Ð°ÑÑÑÐ°Ð±Ð¸ÑÑÐµÑÑÑ Ð¿Ð¾ ÑÐ°Ð·Ð¼ÐµÑÑ Ð¾ÐºÐ½Ð°, Ð¸Ð»Ð¸ false - Ð¾ÐºÐ½Ð¾ Ð²ÑÑÑÐ³Ð¸Ð²Ð°ÐµÑÑÑ Ð¿Ð¾ ÑÐ°Ð·Ð¼ÐµÑÑ ÐºÐ¾Ð½ÑÐµÐ½ÑÐ°. ÐÐ¾ ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ - TRUE
+			"zoomOpacity" : false,	// Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ðµ Ð¿ÑÐ¾Ð·ÑÐ°ÑÐ½Ð¾ÑÑÐ¸ ÐºÐ¾Ð½ÑÐµÐ½ÑÐ° Ð²Ð¾ Ð²ÑÐµÐ¼Ñ Ð°Ð½Ð¸Ð¼Ð°ÑÐ¸Ð¸ (Ð¿Ð¾ ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ false)
+			"zoomSpeedIn" : 1000,	// ÑÐºÐ¾ÑÐ¾ÑÑÑ Ð°Ð½Ð¸Ð¼Ð°ÑÐ¸Ð¸ Ð² Ð¼Ñ Ð¿ÑÐ¸ ÑÐ²ÐµÐ»Ð¸ÑÐµÐ½Ð¸Ð¸ ÑÐ¾ÑÐ¾ (Ð¿Ð¾ ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ 0)
+			"zoomSpeedOut" : 1000,	// ÑÐºÐ¾ÑÐ¾ÑÑÑ Ð°Ð½Ð¸Ð¼Ð°ÑÐ¸Ð¸ Ð² Ð¼Ñ Ð¿ÑÐ¸ ÑÐ¼ÐµÐ½ÑÑÐµÐ½Ð¸Ð¸ ÑÐ¾ÑÐ¾ (Ð¿Ð¾ ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ 0)
+			"zoomSpeedChange" : 1000, // ÑÐºÐ¾ÑÐ¾ÑÑÑ Ð°Ð½Ð¸Ð¼Ð°ÑÐ¸Ð¸ Ð² Ð¼Ñ Ð¿ÑÐ¸ ÑÐ¼ÐµÐ½Ðµ ÑÐ¾ÑÐ¾ (Ð¿Ð¾ ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ 0)
+			"frameWidth" : 700,	 // ÑÐ¸ÑÐ¸Ð½Ð° Ð¾ÐºÐ½Ð°, px (425px - Ð¿Ð¾ ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ)
+			"frameHeight" : 600, // Ð²ÑÑÐ¾ÑÐ° Ð¾ÐºÐ½Ð°, px(355px - Ð¿Ð¾ ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ)
+			"overlayShow" : true, // ÐµÑÐ»Ð¸ true Ð·Ð°ÑÐµÐ½ÑÑÑ ÑÑÑÐ°Ð½Ð¸ÑÑ Ð¿Ð¾Ð´ Ð²ÑÐ¿Ð»ÑÐ²Ð°ÑÑÐ¸Ð¼ Ð¾ÐºÐ½Ð¾Ð¼. (Ð¿Ð¾ ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ true). Ð¦Ð²ÐµÑ Ð·Ð°Ð´Ð°ÐµÑÑÑ Ð² jquery.fancybox.css - div#fancy_overlay 
+			"overlayOpacity" : 0.8,	 // ÐÑÐ¾Ð·ÑÐ°ÑÐ½Ð¾ÑÑÑ Ð·Ð°ÑÐµÐ½ÐµÐ½Ð¸Ñ 	(0.3 Ð¿Ð¾ ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ)
+			"hideOnContentClick" :false, // ÐÑÐ»Ð¸ TRUE  Ð·Ð°ÐºÑÑÐ²Ð°ÐµÑ Ð¾ÐºÐ½Ð¾ Ð¿Ð¾ ÐºÐ»Ð¸ÐºÑ Ð¿Ð¾ Ð»ÑÐ±Ð¾Ð¹ ÐµÐ³Ð¾ ÑÐ¾ÑÐºÐµ (ÐºÑÐ¾Ð¼Ðµ ÑÐ»ÐµÐ¼ÐµÐ½ÑÐ¾Ð² Ð½Ð°Ð²Ð¸Ð³Ð°ÑÐ¸Ð¸). ÐÐ¾ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ TRUE		
+			"centerOnScroll" : false // ÐÑÐ»Ð¸ TRUE Ð¾ÐºÐ½Ð¾ ÑÐµÐ½ÑÑÐ¸ÑÑÐµÑÑÑ Ð½Ð° ÑÐºÑÐ°Ð½Ðµ, ÐºÐ¾Ð³Ð´Ð° Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»Ñ Ð¿ÑÐ¾ÐºÑÑÑÐ¸Ð²Ð°ÐµÑ ÑÑÑÐ°Ð½Ð¸ÑÑ		
+				
+			});
+		
+		$("#menu a, .anim").hover( function() {
+      $(this).animate({"paddingLeft" : "10px"}, 300)},
+	  function() {$(this).animate({"paddingLeft" : "0"}, 300);
+});
+
+$("a.iframe").fancybox(
+{								  
+			"frameWidth" : 800,	 // ÑÐ¸ÑÐ¸Ð½Ð° Ð¾ÐºÐ½Ð°, px (425px - Ð¿Ð¾ ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ)
+			"frameHeight" : 400 // Ð²ÑÑÐ¾ÑÐ° Ð¾ÐºÐ½Ð°, px(355px - Ð¿Ð¾ ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ)
+								  
+});
+
+		
+		});
+	</script>
+
+</head>
+ 
+
+<body>
+	<div class="top1">
+		<div class="top-1">
+		<table class="head1">
+			<tr>
+				<td width="450"><img src="images/logo2.png"  align="left" style="margin-right:5px"/><p style="font-size:25px; margin-top:17px; font-weight:900">ÐÐµÑÐµÐ²Ð¾Ð´ "Ð¿Ð¾Ð´ ÐºÐ»ÑÑ"</p></td>
+				<td width="250"> </td>
+				<td width="280"><p style="font-size:25px; margin-top:10px; font-weight:100; margin-bottom:8px; text-decoration:none; color:#000000" class="telephone">+7 (495) 369-35-18</p><a class="iframe"  href="zvonok.html" ><img src="images/zvonok.png"  class="knopka"/></a></td>
+			</tr>
+		</table>
+		<h1>ÐÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½ÑÐ¹ Ð¿ÐµÑÐµÐ²Ð¾Ð´</h1>
+		
+		
+		
+		
+		
+		<!-----top---->
+		<div>
+	
+	<table class="kontaktih">
+	<tr>
+	<td width="690" valign="top">
+		<h2>ÐÐºÑÐ¸Ñ!</h2>
+		<p>Ð¡ÐºÐ¸Ð´ÐºÐ° 10%<br />
+		Ð½Ð° Ð¿Ð¾ÑÐ»ÐµÐ´ÑÑÑÐ¸Ð¹ Ð·Ð°ÐºÐ°Ð·<br /> <b>Ð² Ð¿Ð¾Ð´Ð°ÑÐ¾Ðº.</b></p>
+	</td>
+	<td width="300">
+		<!-----forma---->
+		<div class="form0">
+			<h5>ÐÐ°Ð¿Ð¾Ð»Ð½Ð¸ÑÐµ Ð·Ð°ÑÐ²ÐºÑ<br />Ð¿ÑÑÐ¼Ð¾ ÑÐµÐ¹ÑÐ°Ñ</h5>
+				
+<iframe src="zakaz1.html"  width="91%" height="230" frameborder="1"> </iframe>
+		</div>
+		<!------end forma----->
+	</td>
+	</tr>
+	</table>
+	</div>
+		<!------end top----->
+		
+		
+		
+		
+		
+		
+		
+		</div>
+	
+	</div>
+		<!-------actsia-------->
+		<div class="top3 time">
+		<table>
+		<tr>
+		<td><h2>ÐÐ¾ Ð¾ÐºÐ¾Ð½ÑÐ°Ð½Ð¸Ñ Ð°ÐºÑÐ¸Ð¸ Ð¾ÑÑÐ°Ð»Ð¾ÑÑ:</h2></td>
+		<td>
+		<!---------------timer------>
+		<div class="timer_wrap">
+					<div class="day">
+						<p class="day0">0</p>
+						<p class="day1">0</p>
+					</div>
+					<div class="razd"></div>
+					<div class="hour">
+						<p class="hour0">0</p>
+						<p class="hour1">0</p>
+					</div>
+					<div class="razd"></div>
+					<div class="min">
+						<p class="min0" style="margin-top: 0px; opacity: 1;">0</p>
+						<p class="min1" style="margin-top: 0px; opacity: 1;">0</p>
+					</div>
+					<div class="razd"></div>
+					<div class="sec">
+						<p class="sec0" style="margin-top: 0px; opacity: 1;">0</p>
+						<p class="sec1" style="margin-top: 0px; opacity: 1;">0</p>
+					</div>
+				</div>
+<!---------------/timer------>	
+		</td>
+		</tr>
+		</table>
+		</div>
+	<!-------vigoda-------->
+	<div class="top2">
+		<table class="arial vigoda">
+			<tr valign="top">
+			<td>
+				<img src="images/garant.png" />
+				<h4>100% Ð³Ð°ÑÐ°Ð½ÑÐ¸Ñ ÑÑÐ¾ÐºÐ¾Ð²</h4>
+			</td>
+			<td>
+			<img src="images/rezult.png"  />
+				<h4>1400 ÑÐµÐ°Ð»Ð¸Ð·Ð¾Ð²Ð°Ð½Ð½ÑÑ Ð¿ÑÐ¾ÐµÐºÑÐ¾Ð² Ð·Ð° 2015 Ð³Ð¾Ð´</h4>
+			</td>
+			<td>
+			<img src="images/smeta.png"  />
+				<h4>ÐÑÐ¾Ð·ÑÐ°ÑÐ½Ð°Ñ ÑÐ¸ÑÑÐµÐ¼Ð° ÑÐ¾ÑÐ¼Ð¸ÑÐ¾Ð²Ð°Ð½Ð¸Ñ ÑÐµÐ½Ñ</h4>
+			</td>
+			<td>
+			<img src="images/hand.png"  />
+				<h4>ÐÑÑÐ¾ÐºÐ¾Ðµ ÐºÐ°ÑÐµÑÑÐ²Ð¾ ÑÐ°Ð±Ð¾ÑÑ</h4>
+			</td>
+			</tr>
+		</table>
+	</div>
+	<!---------problemi 90------------->
+	<div class="top2">
+			<h1>ÐÑÐ¾Ð±Ð»ÐµÐ¼Ñ, Ñ ÐºÐ¾ÑÐ¾ÑÑÐ¼Ð¸ ÑÑÐ°Ð»ÐºÐ¸Ð²Ð°ÑÑÑÑ 90% ÐºÐ»Ð¸ÐµÐ½ÑÐ¾Ð²</h1>
+			<div class="top-2">
+			<ul class="list">
+				<li><img src="images/trouble.png"  align="left" /><b>1. ÐÑÑÐ¾ ÑÑÑÐ²Ð°ÐµÑ ÑÑÐ¾ÐºÐ¸. </b><p>Ð ÑÐµÐ·ÑÐ»ÑÑÐ°ÑÐµ ÑÐ°ÐºÐ¸Ñ ÑÐ°Ð±Ð¾Ñ Ð²Ñ ÑÐµÑÑÐµÑÐµ ÑÐ²Ð¾Ð¸ Ð´ÐµÐ½ÑÐ³Ð¸ Ð¸ Ð²ÑÐµÐ¼Ñ</p></li>
+				<li><img src="images/trouble.png"  align="left" /><b>3. ÐÐµÐ°Ð´ÐµÐºÐ²Ð°ÑÐ½Ð°Ñ ÑÐµÐ½Ð°. </b><p>ÐÐ°ÑÐ°ÑÑÑÑ Ð±ÑÑÐ¾ Ð¸ÑÐºÑÑÑÑÐ²ÐµÐ½Ð½Ð¾ Ð·Ð°Ð½Ð¸Ð¶Ð°ÑÑ ÑÐµÐ½Ñ, Ð¿ÑÐ¸Ð²Ð»ÐµÐºÐ°Ñ Ðº ÑÐµÐ±Ðµ ÐºÐ»Ð¸ÐµÐ½ÑÐ°, Ð¸ Ð½Ðµ Ð²ÑÐ¿Ð¾Ð»Ð½ÑÐµÑ ÑÐ²Ð¾Ð¸Ñ Ð¾Ð±ÑÐ·Ð°ÑÐµÐ»ÑÑÑÐ² Ð¿ÐµÑÐµÐ´ Ð½Ð¸Ð¼.</p></li>
+				<li><img src="images/trouble.png"  align="left" /><b>4. ÐÐµÐºÐ²Ð°Ð»Ð¸ÑÐ¸ÑÐ¸ÑÐ¾Ð²Ð°Ð½Ð½ÑÐ¹ Ð¿ÐµÑÑÐ¾Ð½Ð°Ð». </b><p>Ð ÑÐµÐ»ÑÑ ÑÐºÐ¾Ð½Ð¾Ð¼Ð¸Ð¸, Ð´Ð»Ñ Ð²ÑÐ¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ Ð¿ÐµÑÐµÐ²Ð¾Ð´Ð°, Ð¾ÑÐ³Ð°Ð½Ð¸Ð·Ð°ÑÐ¸Ð¸ Ð¿ÑÐ¸Ð²Ð»ÐµÐºÐ°ÑÑ Ð½Ðµ Ð¾Ð±ÑÑÐµÐ½Ð½ÑÐ¹ Ð´Ð¾Ð»Ð¶Ð½ÑÐ¼ Ð¾Ð±ÑÐ°Ð·Ð¾Ð¼ Ð¿ÐµÑÑÐ¾Ð½Ð°Ð».</p></li>
+				<li><img src="images/trouble.png"  align="left" /><b>5. ÐÐ¸Ð´Ð°ÑÑ. </b><p>ÐÑÐµÐ´Ð»Ð°Ð³Ð°ÑÑ Ð½ÐµÐ°Ð´ÐµÐºÐ²Ð°ÑÐ½Ð¾ Ð½Ð¸Ð·ÐºÐ¾Ðµ Ð¿Ð¾ ÑÐµÐ½Ðµ Ð¿ÑÐµÐ´Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ, Ð±ÐµÑÑÑ Ð¿ÑÐµÐ´Ð¾Ð¿Ð»Ð°ÑÑ Ð¸ Ð¿ÑÐ¾Ð¿Ð°Ð´Ð°ÑÑ.</p></li>
+			
+			</ul>
+			</div>
+	</div>
+	<!-------kak mi rabotaem-------->
+	<div class="top4">
+	<h1>ÐÐ°Ðº Ð¼Ñ ÑÐ°Ð±Ð¾ÑÐ°ÐµÐ¼</h1>
+	<img src="images/work.png"  />
+	</div>
+	<!-------otzivi-------->
+	<div class="top4"  style="padding-bottom:50px; border-bottom:1px solid #222222">
+	<h1>ÐÑÐ·ÑÐ²Ñ ÐºÐ»Ð¸ÐµÐ½ÑÐ¾Ð²</h1>
+		<table class="otzivi" cellspacing="0" cellpadding="20">
+		<tr valign="top">
+			<td>
+			<div class="ava"><img src="images/ava1.jpg" /></div>
+			<h5>Ð Ð¾Ð¼Ð°Ð½ ÐÐ°ÑÐ¸Ð»ÑÐµÐ², Ð³. ÐÐ¾ÑÐºÐ²Ð°</h5>
+			<p>ÐÐ¾Ð»ÑÑÐ¾Ðµ ÑÐ¿Ð°ÑÐ¸Ð±Ð¾, Ð¾ÑÐµÐ½Ñ Ð²ÑÑÑÑÐ¸Ð»Ð¸. ÐÐµÑÐµÐ²Ð¾Ð´ Ð¿ÑÐ¸Ð½ÑÐ»Ð¸ Ð² Ð¿Ð¾ÑÐ¾Ð»ÑÑÑÐ²Ðµ Ð±ÐµÐ· Ð²ÑÑÐºÐ¸Ñ Ð¿ÑÐ¾Ð±Ð»ÐµÐ¼. ÐÑÐµ ÑÐ°Ð· ÑÐ¿Ð°ÑÐ¸Ð±Ð¾. </p>
+
+			</td>
+			
+			<td>
+			<div class="ava"><img src="images/ava2.jpg" /></div>
+			<h5>ÐÑÐ¸ÑÑÐ¸Ð½Ð°, Ð³. ÐÐ¾ÑÐºÐ²Ð°</h5>
+			<p>ÐÐ°ÑÐ° ÑÐ¸ÑÐ¼Ð° Ð¸ ÑÐ¾ÑÑÑÐ´Ð½Ð¸ÐºÐ¸ ÐºÐ¾ÑÐ¾ÑÑÐµ Ð² Ð½ÐµÐ¹ ÑÐ°Ð±Ð¾ÑÐ°ÑÑ Ð¿ÑÐ¾Ð¸Ð·Ð²ÐµÐ»Ð¸ Ð½Ð° Ð¼ÐµÐ½Ñ ÐÐ§ÐÐÐ¬ ÑÐ¾ÑÐ¾ÑÐµÐµ Ð²Ð¿ÐµÑÐ°ÑÐ»ÐµÐ½Ð¸Ðµ! ÐÐ¾Ð»ÑÑÐ¾Ðµ Ð²Ð°Ð¼ ÑÐ¿Ð°ÑÐ¸Ð±Ð¾ Ð·Ð° Ð¾ÐºÐ°Ð·Ð°Ð½Ð½ÑÐµ ÑÑÐ»ÑÐ³Ð¸. </p>
+			
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+			<div class="ava"><img src="images/ava3.jpg" /></div>
+			<h5>ÐÐ»Ð°Ð´Ð¸Ð¼Ð¸Ñ, Ð³. ÐÐµÐ»ÐµÐ½Ð¾Ð³ÑÐ°Ð´</h5>
+			<p>Ð¯ Ð·Ð°ÐºÐ°Ð·ÑÐ²Ð°Ð» ÑÐ¿ÑÐ°Ð²ÐºÐ¸ Ð¾ Ð½ÐµÑÑÐ´Ð¸Ð¼Ð¾ÑÑÐ¸ Ð² Ð£ÐºÑÐ°Ð¸Ð½Ðµ Ð¸ Ð·Ð°Ð²ÐµÑÐµÐ½Ð½ÑÐµ Ð¿ÐµÑÐµÐ²Ð¾Ð´Ñ Ð² ÐÐ¾ÑÐºÐ²Ðµ. Ð¥Ð¾ÑÑ ÑÐºÐ°Ð·Ð°ÑÑ ÑÐ¿Ð°ÑÐ¸Ð±Ð¾ Ð·Ð° ÐºÐ¾Ð½ÑÑÐ»ÑÑÐ°ÑÐ¸Ð¸ Ð¸ Ð¾Ð¿ÐµÑÐ°ÑÐ¸Ð²Ð½Ð¾ÑÑÑ! 
+ÐÑ Ð²ÑÐµÐ¼ Ð´Ð¾Ð²Ð¾Ð»ÑÐ½Ñ! ÐÐ°Ð´ÐµÐµÐ¼ÑÑ Ð¸ Ð½Ð° Ð´Ð°Ð»ÑÐ½ÐµÐ¹ÑÐµÐµ ÑÐ¾ÑÑÑÐ´Ð½Ð¸ÑÐµÑÑÐ²Ð¾!</p>
+		
+			</td>
+			<td>
+			<div class="ava"><img src="images/ava4.jpg" /></div>
+			<h5>Ð¡ÐµÑÐ³ÐµÐ¹ ÐÐ¾Ð±ÑÐ¾Ð², Ð³. ÐÐ¾ÑÐºÐ²Ð°</h5>
+			<p>Ð£ Ð¼ÐµÐ½Ñ ÑÐ¾Ð»ÑÐºÐ¾ Ð¿Ð¾Ð»Ð¾Ð¶Ð¸ÑÐµÐ»ÑÐ½ÑÐµ ÑÐ¼Ð¾ÑÐ¸Ð¸ Ð¾Ñ Ð²Ð°ÑÐµÐ¹ ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸, Ð²ÑÐµ Ð¿ÑÐ¾ÑÑÐ¾ ÑÑÐ¿ÐµÑ, Ð¾ÑÐµÐ½Ñ Ð¿ÑÐ¸ÑÑÐ½Ð¾ ÑÐ°Ð±Ð¾ÑÐ°ÑÑ Ñ ÑÐ°ÐºÐ¸Ð¼Ð¸ Ð»ÑÐ´ÑÐ¼Ð¸.</p>
+			
+			</td>
+		</tr>
+		</table>
+	</div>
+	<!-------zaiavka-------->
+	<div class="top4" style="margin-top:50px">
+	<h1>ÐÑ Ð¼Ð¾Ð¶ÐµÑÐµ Ð¾ÑÑÐ°Ð²Ð¸ÑÑ Ð·Ð°ÑÐ²ÐºÑ Ð¸Ð»Ð¸ ÑÐ¾Ð³Ð»Ð°ÑÐ¾Ð²Ð°ÑÑÂ ÑÑÐ¾Ð¸Ð¼Ð¾ÑÑÑ Ð¸ ÑÑÐ»Ð¾Ð²Ð¸Ñ Ð¿ÐµÑÐµÐ²Ð¾Ð´Ð°</h1>
+	<table class="kontakti">
+	<tr>
+	<td width="600">
+	<div class="icon"><p>Ð¡Ð°Ð´Ð¾Ð²Ð°Ñ-Ð¡Ð°Ð¼Ð¾ÑÑÑÐ½Ð°Ñ ÑÐ»Ð¸ÑÐ°, 15/1</p></div>
+<div class="icon"><p><a href="mailto:buro-simple@yandex.ru">buro-simple@yandex.ru</a></p></div>
+<div class="icon"><p>+7 (495) 369-35-18</p></div>
+	</td>
+	<td width="300">
+		<!-----forma---->
+		<div class="form1" id="form1">
+			<h5>ÐÐ¡Ð¢ÐÐÐÐ¢Ð¬ ÐÐÐ¯ÐÐÐ£</h5>
+			
+<iframe src="zakaz2.html"  width="91%" height="230" frameborder="1"> </iframe>
+
+		
+	   
+	</form>
+		</div>
+		<!------end forma----->
+	</td>
+	</tr>
+	</table>
+	</div>
+			<!------footer----->
+	<div class="top4" style="margin-top:30px">
+		<table>
+			<tr>
+				<td width="310"><img src="images/logo2.png"  align="left" style="margin-right:5px"/><p style="font-size:16px; margin-top:17px; font-weight:900">ÐÐµÑÐµÐ²Ð¾Ð´ "Ð¿Ð¾Ð´ ÐºÐ»ÑÑ"</p></td>
+				<td width="350"></td>
+				<td width="280"><p style="font-size:25px; margin-top:17px; font-weight:100; margin-bottom:8px; text-decoration:none; color:#000000" class="telephone">+7 (495) 369-35-18</p><a class="iframe"  href="zvonok.html" ><img src="images/zvonok.png"  class="knopka"/></a></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

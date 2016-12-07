@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html style="width:1318px>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+
+<link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon" /> 
+<title>РосБизнесСофт CRM - внедрение CRM системы, продажа CRM, управление взаимоотношениями с клиентами</title>   
+
+
+
+<link href="/wp-content/themes/rbs-new/css/core.css" rel="stylesheet"/>
+
+<link href="/wp-content/themes/rbs-new/css/core-ru-RU.css" rel="stylesheet"/>
+
+<link href="/wp-content/themes/rbs-new/css/component.css" rel="stylesheet"/>
+
+<link href="/wp-content/themes/rbs-new/style.css" rel="stylesheet"/>
+
+<link href="/wp-content/themes/rbs-new/css/index.css" rel="stylesheet"/>
+<link rel="stylesheet" href="/wp-content/themes/rbs-new/plugins/SlickNav/dist/slicknav.css">
+
+<script src="/wp-content/themes/rbs-new/js/jquery.js"></script>
+<script src="/wp-content/themes/rbs-new/js/modernizr.js"></script>
+<script src="/wp-content/themes/rbs-new/js/bootstrap.js"></script>
+
+
+
+
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="/wp-content/themes/rbs-new/js/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="/wp-content/themes/rbs-new/js/fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href=""/wp-content/themes/rbs-new/js/fancyBox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+<!-- Add Button helper (this is optional) -->
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/rbs-new/js/fancyBox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+<script type="text/javascript" src="/wp-content/themes/rbs-new/js/fancyBox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+<!-- Add Thumbnail helper (this is optional) -->
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/rbs-new/js/fancyBox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+<script type="text/javascript" src="/wp-content/themes/rbs-new/js/fancyBox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+<!-- Add Media helper (this is optional) -->
+<script type="text/javascript" src="/wp-content/themes/rbs-new/js/fancyBox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    var header = $("div.header.main");
+    var headerSlide = $("div.header-fixed");
+    var headerTop = header.offset().top + header.height() + 45;
+    
+    $(window).on('scroll resize', function () {
+      
+      var viewTop = $(window).scrollTop();
+      
+      if ((viewTop > headerTop) && !headerSlide.is(".sticky")) {
+        headerSlide.addClass("sticky");
+        
+        } else if ((viewTop <= (headerTop)) && headerSlide.is(".sticky")) {
+        headerSlide.removeClass("sticky");
+      }
+      
+    });
+    
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.partner-link, .client-link').hover(function () {
+      $(this).find('img').attr('src', $(this).find('img').attr('src').replace('-gray', ''));
+      }, function () {
+      $(this).find('img').attr('src', $(this).find('img').attr('src').replace('-gray', '').replace(/\.(.{3})$/, '-gray.$1'));
+    })
+  });
+</script>
+
+
+<script type="text/javascript">
+  
+  function showPopup(form){
+    
+    jQuery("."+form).css("left", (parseInt(jQuery("body").css("width")) - parseInt(jQuery(".popup_zvonok").css("width")))/2+'px'  ) ;
+    
+    
+    jQuery("body").append("<div id='overlay'></div>").find("#overlay").fadeTo(500,0.55,function(){jQuery("."+form).show(); });
+  }
+  
+  function hidePopup(form){
+    jQuery("#overlay").remove();
+    jQuery("."+form).hide();
+    var date = new Date( new Date().getTime() + 7*24*3600*1000 );
+    document.cookie="hide_popup_rbs=1; path=/; expires="+date.toUTCString();
+  }
+  
+  function getCookie(name) {
+    var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+  }
+  
+  if(!getCookie("hide_popup_rbs"))
+  showPopup();
+</script>
+
+
+<script> 
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ 
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), 
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) 
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); 
+  ga('create', 'UA-18310539-2', 'auto'); 
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview'); 
+</script>
+
+<script type="text/javascript" src="/wp-content/themes/rbs-new/js/menu.js"></script>
+<script src="/wp-content/themes/rbs-new/plugins/SlickNav/dist/jquery.slicknav.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#menu').slicknav();
+  });
+</script>
+
+
+
+</head>
+
+<body>
+  
+  <header id="top">
+    <div class="header main">
+      <div class="container container-header">
+        
+        <div class = "site-logo">
+          <a  rel="alternate" hreflang="ru" href="/">
+            <img src="/wp-content/themes/rbs-new/img/logo.png" alt="РосБизнесСофт CRM"  />
+          </a>
+        </div>
+        <div class = "site-logo-small">
+          <a  rel="alternate" hreflang="ru" href="/">
+            <img src="/wp-content/uploads/2016/02/logo_small.png" alt="РосБизнесСофт CRM"  />
+          </a>
+        </div>
+        <div class = "site-info" style="position: relative; height:20px; top:-85px; left:268px; width:671px">
+          <div class = "about-top" style="float: left" >
+            <a href="/o-kompanii/kontakty"><img src="/wp-content/uploads/2015/04/tel-msk-piter.png" style="padding-right: 20px;"></a>
+            <a href="skype:mari-rbs?call" title="Позвонить по SKYPE"> 
+              <img src="/wp-content/uploads/2015/04/skype-rbs.png"  onclick='yaCounter92710.reachGoal("SKYPE"); ga("send", "event", "call", "skype"); return true;' >
+            </a>
+          </div>
+          
+          <div class = "demo-top" style="float: right">
+            <a href="/o-crm-sisteme/demo-versiya-crm/">
+              <div style="width: 172px; height: 32px; margin-top: 0px;" class="rbs-button" style="float:right;">
+                <div style="font-size: 14px; color: white; display: table; margin: 0 auto; line-height: 32px;" class="MuseoSans-700">
+                  Демо-версия
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div id = "menu" class = "navbar" style="position: relative; top: -62px; height: 34px;  float:left; line-height: 34px; text-align: left;   margin-left: 240px;">
+          <a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/" class="nav-link" style="white-space: nowrap;">О СИСТЕМЕ</a>
+          <!--<a  rel="alternate" hreflang="ru" href="/uslugi/" class="nav-link">УСЛУГИ</a>-->
+          <a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/stoimost-crm/" class="nav-link">ЦЕНЫ</a>
+          <a  rel="alternate" hreflang="ru" href="/crm-resheniye/" class="nav-link">РЕШЕНИЯ</a>
+          <a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/demo-versiya-crm" class="nav-link">ДЕМО</a>        
+          <a  rel="alternate" hreflang="ru" href="/klienty/" class="nav-link">КЛИЕНТЫ</a>
+          <a  href="/partneram/" class="nav-link">ПАРТНЕРЫ</a>
+          <a  href="/blog/" class="nav-link">БЛОГ</a>
+          <a  rel="alternate"  href="/o-kompanii/kontakty/" class="nav-link">КОНТАКТЫ</a>
+        </div>
+        <button class = "cmn-toggle-switch">
+          <span>toggle menu</span>          
+        </button>
+        <div class = "mobile-menu">
+          <ul id="menu">
+            <li><a href="/o-crm-sisteme/">О CRM системе</a></li>
+            <li><a href="/o-crm-sisteme/demo-versiya-crm">Демо-версия</a></li>
+            <li><a href="/o-crm-sisteme/stoimost-crm">Цены</a></li>
+            <li><a href="/crm-resheniye/">Решения</a></li>
+            <li><a href="/uslugi/">Услуги</a></li>
+            <li><a href="/o-crm-sisteme/osobennosti-crm-systemy/integraciya/">ИНТЕГРАЦИЯ</a></li>
+            <li><a href="/klienty/">Клиенты</a></li>
+            <li><a href="/partneram/">Партнеры</a></li>
+            <li><a href="/blog/">Блог</a></li>
+            <li><a href="/o-kompanii/kontakty/">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-fixed">
+      <div class="margin-fix">
+        <div class="container">
+          <div style="height: 25px; padding-top: 10px; text-align: right; float:right">
+            <a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/" class="nav-link" >О СИСТЕМЕ</a>
+            <a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/stoimost-crm/" class="nav-link" >ЦЕНЫ</a>
+            <a  rel="alternate" hreflang="ru" href="/crm-resheniye/" class="nav-link">РЕШЕНИЯ</a>
+            <a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/demo-versiya-crm" class="nav-link">ДЕМО</a>
+            <a  rel="alternate" hreflang="ru" href="/klienty/" class="nav-link">КЛИЕНТЫ</a>
+            <a href="/partneram/" class="nav-link">ПАРТНЕРЫ</a>
+            <a href="/blog/" class="nav-link">БЛОГ</a>
+            <a  rel="alternate" href="/o-kompanii/kontakty/" class="nav-link">КОНТАКТЫ</a>
+            
+            
+          </div>
+          <div style="height: 34px; float: left;">
+            
+            <a  rel="alternate" hreflang="ru" href="/"><img src="/wp-content/uploads/2016/02/logo_small.png" alt="RBS" /></a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="header-shadow"></div>
+    </div>
+  </header>     <section>
+			<div id = "main">
+	<div id="carousel" class="carousel slide carousel-fade" style="width: 100%; height: 411px; " data-ride="carousel">
+		<ol class="carousel-indicators" style="bottom: 31px; margin-bottom: 0px; padding-bottom: 0px;">
+			<li data-target="#carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel" data-slide-to="1"></li>
+			<li data-target="#carousel" data-slide-to="2"></li>
+		</ol>
+		
+		<div class="carousel-inner">
+			
+			<div class="active item">
+				<a  rel="alternate" hreflang="ru" href="/o-crm-sisteme">
+					<div class="es-carousel-img-div" style="background-image: url('http://rbs-crm.ru/wp-content/themes/rbs-new/img/carusel-1/img2.jpg');"></div>
+					<div class="opacity-mask"></div>
+					<div class="alpha-mask"></div>
+					<div class="container" style="z-index: 0; position: relative;">
+						<div class = "mobile-center">
+							<span class = "opacity_text">
+								<h1 class="MuseoSans-100" style="color: white; margin-top:100px; padding-top:10px;">
+									РосБизнесСофт CRM
+								</h1>
+								<p style="width: 377px; height: 1px;  margin-bottom: 5px;margin-top: 22px;"></p>
+								<p class="MuseoSans-300" style="color: white; font-size: 18px;">
+								Профессиональная CRM система для автоматизации<br> процесса продаж и работы с клиентами.</p>
+								
+								<p class="MuseoSans-300" style="color: white; font-size: 18px; padding-botton:10px;">
+								<b>Только у нас есть ПОЛНАЯ интеграция с 1С!</b></p>
+								
+							</span>
+							<div style="width: 180px; height: 46px; margin-top: 30px; margin-bottom: 60px;" class="rbs-button">
+								<div style="font-size: 16px; color: white; display: table; margin: 0 auto; line-height: 46px;" class="MuseoSans-700">Узнайте больше</div> 
+							</div></div>
+							
+							
+					</div>
+					
+					
+					
+				</a>
+			</div>
+			<div class="item" >
+				<a  rel="alternate" hreflang="ru" href="/uslugi/vnedreniye-crm-systemy">
+					<div class="es-carousel-img-div" style="background-image: url('http://rbs-crm.ru/wp-content/themes/rbs-new/img/carusel-1/img1.jpg');  height:306 px"></div>
+					<div class="opacity-mask"></div>
+					<div class="alpha-mask"></div>
+					<div class="container" style="z-index: 0; position: relative;">
+						<div class = "mobile-center">
+							<span class = "opacity_text">
+								<h1 class="MuseoSans-100" style="color: white; margin-top: 100px; padding-top:10px;">
+									Внедрение CRM
+								</h1>
+								<p style="width: 377px; height: 1px;  margin-bottom: 5px;margin-top: 22px;"></p>
+								<p class="MuseoSans-300" style="color: white; font-size: 18px; padding-botton:10px;">
+									РосБизнесСофт CRM &#8212; гибкая <br>система для реализации проектов <br>любой сложности!
+								</p>
+								
+							</span>
+							<div style="width: 180px; height: 46px; margin-top: 30px; margin-bottom: 60px;" class="rbs-button mobile">
+								
+								<div style="font-size: 16px; color: white; display: table; margin: 0 auto; line-height: 46px;" class="MuseoSans-700">
+									Узнайте больше
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="item">
+				<a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/zapisatsya-na-presentaciyu">
+					<div class="es-carousel-img-div" style="background-image: url('http://rbs-crm.ru/wp-content/themes/rbs-new/img/carusel-1/img3.jpg');"></div>
+					<div class="opacity-mask"></div>
+					<div class="alpha-mask"></div>
+					<div class="container" style="z-index: 0; position: relative;">
+						<div class = "mobile-center">
+							<h1 class="MuseoSans-100" style="color: white; margin-top:100px; margin-top: 50px; padding-left: 20px; padding-bottom: 10px; padding-top: 10px; background-color: rgba(0, 0, 0, 0.2); vertical-align: middle; display: -webkit-inline-box; padding-right: 20px">
+								Запишитесь на бесплатную<br>
+								презентацию
+							</h1>
+							<p style="width: 377px; height: 1px;  margin-bottom: 5px;margin-top: 22px;"></p>
+							<p class="MuseoSans-300" style="color: white; font-size: 18px;">
+								
+							</p>
+							
+							<div style="width: 180px; height: 46px; margin-top: 30px; margin-bottom: 60px;" class="rbs-button mobile">
+								<div style="font-size: 16px; color: white; display: table; margin: 0 auto; line-height: 46px;" class="MuseoSans-700">
+								ЗАПИСАТЬСЯ</div> </div>
+								
+						</div>
+					</div>
+				</a>
+			</div>
+			
+		</div>
+		
+		<a class="carousel-control left" href="#carousel" data-slide="prev">‹</a>
+		<a class="carousel-control right" href="#carousel" data-slide="next">›</a>
+	</div>
+	
+	<div align="center" class = "container container-top" style="padding-bottom:20px">
+		<h1 class="MuseoSans-100">Профессиональная CRM система для малого и среднего бизнеса</h1>
+		<span style="font-family: Calibri,Gil Sans,Arial,Verdana,Sans-Serif; font-size: 13pt;  margin-top: 20px;">
+			<b>РосБизнесСофт CRM</b> <i>(Customer Relationship Management, управление взаимоотношениями с клиентами)</i> &#8212; <br> это универсальный программный продукт для управления взаимоотношениями с клиентами, <br>
+			комплексной автоматизации бизнеса, а также успешного развития корпоративной информационной системы.<br>
+			Удобный и понятный интерфейс позволяет эффективно работать c онлайн CRM системой из любой точки мира.<br>
+			Внедрение CRM системы от РосБизнесСофт позволит значительно повысить производительность менеджеров,
+		<br> а также увеличит объем продаж на 30-40%!</span>
+	</div>
+	
+	
+	<div style="background:url(/wp-content/uploads/2016/02/polosatka.png); height:360px" class = "container-main-center" >
+		<div class="container hi-effects main-functions" >
+			<div class="row" style=" text-align: center;">
+				<a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/osobennosti-crm-systemy">
+					<div class="col-md-8 col-xs-24 col-sm-8 hover-section">
+						<h2 class="MuseoSans-100"><b>О CRM системе</b></h2>
+						
+						<img src="http://rbs-crm.ru/wp-content/themes/rbs-new/img/main-1.png">
+						<p>Наша платформа отличается мощным, постоянно обновляемым функционалом. Кликните, чтобы узнать о преимуществах CRM системы.</p>
+					</div>
+				</a>
+				
+				<a  rel="alternate" hreflang="ru" href="/uslugi">
+					<div class="col-md-8 col-xs-24 col-sm-8 hover-section">
+						<h2 class="MuseoSans-100"><b>Услуги</b></h2>
+						<img src="http://rbs-crm.ru/wp-content/themes/rbs-new/img/main-2.png">
+						<p>РосБизнесСофт – это команда опытных специалистов в области консалтинга, оптимизации бизнес-процессов и внедрения CRM систем.</p>
+					</div>
+				</a>
+				<a  rel="alternate" hreflang="ru" href="/crm-resheniye">
+					<div class="col-md-8 col-xs-24 col-sm-8 hover-section"> 
+						<h2 class="MuseoSans-100"><b>Решения</b></h2>
+						<img src="http://rbs-crm.ru/wp-content/themes/rbs-new/img/main-3.png">
+						
+						<p style="padding-left: 24px; padding-right: 24px;">За 10 лет успешной работы наша компания доказала, что  РосБизнесСофт CRM является универсальной платформой для разработки отраслевых решений. </p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div id="carouse2" class="carousel slide carousel-fade demo-main" style="width: 100%; height: 411px; " data-ride="carousel">
+		
+		
+		<div class="carousel-inner">
+			<div class="active item" style="position: relative;">
+                <div class="es-carousel-img-div" style="background-image: url('http://rbs-crm.ru/wp-content/themes/rbs-new/img/zapis.jpg');  height:306 px"></div>
+                <div class="opacity-mask"></div>
+                <div class="alpha-mask"></div>
+				<div class="container" style="z-index: 0;">
+					<div style="position: relative;">
+						<div class = "mobile-center">
+							<h1 class="MuseoSans-100" style="color: white; margin-top: 50px;">
+							Получите бесплатный<br> демо-доступ к CRM системе</h1>
+							<p style="width: 377px; height: 1px;  margin-bottom: 5px;margin-top: 22px;"></p>
+							<p class="MuseoSans-300" style="color: white; font-size: 18px;">
+								Вы сможете самостоятельно ознакомиться с богатым <br>функционалом системы, оценить ее функциональность и<br> скорость работы!
+							</p>
+						</div>
+					</div>                          
+                    
+					<div style="width: 230px; height: 46px; margin-top: 30px; margin-bottom: 60px; position: relative;" class="rbs-button mobile-bottom">
+						
+						<a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/demo-versiya-crm">
+							
+							<div style="font-size: 16px; color: white; display: table; margin: 0 auto; line-height: 46px; " class="MuseoSans-700">
+								ВОЙТИ В ДЕМО-ВЕРСИЮ
+							</div>
+						</a>                        
+						<div class = "demo-icon" style="position: relative; float: left; margin-top: -45px; margin-left: 282px;">
+							<a href="https://itunes.apple.com/ru/app/rbs-crm/id1012933609" target="_blank"><img src="/wp-content/uploads/2015/08/avalible-apple.png"></a>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>       
+		</div>
+	</div>
+	
+	
+	
+	
+	<div class="container clients-preview" style="height: 220px;">
+		<a  rel="alternate" hreflang="ru" href="/klienty">
+			<div class="row" style="margin-bottom: 30px; clear:both; text-align:center">
+				<h1 class="MuseoSans-100 clients-preview-header" style="font-size:40px"><b>Наши клиенты и партнеры</b></h1>
+				
+                <img src="/wp-content/uploads/2016/04/clients.jpg">
+				
+				<span class="stretch"></span>
+			</div>
+		</a>
+	</div>
+	<div class = "container clients-preview-mobile">
+		<a  rel="alternate" hreflang="ru" href="/klienty">
+			<div class="row" style="margin-bottom: 30px; clear:both; text-align:center">
+				<h1 class="MuseoSans-100 clients-preview-header"><b>Наши клиенты и партнеры</b></h1>
+                <img src="/wp-content/uploads/2016/07/clients-1.png">
+                <img src="/wp-content/uploads/2016/07/clients-2.png">
+				
+				<span class="stretch"></span>
+			</div>
+		</a>
+	</div>
+	
+	<div id="carouse2" class="carousel slide carousel-fade hide" style="width: 100%; height: 370px; " data-ride="carousel">
+		
+		
+		<div class="carousel-inner">
+			<div class="active item" style="position: relative; height:340px">
+				<a  rel="alternate" hreflang="ru" href="/blog/rosbiznessoft-crm-v-arendu-za-550-rubley">
+					<div class="es-carousel-img-div" style="background-image: url('/wp-content/uploads/2016/05/trade-in.png');  height:350px; background-size: initial"></div>
+					<div class="opacity-mask"></div>
+					<div class="alpha-mask"></div>
+					<div class="container main-container-inner" style="z-index: 0; position: relative; padding-left: 500px;">
+                        <h1 class="MuseoSans-100" style="color: #d02126; margin-top: 30px; font-size:25px">
+                            <b>
+                                РосБизнесСофт от 550 руб./месяц!          
+							</b>
+						</h1>
+						
+                        <div class="MuseoSans-300" style="color: #333333; font-size: 18px;">
+							
+							
+                            <p>
+								Свершилось! По многочисленным просьбам наших клиентов компания «РосБизнесСофт» <b>с 1 сентября 2016</b> вводит новые тарифы на аренду наших продуктов.
+							Теперь наши продукты будут доступны более широкому кругу компаний.</p>
+							<p>
+								Стоимость аренды CRM системы начинается всего от &#8212; <b>550 рублей в месяц</b>!
+							</p>
+						</div>
+						
+						
+						<div style="width: 190px; height: 46px; margin-bottom: 10px; margin-top:20px" class="rbs-button">
+							
+							<div style="font-size: 16px; color: white; display: table; margin: 0 auto; line-height: 46px;" class="MuseoSans-700">
+								УЗНАТЬ БОЛЬШЕ
+							</div>
+							
+						</div>
+						
+						
+						
+						
+						
+					</div>
+				</a>
+			</div>       
+		</div>
+	</div>
+	
+	
+	<div class = "our_blog hide" style="height:360px">
+		<div class="container hi-effects main-functions" >
+			<div class="row" style=" text-align: center;">
+				<h1 class="MuseoSans-100 " style="font-size:40px; color: #d02126; padding-bottom:20px"><b>Наш блог о CRM системах</b></h1>
+				
+												
+				<a  rel="alternate" hreflang="ru" href="http://rbs-crm.ru/blog/modul-doska-pocheta-i-pozora">
+					<div class="col-md-8 col-xs-8 col-sm-8 hover-section">             
+						<img src="http://rbs-crm.ru/wp-content/uploads/userphoto/2.jpg" alt="Мария Салтыкова" width="74" height="73" class="photo" />						<div style="color:#000000">Мария С.</div>
+						<div class="MuseoSans-300" style="font-size:20px; padding-bottom:10px"><strong>Модуль &#171;Доска почета и позора&#187;</strong></div>
+						<p><p>Компания <b>РосБизнесСофт</b> разработало новый модуль <b>«Доска почета»</b>.</p>
+</p>
+					</div>
+				</a>
+				
+								
+				<a  rel="alternate" hreflang="ru" href="http://rbs-crm.ru/blog/rosbiznessoft-crm-v-arendu-za-550-rubley">
+					<div class="col-md-8 col-xs-8 col-sm-8 hover-section">             
+						<img src="http://rbs-crm.ru/wp-content/uploads/userphoto/3.jpg" alt="Татьяна Л." width="74" height="73" class="photo" />						<div style="color:#000000">Татьяна Л.</div>
+						<div class="MuseoSans-300" style="font-size:20px; padding-bottom:10px"><strong>РосБизнесСофт CRM в аренду за 550 рублей!</strong></div>
+						<p><p>По многочисленным просьбам наших клиентов компания «РосБизнесСофт» с <b>1 сентября 2016</b> вводит новые тарифы.</p>
+</p>
+					</div>
+				</a>
+				
+								
+				<a  rel="alternate" hreflang="ru" href="http://rbs-crm.ru/blog/au-my-ishhem-partnerov">
+					<div class="col-md-8 col-xs-8 col-sm-8 hover-section">             
+						<img src="http://rbs-crm.ru/wp-content/uploads/userphoto/2.jpg" alt="Мария Салтыкова" width="74" height="73" class="photo" />						<div style="color:#000000">Мария С.</div>
+						<div class="MuseoSans-300" style="font-size:20px; padding-bottom:10px"><strong>Ау, мы ищем партнеров в твоем городе!</strong></div>
+						<p><p>РосБизнесСофт CRM ищет новых партнеров в России и СНГ! Партнерские скидки &#8212; до 60%. Реферальные &#8212; 10%.</p>
+</p>
+					</div>
+				</a>
+				
+				           
+				
+			</div>
+		</div>
+	</div>
+	<p class = "empty_field">
+		&nbsp;
+	</p>
+</div>	</section>
+<footer>
+	
+	<div id="demo" style="background:url(/wp-content/uploads/2016/02/polosatka.png); padding:20px 0">
+		<div class="container">
+         	<div  style="width:140px; float: left;">
+            	<img src="http://rbs-crm.ru/wp-content/themes/rbs-new/img/comp.png">
+			</div>
+            <div style="text-align:center">
+            	<a href="/o-crm-sisteme/demo-versiya-crm"><b><h1  class="MuseoSans-100" style="font-size:23px; font-weight:bold"> Получить бесплатный доступ к продуктам РосБизнесСофт прямо сейчас!</h1></b></a>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="footer-background">
+		<div class="container footer">
+			<div class="row" style="padding-top: 30px; text-align: center;">
+				<div class = "footer-menu" style="width: 192px; float: left; text-align: left; margin-right: 15px;">
+					<p class="bold"><a  rel="alternate" hreflang="ru" href="/o-crm-sisteme">О СИСТЕМЕ</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/osobennosti-crm-systemy">Основные возможности</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/zapisatsya-na-presentaciyu">Заказать презентацию</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/demo-versiya-crm">Демо-версия</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/stoimost-crm">Стоимость системы</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/video-uroki-crm-systemy">Видео-уроки</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/osobennosti-crm-systemy/integraciya">Интеграция</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/o-crm-sisteme/tekhnicheskie-trebovaniya-crm-systema">Технические требования</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="http://developers.rbs-crm.ru/" target="_blank">Документация разработчика</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="http://developers.rbs-crm.ru/integraciya-api-xml/" target="_blank">Интеграция API (XML)</a></p>
+				</div>
+				<div class = "footer-menu" style="width: 162px; float: left; text-align: left; margin-right: 30px;">
+					<p class="bold"><a  rel="alternate" hreflang="ru" href="/uslugi">УСЛУГИ</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/uslugi/vnedreniye-crm-systemy">Внедрение CRM</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/uslugi/konsalnting">Консалтинг</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/uslugi/technicheskaya-podderjka-crm">Техническая поддержка</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/uslugi/obucheniye-crm">Обучение</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/uslugi/hosting">Хостинг</a></p>
+				</div>
+				<div class = "footer-menu" style="width: 185px; float: left; text-align: left; margin-right: 19px;">
+					<p class="bold"><a  rel="alternate" hreflang="ru" href="/crm-resheniye">ОТРАСЛЕВЫЕ РЕШЕНИЯ</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/crm-resheniye/torgovlya">Автоматизация торговли</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/crm-resheniye/uslugi">Автоматизация услуг</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/crm-resheniye/zakupka">Автоматизация закупки</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/crm-resheniye/proizvodstvo">Автоматизация производства</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/crm-resheniye/internet-magazin">Интернет-магазин</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/crm-resheniye/servisniy-centr">Сервисный центр</a></p>
+					<p><a  rel="alternate" hreflang="ru" href="/crm-resheniye/uchebnyy-centr">Учебный центр</a></p>
+					
+					<p><a  rel="alternate" hreflang="ru" href="/crm-resheniye/e-mail-rasslyka">E-mail рассылка</a></p>
+					
+				</div>
+				<div class = "footer-menu" style="width: 109px; float: left; text-align: left; margin-bottom: 50px">
+					<p class="bold"><a href="/o-kompanii">О КОМПАНИИ</a></p>
+					<p class="bold"><a href="/klienty">КЛИЕНТЫ</a></p>
+					<p class="bold"><a href="/o-kompanii/kontakty">КОНТАКТЫ</a></p>
+					<p class="bold"><a href="/blog">НАШ БЛОГ</a></p>
+					<p class="bold"><a href="/o-kompanii/faq">FAQ</a></p>
+				</div>
+				<div class = "social-buttons" style="float:right; text-align: left;">
+					
+					
+					<p class="bold">ПОДПИСКА НА РАССЫЛКУ</p>
+					
+					<div>
+						<form id="newsletter-form" accept-charset="UTF-8" action="/uspeshno-podpisan-na-rassylku" method="post">
+							<input name="email" data-val="true"  style="background-color: transparent; color: #CDCDCD; display: inline-block; vertical-align: top; padding: 0px; height: 25px; text-indent: 5px;" />
+							<div class="newsletter-button-container">
+								<div class="newsletter-button" onClick="yaCounter92710.reachGoal('CALLME'); ga('send', 'event', 'call', 'callme'); return true;$('#newsletter-form').submit();"><strong>OK</strong></div>
+							</div>
+						</form>
+					</div>
+					
+					<p class="bold">МЫ В СОЦСЕТЯХ</p>
+					<div id='socseti'>
+						<a href="/"><img src="http://rbs-crm.ru/wp-content/themes/rbs-new/img/facebook.jpg"></a>
+						<a href="/"><img src="http://rbs-crm.ru/wp-content/themes/rbs-new/img/twitter.jpg"></a>
+						<a href="/"><img src="http://rbs-crm.ru/wp-content/themes/rbs-new/img/youtube.jpg"></a>
+						<a href="/"><img src="http://rbs-crm.ru/wp-content/themes/rbs-new/img/in.jpg"></a>
+					</div>
+				</div>
+				<p>
+					
+				</div>
+				
+				<div class = "empty_field" style="position: relative; top:20px; text-align:left; color:#FFFFFF; font-size:12px">© РосБизнесСофт CRM. Все права защищены. 2005-2016
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="demo-order-button-fixed button-fixed" style="width:135px; text-align: center; padding-top:14px">
+			<a  rel="alternate"  href="javascript:showPopup('popup_zvonok');" class="MuseoSans-700" style="text-align:center">
+				ЗАКАЗАТЬ<br/>ЗВОНОК
+			</a>
+		</div>
+		
+	</footer>
+		
+	<div class='popup_modal'>
+		<table width='100%'>
+			<tr>
+				<td align='center' valign='center' >
+					<div  style='width:100%'>
+						
+						<a href='javascript:hidePopup()'>
+							<div class='round_block' style=' font-family:Arial; font-size:12pt;'><b>X</b>
+								
+							</div></a></div>
+							<div style='margin:0 auto; padding:10px;'>
+								<iframe src='/zapros-kursa' width='400px' style='border:0px;' scrolling="no" height='300px'></iframe>
+							</div>
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+	
+	
+	<div class='popup_zvonok'>
+		<table width='100%'>
+			<tr>
+				<td align='center' valign='center' >
+					<div  style='width:100%'>
+						
+						<a href="javascript:hidePopup('popup_zvonok')">
+							<div class='round_block' style=' font-family:Arial; font-size:12pt;'><b>X</b>
+								
+							</div></a></div>
+							<div style='margin:0 auto;'>
+								<iframe src='/zapros-zvonka' width='350px' style='border:0px;' scrolling="no" height='350px'></iframe>
+							</div>
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+	
+	
+	<div style="display: none">
+		
+		
+		<!-- Yandex.Metrika counter --><script type="text/javascript">var ya_params = {/*Здесь параметры визита*/};</script><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter92710 = new Ya.Metrika({id:92710, enableAll: true,params:window.ya_params||{ }}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch_visor.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/92710" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+		
+	</div>
+	
+	<!--callback rbs-->
+	<link rel="stylesheet" type="text/css" href="/wp-content/themes/rbs-new/call_back/cbs_style.css" media="screen" />
+	<div class="overlay" id="myModal" style="z-index: 1000;">
+		
+		<div class="">
+			<div class="rbs_banner" id="rbs_div_ban">
+				<div class="rbs_banner-exit" id="rbs_exit">X</div>
+				<div>
+					<div class="rbs_banner-custom-logo1"></div>
+					<div class="rbs_banner-custom-logo2"></div>
+				</div>
+				<div class="rbs_banner-exit" id="rbs_exit"></div>
+				<div class="rbs_banner-body">
+					<div class="rbs_banner-h1" id="rbs_banner_h1">Хотите, перезвоним вам за 26 секунд?</div><br id ="br1">
+					<div class="rbs_banner-h1" id="rbs_banner_h1_email">К сожалению, мы сейчас не работаем, оставьте Ваш номер и мы обязательно вам перезвоним!</div><br id ="br2">
+					<div class="rbs_banner-choose-office" id="rbs_banner_choose_office" style="display:none;"></div>
+					<div class="rbs_banner-form-row-1">
+						<div class="rbs_banner-form" id="rbs_banner_content">
+							<div class="rbs_banner-arrow"></div>
+							<div class="rbs_phone_line" id="rbs_phone_line">
+								<input class="rbs_banner-textbox" type="text" placeholder="Введите ваш телефон" id="rbs_phone" value="" maxlength="18" required>
+								<button class="rbs_banner-button" id="rbs_send" disabled  onclick="yaCounter92710.reachGoal('FASTCALL_1'); ga('send', 'event', 'call', 'fastcall_1'); return true;">Жду звонка!</button>
+							</div>
+							<div class="rbs_timer"><p id="rbs_timer_result">00:25.99</p></div>
+						</div>
+					</div>
+					<div class="rbs_banner-work-to" id="rbs_banner_work_to">
+						<a target="blank" id="rbs_banner_work_to_link" href="http://www.rbs-crm.ru/">Повысьте продажи с помощью РосБизнесСофт CRM</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="rbs_phone_div" class="cbh-phone cbh-green cbh-show cbh-static" style="top: 474px; left: 1409.2px; display: block;">
+		<div class="cbh-ph-circle"></div>
+		<div class="cbh-ph-circle-fill"></div>
+		<div class="cbh-ph-img-circle"></div>
+	</div>
+	<script src="/wp-content/themes/rbs-new/call_back/cbs_script.js"></script>
+	<script src="/wp-content/themes/rbs-new/call_back/inputmask.js"></script>
+	<!--callback rbs-->
+	
+	
+	
+	<!-- BEGIN JIVOSITE CODE {literal} -->
+	<script type='text/javascript'>
+		(function(){ var widget_id = 'Av5hawtKyE';
+		var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+		<!-- {/literal} END JIVOSITE CODE -->
+		
+		
+		
+</body>
+</html>									

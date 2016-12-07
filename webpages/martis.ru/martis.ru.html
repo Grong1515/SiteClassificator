@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+    <head profile="http://gmpg.org/xfn/11">
+        <title>Программа Сова - Главная</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+        <meta http-equiv="imagetoolbar" content="no" />
+        <link rel="stylesheet" href="styles/layout.css" type="text/css" />
+		<link rel="stylesheet" href="styles/stylesheet.css" type="text/css">
+		 <script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
+				<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+				<script type="text/javascript" src="scripts/jquery.hoverIntent.js"></script>
+				<script type="text/javascript" src="scripts/jquery.hslides.1.0.js"></script>
+				<script type="text/javascript" src="scripts/jquery.hslides.setup.js"></script>		
+    </head>
+    <body id="top">
+        <div id="header">
+            <img src="images/sova.jpg" alt="" style="float:left; padding-right:10px; padding-top:15px; padding-left:15px;" />
+            <div class="wrapper">
+                <div class="fl_left">
+                    <h1><a href="/">Программа Сова</a></h1>
+                    <p>Система управленческого учета на торговом предприятии</p>
+                </div>
+                <div class="fl_right">
+					<p id="phone_head" style="margin-top: 45px; margin-left: 100px; font-weight:bold;">+7 (495) 777-94-25</p>
+					<a><img src="images/demo/logo.gif" alt="" style="float:right; padding-right:20px"/></a>
+				</div>
+                <br class="clear" />
+            </div>
+
+        </div>
+        <!-- ####################################################################################################### -->
+        <div id="topbar">
+            <div class="wrapper">
+                <div id="topnav">
+                    <ul>
+                        <li class="active" ><a >Главная</a></li>						<li ><a href="obzor.php" >Обзор программы</a></li>						
+                        <li ><a href="details.php" >Функционал</a></li>
+                        <li ><a href="prices.php" >Расценки</a></li>
+                        <li ><a href="contacts.php" >Контакты</a></li>
+                        <!--li  class="last"><a href="aboutus.php" >О нас</a>
+                            <ul>
+                                <li><a href="#">ООО "Мартис+"</a></li>
+                                <li><a href="#">Наши клиенты</a></li>
+                            </ul>
+                        </li-->
+                    </ul>
+                </div>
+                <div id="search">
+				
+				<!-- Форма поиска -->
+<FORM METHOD=POST ACTION="/phprusearch/">
+	<fieldset>
+		<legend>Site Search</legend>
+			<input type="text" name="query"  value="Поиск по сайту&hellip;" onfocus="this.value=(this.value=='Поиск по сайту&hellip;')? '' : this.value ;" >
+			<input type=submit value="Поиск" style="cursor:pointer;" class=but id="go" >
+	</fieldset>
+</FORM>
+<!-- Конец формы поиска -->
+				
+                    <!--form name="query" action="/phprusearch/" method="post">
+                        <fieldset>
+                            <legend>Site Search</legend>
+                            <input type="text" value="Search Our Website&hellip;"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+                            <input type="submit" name="go" id="go" value="Search" />
+                        </fieldset>
+                    </form-->
+                </div>
+                <br class="clear" />
+            </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <div id="featured_slide">
+            <div class="wrapper">
+                <div class="featured_content">
+                    <ul id="accordion">
+                        <li class="current">
+                            <div class="featured_box">
+                                <h2>Индивидуальный подход к каждому клиенту </h2>
+                                <p>У нас нет "конвейера" клиентов. Нам важен каждый, и поэтому отношение к каждому соответствующее.</p>
+                                <!--p class="readmore"><a href="#">подробнее &raquo;</a></p-->
+                            </div>
+                            <div class="featured_tab"> <img src="images/demo/individ.gif" alt="" />
+                                <p>Подход</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="featured_box">
+                                <h2>Широкий диапазон возможностей</h2>
+                                <p>Множество настроек реалуются исходя их потребностей каждого клиента в отдельности. Потому ни одна другая программа не подойдет Вам так, как наша.</p>
+                                <!--p class="readmore"><a href="#">подробнее &raquo;</a></p-->
+                            </div>
+                            <div class="featured_tab"><img src="images/demo/pos.gif" alt="" />
+                                <p>Возможности</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="featured_box">
+                                <h2>Профессионализм обслуживания</h2>
+                                <p>В нашей команде работают профессионалы своего дела. Мы всегда на связи и в зоне доступности, для того чтобы быть рядом как только это понадобится.</p>
+                                <!--p class="readmore"><a href="#">подробнее &raquo;</a></p-->
+                            </div>
+                            <div class="featured_tab"><img src="images/demo/settin1.gif" alt="" />
+                                <p>Обслуживание</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="featured_box">
+                                <h2>Настройка на именно ваш бизнес</h2>
+                                <p>Программа Сова настраивается на спецификацию Вашей фирмы. Мы учитываем особенности Вашего бизнеса и обеспечиваем надежную программу именно для Вас.</p>
+                                <!--p class="readmore"><a href="#">подробнее &raquo;</a></p-->
+                            </div>
+                            <div class="featured_tab"><img src="images/demo/yourbis.gif" alt="" />
+                                <p>Уникальность</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="featured_box">
+                                <h2>Возможность использования совместно с другими программами </h2>
+                                <p>Если Ваш филиал работает на другой программе и полный переход на "Сову" проблематичен, Вы можете использовать её локально. При необходимости мы обесчим надежный обмен данными с другими системами.</p>
+                                <!--p class="readmore"><a href="#">подробнее &raquo;</a></p-->
+                            </div>
+                            <div class="featured_tab"><img src="images/demo/toler.gif" alt="" />
+                                <p>Обмен данными</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <div id="homecontent">
+            <div class="wrapper">
+                <ul>
+                    <li>
+                        <h2 class="title"><a href="details.php#tovdok"><img src="images/demo/tov.gif" alt="" /></a>Товары</h2>
+                        <p>Программа Сова позволяет формировать товарные документы для движения товара любого вида: закупки у поставщиков, продажи покупателю, списания, возвраты и многие другие виды движения товаров.  Товарные документы могут содержать в себе большое количество разнообразной информации о том, когда, кто и что купил, на каких складах хранится, на каких условиях будет произведена оплата товара и т.п.</p>
+                        <p class="readmore"><a href="details.php#tovdok">подробнее &raquo;</a></p>
+                    </li>
+                    <li>
+                        <h2 class="title"><a href="details.php#usl"><img src="images/demo/usl.gif" alt="" /></a>Услуги</h2>
+                        <p>Получаемым и предоставляемым услугам (к примеру - Плате за фрахт, Плате за Таможню) в программе Сова соответствует документы Счета на получаемые услуги и Счета на предоставляемые услуги. Документы по Услугам связываются с Товарными документами по правилам, соответствующим потребностям бизнеса клиента.</p>
+                        <p class="readmore"><a href="details.php#usl">подробнее &raquo;</a></p>
+                    </li>
+                    <li class="last">
+                        <h2 class="title"><a href="details.php#den_op"><img src="images/demo/movemany.gif" alt="" /></a>Деньги</h2>
+                        <p>В программе налажена гибкая система учета движения денег. Она включает в себя Приход и Расход по кассе и по банку. Могут быть введены корректирующие документы, а также специальные Внутренние проводки. Система контроля отслеживает ввод некорректных данные и позволяет пользователю вводить в документ только самый минумум необходимой информации.</p>
+                        <p class="readmore"><a href="details.php#den_op">подробнее &raquo;</a></p>
+                    </li>
+                </ul>
+                <br class="clear" />
+            </div>
+        </div>
+		<div id="homecontent">
+            <div class="wrapper">
+                <ul>
+                    <li>
+                        <h2 class="title"><a href="details.php#log"><img src="images/demo/movetov.gif" alt="" /></a>Логистика</h2>
+                        <p>Логистика позволяет проследить движение товара в каждый момент времени и узнать, где в данный момент находится конкретный товар - едет в транспорте, стоит в порту и пр. С помощью документов Загрузка в транспорт и Разгрузка из транспорта можно легко контролировать любую информацию, связанную с товаром в пути, включая издержки по товару в транспорте. </p>
+                        <p class="readmore"><a href="details.php#log">подробнее &raquo;</a></p>
+                    </li>
+                    <li>
+                        <h2 class="title"><a href="details.php#pret"><img src="images/demo/pret.gif" alt="" /></a>Претензии</h2>
+                        <p> Претензии - это документ, который отражает взаимоотношения между получателем и поставщиком товара. Претензии могут быть как к поставщику товара, так и от покупателя товара.  Претензии могут иметь различные статусы - Удовлетворена, Оплачена и др. Оформлять Претензии можно задним числом, спустя какое-то время после получения товара. Претензии учитываются при формировании балансов для поставщиков и для покупателей.</p>
+                        <p class="readmore"><a href="details.php#pret">подробнее &raquo;</a></p>
+                    </li>
+                    <li class="last">
+                        <h2 class="title"><a href="details.php#anal"><img src="images/demo/anal.gif" alt="" /></a>Аналитика</h2>
+                        <p>Аналитика включает в себя большой набор Отчетов. В программе Сова можно рассчитывать балансы с покупателями и с поставщиками, определять текущее финансовое состояния фирмы. Все балансы можно считать по Вашим  бизнес-правилам, в различных валютах. Кроме этого, различные отчеты позволяют отвечать на вопросы вида: Каков полученный доход, Какой товар продается наиболее выгодно для фирмы, Какова скорость продажи товара, Сколько нужно закупить товара, чтобы получить максимальную прибыль. </p>
+                        <p class="readmore"><a href="details.php#anal">подробнее &raquo;</a></p>
+                    </li>
+                </ul>
+                <br class="clear" />
+            </div>
+        </div>
+		<div id="homecontent">
+            <div class="wrapper">
+                <ul>
+                    <li>
+                        <h2 class="title"><a href="details.php#obmd"><img src="images/demo/obm.gif" alt="" /></a>Обмен данными</h2>
+                        <p>Программа Сова позволяет быстро и надежно обмениваться данными с другими программными системами. Например, можно автоматически получать курсы валют с сайта Центробанка. Возможен обмен данными с программой 1С. Данные из Вашего филиала в другом городе будут получены в электронном виде и автоматически обрабатаются с минимальным ручным участием. В программе возможна работа с данными системы EDI (электронного документооброта).</p>
+                        <p class="readmore"><a href="details.php#obmd">подробнее &raquo;</a></p>
+                    </li>
+                    <li>
+                        <h2 class="title"><a href="details.php#adm"><img src="images/demo/direc.gif" alt="" /></a>Администрирование</h2>
+                        <p>В программе налажена гибкая система прав доступа для каждого пользователя к разным функциям программы. Доступ к пунктам меню, к отчетам, к редактированию и просмотру документов и к различным частям документов настраивается по Вашему требованию. Существует возможность отслеживания, кто и когда добавлял, редактировал, либо удалял данные в программе.</p>
+                        <p class="readmore"><a href="details.php#adm">подробнее &raquo;</a></p>
+                    </li>
+                    <!--li class="last">
+                        <h2 class="title"><img src="images/demo/direc.gif" alt="" />Администрирование</h2>
+                        <p>В программе налажена гибкая система прав доступа для каждого пользователя к разным функциям программы. Доступ к пунктам меню, к отчетам, к редактированию и просмотру документов настраивается по требованию заказчика. Существует возможность отслеживания, кто и во сколько редактировал, либо удалял данные в программе.</p>
+                        <p class="readmore"><a href="#">подробнее &raquo;</a></p>
+                    </li-->
+                </ul>
+                <br class="clear" />
+            </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <!--div id="container">
+            <div class="wrapper">
+                <div id="content">
+                    <h2>О программе Сова</h2>
+                    <p>Данная программа представляет собой систему управленческого учета на торговом предприятии. "Сова" позволяет вести учет на неограниченном количестве складов и юридических организаций, отслеживать движение товаров и денежных средств по кассе и по банку предприятия. </p>
+                </div>
+                <div id="column">
+                    <div class="holder">
+                        <h2>Горячая линия</h2>
+                        <ul id="latestnews">
+                            <li> <img class="imgl" src="images/demo/telefon.jpg" alt="" />
+                               <p>Наши клиенты обеспечиваются бесплатной технической поддержкой по телефону <br><strong>(495) 777-94-25</strong> .</p>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+                <br class="clear" />
+            </div>
+        </div-->
+        <!-- ####################################################################################################### -->
+        
+<div id="footer">
+            <!--div class="wrapper"-->
+                <!--div id="newsletter">
+                    <h2>Будьте в курсе!</h2>
+                    <p>Чтобы первыми узнавать новости о программе Сова, впишите свой почтовый адрес</p>
+                    <form action="subscrip.php" method="post">
+                        <fieldset>
+                            <legend>News Letter</legend>
+                            <input type="text" value="Введите свой Email&hellip;"  onfocus="this.value=(this.value=='Введите свой Email&hellip;')? '' : this.value ;" name="subscriber" />
+                            <input type="submit" name="news_go" id="news_go" value="GO" />
+                        </fieldset>
+                    </form>
+                    <p>Чтобы отказаться от рассылки новостей, <a href="#">нажмите сюда &raquo;</a></p>
+                </div-->
+                <!--div class="footbox">
+                  <h2>Lacus interdum</h2>
+                  <ul>
+                    <li><a href="#">Praesent et eros</a></li>
+                    <li><a href="#">Praesent et eros</a></li>
+                    <li><a href="#">Lorem ipsum dolor</a></li>
+                    <li><a href="#">Suspendisse in neque</a></li>
+                    <li class="last"><a href="#">Praesent et eros</a></li>
+                  </ul>
+                </div>
+                <div class="footbox">
+                  <h2>Lacus interdum</h2>
+                  <ul>
+                    <li><a href="#">Praesent et eros</a></li>
+                    <li><a href="#">Praesent et eros</a></li>
+                    <li><a href="#">Lorem ipsum dolor</a></li>
+                    <li><a href="#">Suspendisse in neque</a></li>
+                    <li class="last"><a href="#">Praesent et eros</a></li>
+                  </ul>
+                </div>
+                <div class="footbox">
+                  <h2>Lacus interdum</h2>
+                  <ul>
+                    <li><a href="#">Praesent et eros</a></li>
+                    <li><a href="#">Praesent et eros</a></li>
+                    <li><a href="#">Lorem ipsum dolor</a></li>
+                    <li><a href="#">Suspendisse in neque</a></li>
+                    <li class="last"><a href="#">Praesent et eros</a></li>
+                  </ul>
+                </div-->
+                <!--br class="clear" /-->
+            <!--/div-->
+        </div>
+        <!-- ####################################################################################################### -->
+        <div id="copyright">
+            <div class="wrapper">
+                <p class="fl_left">Copyright &copy; 2012 - All Rights Reserved - <a>ООО "Мартис+"</a></p>
+                <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Open Source Templates">OS Templates</a></p>
+                <br class="clear" />
+            </div>
+        </div>
+    </body>
+</html>

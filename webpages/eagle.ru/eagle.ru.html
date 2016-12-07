@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Digital Combat Simulator</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+        <link rel="icon" href="/favicon.ico">
+        <meta property="fb:app_id" content="152288924833705" />
+                                                                                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">.bx-composite-btn {background: url(/bitrix/images/main/composite/sprite-1x.png) no-repeat right 0 #e94524;border-radius: 15px;color: #ffffff !important;display: inline-block;line-height: 30px;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;font-size: 12px !important;font-weight: bold !important;height: 31px !important;padding: 0 42px 0 17px !important;vertical-align: middle !important;text-decoration: none !important;}@mediaonly screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx) {.bx-composite-btn {background-image: url(/bitrix/images/main/composite/sprite-2x.png);background-size: 42px 124px;}}.bx-composite-btn-fixed {position: absolute;top: -45px;right: 15px;z-index: 10;}.bx-btn-white {background-position: right 0;color: #fff !important;}.bx-btn-black {background-position: right -31px;color: #000 !important;}.bx-btn-red {background-position: right -62px;color: #555 !important;}.bx-btn-grey {background-position: right -93px;color: #657b89 !important;}.bx-btn-border {border: 1px solid #d4d4d4;height: 29px !important;line-height: 29px !important;}</style>
+<script type="text/javascript" data-skip-moving="true">(function(w) {var v = w.frameCacheVars = {'CACHE_MODE':'HTMLCACHE','banner':{'url':'http://www.1c-bitrix.ru/composite/','text':'Быстро с 1С-Битрикс','bgcolor':'#51626B','style':'white'},'storageBlocks':[]};var r = w.XMLHttpRequest ? new XMLHttpRequest() : (w.ActiveXObject ? new w.ActiveXObject("Microsoft.XMLHTTP") : null);if (!r) { return; }w.frameRequestStart = true;var m = v.CACHE_MODE; var l = w.location; var x = new Date().getTime();var q = "?bxrand=" + x + (l.search.length > 0 ? "&" + l.search.substring(1) : "");var u = l.protocol + "//" + l.host + l.pathname + q;r.open("GET", u, true);r.setRequestHeader("BX-ACTION-TYPE", "get_dynamic");r.setRequestHeader("BX-CACHE-MODE", m);try { r.setRequestHeader("BX-REF", document.referrer || "");} catch(e) {}if (m === "APPCACHE"){r.setRequestHeader("BX-APPCACHE-PARAMS", JSON.stringify(v.PARAMS));r.setRequestHeader("BX-APPCACHE-URL", v.PAGE_URL ? v.PAGE_URL : "");}r.onreadystatechange = function() {if (r.readyState != 4) { return; }var a = r.getResponseHeader("BX-RAND");var b = w.BX && w.BX.frameCache ? w.BX.frameCache : false;if (a != x || !((r.status >= 200 && r.status < 300) || r.status === 304 || r.status === 1223 || r.status === 0)){var f = {error:true, reason:a!=x?"bad_rand":"bad_status", url:u, xhr:r, status:r.status};if (w.BX && w.BX.ready){BX.ready(function() {setTimeout(function(){BX.onCustomEvent("onFrameDataRequestFail", [f]);}, 0);});}else{w.frameRequestFail = f;}return;}if (b){b.onFrameDataReceived(r.responseText);if (!w.frameUpdateInvoked){b.update(false);}w.frameUpdateInvoked = true;}else{w.frameDataString = r.responseText;}};r.send();})(window);</script>
+
+
+<link href="/bitrix/cache/css/s1/dcs/kernel_main/kernel_main.css?144606669455296" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/dcs/kernel_altasib.errorsend/kernel_altasib.errorsend.css?14532829034919" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/dcs/page_b8c30f31d91263cc5259d9a4ea46526b/page_b8c30f31d91263cc5259d9a4ea46526b.css?14454418012234" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/dcs/template_e23453377780001baf141620bc40dd0f/template_e23453377780001baf141620bc40dd0f.css?1463997711140441" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/panel/main/popup.min.css?144111723820704" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD-MM-YYYY','FORMAT_DATETIME':'DD-MM-YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'7200','SITE_ID':'s1'});</script>
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/dcs/kernel_main/kernel_main.js?1446066694286450"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_db.min.js?14338437984928"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_frame_cache.min.js?14411172459676"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js?144596112669721','/bitrix/js/main/core/core_ajax.js?144596112620698','/bitrix/js/main/json/json2.min.js?13306904083467','/bitrix/js/main/core/core_ls.js?14338437987365','/bitrix/js/main/core/core_fx.js?14338437959592','/bitrix/js/main/core/core_popup.js?143384379628778','/bitrix/js/main/core/core_window.js?143384379874831','/bitrix/js/main/session.js?14338437952511','/bitrix/js/main/core/core_date.js?143384379534102','/bitrix/js/main/utils.js?143384379519858','/bitrix/js/main/core/core_dd.js?14374842522186','/bitrix/js/main/core/core_tooltip.js?14338437959925','/bitrix/templates/dcs/components/bitrix/news.list/slider/script.js?14441643651364','/js/jquery.min.js?142963774295701','/js/fancybox/jquery.fancybox.pack.js?137779721923135','/js/jquery.confirm.min.js?14296377121953','/bitrix/templates/dcs/bootstrap/js/bootstrap.min.js?142963768535283','/js/froogaloop.min.js?14289351691769','/bitrix/templates/dcs/components/bitrix/sale.basket.basket.line/.default/script.js?1429627982459','/bitrix/components/bitrix/search.title/script.js?14290173576196']); </script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css?14338437952854','/bitrix/js/main/core/css/core_popup.css?143748425134473','/bitrix/js/main/core/css/core_date.css?14374842529689','/bitrix/js/main/core/css/core_tooltip.css?14338437955746','/bitrix/js/altasib.errorsend/css/window.css?14532829034771','/bitrix/templates/dcs/components/bitrix/news.list/news/style.css?1437995737452','/bitrix/templates/dcs/components/bitrix/news.list/slider/style.css?14291225951074','/bitrix/templates/dcs/components/bitrix/rss.show/.default/style.css?1426102623132','/bitrix/templates/dcs/bootstrap/css/bootstrap.min.css?1455712332117874','/js/fancybox/jquery.fancybox.css?14291072133868','/bitrix/templates/dcs/components/bitrix/system.auth.form/auth/style.css?1429625609977','/bitrix/templates/dcs/components/bitrix/search.title/.default/style.css?14291073152087','/bitrix/templates/dcs/template_styles.css?146399771113477']); </script>
+<script type="text/javascript">
+					(function () {
+						"use strict";
+
+						var counter = function ()
+						{
+							var cookie = (function (name) {
+								var parts = ("; " + document.cookie).split("; " + name + "=");
+								if (parts.length == 2) {
+									try {return JSON.parse(decodeURIComponent(parts.pop().split(";").shift()));}
+									catch (e) {}
+								}
+							})("BITRIX_CONVERSION_CONTEXT_s1");
+
+							if (! cookie || cookie.EXPIRE < BX.message("SERVER_TIME"))
+							{
+								var request = new XMLHttpRequest();
+								request.open("POST", "/bitrix/tools/conversion/ajax_counter.php", true);
+								request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+								request.send(
+									"SITE_ID="      + encodeURIComponent(BX.message("SITE_ID")) + "&" +
+									"sessid="       + encodeURIComponent(BX.bitrix_sessid())    + "&" +
+									"HTTP_REFERER=" + encodeURIComponent(document.referrer)
+								);
+							}
+						};
+
+						if (window.frameRequestStart === true)
+							BX.addCustomEvent("onFrameDataReceived", counter);
+						else
+							BX.ready(counter);
+					})();
+				</script>
+<link rel="alternate" href="/en/" hreflang="en" />
+<link rel="alternate" href="/ru/" hreflang="ru" />
+<link rel="alternate" href="/de/" hreflang="de" />
+<link rel="alternate" href="/cn/" hreflang="cn" />
+<script type="text/javascript">
+var ALXerrorLogoImgSrc='/bitrix/images/altasib.errorsend/altasib.errorsend.png';
+var ALXerrorSendMessages={
+	'head':'Найденная Вами ошибка в тексте',
+	'footer':'<b>Послать сообщение об ошибке автору?</b><br/><span style="font-size:10px;color:#7d7d7d">(ваш браузер останется на той же странице)</span>',
+	'comment':'Комментарий для автора (необязательно)',
+	'TitleForm':'Сообщение об ошибке',
+	'ButtonSend':'Отправить',
+	'LongText':'Вы выбрали слишком большой объем текста.',
+	'LongText2':'Попробуйте ещё раз.',
+	'text_ok':'Ваше сообщение отправлено.',
+	'text_ok2':'Спасибо за внимание!'
+}
+</script>
+<script type='text/javascript' async src='/bitrix/js/altasib.errorsend/error.js'></script>
+
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/dcs/template_fe663e99ffd4d56345749792d93356a5/template_fe663e99ffd4d56345749792d93356a5.js?1438700004166518"></script>
+<script type="text/javascript" src="/bitrix/cache/js/s1/dcs/page_8ae0be646dae07c4aa923071aaf6dec0/page_8ae0be646dae07c4aa923071aaf6dec0.js?14441643771709"></script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "ec4e610cef9504dc3ad737bd0300464f"]); _ba.push(["host", "www.digitalcombatsimulator.com"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".fancybox").fancybox({helpers:{overlay:{locked:false}}});
+                $(".confirm").confirm({
+                    post: true,
+                    confirmButtonClass: "btn btn-primary",
+                    cancelButtonClass: "btn btn-default"
+                });
+            });
+        </script>
+        <script type="text/javascript">
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-56757600-1', 'auto');
+          ga('require', 'displayfeatures');
+          ga('send', 'pageview');
+        </script>
+    </head>
+<body>
+    <div id="fb-root"></div>
+    <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20852101 = new Ya.Metrika({ id:20852101, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/20852101" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <script type="text/javascript">(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.3&appId=152288924833705";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div id="panel"></div>
+    <div class="navbar navbar-inverse" role="navigation" id="roof">
+        <div class="container">
+            <a href="/ru" class="navbar-brand"><img src="/bitrix/templates/dcs/images/dcs-logo.png" alt="Digital Combat Simulator"></a>
+            <div class="pull-right navbar-lang"><a href="/en/"><img src="/bitrix/templates/dcs/images/lang-en.png" alt="Английский"></a>
+<a href="/ru/"><img src="/bitrix/templates/dcs/images/lang-ru.png" alt="Русский"></a>
+<a href="/de/"><img src="/bitrix/templates/dcs/images/lang-de.png" alt="Немецкий"></a>
+<a href="/cn/"><img src="/bitrix/templates/dcs/images/lang-cn.png" alt="Китайский"></a>
+</div>
+            <div class="pull-right navbar-user">
+                <span id="login-line"> 
+<a href="javascript:void(0)" onclick="openAuthorizePopup()">Войти</a>
+        </span>
+<div id="bx_auth_popup_form" style="display:none;" class="bx_login_popup_form">
+<div id="bxdynamic_8k8aZS">  
+<div class="login_form">
+	    <form class="form-horizontal bx_auth_form" name="system_auth_formPqgS8z" method="post" target="_top" action="https://www.digitalcombatsimulator.com/ru/auth/">
+        <input type="hidden" name="AUTH_FORM" value="Y" />
+        <input type="hidden" name="TYPE" value="AUTH" />
+                <input type="hidden" name="backurl" value="/ru/" />
+                 
+        <div class="row">
+            <div class="form-group">
+                <label for="USER_LOGIN" class="col-xs-3 control-label">Логин</label>
+                <div class="col-xs-7">
+                    <input type="text" class="form-control" id="USER_LOGIN" name="USER_LOGIN" maxlength="255" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="USER_PASSWORD" class="col-xs-3 control-label">Пароль</label>
+                <div class="col-xs-7">
+                    <input type="password" class="form-control" id="USER_PASSWORD" name="USER_PASSWORD" maxlength="255">
+                </div>
+                <div class="col-xs-1" id="lock-icon">
+                        
+                </div>
+            </div>
+                                         <div class="form-group saveme"><div class="col-xs-7 col-xs-offset-3"><input type="checkbox" id="AUTH_USER_REMEMBER" name="USER_REMEMBER" value="Y" checked/>&nbsp;<label for="AUTH_USER_REMEMBER">Запомнить меня</label></div></div>
+                    </div>
+        <div class="row text-center">
+            <div class="col-xs-6"><input type="submit" name="Login" class="btn btn-primary margin" value="Войти" /></div>
+            <div class="col-xs-6">
+                  <a href="/ru/auth/?forgot_password=yes" rel="nofollow">Забыли пароль?</a>
+                  <a href="/ru/auth/?register=yes" rel="nofollow">Зарегистрироваться</a>            
+            </div>
+        </div>
+	</form>
+</div>
+<script type="text/javascript">
+try{document.form_auth.USER_LOGIN.focus();}catch(e){}
+</script></div></div>
+<script>
+function openAuthorizePopup(){var t=BX.PopupWindowManager.create("AuthorizePopup",null,{autoHide:!0,offsetLeft:0,offsetTop:0,overlay:!0,draggable:{restrict:!0},closeByEsc:!0,closeIcon:{right:"10px",top:"3px"},content:'<div style="width:500px;height:250px; text-align: center;"><span style="position:absolute;left:50%; top:50%"><img src="/bitrix/templates/dcs/components/bitrix/system.auth.form/.default/images/wait.gif"/></span></div>',events:{onAfterPopupShow:function(){this.setContent(BX("bx_auth_popup_form"))}}});t.show()}
+</script>
+                /
+                <script>
+    var obEshopBasket = new JSEshopBasket("/bitrix/templates/dcs/components/bitrix/sale.basket.basket.line/.default/ajax.php", "s1", "ru");
+</script>
+<span id="bx_cart_block">
+<a href="/ru/personal/cart/">Корзина</a>: <span id="bx_cart_num">пусто</span></span>            </div>
+        </div>
+    </div>
+            <div id="attic"><div class="col-xs-4 banner">
+    <div class="row">
+        <div class="col-xs-12">
+        </div>
+    </div>
+</div></div>
+        <div class="navbar navbar-inverse" role="navigation" id="top-menu">
+        <div class="container">
+            <ul class="nav navbar-nav navbar-left" id="top-menu-list">
+<li class="active"><a href="/ru/index.php">Главная</a></li>
+<li class="dropdown"><a href="/ru/products/">Продукты</a>
+<ul class="dropdown-menu" role="menu">
+<li class="dropdown"><a href="/ru/products/world/">DCS World</a></li>
+<li class="dropdown"><a href="/ru/products/planes/">Самолёты</a></li>
+<li class="dropdown"><a href="/ru/products/helicopters/">Вертолёты</a></li>
+<li class="dropdown"><a href="/ru/products/terrains/">Карты</a></li>
+<li class="dropdown"><a href="/ru/products/campaigns/">Кампании</a></li>
+<li class="dropdown"><a href="/ru/products/other/">Другое</a></li>
+</ul></li><li class="dropdown"><a href="/ru/downloads/">Скачать</a>
+<ul class="dropdown-menu" role="menu">
+<li class="dropdown"><a href="/ru/downloads/world/">DCS World</a></li>
+<li class="dropdown"><a href="/ru/downloads/previous_versions/">Предыдущие версии</a></li>
+<li class="dropdown"><a href="/ru/downloads/texture_templates/">Шаблоны текстур</a></li>
+<li class="dropdown"><a href="/ru/downloads/documentation/">Документация</a></li>
+<li class="dropdown"><a href="/ru/downloads/screenshots/">Скриншоты</a></li>
+<li class="dropdown"><a href="/ru/files/">Файлы пользователей</a></li>
+</ul></li><li class="dropdown"><a href="/ru/shop/">Магазин</a>
+<ul class="dropdown-menu" role="menu">
+<li class="dropdown"><a href="/ru/shop/special_offers/">Спец. предложения</a></li>
+<li class="dropdown"><a href="/ru/shop/modules/">Модули</a></li>
+<li class="dropdown"><a href="/ru/shop/terrains/">Карты</a></li>
+<li class="dropdown"><a href="/ru/shop/campaigns/">Кампании</a></li>
+</ul></li><li class="dropdown"><a href="/ru/support/">Поддержка</a>
+<ul class="dropdown-menu" role="menu">
+<li class="dropdown"><a href="/ru/support/">Обращения</a></li>
+<li class="dropdown"><a href="http://ru.wiki.eagle.ru" target="_blank">Вики</a></li>
+<li class="dropdown"><a href="/ru/support/faq">Частые вопросы (FAQ)</a></li>
+<li class="dropdown"><a href="/ru/support/bonus_rules">Правила бонусов</a></li>
+<li class="dropdown"><a href="/ru/support/license">Лицензия</a></li>
+</ul></li><li><a href="http://forums.eagle.ru/?langid=2" target="_blank">Форум</a></li>
+</ul>
+<div class="menu-clear-left"></div>  
+                <div id="title-search" class="search-box hidden-xs">
+    <form class="form-title-search" action="/ru/search/">
+    <div class="input-group form-title-search">
+        <input id="title-search-input" type="text" name="q" value="" placeholder="Поиск по сайту" size="20" maxlength="50" autocomplete="off" class="form-control" />
+        <span class="input-group-btn">
+        <input name="s" type="submit" value="Поиск" class="btn btn-search" />
+        </span>
+    </div>
+    </form>
+    </div>
+<script>
+   var jsControl = 
+        new JCTitleSearch({
+            'AJAX_PAGE' : '/ru/',
+            'CONTAINER_ID': 'title-search',
+            'INPUT_ID': 'title-search-input',
+            'MIN_QUERY_LEN': 1
+        });
+</script>
+        </div>
+    </div>
+    <div class="container">
+     
+<div class="row" id="columns-i-3">
+    <div class="left-wrap">
+        <div class="middle-wrap">
+            <div class="right-wrap">
+<div class="left-column">
+    <img src="/upload/iblock/7a8/1b.jpg" alt="Digital Combat Simulator World" title="Digital Combat Simulator World">
+    <div class="well">
+        <h2>Digital Combat Simulator World</h2>
+        <p>Digital Combat Simulator World (DCS World) это бесплатная компьютерная игра - военный авиасимулятор, сфокусированный на боевых действиях в воздухе. Игра включает бесплатные самолеты: штурмовик Су-25Т и невооруженный TF-51D Mustang, а также может расширяться дополнительными модулями с  летательными аппаратами и наземной техникой.</p>
+<p>DCS World включает обширную территорию Кавказа, российский северный Кавказ, западную Грузию, Абхазию, Южную Осетию.</p>    </div>
+</div>            
+<div class="middle-column">
+    <img src="/upload/iblock/394/Su-25_ED-site.jpg" alt="Су-25 для DCS World" title="Су-25 для DCS World">
+    <div class="well">
+        <h2>Су-25 для DCS World</h2>
+        <p>Самолет Су-25 Грач создавался специально для задач непосредственной авиационной поддержки наземных частей на поле боя. Су-25 принимал участие во множестве конфликтов за крайние 30 лет, что он находится в строю. Самолет отличается высокой боевой живучестью и отличной защитой летчика. Он может быть вооружен различными видами оружия, включая управляемые ракеты, бомбы, НАРы и пушки.</p>    </div>
+</div>                
+                <div class="right-column">
+                    <div class="well">
+                        <h2>Новости</h2>
+ 
+<div class="row">
+		<div class="col-xs-12 news-item" id="bx_651765591_2113906">
+		<div class="date">30 сен</div>
+		<p><a href="/ru/news/2016-09-30_A-10C_ATT/">Кампания A-10C Advanced Aircraft Training Qualification доступна в магазине DCS!</a></p>
+	</div>
+		<div class="col-xs-12 news-item" id="bx_651765591_2092858">
+		<div class="date">23 сен</div>
+		<p><a href="/ru/news/2016-09-23_Sale/">Крайние дни осенних скидок!</a></p>
+	</div>
+		<div class="col-xs-12 news-item" id="bx_651765591_2084802">
+		<div class="date">16 сен</div>
+		<p><a href="/ru/news/2016-09-16_Sale/">Бонусная акция и комплекты!</a></p>
+	</div>
+		<div class="col-xs-12 news-item" id="bx_651765591_2078303">
+		<div class="date">9 сен</div>
+		<p><a href="/ru/news/2016-09-09_OPF/">Кампания A-10C: Operation Piercing Fury теперь доступна!</a></p>
+	</div>
+		<div class="col-xs-12 news-item" id="bx_651765591_2069821">
+		<div class="date">2 сен</div>
+		<p><a href="/ru/news/2016-09-02_Bundles/">Комплекты модулей со скидкой!</a></p>
+	</div>
+		<div class="col-xs-12 news-item" id="bx_651765591_2062939">
+		<div class="date">26 авг</div>
+		<p><a href="/ru/news/2016-08-26_NTTR_Bonus/">Масштабная распродажа за бонусы!</a></p>
+	</div>
+		<div class="col-xs-12 news-item" id="bx_651765591_2036340">
+		<div class="date">5 авг</div>
+		<p><a href="/ru/news/2016-08-05_Relic/">Релиз кампании The Museum Relic!</a></p>
+	</div>
+</div>
+                        
+                        <div class="row"><a class="btn btn-default pull-right" href="/ru/news/">Еще</a></div>
+                    </div>
+                </div>    
+            </div>
+            <a class="btn btn-default pull-right" href="/ru/products/planes/su-25_fc/">Подробнее</a>
+        </div>
+        <a class="btn btn-primary pull-right hidden-xs hidden-sm" href="/ru/downloads/world/stable/">Скачать бесплатно</a>
+        <a class="btn btn-primary pull-right visible-sm-block visible-xs-block" href="/ru/downloads/world/stable/">Скачать</a>
+    </div>   
+</div>
+<div class="row" id="columns-i-2">
+    <div class="left-column no-padding col-md-8 col-sm-12">
+        <div id="slider" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+    	            <div class="active item" data-slide-number="0" id="bx_1373509569_1409579">
+                            <div class="video-container"><iframe id="player-id-0" src="https://player.vimeo.com/video/112441999?api=1&amp;player_id=player-id-0" allowfullscreen></iframe></div> 
+                    </div>
+    	            <div class="item" data-slide-number="1" id="bx_1373509569_1409578">
+                            <div class="video-container"><iframe id="player-id-1" src="https://player.vimeo.com/video/112442162?api=1&amp;player_id=player-id-1" allowfullscreen></iframe></div> 
+                    </div>
+    	            <div class="item" data-slide-number="2" id="bx_1373509569_1409577">
+                            <div class="video-container"><iframe id="player-id-2" src="https://player.vimeo.com/video/112743223?api=1&amp;player_id=player-id-2" allowfullscreen></iframe></div> 
+                    </div>
+    	            <div class="item" data-slide-number="3" id="bx_1373509569_1409576">
+                            <div class="video-container"><iframe id="player-id-3" src="https://player.vimeo.com/video/112440046?api=1&amp;player_id=player-id-3" allowfullscreen></iframe></div> 
+                    </div>
+    	            <div class="item" data-slide-number="4" id="bx_1373509569_1409575">
+                            <div class="video-container"><iframe id="player-id-4" src="https://player.vimeo.com/video/112441491?api=1&amp;player_id=player-id-4" allowfullscreen></iframe></div> 
+                    </div>
+    	            <div class="item" data-slide-number="5" id="bx_1373509569_1409574">
+                            <div class="video-container"><iframe id="player-id-5" src="https://player.vimeo.com/video/112439721?api=1&amp;player_id=player-id-5" allowfullscreen></iframe></div> 
+                    </div>
+    	            <div class="item" data-slide-number="6" id="bx_1373509569_1409571">
+                            <div class="video-container"><iframe id="player-id-6" src="https://player.vimeo.com/video/112742501?api=1&amp;player_id=player-id-6" allowfullscreen></iframe></div> 
+                    </div>
+    	            <div class="item" data-slide-number="7" id="bx_1373509569_1409570">
+                            <div class="video-container"><iframe id="player-id-7" src="https://player.vimeo.com/video/112439567?api=1&amp;player_id=player-id-7" allowfullscreen></iframe></div> 
+                    </div>
+    	            <div class="item" data-slide-number="8" id="bx_1373509569_1409568">
+                            <div class="video-container"><iframe id="player-id-8" src="https://player.vimeo.com/video/161148242?api=1&amp;player_id=player-id-8" allowfullscreen></iframe></div> 
+                    </div>
+    	            <div class="item" data-slide-number="9" id="bx_1373509569_1409567">
+                            <div class="video-container"><iframe id="player-id-9" src="https://player.vimeo.com/video/112438781?api=1&amp;player_id=player-id-9" allowfullscreen></iframe></div> 
+                    </div>
+    	            <div class="item" data-slide-number="10" id="bx_1373509569_1409565">
+                            <div class="video-container"><iframe id="player-id-10" src="https://player.vimeo.com/video/112438696?api=1&amp;player_id=player-id-10" allowfullscreen></iframe></div> 
+                    </div>
+    	            <div class="item" data-slide-number="11" id="bx_1373509569_1409562">
+                            <div class="video-container"><iframe id="player-id-11" src="https://player.vimeo.com/video/158649558?api=1&amp;player_id=player-id-11" allowfullscreen></iframe></div> 
+                    </div>
+    	            <div class="item" data-slide-number="12" id="bx_1373509569_1489778">
+                            <div class="video-container"><iframe id="player-id-12" src="https://player.vimeo.com/video/141595930?api=1&amp;player_id=player-id-12" allowfullscreen></iframe></div> 
+                    </div>
+        </div>
+    <a class="carousel-control left" href="#slider" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="carousel-control right" href="#slider" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+<div id="thumbslider" class="carousel slide hidden-xs" data-interval="false">
+    <div class="carousel-inner">
+                                    <div class="active item">
+                    <div class="row">
+                        <div data-target="#slider" data-slide-to="0" class="selected col-xs-2" id="carousel-selector-0">
+                                                        <img src="https://i.vimeocdn.com/video/515632927_100x75.jpg" alt="Digital Combat Simulator World" title="Digital Combat Simulator World" />
+                                                </div>
+                                            <div data-target="#slider" data-slide-to="1" class="col-xs-2" id="carousel-selector-1">
+                                                        <img src="https://i.vimeocdn.com/video/497819525_100x75.jpg" alt="DCS: Ка-50 Чёрная Акула" title="DCS: Ка-50 Чёрная Акула" />
+                                                </div>
+                                            <div data-target="#slider" data-slide-to="2" class="col-xs-2" id="carousel-selector-2">
+                                                        <img src="https://i.vimeocdn.com/video/497819251_100x75.jpg" alt="DCS: A-10C Warthog" title="DCS: A-10C Warthog" />
+                                                </div>
+                                            <div data-target="#slider" data-slide-to="3" class="col-xs-2" id="carousel-selector-3">
+                                                        <img src="https://i.vimeocdn.com/video/510492409_100x75.jpg" alt="DCS: P-51D Mustang" title="DCS: P-51D Mustang" />
+                                                </div>
+                                            <div data-target="#slider" data-slide-to="4" class="col-xs-2" id="carousel-selector-4">
+                                                        <img src="https://i.vimeocdn.com/video/497819638_100x75.jpg" alt="DCS: Горячие Скалы" title="DCS: Горячие Скалы" />
+                                                </div>
+                                            <div data-target="#slider" data-slide-to="5" class="col-xs-2" id="carousel-selector-5">
+                                                        <img src="https://i.vimeocdn.com/video/497820175_100x75.jpg" alt="DCS: Огневой рубеж" title="DCS: Огневой рубеж" />
+                                                </div>
+                                </div>
+                </div>
+                                                <div class="item">
+                    <div class="row">
+                        <div data-target="#slider" data-slide-to="6" class="col-xs-2" id="carousel-selector-6">
+                                                        <img src="https://i.vimeocdn.com/video/497819358_100x75.jpg" alt="DCS: Ми-8МТВ2 Великолепная восьмёрка" title="DCS: Ми-8МТВ2 Великолепная восьмёрка" />
+                                                </div>
+                                            <div data-target="#slider" data-slide-to="7" class="col-xs-2" id="carousel-selector-7">
+                                                        <img src="https://i.vimeocdn.com/video/497820267_100x75.jpg" alt="DCS: UH-1H Huey" title="DCS: UH-1H Huey" />
+                                                </div>
+                                            <div data-target="#slider" data-slide-to="8" class="col-xs-2" id="carousel-selector-8">
+                                                        <img src="https://i.vimeocdn.com/video/563315709_100x75.jpg" alt="DCS: F-86F Sabre" title="DCS: F-86F Sabre" />
+                                                </div>
+                                            <div data-target="#slider" data-slide-to="9" class="col-xs-2" id="carousel-selector-9">
+                                                        <img src="https://i.vimeocdn.com/video/510493030_100x75.jpg" alt="DCS: Fw 190 D-9 Dora" title="DCS: Fw 190 D-9 Dora" />
+                                                </div>
+                                            <div data-target="#slider" data-slide-to="10" class="col-xs-2" id="carousel-selector-10">
+                                                        <img src="https://i.vimeocdn.com/video/497820933_100x75.jpg" alt="DCS: Bf 109 K-4 Kurfürst" title="DCS: Bf 109 K-4 Kurfürst" />
+                                                </div>
+                                            <div data-target="#slider" data-slide-to="11" class="col-xs-2" id="carousel-selector-11">
+                                                        <img src="https://i.vimeocdn.com/video/560208549_100x75.jpg" alt="DCS: МиГ-15бис" title="DCS: МиГ-15бис" />
+                                                </div>
+                                </div>
+                </div>
+                                                <div class="item">
+                    <div class="row">
+                        <div data-target="#slider" data-slide-to="12" class="col-xs-2" id="carousel-selector-12">
+                                                        <img src="https://i.vimeocdn.com/video/538641404_100x75.jpg" alt="DCS: L-39 Albatros" title="DCS: L-39 Albatros" />
+                                                </div>
+                                </div>
+                </div>
+                        </div>
+        <a class="carousel-control left" href="#thumbslider" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="carousel-control right" href="#thumbslider" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+    </div>
+    <div class="right-column col-md-4 hidden-xs hidden-sm">
+        <h2>Форум</h2>
+            <div class="forum-item">
+            <p><a href="https://forums.eagle.ru/showthread.php?t=175734&amp;goto=newpost" target="_blank">Big Helicopters</a></p>
+    			<div class="date">26.10.2016 09:43:52 UTC</div>
+	    </div>
+    <div class="forum-item">
+            <p><a href="https://forums.eagle.ru/showthread.php?t=160330&amp;goto=newpost" target="_blank">External airplane model clipping into cockpit</a></p>
+    			<div class="date">26.10.2016 09:43:33 UTC</div>
+	    </div>
+    <div class="forum-item">
+            <p><a href="https://forums.eagle.ru/showthread.php?t=139912&amp;goto=newpost" target="_blank">Valve/HTC Vive Discussion</a></p>
+    			<div class="date">26.10.2016 09:43:22 UTC</div>
+	    </div>
+    <div class="forum-item">
+            <p><a href="https://forums.eagle.ru/showthread.php?t=9987&amp;goto=newpost" target="_blank">Видео Авиация</a></p>
+    			<div class="date">26.10.2016 09:42:15 UTC</div>
+	    </div>
+    <div class="forum-item">
+            <p><a href="https://forums.eagle.ru/showthread.php?t=132058&amp;goto=newpost" target="_blank">DCS: Mirage от RAZBAM</a></p>
+    			<div class="date">26.10.2016 09:42:13 UTC</div>
+	    </div>
+<div class="row margin-top"><a class="btn btn-default pull-right" href="https://forums.eagle.ru/search.php?do=getnew&langid=2" target="_blank">Еще</a></div>    </div>
+</div>
+</div>
+    <div id="social-buttons-block" class="row">
+        <div class="col-xs-12">
+            <div class="container">           
+	ПРИСОЕДИНЯЙТЕСЬ К НАМ
+    <ul id="follow-list">
+		<li>
+			<a href="https://twitter.com/eagledynamics" target="_blank">
+				<img src="/bitrix/templates/dcs/images/twitter.png" alt="Twitter">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/eagle.dynamics" target="_blank">
+                <img src="/bitrix/templates/dcs/images/facebook.png" alt="Facebook">
+            </a>
+        </li>
+        <li>
+			<a href="https://www.vk.com/eagle.dynamics" target="_blank">
+				<img src="/bitrix/templates/dcs/images/vk.png" alt="ВКонтакте">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.google.com/+EagleDynamicsTV" target="_blank">
+                <img src="/bitrix/templates/dcs/images/googleplus.png" alt="Google+">
+            </a>
+        </li>
+        <li>
+			<a href="https://www.youtube.com/user/eagledynamicstv" target="_blank">
+				<img src="/bitrix/templates/dcs/images/youtube.png" alt="YouTube">
+            </a>
+        </li>
+    </ul>
+</div>        </div>
+    </div>
+    <div class="row" id="awards-block">
+        <div class="col-xs-12">
+                        <div class="img-link">
+                <a href="http://www.ign.com" target="_blank" title="IGN.COM Editors' Choice award"><img src="/bitrix/templates/dcs/images/button/pic1.png" alt="IGN.COM Editors' Choice award" title="IGN.COM Editors' Choice award"/></a>
+            </div>
+            <div class="img-link">
+                <a href="http://www.computeractive.co.uk" target="_blank" title="Computer Active Buy It! 5 stars award"><img src="/bitrix/templates/dcs/images/button/pic2.png" alt="Computer Active Buy It! 5 stars award" title="Computer Active Buy It! 5 stars award"/></a>
+            </div>
+            <div class="img-link">
+                <a href="http://www.pcgamer.com" target="_blank" title="PC Gamer Editor's Choice 5 stars award"><img src="/bitrix/templates/dcs/images/button/pic3.png" alt="PC Gamer Editor's Choice 5 stars award" title="PC Gamer Editor's Choice 5 stars award"/></a>
+            </div>
+            <div class="img-link">
+                <a href="http://www.fsmagazin.de" target="_blank" title="'Tipp der Redaktion' from the German magazine FS Magazin"><img src="/bitrix/templates/dcs/images/button/pic4.png" alt="'Tipp der Redaktion' from the German magazine FS Magazin" title="'Tipp der Redaktion' from the German magazine FS Magazin"/></a>
+            </div>
+            <div class="img-link">
+                <img src="/bitrix/templates/dcs/images/button/pic5.png" alt="Eurogamer award" title="Eurogamer award"/>
+            </div>
+            <div class="img-link">
+                <a href="http://www.pcpilot.net" target="_blank" title="PC Pilot Classic Product award"><img src="/bitrix/templates/dcs/images/button/pic6.png" alt="PC Pilot Classic Product award" title="PC Pilot Classic Product award"/></a>
+            </div>
+            <div class="img-link">
+                <a href="http://www.pcpilot.net" target="_blank" title="PC Pilot Platinum award"><img src="/bitrix/templates/dcs/images/button/pic7.png" alt="PC Pilot Platinum award" title="PC Pilot Platinum award"/></a>
+            </div>
+            <div class="img-link">
+                <img src="/bitrix/templates/dcs/images/button/pic8.png" alt="Microsim award" title="Microsim award"/>
+            </div>
+            <div class="img-link">
+                <a href="http://www.fz.se" target="_blank" title="Swedish award"><img src="/bitrix/templates/dcs/images/button/pic9.png" alt="Swedish award" title="Swedish award"/></a>
+            </div>
+        </div>
+    </div> 
+        <footer>
+            <ul class="main-list">
+<li><div class="bottom-block">
+<p><a href="/ru/products/">Продукты</a></p>
+<ul class="inner">
+<li><a href="/ru/products/world/">DCS World</a></li>
+<li><a href="/ru/products/planes/">Самолёты</a></li>
+<li><a href="/ru/products/helicopters/">Вертолёты</a></li>
+<li><a href="/ru/products/terrains/">Карты</a></li>
+<li><a href="/ru/products/campaigns/">Кампании</a></li>
+<li><a href="/ru/products/other/">Другое</a></li>
+</ul></div></li><li><div class="bottom-block">
+<p><a href="/ru/downloads/">Скачать</a></p>
+<ul class="inner">
+<li><a href="/ru/downloads/world/">DCS World</a></li>
+<li><a href="/ru/downloads/previous_versions/">Предыдущие версии</a></li>
+<li><a href="/ru/downloads/texture_templates/">Шаблоны текстур</a></li>
+<li><a href="/ru/downloads/documentation/">Документация</a></li>
+<li><a href="/ru/downloads/screenshots/">Скриншоты</a></li>
+<li><a href="/ru/files/">Файлы пользователей</a></li>
+</ul></div></li><li><div class="bottom-block">
+<p><a href="/ru/support/">Поддержка</a></p>
+<ul class="inner">
+<li><a href="/ru/support/">Обращения</a></li>
+<li><a href="/ru/support/faq">Частые вопросы (FAQ)</a></li>
+<li><a href="http://forums.eagle.ru/?langid=2" target="_blank">Форум</a></li>
+<li><a href="http://ru.wiki.eagle.ru" target="_blank">Вики</a></li>
+<li><a href="/ru/support/bonus_rules">Правила бонусов</a></li>
+<li><a href="/ru/links">Ссылки</a></li>
+<li><a href="/ru/contacts">Контакты</a></li>
+</ul></div></li></ul> 
+        </footer>
+        <div id="ground" class="row">
+            <div class="col-md-6 hidden-sm hidden-xs error"><small>Нашли ошибку? Выделите мышкой и нажмите Ctrl+Enter.</small></div>
+            <div class="col-sm-12 col-md-6 copyright"><small>&copy; 1991-2016 The Fighter Collection и &laquo;Студия Игл Дайнемикс&raquo;.</small></div>
+        </div>
+        <div id="bx-composite-banner"></div>
+        <script type="text/javascript">
+            var dimensionValue = window.frameRequestStart ? 'Composite': 'NoComposite';
+            ga('set', 'dimension1', dimensionValue);
+        </script>
+  </body>
+</html><!--48e7cbd26b0efd20af9c6518351c54a7-->

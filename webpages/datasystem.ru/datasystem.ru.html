@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataSystem</title>
+	<link media="all" rel="stylesheet" href="/bitrix/templates/datasystem/css/all.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="/bitrix/templates/datasystem/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="/bitrix/templates/datasystem/js/jquery.main.js"></script>
+	<!--[if IE]><script type="text/javascript" src="/bitrix/templates/datasystem/js/ie.js"></script><![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="/bitrix/cache/css/s1/datasystem/kernel_main/kernel_main.css?14056330589387" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/datasystem/template_5845c7c1668c10cf6a2e9f49de3ada27/template_5845c7c1668c10cf6a2e9f49de3ada27_399dbbd1ddebd53f588feaa3eefae827.css?1472277241992" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script>var _ba = _ba || []; _ba.push(["aid", "552a3bcfaad5a842c9b7b6619bffdb9d"]);(function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = document.location.protocol + "//bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'DATASYSTEM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','USER_ID':'','SERVER_TIME':'1477472779','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'87dfeba2568dcab394a1bca239de49fd'});</script>
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/datasystem/kernel_main/kernel_main.js?1449469508266829"></script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css','/bitrix/templates/datasystem/template_styles.css']); </script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js','/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/session.js','/bitrix/js/main/core/core_window.js','/bitrix/js/main/utils.js']); </script>
+
+<script type="text/javascript">
+bxSession.Expand(43200, '87dfeba2568dcab394a1bca239de49fd', false, '26f08d40ef1528f40e3ab7c75aea3935');
+</script>
+
+
+<meta name='yandex-verification' content='769c1507d9abb050' />
+
+<style>
+.holder {font-size: 14px; line-height: 1.5em; font-family: tahoma; letter-spacing: normal;}
+.blockorange {padding: 12px; margin-bottom: 20px; background: #ee6600; color:#fff; font-size: 18px;}
+.blockorange a {color:#fff;}
+.blockgrey {padding: 12px; margin-bottom: 20px; background: #eef0f1;}
+.tablebanr {width: 100%; padding: 0; background: none !important; margin-bottom: 0 !important; }
+.tablebanr tr {padding: 0 !important;} 
+.tablebanr td {padding: 0 !important;} 
+.divposlenov {width: 100%; max-width: 900px; font-size: 16px; padding: 25px 15px 25px 15px; background: #eef0f1; border-left: solid 3px #ee6600; margin: 25px 0 20px 0; } 
+.divposlenovleftpic { text-align: center; background: #ffffff; padding: 15px; margin-right: 25px; border: solid 1px #bdbdbd; } 
+.divposlenovname {font-size: 26px;} 
+.divposlenovknopka {width: 80px; text-align: center; padding: 7px; background: #ee6600; font-size: 16px; float: left; display: block; margin-right: 10px; margin-top: 10px; } 
+.divposlenovknopka a {color:#ffffff; text-decoration: none; } 
+.divposlenovknopka:hover {background: #000;} 
+.divposlenovknopka2 {width: 145px; text-align: center; padding: 7px; background: #ee6600; font-size: 16px; float: left; display: block; margin-right: 10px; margin-top: 10px; } 
+.divposlenovknopka2 a {color:#ffffff; text-decoration: none; } 
+.divposlenovknopka2:hover {background: #000;} 
+.divposlenovknopka3 {width: 249px; text-align: center; padding: 7px; background: #ee6600; font-size: 16px; float: left; margin-right: 10px; margin-top: 7px; } 
+.divposlenovknopka3 a {color:#ffffff; text-decoration: none; } 
+.divposlenovknopka3:hover {background: #000;} 
+
+.divvnov {width: 550px; padding: 15px; background: #eef0f1; border: solid 2px #ee6600; margin-top: 10px; margin-bottom: 10px; } 
+.divvnovleftpic { text-align: center; background: #ffffff; padding: 15px; margin-right: 25px; border: solid 1px #bdbdbd; } 
+.divvnovname {font-size: 26px;} 
+h3 {color:#000; font-weight: bold; margin: 20px 0 20px 0;} 
+.orange {width: 98%; padding: 12px; background: #ee6600; color:#fff; font-size: 16pt; margin: 20px 0 15px 0;} 
+	</style>
+
+</head>
+<body>
+    	<div class="wrapper-holder">
+		<div id="wrapper">
+			<header id="header">
+				<strong class="logo"><a href="/">Datasystem</a>
+</strong>
+				<div class="tel-holder">
+	<div class="block">
+ <span class="tel">8 (495) 902-65-12</span> <span class="info">звонок по Москве</span>
+	</div>
+	<div class="block">
+ <span class="tel">8 (800) 775 79 98</span> <span class="info">звонок по России</span>
+	</div>
+</div>
+<div class="contact-block">
+ <span class="mail">Email: <a href="mailto:info@datasystem.ru">info@datasystem.ru</a></span> <span class="skype">Skype: <a href="#">datasystem-group</a></span>
+</div>
+ <br>			</header>
+			<nav id="nav">
+	<ul>				<li>
+					<a href="/resheniya/">
+						Готовые решения 					</a>
+                    <span class="menu-arrow"></span>
+					<div class="drop-holder">
+						<div class="drop">
+							<ul class="info">
+											<li>
+						<img src="/upload/iblock/010/010ea9636211ad3a9be8048b62326b9a.jpg" width="80" height="80" alt="Для системного администратора" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="/resheniya#admin">Для системного администратора</a></span>
+							<p>Основные обязанности – обеспечение бесперебойной работы компьютерной техники, сети и программного обеспечения</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/26f/26ff9e316e09027f0e15d56d959b7789.jpg" width="80" height="80" alt="Для руководителя" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="/resheniya#ruk">Для руководителя</a></span>
+							<p>Руководитель способен эффективно организовать и использовать ресурсы для достижения результата в работе</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/5e8/5e8ef767b2579be7b6fcb05524944e86.jpg" width="80" height="80" alt="Для специалиста" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="/resheniya#spec">Для специалиста</a></span>
+							<p>Специалист решает разные отраслевые задачи, использует самые передовые технологии, сосредоточен на своей работе</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/29f/29f564b1efbd245d2b7ebf339cb3ce39.jpg" width="80" height="80" alt="Для дома и офиса" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="/resheniya#home">Для дома и офиса</a></span>
+							<p>В офисе и дома мы стремимся использовать современные, безопасные, простые в работе и освоении программы.</p>
+						</div>
+					</li></ul></div></div></li>				<li>
+					<a href="/software/">
+						Программное обеспечение					</a>
+                    <span class="menu-arrow"></span>
+					<div class="drop-holder">
+						<div class="drop">
+							<ul class="info">
+											<li>
+						<img src="/upload/iblock/36a/36af1352defd558f6f69a0ad6d2a7c19.jpg" width="80" height="80" alt="Производители ПО" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="http://www.soft.datasystem.ru/catalog/vse_proizvoditeli_softa/">Производители ПО</a></span>
+							<p>ABBYY, Acronis, Adobe, Corel, ESET, Лаборатория Касперского, Доктор Веб, Kerio, Symantec, Microsoft и другие</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/54c/54c8df49ebbedd9e54477ec522b59ff6.jpg" width="80" height="80" alt="Программы по категориям" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="http://www.soft.datasystem.ru/catalog/vse_proizvoditeli_softa/">Программы по категориям</a></span>
+							<p>Антивирусы, Сетевая безопасность, Операционные системы, Системное ПО, Графика и дизайн, Интернет и сеть</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/7a8/7a8e83e0e1f6181c5a0c0852842a0606.jpg" width="80" height="80" alt="Акции и скидки" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="http://www.soft.datasystem.ru/catalog/skidki/">Акции и скидки</a></span>
+							<p>Акции для домашних пользователей, компаний и организаций. Льготные цены медицине, образованию, гос.структурам</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/68d/68d10997bda6b255e3030b4592f19b8a.jpg" width="80" height="80" alt="Спец. цены" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="/skidki/">Спец. цены</a></span>
+							<p>Льготные цены для государства, медицины и образования. Скидки и акции для частных лиц и организаций. </p>
+						</div>
+					</li></ul></div></div></li>				<li>
+					<a href="/equipment/">
+						   Техника   					</a>
+                    <span class="menu-arrow"></span>
+					<div class="drop-holder">
+						<div class="drop">
+							<ul class="info">
+											<li>
+						<img src="/upload/iblock/1fb/1fb33c06caf23e478ff187d05a1ae936.jpg" width="80" height="80" alt="Безопасность" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="http://www.hardbroker.ru/catalog/445/products/">Безопасность</a></span>
+							<p>Видеонаблюдение, Сигнализация, СКУД, Защита информации, Поисковая техника, Сканеры отпечатков пальцев, Спец. химические средства и другие</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/96c/96c6ccbac59925184782aefae52e7955.jpg" width="80" height="80" alt="Сборка компьютеров и серверов" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="http://hardbroker.ru/pages/sborka_pk/">Сборка компьютеров и серверов</a></span>
+							<p>На нашем сайте Вы можете оформить заказ на сборку компьютера и сервера по Вашей конфигурации</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/205/205f2b697aca9750666a125254b2908b.jpg" width="80" height="80" alt="Серверное оборудование" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="http://www.hardbroker.ru/catalog/300/">Серверное оборудование</a></span>
+							<p>Готовые сервера для типовых функциональных задач. Файловые, почтовые, терминальные. Сборка сервера по параметрам</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/5d4/5d4e8ec8127ef5dd4e4af5e15ab85fe4.jpg" width="80" height="80" alt="Системы хранения данных" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="http://www.hardbroker.ru/catalog/410/products/">Системы хранения данных</a></span>
+							<p>Готовые СХД или подбор системы по параметрам. Arbyte, DEPO Storage, Hewlett-Packard, Synology и другие</p>
+						</div>
+					</li></ul></div></div></li>				<li>
+					<a href="/service/">
+						Сервис					</a>
+                    <span class="menu-arrow"></span>
+					<div class="drop-holder">
+						<div class="drop">
+							<ul class="info">
+											<li>
+						<img src="/upload/iblock/e60/e60e4ed7171ea78471636400674cd69c.jpg" width="80" height="80" alt="Техническая поддержка" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="/service#support">Техническая поддержка</a></span>
+							<p>Предоставляется зарегистрированным Пользователям программ On-line Сервисом Helpdesk24</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/a74/a74556359c93e6f4e1efd54a81b5300e.jpg" width="80" height="80" alt="Заказ пробных версий" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="/service#support">Заказ пробных версий</a></span>
+							<p>Сроки тестирования – до 30 суток в зависимости от выбранного ПО</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/f1d/f1d7c55723eddb1955b10072b0c98e26.jpg" width="80" height="80" alt="Обучение и сертификация" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="/service#edu">Обучение и сертификация</a></span>
+							<p>Обучение по специализированным курсам Производителей ПО и Оборудования</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/131/1314d892f85f47a52ae7dbfe1ccf4573.jpg" width="80" height="80" alt="ИТ-услуги" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="/it-uslugi/">ИТ-услуги</a></span>
+							<p>Установка, конфигурация, модернизация оборудования, Аудит ИБП, Услуги по развертыванию</p>
+						</div>
+					</li></ul></div></div></li>				<li>
+					<a href="/contacts/">
+						Контакты					</a>
+                    <span class="menu-arrow"></span>
+					<div class="drop-holder">
+						<div class="drop">
+							<ul class="info">
+											<li>
+						<img src="/upload/iblock/b44/b4474aa7691aec717a947b45c5397cee.jpg" width="80" height="80" alt="Адрес" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="/contacts#map">Адрес</a></span>
+							<p>Москва, Дорожная улица, дом 60Б</br>
+Бизнес-центр Аннино-Плаза</br>
+	<a href="/contacts#map">Схема проезда</a>
+</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/afa/afaab19f24a4912dcd08182432c418a0.jpg" width="80" height="80" alt="О Компании" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="/o-kompanii">О Компании</a></span>
+							<p>ДАТАСИСТЕМ специализируется на поставках лицензионного программного обеспечения и электронного оборудования. <a href="/o-kompanii">Подробнее</a>
+</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/d59/d599d5cd704cb325d2bd22194d0143c1.jpg" width="80" height="80" alt="Cотрудничество" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="/sotrudnichestvo/">Cотрудничество</a></span>
+							<p>Компания ДАТАСИСТЕМ создает эффективные бизнес-коммуникации</p>
+						</div>
+					 </li>					<li>
+						<img src="/upload/iblock/76e/76e83aa2ea39772e5eb1694d0c88a6b7.jpg" width="80" height="80" alt="Новости" class="alignleft">
+						<div class="description">
+							<span class="title"><a href="/news/">Новости</a></span>
+							<p>Новости и пресс-релизы компании и ведущих производителей программного обеспечения и оборудования</p>
+						</div>
+					</li>			</ul></div></div>	</ul>
+</nav>            <div class="carousel">
+    <ul class="pagination">
+                    <li>
+                <a href="#">
+                    <img src="/thumb/58x58xcut/upload/iblock/140/140949691fb75757da72657a74e4890c.png" width="58" height="58" alt="Система хранения данных" title="Система хранения данных">
+                </a>
+            </li>
+                        <li>
+                <a href="#">
+                    <img src="/thumb/58x58xcut/upload/iblock/73a/73a141bc53515ffaacc310a9f4434512.png" width="58" height="58" alt="Удаленное администрирование" title="Удаленное администрирование">
+                </a>
+            </li>
+                        <li>
+                <a href="#">
+                    <img src="/thumb/58x58xcut/upload/iblock/c2c/c2cfe4d2ced6e0e2e70c4561ad7fc8a3.png" width="58" height="58" alt="Шифрование" title="Шифрование">
+                </a>
+            </li>
+                        <li>
+                <a href="#">
+                    <img src="/thumb/58x58xcut/upload/iblock/3f5/3f589c37e8ba8aec4181ca0f2815bf86.png" width="58" height="58" alt="Сервер" title="Сервер">
+                </a>
+            </li>
+                        <li>
+                <a href="#">
+                    <img src="/thumb/58x58xcut/upload/iblock/5bf/5bf9b5baa8eff66bc541938188f4878f.png" width="58" height="58" alt="Резервное копирование" title="Резервное копирование">
+                </a>
+            </li>
+                        <li>
+                <a href="#">
+                    <img src="/thumb/58x58xcut/upload/iblock/f96/f969bafc2b6b0ce237da88ba54e7af2e.jpg" width="58" height="58" alt="Электронный документооборот" title="Электронный документооборот">
+                </a>
+            </li>
+                </ul>
+    <div class="mask">
+        <div class="slideset">
+                            <div class="slide active">
+                    <img src="/thumb/899x368xin/upload/iblock/140/140949691fb75757da72657a74e4890c.png" width="899" height="368" alt="Система хранения данных" title="Система хранения данных">
+                                                    <div class="description"><h2>
+	Системы хранения данных</h2>
+
+
+<p>
+	<span style="font-size:16px;">&bull; Данные &nbsp; &nbsp; &bull; Надежность &nbsp; &nbsp; &bull; Облака</span></p>
+<p>
+	&nbsp;</p>
+<div style="width: 140px; padding: 10px; background: #ffffff; border: solid 1px #e34702; text-align: center;">
+	<strong><a href="/sistemy-khraneniya-dannykh/" style="text-decoration: none; color: #ed6600"><span style="font-size:18px;">Подробнее</span></a></strong></div>
+</div>                </div>                <div class="slide">
+                    <img src="/thumb/899x368xin/upload/iblock/73a/73a141bc53515ffaacc310a9f4434512.png" width="899" height="368" alt="Удаленное администрирование" title="Удаленное администрирование">
+                                                    <div class="description"><h2>
+	Удаленное администрирование</h2>
+
+
+<p>
+	<span style="font-size:16px;">&bull; Администрирование и техподдержка &nbsp; &nbsp; &bull; Удаленная работа с клиентами</span></p>
+<p>
+	&nbsp;</p>
+<div style="width: 140px; padding: 10px; background: #ffffff; border: solid 1px #e34702; text-align: center;">
+	<strong><a href="/udalennoe-administrirovanie/" style="text-decoration: none; color: #ed6600"><span style="font-size:18px;">Подробнее</span></a></strong></div>
+</div>                </div>                <div class="slide">
+                    <img src="/thumb/899x368xin/upload/iblock/c2c/c2cfe4d2ced6e0e2e70c4561ad7fc8a3.png" width="899" height="368" alt="Шифрование" title="Шифрование">
+                                                    <div class="description"><h2>
+	Шифрование</h2>
+
+
+<p>
+<span style="font-size:16px;">&bull; Защита баз данных &nbsp; &nbsp; &bull; Контроль доступа к информации &nbsp; &nbsp;</br>
+ &bull; Cокрытие конфиденциальной информации &nbsp; &nbsp; &bull;  Экстренная блокировка </span></p>
+<p>
+	&nbsp;</p>
+<div style="width: 140px; padding: 10px; background: #ffffff; border: solid 1px #e34702; text-align: center;">
+	<strong><a href="/shifrovanie/" style="text-decoration: none; color: #ed6600"><span style="font-size:18px;">Подробнее</span></a></strong></div>
+</div>                </div>                <div class="slide">
+                    <img src="/thumb/899x368xin/upload/iblock/3f5/3f589c37e8ba8aec4181ca0f2815bf86.png" width="899" height="368" alt="Сервер" title="Сервер">
+                                                    <div class="description"><h2>
+	Серверное оборудование</h2>
+
+
+<p>
+	<span style="font-size:16px;">&bull; Гибкость&nbsp; &nbsp; &bull; Надежность &nbsp; &nbsp; &bull; Производительность</span></p>
+<p>
+	&nbsp;</p>
+<div style="width: 140px; padding: 10px; background: #ffffff; border: solid 1px #e34702; text-align: center;">
+	<strong><a href="/servernoe-oborudovanie/" style="text-decoration: none; color: #ed6600"><span style="font-size:18px;">Подробнее</span></a></strong></div>
+</div>                </div>                <div class="slide">
+                    <img src="/thumb/899x368xin/upload/iblock/5bf/5bf9b5baa8eff66bc541938188f4878f.png" width="899" height="368" alt="Резервное копирование" title="Резервное копирование">
+                                                    <div class="description"><h2>
+	Резервное копирование</h2>
+
+
+<p>
+	<span style="font-size:16px;">&bull; Архивация данных &nbsp; &nbsp; &bull; Восстановление системы &nbsp; &nbsp; &bull; Предыдущие версии</span></p>
+<p>
+	&nbsp;</p>
+<div style="width: 140px; padding: 10px; background: #ffffff; border: solid 1px #e34702; text-align: center;">
+	<strong><a href="/rezervnoe-kopirovanie/" style="text-decoration: none; color: #ed6600"><span style="font-size:18px;">Подробнее</span></a></strong></div>
+</div>                </div>                <div class="slide">
+                    <img src="/thumb/899x368xin/upload/iblock/f96/f969bafc2b6b0ce237da88ba54e7af2e.jpg" width="899" height="368" alt="Электронный документооборот" title="Электронный документооборот">
+                                                    <div class="description"><h2>
+	Электронный документооборот</h2>
+
+
+<p>
+	<span style="font-size:16px;">&bull; Сканирование &nbsp; &nbsp; &bull; Распознавание &nbsp; &nbsp; &bull; Электронный архив</span></p>
+<p>
+	&nbsp;</p>
+<div style="width: 140px; padding: 10px; background: #ffffff; border: solid 1px #e34702; text-align: center;">
+	<strong><a href="/elektronnyy-dokumentooborot/" style="text-decoration: none; color: #ed6600"><span style="font-size:18px;">Подробнее</span></a></strong></div>
+</div>                </div>        </div>
+    </div>
+</div>
+<div class="info-area">
+    <p><div onmousemove="this.style.color='#f5720f';this.style.background='black';" onmouseout="this.style.color='black';this.style.background='#f5720f';" style="float: left; display:block; background: #f5720f; height: 395px; width: 95px; margin-right: 6px; margin-bottom: 40px;">
+ <a href="/corporate/"><img src="http://лицензионныйсофт.рф/img/052935702503265832647521.png" alt="" style="height: 395px; width: 95px"></a>
+</div>
+<div style="width: 185px; margin: 0 7px 7px 0; background: #e6e6fa; float: left; padding: 10px; display:block; border: solid 1px #e6e6fa;">
+ <img src="http://лицензионныйсофт.рф/img/498546398543.jpg" alt="" style="width: 180px; height: 250px; margin-bottom: 12px"><br>
+ <strong>ГОТОВЫЕ ОТРАСЛЕВЫЕ РЕШЕНИЯ</strong><br>
+ <span style="color:#f5720f;"><strong> &nbsp;</strong></span>
+	<div onmousemove="this.style.color='#f5720f';this.style.background='black';" onmouseout="this.style.color='black';this.style.background='#f5720f';" style="width: 90px; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding-top: 7px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px; background-position: 0% 0%; background-size: auto; border-top-color: #ffffff; border-left-color: #ffffff; border-right-color: #ffffff; border-bottom-color: #ffffff; border-top-width: 1px; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-left-style: solid; border-right-style: solid; border-bottom-style: solid; text-align: center; background-attachment: scroll; background-origin: padding-box; background-repeat: repeat; background-clip: border-box; background-image: none; color: black; background-color: #f5720f">
+ <span style="font-size:12px;"><a href="/resheniya/#admin" style="text-decoration: none; color: #ffffff">ПОДРОБНЕЕ</a></span>
+	</div>
+</div>
+<div style="width: 185px; margin: 0 7px 7px 0; float: left; padding: 10px; background: #e6e6fa; display:block; border: solid 1px #e6e6fa;">
+ <img src="http://лицензионныйсофт.рф/img/87695485734443543.jpg" alt="" style="width: 180px; height: 250px; margin-bottom: 12px"><br>
+ <strong>АКТУАЛЬНЫЕ ЗАДАЧИ ВАШЕГО БИЗНЕСА</strong><br>
+ <span style="color:#f5720f;"><strong> &nbsp;</strong></span>
+	<div onmousemove="this.style.color='#f5720f';this.style.background='black';" onmouseout="this.style.color='black';this.style.background='#f5720f';" style="width: 90px; margin: 0 auto; padding: 7px; background: #f5720f; border: solid 1px #ffffff; text-align: center;">
+ <span style="font-size:12px;"><a href="/resheniya/#ruk" style="text-decoration: none; color: #ffffff">ПОДРОБНЕЕ</a></span>
+	</div>
+</div>
+<div style="width: 188px; margin: 0 7px 7px 0; float: left; background: #e6e6fa; padding: 10px; display:block; border: solid 1px #e6e6fa;">
+ <img src="http://лицензионныйсофт.рф/img/4845753654364365800.jpg" alt="" style="width: 180px; height: 250px; margin-bottom: 12px"><br>
+ <strong>МОЩНЫЕ и СОВРЕМЕННЫЕ ТЕХНОЛОГИИ</strong><br>
+ <span style="color:#f5720f;"><strong> &nbsp;</strong></span>
+	<div onmousemove="this.style.color='#f5720f';this.style.background='black';" onmouseout="this.style.color='black';this.style.background='#f5720f';" style="width: 90px; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding-top: 7px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px; background-position: 0% 0%; border-top-color: #ffffff; border-left-color: #ffffff; border-right-color: #ffffff; border-bottom-color: #ffffff; border-top-width: 1px; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-left-style: solid; border-right-style: solid; border-bottom-style: solid; text-align: center; background-size: auto; background-repeat: repeat; background-image: none; background-clip: border-box; color: black; background-attachment: scroll; background-origin: padding-box; background-color: #f5720f">
+ <span style="font-size:12px;"><a href="/resheniya/#spec" style="text-decoration: none; color: #ffffff">ПОДРОБНЕЕ</a></span>
+	</div>
+</div>
+<div style="width: 185px; margin: 0 7px 7px 0; float: left; background: #e6e6fa; padding: 10px; display:block; border: solid 1px #e6e6fa;">
+ <img src="http://лицензионныйсофт.рф/img/8569847534354.jpg" alt="" style="width: 180px; height: 250px; margin-bottom: 12px"><br>
+ <strong>НАДЕЖНЫЕ и УДОБНЫЕ ПЕРСОНАЛЬНЫЕ ВЕРСИИ</strong><br>
+ <span style="color:#f5720f;"><strong> &nbsp;</strong></span>
+	<div onmousemove="this.style.color='#f5720f';this.style.background='black';" onmouseout="this.style.color='black';this.style.background='#f5720f';" style="width: 90px; margin: 0 auto; padding: 7px; background: #f5720f; border: solid 1px #ffffff; text-align: center;">
+ <span style="font-size:12px;"><a href="/resheniya/#home" style="text-decoration: none; color: #ffffff">ПОДРОБНЕЕ</a></span>
+	</div>
+</div>
+ <br>
+</p>
+</div>
+<div class="blocks">
+			<article class="block">
+							<img src="/upload/iblock/720/72048c014783942d060bb417f7f99634.jpg" width="319" height="318" alt="Категории" title="Категории">			<div class="description">
+				<h2>					Категории									<span>программного обеспечения и оборудования</span></h2>
+									<ul class="info"><li>
+	<a href="http://www.soft.datasystem.ru/catalog/antivirus" target="_blank" title="Антивирусы">Антивирусы</a></li>
+<li>
+	<a href="http://www.soft.datasystem.ru/catalog/security" target="_blank" title="Безопасность">Безопасность</li>
+<li>
+	<a href="http://www.soft.datasystem.ru/catalog/os" target="_blank" title="Операционные системы">Операционные системы</li>
+<li>
+	<a href="http://www.soft.datasystem.ru/catalog/sistemnye_programmy/" target="_blank" title="Системное ПО">Системное ПО</li>
+<li>
+	<a href="http://www.soft.datasystem.ru/catalog/grafika/" target="_blank" title="Графика и дизайн">Графика и дизайн</li>
+<li>
+	<a href="http://www.soft.datasystem.ru/catalog/internet_i_set/" target="_blank" title="Интернет и сеть">Интернет и сеть</li>
+<li>
+	<a href="http://www.soft.datasystem.ru/catalog/administrirovanie_programmirovanie_subd/" target="_blank" title="Программирование">Программирование</li>
+</br>
+
+	<li>
+		<a href="http://www.soft.datasystem.ru/catalog/vse_proizvoditeli_softa/" target="_blank" title="Все категории ПО">Все категории ПО</a>  &nbsp;&nbsp;&nbsp;&nbsp; <a href="/equipment/" title="Категории оборудования">Категории Техники</a></li>
+</ul>			</div>
+		</article>
+				<article class="block">
+							<img src="/upload/iblock/93b/93b109227901702e4387ac0f3e6342f4.jpg" width="319" height="318" alt="Производители " title="Производители ">			<div class="description">
+				<h2>					Производители 									<span>программного обеспечения и техники</span></h2>
+									<ul class="info"><table border="0" cellpadding="0" cellspacing="0" style="width: 100%">
+	<tbody>
+		<tr>
+			<td>
+				<a href="http://www.soft.datasystem.ru/catalog/abbyy/" target="_blank">ABBYY</a>
+<a href="http://www.soft.datasystem.ru/catalog/adobe/" target="_blank"><br />
+				Adobe</a><a href="http://www.soft.datasystem.ru/catalog/corel/" target="_blank"><br />
+				Corel</a><br />
+<a href="http://www.soft.datasystem.ru/catalog/doktor_veb/" target="_blank">Dr. Web</a><br />
+<a href="http://www.soft.datasystem.ru/catalog/eset/" target="_blank">
+				
+				ESET</a><a href="http://www.soft.datasystem.ru/catalog/laboratoriya_kasperskogo/" target="_blank"><br />
+				Kaspersky Lab</a><a href="http://www.soft.datasystem.ru/catalog/microsoft/" target="_blank"><br />
+				Microsoft</a><br />
+				<br />
+				<a href="/software/" title="Все производители ПО">Производители ПО</a></td>
+			<td>
+				<a href="http://www.hardbroker.ru/catalog/show_producer/?item=BioLink" target="_blank">BioLink</a><a href="http://www.hardbroker.ru/catalog/show_producer/?item=Cisco" target="_blank"><br />
+				Cisco</a><br />
+				<a href="http://www.hardbroker.ru/catalog/show_producer/?item=Dell" target="_blank">Dell</a><a href="http://www.hardbroker.ru/catalog/show_producer/?item=DEPO%20Computers" target="_blank"><br />
+				DEPO Computers</a><br />
+				<a href="http://www.hardbroker.ru/catalog/show_producer/?item=Hewlett-Packard" target="_blank">Hewlett-Packard</a> <a href="http://www.hardbroker.ru/catalog/show_producer/?item=IBM" target="_blank"><br />
+				IBM</a><a href="http://www.hardbroker.ru/catalog/show_producer/?item=Supermicro" target="_blank"><br />
+				Supermicro</a><br />
+				<br />
+				<a href="/equipment/" title="Все производители техники">Оборудования</a></td>
+		</tr>
+	</tbody>
+</table>
+</ul>			</div>
+		</article>
+				<article class="block">
+							<img src="/upload/iblock/03e/03effd9724a1a6b8c07e43ae7d65efd8.jpg" width="319" height="318" alt="Льготные цены" title="Льготные цены">			<div class="description">
+				<h2>					Льготные цены									<span>Для частных лиц, компаний и организаций</span></h2>
+									<ul class="info"><li>
+<a title="Льготные цены для государственных организаций" href="/stateenterprise/">Гос. организациям</a>
+</li>
+<li>
+<a title="Льготные цены для коммерческих организаций" href="/corporate/">Корпоративным клиентам</a>
+</li>
+<li>
+<a title="Льготные цены для медицинских организаций" href="/medenterprise/">Медицинским учреждениям</a>
+</li>
+<li>
+<a title="Льготные цены для образовательных учреждений" href="/educenterprise/">Учебным заведениям</a>
+</li>
+<li>
+<a title="Акции и скидки" target="_blank" href="http://www.soft.datasystem.ru/catalog/skidki/">Акции и скидки</a>
+</li></ul>			</div>
+		</article>
+		</div>
+
+<footer id="footer">
+		<div class="footer-holder">
+		<div class="column">
+													<span class="title"> Компания</span>
+						<ul class="info">									<li><a href="/news/">Новости</a></li>									<li><a href="/subcribe/">Рассылка</a></li>									<li><a href="/o-kompanii/">О Компании</a></li>									<li><a href="/contacts/">Контакты</a></li>											</ul>
+						</div>
+						<div class="column col01">
+							<span class="title">
+								КАТАЛОГ							</span>
+							<ul class="info">									<li><a href="/software/">Программное обеспечение</a></li>									<li><a href="/equipment/">Каталог оборудования</a></li>									<li><a href="/resheniya/">Готовые решения</a></li>									<li><a href="/search/map/">Карта сайта</a></li>											</ul>
+						</div>
+						<div class="column col02">
+							<span class="title">
+								Льготные цены							</span>
+							<ul class="info">									<li><a href="http://www.datasystem.ru/skidki/">Гос. организациям</a></li>									<li><a href="http://www.datasystem.ru/skidki/">Медицинским учреждениям</a></li>									<li><a href="http://www.datasystem.ru/skidki/">Учебным заведениям</a></li>									<li><a href="/corporate/">Юридическим лицам</a></li>											</ul>
+						</div>
+						<div class="column col03">
+							<span class="title">
+								Сервисы							</span>
+							<ul class="info">									<li><a href="/service#support">Техническая поддержка</a></li>									<li><a href="/service#support">Заказ пробных версий</a></li>									<li><a href="/service#edu">ИТ Консалтинг</a></li>									<li><a href="/service#edu">Обучение и сертификация</a></li>											</ul>
+						</div>
+						<div class="column col04">
+							<span class="title">
+								сотрудничество							</span>
+							<ul class="info">									<li><a href="/sotrudnichestvo#post">Поставщикам</a></li>									<li><a href="/sotrudnichestvo#proizv">Производителям</a></li>									<li><a href="/sotrudnichestvo#razrab">Разработчикам</a></li>									<li><a href="/corporate/">Клиентам</a></li>			</ul>
+		</div>
+	</div>	<div class="footer-frame">
+					<span class="info">© 2001-2016 Компания ДАТАСИСТЕМ. Выбор без границ™. Все права защищены.</span>
+
+		<div class="holder">
+			<span>Сайт создан агентством</span>
+			<img src="/bitrix/templates/datasystem/images/logo-mystery.png" width="93" height="25" alt="m">
+		</div>
+	</div>
+</footer>
+</div>
+</div>
+
+
+<!-- webim button generation date: 2014-01-15 version: 8.8.15 -->
+<script type="text/javascript">
+
+	webim = {
+		accountName: "softdatasystemru",
+		domain: "softdatasystemru.webim.ru"
+	};
+	(function () {
+		var s = document.createElement("script");
+		s.type = "text/javascript";
+		s.src = document.location.protocol + "//softdatasystemru.webim.ru/webim/js/button.js";
+		document.getElementsByTagName("head")[0].appendChild(s);
+	})();
+</script>
+<!-- /webim button -->
+
+<span style="display: none;">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+		document.write("<img src='//counter.yadro.ru/hit?t44.7;r"+
+			escape(document.referrer)+((typeof(screen)=="undefined")?"":
+			";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+				screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+			";"+Math.random()+
+			"' alt='' title='LiveInternet' "+
+			"border='0' width='1' height='1'>")
+		//--></script><!--/LiveInternet--></span>
+<!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter32741610 = new Ya.Metrika({ id:32741610, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/32741610" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+</body>
+</html> 

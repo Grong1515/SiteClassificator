@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//RU" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta name="verify-reformal" content="2a6b82244c72e226480452c1" />
+<link rel="icon" href="favicon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<script src="http://widget.transtour.travelbepro.com/Widget.ashx" type="text/javascript"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="турагентство стартайм, туры мытищи, турфирмы москвы" />
+<meta name="description" content="Туристическое агентство СтарТайм предлагает туры по всему миру для самых искушенных ценителей хорошего отдыха." />
+<link href="/bitrix/js/main/core/css/core.css?1403099958" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/startrack/components/bitrix/menu/main_menu/style.css?1330341313" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/startrack/components/halm.bronni/searchtour.form/index/style.css?1403106564" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/startrack/styles.css?1403254671" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/startrack/template_styles.css?1408692966" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/bitrix/js/main/core/core.js?1326362161"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','bitrix_sessid':'9d20702a18bbd4b3530363676f6b5793','SITE_ID':'s1','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ajax.js?1326362161"></script>
+<script type="text/javascript" src="/bitrix/js/main/session.js?1322162867"></script>
+<script type="text/javascript">
+bxSession.Expand(86400, '9d20702a18bbd4b3530363676f6b5793', false, '0b06ff3de58fcbdd2b87526dd5ae2d54');
+</script>
+
+
+	<script type="text/javascript" src="http://js.bronni.ru/v2/server-win1251/js/system/moment.min.js"></script>
+	<script type="text/javascript" src="http://js.bronni.ru/v2/server-win1251/js/system/json.min.js"></script>
+	<script type="text/javascript" src="http://js.bronni.ru/v2/server-win1251/js/system/jquery-ui.custom.min.js"></script>
+	<script type="text/javascript" src="http://js.bronni.ru/v2/server-win1251/js/system/jquery-ui.datepicker-ru.js"></script>
+	<script type="text/javascript" src="http://js.bronni.ru/v2/server-win1251/js/system/system.js"></script>
+		
+	
+
+<script type="text/javascript">
+
+var defaultManagerEmail = "";
+var countriesEmail = [];
+var imageCalendarIcon = "/bitrix/images/halm.bronni/calendar.gif";
+var imageHotelDefault = "/bitrix/images/halm.bronni/hotelDefault.jpg";
+var imageNoFoto = "/bitrix/images/halm.bronni/no_image.gif";
+var interrelationshipsOfDepartureCitiesAndDestinationCountries = "DestinationCountriesDependsOnDepartureCities";
+var hideToursWithUncountedFlights = "true";
+var hideToursWithIdentHotels = "true";
+var defaultNumColumnsVideo = 2;
+var defaultNumRandomVideo = 4;
+var defaultSelectedRowColor = "rgb(255, 252, 185)";
+var priceCountPerPage = 35;
+var priceRoundLevel = 0;
+var priceCorrection = 1;
+var showExternalHotelReferences = "true";
+var showMessageErrorByRequest = "true";
+var hideFormBookingAfterOrder = "true";
+var defaultActualizingPrice = "true";
+var searchModuleKey = "";
+var responseEncoding = "windows-1251"
+var remoteUri = "http://remote.bronni.ru";
+var openShowcasePageInNewWindow = "true";
+var resultPage = "/tours/searchtour_results.php"; 
+var openResultsPageInNewWindow = "true";
+var pricePage = "/tours/searchtour_detail.php"; 
+var openPricePageInNewWindow = "true";
+var hotelPage = "/hotels/hotelcatalog_detail.php"; 
+var openHotelPageInNewWindow = "true";
+var actualPage = "/tours/searchtour_actualize.php";
+var openActualPageInNewWindow = "true";
+var panoramaPage = "/tours/searchtour_panorama.php";
+var openPanoramaPageInNewWindow = "true";
+var satellitePicturePage = "/hotels/hotelcatalog_map.php"; 
+var openSatellitePicturePageInNewWindow = "true";
+var defaultTourType = 0;
+var defaultDepartureCity = 1; 
+var defaultDestinationCountry = 3; 
+var defaultCurrency = 4;
+var defaultDestinationCities = [];
+var defaultHotels = [];
+var defaultStars = [];
+var defaultMeals = [];
+var defaultAdultCount = 2; 
+var defaultChildCount = -1; 
+var defaultBeginCost = -1; 
+var defaultEndCost = -1; 
+var defaultBeginNights = 7; 
+var defaultEndNights = 8; 
+var defaultBeginDate = new Date();
+defaultBeginDate.setDate((new Date().getDate()) + 14);
+var defaultEndDate = defaultBeginDate;
+var tourTypeFilter = [];
+var departureCityFilter = [];
+var destinationCountryFilter = [];
+var currencyFilter = [];
+var starsFilter = [];
+var mealsFilter = [];
+var operatorsFilter = [];
+var operatorsCountryFilter = [];
+
+</script>
+	
+
+	
+	<script type="text/javascript" src="http://js.bronni.ru/v2/server-win1251/js/controls/combobox.js"></script>
+	<script type="text/javascript" src="http://js.bronni.ru/v2/server-win1251/js/controls/listbox.js"></script>
+	<script type="text/javascript" src="http://js.bronni.ru/v2/server-win1251/js/proxy/proxy.js"></script>
+	<script type="text/javascript" src="http://js.bronni.ru/v2/server-win1251/js/pages/search_form.js"></script>
+		
+	<link href="/bitrix/components/halm.bronni/styles/controls/jquery-ui/jquery-ui.css" rel="stylesheet"/>
+	<link href="/bitrix/components/halm.bronni/styles/controls/combobox.css" rel="stylesheet"/>
+	<link href="/bitrix/components/halm.bronni/styles/controls/listbox.css" rel="stylesheet"/>
+	<link href="/bitrix/components/halm.bronni/styles/design.css" rel="stylesheet"/>
+	
+
+<script src="/bitrix/templates/startrack/script.js" type="text/javascript" charset="windows-1251"></script>	
+<title>Турагентство Star Time. Поиск туров через сервис нашей турфирмы</title>
+</head>
+
+<body>
+
+
+<div id="body_div">
+
+<div id="pendant_div">&nbsp;</div>
+
+<div id="body_inner_div">
+
+<div id="head_div">
+
+	<div id="main_menu_div">
+	
+<table cellspacing="0" cellpadding="0" width="1001">
+<tr>
+	<td>
+			<a class="act" href="/">На главную</a>
+		</td>
+	<td>
+			<a href="/tours/">Поиск туров</a>
+		</td>
+	<td>
+			<a href="/countries/">Страны</a>
+		</td>
+	<td>
+			<a href="/hotels/">Отели</a>
+		</td>
+	<td>
+			<a href="/otzyvy/">Отзывы</a>
+		</td>
+	<td>
+			<a href="/about/">О компании</a>
+		</td>
+	<td>
+			<a href="/contacts/">Контакты</a>
+		</td>
+</tr>
+</table>
+	</div>
+
+	<div id="logo_div">
+		<a href="/"><img src="/bitrix/templates/startrack/images/logo.gif" alt="startravel" /></a>
+		
+	</div>
+<div style="position:relative; margin-left: 330px; color:#4B2E26">
+ 
+<div class="information-block"><font size="6"></font>
+  <br />
+
+  <div class="information-block-body"> 	</div>
+ </div>
+</div>
+   
+     <div id="head_contacts_div" style="270px">
+		
+<div align="center"><b><font size="5">(495) 66-55-037</font> - многоканальный </b> 
+  <br />
+ <b> Москва, ул. 1905 года, д. 23, 
+    <br />
+   (495) 609-34-93</b><b> star-travel@inbox.ru</b></div>
+	</div>
+    
+</div>
+
+
+<div class="page_content">
+		
+ 
+<div class="index_menu2"> <div class="block"> 	 
+  <h2>Готовые туры</h2>
+ 	 
+  <div class="img"><img src="/images/index2/1.jpg" width="315" alt="туристическое агенство" title="туристическое агенство" height="127"  /></div>
+ 		 	 
+  <ul class="rect"> 		 
+    <li><a href="http://startime.travel/hottour/"  ><font color="#ff0000"><u><b>ГОРЯЩИЕ ПРЕДЛОЖЕНИЯ</b></u></font></a></li>
+   		 
+    <li><b><a href="/turi_po_rossii_i_sng/" >ТУРЫ ПО РОССИИ И СНГ</a></b></li>
+   		 
+    <li><a href="/crimea.php"  ><b>КРЫМ</b></a></li>
+   			 	</ul>
+<br />
+ 	 	 </div>
+ 
+<div class="block"> 	 
+  <h2>Индивидуальные туры</h2>
+ 	 
+  <div class="img"><img src="/images/index2/2.jpg" width="315" alt="туристическое агенство" title="туристическое агенство" height="127"  /></div>
+ 	 	 
+  <ul class="rect"> 		 
+    <li><a href="/hotel_reserv/"><b>БРОНИРОВАНИЕ ОТЕЛЕЙ</b></a></li>
+   		 
+    <li><a href="/avia_reserv/"><b>БРОНИРОВАНИЕ АВИАБИЛЕТОВ</b></a></li>
+   		 
+    <li><a href="/wedding_tours/"><b>ВАШЕ СВАДЕБНОЕ ПУТЕШЕСТВИЕ</b> 
+        
+       </a></li>
+    <li><a href="/burn_in_maiamy/"><b>РОДЫ В МАЙАМИ</b></a></li>
+   	</ul>
+ </div>
+ 
+<div style="margin-right: 0px;" class="block"> 	 
+  <h2>Корпоративный туризм</h2>
+ 	 
+  <div class="img"><img src="/images/index2/3.jpg" width="315" alt="туристическое агенство" title="туристическое агенство" height="127"  /></div>
+ 	 	 
+  <ul class="rect"> 		 
+    <li><a href="/corp_services/"  ><b>НАШИ УСЛУГИ</b></a></li>
+   		 
+    <li><a href="/business_aviation/"  ><b>БИЗНЕС-АВИАЦИЯ</b></a></li>
+   		 
+    <li><a href="/mice/" ><b>КОНФЕРЕНЦИИ</b></a></li>
+   		 	</ul>
+<br />
+ 	 </div> 
+  <div style="clear: both;"></div>
+ </div>
+ 
+
+<div id="bronni-search-form" class="content-bronni">
+	<div class="br-request-message"></div>
+	
+	<div class="br-tab br-search-tab">
+		<!--<div class="br-tab-header-index">Поиск туров</div>-->
+		<div class="br-tab-body" style="clear:both">
+		<div class="br-tab-header-inner">Поиск туров</div>
+<script type="text/javascript" language="JavaScript" src="http://tourclient.ru/f/jsboot/13875/find_tour_form"></script>
+			<form class="br-search-form" method="post" action="">
+				<table class="br-search-table" cellspacing="0" cellpadding="5">
+					<!--<tr>
+						<td>
+							
+						</td>
+						<td colspan="10">
+							<div class="br-tour-type-cell">&nbsp;</div>
+						</td>
+					</tr>-->
+					<tr>
+						<td>
+							<div class="br-departure-city-combobox">
+								&nbsp;Город вылета:<br />
+							</div>
+							<div class="br-destination-country-combobox">
+								&nbsp;Направление:<br />
+							</div>
+							<div class="br-destination-cities-listbox">
+								&nbsp;Курорт:<br />
+							</div>
+						</td>
+						<td>
+							<div class="br-hotels-listbox">
+								&nbsp;Отели:<br />
+							</div>
+						</td>
+						<td>
+							<div class="br-stars-listbox">
+								&nbsp;Звездность:<br />
+							</div>
+						</td>
+						<td>
+							<div class="br-meals-listbox">
+								&nbsp;Питание:<br />
+							</div>
+						</td>
+						<td valign="top">
+									<div style="margin-bottom:15px; white-space:nowrap;">
+										&nbsp;Дата заезда:<br />
+										<span class="br-date-from-cell">
+											&nbsp;с:&nbsp;<input class="br-date-from-textbox" />
+										</span>
+										<span class="br-date-to-cell">
+											&nbsp;по:&nbsp;<input class="br-date-to-textbox" />
+										</span>
+									</div>
+									<div style="margin-bottom:15px;">
+										&nbsp;Продолжительность (ночей):<br />
+										<span class="br-nights-from-cell">
+											&nbsp;от:&nbsp;<input class="br-nights-from-textbox" />
+										</span>
+										<span class="br-nights-to-cell">
+											&nbsp;до:&nbsp;<input class="br-nights-to-textbox" />
+										</span>
+									</div>
+									<div style="margin-bottom:15px;">
+										&nbsp;Цена:<br />
+										&nbsp;от:&nbsp;<input class="br-price-from-textbox" />
+										&nbsp;до:&nbsp;<input class="br-price-to-textbox" />
+									</div>
+									<div>
+										<div class="br-currency-combobox">&nbsp;Валюта:&nbsp;<br /></div>
+									</div>
+						</td>
+					</tr>
+					<!--<tr>
+						<td colspan="4">
+							<table cellspacing="0" cellpadding="5" border="0">
+								<tr valign="top">
+									<td>
+										&nbsp;Дата заезда:<br />
+										<span class="br-date-from-cell">
+											&nbsp;с:&nbsp;<input class="br-date-from-textbox" />
+										</span>
+										<span class="br-date-to-cell">
+											&nbsp;по:&nbsp;<input class="br-date-to-textbox" />
+										</span>
+									</td>
+									<td>
+										&nbsp;Продолжительность (ночей):<br />
+										<span class="br-nights-from-cell">
+											&nbsp;от:&nbsp;<input class="br-nights-from-textbox" />
+										</span>
+										<span class="br-nights-to-cell">
+											&nbsp;до:&nbsp;<input class="br-nights-to-textbox" />
+										</span>
+									</td>
+									<td>
+										&nbsp;Цена:<br />
+										&nbsp;от:&nbsp;<input class="br-price-from-textbox" />
+										&nbsp;до:&nbsp;<input class="br-price-to-textbox" />
+									</td>
+									<td>
+										<div class="br-currency-combobox">&nbsp;Валюта:&nbsp;<br /></div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>-->
+					<tr>
+						<td colspan="3">
+							<table cellspacing="0" cellpadding="5">
+								<tr>
+									<td>&nbsp;Взрослые:</td>
+									<td><div class="br-adult-combobox"></div></td>
+									<td>&nbsp;Дети:</td>
+									<td><div class="br-child-combobox"></div></td>
+									<td><div class="br-ages-child1-combobox"></div></td>
+									<td><div class="br-ages-child2-combobox"></div></td>
+									<td><div class="br-ages-child3-combobox"></div></td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<div class="br-waiting-control"></div> 
+						</td>
+						<td class="br-order-cell">
+							<div class="br-order-button" title="Искать">Искать</div> 
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			new SearchForm({ dom: "#bronni-search-form" }).Init();
+		});
+	</script>
+</div> 
+<div class="content_panel_block"> 
+<div> </div>
+ 
+<div> 
+  <div style="text-align: justify;"> 
+    <br />
+   </div>
+ 
+  <div style="text-align: justify;">Если у вас совсем не остается времени на отдых, то это означает лишь одно &ndash; пора в отпуск. </div>
+ </div>
+ 
+<div style="text-align: justify;"> 
+  <br />
+ </div>
+ 
+<div style="text-align: justify;">Где провести каникулы? Что делать? Н.Г.Чернышевский в своем произведении, в названии которого, кстати, содержится один из важных для отпускника вопросов, писал, что &quot;характер человека высказывается в том, какого рода отдых легче и приятнее для него&quot;.</div>
+ 
+<h1 style="text-align: justify;"> Туристическое агентство &quot;Star Time&quot;</h1>
+ 
+<div style="text-align: justify;">Для того чтобы отпуск удался, оставил много приятных воспоминаний, ярких эмоций, нужно грамотно спланировать поездку, предусмотреть разные нюансы, учесть все, даже на первый взгляд незначительные, мелочи. Организацию своего отдыха нужно доверять надежной туристической фирме, профессионалам, имеющим хорошую репутацию. </div>
+ 
+<div style="text-align: justify;">Наша компания обладает большим опытом в индустрии туризма. Мы умеем отдыхать, знаем, как организовывать отдых для вас. </div>
+ 
+<div style="text-align: justify;">Для наших клиентов мы подбираем предложения, максимально соответствующие пожеланиям, мечтам, настроению, представлению об отпуске. Нам важно, чтобы вы и ваши близкие отдохнули отлично. Мы гордимся тем, что многие из вас обращаются к нам неоднократно, а также доверяют нашему агентству организацию корпоративного туризма, деловых поездок, индивидуальных туров. </div>
+ 
+<p style="text-align: justify;"> Наша компания оказывает большой перечень туристических услуг, мы регулярно разрабатываем новые программы, проводим акции, дарим скидки нашим клиентам. Мы гарантируем высокий уровень сервиса каждому нашему гостю. Наши приветливые и квалифицированные менеджеры внимательно выслушают все ваши пожелания, дадут максимально полную информацию по любой программе, маршруту, проконсультируют вас по всем вопросам и услугам, оказываемым нашим агентством. </p>
+ 
+<div style="text-align: justify;">Мы обеспечиваем полное сопровождение по каждому договору с момента бронирования тура до вашего возвращения из отпуска, а также оказываем различную поддержку туристам во время путешествия. </div>
+ 
+<div style="text-align: justify;">&laquo;Стар Тайм&raquo;, туристическое агентство в Москве, гарантирует вам отдых высокого уровня! </div>
+ 
+<div style="text-align: justify;"> 
+  <br />
+ </div>
+ </div>
+   
+ 
+
+</div>
+
+<!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=21210001&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/21210001/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:21210001,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter21210001 = new Ya.Metrika({id:21210001,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/21210001" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</div>
+
+<div id="footer_div">
+	<div id="footer_text_div">
+	&copy; 2014, STAR TIME, (495) 66-55-037 - многоканальный&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	Дизайн: РА "Двигатель Торговли" /
+	Разработка туристического сайта: <a href="http://halm.ru" target="_blank">Halm</a>
+	</div>
+</div>
+
+  
+ 
+</div>
+
+</body>
+</html>

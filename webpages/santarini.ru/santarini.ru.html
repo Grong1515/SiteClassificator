@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="Description" content="Сеть салонов красоты «Сантарини» в юго-западном округе Москвы — это современное оборудование, профессиональная косметика и, главное, лучшие мастера. " /><meta name="keywords" content="салон красоты, салоны красоты, салон красоты на юго-западной, салон красоты на вернадского, эпиляция юго-западная, косметолог юго-западная, салон сантарини, салон красоты ленинский проспект, стрижка на юго западной, маникюр на юго западе, педикюр на юго-западной, солярий на юго-западной" />	<meta name="google-site-verification" content="" /><meta name="yandex-verification" content="45afad3e405c7d31" />
+	<title>Сеть салонов красоты на Юго-Западе Москвы «Сантарини»</title>
+    
+	<link rel="icon" type="image/png" href="/favicon.png" />
+	<link rel="stylesheet" href="/css/styles.css" type="text/css" />
+	<link rel="stylesheet" href="/css/carousel.css" type="text/css" />
+	<link rel="stylesheet" href="/fonts/fonts.css" type="text/css" />
+	<link rel="stylesheet" href="/css/jquery.lightbox-0.5.css" type="text/css" />
+	<link rel="stylesheet" href="/css/jquery.jqzoom.css" type="text/css" />
+
+	<script type="text/javascript" src="/js/jquery-1.7.1.js"></script>
+	<script type="text/javascript" src="/js/jquery.address-1.5/jquery.address-1.5.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.lightbox-0.5.pack.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/slides.js"></script>
+	<script type="text/javascript" src="/js/carousel.js"></script>
+	<script type="text/javascript" src="/js/sendmsg.js"></script>
+	<script type="text/javascript" src="/js/jquery.jqzoom-core.js"></script>
+	
+	
+	<script type="text/javascript">
+	var rich_params = {
+		FunctionsURL : "http://www.santarini.ru/inc/caller.php"
+	};
+	function oe_ajax_json(data, success){
+		var self = this;
+		if(success === undefined){
+			var ret = $.ajax({
+				url: rich_params.FunctionsURL,
+				type: "POST",
+				global: false,
+				dataType: "json",
+				data: {'json': JSON.stringify(data)},
+				async: false
+			}).responseText;
+			var out_data = eval('(' + ret + ')');
+			//var out_data = JSON.parse(ret);
+			if(out_data.stat === 0){
+				if(out_data.msg){
+					alert(out_data.msg)
+				}
+				else{
+					alert('Неопределенная ошибка')
+				}
+			}
+			return out_data;
+		}
+		else{
+			$.ajax({
+				url: rich_params.FunctionsURL,
+				type: "POST",
+				global: false,
+				dataType: "json",
+				data: {'json': JSON.stringify(data)},
+				async: true,
+				success: success
+			});
+		}
+	}
+	function oe_ajax(data, success){
+		if(success === undefined){
+			return $.ajax({
+				url: rich_params.FunctionsURL,
+				type: "POST",
+				global: false,
+				data: {'json': JSON.stringify(data)},
+				async: false
+			}).responseXML;
+		}
+		else{
+			$.ajax({
+				url: rich_params.FunctionsURL,
+				type: "POST",
+				global: false,
+				data: {'json': JSON.stringify(data)},
+				async: true,
+				success: success
+			});
+		}
+	}
+	</script>
+
+</head>
+<body>
+	<div class="darker"></div>
+	<div class="popup sign_up_popup" id="sign_up_popup">
+		<form action="" class="sform must_close" id="requestForm">
+		<div class="close"></div>
+		<div class="title">Записаться Online</div>
+		<ul>
+			<li><label>Имя<span class="star">*</span></label> <input name="FIO" class="inp val req sendmsg-param" type="text" /></li>
+			<li><label>Салон</label> <div class="select"><select name="Salon" class="inp val sendmsg-param"><option>улица Академика Анохина, д.2 к.3</option><option>улица Никулинская, д.5, к.2</option><option>Ленинский проспект, д.126</option></select></div></li>
+			<li><label>Процедура</label> <div class="select"><select name="Procedure" class="inp val sendmsg-param"><option>Стрижка</option><option>Укладка</option><option>Услуги косметолога</option><option>Эпиляция</option><option>Солярий</option><option>Био-ламинирование Lebel</option></select></div></li>
+			<li><label>Телефон<span class="star">*</span></label> <input name="Phone" class="inp val req sendmsg-param" type="text" /></li>
+			<li><label>Желаемое время<span class="star">*</span></label> <input name="Time" class="inp val req sendmsg-param" type="text" /></li>
+			<li><label>Комментарии</label> <textarea name="Description" class="inp val sendmsg-param" cols="3" rows="3"></textarea></li>
+		</ul>
+		<input type="submit" value="отправить" class="btn send-message" />
+		<input type="reset" value="Очистить" />
+		</form>
+	</div><!--/popup-->
+	<div class="popup buy_popup sign_up_popup">
+		<ul class="pagination">
+			<li><a href="#"><h5></h5> <p></p></a></li>
+		</ul><!--/pagination-->
+		<form action="" class="sform must_close" id="buyForm">
+		<div style="display:none;"><label>продукт</label><input type="hidden" id="Product" class="sendmsg-param" value="" /></div>
+		<div class="close"></div>
+		<div class="title">Заказать онлайн</div>
+		<ul>
+			<li><label>Имя<span class="star">*</span></label> <input name="FIO" class="inp val req sendmsg-param" type="text" /></li>
+			<li><label>Телефон<span class="star">*</span></label> <input name="Phone" class="inp val req sendmsg-param" type="text" /></li>
+			<li><label>Адрес доставки<span class="star">*</span></label> <input name="Adress" class="inp val req sendmsg-param" type="text" /></li>
+			<li><label>Комментарии</label> <textarea name="Description" class="inp val sendmsg-param" cols="3" rows="3"></textarea></li>
+		</ul>
+		<input type="submit" value="отправить" class="btn send-message" />
+		<input type="reset" value="Очистить" />
+		</form>
+	</div><!--/popup-->
+	<div class="popup products_popup">
+		<div class="close"></div>
+		<div class="image"><img src="/i/products_image.jpg" /></div>
+		<div class="text">
+			<div class="title"></div>
+			<div class="type"></div>
+			<div class="inner">
+			</div>
+			<div class="address_block">
+				<a class="btn" href="#">Оставить заявку</a>
+				<p>Вы можете приобрести эту продукцию в&nbsp;любом из&nbsp;<a href="/contacts/">наших салонов</a> или оставив заявку на&nbsp;нашем сайте.
+			</div><!--/address_block-->
+		</div><!--/text-->
+		<ul class="pagination">
+			<li class="prev"><a href="#"><h5></h5> <p></p></a></li>
+			<li class="next"><a href="#"><h5></h5> <p></p></a></li>
+		</ul><!--/pagination-->
+	</div><!--/popup-->
+	<div class="popup lease_popup" style="display:none;">
+		<div class="close"></div>
+		<div class="image">
+			<div class="clearfix">
+				<a href="/imgProd/triumph_big1.jpg" class="jqzoom" rel="gal1"  title="triumph" >
+					<img src="/imgProd/triumph_small1.jpg" title="triumph">
+				</a>
+			</div>
+			<br/>
+			<div class="clearfix" >
+				<ul id="thumblist" class="clearfix" >
+					<li><a class="zoomThumbActive" href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: '/imgProd/triumph_small1.jpg',largeimage: '/imgProd/triumph_big1.jpg'}"><img src='/imgProd/thumbs/triumph_thumb1.jpg'></a></li>
+					<li><a href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: '/imgProd/triumph_small2.jpg',largeimage: '/imgProd/triumph_big2.jpg'}"><img src='/imgProd/thumbs/triumph_thumb2.jpg'></a></li>
+					<li><a  href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: '/imgProd/triumph_small3.jpg',largeimage: '/imgProd/triumph_big3.jpg'}"><img src='/imgProd/thumbs/triumph_thumb3.jpg'></a></li>
+				</ul>
+			</div>
+		</div><!--/image-->
+	
+	
+	
+	
+		<div class="text">
+			<div class="title"></div>
+			<div class="type"></div>
+			<div class="inner">
+			</div>
+			<div class="address_block">
+				<a class="btn" href="#">Оставить заявку</a>
+				<p>Вы можете арендовать это платье в&nbsp;нашем салоне&nbsp;на&nbsp;<a href="/contacts/">Ленинском проспекте</a> или оставив заявку на&nbsp;нашем сайте.
+			</div><!--/address_block-->
+		</div><!--/text-->
+		<ul class="pagination">
+			<li class="prev"><a href="#"><h5></h5> <p></p></a></li>
+			<li class="next"><a href="#"><h5></h5> <p></p></a></li>
+		</ul><!--/pagination-->
+	</div><!--/popup-->
+	<div class="main index">
+		<div class="indent">
+<!--HEADER-->
+			<div class="header">
+				<img class="logo" src="/i/logo.gif" alt="Santarini" />
+				<div class="search"><form action="/search/" method="get"><input type="text" name="search_str" value="Поиск" onfocus="this.value=''" /> <input type="image" src="/i/search_loupe.gif" /></form></div>
+				<ul class="topnav">
+					<li><a href="/contacts/">Адреса салонов</a></li>
+					<li class="call"><a href="#" class="head">Заказать звонок</a>
+						<div class="body">
+							<form action="" class="sform must_close" id="request2Form">
+							<div class="close"></div>
+							<div class="title">Мы Вам перезвоним</div>
+							<ul>
+								<li><label>Имя<span class="star">*</span></label> <input name="FIO" class="inp val req sendmsg-param" type="text" /></li>
+								<li><label>Электронная почта</label> <input name="Email" class="inp val sendmsg-param" type="text" /></li>
+								<li><label>Телефон<span class="star">*</span></label> <input name="Phone" class="inp val req sendmsg-param" type="text" /></li>
+							</ul>
+							<input type="submit" value="отправить" class="send-message" />
+							</form>
+						</div>
+					</li>
+				</ul>
+				<a class="sign_up" href="#">Записаться Online</a>
+			</div><!--/header-->	
+<!--NAVIGATION-->       
+<ul class="navigation">
+
+	<li class="lft" id="mm2"><a class="" href="/about/">О салоне</a></li>
+
+	<li class="lft" id="mm3"><a class="" href="/service/">Услуги</a></li>
+
+	<li class="lft" id="mm4"><a class="" href="/photos/">Фотографии</a></li>
+
+	<li class="lft" id="mm37"><a class="" href="/product/">Каталог косметики</a></li>
+
+	<li class="rgt" id="mm7"><a class="" href="/contacts/">Адрес салона красоты</a></li>
+
+</ul> 
+
+<!--VISUAL-->  
+      <div class="visual">
+        <div class="item left"><img src="/i/visual_left_img.jpg" /><div class="title"><h3>парикмахерские услуги</h3></div></div>
+        <div class="item center"><img src="/i/visual_center_img.jpg" /><div class="title"><h3>косметика<br /> mary cohr</h3></div></div>
+        <div class="item right"><img src="/i/visual_right_img.jpg" /><div class="title"><h3>косметология</h3></div></div>
+      </div><!--/visual-->
+<!--CONTENT-->
+			<div class="outer">
+				<div class="content">
+					<div class="contacts">
+            <ul class="nostyle">
+              <li class="title">наш<br /> салон</li> 
+              <li class="link"><a href="/contacts/">Посмотреть на карте</a></li>
+            </ul>
+            <ul class="nostyle">
+              <li class="metro">м. Юго-Западная</li>
+              <li class="address">ул. Ак. Анохина, д.2, к.3</li>
+              <li>+7 (495) 430-50-09</li>
+              <li>+7 (495) 437-99-22</li>         
+            </ul>
+</div><!--/contacts-->
+           
+					<div class="sidenews">
+	<div class="title">Новости</div>
+	<ul class="nostyle">
+
+		<li>
+			<div class="date">17.10.2016</div>
+			<p><a href="/about/news/osen-vremja-pilingov-novye-francuzskie-pilingi">Осень - время пилингов. Новые французские пилинги.</a></p>
+		</li>
+
+		<li>
+			<div class="date">04.04.2016</div>
+			<p><a href="/about/news/novaja-usluga-ot-LOreal-PRO-FIBER">Новая услуга от L'Orеаl PRO-FIBER</a></p>
+		</li>
+
+	</ul>
+	<div class="title">Лунный календарь стрижек</div>
+	<p><a href="/about/lunnyj-kalendar-strizhek/">Выберите лучшую дату стрижки или косметической процедуры, согласно лунному календарю</a>.</p>
+</div><!--/sidenews-->
+
+					<div class="about">
+						
+<h1>Cалон красоты Santarini <br />на Юго-Западе Москвы</h1>
+<p><em>&laquo;Каждая женщина стремится к совершенству, мечтает о том, чтобы ее внешность была идеальной&hellip;&raquo;</em></p>
+<p>Салон &nbsp;красоты Santarini &mdash; это современный, комфортабельный салон, расположенный на Юго-Западе города Москвы. Santarini &mdash; это бренд, над которым наша команда трудилась на протяжении 10 лет, создавая свою философию отношения к индустрии красоты. Каждый клиент для нас уникален, мы заботимся о вашем здоровье и красоте, основываясь на последних разработках в области косметологии, парикмахерского искусства и ногтевого сервиса. Нашими партнерами являются профессиональные бренды, представляющие оборудование и эксклюзивную косметику мирового уровня.</p>
+<p>Наш коллектив &mdash; это команда профессионалов, работающая для вас.</p>
+<p>Santarini &mdash; бренд, которому можно доверять!</p>
+					</div><!--/about-->
+					<div class="clear"></div>
+					
+<div class="banner_slides">
+            <div class="slides_container">
+              <div class="slide">
+                <ul class="item nostyle">
+                  <li class="image"><img src="/i/banner_slides_img7.jpg" /></li>
+                  <li class="title dark">Распродажа - 70%!</li>
+                  <li class="text">
+                    <h3><a href="/lease/">Распродажа осенне-зимней коллекции</a></h3>
+                    <p>Одежда, обувь и модные аксессуары.</p></li>
+                </ul><!--/item-->
+                <ul class="item nostyle">
+                  <li class="image"><img src="/i/banner_slides_img2.jpg" /></li>
+                  <li class="title light">Возрождение молодости!</li>
+                  <li class="text">
+                    <h3><a href="/service/actions/specialnoe-predlozhenie-nevestam/">Новая революционная процедура от Mary Cohr</a></h3>
+                    <p>Возрождение молодости - это замена инвазивным методикам, без дискомфорта и побочных эффектов.</p></li>
+                </ul><!--/item-->
+                <ul class="item nostyle">
+                  <li class="image"><img src="/i/banner_slides_img6.jpg" /></li>
+                  <li class="title dark">новая услуга!</li>
+                  <li class="text">
+                    <h3><a href="/service/ladies/uroki-make-up/">Уроки Make-Up </a></h3>
+                    <p>Новая услуга наших салонов: вы можете пройти индивидуальное обучение техникам макияжа, которые подходят именно вам.</p></li>
+                </ul><!--/item-->
+              </div><!--/slide-->
+              <div class="slide">
+                <ul class="item nostyle">
+                  <li class="image"><img src="/i/banner_slides_img1.jpg" /></li>
+                  <li class="title dark">акция!</li>
+                  <li class="text">
+                    <h3><a href="#">Акция на Озонотерапию в салоне на Академика Анохина, при покупке курса из 7 процедур, 7 в подарок </a></h3>
+                    <p>«Что такое озонотерапия и зачем она нужна?». Чтобы сделать вас красивее и моложе! — вот краткий ответ на этот вопрос. Озонотерапия - укол красоты и здоровья!</p></li>
+                </ul><!--/item-->
+                <!--ul class="item nostyle">
+                  <li class="image"><img src="/i/banner_slides_img12.jpg" /></li>
+                  <li class="title light">новая услуга!</li>
+                  <li class="text">
+                    <h3><a href="/about/news/lazernoe-otbelivanie-zubov/">Лазерное отбеливание зубов в&nbsp;салоне на&nbsp;Анохина</a></h3>
+                    <p>Приглашаем попробовать самую эффективную методику отбеливания зубова без вреда для эмали! Мгновенный эффект до&nbsp;12 тонов!
+</p></li>
+                </ul--><!--/item-->
+                <ul class="item nostyle">
+                  <li class="image"><img src="/i/banner_slides_img11.png" /></li>
+                  <li class="title dark">Нашему салону 10 лет!</li>
+                  <li class="text">
+                    <h3><a href="/about/news/podarochnye-sertifikaty-na-8-marta/">Салону  Santarini 10 лет</a></h3>
+                    <p>В честь дня рождения нашей сети , рады пригласить Вас 3 сентября к нам в гости на бокал шампанского, Вас ожидают приятные сюрпризы и подарки от наших салонов.</p></li>
+                </ul><!--/item-->
+              </div><!--/slide-->
+            </div><!--/slides_container-->
+          </div><!--/banner_slides-->
+				</div><!--/content--> 
+			</div><!--/outer-->
+		</div><!--/indent-->
+	</div><!--/main-->
+<!--FOOTER-->
+    <div class="footer">
+		<div class="indent">
+			<div class="shadow"></div>
+			<div class="pattern"></div>
+			<div class="partners">
+				<div class="title">наши партнеры</div>
+				<ul class="partners_carousel">
+					<li><a href="#"><img src="/i/partners_logo1.gif" alt="" /></a></li>
+					<li><a href="#"><img src="/i/partners_logo3.gif" alt="" /></a></li>
+					<li><a href="#"><img src="/i/partners_logo2.gif" alt="" /></a></li>
+					<li><a href="#"><img src="/i/partners_logo4.gif" alt="" /></a></li>
+					<li><a href="#"><img src="/i/partners_logo5.gif" alt="" /></a></li>
+					<li><a href="#"><img src="/i/partners_logo6.gif" alt="" /></a></li>
+					<li><a href="#"><img src="/i/partners_logo7.gif" alt="" /></a></li>
+				</ul>
+			</div><!--/partners-->
+			<div class="bottom">
+				<div class="left">
+					<div class="copy">© Santarini.ru<br />Все права защищены</div>
+					<div class="create"><a href="http://www.way2web.ru">Создание сайта</a> —  <br /><span style="padding-left:20px; background:url(/i/wtw_logo.png) no-repeat 0 2px;"></span>&nbsp;Way To Web, 2013</div>
+				</div><!--/left-->
+				<div class="right">
+					<ul class="breadcrumbs">
+		<li class="title"><a href="/about/">О салоне</a></li>
+		<li class="title"><a href="/service/">Услуги</a></li>
+		<li class="title"><a href="/photos/">Фотографии</a></li>
+		<li class="title"><a href="/product/">Каталог косметики</a></li>
+		<li class="title"><a href="/contacts/">Адрес салона красоты</a></li></ul>	
+					<ul class="botnav">
+						<li class="call"><a href="javascript:void(0)" class="head">Заказать звонок</a>
+							<form action="" class="sform must_close" id="request3Form">
+							<div class="body">
+								<div class="close"></div>
+								<div class="title">Мы Вам перезвоним</div>
+								<ul>
+									<li><label>ИМЯ<span class="star">*</span></label> <input name="FIO" class="inp val req sendmsg-param" type="text" /></li>
+									<li><label>email</label> <input name="Email" class="inp val sendmsg-param" type="text" /></li>
+									<li><label>телефон<span class="star">*</span></label> <input name="Phone" class="inp val req sendmsg-param" type="text" /></li>
+								</ul>
+								<input type="submit" value="отправить" class="send-message" />
+							</div>
+							</form>
+						</li>
+						<li><a class="sign_up" href="#">Онлайн запись</a></li>
+						<li><a href="/sitemap/">Карта сайта</a></li>
+					</ul><!--/botnav-->
+				</div><!--/right-->
+			</div><!--/bottom-->
+		</div><!--/indent-->
+    </div><!--/footer-->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter22278436 = new Ya.Metrika({id:22278436,
+                    webvisor:true,
+                    clickmap:true,
+                    accurateTrackBounce:true,
+                    trackHash:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/22278436" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html><!-- Powered by Way To Web 3.0 | http://www.way2web.ru --><!--Total time: 0.212 sec-->

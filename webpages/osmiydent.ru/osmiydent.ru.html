@@ -1,0 +1,260 @@
+<html>
+<head>
+<link rel="icon" href="http://osmiydent.ru/favicon.ico" type="image/x-icon"> 
+<link rel="shortcut icon" href="http://osmiydent.ru/favicon.ico" type="image/x-icon">
+<script language="JavaScript1.2">      
+        grphcs=new Array(2)      
+Image0=new Image();      
+Image0.src=grphcs[0]="3a.png";      
+Image1=new Image();      
+Image1.src=grphcs[1]="3b.png";
+Image2=new Image();      
+Image2.src=grphcs[2]="3c.png";
+Image3=new Image();      
+Image3.src=grphcs[3]="3d.png";
+Image4=new Image();      
+Image4.src=grphcs[4]="3v.png";
+Image5=new Image();      
+Image5.src=grphcs[5]="3h.png";
+Image6=new Image();      
+Image6.src=grphcs[6]="3r.png";
+Image7=new Image();      
+Image7.src=grphcs[7]="3p.png";
+Image8=new Image();      
+Image8.src=grphcs[8]="3t.png";
+        Amount=25;        
+Ypos=new Array();      
+Xpos=new Array();      
+Speed=new Array(5);      
+Step=new Array();      
+Cstep=new Array();      
+ns=(document.layers)?1:0;      
+ns6=(document.getElementById&&!document.all)?1:0;      
+        if (ns){      
+for (i = 0; i < Amount; i++){      
+var P=Math.floor(Math.random()*grphcs.length);      
+rndPic=grphcs[P];      
+document.write("<LAYER NAME='sn"+i+"' LEFT=0 TOP=0><img src="+rndPic+"></LAYER>");      
+}      
+}      
+else{      
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');      
+for (i = 0; i < Amount; i++){      
+var P=Math.floor(Math.random()*grphcs.length);      
+rndPic=grphcs[P];//osw      
+document.write('<img id="si'+i+'" src="'+rndPic+'" style="position:absolute;top:0px;left:0px">');      
+}      
+document.write('</div></div>');      
+}      
+WinHeight=(ns||ns6)?window.innerHeight:window.document.body.clientHeight;      
+WinWidth=(ns||ns6)?window.innerWidth-70:window.document.body.clientWidth;//fantasyflash.ru      
+for (i=0; i < Amount; i++){        
+        Ypos[i] = Math.round(Math.random()*WinHeight);      
+        Xpos[i] = Math.round(Math.random()*WinWidth);      
+        Speed[i]= Math.random()*2+1;      
+        Cstep[i]=0;      
+        Step[i]=Math.random()*0.1+0.05;      
+}      
+function fall(){      
+var WinHeight=(ns||ns6)?window.innerHeight:window.document.body.clientHeight;      
+var WinWidth=(ns||ns6)?window.innerWidth-70:window.document.body.clientWidth;      
+var hscrll=(ns||ns6)?window.pageYOffset:document.body.scrollTop;      
+var wscrll=(ns||ns6)?window.pageXOffset:document.body.scrollLeft;      
+for (i=0; i < Amount; i++){      
+sy = Speed[i]*Math.sin(70*Math.PI/120);      
+sx = Speed[i]*Math.cos(Cstep[i]);      
+Ypos[i]+=sy;      
+Xpos[i]+=sx;        
+if (Ypos[i] > WinHeight){      
+Ypos[i]=-60;      
+Xpos[i]=Math.round(Math.random()*WinWidth);      
+Speed[i]=Math.random()*2+1;      
+}      
+if (ns){      
+document.layers['sn'+i].left=Xpos[i];      
+document.layers['sn'+i].top=Ypos[i]+hscrll;      
+}      
+else if (ns6){      
+document.getElementById("si"+i).style.left=Math.min(WinWidth,Xpos[i]);      
+document.getElementById("si"+i).style.top=Ypos[i]+hscrll;      
+}      
+else{      
+eval("document.all.si"+i).style.left=Xpos[i];      
+eval("document.all.si"+i).style.top=Ypos[i]+hscrll;      
+}        
+Cstep[i]+=Step[i];      
+}      
+setTimeout('fall()',20);      
+}      
+        window.onload=fall      
+//-->      
+'</script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+<META name="keywords" content="стоматолог,стоматология,шаболовка,шаболовская">
+<META name="description" content="Все виды стоматологических услуг, врачи высшей квалификации, новейшее оборудование, материалы последнего поколения, очень доступные цены.">
+<TITLE>ОСМИЙ ДЕНТ Стоматологическая клиника. Москва, Шаболовка д.40</TITLE>
+<style>
+  .content {COLOR:#404040; PADDING-LEFT:0; FONT-SIZE:16; FONT-FAMILY: Arial,Verdana,Tahoma; text-decoration:none;}
+  .sign    {COLOR:#404040; PADDING-LEFT:0; FONT-SIZE:16; FONT-FAMILY: Arial,Verdana,Tahoma; text-decoration:none;}
+  .headtxt {COLOR:#202020; PADDING-LEFT:0; FONT-SIZE:12; FONT-FAMILY: Arial,Verdana,Tahoma; text-decoration:none;}
+
+  .menu {COLOR:white; PADDING-LEFT:0; FONT-SIZE:17; font-weight:; FONT-FAMILY: Arial,Verdana,Tahoma; text-decoration:none;}
+  .menu:link {COLOR: white; text-decoration:none;}
+  .menu:visited {COLOR: white; text-decoration:none;}
+  .menu:hover {COLOR: white; text-decoration:underline; }
+
+
+  h1 {COLOR:#000000; PADDING-LEFT:0; FONT-SIZE:28; FONT-WEIGHT:normal; FONT-FAMILY: Arial,Verdana,Tahoma; text-decoration:none;}
+  h4 {COLOR:#000000; PADDING-LEFT:0; FONT-SIZE:20; FONT-WEIGHT:normal; FONT-FAMILY: Arial,Verdana,Tahoma; text-decoration:none;margin:0;padding:0;}
+
+  A {COLOR:#769f01; PADDING-LEFT:0; FONT-SIZE:16; FONT-FAMILY: Arial,Verdana,Tahoma; text-decoration:underline;}
+  A:link {COLOR: #769f01; text-decoration:underline;}
+  A:visited {COLOR: #769f01; }
+  A:hover {COLOR: #496e01; }
+</style>
+</head>
+<body topmargin=0 leftmargin=0 bottommargin=0 bgcolor=#FFFFFF style="padding-top:0;margin-top:0;padding-left:0;margin-left:0;margin-right:0;padding-right:0;overflow:scroll;">
+<center>
+
+<table cellspacing=0 cellpadding=0 border=0 style="padding:0;margin:0;" width=845>
+<tr valign=top height=124>
+  <td width=328><a href="http://www.osmiydent.ru"><img alt="ОСМИЙ ДЕНТ Стоматологическая клиника на Шаболовке." src="logo.gif" width=328 height=124 border=0 solidborder=0></a></td>
+  <td width=517 rowspan=3><img src="headbg1.jpg" width=517 height=343></td>
+</tr>
+<tr valign=top height=80>
+  <td class="headtxt">
+<img src="mrk1.gif">ВРАЧИ&nbsp;&nbsp;ВЫСШЕЙ&nbsp;&nbsp;КВАЛИФИКАЦИИ<br />
+<img src="mrk1.gif">НОВЕЙШЕЕ&nbsp;&nbsp;ЯПОНСКОЕ&nbsp;&nbsp;ОБОРУДОВАНИЕ<br />
+<img src="mrk1.gif">МАТЕРИАЛЫ&nbsp;&nbsp;ПОСЛЕДНЕГО&nbsp;&nbsp;ПОКОЛЕНИЯ<br />
+<img src="mrk1.gif">ДОСТУПНЫЕ&nbsp;&nbsp;ЦЕНЫ
+  </td>
+</tr>
+<tr valign=top height=139>
+  <td class="headtxt" style="font-size:20;padding-top:32;padding-left:114;">
+<span style="font-size:31;color:black">Шаболовка</span><span color:black;">, д.40</span><br>
+<span style="font-size:15;">+7 (499)</span> <span style="font-size:32;color:#769f01;">236-55-54</span>
+  </td>
+</tr>
+<tr height=85 bgcolor=#89cc03><td colspan=2 background="menubg1.jpg" align=center>
+<!-- main menu -->
+<table cellspacing=0 cellpadding=0 border=0 width=700 height=85>
+<tr valign=middle>
+  <td width=27% align=center style="padding-right:5"><a href="http://www.osmiydent.ru" class="menu">О нашей клинике</a></td>
+  <td width=27% align=center><a href="http://www.osmiydent.ru/technology.shtml" class="menu">Наши технологии</a></td>
+  <td width=24% align=center><a href="http://www.osmiydent.ru/services.shtml" class="menu">Услуги и цены</a></td>
+  <td width=22% align=center><a href="http://www.osmiydent.ru/map.shtml" class="menu">Карта проезда</a></td>
+</table>
+<!-- /main menu -->
+</td></tr>
+
+<tr valign=top><td class="content" colspan=2 style="padding:16;padding-top:25">
+
+<!-- content -->
+<img src="1.gif" alt="Акция скидки на AirFlow и Vertex" title="Акция скидки на AirFlow и Vertex">
+<h1>Нашей стоматологической клинике 20 лет</h1>
+<table cellspacing=0 cellpadding=0 border=0 style="margin-top:0">
+<tr valign=top><td colspan=2>
+<p style="padding:0;margin:0;" class="content" align=justify>
+Мы производим все виды стоматологических работ на японском оборудовании и
+используем материалы последнего поколения. Мы работаем ежедневно с 9:00 до 21:00, без выходных. С полным списком наших услуг Вы можете ознакомиться в разделе нашего сайта <a href="services.shtml">услуги и цены >></a>
+</p>
+<br/>
+</td></tr>
+<tr valign=top>
+<td style="padding-top:3">
+<script language="JavaScript">
+  time_id = window.setTimeout("mTimer()",3000);
+  im_count= 7;
+  old_num = 0;
+  im_next = 2;
+
+  function mTimer()
+  {
+
+    new_src = "img/a0"+im_next+".jpg";
+    im_next++;
+
+    if(im_next>=im_count) im_next=1;
+
+    if(document.getElementById("slideshow")!=null) {
+      document.getElementById("slideshow").src = new_src; 
+    };
+    window.setTimeout("mTimer()",3000);
+  };
+</script>
+<img src="img/a01.jpg" border=0" id=slideshow>
+</td>
+<td class="content">
+
+<h4>&nbsp&nbsp&nbsp&nbspНаши врачи:</h4>
+<ul>
+<li>	имеют стаж работы более 10 лет, 
+<li>	профессиональные международные сертификаты, 
+<li>	высшие врачебные категории, 
+<li>	закончили ординатуру, 
+<li>	прошли курсы усовершенствования в ЦНИСе и стоматологической Академии имени Сеченова
+<li>	прошли обучение по эндодонтии, художественной реставрации и новым материалам в "Vivadent-invoclar", "Dina", "DMG"
+</ul>
+
+</td></tr>
+
+</table>
+
+
+<!-- /content -->
+</td></tr>
+<tr height=60 valign=bottom><td style="padding-left:20;padding-top:3;border-top:1px solid #68a001;" class="content" colspan=2>
+<table cellspacing=0 cellpadding=0 border=0>
+<tr valign=top><td>
+<!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=29394385&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/29394385/3_0_E0E0E0FF_C0C0C0FF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:29394385,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter29394385 = new Ya.Metrika({id:29394385,
+                    clickmap:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/29394385" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t12.3;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border=0 width=88 height=31><\/a>")//--></script><!--/LiveInternet-->
+</td><td class="sign" style="padding-left:20">
+
+<i><font size="2">© ЗАО "НПО" ОСМИЙ" 1995-2016</font></i>
+</td>
+</td></tr></table>
+
+
+</table>
+</center>
+</body>
+</html>

@@ -1,0 +1,1549 @@
+ <!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+<base href="http://poli-dent.ru/" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--[if !IE 8]>
+  -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bad+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Arimo:300,400,700,900' rel='stylesheet' type='text/css'>
+
+
+  <!-- <![endif]-->
+  <base  />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="" /> 
+  <meta name="description" content="" />
+  <meta name='yandex-verification' content='5d3c1c1a071cc2e4' />
+
+  <title>Сеть стоматологических клиник - Полидент - </title>
+
+
+  <link href="/assets/templates/polident/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+  <link rel="stylesheet" href="/assets/templates/polident/css/owl.carousel.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/templates/polident/css/owl.theme.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/templates/polident/css/owl.transitions.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/templates/polident/css/chosen.css?vmver=8672" type="text/css" />
+  <link rel="stylesheet" href="/assets/templates/polident/css/jquery.fancybox-1.3.4.css?vmver=8672" type="text/css" />
+  <link rel="stylesheet" href="/assets/templates/polident/css/vm-ltr-common.css?vmver=8672" type="text/css" />
+  <link rel="stylesheet" href="/assets/templates/polident/css/vm-ltr-site.css?vmver=8672" type="text/css" />
+  <link rel="stylesheet" href="/assets/templates/polident/css/vm-ltr-reviews.css?vmver=8672" type="text/css" />
+  <link rel="stylesheet" href="/assets/templates/polident/css/zt_layerslider.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/templates/polident/css/captions.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/templates/polident/css/settings.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/templates/polident/css/style.wishlist.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/templates/polident/css/compare.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/templates/polident/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/templates/polident/css/slick.css">
+  
+
+  
+  <script src="/assets/templates/polident/js/jquery.min.js" type="text/javascript"></script>
+  <script src="/assets/templates/polident/js/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="/assets/templates/polident/js/owl.carousel.min.js" type="text/javascript"></script>
+  <script src="/assets/templates/polident/js/jquery.themepunch.plugins.min.js" type="text/javascript"></script>
+  <script src="/assets/templates/polident/js/jquery.themepunch.revolution.js" type="text/javascript"></script>
+  <script src="/assets/templates/polident/js/jquery.fancybox-1.3.4.pack.js" type="text/javascript"></script>
+  
+   <script src="/assets/templates/polident/js/jquery.popup-window-0.1.js" type="text/javascript"></script>
+  <script src="/assets/templates/polident/js/wishlist.js" type="text/javascript"></script>
+  <script src="/assets/templates/polident/js/chosen.jquery.min.js?vmver=8672" type="text/javascript"></script>
+  <script src="/assets/templates/polident/js/dynupdate.js?vmver=8672" type="text/javascript"></script>
+  <script src="/assets/templates/polident/js/vmprices.js?vmver=8672" type="text/javascript"></script>
+  <script src="/assets/templates/polident/js/vmsite.js?vmver=8672" type="text/javascript"></script>
+  <script src="/assets/templates/polident/js/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="/assets/templates/polident/js/jquery.ui.autocomplete.html.js" type="text/javascript"></script>
+  <script src="/assets/templates/polident/js/jquery.noconflict.js" type="text/javascript" async></script>
+  <!--<sccipt src="/assets/templates/polident/js/update_cart.js?vmver=8672" type="text/javascript"></script>-->
+    <script src="/assets/templates/polident/js/slick.min.js" type="text/javascript"></script>
+    <script src="/assets/templates/polident/js/myCustom.js" type="text/javascript"></script>
+    <script src="/assets/templates/polident/js/caption.js" type="text/javascript"></script>
+<script type="text/javascript">
+/**
+ * Zo2 JS framework define
+ * @param {object} w Window pointer
+ * @param {object} $ jQuery pointer
+ * @returns {undefined}
+ */
+(function(w, $) {
+
+    if (typeof w.zo2 === 'undefined') {
+
+        /* Local zo2 definition */
+        var _zo2 = {
+            /* Common settings */
+            _settings: {
+                token: "10ac86ba4287fa8cb4aabb5cc31a135e",
+                url: "/",
+                frontEndUrl: "/"
+            },
+            /* Internal jQuery */
+            jQuery: $
+        };
+
+        /* Provide global zo2 object */
+        w.zo2 = _zo2;
+
+    }
+
+})(window, jQuery.noConflict());
+jQuery(window).on('load',  function() {
+        new JCaption('img.caption');
+      });
+jQuery(document).ready(function () {
+                        var show_quicktext="Quick View";
+                        //jQuery("ul.layout .product-box , ul.layout2 .product-box").each(function(indx, element){
+                        jQuery(".zt-product-content").each(function(indx, element){
+                            var my_product_id = jQuery(this).find(".quick_ids").val();
+                            if(my_product_id){
+                                if(jQuery(this).find(".quick_btn").length < 1) {
+                                    jQuery(this).append("<div class='quick_btn' onClick ='quick_btn("+my_product_id+")'><i class='fa fa-search'></i><span>"+show_quicktext+"</span></div>");
+                                }
+                            }
+                            jQuery(this).find(".quick_id").remove();
+                        });
+                    });
+  </script>
+<script src="https://www.google.com/recaptcha/api.js?onload=myCallBack&render=explicit" async defer></script>
+    <script>
+      var recaptcha1;
+      var recaptcha2;
+      var recaptcha3;
+      
+    var myCallBack = function() {
+        //Render the recaptcha1 on the element with ID "recaptcha1"
+        recaptcha1 = grecaptcha.render('recaptcha1', {
+          'sitekey' : '6LenviMTAAAAAGRFXb0CPyB-0KWj2_KRcAXLWtss', //Replace this with your Site key
+          'theme' : 'light'
+        });
+        
+        //Render the recaptcha2 on the element with ID "recaptcha2"
+        recaptcha2 = grecaptcha.render('recaptcha2', {
+          'sitekey' : '6LenviMTAAAAAGRFXb0CPyB-0KWj2_KRcAXLWtss', //Replace this with your Site key
+          'theme' : 'light'
+        });
+      };
+    </script>
+  <link rel="stylesheet" href="/assets/templates/polident/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/templates/polident/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/templates/polident/css/site.styles.css">
+  <link rel="stylesheet" href="/assets/templates/polident/css/template2.css">
+  <link rel="stylesheet" href="/assets/templates/polident/css/custom.css">
+  <link rel="stylesheet" href="/assets/templates/polident/css/animate.css">
+  <link rel="stylesheet" href="/assets/templates/polident/css/bootstrapValidator.min.css">
+  <style></style>
+  
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80177859-1', 'auto');
+ga('require', 'displayfeatures');
+ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+
+</script>
+<link rel="stylesheet" href="/assets/components/ajaxform/css/default.css" type="text/css" />
+</head>
+
+<body class="homepage ltr  ">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter38269540 = new Ya.Metrika({
+                        id: 38269540,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true
+                    });
+                } catch (e) {}
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function() {
+                    n.parentNode.insertBefore(s, n);
+                };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/38269540" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+    <!-- Main wrapper -->
+
+    <section id="" class="topper">
+<div class="container-fluid">
+
+<div class="row">
+
+<div id="zo2-header-logo" class="mobile-logo col-md-2 col-sm-3 col-lg-2 col-xs-12">
+    <header id="standard-logo" class="zo2-logo">
+        <a class="standard-logo-link" href="/" title="">
+            <img alt="" src="/assets/templates/polident/images/polident-logo.png"/>
+        </a>
+    </header>
+    <header id="retina-logo" class="zo2-logo">
+        <a class="retina-logo-link" href="/" title="">
+            <img alt="" src="/assets/templates/polident/images/logo.png"/>
+        </a>
+    </header>
+</div>
+
+<div class=" teladr col-md-2 col-sm-3 col-lg-3 col-xs-12 hidden-xs" style="padding-left: 40px;">
+<p><a href="tel: +7 499 182-44-15" class="telphone-header">+7 499 182-44-15</a></p>
+<p  class="clinm">м. «ВДНХ»</p>
+<p class="clinadr"> ул. Палехская, д. 21</p>
+</div>
+
+<div class=" teladr col-md-2 col-sm-3 col-lg-3 col-xs-12 hidden-xs" style="padding-left: 40px;">
+<p><a href="tel: +7 495 640-89-45" class="telphone-header">+7 495 640-89-45</a></p>
+<p  class="clinm">м. «Славянский бульвар»</p>
+ <p class="clinadr">ул. Гришина, д. 2, корп. 1</p>
+</div>
+
+<div id="zo2-position-0" class="hidden-sm hidden-xs col-md-4 col-lg-4 ">
+  <div id="zt_top_cart">
+      <div class="header-button">
+      <div data-toggle="modal" data-target="#modal-fade2" id="cart" style="float: left; padding: 0 30px 0 0;">
+            <a data-reveal-id="popup_order"><i class="fa fa-shopping-cart">вам перезвонить?</i>
+            </a>
+        </div>
+        <div data-toggle="modal" data-target="#modal-fade" id="cart" style="float: left; padding: 0 20px 0 0;">
+            <a data-reveal-id="popup_order"><i class="fa fa-shopping-cart">записаться на прием</i>
+            </a>
+        </div>
+      </div>
+        
+    </div>
+
+</div>
+
+</div>
+<hr style="width:70%; margin-left:15%; margin-bottom: 8px; margin-top: 10px;" />
+<nav class="navbar navbar-default" style="min-height:0px;">
+          <div class="container-fluid">
+          <div class="navbar-header" style="margin-left: 10px; margin-top: -52px;">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+<ul class="nav navbar-nav level-top"><li class="first"><a href="about-us/" >О клинике</a></li><li><a href="services/" >Услуги</a></li><li><a href="wiki/" >Энциклопедия</a></li><li><a href="stock/" >Акции</a></li><li><a href="doctors/" >Врачи</a></li><li><a href="responses/" >Отзывы</a></li><li><a href="contacts/" >Контакты</a></li><li class="last"><a href="price-list/" >Цены</a></li></ul>
+
+                </div>
+            </div>
+        </nav>
+</div>
+
+</section>
+
+    <section id="zo2-zt-slide-wrap" class="full-width slide_wrap hidden-xs">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="zo2-slide" class="full-width col-md-12 col-sm-12">
+                    <div id="rev_slider_6_250_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="float:left;background-color:#E9E9E9;padding:0px;margin-left:0px;margin-right:0px;margin-top:0px;margin-bottom:0px;max-height:730px;">
+                        <div id="rev_slider_6_250" class="rev_slider fullwidthabanner" style="display:none;max-height:730px;height:730;">
+                            <ul>
+                                <li data-transition="random" data-slotamount="7" data-masterspeed="300">
+                                    <img src="/assets/templates/polident/images/layerslider/zdorovie_zuby_big.jpg" alt="slid1">
+
+                                    <div class="tp-caption big_white lfr" data-x="100" data-y="150" data-speed="1200" data-start="500" data-easing="easeOutExpo">
+                                        <div><span style="font-family: Arimo;font-size: 60px;display: inline-block;text-transform: uppercase; color: #FF0000;margin-left: -35px;">АКЦИЯ!</span>
+                                            <span style="font-family: Arimo;font-size: 21px;text-transform: uppercase;width: 700px;display: inline-block; color: #FF0000;margin-top: 0px;">ТОЛЬКО ДО 15 ноября 2016 года!</span></div>
+                                        <span style="font-family: Arimo;font-size: 36px;text-transform: uppercase;width: 440px;display: block;margin-top: 40px;margin-left: -35px;">УНИКАЛЬНЫЕ ЦЕНЫ </span>
+                                        <span style="font-family: Arimo;font-size: 21px;text-transform: uppercase;width: 700px;display: block;margin-top: 0px;margin-left: -35px;">на услуги врача-стоматолога категории «профи»: </span>
+                                        <div><span style="font-family: Arimo;font-size: 36px;text-transform: uppercase;display: inline-block;margin-top: 40px;color: #FF0000;margin-left: -35px;">Пломба - </span>
+                                            <span style="font-family: Arimo;font-size: 36px;display: inline-block;margin-top: 10px;margin-left: 7px;position: relative;">2 790 руб.<i style="position: absolute;display: block;width: 183px;height: 3px;background: #fff;left: -6px;top: 17px;"></i></span>
+                                            <span style="font-family: Arimo;font-size: 36px;text-transform: uppercase;width: 440px;display: inline-block;margin-top: 40px; color: #FF0000;">990 рублей</span></div>
+                                        <div><span style="font-family: Arimo;font-size: 36px;text-transform: uppercase;display: inline-block;margin-top: 10px;color: #FF0000;margin-left: -35px;">Удаление зуба - </span>
+                                            <span style="font-family: Arimo;font-size: 36px;display: inline-block;margin-top: 10px;margin-left: 7px;position: relative;">2 700 руб.<i style="position: absolute;display: block;width: 183px;height: 3px;background: #fff;left: -6px;top: 17px;"></i></span>
+                                            <span style="font-family: Arimo;font-size: 36px;text-transform: uppercase;width: 440px;display: inline-block;margin-top: 10px; color: #FF0000;">900 рублей</span></div>
+                                        <div><span style="font-family: Arimo;font-size: 36px;text-transform: uppercase;display: inline-block;margin-top: 10px;color: #FF0000;margin-left: -35px;">Коронка металокерамическая - </span>
+                                            <span style="font-family: Arimo;font-size: 36;display: inline-block;margin-top: 10px;margin-left: 7px;position: relative;">13 000 руб.<i style="position: absolute;display: block;width: 183px;height: 3px;background: #fff;left: -6px;top: 17px;"></i></span>
+                                            <span style="font-family: Arimo;font-size: 36px;text-transform: uppercase;display: inline-block;margin-top: 10px; color: #FF0000;">4 500 рублей</span></div>
+                                        <div><span style="font-family: Arimo;font-size: 36px;text-transform: uppercase;display: inline-block;margin-top: 10px;color: #FF0000;margin-left: -35px;">Имплант  MIS - </span>
+                                            <span style="font-family: Arimo;font-size: 36px;display: inline-block;margin-top: 10px;margin-left: 7px;position: relative;">15 690 руб.<i style="position: absolute;display: block;width: 183px;height: 3px;background: #fff;left: -6px;top: 17px;"></i></span>
+                                            <span style="font-family: Arimo;font-size: 36px;text-transform: uppercase;width: 440px;display: inline-block;margin-top: 10px; color: #FF0000;">8 500 рублей</span></div>
+                                    </div>
+
+                                    <div class="tp-caption small_white lfb " data-x="100" data-y="550" data-speed="1500" data-start="1400" data-easing="easeOutExpo">
+                                        <a href="/stock/healthy-teeth/" style="background:#FF0000; margin-left: -35px;">Узнать подробнее</a>
+                                    </div>
+
+                                </li>
+
+                                <!--          
+               <li data-transition="random"
+                    data-slotamount="7" data-masterspeed="300" >
+                <img src="/assets/templates/polident/images/layerslider/vstrechaem_osen.png"  alt="slid1" >
+
+                <div class="tp-caption big_white lfr"
+                   data-x="100"
+                   data-y="230"
+                   data-speed="1200"
+                   data-start="500"
+                   data-easing="easeOutExpo"  >
+                           <span style="font-family: Arimo;font-size: 55px;text-transform: uppercase;">Встречаем осень <br/>красивой улыбкой!</span>
+                           <span style="font-family: Arimo;font-size: 31px;text-transform: uppercase;width: 440px;display: block;margin-top: 30px; margin-bottom: 50px;">Профессиональная гигиена со скидкой 50%</span>
+                           <span style="font-family: Arimo;font-size: 29px;display: inline-block;margin-top: 10px;margin-left: 7px;position: relative;vertical-align: middle;">- всего за</span>
+                           <span style="font-family: Arimo;font-size: 83px;display: inline-block;position: relative; vertical-align: middle;"> 3 100<div style="background: url('/assets/templates/polident/images/layerslider/big-rub.png') no-repeat;position: absolute;left: 225px;height: 55px;width: 40px;top: -8px;"></div></span>
+                        </div>
+
+                        <div class="tp-caption small_white lfb"
+                   data-x="100"
+                   data-y="600"
+                   data-speed="1500"
+                   data-start="1400"
+                   data-easing="easeOutExpo"  >
+                          <a href="/stock/meet-autumn-a-beautiful-smile/">Узнать подробнее</a>
+                        </div>
+
+                </li>
+
+                <li data-transition="random"
+                    data-slotamount="7" data-masterspeed="300" >
+                <img src="/assets/templates/polident/images/layerslider/last.png"  alt="slid1" >
+
+                <div class="tp-caption big_white lfr"
+                   data-x="100"
+                   data-y="230"
+                   data-speed="1200"
+                   data-start="500"
+                   data-easing="easeOutExpo"  >
+                           <span style="font-family: Arimo;font-size: 55px;text-transform: uppercase;">Акция!</span>
+                           <span style="font-family: Arimo;font-size: 31px;text-transform: uppercase;width: 440px;display: block;margin-top: 30px;">Бюгельный протез с кламмерной фиксацией</span>
+                           <span style="font-family: Arimo;font-size: 29px;display: block;margin-top: 10px;margin-left: 7px;position: relative;">65 000<i style="position: absolute;display: block;width: 105px;height: 3px;background: #fff;left: -6px;top: 17px;"></i><img src="/assets/templates/polident/images/layerslider/min-rub.png" style="position: absolute;top: 7px;left: 99px;" /></span>
+                           <span style="font-family: Arimo;font-size: 83px;display: block;margin-top: 65px;position: relative;">27 990<div style="background: url('/assets/templates/polident/images/layerslider/big-rub.png') no-repeat;position: absolute;left: 270px;height: 55px;width: 40px;top: -8px;"></div></span>
+                        </div>
+
+                        <div class="tp-caption small_white lfb"
+                   data-x="100"
+                   data-y="600"
+                   data-speed="1500"
+                   data-start="1400"
+                   data-easing="easeOutExpo"  >
+                          <a href="/stock/bugel-prosthesis-with-a-discount-of-58!/">Узнать подробнее</a>
+                        </div>
+
+                </li>
+
+                <li data-transition="random"
+                    data-slotamount="7" data-masterspeed="300" >
+                  <img src="/assets/templates/polident/images/layerslider/protestik-slide2.png"                          alt="slid2" >
+
+                  <div class="tp-caption big_white lfr"
+             data-x="318"
+             data-y="376"
+             data-speed="1200"
+             data-start="500"
+             data-easing="easeOutExpo"  >
+                    <span style="font-weight:300;font-size:68px; font-family:Roboto, Helvetica, sans-serif">Жевать рекомендуется!</span>
+                  </div>
+
+                  <div class="tp-caption big_white lfl"
+             data-x="160"
+             data-y="446"
+             data-speed="1200"
+             data-start="1000"
+             data-easing="easeOutExpo"  >
+                    <span style="font-size:50px;font-family:Roboto, Helvetica, sans-serif">Запишитесь на бесплатную консультацию!</span>
+                  </div>
+
+                  <div class="tp-caption small_white lfb"
+             data-x="586"
+             data-y="550"
+             data-speed="1500"
+             data-start="1400"
+             data-easing="easeOutExpo"  >
+                   <div id="zt_top_cart" data-toggle="modal" data-target="#modal-fade" class="">
+        <div id="cart">
+            <a data-reveal-id="popup_order" style="cursor:pointer;" >записаться на прием
+            </a>
+        </div>
+    </div>
+                  </div>
+
+                </li>
+
+                <li data-transition="random"
+                    data-slotamount="7" data-masterspeed="300" >
+                  <img src="/assets/templates/polident/images/layerslider/slide2.jpg"                          alt="slide1" >
+
+                  <div class="tp-caption big_white lfl"
+             data-x="337"
+             data-y="379"
+             data-speed="1200"
+             data-start="1400"
+             data-easing="easeOutExpo"  >
+                    <span style="font-weight:bold; font-size:90px;">ИМПЛАНТАЦИЯ</span>
+                  </div>
+
+                        <div class="tp-caption medium_white lfr"
+             data-x="491"
+             data-y="453"
+             data-speed="1500"
+             data-start="1700"
+             data-easing="easeOutExpo">самый современный метод лечения</div>
+
+                  <div class="tp-caption medium_white lfl"
+             data-x="349"
+             data-y="487"
+             data-speed="1500"
+             data-start="2200"
+             data-easing="easeOutExpo">позволяющий восстановить один или все утраченные зубы</div>
+
+                  <div class="tp-caption small_white lfb"
+             data-x="576"
+             data-y="556"
+             data-speed="2000"
+             data-start="2300"
+             data-easing="easeOutExpo"  >
+                    <div id="zt_top_cart" data-toggle="modal" data-target="#modal-fade" class="">
+        <div id="cart">
+            <a data-reveal-id="popup_order" style="cursor:pointer;" >записаться на прием
+            </a>
+                  </div>
+
+                </li>      -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript">
+                        var revapi6;
+
+                        jQuery(document).ready(function() {
+
+                            if (jQuery.fn.cssOriginal != undefined)
+                                jQuery.fn.css = jQuery.fn.cssOriginal;
+
+                            if (jQuery('#rev_slider_6_250').revolution == undefined) {
+
+                            } else {
+                                revapi6 = jQuery('#rev_slider_6_250').show().revolution({
+                                    delay: 9000,
+                                    startwidth: 1336,
+                                    startheight: 730,
+                                    hideThumbs: 0,
+
+                                    thumbWidth: 100,
+                                    thumbHeight: 50,
+                                    thumbAmount: 2,
+
+                                    navigationType: "none",
+                                    navigationArrows: "solo",
+                                    navigationStyle: "navbar",
+
+                                    touchenabled: "on",
+                                    onHoverStop: "on",
+
+                                    navigationHAlign: "center",
+                                    navigationVAlign: "bottom",
+                                    navigationHOffset: 0,
+                                    navigationVOffset: 20,
+
+                                    soloArrowLeftHalign: "left",
+                                    soloArrowLeftValign: "center",
+                                    soloArrowLeftHOffset: 20,
+                                    soloArrowLeftVOffset: 0,
+
+                                    soloArrowRightHalign: "right",
+                                    soloArrowRightValign: "center",
+                                    soloArrowRightHOffset: 20,
+                                    soloArrowRightVOffset: 0,
+
+                                    shadow: 0,
+                                    fullScreen: "off",
+                                    fullWidth: "on",
+
+                                    stopLoop: "off",
+                                    stopAfterLoops: -1,
+                                    stopAtSlide: -1,
+
+                                    shuffle: "off",
+
+                                    hideSliderAtLimit: 0,
+                                    hideCaptionAtLimit: 0,
+                                    hideAllCaptionAtLilmit: 0,
+                                    startWithSlide: 0
+                                });
+                            }
+
+                        }); //ready
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="zo2-body-wrap" class="containt-main">
+        <div class="container">
+            <div class="row">
+                <div id="zo2-message" class="containt col-md-12 col-sm-12">
+                    <div id="system-message-container"></div>
+                    <section id="zo2-component-wrap" class="">
+                        <div class="container">
+                            <div class="row">
+                                <div id="zo2-component" class="col-md-12 col-sm-12">
+                                    <div class="blog-featured homepage">
+
+                                        <div class="items-leading clearfix">
+                                            <div class="leading-0 clearfix">
+
+                                                <div class="content-top" data-scroll-reveal="enter bottom and move 150px over 1.5s" data-scroll-reveal-initialized="true">
+                                                    <h1>
+                            <span>25 ЛЕТ</span>
+                            ТРАДИЦИЙ КАЧЕСТВЕННОЙ
+                            <span>СТОМАТОЛОГИИ</span>
+                            В КЛИНИКАХ ПОЛИДЕНТ
+                          </h1>
+                                                    <div class="zt-box-content-wrap boxed-content">
+                                                        <div class="row">
+
+                                                            <div class="zt-box-item  col-sm-4 col-md-4">
+                                                                <div class="zt-box-item-inner">
+                                                                    <div class="zt-box-icon zt-icon-default" style="margin-bottom: 0px; margin-top: 0px; width: 60px; height: 60px; border: 0px solid #000; background-color: ">
+                                                                        <i class="fa fa-user-md " style="font-size: 65px; color: #a13081; line-height: 60px;"></i>
+                                                                    </div>
+                                                                    <div class="zt-box-content">
+                                                                        <h3 class="zt-box-title">Лечение зубов</h3>
+
+                                                                        <p>
+                                                                            Лучшие стоматологи во всем мире предпочитают лечить зубы под микроскопом.</p>
+                                                                        <a href="/services/treatment/" class="zt-box-link" style="background-color: #fff; color: #000" onmouseover="this.style.backgroundColor='#a13081'; this.style.color='#fff'" onmouseout="this.style.backgroundColor='#fff';this.style.color='#000'">Узнать больше</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="zt-box-item  col-sm-4 col-md-4">
+                                                                <div class="zt-box-item-inner">
+                                                                    <div class="zt-box-icon zt-icon-default" style="margin-bottom: 0px; margin-top: 0px; width: 60px; height: 60px; border: 0px solid #000; background-color: ">
+                                                                        <i class="fa fa-ambulance " style="font-size: 65px; color: #a13081; line-height: 60px;"></i>
+                                                                    </div>
+                                                                    <div class="zt-box-content">
+                                                                        <h3 class="zt-box-title">Протезирование на дому</h3>
+
+                                                                        <p>
+                                                                            Пациентам, которые не могут посетить клинику, изготавливая съемные протезы на дому
+                                                                        </p>
+                                                                        <a href="/services/denture-treatment/prosthetics-at-home/" class="zt-box-link" style="background-color: #fff; color: #000" onmouseover="this.style.backgroundColor='#a13081'; this.style.color='#fff'" onmouseout="this.style.backgroundColor='#fff';this.style.color='#000'">Узнать больше</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="zt-box-item  col-sm-4 col-md-4">
+                                                                <div class="zt-box-item-inner">
+                                                                    <div class="zt-box-icon zt-icon-default" style="margin-bottom: 0px; margin-top: 0px; width: 60px; height: 60px; border: 0px solid #000; background-color: ">
+                                                                        <i class="fa fa-medkit " style="font-size: 65px; color: #a13081; line-height: 60px;"></i>
+                                                                    </div>
+                                                                    <div class="zt-box-content">
+                                                                        <h3 class="zt-box-title">Мы знаем о зубах все</h3>
+
+                                                                        <p>
+                                                                            Любые виды стоматологической помощи в Москве от специалистов с 25 летним стажем
+                                                                        </p>
+                                                                        <a href="/faq/" class="zt-box-link" style="background-color: #fff; color: #000" onmouseover="this.style.backgroundColor='#a13081'; this.style.color='#fff'" onmouseout="this.style.backgroundColor='#fff';this.style.color='#000'">Узнать больше</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="pagination">
+
+                                            <p class="counter pull-right"></p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="zo2-content-home-wrap" class="">
+        <div class="container">
+            <div class="row">
+                <div id="zo2-position-16" class="col-md-8 col-sm-8">
+                    <div class="module ">
+                        <div class="mod-wrapper clearfix">
+                            <h3 class="moduletitle">
+                <span>НАШИ КЛИНИКИ</span>
+              </h3>
+
+                            <div class="mod-content clearfix">
+                                <div class="mod-inner clearfix">
+
+                                    <div class="zt_news_wrap">
+                                        <div class="zt-newsiv-frame-cat">
+
+                                            <div id="zt-news-scroll-180" class="zt-category">
+                                                <div class="item zt-article-item">
+                                                    <div class="image">
+                                                        <a href="http://poli-dent.ru/contacts/slavyanskii-bulvar/" title="Клиника Полидент у метро Славянский бульвар" class="img">
+                                                            <img alt="Клиника Полидент у метро Славянский бульвар" title="Nutritional Personal Consultation" class="lazyOwl" data-src="/assets/templates/polident/images/grishina2.jpg" height="180" width="350" />
+                                                        </a>
+                                                        <div class="icon">
+                                                            <i class="fa fa-picture-o"></i>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="content-text">
+                                                        <h4>
+                              <a href="http://poli-dent.ru/contacts/slavyanskii-bulvar/" title="Nutritional Personal Consultation">Клиника у метро «Славянский бульвар»</a>
+                            </h4>
+                                                        <p class="zt-introtext">Москва, ул. Гришина, д. 2, корп. 1
+                                                        </p>
+
+                                                    </div>
+                                                    <p class="zt-news-readmore">
+                                                        <a class="readmore" href="http://poli-dent.ru/contacts/slavyanskii-bulvar/">СХЕМА ПРОЕЗДА</a>
+                                                    </p>
+                                                </div>
+                                                <div class="item zt-article-item">
+
+                                                    <div class="image">
+                                                        <a href="http://poli-dent.ru/contacts/vdnh/" title="Outpatient Rehabilitation" class="img">
+                                                            <img alt="Клиника Полидент у метро ВДНХ" title="Клиника Полидент у метро ВДНХ" class="lazyOwl" data-src="/assets/templates/polident/images/vdnh.png" height="180" width="350" />
+                                                        </a>
+                                                        <div class="icon">
+                                                            <i class="fa fa-picture-o"></i>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="content-text">
+                                                        <h4>
+                              <a href="" title="Outpatient Rehabilitation">Клиника у метро "ВДНХ"</a>
+                            </h4>
+
+                                                        <p class="zt-introtext">
+                                                            Москва, улица Палехская дом 21
+                                                        </p>
+
+                                                    </div>
+                                                    <p class="zt-news-readmore">
+                                                        <a class="readmore" href="http://poli-dent.ru/contacts/vdnh/">СХЕМА ПРОЕЗДА</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function($) {
+                                                    $("#zt-news-scroll-180").owlCarousel({
+                                                        lazyLoad: true,
+                                                        navigation: true,
+                                                        pagination: false,
+                                                        slideSpeed: 500,
+                                                        itemsCustom: [
+                                                            [320, 2],
+                                                            [480, 2],
+                                                            [640, 2],
+                                                            [768, 2],
+                                                            [1170, 2]
+                                                        ]
+                                                    });
+                                                });
+                                            </script>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gap"></div>
+                </div>
+                <div id="zo2-position-17" class="col-md-4 col-sm-4">
+                    <div class="module ">
+                        <div class="mod-wrapper clearfix">
+                            <h3 class="moduletitle">
+                <span>ГЛАВНЫЙ ВРАЧ</span>
+              </h3>
+
+                            <div class="mod-content clearfix">
+                                <div class="mod-inner clearfix">
+
+                                    <div class="custom">
+                                        <div class="meet-doctor">
+                                            <img src="/assets/images/osyatinskaya400.jpg" alt="" />
+                                            <div class="name">Осятинская Алла Владимировна</div>
+                                            <div class="position"></div>
+                                            <p class="dessciption">
+                                                Добро пожаловать в сеть клиник Полидент.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gap"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="zo2-latest-products-wrap" class="">
+        <div class="container">
+            <div class="row">
+                <div id="zo2-position-18" class="col-md-12 col-sm-12">
+                    <div class="module ">
+                        <div class="mod-wrapper clearfix">
+                            <h3 class="moduletitle">
+                <span>НАШИ ВРАЧИ</span>
+              </h3>
+
+                            <div class="mod-content clearfix">
+                                <div class="mod-inner clearfix">
+                                    <div id="products_require">
+                                        <div class="vmgroup grid box-isotop cs-style-3">
+
+                                            <!-- 1 -->
+
+                                            <div id="vmproduct" class="vmproduct productdetails ">
+                                                <div class=" mt-staff-class col-lg-4 col-md-4 col-sm-6   sorting box-isotop-in " data-category="portfolio">
+                          <figure>
+                            <div class="blok4" >
+                            <a href="http://poli-dent.ru/doctors/tamakan,-nina-romanovna/">
+                              <img  src="assets/images/21.jpg" class="attachment-400x500x1 wp-post-image" alt="Томакян Нина Романовна"></a>
+                             </div> 
+                            <figcaption>
+                              <h3>Томакян Нина Романовна</h3>
+                              <p>Стоматолог-терапевт категории профи</p>
+                              <a class="mt-cpt-link" href="http://poli-dent.ru/doctors/tamakan,-nina-romanovna/">ОТКРЫТЬ ПРОФИЛЬ</a>
+
+                            </figcaption>
+                          </figure>
+                        </div>
+<div class=" mt-staff-class col-lg-4 col-md-4 col-sm-6   sorting box-isotop-in " data-category="portfolio">
+                          <figure>
+                            <div class="blok4" >
+                            <a href="http://poli-dent.ru/doctors/nechaev/">
+                              <img  src="assets/images/nechaev.5f05cc5de32e73fcb33cbf5beafed55b14.jpg" class="attachment-400x500x1 wp-post-image" alt="Нечаев Леонид Викторович"></a>
+                             </div> 
+                            <figcaption>
+                              <h3>Нечаев Леонид Викторович</h3>
+                              <p>врач-имплантолог высшей категории</p>
+                              <a class="mt-cpt-link" href="http://poli-dent.ru/doctors/nechaev/">ОТКРЫТЬ ПРОФИЛЬ</a>
+
+                            </figcaption>
+                          </figure>
+                        </div>
+<div class=" mt-staff-class col-lg-4 col-md-4 col-sm-6   sorting box-isotop-in " data-category="portfolio">
+                          <figure>
+                            <div class="blok4" >
+                            <a href="http://poli-dent.ru/doctors/kashfraziev/">
+                              <img  src="assets/images/kashfraziev.5f05cc5de32e73fcb33cbf5beafed55b12.jpg" class="attachment-400x500x1 wp-post-image" alt="Кашфразиев Наиль Камильевич"></a>
+                             </div> 
+                            <figcaption>
+                              <h3>Кашфразиев Наиль Камильевич</h3>
+                              <p>Терапевт, хирург-пародонтолог высшей категории</p>
+                              <a class="mt-cpt-link" href="http://poli-dent.ru/doctors/kashfraziev/">ОТКРЫТЬ ПРОФИЛЬ</a>
+
+                            </figcaption>
+                          </figure>
+                        </div>
+<div class=" mt-staff-class col-lg-4 col-md-4 col-sm-6   sorting box-isotop-in " data-category="portfolio">
+                          <figure>
+                            <div class="blok4" >
+                            <a href="http://poli-dent.ru/doctors/savelieva/">
+                              <img  src="assets/images/savelieva.5f05cc5de32e73fcb33cbf5beafed55b11.jpg" class="attachment-400x500x1 wp-post-image" alt="Круглова Татьяна Васильевна"></a>
+                             </div> 
+                            <figcaption>
+                              <h3>Круглова Татьяна Васильевна</h3>
+                              <p>терапевт, хирург высшей категории</p>
+                              <a class="mt-cpt-link" href="http://poli-dent.ru/doctors/savelieva/">ОТКРЫТЬ ПРОФИЛЬ</a>
+
+                            </figcaption>
+                          </figure>
+                        </div>
+<div class=" mt-staff-class col-lg-4 col-md-4 col-sm-6   sorting box-isotop-in " data-category="portfolio">
+                          <figure>
+                            <div class="blok4" >
+                            <a href="http://poli-dent.ru/doctors/fyks/">
+                              <img  src="assets/images/fyks.5f05cc5de32e73fcb33cbf5beafed55b10.jpg" class="attachment-400x500x1 wp-post-image" alt="Фукс Ирина Давидовна"></a>
+                             </div> 
+                            <figcaption>
+                              <h3>Фукс Ирина Давидовна</h3>
+                              <p>терапевт, ортопед высшей категории</p>
+                              <a class="mt-cpt-link" href="http://poli-dent.ru/doctors/fyks/">ОТКРЫТЬ ПРОФИЛЬ</a>
+
+                            </figcaption>
+                          </figure>
+                        </div>
+<div class=" mt-staff-class col-lg-4 col-md-4 col-sm-6   sorting box-isotop-in " data-category="portfolio">
+                          <figure>
+                            <div class="blok4" >
+                            <a href="http://poli-dent.ru/doctors/osytinskaya/">
+                              <img  src="assets/images/osyatinskaya.5f05cc5de32e73fcb33cbf5beafed55b9.jpg" class="attachment-400x500x1 wp-post-image" alt="Осятинская Алла Владимировна"></a>
+                             </div> 
+                            <figcaption>
+                              <h3>Осятинская Алла Владимировна</h3>
+                              <p>Генеральный директор, стоматолог-ортопед высшей категории</p>
+                              <a class="mt-cpt-link" href="http://poli-dent.ru/doctors/osytinskaya/">ОТКРЫТЬ ПРОФИЛЬ</a>
+
+                            </figcaption>
+                          </figure>
+                        </div>
+
+                                            </div>
+                                            <div style='clear:both;'></div>
+                                            <br style='clear:both;' />
+                                        </div>
+
+                                        <!--ajax-->
+                                    </div>
+                                    <input type="hidden" class="base_url" value="" />
+                                    <input type="hidden" class="num_plus" value="4" />
+                                    <div class="more-product">
+                                        <a class="more_product readmore" style="cursor:pointer" href="/doctors/">Все врачи</a>
+                                    </div>
+                                    <!--ajax-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gap"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="zo2-content-top-wrap" class="">
+        <div class="container">
+            <div class="row">
+                <div id="zo2-position-15" class="content-home col-md-12 col-sm-12">
+
+                    <div class="custom">
+                        <div class="appointment">
+
+                            <p class="appoiment-1">
+                                Вы хотите
+                                <b>записаться на прием</b> ? Это очень легко!
+                            </p>
+
+                            <div class="appoiment-2 zt_top_cart" data-toggle="modal" data-target="#modal-fade" style="padding: 54px 0 0 0; ">
+                                <a data-reveal-id="popup_order" style="cursor:pointer;">
+                                    <i class="fa fa-calendar-o"></i> Онлайн запись на прием
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="zo2-reviews-wrap" class="reviews-wrap">
+        <h2><span>Мнения наших пациентов о клинике</span></h2>
+        <!--
+     <p class="zt-news-readmore">
+                            <a class="readmore" style="color:#fff;" href="#">Добавить комментарий</a>
+                          </p>-->
+
+        <ul class="slider-c">
+             <li class=""><span>&#8230;<br><a href="http://poli-dent.ru/responses/photo/markova/">подробнее</a></span>
+            <span class="people-a k"><span>Наталья, 45 лет</span></span></li>
+ <li class=""><span>Являяссь постоянным клиентом стоматологической клиники Полидент вот уже более 10 лет, хочу выразить благодарность Осятинской А.В.&#8230;<br><a href="http://poli-dent.ru/responses/photo/zabolotnaya/">подробнее</a></span>
+            <span class="people-a a"><span>Галина, 60</span></span></li>
+ <li class=""><span>&#8230;<br><a href="http://poli-dent.ru/responses/photo/sokolova-i/">подробнее</a></span>
+            <span class="people-a w"><span>Ирина , 36</span></span></li>
+ <li class=""><span>С бюгельным протезом вернулась к жизни заново&#8230;<br><a href="http://poli-dent.ru/responses/text/irina-bolotova/">подробнее</a></span>
+            <span class="people-a h"><span>Ирина , 62 года</span></span></li>
+ <li class=""><span>Осталась без зубов на верхней челюсти, это было ужасно, последние три года носила неудобный&#8230;<br><a href="http://poli-dent.ru/responses/text/elena-zinovieva/">подробнее</a></span>
+            <span class="people-a j"><span>Елена , 46 лет</span></span></li>
+ <li class=""><span>У меня давно уже потеряны зубы внизу, нижняя челюсть беззубая полностью&#8230;<br><a href="http://poli-dent.ru/responses/text/nina-semenova/">подробнее</a></span>
+            <span class="people-a l"><span>Нина, 56 лет</span></span></li>
+ <li class=""><span>Я по жизни жутко боюсь стоматологов и уколов, но&#8230;<br><a href="http://poli-dent.ru/responses/text/kirill-zotov/">подробнее</a></span>
+            <span class="people-a i"><span>Кирилл, 27 лет, </span></span></li>
+ <li class=""><span>Я сама долго искала врачей по отзывам и наконец нашла&#8230;<br><a href="http://poli-dent.ru/responses/text/gritsenko,-tamara/">подробнее</a></span>
+            <span class="people-a b"><span>Тамара , 43 года</span></span></li>
+ <li class=""><span>Долго искали в интернете клинику с хорошими отзывами и доступными ценами&#8230;<br><a href="http://poli-dent.ru/responses/text/bortsova-tatiana/">подробнее</a></span>
+            <span class="people-a k"><span>Татьяна, 32 года</span></span></li>
+ <li class=""><span>С возрастом стали разрушаться зубы, да как-то катастрофически&#8230;<br><a href="http://poli-dent.ru/responses/text/zaitsev-margarita/">подробнее</a></span>
+            <span class="people-a h"><span>Маргарита , 51 год</span></span></li>
+ <li class=""><span>Павлий Юлия Витальевна произвела на меня положительное впечатление.&#8230;<br><a href="http://poli-dent.ru/responses/text/ekaterina-parkhomenko/">подробнее</a></span>
+            <span class="people-a w"><span>Екатерина , 29 лет</span></span></li>
+ <li class=""><span>Я люблю профессионализм и точность в работе любого специалиста&#8230;<br><a href="http://poli-dent.ru/responses/text/devotchenko-igor/">подробнее</a></span>
+            <span class="people-a m"><span>Игорь , 35 лет</span></span></li>
+ <li class="active"><span>Моя история очень грустная. Я практически осталась без зубов и это в 51 год.&#8230;<br><a href="http://poli-dent.ru/responses/text/salomatov-irina/">подробнее</a></span>
+            <span class="people-a b"><span>Ирина , 51 год</span></span></li>
+ <li class=""><span>Большое спасибо главному врачу клиники "Полидент" Осятинской Алле Владимировне!&#8230;<br><a href="http://poli-dent.ru/responses/text/grey-anastasia/">подробнее</a></span>
+            <span class="people-a l"><span>Анастасия, 33 года</span></span></li>
+ <li class=""><span>После рождения двоих детей начались проблемы с зубами&#8230;<br><a href="http://poli-dent.ru/responses/text/kocharian-ninel/">подробнее</a></span>
+            <span class="people-a w"><span>Нинель, 28 лет, </span></span></li>
+ <li class=""><span>Мне 25 лет и я уже неловко себя чувствовала бы с металлическими&#8230;<br><a href="http://poli-dent.ru/responses/text/rykov-christina/">подробнее</a></span>
+            <span class="people-a k"><span>Кристина, 25 лет</span></span></li>
+ <li class=""><span>Я счастлив! Сегодня я осуществил свою мечту&#8230;<br><a href="http://poli-dent.ru/responses/text/artem-tokarev/">подробнее</a></span>
+            <span class="people-a o"><span>Артем, 21 год</span></span></li>
+ <li class=""><span>Долгое время носила съемный протез, но пришло время его менять&#8230;<br><a href="http://poli-dent.ru/responses/text/kicman/">подробнее</a></span>
+            <span class="people-a a"><span>Оксана , 59 лет</span></span></li>
+ <li class=""><span>Хочу поделиться с Вами своей историей. Долгие годы я носила 2 бюгельных протеза&#8230;<br><a href="http://poli-dent.ru/responses/text/irina-kokoreva/">подробнее</a></span>
+            <span class="people-a h"><span>Ирина, 62 года</span></span></li>
+ <li class=""><span>Сразу после удаления двух зубов мне в стоматологии "Полидент" установили временный протез. &#8230;<br><a href="http://poli-dent.ru/responses/text/forshenina/">подробнее</a></span>
+            <span class="people-a k"><span>Лариса, 37 лет</span></span></li>
+ <li class=""><span>У меня разрушилось сразу несколько зубов на верхней челюсти на нервной почве&#8230;<br><a href="http://poli-dent.ru/responses/text/borodakova-olga/">подробнее</a></span>
+            <span class="people-a a"><span>Ольга, 45 лет</span></span></li>
+ <li class=""><span>Утратила 4-й зуб верхний слева, было очень неприятно. Рассматривала разные варианты протезирования, как можно было бы вставить зуб.&#8230;<br><a href="http://poli-dent.ru/responses/text/klimanova-anna/">подробнее</a></span>
+            <span class="people-a j"><span>Анна, 48 лет</span></span></li>
+
+        </ul>
+        <div class="slider-c-border"></div>
+    </section>
+    <section id="zo2-from-the-blogs-wrap" class="">
+        <div class="container">
+            <div class="row">
+                <div id="zo2-position-11" class="col-md-12 col-sm-12">
+                    <div class="module ">
+                        <div class="mod-wrapper clearfix">
+                            <h3 class="moduletitle">
+                <span>АКЦИИ</span>
+              </h3>
+
+                            <div class="mod-content clearfix">
+                                <div class="mod-inner clearfix">
+                                    <div style="display: none;">
+                                        <a href="" title="Joomla Templates">Формула идеальной улыбки</a>
+
+                                    </div>
+                                    <div class="zt_news_wrap">
+                                        <div class="zt-newsiv-frame-cat">
+
+                                            <div id="zt-news-scroll-220" class="zt-category">
+                                                <div class="item zt-article-item">
+                            <div class="image">
+                            <a href="http://poli-dent.ru/stock/healthy-teeth/" title="Вы можете позволить себе здоровые зубы!" class="img">
+                       <img alt="Вы можете позволить себе здоровые зубы!"  title="Вы можете позволить себе здоровые зубы!" class="lazyOwl" data-src="assets/images/zdorovie_zuby.jpg"/>
+                            </a>
+                            <div class="icon">
+                              <i class="fa fa-picture-o"></i>
+                            </div>
+                          </div>
+
+                          <div class="content-text">
+                            <h4>
+                              <a href="http://poli-dent.ru/stock/healthy-teeth/" title="Вы можете позволить себе здоровые зубы!">Вы можете позволить себе здоровые зубы!</a>
+                            </h4>
+                            <span class="created">19.09.2016</span>
+                            <p class="zt-introtext">
+                          
+                            </p>
+                          </div>
+                          <p class="zt-news-readmore">
+                            <a class="readmore" href="http://poli-dent.ru/stock/healthy-teeth/">Читать далее</a>
+                          </p>
+                        </div>
+<div class="item zt-article-item">
+                            <div class="image">
+                            <a href="http://poli-dent.ru/stock/basically-complete-removable-denture-for-21-990-rubles/" title="Полный съемный безакриловый протез за 21 990 руб." class="img">
+                       <img alt="Полный съемный безакриловый протез за 21 990 руб."  title="Полный съемный безакриловый протез за 21 990 руб." class="lazyOwl" data-src="assets/images/semnyi_protez.jpg"/>
+                            </a>
+                            <div class="icon">
+                              <i class="fa fa-picture-o"></i>
+                            </div>
+                          </div>
+
+                          <div class="content-text">
+                            <h4>
+                              <a href="http://poli-dent.ru/stock/basically-complete-removable-denture-for-21-990-rubles/" title="Полный съемный безакриловый протез за 21 990 руб.">Полный съемный безакриловый протез за 21 990 руб.</a>
+                            </h4>
+                            <span class="created">10.08.2016</span>
+                            <p class="zt-introtext">
+                          Полный съемный безакриловый протез в стоматологиии Полидент всего за 21 990 руб. Воспользуйтесь скидкой 50%!
+                            </p>
+                          </div>
+                          <p class="zt-news-readmore">
+                            <a class="readmore" href="http://poli-dent.ru/stock/basically-complete-removable-denture-for-21-990-rubles/">Читать далее</a>
+                          </p>
+                        </div>
+<div class="item zt-article-item">
+                            <div class="image">
+                            <a href="http://poli-dent.ru/stock/bugel-prosthesis-with-a-discount-of-58!/" title="Бюгельные протезы со скидкой 58%!" class="img">
+                       <img alt="Бюгельные протезы со скидкой 58%!"  title="Бюгельные протезы со скидкой 58%!" class="lazyOwl" data-src="assets/images/bugelnye_protezy.jpg"/>
+                            </a>
+                            <div class="icon">
+                              <i class="fa fa-picture-o"></i>
+                            </div>
+                          </div>
+
+                          <div class="content-text">
+                            <h4>
+                              <a href="http://poli-dent.ru/stock/bugel-prosthesis-with-a-discount-of-58!/" title="Бюгельные протезы со скидкой 58%!">Бюгельные протезы со скидкой 58%!</a>
+                            </h4>
+                            <span class="created">09.08.2016</span>
+                            <p class="zt-introtext">
+                          Успейте поставить всего за 27 990 руб.
+                            </p>
+                          </div>
+                          <p class="zt-news-readmore">
+                            <a class="readmore" href="http://poli-dent.ru/stock/bugel-prosthesis-with-a-discount-of-58!/">Читать далее</a>
+                          </p>
+                        </div>
+
+                                            </div>
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function($) {
+                                                    $("#zt-news-scroll-220").owlCarousel({
+                                                        lazyLoad: true,
+                                                        navigation: true,
+                                                        pagination: false,
+                                                        slideSpeed: 500,
+                                                        itemsCustom: [
+                                                            [320, 1],
+                                                            [480, 2],
+                                                            [640, 2],
+                                                            [768, 3],
+                                                            [1170, 3]
+                                                        ]
+                                                    });
+                                                });
+                                            </script>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gap"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--<section id="zo2-from-the-blogs-wrap" class=""><div class="container"><p>22</p></div></section>-->
+    <section id="zo2-bottom-1-wrap" class="">
+    <div class="container">
+      <div class="row">
+        <div id="zo2-position-21" class="col-md-12 col-sm-12">
+          <div class="module ">
+            <div class="mod-wrapper clearfix">
+              <div class="mod-content clearfix">
+                <div class="mod-inner clearfix">
+
+                  <div class="custom"  >
+                    <div class=" row">
+                      <div class="bottom-text">
+                        <div class="col-sm-4 col-md-4">
+                          <div class="icon">
+                            <img src="/assets/templates/polident/images/article/bottom3.png" alt="" />
+                          </div>
+                          <div class="content-text">
+                            <p class="text">Запишитесь на приём</p>
+                            <p class="adress">+7 495 640-89-45</br>+7 499 182 44 15</p>
+                          </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4">
+                          <div class="icon">
+                            <a href="mailto:info@poli-dent.ru" onclick="ga('send', 'event', 'napishite_nam', 'click');yaCounter38269540.reachGoal('napishite_nam');"><img src="/assets/templates/polident/images/article/bottom2.png" alt="" /></a>
+                          </div>
+                          <div class="content-text">
+                            <p class="text"><a href="mailto:info@poli-dent.ru" onclick="ga('send', 'event', 'napishite_nam', 'click');yaCounter38269540.reachGoal('napishite_nam');">Напишите нам</a></p>
+                            <p class="adress"><a href="mailto:info@poli-dent.ru" onclick="ga('send', 'event', 'napishite_nam', 'click');yaCounter38269540.reachGoal('napishite_nam');">info-gri@poli-dent.ru</a></p>
+                          </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4">
+                          <div class="icon">
+                            <a href="/contacts/"><img src="/assets/templates/polident/images/article/bottom1.png" alt="" /></a>
+                          </div>
+                          <div class="content-text">
+                            <p class="text"><a href="/contacts/" style="color: #3ca2ba;">Наши контакты</a></p>
+                            <p class="adress"><a href="/contacts/">Найдите свою клинику в Москве</a></p>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gap"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="zo2-bottom-2-wrap" class="">
+    <div class="container">
+      <div class="row">
+        <div id="zo2-position-22" class="col-md-3 col-sm-6">
+          <div class="module ">
+            <div class="mod-wrapper-flat clearfix">
+
+              <div class="custom"  >
+                <div class="modulecontent">
+                  <img src="/assets/templates/polident/images/polident-logo-futer.png" alt="" />
+                  <p>
+                    Сеть стоматологических клиник ПОЛИДЕНТ основана в 1991 году.<br/>Вот уже 25 лет мы заботимся о Вашем здоровье.
+                  </p>
+                  <!--
+                  <div class="icon-style-1 icon-size clearafter">
+
+                    <style rel="stylesheet" type="text/css">
+    .zt-social-networks > a{
+        border-radius: px;
+    }
+</style>
+
+                    <div class="clearfix zt-social-networks boxed-icons">
+
+
+
+                      <a title=""
+   style="color:#000;background-color:#fff;"
+   onmouseover="this.style.backgroundColor='#4d70a0'; this.style.color='#fff'; this.style.borderColor=''"
+   onmouseout="this.style.backgroundColor='#fff';this.style.color='#000'; this.style.borderColor=''"
+   href="https://www.facebook.com/polidentclinics/" target="_blank" class="zt-social-icon-item zt-icon-" onclick="ga('send', 'event', 'social', 'FB');yaCounter38269540.reachGoal('social');">
+                        <i class="fa fa-facebook"></i>
+                      </a>
+
+
+                      </a>
+                    </div>
+                  </div>-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gap"></div>
+        </div>
+        <div id="zo2-position-23" class="col-md-3 col-sm-6">
+          <div class="module ">
+            <div class="mod-wrapper clearfix">
+              <h3 class="moduletitle">
+                <span>Быстрые ссылки</span>
+              </h3>
+
+              <div class="mod-content clearfix">
+                <div class="mod-inner clearfix">
+
+                  <div class="custom"  >
+                    <div class="use-link">
+                      <ul>
+                        <li>
+                          <a href="/">Главная</a>
+                        </li>
+                        <li>
+                          <a href="/about-us/">О клинике</a>
+                        </li>
+                        <li>
+                          <a href="/services/">Услуги</a>
+                        </li>
+                        <!--li>
+                          <a href="/about-us/why-we.html">Почему мы?</a>
+                        </li-->
+                        <li>
+                          <a href="/doctors/">Наши специалисты</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gap"></div>
+        </div>
+        <div id="zo2-position-24" class="col-md-3 col-sm-6">
+          <div class="module ">
+            <div class="mod-wrapper clearfix">
+              <h3 class="moduletitle">
+                <span>Инфо</span>
+              </h3>
+
+              <div class="mod-content clearfix">
+                <div class="mod-inner clearfix">
+
+                  <div class="custom"  >
+                    <div class="use-link">
+                      <ul>
+                                          <li>
+                          <a href="/stock/">Акции</a>
+                        </li>
+                        <li>
+                          <a href="/wiki/">Энциклопедия</a>
+                        </li>
+                        <li>
+                          <a href="/faq/">Вопрос-ответ</a>
+                        </li>
+                        <li>
+                          <a href="/contacts/">Контакты</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gap"></div>
+        </div>
+        <div id="zo2-position-25" class="col-md-3 col-sm-3">
+          <div class="module ">
+            <div class="mod-wrapper clearfix">
+              <h3 class="moduletitle">
+                <span>МЫ РАБОТАЕМ</span>
+              </h3>
+
+              <div class="mod-content clearfix">
+                <div class="mod-inner clearfix">
+
+                  <div class="custom"  >
+                    <div class="modulecontent ">
+                      <div class="content-top">
+                        Ждем Вас в наших клиниках
+                      </div>
+                      <p>
+                        <span class="left">Ежедневно</span>
+                        <span class="right">10.00 - 20.00</span>
+                      </p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gap"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="zo2-footer-wrap" class="">
+    <div class="container">
+      <div class="row">
+        <div id="zo2-footer-copyright" class="col-md-12 col-sm-12">
+          <footer>
+            <section class="zo2-copyright">
+              ЗАО "ФИРМА ПОЛИДЕНТ", ООО "ДЕТСКАЯ СТОМАТОЛОГИЯ №1" © 1998 - 2016
+             <!--
+              <a title="joomla templates" href="http://www.zootemplate.com/">Зщдш-вутеюкг</a>
+              by
+              <a title="joomla templates" href="http://www.zootemplate.com/">ZooTemplate.Com</a>
+              -->
+            </section>
+           <div class="footer_logo">
+</div>
+ <script type="text/javascript">
+jQuery(".popup-window").popupWindow({closeSelector: ".popup-window-close"});
+</script>
+            <a href="#" id="gototop" title="Go to top">
+              <i class="fa fa-chevron-up"></i>
+            </a>
+            <script>
+            jQuery("#gototop").click(function () {
+                jQuery("body, html").animate({scrollTop: 0});
+                return false;
+            });
+        </script>
+        <section style="align: right; margin-left: 500px;" class="zo2-copyright">
+            Разработка сайта - Студия WebHubPub
+        </section>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<script type="text/javascript">
+            jQuery(document).ready(function() {
+    jQuery(".zo2-sticky").sticky({topSpacing:0});
+    });
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </script>
+<link rel="stylesheet" type="text/css" href="/assets/templates/polident/css/box-content.css">
+<link rel="stylesheet" type="text/css" href="/assets/templates/polident/css/social.css">
+<script type="text/javascript" src="/assets/templates/polident/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/templates/polident/js/ekko-lightbox.js"></script>
+<script type="text/javascript" src="/assets/templates/polident/js/jquery.sticky.js"></script>
+<script type="text/javascript" src="/assets/templates/polident/js/zo2.js"></script>
+<script type="text/javascript" src="/assets/templates/polident/js/site.megamenu.js"></script>
+<script type="text/javascript" src="/assets/templates/polident/js/site.scripts.js"></script>
+<script type="text/javascript" src="/assets/templates/polident/js/custom.js"></script>
+<script type="text/javascript" src="/assets/templates/polident/js/jcarousellite_1.0.1.min.js"></script>
+<script type="text/javascript" src="/assets/templates/polident/js/jquery.masonry.js"></script>
+<script type="text/javascript" src="/assets/templates/polident/js/owl.jquery.js"></script>
+<script type="text/javascript" src="/assets/templates/polident/js/lightbox.js"></script>
+<script type="text/javascript" src="/assets/templates/polident/js/bootstrapValidator.min.js"></script>
+<script type="text/javascript" src="/assets/templates/polident/js/zt_cena.scripts.js"></script>
+<script type="text/javascript" src="/assets/templates/polident/js/calltouch.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="/assets/templates/polident/js/jquery.isotope.min.js"></script>
+
+
+    <script src="/assets/templates/polident/js/wow.min.js"></script>
+<script src="/assets/templates/polident/js/enquire.min.js"></script>
+<script src="/assets/templates/polident/js/bxslider/jquery.bxslider.min.js"></script>
+
+
+ <!-- Modal -->
+    <div class="zt-modal modal fade" id="modal-fade" tabindex="-1" role="dialog" aria-labelledby="modal-fadeLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal__wrapper">
+                <div class="modal-header modal__header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title" style="text-align:center;">Онлайн запись на прием</h2>
+                    <!-- <h4 class="modal-title" id="myModalLabel">My Modal</h4> -->
+                </div>
+
+                <div id="popup_order" class="reveal-modal wrap_order">
+                    <style type="text/css">
+                        .wrap_order label {
+                            display: block
+                        }
+                    </style>
+
+                    <!-- <h2 class="modal-title" style="text-align:center;">Онлайн запись на прием</h2> -->
+                    <script type="text/javascript">
+                        jQuery(document).on('af_complete', function (event, res) {
+                            if (res.success) jQuery('.close').click();
+                        });
+                    </script>
+                    <form class="ajax_form" action="" method="post">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label class="modal__label">Ваше имя:*</label>
+                                    <input type="text" value="" maxlength="100" class="form-control" name="name"
+                                           id="af_name" placeholder="">
+                                    <span class="error_name"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="modal__label">Телефон:*</label>
+                                    <input type="text" value="" maxlength="100" class="form-control" name="phone"
+                                           id="af_phone" placeholder="">
+                                    <span class="error_phone"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label class="modal__label">Email:</label>
+                                    <input type="text" value="" maxlength="100" class="form-control" name="email"
+                                           id="af_email" placeholder="">
+ <span class="error_email"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="modal__label">Клиника у метро:</label>
+                                    <select name="clinic" id="af_clinic" class="form-control">
+                                        <option value="1" selected>Славянский бульвар</option>
+                                        <option value="2">ВДНХ</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <div id="recaptcha2"></div>
+                        
+                        <span class="error_g-recaptcha-response error"></span>
+
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-md-12">
+
+                                <input type="submit" value="Записаться" onclick="yaCounter33907479.reachGoal('ORDER'); return true;" class="btn btn-primary btn-lg mt-cpt-link"    data-loading-text="Грузим...">
+                            </div>
+                        </div>
+
+                        
+                    
+	<input type="hidden" name="af_action" value="59e3d9ed43b5d0f4a1cb4d9082672cab" />
+</form>
+                   
+                    <!-- <a class="close close-reveal-modal" title="Закрыть">X</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+   <!-- Modal2 -->
+    <div class="zt-modal modal fade" id="modal-fade2" tabindex="-1" role="dialog" aria-labelledby="modal-fadeLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal__wrapper">
+                <div class="modal-header modal__header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title" style="text-align:center;">Оставьте свой телефон и мы перезвоним Вам в течении 5 минут</h2>
+                    <!-- <h4 class="modal-title" id="myModalLabel">My Modal</h4> -->
+                </div>
+
+                <div id="popup_order" class="reveal-modal wrap_order">
+                    <style type="text/css">
+                        .wrap_order label {
+                            display: block
+                        }
+                    </style>
+
+                    <!-- <h2 class="modal-title" style="text-align:center;">Онлайн запись на прием</h2> -->
+                    <script type="text/javascript">
+                        jQuery(document).on('af_complete', function (event, res) {
+                            if (res.success) jQuery('.close-reveal-modal').click();
+                        });
+                    </script>
+                        <script>
+                            jQuery(function ($){
+                                $("a[rel=gallery]").fancybox();
+
+                            });
+                        </script>
+                        <script type="text/javascript">
+                            jQuery(function(){
+                                jQuery(".certificate .gallery").jCarouselLite({
+		                            btnNext: ".certificate .next",
+		                            btnPrev: ".certificate .prev",
+		                            auto: 4000,
+		                            speed: 1000
+	                            });
+                            });
+</script>
+<script>
+                            jQuery(function ($){
+                                $("a[rel=gallery_about]").fancybox();
+
+                            });
+                        </script>
+                        <script type="text/javascript">
+                            jQuery(function(){
+                                jQuery(".certificate_about .gallery_about").jCarouselLite({
+		                            btnNext: ".certificate_about .next",
+		                            btnPrev: ".certificate_about .prev",
+		                            visible: 5,
+		                            auto: 4000,
+		                            speed: 1000
+	                            });
+                            });
+</script>
+                        <form class="ajax_form" action="" method="post">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label class="modal__label">Ваше имя:*</label>
+                                    <input type="text" value="" maxlength="100" class="form-control" name="name"
+                                           id="af_name" placeholder="">
+                                    <span class="error_name"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="modal__label">Телефон:*</label>
+                                    <input type="text" value="" maxlength="100" class="form-control" name="phone"
+                                           id="af_phone" placeholder="">
+                                    <span class="error_phone"></span>
+                                </div>
+                            
+                            </div>
+                               
+                        </div>
+
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-md-12">
+
+                        <div id="recaptcha1"></div>
+                        
+                        <span class="error_g-recaptcha-response error"></span>
+                        
+                                <input type="submit" value="Отправить" class="btn btn-primary btn-lg mt-cpt-link"    data-loading-text="Грузим...">
+                            </div>
+                        </div>
+
+                        
+
+	<input type="hidden" name="af_action" value="3b8ecbe3e9f385139ed05ac0810217bc" />
+</form>
+                   
+
+                    <!-- <a class="close close-reveal-modal" title="Закрыть">X</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-inline-content">
+    <div id="reviews-form">
+        <div class="reviews-form">
+        <div class="reviews-form__title">Оставить отзыв</div>
+        <div class="reviews-form__title2">Ваш отзыв - это наша возможность стать лучше</div>
+        
+        <form class="ajax_form" id="comment-form" action="" method="post">
+            <div class="reviews-form-item">
+                <input type="text" class="reviews-form-item__input" name="name">
+                <div class="reviews-form-item__label">Ваше имя</div>
+            </div>
+            <div class="reviews-form-item">
+                <input type="text" class="reviews-form-item__input" name="phone">
+                <div class="reviews-form-item__label">Телефон</div>
+            </div>
+            <div class="reviews-form-item">
+                <input type="text" class="reviews-form-item__input" name="email">
+                <div class="reviews-form-item__label">Email</div>
+            </div>
+            <div class="reviews-form-item">
+                <select name="clinic" class="reviews-form-item__select">
+                    <option value="0">Не выбрано...</option>
+                    <option value="1">Клиника у м. «ВДНХ»</option>
+                    <option value="2">Клиника у м. «Славянский бульвар»</option>
+                </select>
+                <div class="reviews-form-item__label">Клиника</div>
+            </div>
+
+
+            <div class="reviews-form-item">
+                <textarea class="reviews-form-item__textarea" name="comment" rows="5" id="comment-editor"></textarea>
+                <div class="reviews-form-item__label">Сообщение</div>
+                <input type="text" name="workemail" value="" class="field"/>
+            </div>
+            
+            <div class="reviews-form-submit-item">
+                <button type="submit" class="itech-btn" value="sendComment">Отправить</button>
+            </div>
+
+        
+	<input type="hidden" name="af_action" value="1c983367be14f762a984ba95791ec7e0" />
+</form>
+        </div>
+    </div>
+    <script type="text/javascript">
+                        jQuery(document).on('af_complete', function (event, res) {
+                            if (res.success) jQuery('#fancybox-close').click();
+                        });
+                    </script>
+</div>
+<script type="text/javascript" src="/assets/templates/polident/js/ajaxForm/default.js"></script>
+<script type="text/javascript">AjaxForm.initialize({"assetsUrl":"\/assets\/components\/ajaxform\/","actionUrl":"\/assets\/components\/ajaxform\/action.php","closeMessage":"\u0437\u0430\u043a\u0440\u044b\u0442\u044c \u0432\u0441\u0435","formSelector":"form.ajax_form","pageId":1});</script>
+</body>
+</html>

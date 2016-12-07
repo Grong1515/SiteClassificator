@@ -1,0 +1,497 @@
+﻿<html lang="en">
+<head>
+
+<meta charset="utf-8">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="format-detection" content="telephone=no" />
+
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/lazy-load.css" rel="stylesheet">
+<link href="/css/parallax.css" rel="stylesheet">
+<link href="/css/cherry-media-parallax-styles.css" rel="stylesheet">
+<link href="/css/themes/grey2/main.css" rel="stylesheet">
+<link href="/css/themes/grey2/index.css" rel="stylesheet">
+<link href="/css/themes/grey2/index-header.css" rel="stylesheet">
+<link href="/css/themes/grey2/resp.css" rel="stylesheet">
+<link href="/css/themes/grey2/menu-resp.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/device.min.js"></script>
+
+<script type="text/javascript" src="/js/smoothing-scroll.js"></script>
+<script type="text/javascript" src="/js/cherry-fixed-parallax.js"></script>
+<script type="text/javascript" src="/js/cherry-media-parallax.js"></script>
+<script type="text/javascript" src="/js/cherry.parallax.js"></script>
+<script type="text/javascript" src="/js/cherry.lazy-load.js"></script>
+<script type="text/javascript" src="/js/jquery.isotope.js"></script>
+<script type="text/javascript" src="/js/form.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/jquery.flexisel.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
+
+<title>Торговый Дом SALITA — Бутики мужской, женской, детской одежды, обуви, аксессуаров от ведущих мировых брендов</title>
+				<meta name="keywords" content="Магазины модной одежды, Модная обувь в Москве, Магазины обуви, Salita, Магазины Салита, Salita в Москве, Торговый дом Салита, обувь салита, Салита одежда и обувь" />
+				<meta name="description" content="Торговый дом SALITA — магазины модной одежды и обуви в Москве. Салоны SALITA предлагают большой выбор мужской, женской и детской одежды и обуви эксклюзивных мировых марок." />
+</head>
+<body>
+
+<div id="button-up-no-xs"><i class="fa fa-angle-double-up"></i></div>
+<div class="navbar-fixed-bottom button-up-xs" id="button-up-xs"><i class="fa fa-angle-double-up"></i>&nbsp;В НАЧАЛО</div>
+
+<div id="page-overlay">&nbsp;</div>
+
+<div id="subscribe-form">
+	<i class="fa fa-times"></i>
+	<div class="col-lg-12 col-md-12 col-sm-12">
+		<input type="text" id="fio" placeholder="* Ваше имя" class="rq" />
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12">
+		<input type="email" id="email" placeholder="* Ваш email" class="rq" />
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12">
+		<input type="phone" id="phone" placeholder="Ваш телефон" />
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12">
+		<div class="btn subs" id="sign-button">Подписаться</div>
+	</div>
+</div>
+
+<div id="wrap">
+	<div id="in-wrap">
+
+<div class="menu-holder">
+	<nav class="navbar navbar-fixed-top" role="navigation">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button id="men-button" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	      <a class="navbar-brand visible-xs" id="brand-link">МЕНЮ</a>
+	    </div>
+	
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	      	<li class="lf"><a href="/" class="lf">Главная</a></li>
+	        <li><a href="/shops/" class="lf">Магазины</a></li>
+	        <li><a href="/brands/">Бренды</a></li>
+	        <li><a href="/about/">О Компании</a></li>
+	        <li><a href="/service/">Услуги</a></li>
+	        <li><a href="/collections/">Коллекции</a></li>
+	        	        <li class="rg"><a href="/contacts/">Контакты</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#brand-link').click(function(){
+			$('#men-button').click();
+			
+			return false;
+		});
+	});
+</script>
+<script type="text/javascript">
+	var img0 = new Image();
+img0.src = "/images2/top-11.jpg";
+var img1 = new Image();
+img1.src = "/images2/top-31.jpg";
+var img2 = new Image();
+img2.src = "/images2/top-4.jpg";
+var img3 = new Image();
+img3.src = "/images2/top-5.jpg";
+var art = new Array('top-11.jpg','top-31.jpg','top-4.jpg','top-5.jpg');	var cur_p = 0;
+	
+	$(document).ready(function(){
+		$('#right-t').click(function(){
+			if(cur_p == (art.length-1))
+				cur_p = 0;
+			else
+				cur_p++;
+			
+			$('#top-header').css('background-image', 'url("/images2/'+art[cur_p]+'")');
+		});
+		
+		$('#left-t').click(function(){
+			if(cur_p == 0)
+				cur_p = (art.length-1);
+			else
+				cur_p--;
+			
+			$('#top-header').css('background-image', 'url("/images2/'+art[cur_p]+'")');
+		});
+	});
+</script>
+
+<div id="left-t" class="cntr"><i class="fa fa-angle-left"></i></div>
+<div id="right-t" class="cntr"><i class="fa fa-angle-right"></i></div>
+
+<div class="container-fluid" id="top-header">
+	<div class="container last-news">
+		<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 col-lg-offset-6 col-md-offset-6 col-sm-offset-6 clearfix">
+			<div class="top-plat-main lazy-load-box trigger effect-slidefromleft" data-delay="200" data-speed="400">
+				<div class="cont-bg">
+					<h1 class="index">Торговый Дом SALITA</h1>
+					<h2 class="index f-h2">бутики мужской, женской, детской одежды, обуви, аксессуаров от ведущих мировых брендов</h2>
+				</div>
+				<div class="visible-xs bg top-plat-main-bg"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="top-header-overlay">&nbsp;</div>
+
+<script type="text/javascript">
+function clickForHide()
+{
+	$('#page-overlay').click(function(){
+		$('#subscribe-form').hide();
+		$(this).hide();
+		
+		$('#sign-link').removeClass('open');
+	});
+}
+
+function hideAll()
+{
+	$('#page-overlay').hide();
+	$('#subscribe-form').hide();
+	$('#sign-link').removeClass('open');
+}
+
+$(document).ready(function(){
+	$('#subscribe-form i').click(function(){
+		$('#subscribe-form').hide();
+		$('#page-overlay').hide();
+		
+		$('#sign-link').removeClass('open');
+	});
+
+	$('#sign-button').click(function(){
+		var can = true;
+		
+		$('.rq').each(function(){
+			if($(this).val().trim()=='')
+				can = false;
+		});
+		
+		if(!can)
+			alert('Введите необходимые поля');
+		else{
+			$.ajax({
+				url:  'sign-user.php',
+				type: 'post',
+				data: 'email='+$('#email').val()+'&fio='+$('#fio').val()+'&phone='+$('#phone').val(),
+				success: function(data){
+					if(data=='1')
+					{
+						$('#subscribe-form').html("<p class='success'>Вы подписаны на рассылку новостей</p><p class='addit'>На указанную электронную почту отправлено письмо с кодом активации, не забудьте проверить папку спам, письмо может быть переадресовано туда по ошибке.</p><p class='addit2'><div class='col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-xs-offset-0 col-lg-2 col-md-2 col-sm-4 col-xs-4'><a href='http://vk.com/td_salita' target='_blank'><i class='fa fa-vk'></i></a></div><div class='col-lg-2 col-md-2 col-sm-4 col-xs-4'><a href='http://www.facebook.com/groups/tdsalita/' target='_blank'><i class='fa fa-facebook'></i></a></div><div class='col-lg-2 col-md-2 col-sm-4 col-xs-4'><a href='http://instagram.com/td_salita/' target='_blank'><i class='fa fa-instagram'></i></a></div></p>");
+						
+						setTimeout("hideAll()", 7000);
+					}else
+					{
+						$('#subscribe-form').html("<p class='err'>ОШИБКА</p><p class='addit'>Для этого адреса электронной почты уже активирована рассылка новостей.</p>");
+						
+						setTimeout("hideAll()", 7000);
+					}
+				}
+			});
+		}
+	})
+
+	$('#sign-link').click(function(){
+		if(!$(this).hasClass('open'))
+		{
+			$('#page-overlay').show();
+			$('#subscribe-form').show();
+			
+			$(this).addClass('open');
+			
+			clickForHide();
+		}else{
+			$('#page-overlay').hide();
+			$('#subscribe-form').hide();
+			
+			$(this).removeClass('open');
+		}
+	});
+	
+	$('.scroll').slick({
+  slidesToShow: 7,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1219,
+      settings: {
+        slidesToShow: 6,
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 5,
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+   ]
+	});
+	
+	fitNews();
+})
+
+function fitNews()
+{
+	var wd = parseInt(window.innerWidth);
+			
+	if(wd>=768)
+		{
+	
+			if(($('.top-plat-main-action-0').length>0) && ($('.top-plat-main-action-1').length>0))
+			{
+				var hg_0 = $('.top-plat-main-action-0').height();
+				var hg_1 = $('.top-plat-main-action-1').height();
+				var hg_m = 0
+				if(hg_0 > hg_1)
+					hg_m = hg_0;
+				else
+					hg_m = hg_1;
+				
+				$('.top-plat-main-action').css('height', hg_m);
+				$('.top-plat-main-action').find('.cont-bg').css('height', hg_m);
+			}
+			
+			if(($('.top-plat-main-action-3-0').length>0) && ($('.top-plat-main-action-3-1').length>0))
+			{
+				var hg_0 = $('.top-plat-main-action-3-0').height();
+				var hg_1 = $('.top-plat-main-action-3-1').height();
+				var hg_2 = $('.top-plat-main-action-3-2').height();
+				
+				var hg_m = hg_0;
+				
+				if(hg_1 > hg_m)
+					hg_m = hg_1;
+					
+				if(hg_2 > hg_m)
+					hg_m = hg_2;
+				
+				$('.top-plat-main-action').css('height', hg_m);
+				$('.top-plat-main-action').find('.cont-bg').css('height', hg_m);
+			}
+		}
+}
+</script>
+
+<section class="main-news">
+	<div class="container">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					</div>
+	</div>
+</section>
+
+<section class="brands">
+	<div class="container">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center scroll"><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/hugo-boss/" title="HUGO BOSS"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/boss.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="HUGO BOSS" alt="HUGO BOSS" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/corneliani/" title="Corneliani"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/corneliani.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Corneliani" alt="Corneliani" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/a-testoni/" title="A.Testoni"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/testoni.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="A.Testoni" alt="A.Testoni" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/aldo-brue/" title="Aldo brue"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/aldo-brue.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Aldo brue" alt="Aldo brue" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/baldinini/" title="Baldinini"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/baldinini.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Baldinini" alt="Baldinini" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/casadei/" title="Casadei"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/casadei.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Casadei" alt="Casadei" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/cortigiani/" title="Cortigiani"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/cortigiani.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Cortigiani" alt="Cortigiani" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/herno/" title="Herno"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/herno.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Herno" alt="Herno" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/baldessarini/" title="Baldessarini"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/baldessarini.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Baldessarini" alt="Baldessarini" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/braccialini/" title="Braccialini"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/braccialini.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Braccialini" alt="Braccialini" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/ballin/" title="Ballin"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/ballin.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Ballin" alt="Ballin" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/7-for-all-mankind/" title="7 for all mankind"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/7-for-all-mankind.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="7 for all mankind" alt="7 for all mankind" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/jacob-cohen/" title="Jacob Cohen"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/jacob.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Jacob Cohen" alt="Jacob Cohen" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/bikkembergs/" title="Bikkembergs"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/bikkembergs.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Bikkembergs" alt="Bikkembergs" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/emporio-armani/" title="Emporio Armani"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/emporio-armani.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Emporio Armani" alt="Emporio Armani" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/class-roberto-cavalli/" title="Class Roberto Cavalli"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/cavalli.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Class Roberto Cavalli" alt="Class Roberto Cavalli" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/iceberg/" title="Iceberg"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/iceberg.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Iceberg" alt="Iceberg" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/woolrich/" title="Woolrich"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/woorich.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Woolrich" alt="Woolrich" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/valentino/" title="Valentino"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/valentino.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Valentino" alt="Valentino" /></div></a>
+			</div><div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-center">
+				<a href="/brands/joshua-sanders/" title="Joshua Sanders"><div class="round col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center"><img src="/images/logos/joshua-sanders.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" title="Joshua Sanders" alt="Joshua Sanders" /></div></a>
+			</div></div>	</div>
+</section>
+
+<section class="index-about w-parr">
+		<div class="parallax-box">
+			<div class="parallax-content clearfix">
+				<div class="parallax-holder clearfix lazy-load-box trigger effect-slideup" data-delay="200" data-speed="400">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 visible-lg visible-md visible-sm">
+						<img src="images/shops/len-18-main.jpg" class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-2 lazy-load-box trigger effect-slideup" data-delay="400" data-speed="400" />
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 parallax-text lazy-load-box trigger effect-slideup" data-delay="100" data-speed="400">
+						<h2>ТОРГОВЫЙ ДОМ SALITA</h2>
+						<ol>
+<li>Комфортные бутики мужской, женской и детской одежды и обуви и аксессуаров в Москве</li>
+<li>Более 100 ведущих мировых брендов одежды и обуви</li>
+<li>Новинки и постоянно пополняемый ассортимент</li>
+<li>Высококачественный сервис обслуживания покупателей</li>
+<li>Скидки и акции для клиентов Торгового Дома</li>					</ol>
+						<a class="btn frs" href="/about/">О компании</a>
+						<a class="btn" href="/shops/">Магазины</a>
+						<a class="btn" href="/service/">Услуги</a>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 visible-xs">
+						<img src="images/shops/len-18-main.jpg" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 lazy-load-box trigger effect-slideup" data-delay="400" data-speed="400" />
+					</div>
+				</div>
+			</div>
+			<div data-speed="0" class="parallax-bg" style="background-image:url('images2/1.jpg');"></div>		</div>
+</section>
+
+<section class="page-gallery zp">
+	<div class="container">
+		<h2 class="ad-top">Новые коллекции</h2>
+		<div class="holder col-lg-3 col-md-3 col-sm-3 col-xs-6 lazy-load-box trigger effect-slideup" data-delay="100" data-speed="400">
+			<div class="plat-vert mgf collection-index col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="img">
+					<img src="/images/collections/mk-s16.jpg" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" />
+				</div>
+				<div class="item col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="text"><div class="brand">Michael Kors</div>весна-лето 2016</div>
+				</div>
+			</div>
+		</div><div class="holder col-lg-3 col-md-3 col-sm-3 col-xs-6 lazy-load-box trigger effect-slideup" data-delay="100" data-speed="400">
+			<div class="plat-vert mgf collection-index col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="img">
+					<img src="/images/collections/cort-ss.jpg" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" />
+				</div>
+				<div class="item col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="text"><div class="brand">Cortigiani</div>весна-лето 2016</div>
+				</div>
+			</div>
+		</div><div class="holder col-lg-3 col-md-3 col-sm-3 col-xs-6 lazy-load-box trigger effect-slideup" data-delay="100" data-speed="400">
+			<div class="plat-vert mgf collection-index col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="img">
+					<img src="/images/collections/coc-s-15-2.jpg" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" />
+				</div>
+				<div class="item col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="text"><div class="brand">Michael kors</div>весна-лето 2016</div>
+				</div>
+			</div>
+		</div><div class="holder col-lg-3 col-md-3 col-sm-3 col-xs-6 lazy-load-box trigger effect-slideup" data-delay="100" data-speed="400">
+			<div class="plat-vert mgf collection-index col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="img">
+					<img src="/images/collections/bogner-m-w15.jpg" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" />
+				</div>
+				<div class="item col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="text"><div class="brand">BOGNER</div>зима 2015</div>
+				</div>
+			</div>
+		</div>	</div>
+</section>
+
+<section class="page-gallery zp index-shops">
+	<div class="container">
+		<h2>в магазинах</h2>
+		<a href="/shop/salita/leninsky-18">
+			<div class="holder col-lg-6 col-md-6 col-sm-12 col-xs-12 lazy-load-box trigger effect-slideup" data-delay="100" data-speed="400">
+			<div class="plat mgf no-brd col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 img">
+					<img src="/images/shops/len-18-main.jpg" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" />
+				</div>
+				<div class="item col-lg-8 col-md-8 col-sm-8 col-xs-7">
+					<div class="text"><span class="brand">salita</span><br />Ленинский проспект, д.18</div>
+				</div>
+			</div>
+		</div></a><a href="/shop/bogner/leninsky-25">
+			<div class="holder col-lg-6 col-md-6 col-sm-12 col-xs-12 lazy-load-box trigger effect-slideup" data-delay="100" data-speed="400">
+			<div class="plat mgf no-brd col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 img">
+					<img src="/images/shops/len-25-main.jpg" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" />
+				</div>
+				<div class="item col-lg-8 col-md-8 col-sm-8 col-xs-7">
+					<div class="text"><span class="brand">bogner</span><br />ЛЕНИНСКИЙ ПРОСПЕКТ, Д.25</div>
+				</div>
+			</div>
+		</div></a>	</div>
+</section>
+
+<section class="page-gallery contacts index-contacts">
+	<div class="container">
+		<div class="holder col-lg-6 col-md-6 visible-lg visible-md cont-plat-l lazy-load-box trigger effect-slideup" data-delay="200" data-speed="400">
+			<div class="plat col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<h3>Связь с нами</h3>
+				<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 phones-line">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Телефон: +7-499-236-36-37</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Электронная почта: info@salita.ru</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 contacts-buttons">
+					<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12"><a href="http://vk.com/td_salita" target="_blank"><i class="fa fa-vk"></i></a></div>
+					<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12"><a href="http://www.facebook.com/groups/tdsalita/" target="_blank"><i class="fa fa-facebook"></i></a></div>
+					<div class="col-lg-2 col-md-2 col-sm-4 col-xs-3"><a href="http://instagram.com/td_salita/" target="_blank"><i class="fa fa-instagram"></i></a></div> 
+				</div>
+			</div>
+		</div>
+		<div class="holder col-lg-6 col-md-6 col-sm-12 col-xs-12 lazy-load-box trigger effect-slideup" data-delay="400" data-speed="400">
+			<div class="plat col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<h3>Услуги</h3>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><h5>Подарочные карты</h5><p>В магазинах Торгового Дома «SALITA» Вы можете приобрести подарочные карты различных номиналов.<br />&nbsp;</p></div><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><h5>Дисконтные карты</h5><p>Торговый Дом «SALITA» предоставляет своим клиентам накопительные дисконтные карты номиналом 3-20%.<br />&nbsp;</p></div></div></div>		</div>
+		<div class="holder col-sm-12 col-xs-12 visible-sm visible-xs cont-plat-l lazy-load-box trigger effect-slideup" data-delay="200" data-speed="400">
+			<div class="plat plat-cont col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<h3>Связь с нами</h3>
+				<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 phones-line">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Телефон: +7-499-236-36-37</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Электронная почта: info@salita.ru</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 contacts-buttons text-center">
+					<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4"><a href="http://vk.com/td_salita" target="_blank"><i class="fa fa-vk"></i></a></div>					<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4"><a href="http://www.facebook.com/groups/tdsalita/" target="_blank"><i class="fa fa-facebook"></i></a></div>					<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4"><a href="http://instagram.com/td_salita/" target="_blank"><i class="fa fa-instagram"></i></a></div> 
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+</div>
+<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20433268 = new Ya.Metrika({id:20433268, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/20433268" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+<section class="footer">
+	<div class="container">
+		Торговый дом «SALITA» 1997-2016		<div class="links  visible-lg visible-md visible-sm">
+			<a href="/shops/" class="lf">Магазины</a>
+		    <a href="/brands/">Бренды</a>
+		    <a href="/about/">О Компании</a>
+		    <a href="/collections/">Коллекции</a>
+		    <a href="/service/">Услуги</a>
+		    <a href="/contacts/">Контакты</a>
+	    </div>
+	</div>
+</section>
+</body>
+</html>

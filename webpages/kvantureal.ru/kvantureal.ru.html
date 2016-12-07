@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru">
+<head>
+<meta charset="UTF-8" />
+<title>Агентство недвижимости &quot;КВАНТУРЕАЛ&quot; </title>
+<base href="http://kvantureal.ru/" />
+<meta name="viewport" content="width=1200px" height="device-height">
+<meta name="description" content="Агентство недвижимости &quot;КВАНТУРЕАЛ&quot; " />
+<meta property="og:title" content="Агентство недвижимости &quot;КВАНТУРЕАЛ&quot; " />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://kvantureal.ru/" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="Агентство недвижимости &quot;КВАНТУРЕАЛ&quot; " />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+
+
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/my_scripts.js"></script>
+<!--[if lt IE 7]>
+      <div class='aligncenter'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg"border="0"></a></div>  
+  <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+      <link rel="stylesheet" href="catalog/view/theme/default/css/ie.css"> 
+  <![endif]-->
+<script type="text/javascript" src="catalog/view/javascript/common.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery.cycle.js"></script>
+
+<link rel="stylesheet" href="catalog/view/theme/default/css/reset.css" type="text/css" media="screen">
+<link rel="stylesheet" href="catalog/view/theme/default/css/style.css" type="text/css" media="screen">
+<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
+<script type="text/javascript" src="highslide/highslide-full.js"></script>
+<script type="text/javascript">
+  hs.graphicsDir = 'highslide/graphics/';
+  hs.align = 'center';
+  hs.transitions = ['expand', 'crossfade'];
+  hs.wrapperClassName = 'drop-shadow';
+  hs.fadeInOut = true;
+  hs.dimmingOpacity = .75;
+  hs.creditsText ='';
+  hs.expandCursor = null;
+hs.restoreCursor = null;
+
+
+  // Add the controlbar
+  if (hs.addSlideshow) hs.addSlideshow({
+    //slideshowGroup: 'group1',
+    interval: 5000,
+    repeat: false,
+    useControls: true,
+    fixedControls: 'fit',
+    overlayOptions: {
+      opacity: .6,
+      position: 'bottom center',
+      hideOnMouseOut: true
+    }
+  });
+</script>
+<script type="text/javascript">
+function makeSearch(form)
+{
+
+  url=$(form).attr('action');
+  valid_search=false;
+ /* v=$(form).find('[name=city]').val();
+  if(v.length) 
+  {
+    valid_search=true;
+    url+=url.match(/\?/i) ? '&' : '?';
+    url+='city='+encodeURIComponent(v);
+  }*/
+  v=$(form).find('[name=filter_category_id]').val();
+  
+  if(v.length>0) 
+  {
+    valid_search=true;
+    url+=url.match(/\?/i) ? '&' : '?';
+    url+='filter_category_id='+encodeURIComponent(v);
+  }
+  v=$(form).find('[name=rooms]').val();
+  if(v.length>0)
+  {
+    valid_search=true;
+    url+=url.match(/\?/i) ? '&' : '?';
+    url+='rooms='+encodeURIComponent(v);
+  }
+  v=$(form).find('[name=price_to]').val();
+  if(v.length>0)
+  {
+    valid_search=true;
+    url+=url.match(/\?/i) ? '&' : '?';
+    url+='price_to='+encodeURIComponent(v);
+  }
+  //alert(url);return;
+  if(valid_search) document.location.href=url;
+  else alert('Введите параметры поиска');
+  
+}
+
+</script>
+<!--[if IE 7]> 
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ie7.css" />
+<![endif]-->
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ie6.css" />
+<script type="text/javascript" src="catalog/view/javascript/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('#logo img');
+</script>
+<![endif]-->
+</head>
+
+
+  
+
+
+<body id="page1">
+    <div class="form-block">
+      <a href="#" class="close-absolute"><img src="catalog/view/theme/default/images/close.gif" alt=а""></a>
+      <div class="form-block-title">ОБРАТНАЯ СВЯЗЬ</div>
+      <form action="http://kvantureal.ru/index.php?route=information/contact/feedback" onSubmit="sendFeedback(this);return false;">
+        <input type="text" name="name" value=""  placeholder="Ваше имя*" />
+        <input type="text" name="email" value=""  placeholder="Электронная почта*" />
+        <textarea type="text" name="message" placeholder="Сообщение*"></textarea>
+        <input type="submit"  value="ОТПРАВИТЬ"  placeholder="ОТПРАВИТЬ" />
+      </form>
+    </div>
+    <script type="text/javascript">
+    function sendFeedback(form)
+    {
+      $.ajax({
+        url:$(form).attr('action'),
+        method:'POST',
+        type:'POST',
+        data:$(form).serialize(),
+        success:function(data)
+        {
+          if(data=='success')
+          {
+            $(form).parent().find('.close-absolute').trigger('click');
+            alert('Данные успешно отправлены. С вами скоро свяжутся');
+            $(form).trigger('reset');
+          }
+          else alert(data);
+        },
+        error:function(xnr)
+        {
+          alert('Сервер временно недоступен. Попробуйте позже');
+        }
+      })
+    }
+
+    </script>
+    <!-- header -->   
+        <div class="header">
+      <div class="main">
+        <div class="wrapper">
+          <a href="/" class="logo"><img src="catalog/view/theme/default/images/logo.png" alt=""></a>
+          <div class="header-line"><img src="catalog/view/theme/default/images/header-line.png" alt=""></div>
+          <div class="header-text">Основано в 1990 году</div>
+          <div class="header-block">
+            <div class="header-text1">Агентство недвижимости</div>
+            <div class="header-pic"><img src="catalog/view/theme/default/images/header-pic.png" alt=""></div>
+            <div class="header-text2">Профессиональные услуги<br> на рынке недвижимости</div>
+          </div>
+          <div class="header-block1">
+            <div class="header-phone">
+              <span>8 (495) 573 95 81</span>
+              <span>8 (495) 572 00 50</span><span>8 (926) 125 07 75</span>
+            </div>
+            <div class="wrapper">
+              <a href="#" class="header-button online1" rel="form-block">ОБРАТНАЯ СВЯЗЬ</a>
+              <div class="header-link">E-mail: <a href="mailto:info@kvantureal.ru">info@kvantureal.ru</a></div>
+            </div>
+            <div class="wrapper">
+              <ul class="menu">
+                <li><a href="/" rel="nofollow">Главная</a></li>
+                                  <li><a href="http://kvantureal.ru/index.php?route=product/category&amp;path=60">О компании</a></li>
+                                    <li><a href="http://kvantureal.ru/index.php?route=product/category&amp;path=59">Каталог</a></li>
+                                    <li><a href="http://kvantureal.ru/index.php?route=product/category&amp;path=61">Услуги</a></li>
+                                    <li><a href="http://kvantureal.ru/index.php?route=product/category&amp;path=62">Спецпредложения</a></li>
+                                  
+                <li><a href="http://kvantureal.ru/index.php?route=product/product&amp;path=60&amp;product_id=67">контакты</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+
+
+
+		<div class="block">
+			<div class="main">
+				<div class="wrapper">
+					<div class="online"><a href="http://kvantureal.ru/index.php?route=information/order">ОН-ЛАЙН<br>ЗАЯВКА</a></div>
+					<div class="block-box">
+						<img src="catalog/view/theme/default/images/block-img1.png" alt="">
+						<div class="block-box-link">городская недвижимость</div>
+					</div>
+					<div class="block-box">
+						<img src="catalog/view/theme/default/images/block-img2.png" alt="">
+						<div class="block-box-link">загородные участки коттеджи</div>
+					</div>
+					<div class="block-box">
+						<img src="catalog/view/theme/default/images/block-img3.png" alt="">
+						<div class="block-box-link">комплекс услуг по оформлению</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="grey-block">
+			<div class="main">
+				<div class="wrapper">
+					<div class="grey-col1">
+						<div class="grey-title">поиск:</div>
+						  <div class="grey-form">
+						    <form action="http://kvantureal.ru/index.php?route=product/search" onSubmit="makeSearch(this);return false;">
+						      						       <select name="filter_category_id">
+						        <option value="">Тип объекта</option>
+						        						            <option value="65" >Вторичный рынок квартир</option>
+
+						          						            <option value="68" >Квартиры в новостройках</option>
+
+						          						            <option value="69" >Загородная недвижимость</option>
+
+						          						            <option value="70" >Нежилые помещения</option>
+
+						          						            <option value="71" >Аренда</option>
+
+						          						      </select>
+            							<div class="hint">Параметр комнаты применим только для квартир и аренды</div>
+						      <div class="wrapper">
+						        <input type="text" name="rooms" value=""  placeholder="Комнат" />
+						        <input type="text" name="price_to" value=""  placeholder="Цена до" />
+						      </div>
+
+						      <input type="submit"  value="НАЙТИ"  placeholder="НАЙТИ" />
+						      </form>
+						    </div>
+					</div>
+					<div class="grey-col2" style="width: 715px;">
+						<div class="grey-title">услуги</div>
+						<ul class="service-list">
+						
+													<li>Покупка, продажа</li>
+													<li>Обмен, аренда</li>
+													<li>Междугородние обмены</li>
+													<li>Юридическая экспертиза</li>
+													<li>Сопровождение сделок</li>
+													<li>Оформление готовых вариантов</li>
+													<li>Юридические услуги</li>
+													<li>Предоставление помещения для проведение сделок</li>
+												
+						</ul>
+						
+											
+				</div>
+			</div>
+		</div>
+        <!-- content -->
+        <div class="content">			
+			<div class="main">
+				<div class="wrapper top">
+					<div class="col1">
+						
+        <div class="banner"><a href="#"><img src="http://kvantureal.ru/image/cache/data/banner-160x180.gif" alt="13" title="13" /></a></div>
+    
+  
+						
+						<div class="orange-block"><span><a href="http://kvantureal.ru/index.php?route=product/category&amp;path=63">новости</a></span></div>
+													<div class="news-block">
+								<div class="news-data">20 / 10 / 2016</div>
+								<a href="http://kvantureal.ru/index.php?route=product/product&amp;path=63&amp;product_id=846" class="news-link">Государство вычислит дома - &quot;невидимки&quot;</a>
+								<div class="news-text">
+	&nbsp; &nbsp; Минфин предлагает взымать налог на имущество с владельцев земли, поставивших здание</div>
+							</div>
+
+														<div class="news-block">
+								<div class="news-data">13 / 10 / 2016</div>
+								<a href="http://kvantureal.ru/index.php?route=product/product&amp;path=63&amp;product_id=844" class="news-link">Приготовиться к снижению</a>
+								<div class="news-text">
+	&nbsp; Глава Сбербанка Герман Греф свидетельствует об оживлении рынка ипотечных услуг : " Со втор</div>
+							</div>
+
+														<div class="news-block">
+								<div class="news-data">13 / 10 / 2016</div>
+								<a href="http://kvantureal.ru/index.php?route=product/product&amp;path=63&amp;product_id=845" class="news-link">О причинах нелояльности банков к кредитованию загородных объектов.</a>
+								<div class="news-text">
+	&nbsp; Елена Николаева, первый заместитель председателя Комитета по жилищной политике и ЖКХ Госуд</div>
+							</div>
+
+														<div class="news-block">
+								<div class="news-data">28 / 08 / 2016</div>
+								<a href="http://kvantureal.ru/index.php?route=product/product&amp;path=63&amp;product_id=841" class="news-link">Загородная недвижимость. Горьковское шоссе: территория дешевого жилья.</a>
+								<div class="news-text">
+	&nbsp; На расстоянии от 30 до 100 км Горьковского шоссе предлагается бюджетное городское жилье, щ</div>
+							</div>
+
+												</div>
+					<div class="col2">
+						
+<div class="wrapper">
+	<div class="col3">
+		<div class="title-bg">
+			<span>О компании</span></div>
+		<div class="text">
+			Агентство недвижимости "КВАНТУРЕАЛ" основано 14.08.1990г., одним из первых малых предприятий в Московской области по знаменитому Постановлению № 790 Совета Министров СССР от 08.08.90г. "О малых предприятиях" и является одним из старейших малых предприятий не только в Московском регионе, но и в России. Сегодня «КВАНТУРЕАЛ» территориальное агентство недвижимости.</div>
+		<a class="link" href="/index.php?route=product/category&amp;path=60">Подробнее</a></div>
+	<div class="col4">
+		<div class="banner1">
+			<div class="banner1-pic">
+				<a class="banner1-link" href="/index.php?route=product/category&amp;path=64"><img alt="" src="/catalog/view/theme/default/images/banner1-pic.png" /></a></div>
+		</div>
+	</div>
+</div>
+
+<div class="wrapper box-top">
+	<div class="box">
+		<div class="orange-block">
+			<span>если вы продаете</span></div>
+		<div class="text">
+			Если Вы можете и хотите в ближайшее время продать квартиру, земельный участок, загородный дом или что-то другое, в том числе поменять на другую недвижимость, то можете оставить свою информацию в виде заявки. Кроме этого, Вы можете заказать выезд агента к Вам домой или в офис для оперативного решения вопросов, требующих личного присутствия нашего специалиста.<br />
+			<br />
+			В последующем, для более качес&shy;т­вен­ного, гаран­тиро­ванного решения Вашего вопроса о продаже или обмене, предлагаем Вам рассмотреть возможность заключения с «КВАНТУРЕАЛ» до­говора на обслу­жи­вание в одном из наших офисов .</div>
+	</div>
+	<div class="box">
+		<div class="orange-block">
+			<span>Если у Вас готовый вариант купли-продажи</span></div>
+		<div class="text">
+			Если в процессе продажи Вашего объекта недвижимости Вы самос­тоятельно нашли потенциального Покупателя, но Вам необходима помощь по представлению Ваших интересов: при прове­дении предва­ритель­ных&nbsp;пере­говоров, подготовки и организации самой сделки, Или,&nbsp;Вы в процессе поиска нужной Вам недвижимости самостоятельно нашли объект полностью удовлетворяющий Вас, но Вам необходима правовая экспертиза, помощь в переговорах, юридическое сопровождении самой сделки, то Агентство «КВАНТУРЕАЛ» готово представлять интересы как Вашей стороны, так и гарантировать проведение сделки Всем участникам предстоящего договора купли-продажи, обмена и т п.</div>
+	</div>
+	<div class="box">
+		<div class="orange-block">
+			<span>если вы покупаете</span></div>
+		<div class="text">
+			В каталоге Вашему вниманию предложены объекты недвижимости на основании эксклюзивных договоров или эксклюзивной информации «КВАНТУРЕАЛ».<br />
+			<br />
+			Если Вы не найдете того, что Вам нужно в нашем каталоге, Вы можете оставить заявку нашим специалистам, которые смогут подобрать Вам вариант из наших рабочих баз данных которых значительно больше, чем имеется в каталоге.&nbsp;</div>
+		<div class="text">
+			Если Вы самостоятельно нашли объект недвижимости, который хотите приоб­рести и Вам нужна юридическая помощь, агентство «КВАНТУРЕАЛ» готово провести сопровождение сделки.</div>
+	</div>
+	<p>
+		&nbsp;</p>
+</div>
+<p>
+	&nbsp;</p>
+<div class="title-right">
+  <div class="title-bg"><span>спецпредложения</span></div>
+</div>
+<div class="wrapper">
+      <div class="box1">
+      <div class="box1-img"> <a href="http://kvantureal.ru/index.php?route=product/product&amp;product_id=414"><img src="http://kvantureal.ru/image/cache/data/foto/487-250x110.jpg" alt="Жилой дом по адресу: г. Химки, ул. Энгельса, квартал №10, корп. 8 : ОБЪЕКТ РЕАЛИЗОВАН"></a></div>
+            <div class="text-left">
+        <a href="http://kvantureal.ru/index.php?route=product/product&amp;product_id=414" class="box1-link"></a>
+        <div class="box1-text"><br>Жилой дом по адресу: г. Химки, ул. Энгельса, квартал №10, корп. 8 : ОБЪЕКТ РЕАЛИЗОВАН</div>
+                      </div>
+    </div>
+
+        <div class="box1">
+      <div class="box1-img"> <a href="http://kvantureal.ru/index.php?route=product/product&amp;product_id=791"><img src="http://kvantureal.ru/image/cache/data/uchastok-rekinokresty-111-250x110.jpg" alt="Продается участок земли в Солнечногорском районе, Ленинградское шоссе, 50 км от МКАД, дер. Рекино-Кресты. Цена: 900 000 рублей. Есть ПРОПИСКА ! Регистрация по адресу."></a></div>
+            <div class="text-left">
+        <a href="http://kvantureal.ru/index.php?route=product/product&amp;product_id=791" class="box1-link"></a>
+        <div class="box1-text"><br>Продается участок земли в Солнечногорском районе, Ленинградское шоссе, 50 км от МКАД, дер. Рекино-Кресты. Цена: 900 000 рублей. Есть ПРОПИСКА ! Регистрация по адресу.</div>
+                      </div>
+    </div>
+
+        <div class="box1">
+      <div class="box1-img"> <a href="http://kvantureal.ru/index.php?route=product/product&amp;product_id=806"><img src="http://kvantureal.ru/image/cache/data/1115-250x110.jpg" alt="Продается квартира г.Химки,УЛ.Бабакина,15. Цена 5 600 000 руб."></a></div>
+            <div class="text-left">
+        <a href="http://kvantureal.ru/index.php?route=product/product&amp;product_id=806" class="box1-link"></a>
+        <div class="box1-text"><br>Продается квартира г.Химки,УЛ.Бабакина,15. Цена 5 600 000 руб.</div>
+                      </div>
+    </div>
+
+    </div>						
+						
+					</div>
+				</div>
+			</div>					
+        </div>
+        <!-- footer -->
+    <div class="footer">
+      <div class="main">
+        <a href="http://old.kvantureal.ru/" class="footer-absolute" rel="nofollow">Перейти на старую<br>версию сайта</a>
+        <div class="wrapper">
+          <a href="/" class="footer-logo" rel="nofollow"><img src="catalog/view/theme/default/images/footer-logo.png" alt=""></a>
+          <div class="footer-text">Copyright 2016 &copy; <span>КВАНТУРЕАЛ</span></div>
+          <div class="footer-block">
+            <div class="footer-link"><a href="mailto:info@kvantureal.ru" rel="nofollow">info@kvantureal.ru</a></div>
+            <div class="wrapper">
+              <ul class="footer-list">
+                <li><a href="http://kvantureal.ru/index.php?route=product/category&amp;path=63">Новости</a></li>
+                <li><a href="http://kvantureal.ru/index.php?route=product/category&amp;path=64">Статьи</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-block1">
+            <div class="footer-text1">
+              <span>8 (495) 573 95 81</span>
+              <span>8 (495) 572 00 50</span><span>8 (926) 125 07 75</span></div>
+            <div class="footer-text2">Адрес: Московская область, г. Химки, ул. Пролетарская, 17</div>
+          </div>
+          <div class="footer-img"><img src="catalog/view/theme/default/images/footer-img.gif" alt=""></div>
+        </div>
+      </div>
+    </div>  
+</body>
+</html>
+       

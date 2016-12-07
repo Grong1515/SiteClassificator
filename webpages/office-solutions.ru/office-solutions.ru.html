@@ -1,0 +1,528 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:fb="http://ogp.me/ns/fb#" 
+      xmlns:og="http://ogp.me/ns#" lang="ru-RU">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Office Solutions — решения для вашего офиса</title>
+<meta content="Лидер рынка офисной мебели в России и СНГ. Предоставляет  комплексные решения для создания рабочего пространства в партнёрстве со Steelcase , Lafano, Interface и другими производителями." name=description />
+<meta content="Лидер рынка решений для офиса в России и СНГ." name=keywords />
+
+
+
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="stylesheet" href="/wp-content/themes/os-new/style.css">
+  <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/os-new/css/main.less">  
+  <script src="/wp-content/themes/os-new/js/vendor/modernizr-2.6.1.min.js"></script>
+  <script src="/wp-content/themes/os-new/js/vendor/less-1.3.0.min.js" type="text/javascript"></script>
+  <!--[if lt IE 10]>
+    <script type="text/javascript" src="/wp-content/themes/os-new/js/vendor/pie.js"></script>
+  <![endif]-->
+
+
+  
+<!-- <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script> -->
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?105"></script>
+<script type="text/javascript">
+  VK.init({apiId: 4117084, onlyWidgets: true});
+</script>
+<style type="text/css">
+    .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    cursor: default;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 1;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    background-color: #fff;
+    z-index: 1000 !important;
+/*    border: 3px solid #fff;*/
+    display: inline-block;
+/*    left: 33%;*/
+    opacity: 0;
+/*    padding: 3px;*/
+    position: fixed;
+    top: 25%;
+    visibility: hidden;
+    z-index: 10;
+    
+    -webkit-transform: translate(-22%, -22%);
+    -moz-transform: translate(-22%, -22%);
+    -ms-transform: translate(-22%, -22%);
+    -o-transform: translate(-22%, -22%);
+    transform: translate(-22%, -22%);
+
+/*    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;*/
+
+/*    -webkit-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -moz-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -ms-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -o-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;*/
+
+    -webkit-transition: opacity .5s, top .5s;
+    -moz-transition: opacity .5s, top .5s;
+    -ms-transition: opacity .5s, top .5s;
+    -o-transition: opacity .5s, top .5s;
+    transition: opacity .5s, top .5s;
+}
+.overlay:target+.popup {
+    top: 20%;
+    opacity: 1;
+    visibility: visible;
+}
+.close {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 30px;
+
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    font-size: 24px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.close:hover {
+/*    background-color: rgba(64, 128, 128, 0.8);*/
+}
+.popup p, .popup div {
+    padding: 0px 5px 0px 5px;
+}
+</style>
+
+  		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.office-solutions.ru\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.4"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='portfolio_slideshow-css'  href='/wp-content/plugins/portfolio-slideshow/css/portfolio-slideshow.min.css?ver=1.5.1' type='text/css' media='screen' />
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js?ver=1.8.0'></script>
+<link rel='https://api.w.org/' href='http://www.office-solutions.ru/wp-json/' />
+		<link rel="stylesheet" type="text/css" href="http://www.office-solutions.ru/wp-content/plugins/nivo-slider-for-wordpress/css/nivoslider4wp.css" />
+		<style>
+		#slider{
+			width:988px;
+			height:354px;
+			background:transparent url(/wp-content/plugins/nivo-slider-for-wordpress/css/images/loading.gif) no-repeat 50% 50%;
+		}
+		.nivo-caption {
+			background:#000000;
+			color:#ffffff;
+		}
+		</style>
+	
+<!-- Portfolio Slideshow-->
+<noscript><link rel="stylesheet" type="text/css" href="/wp-content/plugins/portfolio-slideshow/css/portfolio-slideshow-noscript.css?ver=1.5.1" /></noscript><script type="text/javascript">/* <![CDATA[ */var psTimeout = new Array();  var psAutoplay = new Array();  var psFluid = new Array(); var psTrans = new Array(); var psSpeed = new Array(); var psLoop = new Array();/* ]]> */</script>
+<!--//Portfolio Slideshow-->
+
+<meta http-equiv="Content-Language" content="ru-RU" />
+<style type="text/css" media="screen">
+.qtrans_flag span { display:none }
+.qtrans_flag { height:12px; width:18px; display:block }
+.qtrans_flag_and_text { padding-left:20px }
+.qtrans_flag_ru { background:url(/wp-content/plugins/qtranslate/flags/ru.png) no-repeat }
+.qtrans_flag_en { background:url(/wp-content/plugins/qtranslate/flags/gb.png) no-repeat }
+</style>
+<link hreflang="en" href="http://www.office-solutions.ru/en/" rel="alternate" />
+
+</head>
+<body class="home blog">
+  <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+  <![endif]-->
+
+<div id="wrapper">
+
+  <header>
+    <a href="http://www.office-solutions.ru/ru" id="logo"><img src="/wp-content/themes/os-new/img/logo.png" alt="logo" /></a>
+
+    <ul id="add-menu" class="clearfix">
+      <li class="shop"><a href="http://shop.office-solutions.ru/"><img src="/wp-content/uploads/2013/02/default1.png"> &nbsp;Интернет-магазин</a></li>
+      <!--<li><a href=""><span class="icon lock"></span>Вход для клиентов</a></li>-->
+      <li id="search">
+        <form role="search" action="/" method="get" id="searchform" style="margin-right: 0px;">
+          <button id="searchsubmit" name="go" type="submit" class="icon search"><span></span></button>
+          <input type="search" class="text" placeholder="Поиск" name="s" id="s"/>
+        </form>
+      </li>
+      <li id="socials">
+        <a target="_blank" href="https://www.facebook.com/officesolutions.ru" class="fb"><span class="wrapper"><span class="icon facebook"></span></span></a>
+        <a target="_blank" href="http://www.linkedin.com/groups/Office-Solutions-5114372" class="in"><span class="wrapper"><span class="icon linkedin"></span></span></a>
+      </li>
+      <li id="ruen">РОССИЯ<span class="square"><span class="icon arrow-down"></span></span>
+        <ul id="countriesList" class="hide-by-click-on-body">
+          <li><a href="http://www.office-solutions.com.ua/">УКРАИНА</a></li>
+          <li><a href="http://www.office-solutions.by/">БЕЛАРУСЬ</a></li>
+          <li><a href="http://www.office-solutions.kz/">КАЗАХСТАН</a></li>
+          <li><a href="http://www.cos.ro/">РУМЫНИЯ</a></li>
+        </ul>
+      </li>
+      <li id="socials"><img src="/wp-content/uploads/2013/02/map.png"></li>
+      <li style="padding: 0"><ul class="qtrans_language_chooser" id="qtranslate-chooser"><li class="lang-ru active"><a href="http://www.office-solutions.ru/ru/" hreflang="ru" title="RUS"><span>RUS</span></a></li><li class="lang-en"><a href="http://www.office-solutions.ru/en/" hreflang="en" title="EN"><span>EN</span></a></li></ul><div class="qtrans_widget_end"></div></li>
+        <li class="logo_right">
+    <!--         <a target="_blank" href="http://dealer.steelcase.com/dealer/office-solutions/">-->
+            <a href="#win1" id="win_pop">
+                <img src="/wp-content/themes/os-new/img/steelcase-logo-mainpage.png" alt="" />
+            </a>
+             </li>   
+    </ul>
+            <a href="#x" class="overlay" id="win1"></a>
+      <div class="popup">
+                    <iframe src="http://dealer.steelcase.com/dealer/office-solutions/" scrolling="no" width="1020" frameBorder="0" height="660"></iframe>
+                <a class="close" title="Закрыть" href="#close"></a>
+            </div>
+  
+<!--<div class="clear"></div>-->
+    <ul id="main-menu">
+        <div class="menu-%d0%b2%d0%b5%d1%80%d1%85%d0%bd%d0%b5%d0%b5-%d0%bc%d0%b5%d0%bd%d1%8e-%d0%ba%d0%b0%d0%b7%d0%b0%d1%85%d1%81%d1%82%d0%b0%d0%bd-container"><ul id="menu-%d0%b2%d0%b5%d1%80%d1%85%d0%bd%d0%b5%d0%b5-%d0%bc%d0%b5%d0%bd%d1%8e-%d0%ba%d0%b0%d0%b7%d0%b0%d1%85%d1%81%d1%82%d0%b0%d0%bd" class="menu"><li id="menu-item-7042" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7042"><a href="http://www.office-solutions.ru/ru/about/facts/">О компании</a>
+<ul class="sub-menu">
+	<li id="menu-item-6993" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6993"><a href="http://www.office-solutions.ru/ru/about/facts/">Ключевые факты</a></li>
+	<li id="menu-item-7031" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7031"><a href="http://www.office-solutions.ru/ru/about/office-solutions/">Почему Office Solutions?</a></li>
+	<li id="menu-item-6997" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6997"><a href="http://www.office-solutions.ru/ru/about/mission/">Миссия и ценности</a></li>
+	<li id="menu-item-6998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6998"><a href="http://www.office-solutions.ru/ru/about/philosophy/">Философия нашей работы</a></li>
+	<li id="menu-item-6995" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6995"><a href="http://www.office-solutions.ru/ru/about/team/top-kz/">Руководство</a></li>
+	<li id="menu-item-7001" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7001"><a href="http://www.office-solutions.ru/ru/category/blog/events/">События</a></li>
+	<li id="menu-item-7000" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7000"><a href="http://www.office-solutions.ru/ru/about/office/">Наш офис</a></li>
+</ul>
+</li>
+<li id="menu-item-7002" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7002"><a href="http://www.office-solutions.ru/ru/services/">Услуги</a>
+<ul class="sub-menu">
+	<li id="menu-item-7005" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7005"><a href="http://www.office-solutions.ru/ru/services/environment/">Консалтинг, создание рабочей среды</a></li>
+	<li id="menu-item-7006" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7006"><a href="http://www.office-solutions.ru/ru/services/design/">Проектные решения</a></li>
+	<li id="menu-item-7004" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7004"><a href="http://www.office-solutions.ru/ru/services/equipment/">Комплексное оснащение офисов</a></li>
+	<li id="menu-item-7007" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7007"><a href="http://www.office-solutions.ru/ru/services/relocation/">Управление переездом</a></li>
+	<li id="menu-item-7008" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7008"><a href="http://www.office-solutions.ru/ru/services/maintenance/">Эксплуатация и обслуживание</a></li>
+</ul>
+</li>
+<li id="menu-item-7009" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7009"><a href="http://www.office-solutions.ru/ru/solutions/">Решения</a>
+<ul class="sub-menu">
+	<li id="menu-item-7015" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7015"><a href="http://www.office-solutions.ru/ru/solutions/industrial/">Промышленность и производство</a></li>
+	<li id="menu-item-7019" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7019"><a href="http://www.office-solutions.ru/ru/solutions/financial/">Финансовый сектор</a></li>
+	<li id="menu-item-7014" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7014"><a href="http://www.office-solutions.ru/ru/solutions/consulting/">Консалтинг и юридические услуги</a></li>
+	<li id="menu-item-7011" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7011"><a href="http://www.office-solutions.ru/ru/solutions/it/">IT-компании</a></li>
+	<li id="menu-item-7018" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7018"><a href="http://www.office-solutions.ru/ru/solutions/pharmacy/">Фармацевтика и медицина</a></li>
+	<li id="menu-item-7010" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7010"><a href="http://www.office-solutions.ru/ru/solutions/fmcg/">FMCG компании</a></li>
+	<li id="menu-item-7012" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7012"><a href="http://www.office-solutions.ru/ru/solutions/auto/">Автомобильные компании</a></li>
+	<li id="menu-item-7016" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7016"><a href="http://www.office-solutions.ru/ru/solutions/development/">Строительство и девелопмент</a></li>
+	<li id="menu-item-7013" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7013"><a href="http://www.office-solutions.ru/ru/solutions/hotel/">Гостиницы</a></li>
+	<li id="menu-item-7017" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7017"><a href="http://www.office-solutions.ru/ru/solutions/education/">Учебные заведения</a></li>
+</ul>
+</li>
+<li id="menu-item-7043" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-7043"><a href="http://www.office-solutions.ru/ru/category/office-space/research/">Управление пространством</a>
+<ul class="sub-menu">
+	<li id="menu-item-7040" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7040"><a href="http://www.office-solutions.ru/ru/category/office-space/research/">Статьи и исследования</a></li>
+	<li id="menu-item-7039" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7039"><a href="http://www.office-solutions.ru/ru/category/office-space/workspace/">Объединяющее рабочее пространство</a></li>
+	<li id="menu-item-7033" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7033"><a href="http://www.office-solutions.ru/ru/category/office-space/interview/">Актуальные интервью</a></li>
+	<li id="menu-item-7034" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7034"><a href="http://www.office-solutions.ru/ru/category/office-space/inspiring-office/">Вдохновляющий офис</a></li>
+	<li id="menu-item-7038" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7038"><a href="http://www.office-solutions.ru/ru/category/office-space/zoning/">Зонирование офисного пространства</a></li>
+	<li id="menu-item-7037" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7037"><a href="http://www.office-solutions.ru/ru/category/office-space/green-office/">Зеленый офис и окружающая среда</a></li>
+	<li id="menu-item-7041" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7041"><a href="http://www.office-solutions.ru/ru/category/office-space/ergonomics/">Эргономика рабочего пространства</a></li>
+	<li id="menu-item-7035" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7035"><a href="http://www.office-solutions.ru/ru/category/office-space/group-interaction/">Взаимодействие в группе</a></li>
+	<li id="menu-item-7036" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7036"><a href="http://www.office-solutions.ru/ru/category/office-space/interaction-generations/">Взаимодействие поколений</a></li>
+</ul>
+</li>
+<li id="menu-item-7044" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-7044"><a href="http://www.office-solutions.ru/ru/category/serv/all-projects/">Проекты</a>
+<ul class="sub-menu">
+	<li id="menu-item-7045" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7045"><a href="http://www.office-solutions.ru/ru/category/serv/all-projects/">Примеры проектов</a></li>
+	<li id="menu-item-7046" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7046"><a href="http://www.office-solutions.ru/ru/clients/">Наши клиенты</a></li>
+	<li id="menu-item-7047" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7047"><a href="http://www.office-solutions.ru/ru/category/serv/testimonials/">Отзывы и рекомендации</a></li>
+</ul>
+</li>
+<li id="menu-item-7048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7048"><a href="http://www.office-solutions.ru/ru/about/partners/">Партнеры</a></li>
+<li id="menu-item-8596" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8596"><a href="http://www.office-solutions.ru/ru/category/blog/">Блог</a></li>
+<li id="menu-item-7050" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7050"><a href="/contacts/">Контакты</a></li>
+</ul></div>          </ul>
+
+  </header><div class="page-container" id="index">
+	<div id="content" class="wide">
+    <div class="wrapper hover-shadow">
+		<div style="height: 354px; position: relative; width: 100%;overflow: hidden" class="hover-shadow">	<div id="slider">
+																				<a href="/office-space/workspace/combining-working-space/"><img src="http://www.office-solutions.ru/wp-content/uploads/nivoslider4wp_files/10_s.jpeg" alt="[:ru]Объединяющее </br>рабочее пространство<a href='/office-space/workspace/combining-working-space/' class='button'>узнайте больше</a>
+[:en]The Interconnected</br>Workplace<a href='/en/office-space/workspace/combining-working-space/' class='button'>learn more</a>" title="Объединяющее </br>рабочее пространство<a href='/office-space/workspace/combining-working-space/' class='button'>узнайте больше</a>
+"/></a>
+																						<a href="http://office-solutions.ru/ru/services/lighting/"><img src="http://www.office-solutions.ru/wp-content/uploads/nivoslider4wp_files/19_s.jpeg" alt="[:ru]Архитектурный свет<a href='/services/lighting/' class='button'>узнайте больше</a>
+[:en]The Interconnected</br>Workplace<a href='/en/services/lighting/' class='button'>learn more</a>" title="Архитектурный свет<a href='/services/lighting/' class='button'>узнайте больше</a>
+"/></a>
+																						<a href="/category/office-space/ergonomics/"><img src="http://www.office-solutions.ru/wp-content/uploads/nivoslider4wp_files/17_s.jpeg" alt="[:ru]Эргономика <br>рабочего пространства
+<a href='/category/office-space/ergonomics/' class='button'>узнайте больше</a>
+[:en]Ergonomics 
+<a href='/en/category/office-space/ergonomics/' class='button'>learn more</a>" title="Эргономика <br>рабочего пространства
+<a href='/category/office-space/ergonomics/' class='button'>узнайте больше</a>
+"/></a>
+																						<a href="/about/philosophy/"><img src="http://www.office-solutions.ru/wp-content/uploads/nivoslider4wp_files/13_s.jpeg" alt="[:ru]Философия нашей работы<a href='/about/philosophy/' class='button'>узнайте больше</a>[:en]Our Philosophy<a href='/en/about/philosophy/' class='button'>learn more</a>" title="Философия нашей работы<a href='/about/philosophy/' class='button'>узнайте больше</a>"/></a>
+																						<a href="/category/office-space/zoning/"><img src="http://www.office-solutions.ru/wp-content/uploads/nivoslider4wp_files/14_s.jpeg" alt="[:ru]Зонирование </br>офисного пространства<a href='/category/office-space/zoning/' class='button'>узнайте больше</a>[:en]Space planning<a href='/en/category/office-space/zoning/' class='button'>learn more</a>" title="Зонирование </br>офисного пространства<a href='/category/office-space/zoning/' class='button'>узнайте больше</a>"/></a>
+																						<a href="/clients/"><img src="http://www.office-solutions.ru/wp-content/uploads/nivoslider4wp_files/15_s.jpeg" alt="[:ru]Нам доверяют<a href='/clients/' class='button'>узнайте больше</a>[:en]References<a href='/en/clients/' class='button'>learn more</a>" title="Нам доверяют<a href='/clients/' class='button'>узнайте больше</a>"/></a>
+																						<a href="http://shop.office-solutions.ru/"><img src="http://www.office-solutions.ru/wp-content/uploads/nivoslider4wp_files/16_s.jpeg" alt="[:ru]Интернет-магазин
+<a href='http://shop.office-solutions.ru/' class='button'>узнайте больше</a>
+[:en]Visit our shop
+<a href='http://shop.office-solutions.ru/' class='button'>learn more</a>" title="Интернет-магазин
+<a href='http://shop.office-solutions.ru/' class='button'>узнайте больше</a>
+"/></a>
+												</div>
+	</div>
+    </div>
+	  <section class="block two-cols borderless clearfix" id="section-space-management">
+	    <div class="left">
+        
+	      <div class="wrapper hover-shadow">
+	        <div class="header">
+	          <a target="_blank" href="http://www.steelcase.com/insights/360-magazine/">Steelcase <br>360⁰ Magazine<br>THINK BETTER</a>
+	        </div>
+	        <a target="_blank" href="http://www.steelcase.com/insights/360-magazine/"><img src="/wp-content/themes/os-new/img/misc/003.png" alt="" class="background-img"></a>
+	      </div>
+	    </div>
+	    <div class="right">
+	      <div class="wrapper hover-shadow">
+	        <div class="header">
+	          <a href="http://www.office-solutions.ru/ru/category/office-space/research/">Управление<br> пространством. <br>Знания и опыт</a>
+	        </div>
+	        <img src="/wp-content/themes/os-new/img/misc/002.png" alt="" class="background-img"/>
+	      </div>
+	    </div>
+	  </section>
+	  <section class="block two-cols clearfix borderless">
+	    <div class="left">
+	      <div class="header block"><h1>Решения для вашего бизнеса</h1></div>
+	      <div class="block borderless small-blocks-two-cols" id="">
+	        <a href="http://www.office-solutions.ru/ru/solutions/industrial/" class="block-link blk-wht borderless">
+	          <img src="/wp-content/themes/os-new/img/solutions-icons/001b.png" alt="" class="icon"/>
+	          <span class="header">Промышленность и&nbsp;производство</span>
+	        </a>
+	        <a href="http://www.office-solutions.ru/ru/solutions/development/" class="block-link blk-wht borderless">
+	          <img src="/wp-content/themes/os-new/img/solutions-icons/002b.png" alt="" class="icon"/>
+	          <span class="header">Строительство и&nbsp;девелопмент</span>
+	        </a>
+	        <a href="http://www.office-solutions.ru/ru/solutions/financial/" class="block-link blk-wht borderless">
+	          <img src="/wp-content/themes/os-new/img/solutions-icons/003b.png" alt="" class="icon"/>
+	          <span class="header">Финансовый сектор</span>
+	        </a>
+	        <a href="http://www.office-solutions.ru/ru/solutions/consulting/" class="block-link blk-wht borderless">
+	          <img src="/wp-content/themes/os-new/img/solutions-icons/004b.png" alt="" class="icon"/>
+	          <span class="header">Консалтинг и юридические услуги</span>
+	        </a>
+	        <a href="http://www.office-solutions.ru/ru/solutions/pharmacy/" class="block-link blk-wht borderless">
+	          <img src="/wp-content/themes/os-new/img/solutions-icons/005b.png" alt="" class="icon"/>
+	          <span class="header">Фармацевтика и&nbsp;медицина</span>
+	        </a>
+	        <a href="http://www.office-solutions.ru/ru/solutions/auto/" class="block-link blk-wht borderless">
+	          <img src="/wp-content/themes/os-new/img/solutions-icons/006b.png" alt="" class="icon"/>
+	          <span class="header">Автомобильные компании</span>
+	        </a>
+	        <a href="http://www.office-solutions.ru/ru/solutions/it/" class="block-link blk-wht borderless">
+	          <img src="/wp-content/themes/os-new/img/solutions-icons/007b.png" alt="" class="icon"/>
+	          <span class="header">IT-компании</span>
+	        </a>
+	        <a href="http://www.office-solutions.ru/ru/solutions/fmcg/" class="block-link blk-wht borderless">
+	          <img src="/wp-content/themes/os-new/img/solutions-icons/008b.png" alt="" class="icon"/>
+	          <span class="header">FMCG компании</span>
+	        </a>
+	        <a href="http://www.office-solutions.ru/ru/solutions/hotel/" class="block-link blk-wht borderless">
+	          <img src="/wp-content/themes/os-new/img/solutions-icons/009b.png" alt="" class="icon"/>
+	          <span class="header">Гостиницы</span>
+	        </a>
+	        <a href="http://www.office-solutions.ru/ru/solutions/education/" class="block-link blk-wht borderless">
+	          <img src="/wp-content/themes/os-new/img/solutions-icons/010b.png" alt="" class="icon"/>
+	          <span class="header">Учебные заведения</span>
+	        </a>
+	      </div>
+	    </div>
+	    <div class="right">
+	      <div class="header block"><h1>Ключевые проекты</h1></div>
+	      <div class="block borderless big-blocks-two-cols" id="big-projects">
+							<a href="http://www.office-solutions.ru/ru/serv/all-projects/projects/kaspersky-lab/" class="block borderless hover-shadow">
+					<span class="header">Kaspersky lab</span>
+					<img width="318" height="210" src="/wp-content/uploads/2013/12/kaspersky-preview.jpg" class="background-img wp-post-image" alt="" title="" />				</a>
+							<a href="http://www.office-solutions.ru/ru/serv/all-projects/projects/saatchisaatchi/" class="block borderless hover-shadow">
+					<span class="header">Saatchi&amp;Saatchi</span>
+					<img width="318" height="210" src="/wp-content/uploads/2011/07/saatchi.png" class="background-img wp-post-image" alt="" title="" srcset="/wp-content/uploads/2011/07/saatchi.png 318w, /wp-content/uploads/2011/07/saatchi-315x208.png 315w" sizes="(max-width: 318px) 100vw, 318px" />				</a>
+							<a href="http://www.office-solutions.ru/ru/serv/all-projects/projects/siemens/" class="block borderless hover-shadow">
+					<span class="header">Siemens</span>
+					<img width="318" height="210" src="/wp-content/uploads/2011/07/siemens.png" class="background-img wp-post-image" alt="" title="" srcset="/wp-content/uploads/2011/07/siemens.png 318w, /wp-content/uploads/2011/07/siemens-315x208.png 315w" sizes="(max-width: 318px) 100vw, 318px" />				</a>
+							<a href="http://www.office-solutions.ru/ru/serv/all-projects/projects/pwc/" class="block borderless hover-shadow">
+					<span class="header">PricewaterhouseCoopers</span>
+					<img width="318" height="210" src="/wp-content/uploads/2013/01/wpc.png" class="background-img wp-post-image" alt="" title="" srcset="/wp-content/uploads/2013/01/wpc.png 318w, /wp-content/uploads/2013/01/wpc-315x208.png 315w" sizes="(max-width: 318px) 100vw, 318px" />				</a>
+				      </div>
+	    </div>
+	  </section>
+            <div class="wrapper hover-shadow" id="occhio_hover">
+        <div class="banner-occhio"><a target="_blank" href="http://office-solutions.ru/ru/services/lighting/"><img src="/wp-content/uploads/2015/02/main-occhio-banner.png" width="988" height="69"></a></div>
+</div>
+			<section id="new-to-blog" class="block borderless">
+			<div class="block header clearfix">
+			  <div class="subscribe">
+			    Подписаться на блог&nbsp;:&nbsp;<a href="https://www.facebook.com/officesolutions.ru/">Facebook</a>&nbsp;|&nbsp;<a href="http://www.linkedin.com/groups/Office-Solutions-5114372">LinkedIn</a>
+			  </div>
+			  <h1>Новое в блоге</h1>
+			</div>
+			<ul class="clearfix">
+									<li class="hover-shadow"><a href="http://www.office-solutions.ru/ru/blog/new/new-think/">Кресло Think &#8212; простое, умное, интуитивное</a></li>
+									<li class="hover-shadow"><a href="http://www.office-solutions.ru/ru/blog/new/occhio-piu/">Occhio Piu – больше, чем свет</a></li>
+									<li class="hover-shadow"><a href="http://www.office-solutions.ru/ru/blog/new/occhio-io-3d/">Occhio &#8212; Io 3D – счастье света</a></li>
+									<li class="hover-shadow"><a href="http://www.office-solutions.ru/ru/blog/new/lagunitas-lounge/">Lagunitas Lounge: лаунж-мебель для неформальных рабочих пространств</a></li>
+							</ul>
+		</section>
+	
+	</div>
+</div>
+        <footer id="footer">
+            <div id="proud">
+                <img src="/wp-content/themes/os-new/img/logo-f.png" alt="" />
+                <p>
+                    Создавая эффективную рабочую среду, мы гордимся тем, что реализованные нами решения позволяют развивать и наращивать стратегические нематериальные активы наших клиентов. Заботясь об атмосфере комфорта и удобства, мы делаем Ваше рабочее пространство вдохновляющим.
+                    </p>
+            </div>
+            <div id="address">
+                <div class="block">
+                    <noindex><b>Москва</b>
+                    <a href="http://www.office-solutions.ru/ru/contacts/moscow/">4-ый Лесной переулок, 4, 9 этаж<br>
+                    БЦ «White Stone»</a>
+                    </a><br>
+                    +7 (495) 258 55 99
+                </div>
+                <div class="block">
+                    <div class="sp">
+                        <b>Санкт-Петербург</b>
+                        <a href="http://www.office-solutions.ru/ru/contacts/st-petersburg/">Волынский переулок,<br>
+                        1/36A, 8-й этаж</a>
+                       <br>
+                        +7 (812) 718 36 17</noindex>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div id="copyrights">
+                <div class="block">
+                    <noindex><span class="copyright">© 1993-2016, Office Solutions</span>
+                    <span class="madein">Разработано в <a target="_blank" href="http://mdmagency.ru">MDMA</a></span></noindex>
+                </div>
+                <noindex><ul class="block countries nav">
+                    <li><a href="http://www.office-solutions.com.ua/"><b>Украина</b></a></li>
+                    <li><a href="http://www.office-solutions.by/"><b>Беларусь</b></a></li>
+                    <li><a href="http://www.office-solutions.kz/"><b>Казахстан</b></a></li>
+                    <li><a href="http://www.cos.ro"><b>Румыния</b></a></li>
+                </ul></noindex>
+            </div>
+        </footer>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <!-- Pin It Button -->
+    <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/os-new/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/os-new/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery("img").parent("a[href$='.jpg']").fancybox();
+            jQuery("img").parent("a[href$='.jpeg']").fancybox();
+            jQuery("img").parent("a[href$='.png']").fancybox();
+            jQuery("img").parent("a[href$='.gif']").fancybox();
+            jQuery("a.iframe").fancybox({
+                'width'    :    668,
+                'height'    :    468
+            });
+        });
+    </script>
+    <script>window.jQuery || document.write('<script src="/wp-content/themes/os-new/js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+    <script src="/wp-content/themes/os-new/js/plugins.js"></script>
+    <script src="/wp-content/themes/os-new/js/main.js"></script>
+
+    <!-- Google Analytics: change UA-46457480-1 to be your site's ID. -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-46457480-1', 'office-solutions.ru');
+        ga('send', 'pageview');
+    </script>
+    <!-- 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> -->
+		<script type="text/javascript" src="http://www.office-solutions.ru/wp-content/plugins/nivo-slider-for-wordpress/js/jquery.nivo.slider.pack.js"></script>
+		<script type="text/javascript">
+		var $nv4wp = jQuery.noConflict();
+		$nv4wp(window).load(function() {
+			$nv4wp('#slider').nivoSlider({
+				effect:'slideInLeft',
+				slices:15, // For slice animations
+				boxCols: 4, // For box animations
+				boxRows: 2, // For box animations
+				animSpeed:250, // Slide transition speed
+				pauseTime:5500, // How long each slide will show
+				startSlide:0, // Set starting Slide (0 index)
+				directionNav:true, //Next & Prev
+				directionNavHide:true, //Only show on hover
+				controlNav:true, // 1,2,3... navigation
+				controlNavThumbs:false, // Use thumbnails for Control Nav
+				controlNavThumbsFromRel:false, // Use image rel for thumbs
+				controlNavThumbsSearch: '.jpg', // Replace this with...
+				controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
+				keyboardNav:true, //Use left & right arrows
+				pauseOnHover:false, //Stop animation while hovering
+				manualAdvance:false, //Force manual transitions
+				captionOpacity:0.3, //Universal caption opacity
+				prevText: 'Prev', // Prev directionNav text
+				nextText: 'Next', // Next directionNav text
+				beforeChange: function(){}, // Triggers before a slide transition
+				afterChange: function(){}, // Triggers after a slide transition
+				slideshowEnd: function(){}, // Triggers after all slides have been shown
+				lastSlide: function(){}, // Triggers when last slide is shown
+				afterLoad: function(){} // Triggers when slider has loaded
+			});
+		});
+		</script>
+		<script type='text/javascript'>/* <![CDATA[ */ var portfolioSlideshowOptions = {  psHash:0, psLoader:false, psFluid:false };/* ]]> */</script><script type='text/javascript' src='/wp-content/plugins/portfolio-slideshow/js/jquery.cycle.all.min.js?ver=2.99'></script>
+<script type='text/javascript' src='/wp-content/plugins/portfolio-slideshow/js/portfolio-slideshow.min.js?ver=1.5.1'></script>
+<script type='text/javascript' src='http://www.office-solutions.ru/wp-includes/js/wp-embed.min.js?ver=4.5.4'></script>
+</body>
+</html>

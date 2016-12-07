@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta name="google-site-verification" content="yzGJl0z87TNgKyR6WFs1KT3TRNhwCPhkruQCEXkPE5A" />
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta name="language" content="en" />
+
+  <meta name="yandex-verification" content="4b63c77ec2943677" />
+  <meta name='yandex-verification' content='4efce5af89a0ba64' />
+
+   <!-- blueprint CSS framework -->
+   <link rel="stylesheet" type="text/css" href="/assets/003/screen.css" media="screen, projection" />
+   <link rel="stylesheet" type="text/css" href="/assets/003/print.css" media="print" />
+   <!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" href="/assets/003/ie.css" media="screen, projection" />
+   <![endif]-->
+
+   <link rel="stylesheet" type="text/css" href="/assets/004/main.css" />
+   <link rel="stylesheet" type="text/css" href="/assets/003/form.css" />
+
+   <script type="text/javascript" src="/assets/46a0ac98/jquery.min.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+  function changeBaseSlide(slideType) {
+    $.ajax({
+      url: '/site/changeBaseSlide',
+      data: 'typeSlide=' + slideType
+    }).success(function(data) {
+      $('#slidebox-' + slideType).html(data);
+      bindSlider(slideType);
+    });
+  }
+  
+  function bindSlider(slideType) {
+    if ($('#slidebox-' + slideType).html().length) {
+      $("#slidebox-" + slideType).jCarouselLite({
+        vertical: false,
+        hoverPause:true,
+        btnPrev: ".previous",
+        btnNext: ".next",
+        visible: 1,
+        start: 0,
+        scroll: 1,
+        circular: true,
+        auto:5000,
+        speed:500,				
+        btnGo:
+          [".1", ".2",
+          ".3", ".4"],
+        
+        afterEnd: function(a, to, btnGo) {
+          if(btnGo.length <= to){
+            to = 0;
+          }
+          $(".thumbActive").removeClass("thumbActive");
+          $(btnGo[to]).addClass("thumbActive");
+        }
+      });
+		}
+  }
+/*]]>*/
+</script>
+<title>ÐÐÐÐ-Ð¢Ð£Ð  Ð¢ÑÑÑ Ð²Ð¾ Ð²ÑÐµ ÑÑÑÐ°Ð½Ñ Ð¼Ð¸ÑÐ°, Ð½Ð¾Ð²Ð¾ÑÑÐ¸ ÑÑÑÐ¸Ð·Ð¼Ð°, Ð²Ð¸Ð·Ñ</title>
+</head>
+
+<body>
+<div id="page_wrap">
+  <div class="container" id="page">
+
+    <div id="header">
+      <div id="lang_ru" class="lang_link active"><a href="/">RU</a></div><div id="lang_en" class="lang_link"><a href="/page/index1">EN</a></div><div id="lang_de" class="lang_link"><a href="/page/index3">DE</a></div><!--      <div id="logo">--><!--</div>-->
+      <div id="phone">+7 495 545 71 89
++7 495 97 889 97</div>
+      <form action="/site/search" method="get">
+        <input type="text" id="search_query" name="query"/>
+        <button type="submit" id="search_submit"></button>
+      </form>
+    </div><!-- header -->
+
+    <div id="mainmenu">
+      <ul id="yw1">
+<li class="active"><a href="/site/index">ÐÐ»Ð°Ð²Ð½Ð°Ñ</a></li>
+<li><a href="/page/about">Ð ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸</a></li>
+<li><a href="/page/kontakty">ÐÐ¾Ð½ÑÐ°ÐºÑÑ</a></li>
+<li><a href="/country">Ð¡ÑÑÐ°Ð½Ñ</a></li>
+<li><a href="/hotel">ÐÑÐµÐ»Ð¸</a></li>
+<li><a href="/news">ÐÐ¾Ð²Ð¾ÑÑÐ¸</a></li>
+<li><a href="/booklet">ÐÐ°Ð¼ÑÑÐºÐ¸</a></li>
+<li><a href="/visa">ÐÐ¸Ð·Ñ</a></li>
+<li><a href="/tour">Ð¢ÑÑÑ</a></li>
+<li><a href="/site/login">ÐÐ¾Ð¹ÑÐ¸</a></li>
+<li class="menu_end"><a href="/user/register">Ð ÐµÐ³Ð¸ÑÑÑÐ°ÑÐ¸Ñ</a></li>
+</ul>    </div><!-- mainmenu -->
+
+          <div class="breadcrumbs_wrapper">
+                  </div><!-- breadcrumbs -->
+        <div class="banner_top_wrapper"><div class="banner banner_top"><ul style="list-style-type: none !important;"><li><div class="banner_empty" style="width: 704px; height: 90px">ÐÐ´ÐµÑÑ Ð¼Ð¾Ð³Ð»Ð° Ð±Ñ Ð±ÑÑÑ Ð²Ð°ÑÐ° ÑÐµÐºÐ»Ð°Ð¼Ð°</div></li></ul></div></div>
+      <div id="visa-block">			<div id="visa">
+				<div id="visa-left">
+					<ul id="visa-objekt-menu">
+						<li class="tab_tour activ">
+							<a href="#" typeSlide="slide-hot-tours">ÐÐ¾ÑÑÑÐ¸Ðµ ÑÑÑÑ</a>
+						</li>
+            <li class="tab_direction">
+              <a href="#" typeSlide="slide-directions">ÐÐ°Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ñ</a>
+            </li>
+            <!--<li class="tab_country">
+							<a href="#" typeSlide="slide-countries">Ð¡ÑÑÐ°Ð½Ñ</a>
+						</li>-->
+            <li class="tab_hotel">
+							<a href="#" typeSlide="slide-hotels">ÐÑÐµÐ»Ð¸</a>
+						</li>
+            <li class="tab_hostel">
+							<a href="#" typeSlide="slide-hostels">Ð¥Ð¾ÑÑÐµÐ»Ñ</a>
+						</li>
+            <li class="tab_interesting">
+              <a href="#" typeSlide="slide-interesting">ÐÐ¾Ð»ÐµÐ·Ð½Ð¾Ðµ</a>
+            </li>
+					</ul>
+					<div class="sliderbox" id="slidebox-slide-hot-tours" style="display: none;"></div>
+					<div class="sliderbox" id="slidebox-slide-directions" style="display: none;"></div>
+					<div class="sliderbox" id="slidebox-slide-hotels" style="display: none;"></div>
+					<div class="sliderbox" id="slidebox-slide-hostels" style="display: none;"></div>
+					<div class="sliderbox" id="slidebox-slide-interesting" style="display: none;"></div>
+				</div>
+			</div>
+</div>    <div class="span-19">
+   <div id="content">
+      <div id="left_column"><div class="banner banner_left"><ul style="list-style-type: none !important;"><li><div class="banner_empty" style="width: 280px; height: 200px">ÐÐ´ÐµÑÑ Ð¼Ð¾Ð³Ð»Ð° Ð±Ñ Ð±ÑÑÑ Ð²Ð°ÑÐ° ÑÐµÐºÐ»Ð°Ð¼Ð°</div></li><li><div class="banner_empty" style="width: 280px; height: 200px">ÐÐ´ÐµÑÑ Ð¼Ð¾Ð³Ð»Ð° Ð±Ñ Ð±ÑÑÑ Ð²Ð°ÑÐ° ÑÐµÐºÐ»Ð°Ð¼Ð°</div></li><li><div class="banner_empty" style="width: 280px; height: 200px">ÐÐ´ÐµÑÑ Ð¼Ð¾Ð³Ð»Ð° Ð±Ñ Ð±ÑÑÑ Ð²Ð°ÑÐ° ÑÐµÐºÐ»Ð°Ð¼Ð°</div></li><li><div class="banner_empty" style="width: 280px; height: 200px">ÐÐ´ÐµÑÑ Ð¼Ð¾Ð³Ð»Ð° Ð±Ñ Ð±ÑÑÑ Ð²Ð°ÑÐ° ÑÐµÐºÐ»Ð°Ð¼Ð°</div></li><li><div class="banner_empty" style="width: 280px; height: 200px">ÐÐ´ÐµÑÑ Ð¼Ð¾Ð³Ð»Ð° Ð±Ñ Ð±ÑÑÑ Ð²Ð°ÑÐ° ÑÐµÐºÐ»Ð°Ð¼Ð°</div></li></ul></div><div class="metrics_counters"><!-- Yandex.Metrika informer -->
+<p><a rel="nofollow" target="_blank" href="https://metrika.yandex.ru/stat/?id=24556994&amp;from=informer"><img onclick="try{Ya.Metrika.informer({i:this,id:24556994,lang:'ru'});return false}catch(e){}" title="Ð¯Ð½Ð´ÐµÐºÑ.ÐÐµÑÑÐ¸ÐºÐ°: Ð´Ð°Ð½Ð½ÑÐµ Ð·Ð° ÑÐµÐ³Ð¾Ð´Ð½Ñ (Ð¿ÑÐ¾ÑÐ¼Ð¾ÑÑÑ, Ð²Ð¸Ð·Ð¸ÑÑ Ð¸ ÑÐ½Ð¸ÐºÐ°Ð»ÑÐ½ÑÐµ Ð¿Ð¾ÑÐµÑÐ¸ÑÐµÐ»Ð¸)" alt="Ð¯Ð½Ð´ÐµÐºÑ.ÐÐµÑÑÐ¸ÐºÐ°" style="width:88px; height:31px; border:0;" src="//bs.yandex.ru/informer/24556994/3_1_FFFFFFFF_EFEFEFFF_0_pageviews" /></a>   
+ <!-- /Yandex.Metrika informer -->  <!-- Yandex.Metrika counter --> <script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter24556994 = new Ya.Metrika({id:24556994,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script> <noscript><div><img src="//mc.yandex.ru/watch/24556994" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --></p>
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t27.11;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: Ð¿Ð¾ÐºÐ°Ð·Ð°Ð½Ð¾ ÐºÐ¾Ð»Ð¸ÑÐµÑÑÐ²Ð¾ Ð¿ÑÐ¾ÑÐ¼Ð¾ÑÑÐ¾Ð² Ð¸"+
+" Ð¿Ð¾ÑÐµÑÐ¸ÑÐµÐ»ÐµÐ¹' "+
+"border='0' width='88' height='120'><\/a>")
+//--></script><!--/LiveInternet-->
+
+<meta name="google-site-verification" content="yzGJl0z87TNgKyR6WFs1KT3TRNhwCPhkruQCEXkPE5A" />
+<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=6500312534482944"></script>
+
+
+</div></div><div id="right_column"><div class="banner banner_right"><ul style="list-style-type: none !important;"><li><div class="banner_empty" style="width: 125px; height: 125px">ÐÐ´ÐµÑÑ Ð¼Ð¾Ð³Ð»Ð° Ð±Ñ Ð±ÑÑÑ Ð²Ð°ÑÐ° ÑÐµÐºÐ»Ð°Ð¼Ð°</div></li><li><div class="banner_empty" style="width: 125px; height: 125px">ÐÐ´ÐµÑÑ Ð¼Ð¾Ð³Ð»Ð° Ð±Ñ Ð±ÑÑÑ Ð²Ð°ÑÐ° ÑÐµÐºÐ»Ð°Ð¼Ð°</div></li></ul></div><!--check code--><script type="text/javascript">
+<!--
+var _acic={dataProvider:15};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="//www2.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+//-->
+</script></div><div id="center_column"><h1>Ð¢ÑÑÑ Ð²Ð¾ Ð²ÑÐµ ÑÑÑÐ°Ð½Ñ Ð¼Ð¸ÑÐ°, Ð½Ð¾Ð²Ð¾ÑÑÐ¸ ÑÑÑÐ¸Ð·Ð¼Ð°, Ð²Ð¸Ð·Ð¾Ð²Ð°Ñ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ° Ð¸ Ð²Ð¸Ð·Ñ Ð² ÑÑÑÐ°Ð½Ñ Ð¡ÐÐ</h1>
+
+<p><a title="Ð¡ÑÐµÐ´Ð½ÑÑ ÐÐ·Ð¸Ñ. Ð¡ÑÑÐ°Ð½Ñ, ÑÑÑÑ, Ð²Ð¸Ð·Ð°, Ð¾ÑÐµÐ»Ð¸" href="/page/middleasia">Ð¡ÑÐµÐ´Ð½ÑÑ ÐÐ·Ð¸Ñ. Ð¡ÑÑÐ°Ð½Ñ, ÑÑÑÑ, Ð²Ð¸Ð·Ð°, Ð¾ÑÐµÐ»Ð¸</a></p>
+<p><span style="font-size: x-large;"><a href="/page/hostel-v-moskve">ÐÐµÐ´Ð¾ÑÐ¾Ð³Ð¸Ðµ ÑÐ¾ÑÑÐµÐ»Ñ Ð² ÐÐ¾ÑÐºÐ²Ðµ</a>&nbsp;- ÑÐµÑÑ Ð±ÑÐ´Ð¶ÐµÑÐ½ÑÑ ÑÐ¾ÑÑÐµÐ»Ð¾Ð² Ð² ÐÐ¾ÑÐºÐ²Ðµ, 300 Ð¼ÐµÑÑÐ¾Ð² Ð¾Ñ ÐÐ°Ð²ÐµÐ»ÐµÑÐºÐ¾Ð³Ð¾ Ð²Ð¾ÐºÐ·Ð°Ð»Ð° Ð¸ Ð¼ÐµÑÑÐ¾ ÐÐ°Ð²ÐµÐ»ÐµÑÐºÐ°Ñ- Ð·Ð°Ð±ÑÐ¾Ð½Ð¸ÑÐ¾Ð²Ð°ÑÑ Ð¿Ð¾ ÑÐµÐ»ÐµÑÐ¾Ð½Ñ + 7 495 545 7189</span><span style="font-size: xx-small;"><br />
+</span></p>
+<h1><span style="font-size: xx-small;"><strong><a href="/page/online-poisk-turov">ÐÐ¾Ð¸ÑÐº ÑÑÑÐ¾Ð² &nbsp;Ð¸ Ð±ÑÐ¾Ð½Ð¸ÑÐ¾Ð²Ð°Ð½Ð¸Ðµ Ð¾ÑÐµÐ»ÐµÐ¹ ONLINE</a></strong></span><span style="font-size: small;"> </span></h1>
+<h1><span style="font-size: small;">ÐÐ¾Ð¸ÑÐº Ð¾Ð½Ð»Ð°Ð¹Ð½ Ð±ÑÐ¾Ð½Ð¸ÑÐ¾Ð²Ð°Ð½Ð¸Ðµ Ð±Ð¸Ð»ÐµÑÐ¾Ð², Ð¼Ñ Ð¿Ð¾Ð¼Ð¾Ð¶ÐµÐ¼</span></h1>
+<table border="0" style="width: 100%;">
+    <tbody>
+        <tr valign="top">
+            <td>&nbsp;ÐÑÐ¾Ð±ÐµÐ½Ð½Ð¾ÑÑÑÑ ÑÐ¾ÑÑÑÐ´Ð½Ð¸ÑÐµÑÑÐ²Ð° Ð½Ð°ÑÐµÐ¹ ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸, ÑÐ²Ð»ÑÐµÑÑÑ ÑÐ¿ÐµÑÐ¸ÑÐ¸ÑÐ½Ð¾ÑÑÑ Ð¾ÐºÐ°Ð·Ð°Ð½Ð¸Ñ ÑÑÐ»ÑÐ³,&nbsp;ÑÐ°Ðº ÐºÐ°Ðº Ð¼Ñ ÑÐ°Ð±Ð¾ÑÐ°ÐµÐ¼ Ð½Ð° ÑÑÐ½ÐºÐµ ÑÑÑÐ°Ð½ Ð¡ÐÐ Ð¿Ð¾ Ð¾ÑÑÑÐµÑÑÐ²Ð»ÐµÐ½Ð¸Ñ Ð²Ð¸Ð·Ð¾Ð²Ð¾Ð¹ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ¸ Ð¸ Ð²Ð¸Ð· Ð² Ð² ÑÐ°ÐºÐ¸Ðµ ÑÑÑÐ°Ð½Ñ ÐºÐ°Ðº ÐÐ·ÐµÑÐ±Ð°Ð¹Ð´Ð¶Ð°Ð½, ÐÐµÐ»Ð°ÑÑÑÑ ( ÐÐµÐ»Ð¾ÑÑÑÑÐ¸Ñ), ÐÐ°Ð·Ð°ÑÑÑÐ°Ð½, Ð¢ÑÑÐºÐ¼ÐµÐ½Ð¸ÑÑÐ°Ð½, Ð£Ð·Ð±ÐµÐºÐ¸ÑÑÐ°Ð½ Ð¸ Ð Ð¾ÑÑÐ¸Ñ, ÐÑÑÐ·Ð¸Ð¸, ÐÑÐ¼ÐµÐ½Ð¸Ñ, ÐÑÑÐ³ÑÐ·ÑÑÐ°Ð½, Ð¢Ð°Ð´Ð¶Ð¸ÐºÐ¸ÑÑÐ°Ð½. Ð¡ 1991 Ð³Ð¾Ð´Ð° ÐºÐ°Ð¶Ð´Ð¾Ðµ Ð³Ð¾ÑÑÐ´Ð°ÑÑÑÐ²Ð¾ ÑÑÑÐ°Ð½ Ð¡ÐÐ Ð¿Ð¾Ð»ÑÑÐ¸Ð»Ð¾ Ð½ÐµÐ·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÑ Ð¸ ÑÐµÐ³Ð»Ð°Ð¼ÐµÐ½Ñ Ð¿Ð¾Ð»ÑÑÐµÐ½Ð¸Ñ Ð²Ð¸Ð·Ð¾Ð²Ð¾Ð¹ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ¸ Ð¸ Ð²Ð¸Ð· Ð¾ÑÐ»Ð¸ÑÐ°ÐµÑÑÑ Ð¾Ñ Ð¿ÑÐ¾ÑÐµÐ´ÑÑ Ð¾Ð±ÑÑÐ½Ð¾Ð¹ Ð¿ÑÐ°ÐºÑÐ¸ÐºÐ¸. &nbsp;ÐÐ°Ð¿ÑÐ¸Ð¼ÐµÑ, Ð² Ð ÐµÑÐ¿ÑÐ±Ð»Ð¸ÐºÐµ ÐÐ°Ð·Ð°ÑÑÑÐ°Ð½, Ð¿Ð¾Ð»ÑÑÐµÐ½Ð¸Ðµ Ð²Ð¸Ð·Ð¾Ð²Ð¾Ð¹ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ¸ Ð´Ð»Ñ Ð³ÑÐ°Ð¶Ð´Ð°Ð½ Ð¸Ð½Ð¾ÑÑÑÐ°Ð½Ð½ÑÑ Ð³Ð¾ÑÑÐ´Ð°ÑÑÑÐ², ÑÐ²Ð»ÑÐµÑÑÑ Ð½Ð°Ð¸Ð±Ð¾Ð»ÐµÐµ Ð±Ð»Ð°Ð³Ð¾Ð¿ÑÐ¸ÑÑÐ½ÑÐ¼, Ð² ÑÐ¾ Ð²ÑÐµÐ¼Ñ ÐºÐ°Ðº, Ð¿Ð¾Ð»ÑÑÐµÐ½Ð¸Ðµ Ð²Ð¸Ð·Ñ Ð² Ð£Ð·Ð±ÐµÐºÐ¸ÑÑÐ°Ð½ ( Ð³Ð´Ðµ Ð¾Ð±Ð»ÐµÐ³ÑÐµÐ½Ð½ÑÐ¹ Ð¿Ð¾ÑÑÐ´Ð¾Ðº Ð¿Ð¾Ð»ÑÑÐµÐ½Ð¸Ñ Ð²Ð¸Ð· ÑÐ²Ð»ÑÐµÑÑÑ<br />
+            Ð¿ÑÐ¸Ð¾ÑÐ¸ÑÐµÑÐ½Ð¾Ð¹ ÑÐ¾Ð»ÑÐºÐ¾ Ð´Ð»Ñ 9 ÑÑÑÐ°Ð½), Ð¢ÑÑÐºÐ¼ÐµÐ½Ð¸ÑÑÐ°Ð½, ÐÐ·ÐµÑÐ±Ð°Ð¹Ð´Ð¶Ð°Ð½, ÐÐµÐ»Ð°ÑÑÑÑ, Ð¾ÑÐ»Ð¾Ð¶Ð½ÑÐµÑÑÑ Ð¿Ð¾Ð»ÑÑÐµÐ½Ð¸ÐµÐ¼ Ð²Ð¸Ð·Ð¾Ð²Ð¾Ð¹ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ¸ Ð¸Ð·-Ð·Ð° Ð´Ð¾Ð¿Ð¾Ð»Ð½Ð¸ÑÐµÐ»ÑÐ½ÑÑ ÑÑÐµÐ±Ð¾Ð²Ð°Ð½Ð¸Ð¹ ( ÑÐ°ÐºÐ¸Ñ ÐºÐ°Ðº Ð¾Ð¿Ð»Ð°ÑÐ° Ð¾ÑÐµÐ»ÐµÐ¹, Ð¿Ð¾Ð»ÑÑÐµÐ½Ð¸Ðµ Ð²Ð¸Ð·Ð¾Ð²Ð¾Ð¹ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ¸ ÑÐ¾Ð»ÑÐºÐ¾ Ð¾Ñ Ð¿ÑÐ¸Ð½Ð¸Ð¼Ð°ÑÑÐµÐ¹ ÑÑÐ¾ÑÐ¾Ð½Ð° Ð¸ Ð´Ð¾Ð¿Ð¾Ð»Ð½Ð¸ÑÐµÐ»ÑÐ½Ð¾Ð¹ Ð¿ÑÐ¾Ð²ÐµÑÐºÐ¸ ÐÐÐÐ¾Ð¼ ÑÑÐ¸Ñ ÑÑÑÐ°Ð½). ÐÐ°ÑÐ° Ð·Ð°Ð´Ð°ÑÐ° Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑÐ½Ð¾ ÐºÐ¾Ð¼ÑÐ¾ÑÑÐ½Ð¾ Ð¾ÐºÐ°Ð·Ð°ÑÑ ÑÑÐ»ÑÐ³Ð¸ Ð¸ Ð¼Ð¸Ð½Ð¸Ð¼Ð¸Ð·Ð¸ÑÐ¾Ð²Ð°ÑÑ Ð¿Ð¾ÑÐµÑÑ Ð²ÑÐµÐ¼ÐµÐ½Ð¸ Ð´Ð»Ñ Ð½Ð°ÑÐ¸Ñ ÐºÐ»Ð¸ÐµÐ½ÑÐ¾Ð².<br />
+            Ð Ð°Ð±Ð¾ÑÐ°Ñ Ð½Ð° ÑÑÐ½ÐºÐµ Ñ 2003 Ð³Ð¾Ð´Ð°, Ð¼Ñ ÑÑÐ¿ÐµÑÐ½Ð¾ Ð·Ð°Ð²Ð¾ÐµÐ²Ð°Ð»Ð¸ Ð´Ð¾Ð²ÐµÑÐ¸Ñ Ð½Ð°ÑÐ¸Ñ ÐºÐ»Ð¸ÐµÐ½ÑÐ¾Ð². Ð¡Ð¿ÐµÑÐ¸ÑÐ¸ÐºÐ° Ð½Ð°ÑÐµÐ¹ ÑÐ°Ð±Ð¾ÑÑ Ð´Ð¾ÐºÐ°Ð·ÑÐ²Ð°ÐµÑ, ÑÑÐ¾ Ð½Ð°ÑÐ° ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸ ÑÐ¼Ð¾Ð¶ÐµÑ Ð¾ÐºÐ°Ð·Ð°ÑÑ Ð²Ð¸Ð·Ð¾Ð²ÑÑ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ° Ð´Ð»Ñ ÑÑÑÐ¸ÑÑÐ¾Ð² Ð¸ Ð±Ð¸Ð·Ð½ÐµÑÐ¼ÐµÐ½Ð¾Ð² Ð´Ð°Ð¶Ðµ Ð² Ð°ÑÑÐ¾Ð¿Ð¾ÑÑÑ ÐÐ°Ð·Ð°ÑÑÑÐ°Ð½Ð°, Ð¾ÑÐ¾ÑÐ¼Ð¸ÑÑ Ð¿Ð°ÐºÐµÑ Ð´Ð»Ñ Ð¿Ð¾Ð»ÑÑÐµÐ½Ð¸Ñ Ð²Ð¸Ð·Ñ Ð² Ð¢ÑÑÐºÐ¼ÐµÐ½Ð¸ÑÑÐ°Ð½ ( ÑÐ²Ð»ÑÑÑÐµÐ¹ÑÑ ÑÐ°Ð¼Ð¾Ð¹ Ð·Ð°ÐºÑÑÑÐ¾Ð¹ ÑÑÑÐ°Ð½Ð¾Ð¹ Ð±ÑÐ²ÑÐµÐ³Ð¾ Ð¡Ð¾Ð²ÐµÑÑÐºÐ¾Ð³Ð¾ Ð¡Ð¾ÑÐ·Ð°), Ð¿Ð¾Ð»ÑÑÐµÐ½Ð¸Ðµ Ð²Ð¸Ð·Ñ Ð² ÑÑÑ ÑÑÑÐ°Ð½Ñ Ð½Ð°Ð¸Ð±Ð¾Ð»ÐµÐµ ÑÐ»Ð¾Ð¶Ð½Ð°Ñ Ð¿ÑÐ¾ÑÐµÐ´ÑÑÐ°.</td>
+            <td class="text_td">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+<h2>Ð¡Ð¿ÐµÑÐ¸Ð°Ð»ÑÐ½ÑÐµ Ð¿ÑÐµÐ´Ð»Ð¾Ð¶ÐµÐ½Ð¸Ñ</h2>
+<table border="0" style="margin: 0px; padding: 0px; border-collapse: collapse; border: 0px; vertical-align: top; font-size: 11px; width: 644px; ">
+    <tbody>
+        <tr valign="top" style="margin: 0px; padding: 0px; border-collapse: collapse; border: 0px; vertical-align: top; ">
+            <td style="margin: 0px; padding: 4px; border-collapse: collapse; border: 0px; vertical-align: top; font-size: 11px; "><a style="color: rgb(0, 132, 168); text-decoration: none; " href="/visa"> 		<img width="218" height="135" style="border: 0px; margin: 0px; padding: 10px 11px 11px;" alt="ÐÑÐ¾ÑÐ¼Ð»ÐµÐ½Ð¸Ðµ Ð²Ð¸Ð·Ñ" src="/userfiles/image/logo_visa.jpg" class="border_img" /> 	</a></td>
+            <td style="margin: 0px; padding: 4px; border-collapse: collapse; border: 0px; vertical-align: top; font-size: 1.1em; " class="text_td">
+            <ul style="color: rgb(0, 128, 128); padding: 0px; margin: 0px; font-family: Tahoma, sans-serif; font-size: 13px; font-weight: bold;">
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/page/v-bolgary" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐ¸Ð·Ð° Ð² ÐÐ¾Ð»Ð³Ð°ÑÐ¸Ñ</a>&nbsp;<sup class="red" style="color: rgb(255, 0, 0);">new</sup></li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/page/v-ispany" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐ¸Ð·Ð° Ð² ÐÑÐ¿Ð°Ð½Ð¸Ñ</a>&nbsp;Ð²Ð¸Ð·Ð° Ð¸ ÑÑÐ¾Ð¸Ð¼Ð¾ÑÑÑ, ÑÑÐ¾Ðº</li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/visa/v-kazahstan" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐ¸Ð·Ð° Ð² ÐÐ°Ð·Ð°ÑÑÑÐ°Ð½</a>&nbsp;Ð²Ð¸Ð·Ð° Ð¸ ÑÑÐ¾Ð¸Ð¼Ð¾ÑÑÑ, ÑÑÐ¾Ðº</li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/page/visa-to-kazakhstan" style="color: rgb(102, 102, 102); text-decoration: none;">Visa to Kazakhstan</a></li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/visa/viza-v-indiyu" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐ¸Ð·Ð° Ð² ÐÐ½Ð´Ð¸Ñ Ð²Ð¸Ð·Ð° Ð¸ ÑÑÐ¾Ð¸Ð¼Ð¾ÑÑÑ, ÑÑÐ¾Ðº</a></li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/visa/viza-v-tadzhikistan" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐ¸Ð·Ð° Ð² Ð¢Ð°Ð´Ð¶Ð¸ÐºÐ¸ÑÑÐ°Ð½</a>&nbsp;ÑÑÐ¾Ð¸Ð¼Ð¾ÑÑÑ, ÑÑÐ¾Ðº</li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/visa/viza-v-kitay" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐ¸Ð·Ð° Ð² ÐÐ¸ÑÐ°Ð¹&nbsp;</a>Ð²Ð¸Ð·Ð° Ð¸ ÑÑÐ¾Ð¸Ð¼Ð¾ÑÑÑ, ÑÑÐ¾Ðº</li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/visa/vizavrossiyu" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐ¸Ð·Ð° Ð² Ð Ð¾ÑÑÐ¸Ñ</a>&nbsp; Ð²Ð¸Ð·Ð° Ð¸ ÑÑÐ¾Ð¸Ð¼Ð¾ÑÑÑ, ÑÑÐ¾Ðº</li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/visa/viza-v-ameriku" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐ¸Ð·Ð° Ð² Ð¡Ð¨Ð</a>&nbsp;Ð²Ð¸Ð·Ð° Ð¸ ÑÑÐ¾Ð¸Ð¼Ð¾ÑÑÑ, ÑÑÐ¾Ðº</li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/visa/v-belorussiu" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐ¸Ð·Ð° Ð² ÐÐµÐ»Ð°ÑÑÑÑ&nbsp;</a>Ð²Ð¸Ð·Ð° Ð¸ ÑÑÐ¾Ð¸Ð¼Ð¾ÑÑÑ, ÑÑÐ¾Ðº</li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/visa/v-uzbekistan" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐ¸Ð·Ð° Ð² Ð£Ð·Ð±ÐµÐºÐ¸ÑÑÐ°Ð½&nbsp;</a>Ð²Ð¸Ð·Ð° Ð¸ ÑÑÐ¾Ð¸Ð¼Ð¾ÑÑÑ, ÑÑÐ¾Ðº</li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/visa/v-azerbaidzhan" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐ¸Ð·Ð° Ð² ÐÐ·ÐµÑÐ±Ð°Ð¹Ð´Ð¶Ð°Ð½</a>&nbsp;Ð²Ð¸Ð·Ð° Ð¸ ÑÑÐ¾Ð¸Ð¼Ð¾ÑÑÑ, ÑÑÐ¾Ðº</li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/visa/visa-turkmenistan" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐ¸Ð·Ð° Ð² Ð¢ÑÑÐºÐ¼ÐµÐ½Ð¸ÑÑÐ°Ð½</a>, Ð²Ð¸Ð·Ð°, ÑÑÐ¾Ð¸Ð¼ÑÐ¾ÑÑ Ð¸ ÑÑÐ¾Ðº</li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/tour/336" style="color: rgb(102, 102, 102); text-decoration: none;">Ð¢ÑÑÑ Ð´Ð»Ñ Ð¿ÐµÐ½ÑÐ¸Ð¾Ð½ÐµÑÐ¾Ð² -Ð¡Ð¸ÑÐ¸Ð»Ð¸Ñ</a></li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/page/ankety-na-vizy" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐ½ÐºÐµÑÐ° Ð½Ð° Ð²Ð¸Ð·Ñ</a></li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/news/2951" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐµÐ´Ð¾ÑÐ¾Ð³Ð°Ñ Ð³Ð¾ÑÑÐ¸Ð½Ð¸ÑÐ°, Ð½ÐµÐ´Ð¾ÑÐ¾Ð³Ð¾Ð¹ ÑÐ¾ÑÑÐµÐ» Ð² ÐÐ¾ÑÐºÐ²Ðµ, Ð¼ÐµÑÑÐ¾ ÐÐ²ÑÐ¾Ð·Ð°Ð²Ð¾Ð´ÑÐºÐ°Ñ</a></li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/news/3011" style="color: rgb(102, 102, 102); text-decoration: none;">ÐÐ¾Ð²ÑÐ¹ ÑÐ¾ÑÑÐµÐ» Ð½Ð° Ð¼ÐµÑÑÐ¾ ÐÐ²ÑÐ¾Ð·Ð°Ð´Ð¾Ð²ÑÐºÐ°Ñ</a></li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);">Ð½ÐµÐ´Ð¾ÑÐ¾Ð³Ð¾Ð¹ Ñ<a href="/news/3015" style="color: rgb(102, 102, 102); text-decoration: none;">Ð¾ÑÑÐµÐ» Ð½Ð° Ð¼ÐµÑÑÐ¾ ÐÐ°Ð²ÐµÐ»ÐµÑÐºÐ°Ñ<br />
+                </a></li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/page/podmoskove-otdyh" style="color: rgb(102, 102, 102); text-decoration: none;">Ð¾ÑÐ´ÑÑ Ð² ÐÐ¾Ð´Ð¼Ð¾ÑÐºÐ¾Ð²ÑÐµ</a></li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/page/uzbekistan" style="color: rgb(102, 102, 102); text-decoration: none;">Ð£Ð·Ð±ÐµÐºÐ¸ÑÑÐ°Ð½</a></li>
+                <li style="padding: 4px 0px; margin: 0px 5px 0px 28px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(150, 150, 150);"><a href="/page/chernogor" style="color: rgb(102, 102, 102); text-decoration: none;">Ð§ÐµÑÐ½Ð¾Ð³Ð¾ÑÐ¸Ñ</a>&nbsp;<sup class="red" style="color: rgb(255, 0, 0);">new</sup></li>
+            </ul>
+            <p style="margin: 0px; padding: 0px; color: rgb(102, 102, 102); font-family: Tahoma, sans-serif; text-align: justify; ">&nbsp;</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h2>Ð¡Ð¿ÐµÑÐ¸Ð°Ð»ÑÐ½Ð°Ñ ÑÐµÐ½Ð°</h2>
+<table border="0" style="width: 100%;">
+    <tbody>
+        <tr valign="top">
+            <td><a href="/tour/uzbekistan-viptour-1"><img width="218" height="135" alt="VIP ÑÑÑ Ð¿Ð¾ Ð£Ð·Ð±ÐµÐºÐ¸ÑÑÐ°Ð½Ñ" class="border_img" src="/userfiles/image/main_uzbekistan_m.jpg" /></a></td>
+            <td class="text_td">
+            <h3><a href="/tour/439">Ð­ÐºÑÐºÑÑÑÐ¸Ð¾Ð½Ð½ÑÐ¹ VIP ÑÑÑ Ð¿Ð¾ Ð£Ð·Ð±ÐµÐºÐ¸ÑÑÐ°Ð½Ñ</a> ÑÐµÐ»ÑÐ¹ Ð³Ð¾Ð´</h3>
+            7 Ð´Ð½ÐµÐ¹, 6 Ð½Ð¾ÑÐµÐ¹ Ð¿ÐµÑÐµÐµÐ·Ð´Ñ Ð¿Ð¾ Ð£Ð·Ð±ÐµÐºÐ¸ÑÑÐ°Ð½Ñ Ð½Ð° Ð°Ð²ÑÐ¾Ð¼Ð¾Ð±Ð¸Ð»Ðµ &quot;ÐÐµÑÑÐµÐ´ÐµÑ S600&quot; Ð¸ Ð°Ð²Ð¸Ð° Ð¿ÐµÑÐµÐ»ÐµÑ...
+            <p>ÐÑÐ¾Ð¶Ð¸Ð²Ð°Ð½Ð¸Ðµ Ð² Ð¾ÑÐµÐ»ÑÑ: Ð¾Ð´Ð½Ð¾Ð¼ÐµÑÑÐ½Ð¾Ðµ/Ð´Ð²ÑÑÐ¼ÐµÑÑÐ½Ð¾Ðµ LUX Ð² Ð¾ÑÐµÐ»ÑÑ</p>
+            Ð¢Ð°ÑÐºÐµÐ½Ñ - Ð¥Ð¸Ð²Ð° - Ð£ÑÐ³ÐµÐ½Ñ - ÐÑÑÐ°ÑÐ° - Ð¡Ð°Ð¼Ð°ÑÐºÐ°Ð½Ð´ - Ð¢Ð°ÑÐºÐµÐ½Ñ</td>
+        </tr>
+    </tbody>
+</table>
+<h2>ÐÐ½ÐºÐµÑÑ Ð½Ð° Ð²Ð¸Ð·Ñ</h2>
+<div class="children_links">
+<ul>
+    <li><a href="/page/anketa-na-vizu-v-greciyu">ÐÐ½ÐºÐµÑÐ° Ð½Ð° Ð²Ð¸Ð·Ñ Ð² ÐÑÐµÑÐ¸Ñ.</a></li>
+    <li>ÐÐ½ÐºÐµÑÐ° Ð½Ð° ÐºÐ¸Ð·Ñ Ð² ÐÑÐ¼ÐµÐ½Ð¸Ñ</li>
+    <li><a href="/page/anketa-na-vizu-v-belgiyu">ÐÐ½ÐºÐµÑÐ° Ð½Ð° Ð²Ð¸Ð·Ñ Ð² ÐÐµÐ»ÑÐ³Ð¸Ñ.</a></li>
+    <li><a href="/page/anketu-na-vizu-v-islandiyu">ÐÐ½ÐºÐµÑÑ Ð½Ð° Ð²Ð¸Ð·Ñ Ð² ÐÑÐ»Ð°Ð½Ð´Ð¸Ñ.</a></li>
+    <li><a href="/page/anketa-na-vizu-v-italiyu">ÐÐ½ÐºÐµÑÐ° Ð½Ð° Ð²Ð¸Ð·Ñ Ð² ÐÑÐ°Ð»Ð¸Ñ.</a></li>
+    <li><a href="/page/anketa-turkmenistan">ÐÐ½ÐºÐµÑÐ° Ð½Ð° Ð²Ð¸Ð·Ñ Ð² Ð¢ÑÑÐºÐ¼ÐµÐ½Ð¸Ñ</a></li>
+    <li><a href="/page/anketa-na-vizu-v-gruziyu">ÐÐ½ÐºÐµÑÐ° Ð½Ð° Ð²Ð¸Ð·Ñ Ð² ÐÑÑÐ·Ð¸Ñ</a></li>
+    <li><a href="/page/anketa-na-vizu-v-kosta-riku">ÐÐ½ÐºÐµÑÐ° Ð½Ð° Ð²Ð¸Ð·Ñ Ð² ÐÐ¾ÑÑÐ°-Ð Ð¸ÐºÑ</a></li>
+    <li><a href="/page/anketa-na-vizu-v-kanadu">ÐÐ½ÐºÐµÑÐ° Ð½Ð° Ð²Ð¸Ð·Ñ Ð² ÐÐ°Ð½Ð°Ð´Ñ.</a></li>
+    <li><a href="/page/anketa-na-vizu-v-singapur">ÐÐ½ÐºÐµÑÐ° Ð½Ð° Ð²Ð¸Ð·Ñ Ð² Ð¡Ð¸Ð½Ð³Ð°Ð¿ÑÑ</a></li>
+    <li><a href="/page/anketa-na-vizu-v-avstriyu">ÐÐ½ÐºÐµÑÐ° Ð½Ð° Ð²Ð¸Ð·Ñ Ð² ÐÐ²ÑÑÑÐ¸Ñ.</a></li>
+</ul>
+<ul>
+    <li><a href="/page/anketa-na-vizu-v-vengriyu">ÐÐ½ÐºÐµÑÐ° Ð½Ð° Ð²Ð¸Ð·Ñ Ð² ÐÐµÐ½Ð³ÑÐ¸Ñ.</a></li>
+    <li><a href="/page/anketa-shveycariya">ÐÐ½ÐºÐµÑÐ° Ð²ÑÐµÐ·Ð¶Ð°ÑÑÐµÐ³Ð¾ Ð² Ð¨Ð²ÐµÐ¹ÑÐ°ÑÐ¸Ñ</a></li>
+    <li><a href="/page/anketa-viza-kitay-gonkong">ÐÐ½ÐºÐµÑÐ° Ð¾Ð¿ÑÐ¾ÑÐ½Ð¸Ðº Ð½Ð° Ð²Ð¸Ð·Ñ Ð² ÐÐ¸ÑÐ°Ð¹, ÐÐ¾Ð½ÐºÐ¾Ð½Ð³</a></li>
+    <li><a href="/page/anketa-peru">ÐÐ½ÐºÐµÑÐ½ÑÐµ Ð´Ð°Ð½Ð½ÑÐµ Ð´Ð»Ñ Ð²Ð¸Ð·Ñ Ð² ÐÐµÑÑ</a></li>
+    <li><a href="/page/anketa-viza-yestoniya">ÐÐ½ÐºÐµÑÐ° Ð²Ð¸Ð·Ð° Ð­ÑÑÐ¾Ð½Ð¸Ñ</a></li>
+    <li><a href="/page/anketa-na-vizu-v-portugaliyu">ÐÐ½ÐºÐµÑÐ° Ð½Ð° Ð²Ð¸Ð·Ð° Ð² ÐÐ¾ÑÑÑÐ³Ð°Ð»Ð¸Ñ</a></li>
+    <li><a href="/page/anketa-na-vizu-v-mongoliyu">ÐÐ½ÐºÐµÑÐ° Ð½Ð° Ð²Ð¸Ð·Ñ Ð² ÐÐ¾Ð½Ð³Ð¾Ð»Ð¸Ñ.</a></li>
+    <li><a href="/page/anketa--na-vizu-v-azerbajdzhan">ÐÐ½ÐºÐµÑÐ°  Ð½Ð° Ð²Ð¸Ð·Ñ Ð² ÐÐ·ÐµÑÐ±Ð°Ð¹Ð´Ð¶Ð°Ð½</a></li>
+</ul>
+</div>
+<p>&nbsp;</p></div>   </div><!-- content -->
+</div>
+<div class="span-5 last">
+   <div id="sidebar">
+      </div><!-- sidebar -->
+</div>
+
+  </div><!-- page -->
+  
+  <div class="interesting_wrapper"><div id="interesting"><div id="block_blogs"><h2>ÐÐ»Ð¾Ð³Ð¸</h2><ul><li><span><span>Nikkolla</span><strong>ÐÐ°Ð·Ð¸Ð½Ð¾ Ð½Ð° ÐÐ°Ð»ÑÑÐµ â Ð¶ÐµÐ¼ÑÑÐ¶Ð¸Ð½Ñ Ð¾ÑÑÑÐ¾Ð²Ð°</strong></span><p></p><a href="/blog/79">ÐÐ¾Ð´ÑÐ¾Ð±Ð½ÐµÐµ</a></li><li><span><span>Nikkolla</span><strong>ÐÐ·Ð°ÑÑÐ½ÑÐµ Ð¸Ð³ÑÑ Ð² Monaco Monte-Carlo</strong></span><p></p><a href="/blog/78">ÐÐ¾Ð´ÑÐ¾Ð±Ð½ÐµÐµ</a></li><li><span><span>Nikkolla</span><strong>Ð¡Ð°Ð¼ÑÐµ Ð¸Ð·Ð²ÐµÑÑÐ½ÑÐµ ÐºÐ°Ð·Ð¸Ð½Ð¾ Ð² Ð³Ð¾ÑÐ¾Ð´Ðµ ÐÐ°Ñ-ÐÐµÐ³Ð°Ñ</strong></span><p>
+</p><a href="/blog/77">ÐÐ¾Ð´ÑÐ¾Ð±Ð½ÐµÐµ</a></li></ul><button type="button" onclick="location.href=&#039;/blog&#039;" class="fright">ÐÑÐµ Ð±Ð»Ð¾Ð³Ð¸</button><div id="block_tourist_corner"><a href="/page/ugolok-turista-otzyvy-foto">Ð£Ð³Ð¾Ð»Ð¾Ðº ÑÑÑÐ¸ÑÑÐ°</a></div></div><div id="block_news"><a href="/news"><h2>ÐÐ¾Ð²Ð¾ÑÑÐ¸</h2></a><ul><li><span><a href="/news/3309"><img src="/images/noimage.jpg" /></a></span><div><strong>2016-10-25 09:57:26</strong><a href="/news/3309">ÐÐ·ÑÑÐ² Ð² ÐÐ½ÑÐ°Ð»Ð¸Ð¸</a><p>&nbsp;ÐÑÐ¾Ð¸Ð·Ð¾ÑÐµÐ» Ð²Ð·Ð²ÑÑÐ² Ð² ÐºÑÑÐ¾ÑÑÐ½Ð¾Ð¼ Ð³Ð¾ÑÐ¾Ð´Ðµ ÐÐ½ÑÐ°Ð»Ð¸Ñ. ÐÐ´Ð¸Ð½ Ð¿Ð¾Ð´ÑÐ¾ÑÑÐ¾Ðº Ð¿Ð¾Ð³Ð¸Ð±, Ð¿Ð¾ÐºÐ° Ð¿Ð¾...</p></div></li><li><span><a href="/news/3308"><img src="/images/noimage.jpg" /></a></span><div><strong>2016-07-18 11:46:51</strong><a href="/news/3308"> Ð Ð³Ð¾ÑÐ¾Ð´Ðµ  ÐÐ»Ð¼Ð°ÑÑ ÑÐ¾Ð²ÐµÑÑÐµÐ½Ð½Ð¾ Ð½Ð°Ð¿Ð°Ð´ÐµÐ½Ð¸Ðµ Ð½Ð°...</a><p>&nbsp;Ð Ð³Ð¾ÑÐ¾Ð´Ðµ &nbsp;ÐÐ»Ð¼Ð°ÑÑ ÑÐ¾Ð²ÐµÑÑÐµÐ½Ð½Ð¾ Ð½Ð°Ð¿Ð°Ð´ÐµÐ½Ð¸Ðµ Ð½Ð° Ð´ÐµÐ¿Ð°ÑÑÐ°Ð¼ÐµÐ½Ñ ÐÐ¾Ð¼Ð¸ÑÐµÑÐ°...</p></div></li><li><span><a href="/news/3307"><img src="/images/noimage.jpg" /></a></span><div><strong>2016-02-15 16:25:22</strong><a href="/news/3307">ÐÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ð° ÑÐµÐºÐ»Ð°Ð¼Ð½Ð¾Ð³Ð¾ ÑÑÑÐ° ÐÐ°ÐºÑ â ÐÐ°Ð³Ð¸Ñ â ÐÑÐ±ÑÐ»Ñ -...</a><p>ÐÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ð° ÑÑÑÐ° ÐÐ°ÐºÑ &ndash; ÐÐ°Ð³Ð¸Ñ &ndash; ÐÑÐ±ÑÐ»Ñ - ÐÐ°ÐºÑ 6 Ð´Ð½ÐµÐ¹ 5 Ð½Ð¾ÑÐµÐ¹
+04 Ð¼Ð°ÑÑÐ° &nbsp;1...</p></div></li></ul></div><div id="block_interesting"><h2>ÐÐ½ÑÐµÑÐµÑÐ½Ð¾Ðµ</h2><ul><li><a href="/page/interesnoe">Ð¡ÑÐ°ÑÑÐ¸</a></li><li><a href="/page/rabota-zarubezhom">Ð Ð°Ð±Ð¾ÑÐ° Ð¸ Ð¾Ð±ÑÑÐµÐ½Ð¸Ðµ Ð·Ð°ÑÑÐ±ÐµÐ¶Ð¾Ð¼</a></li><li><a href="/page/strany-mira-fotografii">Ð¤Ð¾ÑÐ¾ ÑÑÑÐ°Ð½</a></li><li><a href="/page/muzei-mira">ÐÑÐ·ÐµÐ¸</a></li><li><a href="/page/ostrova">ÐÑÑÑÐ¾Ð²Ð°</a></li><li><a href="/page/dajving-v-mire">Ð¡ÑÑÐ°Ð½Ñ Ð´Ð°Ð¹Ð²Ð¸Ð½Ð³Ð°</a></li><li><a href="/page/seminary-ot-turoperatorov">Ð¡ÐµÐ¼Ð¸Ð½Ð°ÑÑ Ð¾Ñ ÑÑÑÐ¾Ð¿ÐµÑÐ°ÑÐ¾ÑÐ¾Ð²</a></li><li><a href="/page/anekdoty">ÐÐ½ÐµÐºÐ´Ð¾ÑÑ ÑÑÑÐ¸Ð·Ð¼, ÑÐ¼ÐµÑÐ½ÑÐµ ÑÐ¸ÑÑÐ°ÑÐ¸Ð¸</a></li><li><a href="/page/kak-pravilno-ne-znakomitsya-na-sajtah-znakomstv">ÐÐ°Ðº Ð¿ÑÐ°Ð²Ð¸Ð»ÑÐ½Ð¾ Ð½Ðµ Ð·Ð½Ð°ÐºÐ¾Ð¼Ð¸ÑÑÑÑ Ð½Ð° ÑÐ°Ð¹ÑÐ°Ñ Ð·Ð½Ð°ÐºÐ¾Ð¼ÑÑÐ²</a></li><li><a href="/page/smeshnye-kartinki">Ð¡Ð¼ÐµÑÐ½ÑÐµ ÐºÐ°ÑÑÐ¸Ð½ÐºÐ¸ Ð¾Ñ Ð½Ð°ÑÐ¸Ñ ÑÑÑÐ¸ÑÑÐ¾Ð²</a></li></ul></div></div></div>  <div class="clear"></div>
+  <div class="v_spacer">
+     &nbsp;</div>
+</div>
+
+<div id="footer_wrap">
+  <div class="footer_top">
+    <div id="footer" class="container">
+      <div class="footer_menu"><ul id="yw2">
+<li><a>Ð Ð°Ð·Ð´ÐµÐ»Ñ:</a>
+<ul>
+<li><a href="/hotel">ÐÑÐµÐ»Ð¸</a></li>
+<li><a href="/news">ÐÐ¾Ð²Ð¾ÑÑÐ¸</a></li>
+<li><a href="/booklet">ÐÐ°Ð¼ÑÑÐºÐ¸</a></li>
+<li><a href="/visa">ÐÐ¸Ð·Ñ</a></li>
+<li class="menu_end"><a href="/tour">Ð¢ÑÑÑ</a></li>
+</ul>
+</li>
+<li><a class="header">ÐÐ¾Ð»ÐµÐ·Ð½Ð¾Ðµ:</a>
+<ul>
+<li><a href="/page/zashita-prav-turistov">ÐÐ°ÑÐ¸ÑÐ° Ð¿ÑÐ°Ð² ÑÑÑÐ¸ÑÑÐ¾Ð²</a></li>
+<li><a href="/page/yuridicheskaya-pomosh-v-turizme">Ð®ÑÐ¸Ð´Ð¸ÑÐµÑÐºÐ°Ñ Ð¿Ð¾Ð¼Ð¾ÑÑ Ð² ÑÑÑÐ¸Ð·Ð¼Ðµ</a></li>
+<li><a href="/page/zagranpasport">ÐÑÐ¾ÑÐ¼Ð»ÐµÐ½Ð¸Ðµ Ð·Ð°Ð³ÑÐ°Ð½Ð¿Ð°ÑÐ¿Ð¾ÑÑÐ°</a></li>
+<li><a href="/page/turisticheskie-vystavki">Ð¢ÑÑÐ¸ÑÑÐ¸ÑÐµÑÐºÐ¸Ðµ Ð²ÑÑÑÐ°Ð²ÐºÐ¸</a></li>
+<li class="menu_end"><a href="/page/razdel-prizyvnika">Ð Ð°Ð·Ð´ÐµÐ» Ð¿ÑÐ¸Ð·ÑÐ²Ð½Ð¸ÐºÐ°</a></li>
+</ul>
+</li>
+<li class="menu_end"><a class="header">ÐÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ñ:</a>
+<ul>
+<li><a href="/page/yuridicheskaya-pomosh-v-turizme/yuridicheskaya-pomosch-turagenstvam-i-turoperatoram/lic">ÐÐ¸ÑÐµÐ½Ð·Ð¸Ñ</a></li>
+<li class="menu_end"><a href="/page/about">Ð ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸</a></li>
+</ul>
+</li>
+</ul></div>
+      <div class="footer_contact">
+        <div>
+<h2>ÐÐ´ÑÐµÑ</h2>
+<span class="moved">ÐÐµÑÐµÐµÑÐ°Ð»Ð¸</span>
+<p>ÐÐ¾ÑÐ¾Ð½ÑÐ¾Ð²ÑÐºÐ°Ñ Ð´Ð¾Ð¼ 6 ÑÑÑ 2 &nbsp;<img width="12" height="10" border="0" src="/userfiles/image/metro_ico.gif" alt="ÐÐµÑÑÐ¾" />&nbsp;Ð¢Ð°Ð³Ð°Ð½ÑÐºÐ°Ñ</p>
+
+</div>
+<ul>
+    <li>
+    <h2>ÐÐ¾Ð½ÑÐ°ÐºÑÑ</h2>
+    <p>+7 495 545 71 89</p>
+    <p>+7 495 97 889 97</p>
+    <p>E-mail: info@vega-tur.ru</p>
+    </li>
+    <li>
+    <h2>ÐÐ¾Ð½ÑÑÐ»ÑÑÐ°ÑÐ¸Ñ</h2>
+    <p>ONLINE ÐºÐ¾Ð½ÑÑÐ»ÑÑÐ°ÑÐ¸Ñ:</p>
+    <p>ICQ: 243836945</p>
+    <p>Skype: vega-tur</p>
+    </li>
+</ul>      </div>
+    </div><!-- footer -->
+  </div>
+  <div class="footer_bottom">
+    <div id="footer2" class="container">
+      <div class="copyright"><a href="http://www.vega-tur.ru">www.vega-tur.ru</a> Â© 2003-2015</div>
+    </div><!-- footer -->
+  </div>
+</div>
+<script type="text/javascript">
+/* init Call Service */
+var CallSiteId = 'ae974c43a6ab41e9fee0a61e64213aef';
+var CallBaseUrl = '//uptocall.com';
+(function() {
+    var lt = document.createElement('script');
+    lt.type ='text/javascript';
+    lt.charset = 'utf-8';
+    lt.async = true;
+    lt.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + CallBaseUrl + '/widget/client.js';
+    var sc = document.getElementsByTagName('script')[0];
+    if (sc) sc.parentNode.insertBefore(lt, sc);
+    else document.documentElement.firstChild.appendChild(lt);
+})();
+</script>
+<script type="text/javascript" src="/assets/2e433488/jcarousellite_1.0.1c5.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+$(document).ready(function() {
+  $('#visa-objekt-menu li a').each(function() {
+    changeBaseSlide($(this).attr('typeSlide'));
+  });
+
+	$('#visa-objekt-menu li a').bind('click', function(e){
+		e.preventDefault();
+		
+		$('#visa-objekt-menu li').removeClass('activ');
+		$(this).parent().addClass('activ');
+		var slideType = $(this).attr('typeSlide');
+		$('.sliderbox').hide();
+		$('#slidebox-' + slideType).show();
+		bindSlider(slideType)
+	});
+	
+	$('#visa-objekt-menu li:first a').trigger('click');
+});	
+});
+/*]]>*/
+</script>
+</body>
+</html>

@@ -1,0 +1,1006 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta charset="utf-8" /><title>
+	Одежда по каталогам — заказ через 1001 каталог | Центр заказов по каталогам — купите одежду европейского качества
+</title><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="robots" content="index, follow" /><link rel="shortcut icon" href="/favicon.ico" /><link href="/css/Site.css" rel="stylesheet" /><link href="/css/carousel.css" rel="stylesheet" /><link href="/css/coin-slider-styles.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="css/main.bootstrap.min.css" rel="stylesheet" type="text/css" /><meta name="viewport" content="width=1200" /><meta name="yandex-verification" content="6dc83143ac066a79" /><meta name="google-site-verification" content="yionD-DuQnjZFHU_GzpM4DSJCyFn5l97_3L2nu6wKfQ" /><link rel="apple-touch-icon" sizes="72x72" href="/Imgs/apple-touch-icon-72x72.png" /><link rel="apple-touch-icon" sizes="114x114" href="/Imgs/apple-touch-icon-114x114.png" /><link rel="apple-touch-icon" sizes="140x140" href="/Imgs/apple-touch-icon-140x140.png" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <script src="/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="http://api-maps.yandex.ru/2.0/?load=package.standard&amp;mode=debug&amp;lang=ru-RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        // определяем текущее положение и сохраняем его в сессию
+        
+        var myRegion = '';
+        ymaps.ready(function () {
+            var myCoord = [55.75356, 37.60922];
+            if (ymaps.geolocation.longitude != null && ymaps.geolocation.latitude != null && myRegion == '')
+                myCoord = [ymaps.geolocation.latitude, ymaps.geolocation.longitude];
+
+            if (ymaps.geolocation.region != '' && myRegion == '') {
+                myRegion = "г. " + ymaps.geolocation.city;
+                $('#searchbox').val(myRegion);
+                $.get("/Include/SaveToSession.ashx", { MyX: ymaps.geolocation.latitude, MyY: ymaps.geolocation.longitude, MyRegion: myRegion }, function (data) {
+                    //$(location).attr('href', 'Centers.aspx?MyAddress=' + regionString);
+                });
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() != 0) {
+                    $('#toTop').fadeIn();
+                }
+                else
+                {
+                    $('#toTop').fadeOut();
+                }
+            });
+            $('#toTop').click(function () {
+                $('body,html').animate({ scrollTop: 0 }, 500);
+            });
+        });
+    </script>
+    
+    <meta name="keywords" content="купить одежду по каталогам заказ центр товаров 1001 через">
+    <meta name="description" content="Центр заказов «1001 каталог» предлагает выбрать и купить одежду по каталогам знаменитых немецких брендов. У нас представлен широкий ассортимент продукции европейского качества по доступным ценам.">
+    <meta name="viewport" content="width=1024" />
+    <script type="text/javascript" src="/js/jqcarousel.js"></script>
+    <link rel="stylesheet" href="/css/lepetan.css" type="text/css" />
+</head>
+
+<body id="mBody" style="min-width: 1200px">
+
+    <form method="post" action="" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE3NDk4MDU4OA9kFgJmD2QWAgIDD2QWAmYPZBYGAgEPDxYEHgRUZXh0ZR4HVmlzaWJsZWhkZAIDD2QWCGYPFgIeC18hSXRlbUNvdW50AgwWGGYPZBYCZg8VAwQxMjE4EE9IRm5iVExVdmVUSi5qcGcaT1RUTyAo0L7RgdC10L3RjC/Qt9C40LzQsClkAgEPZBYCZg8VAwQxMjE1EHNSVzRVSFJxOGVuSC5qcGcnTWFkZWxlaW5lIGZlZWxpbmcgKNC+0YHQtdC90Ywv0LfQuNC80LApZAICD2QWAmYPFQMEMTIxNBBQYXBIUjZySjJoenUuanBnEkFQQVJUICjQvtGB0LXQvdGMKWQCAw9kFgJmDxUDBDEyMjQQeldHNzRzQ0V1ZzdoLmpwZyFCb24gYSBwYXJ0ZSAo0L7RgdC10L3RjC/Qt9C40LzQsClkAgQPZBYCZg8VAwQxMjIxEHNwR3k0ekZ2eGU3dC5qcGcYQk9OIEEgUEFSVEUgKNC+0YHQtdC90YwpZAIFD2QWAmYPFQMEMTIyMBBpS2xTcW1jUjFob2EuanBnG0hlaW5lICjQvtGB0LXQvdGML9C30LjQvNCwKWQCBg9kFgJmDxUDBDEyMTkQN0IzUnJOQWZLSUNXLmpwZyBQZXRlciBIYWhuICjQvtGB0LXQvdGML9C30LjQvNCwKWQCBw9kFgJmDxUDBDEyMTcQSlRmbnFYMzl2bWRXLmpwZxRDb25sZXlzICjQvtGB0LXQvdGMKWQCCA9kFgJmDxUDBDEyMTYQbnI4dlBtempUTGtJLmpwZxlJbXByZXNzaW9uZW4gKNC+0YHQtdC90YwpZAIJD2QWAmYPFQMEMTIzMRBsa3RBOUNHeXNwTTIuanBnHFNjaHVoZSAo0L7RgdC10L3RjC/Qt9C40LzQsClkAgoPZBYCZg8VAwQxMjMwEHh4OFl4azlhVVBGcS5qcGceT1RUTyBSVVMgKNC+0YHQtdC90Ywv0LfQuNC80LApZAILD2QWAmYPFQMEMTIyORByWDRoTzFmZVZqSEMuanBnGk1vbmEgKNC+0YHQtdC90Ywv0LfQuNC80LApZAIBDw9kDxAWAWYWARYCHg5QYXJhbWV0ZXJWYWx1ZWQWAQIDZGQCAg8WAh8CAg8WHmYPZBYCZg8VAwIzNhBudllPNnVOQkJVNmkuanBnBUFQQVJUZAIBD2QWAmYPFQMBMRBLU3ROYkkwbVF0OEcuanBnBE9UVE9kAgIPZBYCZg8VAwI3OBA2eFdlTGtEQ1U5Zm8uanBnBk91dGxldGQCAw9kFgJmDxUDATkQMFJ2RVNqUnNsQ1VmLmpwZwlBbGJhIE1vZGFkAgQPZBYCZg8VAwI3NBB3cXljT29mZlZ0WWguanBnD0phbiBWYW5kZXJzdG9ybWQCBQ9kFgJmDxUDAjEzEFlhSzRHSG9zOUZmQy5qcGcJTWFkZWxlaW5lZAIGD2QWAmYPFQMCNTEQY043RmtqRWZpd0VqLmpwZwpQRVRFUiBIQUhOZAIHD2QWAmYPFQMBMxB3NFhZYzlHcThLYlguanBnBUhlaW5lZAIID2QWAmYPFQMCNDUQaVJrNEhRdWxWZVpILmpwZwdLbGluZ2VsZAIJD2QWAmYPFQMCNDcQOVFjVU82UzQ2blN2LmpwZwRXRU5aZAIKD2QWAmYPFQMCMTQQOFZCREZTTnl6RXN0LmpwZwVCYWRlcmQCCw9kFgJmDxUDAjQyEGdzSjR3eEM0N3E5VS5qcGcKRU1JTElBIExBWWQCDA9kFgJmDxUDAjUyEEZCbm5jMnEydHhwNS5qcGcETU9OQWQCDQ9kFgJmDxUDAjQwEFBOOGVQOXRWdThqTi5qcGcHQ09OTEVZU2QCDg9kFgJmDxUDAjU0EEltOUc2MUhEREVzSC5qcGcMSU1QUkVTU0lPTkVOZAIEDw9kDxAWAWYWARYCHwNkFgECA2RkAgYPD2QPEBYBZhYBFgIfA2QWAQIDZGRkM/0GSa/bI9T70DIEthEVdKigGh6yjzmWjLStaUrYL3Q=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=C3-GkFi6ukRu7nxZiNin1MUNc2QnAWMaoO7maGTAoZFcCNSDYJBsUseOYqf6XpVdhndg7NQv48hDL8RJI_GrLP_t_MeWg_MKImYI7s9NUCw1&amp;t=634773912100000000" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=iMOlVi5RlZWAOFS18vA0wyMZYrc9TXjaPxlr7HXCv-9NFlZpYjy-M40x258y-I3Z017hB-d35-Yqi90TrM0eol3uYjqXayEwHTczQD0rxXw1&amp;t=634773912100000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAX1tEqGjgmnHSqeeWjxQeudx6lBTZ1uXmeZ4TNfqarz2i4TOhfvuby5yTlBPbpwM9bErpzU76arQCx985/G6iExbn1BUM+19ARj3iAsnZmhEroqBclJU7uf9x5Q6UptCKB9Tt6/d7mycKjlZhTKT2zY" />
+</div>
+        <header>
+            <div class="maxwidth header">
+                <a href="/">
+                    <img src="/Imgs/new/centers.png" width="109" height="102" alt="Центры заказов" />
+                </a>
+                <img src="/Imgs/new/phone.png" class="phone" width="100" height="84" alt="Телефон" />
+                <div class="freecall">
+                    <p class="calltext">Звонок по России БЕСПЛАТНЫЙ</p>
+                    <p class="number"><span class="bold">8 800 <span class="red">333 44 88</span></span></p>
+                    <a href="#" onclick="$('#modalInfo').show(); $('#modalInfo').modal('show'); yaCounter21059053.reachGoal('zadat-vopros'); ga('send', 'pageview', '/knopka-zadat-vopros'); return false;">
+                        <img src="/Imgs/new/ask_question.png" alt="Задать вопрос" /></a>
+                </div>
+                <div class="contacts">
+                    
+                            <p class="bold">Центральный офис</p>
+                            <p>Москва, проспект Вернадского, 11/19</p>
+                            <a class="centers" href="/Centers.aspx">Другие центры заказов</a>
+                        
+                </div>
+                <div class="basket">
+                    <div class="basket_top">
+                        <img src="/Imgs/new/basket.png" width="206" height="31" alt="Корзина" />
+                    </div>
+                    <p class="basket_info">Товаров: <span class="bold">0</span> шт.</p>
+                    <input type="button" class="zakaz" onclick="location.href = '/Cart.aspx'" value="Оформить заказ" />
+                </div>
+            </div>
+            <div class="menu" style="z-index: 190;">
+                <div class="maxwidth">
+                    <a href="/" class="logo">
+                        <img src="/Imgs/logo2.png" style="position: absolute; z-index: 120;" width="109" height="68" alt="1001Katalog" />
+                    </a>
+                    <ul id="site-menu" style="z-index: 1198;">
+                        <li><a href="/" title="ГЛАВНАЯ">ГЛАВНАЯ</a></li>
+
+                        
+                                <li><a href="/katalogi/" title="Каталоги">КАТАЛОГИ</a></li>
+                                
+                                <li><a href="/internet-magaziny/" title="Интернет-магазины">МАГАЗИНЫ</a></li>
+                                
+                                <li><a href="/Centers.aspx" title="Центры заказов">ЦЕНТРЫ ЗАКАЗОВ</a></li>
+                                
+                                <li><a href="/kak-zakazat/" title="Как заказать товары в сети “1001 Каталог”">КАК ЗАКАЗАТЬ</a></li>
+                                
+                                <li><a href="/dostavka-i-oplata/" title="Заказ, доставка, оплата и прочее">ДОСТАВКА И ОПЛАТА</a></li>
+                                
+                        <li class="otherMenu"><a href="#">О НАС <span style="font-size: 0.8em">&#9660;</span></a><div style="display: none; margin-top: -9px;" class="submenu">
+                            <ul>
+                                
+                                <li><a href="/1001-katalog/" title="Сеть центров заказов “1001 Каталог”">1001 КАТАЛОГ</a></li>
+                                
+                                <li><a href="/vopros-otvet/" title="Часто задаваемые вопросы">ВОПРОС - ОТВЕТ</a></li>
+                                
+                                <li><a href="/poleznaya-informaciya/" title="Полезная информация">ПОЛЕЗНО ЗНАТЬ</a></li>
+                                
+                                <li><a href="/privedi-druga/" title="Акция “Рекомендую 1001 Каталог”">ПРИВЕДИ ДРУГА</a></li>
+                                
+                                <li><a href="/podbor-tovarov/" title="Мы знаем как найти именно то, что вам нужно!">ПОДБОР ТОВАРОВ</a></li>
+                                
+                                <li><a href="/otzyvy/" title="Отзывы">ОТЗЫВЫ</a></li>
+                                
+                            </ul>
+                        </div>
+                        </li>
+                        
+                        
+                        <li><a href="/Contacts.aspx" class="contacts_link" title="КОНТАКТЫ">КОНТАКТЫ</a></li>
+                    </ul>
+                    
+                    <div class="breadcumbs">
+                        
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <div id="body">
+            
+
+            
+    <div>
+        <br>
+    </div>
+
+    <div class="maincontainer">
+        <div class="mediacontainer">
+            <div class="mediacontent">
+                <div class="b001container">
+                    <div class="slider">
+                        <a href="#" onclick="moveBanner('0px', this)"><img src="/Imgs/new/checked_point.png" class="first_point" alt=""></a>
+                        <a href="#" onclick="moveBanner('-660px', this)"><img src="/Imgs/new/point.png" class="second_point" alt=""></a>
+                        <a href="#" onclick="moveBanner('-1320px', this)"><img src="/Imgs/new/point.png" class="third_point" alt=""></a>
+                        <a href="#" onclick="moveBanner('-1980px', this)"><img src="/Imgs/new/point.png" class="fourth_point" alt=""></a>
+                    </div>
+                    <div class="b001wrapper" style="margin-left: 0px;">
+
+                        <div class="b001 bnr" style="background-image:url(/Images/DxSuSjNYe5pN.jpg)">
+                            <div class="hovervisible" style="height: 40px; overflow: hidden;">
+                                <div class="h"></div>
+                                <div class="v max_width">
+                                    <a href="http://1001katalog.ru/ShoppingSite.aspx?sid=78">
+                                        <p class="h3_white">Магазин распродаж outlet</p>
+                                        Новый интернет-магазин OUTLET- брендовые вещи по ценам в рублях. Срок доставки в Центр Заказов или курьером - 1-3 дня. Что можно купить в новом OUTLET’е уже сейчас? - Женскую одежду, обувь и аксессуары бренда APART!
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="b001e bnr" style="background-image:url(/Imgs/ctlg1.jpg)">
+                            <div class="hovervisible" style="height: 40px; overflow: hidden;">
+                                <div class="h"></div>
+                                <div class="v max_width">
+                                    <a href="/katalogi/">
+                                        <p class="h3_white">Широкий ассортимент, европейское качество</p>
+                                        Тысячи предметов одежды, обуви и аксессуаров с доставкой на дом. 
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="b001s bnr" style="background-image:url(/Imgs/ctlg2.jpg)">
+                            <div class="hovervisible" style="height: 40px; overflow: hidden;">
+                                <div class="h"></div>
+                                <div class="v max_width">
+                                    <a href="/internet-magaziny/">
+                                        <p class="h3_white">Любимые сайты с доставкой к вам домой</p>
+                                        Возьмем все хлопоты с доставкой из-за границы на себя. Вам нужно просто выбрать товар.
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="b001v bnr" style="background-image:url(/Imgs/ctlg3.jpg)">
+                            <div class="hovervisible" style="height: 40px; overflow: hidden;">
+                                <div class="h"></div>
+                                <div class="v max_width">
+                                    <a href="/Centers.aspx">
+                                        <p class="h3_white">Товары по каталогам по всей России</p>
+                                        Найдите свой Центр заказов, возьмите каталог и заказывайте. Заботы по доставке<br />из Германии мы берем на себя. 
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="b001w bnr" style="background-image:url(/Images/DxSuSjNYe5pN.jpg)">
+                            <div class="hovervisible" style="height: 40px; overflow: hidden;">
+                                <div class="h"></div>
+                                <div class="v max_width">
+                                    <a href="http://1001katalog.ru/ShoppingSite.aspx?sid=78">
+                                        <p class="h3_white">Магазин распродаж outlet</p>
+                                        Новый интернет-магазин OUTLET- брендовые вещи по ценам в рублях. Срок доставки в Центр Заказов или курьером - 1-3 дня. Что можно купить в новом OUTLET’е уже сейчас? - Женскую одежду, обувь и аксессуары бренда APART!
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a id="look_btn" href="http://1001katalog.ru/ShoppingSite.aspx?sid=78"><img src="/Imgs/new/look_btn.png" width="103" class="look_btn" height="29" alt="Посмотреть"></a>
+                </div>
+
+                <div class="b002">
+                    <p class="advantages">НАШИ ПРЕИМУЩЕСТВА:</p>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="/Imgs/new/otto_catalogs.png" width="52" height="53" alt="Каталоги ОТТО" />
+                                <div class="advantage1">
+                                    <a href="/katalogi-otto/">Каталоги ОТТО</a>
+                                    <p>Во множестве каталогов OTTO<br />всегда есть из чего выбрать.</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/Imgs/new/internet_shops.png" width="52" height="53" alt="Интернет-магазины" />
+                                <div class="advantage2">
+                                    <a href="/internet-magaziny/">Интернет-магазины</a>
+                                    <p>Заказывайте из интернет-магазинов Европы и Америки напрямую.</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/Imgs/new/zakaz_centers.png" width="52" height="51" alt="Центры заказов" />
+                                <div class="advantage3">
+                                    <a href="/Centers.aspx">Центры заказов</a>
+                                    <p>Получение заказа в центре выдачи заказов в выбранном вами городе.</p>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <img src="/Imgs/new/reliability.png" width="56" height="57" alt="Надежность" />
+                                <div class="advantage4">
+                                    <a href="/1001-katalog/">Надежность</a>
+                                    <p>Наша сеть Центров заказов<br />существует уже более десяти лет.</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="catalogs">
+        <div class="catalogmaxwidth">
+            <p class="h3 mleft">АКТУАЛЬНЫЕ КАТАЛОГИ &nbsp;&nbsp;                
+                <a href="/katalogi/" class="act">
+                    <img src="Imgs/new/all_catalogs.png" style="vertical-align: text-bottom;" alt="Все каталоги" /></a>
+            </p>
+            <div id="carouselBrandDiv">
+                <div class="jcarousel-skin-tango">
+                    <div class="jcarousel-container jcarousel-container-horizontal" style="display: block;">
+
+                        <div class="jcarousel-next jcarousel-next-horizontal"
+                            style="display: block; margin-top: -55px; background: transparent url('/Imgs/next-horizontal.gif') no-repeat 0 0;">
+                        </div>
+
+                        <div class="jcarousel-prev jcarousel-prev-horizontal jcarousel-prev-disabled jcarousel-prev-disabled-horizontal"
+                            style="display: block; margin-top: -55px; background: transparent url('/Imgs/prev-horizontal.gif') no-repeat 0 0;">
+                        </div>
+
+                        <div class="jcarousel-clip jcarousel-clip-horizontal" style="height:192px;">
+                            <ul class="jcarousel-list jcarousel-list-horizontal" id="carouselBrand" style="width:5070px;">
+
+                                
+                                        <li>                                            
+                                            <a href="/Shopping.aspx?cid=1218" class="cat" rel="nofollow">
+                                                <div class="catalogLi">
+                                                    <img src="/Include/imgr.aspx?f=OHFnbTLUveTJ.jpg&amp;h=190" alt="OTTO (осень/зима)" style="width:148px; height:190px;">
+                                                    <div class="hovervisible" style="height:50px; width:150px; top:192px; overflow:hidden;">
+                                                        <div class="h bc_grey"></div>
+                                                        <div class="v" style="left:10px; top:5px; line-height:1.2;">
+                                                            <span class="c_white">Заказать товары<br />из каталога</span>
+                                                        </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>                                            
+                                            <a href="/Shopping.aspx?cid=1215" class="cat" rel="nofollow">
+                                                <div class="catalogLi">
+                                                    <img src="/Include/imgr.aspx?f=sRW4UHRq8enH.jpg&amp;h=190" alt="Madeleine feeling (осень/зима)" style="width:148px; height:190px;">
+                                                    <div class="hovervisible" style="height:50px; width:150px; top:192px; overflow:hidden;">
+                                                        <div class="h bc_grey"></div>
+                                                        <div class="v" style="left:10px; top:5px; line-height:1.2;">
+                                                            <span class="c_white">Заказать товары<br />из каталога</span>
+                                                        </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>                                            
+                                            <a href="/Shopping.aspx?cid=1214" class="cat" rel="nofollow">
+                                                <div class="catalogLi">
+                                                    <img src="/Include/imgr.aspx?f=PapHR6rJ2hzu.jpg&amp;h=190" alt="APART (осень)" style="width:148px; height:190px;">
+                                                    <div class="hovervisible" style="height:50px; width:150px; top:192px; overflow:hidden;">
+                                                        <div class="h bc_grey"></div>
+                                                        <div class="v" style="left:10px; top:5px; line-height:1.2;">
+                                                            <span class="c_white">Заказать товары<br />из каталога</span>
+                                                        </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>                                            
+                                            <a href="/Shopping.aspx?cid=1224" class="cat" rel="nofollow">
+                                                <div class="catalogLi">
+                                                    <img src="/Include/imgr.aspx?f=zWG74sCEug7h.jpg&amp;h=190" alt="Bon a parte (осень/зима)" style="width:148px; height:190px;">
+                                                    <div class="hovervisible" style="height:50px; width:150px; top:192px; overflow:hidden;">
+                                                        <div class="h bc_grey"></div>
+                                                        <div class="v" style="left:10px; top:5px; line-height:1.2;">
+                                                            <span class="c_white">Заказать товары<br />из каталога</span>
+                                                        </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>                                            
+                                            <a href="/Shopping.aspx?cid=1221" class="cat" rel="nofollow">
+                                                <div class="catalogLi">
+                                                    <img src="/Include/imgr.aspx?f=spGy4zFvxe7t.jpg&amp;h=190" alt="BON A PARTE (осень)" style="width:148px; height:190px;">
+                                                    <div class="hovervisible" style="height:50px; width:150px; top:192px; overflow:hidden;">
+                                                        <div class="h bc_grey"></div>
+                                                        <div class="v" style="left:10px; top:5px; line-height:1.2;">
+                                                            <span class="c_white">Заказать товары<br />из каталога</span>
+                                                        </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>                                            
+                                            <a href="/Shopping.aspx?cid=1220" class="cat" rel="nofollow">
+                                                <div class="catalogLi">
+                                                    <img src="/Include/imgr.aspx?f=iKlSqmcR1hoa.jpg&amp;h=190" alt="Heine (осень/зима)" style="width:148px; height:190px;">
+                                                    <div class="hovervisible" style="height:50px; width:150px; top:192px; overflow:hidden;">
+                                                        <div class="h bc_grey"></div>
+                                                        <div class="v" style="left:10px; top:5px; line-height:1.2;">
+                                                            <span class="c_white">Заказать товары<br />из каталога</span>
+                                                        </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>                                            
+                                            <a href="/Shopping.aspx?cid=1219" class="cat" rel="nofollow">
+                                                <div class="catalogLi">
+                                                    <img src="/Include/imgr.aspx?f=7B3RrNAfKICW.jpg&amp;h=190" alt="Peter Hahn (осень/зима)" style="width:148px; height:190px;">
+                                                    <div class="hovervisible" style="height:50px; width:150px; top:192px; overflow:hidden;">
+                                                        <div class="h bc_grey"></div>
+                                                        <div class="v" style="left:10px; top:5px; line-height:1.2;">
+                                                            <span class="c_white">Заказать товары<br />из каталога</span>
+                                                        </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>                                            
+                                            <a href="/Shopping.aspx?cid=1217" class="cat" rel="nofollow">
+                                                <div class="catalogLi">
+                                                    <img src="/Include/imgr.aspx?f=JTfnqX39vmdW.jpg&amp;h=190" alt="Conleys (осень)" style="width:148px; height:190px;">
+                                                    <div class="hovervisible" style="height:50px; width:150px; top:192px; overflow:hidden;">
+                                                        <div class="h bc_grey"></div>
+                                                        <div class="v" style="left:10px; top:5px; line-height:1.2;">
+                                                            <span class="c_white">Заказать товары<br />из каталога</span>
+                                                        </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>                                            
+                                            <a href="/Shopping.aspx?cid=1216" class="cat" rel="nofollow">
+                                                <div class="catalogLi">
+                                                    <img src="/Include/imgr.aspx?f=nr8vPmzjTLkI.jpg&amp;h=190" alt="Impressionen (осень)" style="width:148px; height:190px;">
+                                                    <div class="hovervisible" style="height:50px; width:150px; top:192px; overflow:hidden;">
+                                                        <div class="h bc_grey"></div>
+                                                        <div class="v" style="left:10px; top:5px; line-height:1.2;">
+                                                            <span class="c_white">Заказать товары<br />из каталога</span>
+                                                        </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>                                            
+                                            <a href="/Shopping.aspx?cid=1231" class="cat" rel="nofollow">
+                                                <div class="catalogLi">
+                                                    <img src="/Include/imgr.aspx?f=lktA9CGyspM2.jpg&amp;h=190" alt="Schuhe (осень/зима)" style="width:148px; height:190px;">
+                                                    <div class="hovervisible" style="height:50px; width:150px; top:192px; overflow:hidden;">
+                                                        <div class="h bc_grey"></div>
+                                                        <div class="v" style="left:10px; top:5px; line-height:1.2;">
+                                                            <span class="c_white">Заказать товары<br />из каталога</span>
+                                                        </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>                                            
+                                            <a href="/Shopping.aspx?cid=1230" class="cat" rel="nofollow">
+                                                <div class="catalogLi">
+                                                    <img src="/Include/imgr.aspx?f=xx8Yxk9aUPFq.jpg&amp;h=190" alt="OTTO RUS (осень/зима)" style="width:148px; height:190px;">
+                                                    <div class="hovervisible" style="height:50px; width:150px; top:192px; overflow:hidden;">
+                                                        <div class="h bc_grey"></div>
+                                                        <div class="v" style="left:10px; top:5px; line-height:1.2;">
+                                                            <span class="c_white">Заказать товары<br />из каталога</span>
+                                                        </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>                                            
+                                            <a href="/Shopping.aspx?cid=1229" class="cat" rel="nofollow">
+                                                <div class="catalogLi">
+                                                    <img src="/Include/imgr.aspx?f=rX4hO1feVjHC.jpg&amp;h=190" alt="Mona (осень/зима)" style="width:148px; height:190px;">
+                                                    <div class="hovervisible" style="height:50px; width:150px; top:192px; overflow:hidden;">
+                                                        <div class="h bc_grey"></div>
+                                                        <div class="v" style="left:10px; top:5px; line-height:1.2;">
+                                                            <span class="c_white">Заказать товары<br />из каталога</span>
+                                                        </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+    <div class="textparagraf">
+        <div class="maxwidth">
+            <br />
+            <div class="left">
+                
+                <div class="text">
+                    <h1>Одежда по каталогам в центре заказов «1001 каталог»</h1>
+<p>Модная одежда без переплат — это реально! Достаточно найти свой каталог — и шопинг станет приятным и увлекательным занятием. <strong>Заказ одежды по каталогам</strong> выгоден по многим причинам:</p>
+<ul>
+<li>покупателям доступен широчайший ассортимент продукции на любой вкус и бюджет;</li>
+<li>не нужно тратить дни напролёт на походы в магазины и примерки;</li>
+<li>качественные иллюстрации  позволяют детально рассмотреть модели и не пропустить лучшие из всей массы вариантов;</li>
+<li>имеется возможность сравнить цены и  сделать заказ одежды через каталог там, где это выгоднее всего.</li>
+</ul>
+<p>«1001 каталог» предлагает посмотреть самые свежие выпуски модных журналов, изучить правила составления заявок и определения размеров интересующих вещей. На знакомство с товарами по каталогам у пользователей сайта есть огромное количество времени. В отличие от магазинов, «1001 каталог» работает круглосуточно: и днём и ночью можно не только познакомиться с невероятным ассортиментом разнообразных изделий, но и оформить заказ одежды по каталогу. «Примеряйте» любое количество вещей и совершайте покупки, не выходя из дома! Порадовать себя удобным сервисом заказа одежды и других товаров по каталогам могут жители Москвы, Ярославля, Калуги и других городов России.</p><br>
+<br>
+                </div>
+            </div>
+            <div class="right">
+                <h2>Центр заказов по каталогам предлагает клиентам выгодные преимущества</h2>
+                <div class="text">
+                    <p>Тем, кто устал от марафонов по магазинам в поисках нужных вещей, заказ одежды и других товаров по каталогам покажется хорошей альтернативой, помогающей экономить время и средства. Откройте для себя новый вид шопинга!</p> 
+<ul>
+<li>На сайте покупатели могут узнать, где находится ближайший центр заказов, в котором есть интересующие издания и принимаются заявки на приобретение нужной продукции. То же самое доступно и в режиме онлайн. Пролистав красочные виртуальные журналы и определившись с выбором, посетитель сайта может заполнить соответствующие формы и таким образом заказать одежду и другие интересующие товары по каталогам.</li>
+<li>«1001 каталог» располагает завидным набором актуальных изданий. Посетители сайта имеют возможность купить одежду, обувь для взрослых и детей, подарки, предметы интерьера и другие товары по каталогам.</li>
+<li>Европейское качество реализуемой продукции удовлетворит самых взыскательных потребителей: изделия будут иметь заявленный размер и дизайн, долго прослужат своему обладателю.</li></ul><br>
+<br>
+                </div>
+            </div>
+            <br class="clear" />
+        </div>
+    </div>
+    
+
+    <div class="suppliers">
+        <div class="maxwidth">
+            <p class="h3">ИНТЕРНЕТ-МАГАЗИНЫ&nbsp;&nbsp;
+                <a href="/internet-magaziny/" class="act">
+                    <img src="/Imgs/new/all_sites.png" style="vertical-align: text-bottom; border: none;" alt="Все образы" /></a>
+            </p>
+            <div style="display:inline-block;">
+                
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=36" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=nvYO6uNBBU6i.jpg&amp;w=152" alt="APART">
+                            </a>
+                        </div>
+                    
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=1" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=KStNbI0mQt8G.jpg&amp;w=152" alt="OTTO">
+                            </a>
+                        </div>
+                    
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=78" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=6xWeLkDCU9fo.jpg&amp;w=152" alt="Outlet">
+                            </a>
+                        </div>
+                    
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=9" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=0RvESjRslCUf.jpg&amp;w=152" alt="Alba Moda">
+                            </a>
+                        </div>
+                    
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=74" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=wqycOoffVtYh.jpg&amp;w=152" alt="Jan Vanderstorm">
+                            </a>
+                        </div>
+                    
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=13" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=YaK4GHos9FfC.jpg&amp;w=152" alt="Madeleine">
+                            </a>
+                        </div>
+                    
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=51" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=cN7FkjEfiwEj.jpg&amp;w=152" alt="PETER HAHN">
+                            </a>
+                        </div>
+                    
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=3" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=w4XYc9Gq8KbX.jpg&amp;w=152" alt="Heine">
+                            </a>
+                        </div>
+                    
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=45" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=iRk4HQulVeZH.jpg&amp;w=152" alt="Klingel">
+                            </a>
+                        </div>
+                    
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=47" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=9QcUO6S46nSv.jpg&amp;w=152" alt="WENZ">
+                            </a>
+                        </div>
+                    
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=14" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=8VBDFSNyzEst.jpg&amp;w=152" alt="Bader">
+                            </a>
+                        </div>
+                    
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=42" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=gsJ4wxC47q9U.jpg&amp;w=152" alt="EMILIA LAY">
+                            </a>
+                        </div>
+                    
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=52" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=FBnnc2q2txp5.jpg&amp;w=152" alt="MONA">
+                            </a>
+                        </div>
+                    
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=40" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=PN8eP9tVu8jN.jpg&amp;w=152" alt="CONLEYS">
+                            </a>
+                        </div>
+                    
+                        <div class="supplier">
+                            <a href="/ShoppingSite.aspx?sid=54" rel="nofollow" style="text-decoration:none;">
+                                <img style="border:0px;" src="/Include/imgr.aspx?f=Im9G61HDDEsH.jpg&amp;w=152" alt="IMPRESSIONEN">
+                            </a>
+                        </div>
+                    
+            </div>
+        </div>
+    </div>
+
+    <div class="footertext" style="display: none">
+        
+                <br />
+                <h2>Найдите свой центр заказов «1001 каталог»!</h2>
+                <div class="text">
+                    <p>Цены на все виды продукции доступные. Купив одежду по каталогам и заплатив за ее доставку, люди нередко отмечают, что им удалось сэкономить: аналогичные вещи в бутиках и магазинах стоят дороже. Также дополнительно сократить расходы помогают регулярно проводимые акции и специальные предложения.</p>
+<p>Не упускайте шанс обновить гардероб без ущерба для бюджета. Решив купить одежду, обувь или элементы интерьера из Европы по каталогам, вы станете обладателем стильных и высококачественных вещей, а также сбережёте массу времени, которое можно потратить на что-либо более приятное, чем хождение по магазинам и толкание в очередях. Эксклюзивные предметы верхнего гардероба, нижнее белье, обувь и товары для дома от признанных и узнаваемых во всем мире брендов по адекватным ценам — выбор разумных покупателей!</p><br />
+                </div>
+            
+    </div>
+
+    
+
+    <script type="text/javascript">
+        var timeout1, timeout2, timeout3;
+        $(document).ready(function () {
+            $('.bnr, .lookLi').hover(function () {
+                $(this).find(".hovervisible").stop().animate({ "height": "120px" }, "normal");                
+                $(this).find(".look_point").attr("src", "/Imgs/new/checked_point.png");
+            },
+                function () {
+                    $(this).find(".hovervisible").stop().animate({ "height": "40px" }, "normal");                    
+                    $(this).find(".look_point").attr("src", "/Imgs/new/point.png");
+                });
+            $('.catalogLi').hover(function () {
+                $(this).find(".hovervisible").stop().animate({ "top": "70px" }, "normal");
+            },
+                function () {
+                    $(this).find(".hovervisible").stop().animate({ "top": "192px" }, "normal");
+                });
+            b001animate();
+
+            // карусель
+            $('#carouselBrand').jcarousel({ scroll: 6 });
+            $('#carouselLookBrand').jcarousel({ scroll: 6 });
+        });
+        function b001animate() {
+            $('.b001wrapper').delay(5000).animate({ marginLeft: '-660px' }, 1000);
+            timeout1 = window.setTimeout(function () {
+                $('.first_point').attr("src", "/Imgs/new/point.png");
+                $('.second_point').attr("src", "/Imgs/new/checked_point.png");
+                $('#look_btn').attr("href", "/katalogi/");
+            }, 6000);
+            $('.b001wrapper').delay(5000).animate({ marginLeft: '-1320px' }, 1000);
+            timeout2 = window.setTimeout(function () {
+                $('.second_point').attr("src", "/Imgs/new/point.png");
+                $('.third_point').attr("src", "/Imgs/new/checked_point.png");
+                $('#look_btn').attr("href", "/internet-magaziny/");
+            }, 12000);
+            $('.b001wrapper').delay(5000).animate({ marginLeft: '-1980px' }, 1000);
+            timeout3 = window.setTimeout(function () {
+                $('.third_point').attr("src", "/Imgs/new/point.png");
+                $('.fourth_point').attr("src", "/Imgs/new/checked_point.png");
+                $('#look_btn').attr("href", "/Centers.aspx");
+            }, 18000);
+            $('.b001wrapper').delay(5000).animate({ marginLeft: '-2640px' }, 1000, function () {
+                $('.b001wrapper').css("margin-left", "0px");
+                $('.fourth_point').attr("src", "/Imgs/new/point.png");
+                $('.first_point').attr("src", "/Imgs/new/checked_point.png");
+                $('#look_btn').attr("href", "http://1001katalog.ru/ShoppingSite.aspx?sid=78");
+                b001animate();
+            });
+        }
+
+        function moveBanner(left, point) {
+            $('.b001wrapper').stop(true);
+            window.clearTimeout(timeout1);
+            window.clearTimeout(timeout2);
+            window.clearTimeout(timeout3);
+            $('.b001wrapper').animate({ marginLeft: left }, 1000);
+            $('.first_point').attr("src", "/Imgs/new/point.png");
+            $('.second_point').attr("src", "/Imgs/new/point.png");
+            $('.third_point').attr("src", "/Imgs/new/point.png");
+            $('.fourth_point').attr("src", "/Imgs/new/point.png");
+            $(point).children("img").attr("src", "/Imgs/new/checked_point.png");
+            switch (left) {
+                case "0px": $('#look_btn').attr("href", "http://1001katalog.ru/ShoppingSite.aspx?sid=78"); break;
+                case "-660px": $('#look_btn').attr("href", "/katalogi/"); break;
+                case "-1320px": $('#look_btn').attr("href", "/internet-magaziny/"); break;
+                case "-1980px": $('#look_btn').attr("href", "/Centers.aspx"); break;
+            }
+        }
+    </script>
+
+
+            
+            <div id="toTop"><img src="/Imgs/new/to_top.png" width="45" height="45" alt="Наверх" /></div>
+
+            <br style="clear: both;" />
+
+            <footer id="footer">
+                <div class="maxwidth">
+                    <div class="left">
+                        <div class="lastparagraph" style="padding-bottom: 30px; padding-top: 0px; padding-right: 10px"></div>
+                    </div>
+                    <div class="right" style="height: 140px;">
+                        <div style="height: 230px; width: 10px; border-left: solid 2px #ccc; padding: 0px 0px 0px 0px; float: left"></div>
+                        <div class="left">
+                            <div style="height: 140px;">
+                                <a href="/Contacts.aspx" class="contacts">КОНТАКТЫ</a><br />
+                                <br />
+                                
+                                        <p class="bold">Центральный офис</p>
+                                        Москва, проспект Вернадского, 11/19<br>
+                                        <br>
+                                        <img src="/Imgs/phone.png" alt="Телефон" />
+                                        8(800)333-44-88<br />
+                                        <br />
+                                        
+                                        <a href="#" onclick="$('#modalInfo').show(); $('#modalInfo').modal('show');  yaCounter21059053.reachGoal('zadat-vopros'); ga('send', 'pageview', '/knopka-zadat-vopros'); return false;">
+                                            <img src="/Imgs/new/ask_question.png" alt="Задать вопрос" /></a>
+                                        <br style="clear: both;">
+                                        <br />
+                                    
+
+                            </div>
+                        </div>
+                        <div class="right" style="width: 220px;">
+                            <div style="height: 230px; width: 10px; border-left: solid 2px #ccc; padding: 0px 0px 0px 0px; float: left"></div>
+                            <ul>
+                                <li><a href="/1001-katalog/">1001 КАТАЛОГ</a></li>
+                                <li><a href="/kak-zakazat/">КАК ЗАКАЗАТЬ</a></li>
+                                <li><a href="/katalogi/">НАШИ КАТАЛОГИ</a></li>
+                                <li><a href="/Centers.aspx">ЦЕНТРЫ ЗАКАЗОВ</a></li>
+                            </ul>
+                            <div style="font-size: 0.8em; padding: 10px 0px 0px 32px;">
+                                &copy; 2016 "1001 Katalog"<br />
+                                <a href="/Sitemap.aspx">Карта сайта</a>
+                            </div>
+                            
+                                    <br />
+                                    <div style="padding-left: 30px">
+                                        <noindex><a target='_blank' rel='nofollow' href="https://www.facebook.com/1001katalog.ru" ><img src='/Imgs/icon_fb.png' width='30' height='30' alt='Facebook'/></a></noindex>
+                                        <noindex><a target='_blank' rel='nofollow' href="http://vk.com/club1001katalog" ><img src='/Imgs/icon_vk.gif' width='30' height='30' alt='ВКонтакте'/></a></noindex>
+                                        <noindex><a target='_blank' rel="nofollow" href="https://www.youtube.com/user/1001katalog" ><img src='/Imgs/icon_yt.gif' width='30' height='30' alt='Канал на YouTube'/></a></noindex>
+                                    </div>
+                                    <br style="clear: both;">
+                                
+                            <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function () { try { w.yaCounter21059053 = new Ya.Metrika({ id: 21059053, clickmap: true, trackLinks: true, accurateTrackBounce: true }); } catch (e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script>
+                            <noscript>
+                                <div>
+                                    <img src="//mc.yandex.ru/watch/21059053" style="position: absolute; left: -9999px;" alt="" />
+                                </div>
+                            </noscript>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </footer>
+
+            <div id="modalInfo" class="modal fade" style="width: 550px; left: 50%;">
+                <div class="modal-header" style="border:none; padding:15px;">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 class="callback_header" id="myModalLabel">ЗАДАТЬ ВОПРОС</h3>
+                </div>
+                <div class="modal-body">
+                    <div id="form" class="form">                        
+                        <table>
+                            <tr class="h41">
+                                <td class="alright">Ваше имя: 
+                                </td>
+                                <td class="h10"></td>
+                                <td>
+                                    <input name="ctl00$tbName" type="text" id="tbName" Placeholder="Как к Вам обращаться?" style="border-color:LightGrey;border-width:1px;border-style:solid;width:250px;" />
+                                </td>
+                            </tr>
+                            <tr class="h50">
+                                <td class="alright">
+                                    <span id="RequiredFieldValidator1" style="color:Red;display:none;"></span>
+                                    <span id="RegularExpressionValidator1" style="color:Red;display:none;"></span>
+                                    E-mail:<br />
+                                    <span class="bold">(обязательно)</span>  
+                                </td>
+                                <td class="h10"></td>
+                                <td>
+                                    <input name="ctl00$tbEmail" type="text" id="tbEmail" Placeholder="name@domain.ru" style="border-color:LightGrey;border-width:1px;border-style:solid;width:250px;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="vtop alright">
+                                    <span id="RequiredFieldValidator2" style="color:Red;display:none;"></span> 
+                                    Вопрос:<br />                                                                                   
+                                    <span class="bold">(обязательно)</span>                                        
+                                </td>
+                                <td class="h10"></td>
+                                <td>
+                                    <textarea name="ctl00$tbQuestion" rows="4" cols="20" id="tbQuestion" Placeholder="О чем Вы хотели спросить?" style="border-color:LightGrey;border-width:1px;border-style:solid;width:350px;">
+</textarea>
+                                </td>
+                            </tr>
+                        </table>                        
+                        <br />
+                        <div id="ValidationSummary1" class="callback_validation" style="color:Red;font-size:16px;display:none;">
+
+</div>
+                        <br />
+                        <div class="send_btn">
+                            <input type="submit" name="ctl00$btnSend" value="Отправить" onclick="WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnSend&quot;, &quot;&quot;, true, &quot;Callback&quot;, &quot;&quot;, false, false)); yaCounter21059053.reachGoal(&#39;otpravit-vopros&#39;); ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/knopka-otpravit-vopros&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnSend&quot;, &quot;&quot;, true, &quot;Callback&quot;, &quot;&quot;, false, false))" id="btnSend" class="send" />
+                        </div>
+                    </div>
+                    <div id="sent" class="message" style="display: none">
+                        <p class="top">Ваше сообщение успешно доставлено!</p>
+                        <p>Мы обязательно ответим Вам по указанному адресу электронной почты.</p>
+                    </div>
+                    <div id="error" class="message" style="display: none">
+                        <p class="top problem">Возникла проблема с отправкой сообщения!</p>
+                        <p>Приносим свои извинения! Попробуйте зайти на страницу позже.</p>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    // Highlighting current menu item
+                    if ($('.footertext:first')[0])
+                        $('.lastparagraph:first')[0].innerHTML = $('.footertext:first')[0].innerHTML;
+                    var curPage = location.pathname.substring(0, location.pathname.lastIndexOf("/"));
+                    console.log(curPage);
+                    switch (curPage) {
+                        case "": curPage = location.pathname.substring(0); break;
+                        case "/internet-magaziny": curPage = "/internet-magaziny/"; break;
+                        case "/katalogi": curPage = "/katalogi/"; break;
+                        case "/modnye-obrazy-iz-aktualnyh-katalogov": curPage = "/modnye-obrazy-iz-aktualnyh-katalogov/"; break;
+                        case "/kak-zakazat": curPage = "/kak-zakazat/"; break;
+                        case "/1001-katalog": curPage = "/1001-katalog/"; break;
+                        case "/otzyvy": curPage = "/otzyvy/"; break;                        
+                        case "/vopros-otvet": curPage = "/vopros-otvet/"; break;
+                        case "/privedi-druga": curPage = "/privedi-druga/"; break;
+                        case "/dostavka-i-oplata": curPage = "/dostavka-i-oplata/"; break;
+                        case "/podbor-tovarov": curPage = "/podbor-tovarov/"; break;
+                        case "/poleznaya-informaciya": curPage = "/poleznaya-informaciya/"; break;
+
+                        case "/zhenskaya-odezhda-po-katalogam": curPage = "/katalogi/"; break;
+                        case "/detskaya-odezhda-po-katalogam": curPage = "/katalogi/"; break;
+                        case "/katalogi-odezhdy-iz-germanii": curPage = "/katalogi/"; break;
+                        case "/katalogi-otto": curPage = "/katalogi/"; break;
+                        case "/katalog-bader": curPage = "/katalogi/"; break;
+                        case "/katalogi-madeleine": curPage = "/katalogi/"; break;
+                        case "/katalogi-modenschau": curPage = "/katalogi/"; break;
+                        case "/katalogi-peter-hahn": curPage = "/katalogi/"; break;
+                        case "/katalogi-Apart": curPage = "/katalogi/"; break;
+                        case "/katalogi-Brandneu": curPage = "/katalogi/"; break;
+                        case "/katalogi-Baur": curPage = "/katalogi/"; break;
+                        case "/katalogi-BonAPart": curPage = "/katalogi/"; break;
+                        case "/katalogi-Conleys": curPage = "/katalogi/"; break;
+                        case "/katalogi-Deerberg": curPage = "/katalogi/"; break;
+                        case "/katalogi-Heine": curPage = "/katalogi/"; break;
+                        case "/katalogi-Impressionen": curPage = "/katalogi/"; break;
+                        case "/katalogi-Klitzeklein": curPage = "/katalogi/"; break;
+                        case "/katalogi-Klingel": curPage = "/katalogi/"; break;
+                        case "/katalogi-mona": curPage = "/katalogi/"; break;
+                        case "/katalogi-Mea": curPage = "/katalogi/"; break;
+                        case "/katalogi-Sheego": curPage = "/katalogi/"; break;
+                        case "/katalogi-Schneider": curPage = "/katalogi/"; break;
+                        case "/molodezhnaya-odezhda-po-katalogam": curPage = "/katalogi/"; break;
+                        case "/zhenskaya-odezhda-dlja-elegantnogo-vozrasta": curPage = "/katalogi/"; break;
+                        case "/odezhda-bolshih-razmerov": curPage = "/katalogi/"; break;
+                        case "/plyazhnaja-odezhda-i-belye": curPage = "/katalogi/"; break;
+                        case "/muzhskaya-odezhda-po-katalogam": curPage = "/katalogi/"; break;
+                        case "/tovary-dlya-doma": curPage = "/katalogi/"; break;
+                        case "/katalogi-obuvi-i-aksessuarov": curPage = "/katalogi/"; break;
+                        case "/katalogi-premium-odezhdy": curPage = "/katalogi/"; break;
+                        case "/rasprodazhi-i-skidki": curPage = "/katalogi/"; break;
+
+                        case "/zarubezhnye-internet-magaziny-zhenskoy-odezhdy": curPage = "/internet-magaziny/"; break;
+                        case "/zarubezhnye-internet-magaziny-molodezhnoy-zhenskoy-odezhdy": curPage = "/internet-magaziny/"; break;
+                        case "/zarubezhnye-internet-magaziny-zhenskoy-odezhdy-dlya-elegantnogo-vozrasta": curPage = "/internet-magaziny/"; break;
+                        case "/zarubezhnye-internet-magaziny-zhenskoy-odezhdy-bolshih-razmerov": curPage = "/internet-magaziny/"; break;
+                        case "/zarubezhnye-internet-magaziny-plyazhnoy-odezhdy-i-belya": curPage = "/internet-magaziny/"; break;
+                        case "/zarubezhnye-internet-magaziny-muzhskoy-odezhdy": curPage = "/internet-magaziny/"; break;
+                        case "/zarubezhnye-internet-magaziny-tovarov-dlya-detey": curPage = "/internet-magaziny/"; break;
+                        case "/zarubezhnye-internet-magaziny-tovarov-dlya-doma-i-dachi": curPage = "/internet-magaziny/"; break;
+                        case "/zarubezhnye-internet-magaziny-obuvi-i-aksessuarov": curPage = "/internet-magaziny/"; break;
+                        case "/zarubezhnye-internet-magaziny-tovarov-premium-klassa": curPage = "/internet-magaziny/"; break;
+                        case "/rasprodazhi-i-skidki-v-zarubezhnyh-internet-magazinah": curPage = "/internet-magaziny/"; break;
+                        case "/tovary-iz-ameriki": curPage = "/internet-magaziny/"; break;
+
+                        case "/modnye-zhenskie-obrazy": curPage = "/modnye-obrazy-iz-aktualnyh-katalogov/"; break;
+                        case "/modnye-obrazy-premium-klassa": curPage = "/modnye-obrazy-iz-aktualnyh-katalogov/"; break;
+                        case "/modnye-obrazy-iz-katalogov-otto": curPage = "/modnye-obrazy-iz-aktualnyh-katalogov/"; break;
+                        case "/modnye-obrazy-iz-katalogov-apart": curPage = "/modnye-obrazy-iz-aktualnyh-katalogov/"; break;
+                    }
+                    console.log(curPage);
+                    switch (curPage) {
+                        case "": curPage = "/"; break;
+                        case "/Sites.aspx": curPage = "/internet-magaziny/"; break;
+                        case "/Catalogs.aspx": curPage = "/katalogi/"; break;
+                        case "/Looks.aspx": curPage = "/modnye-obrazy-iz-aktualnyh-katalogov/"; break;
+                        case "/Map.aspx": curPage = "/Centers.aspx"; break;
+                    }
+                    if (curPage != "") {
+                        $("#site-menu li a[href='" + curPage + "']").addClass("active");
+                        var url = location.href.substring(location.href.lastIndexOf("/") + 1);
+                        if (url.indexOf("?") != -1) {
+                            $("#site-menu li a[href='/" + url + "']").addClass("active");              // для fpage.aspx в основном меню
+                        }
+                        $("#site-menu li.otherMenu ul li a[href='/" + url + "']").addClass("active");
+                    }
+
+                });
+            </script>
+            <script src="/js/bootstrap-modal.js"></script>
+            <script src="/js/bootstrap-transition.js"></script>
+            <script type="text/javascript" src="http://consultsystems.ru/script/24056/" charset="utf-8"></script>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-66417721-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+        </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ValidationSummary1"));
+var Page_Validators =  new Array(document.getElementById("RequiredFieldValidator1"), document.getElementById("RegularExpressionValidator1"), document.getElementById("RequiredFieldValidator2"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var RequiredFieldValidator1 = document.all ? document.all["RequiredFieldValidator1"] : document.getElementById("RequiredFieldValidator1");
+RequiredFieldValidator1.controltovalidate = "tbEmail";
+RequiredFieldValidator1.errormessage = "Укажите свой E-mail";
+RequiredFieldValidator1.display = "None";
+RequiredFieldValidator1.validationGroup = "Callback";
+RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator1.initialvalue = "";
+var RegularExpressionValidator1 = document.all ? document.all["RegularExpressionValidator1"] : document.getElementById("RegularExpressionValidator1");
+RegularExpressionValidator1.controltovalidate = "tbEmail";
+RegularExpressionValidator1.errormessage = "Неверный формат E-mail";
+RegularExpressionValidator1.display = "None";
+RegularExpressionValidator1.validationGroup = "Callback";
+RegularExpressionValidator1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+RegularExpressionValidator1.validationexpression = "([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)";
+var RequiredFieldValidator2 = document.all ? document.all["RequiredFieldValidator2"] : document.getElementById("RequiredFieldValidator2");
+RequiredFieldValidator2.controltovalidate = "tbQuestion";
+RequiredFieldValidator2.errormessage = "Укажите свой Вопрос";
+RequiredFieldValidator2.display = "None";
+RequiredFieldValidator2.validationGroup = "Callback";
+RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator2.initialvalue = "";
+var ValidationSummary1 = document.all ? document.all["ValidationSummary1"] : document.getElementById("ValidationSummary1");
+ValidationSummary1.headertext = "Не все обязательные поля заполнены!";
+ValidationSummary1.displaymode = "List";
+ValidationSummary1.validationGroup = "Callback";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+</body>
+</html>

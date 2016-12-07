@@ -1,0 +1,405 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" >
+<head>
+  <base href="http://nzaton.ru/" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Нагатинский Затон - официальный сайт органов местного самоуправления муниципального округа</title>
+  <link href="/?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+  <link href="/?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+  <link href="/templates/ot_corporatetree_new/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/ot_corporatetree_new/css/k2.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/system/css/general.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/ot_corporatetree_new/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/ot_corporatetree_new/css/layout/green.css" type="text/css" />
+  <style type="text/css">
+div.ot-footer div.ot-bottom-1 {width: 100%}
+			.width100{ width: 100%; } 
+			 
+			.width50{ width: 50%; } 
+			 
+			.width33{ width: 33%; } 
+			 
+			.width25{ width: 25%; } 
+			 
+			.width20{ width: 20%; } 
+			 
+			.width100{ width: 100%; } 
+			 
+			.width50{ width: 50%; } 
+			 
+			.width33{ width: 33%; } 
+			 
+			.width25{ width: 25%; } 
+			 
+			.width20{ width: 20%; } 
+			 
+			.width100{ width: 100%; } 
+			 
+			.width50{ width: 50%; } 
+			 
+			.width33{ width: 33%; } 
+			 
+			.width25{ width: 25%; } 
+			 
+			.width20{ width: 20%; } 
+			 div#poll_loading_1 {
+	background: url(media/system/images/mootree_loader.gif) 0% 50% no-repeat;
+	width:100%;
+	height:20px; 
+	padding: 4px 0 0 20px; 
+}
+
+  </style>
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="/media/system/js/modal.js" type="text/javascript"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" type="text/javascript"></script>
+  <script src="/components/com_k2/js/k2.js" type="text/javascript"></script>
+  <script src="/media/system/js/caption.js" type="text/javascript"></script>
+  <script src="/templates/ot_corporatetree_new/scripts/dropdownMenu.js" type="text/javascript"></script>
+  <script src="/templates/ot_corporatetree_new/scripts/otscript.js" type="text/javascript"></script>
+  <script type="text/javascript">
+
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+			SqueezeBox.assign($$('a.modal'), {
+				parse: 'rel'
+			});
+		});var K2SitePath = '/';window.addEvent('load', function() {
+				new JCaption('img.caption');
+			});
+/* <![CDATA[ */
+window.addEvent('load', function()
+    {
+		$('poll_vote_1').addEvent('submit', function(e) {
+				// Prevent the submit event
+			    new Event(e).stop();
+
+				var options = $('poll_vote_1').getElements('input[name=voteid]');
+
+				var nothing_selected = 1;
+				
+				options.each(function(item, index){
+					if(item.checked==1) {
+						nothing_selected = 0;
+					}
+				});
+				
+				if (nothing_selected) {
+					alert('Please select an option');
+					return false;
+				}
+				else {
+					$('submit_vote_1').disabled = 1;
+					$('poll_loading_1').setStyle('display', '');
+					
+					// Update the page
+					this.set('send', {
+					onComplete: function(response, responseXML)
+					{						
+						// get the XML nodes
+						var root    = responseXML.documentElement;
+						var options = root.getElementsByTagName('option');
+						var text    = root.getElementsByTagName('text');
+						var voters  = root.getElementsByTagName('voters');
+						
+						// update the page element
+						var slide = new Fx.Slide('polldiv_1').hide();
+						$('polldiv_1').innerHTML = '<div style="width:100%"><div style="padding: 3px;">' + text.item(0).firstChild.nodeValue + ' - ' + options.item(0).attributes[1].nodeValue + '%</div><div class="poll_module_bar_holder" id="poll_module_bar_holder0" style="width: 98%; height: 10px; padding:1px; border:1px solid #cccccc;"><div id="poll_module_bar'+options.item(0).attributes[0].nodeValue+'" style="background:#' + options.item(0).attributes[2].nodeValue + '; width:' + options.item(0).attributes[1].nodeValue + '%; height:10px;"></div></div></div><div style="width:100%"><div style="padding: 3px;">' + text.item(1).firstChild.nodeValue + ' - ' + options.item(1).attributes[1].nodeValue + '%</div><div class="poll_module_bar_holder" id="poll_module_bar_holder1" style="width: 98%; height: 10px; padding:1px; border:1px solid #cccccc;"><div id="poll_module_bar'+options.item(1).attributes[0].nodeValue+'" style="background:#' + options.item(1).attributes[2].nodeValue + '; width:' + options.item(1).attributes[1].nodeValue + '%; height:10px;"></div></div></div><div style="width:100%"><div style="padding: 3px;">' + text.item(2).firstChild.nodeValue + ' - ' + options.item(2).attributes[1].nodeValue + '%</div><div class="poll_module_bar_holder" id="poll_module_bar_holder2" style="width: 98%; height: 10px; padding:1px; border:1px solid #cccccc;"><div id="poll_module_bar'+options.item(2).attributes[0].nodeValue+'" style="background:#' + options.item(2).attributes[2].nodeValue + '; width:' + options.item(2).attributes[1].nodeValue + '%; height:10px;"></div></div></div><div style="width:100%"><div style="padding: 3px;">' + text.item(3).firstChild.nodeValue + ' - ' + options.item(3).attributes[1].nodeValue + '%</div><div class="poll_module_bar_holder" id="poll_module_bar_holder3" style="width: 98%; height: 10px; padding:1px; border:1px solid #cccccc;"><div id="poll_module_bar'+options.item(3).attributes[0].nodeValue+'" style="background:#' + options.item(3).attributes[2].nodeValue + '; width:' + options.item(3).attributes[1].nodeValue + '%; height:10px;"></div></div></div><br /><b>Количество голосов</b>: ' + voters.item(0).firstChild.nodeValue + '';
+						slide.slideIn();
+					}
+					}).send();
+				}
+        });  
+    });/* ]]> */
+  </script>
+
+<link href='http://fonts.googleapis.com/css?family=Cuprum:400,700&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+<link href='/templates/ot_corporatetree_new/css/swipebox.min.css' rel='stylesheet'>
+<script src="/templates/ot_corporatetree_new/scripts/jquery.cookie.js"></script>
+</head>
+<body id="ot-body" class="isHomePage green left-content-right">
+	<div class='wrapper'>
+		<div class='section tophead'>
+			<div class='inner'>
+			
+				<div id="bad_eye">
+					<span class="bad" style="display:block;">
+						<a href="/">
+							Версия Для Слабовидящих
+						</a>
+					</span>
+					<span class="good" style="display:none;">
+						<a href="/">
+							Обычная версия
+						</a>
+					</span>
+				</div>
+				<div class='search'>
+						<form action="/component/search/" method="GET">
+							<div class='slidover'>
+								<input type='text' name='searchword' placeholder="Поиск"/>
+							</div>
+							<div class='submit'>
+								<input type='submit' value=''/>
+							</div>
+						</form>
+					</div>
+									<div class="ot-mainmenu">
+						<ul class="menu level0">
+<li id="item-435" class="level0  first"><a href="/">Главная</a></li><li id="item-593" class="level0  first"><a href="/ads">Объявления</a></li><li id="item-594" class="level0  first"><a href="/news">Новости</a></li><li id="item-595" class="level0  first"><a href="/muniobr/contacts">Контакты</a></li><li id="item-648" class="level0  first"><a href="http://gazeta-nagatinsky-zaton.ru/">Окружная газета</a></li></ul>
+					</div>
+									
+			</div>
+		</div>
+		<div class='section slider'>
+			<div class='inner'>
+				<div class='logo'>
+					<a href='/'><img src='/templates/ot_corporatetree_new/images/logo.png'/></a>
+				</div>
+				<div class='phone'>
+					8 (499) 616-57-13
+				</div>
+			</div>
+		</div>
+		<div class='section menu'>
+			<div class='inner'>
+				<ul class="menu level0">
+<li id="item-639" class="level0  first"><a href="/internet-reception/internet-reception">Интернет-приемная</a><div class='menu_round'><ul><div class='coll'><li id="item-640" class="level1  first"><a href="/internet-reception/internet-reception">Общие сведения</a></li><li id="item-641" class="level1  first"><a href="/internet-reception/order-of-admission">Порядок приема</a></li><li id="item-642" class="level1  first"><a href="/internet-reception/order-of-appeal">Порядок обжалования</a></li><li id="item-643" class="level1  first last"><a href="/internet-reception/feedback">Отправить сообщение</a></li></div></ul></div></li><li id="item-584" class="level0  first"><a href="/ourdistrict/news">Информация</a><div class='menu_round'><ul><div class='coll'><li id="item-670" class="level1  first"><a href="/ourdistrict/prokuratura">Информация Симоновской прокуратуры</a></li><li id="item-671" class="level1  first"><a href="/ourdistrict/konkurs">Конкурсы</a></li><li id="item-597" class="level1  first"><a href="/ourdistrict/информация-прокуратуры">Информация прокуратуры округа</a></li><li id="item-676" class="level1  first"><a href="/ourdistrict/news">Новости</a></li></div><div class='coll'><li id="item-679" class="level1  first"><a href="/ourdistrict/mchs">МЧС</a></li><li id="item-680" class="level1  first last"><a href="/ourdistrict/var-comm">Военный коммисариат</a></li></div></ul></div></li><li id="item-649" class="level0  first"><a href="/muniobr/muniobr">Муниципальный округ</a><div class='menu_round'><ul><div class='coll'><li id="item-650" class="level1  first"><a href="/muniobr/muniobr">Муниципальный округ</a></li><li id="item-581" class="level1  first"><a href="/muniobr/documents">Нормативные документы</a></li><li id="item-612" class="level1  first"><a href="/muniobr/reference">Справочник округа</a></li><li id="item-585" class="level1  first"><a href="/muniobr/history">История округа</a></li></div><div class='coll'><li id="item-586" class="level1  first"><a href="/muniobr/map">Карта округа</a></li><li id="item-575" class="level1  first"><a href="/muniobr/contacts">Контакты</a></li><li id="item-681" class="level1  first last"><a href="/muniobr/local_budget">Местный бюджет</a></li></div></ul></div></li><li id="item-578" class="level0  first"><a href="/assembly/deputy">Совет Депутатов</a><div class='menu_round'><ul><div class='coll'><li id="item-579" class="level1  first"><a href="/assembly/deputy">Депутаты в Совете депутатов</a></li><li id="item-582" class="level1  first"><a href="/assembly/reception">График приема</a></li><li id="item-653" class="level1  first"><a href="/assembly/zasedaniya">Заседания</a></li><li id="item-568" class="level1  first"><a href="/assembly/committee">Комиссии</a></li></div><div class='coll'><li id="item-580" class="level1  first"><a href="/assembly/decree">Решения</a></li><li id="item-603" class="level1  first"><a href="/assembly/public">Публичные слушания</a></li><li id="item-604" class="level1  first"><a href="/assembly/molodejnaya-palata">Молодежная палата</a></li><li id="item-602" class="level1  first"><a href="/assembly/план-работы-совета-депутатов">План работы Совета депутатов</a></li></div><div class='coll'><li id="item-665" class="level1  first"><a href="/assembly/blagoustroystvo">Благоустройство</a></li><li id="item-682" class="level1  first last"><a href="/assembly/powers_deputies">Полномочия депутатов</a></li></div></ul></div></li><li id="item-565" class="level0  first"><a href="/munitsipalitet/sovet-deputatov">Аппарат Совета депутатов</a><div class='menu_round'><ul><div class='coll'><li id="item-654" class="level1  first"><a href="/munitsipalitet/sovet-deputatov">Аппарат Совета депутатов</a></li><li id="item-599" class="level1  first"><a href="/munitsipalitet/slujba">Муниципальный заказ</a></li><li id="item-600" class="level1  first"><a href="/munitsipalitet/zachita">Защита прав потребителей</a></li><li id="item-592" class="level1  first"><a href="/munitsipalitet/municipality">Мероприятия</a></li></div><div class='coll'><li id="item-598" class="level1  first"><a href="/munitsipalitet/municipal-service">Муниципальная служба</a></li><li id="item-613" class="level1  first last"><a href="/munitsipalitet/emergency">Защита населения и территорий от чрезвычайных ситуаций</a></li></div></ul></div></li><li id="item-605" class="level0  first"><a href="/uslugy/municip-uslugi">Муниципальные услуги</a><div class='menu_round'><ul><div class='coll'><li id="item-576" class="level1  first last"><a href="/uslugy/municip-uslugi">Муниципальные услуги</a></li></div></ul></div></li><li id="item-669" class="level0  first"><a href="/antikor/antikor-deyatelnost">Антикоррупционная деятельность</a><div class='menu_round'><ul><div class='coll'><li id="item-672" class="level1  first"><a href="/antikor/антикоррупционная-экспертиза">Антикоррупционная экспертиза</a></li><li id="item-668" class="level1  first last"><a href="/antikor/antikor-deyatelnost">Антикоррупционная деятельность</a></li></div></ul></div></li></ul>
+			</div>
+		</div>
+		<div class='section content'>
+			<div class='inner'>
+										<ul class="menu level0" id="frontblock">
+<li id="item-639" class="level0  first"><a href="/internet-reception/internet-reception">Интернет-приемная</a><div class='menu_round'><ul><li id="item-640" class="level1  first"><a href="/internet-reception/internet-reception">Общие сведения</a></li><li id="item-641" class="level1  first"><a href="/internet-reception/order-of-admission">Порядок приема</a></li><li id="item-642" class="level1  first"><a href="/internet-reception/order-of-appeal">Порядок обжалования</a></li><li id="item-643" class="level1  first last"><a href="/internet-reception/feedback">Отправить сообщение</a></li></ul></div></li><li id="item-584" class="level0  first"><a href="/ourdistrict/news">Информация</a><div class='menu_round'><ul><li id="item-670" class="level1  first"><a href="/ourdistrict/prokuratura">Информация Симоновской прокуратуры</a></li><li id="item-671" class="level1  first"><a href="/ourdistrict/konkurs">Конкурсы</a></li><li id="item-597" class="level1  first"><a href="/ourdistrict/информация-прокуратуры">Информация прокуратуры округа</a></li><li id="item-676" class="level1  first"><a href="/ourdistrict/news">Новости</a></li><li id="item-679" class="level1  first"><a href="/ourdistrict/mchs">МЧС</a></li><li id="item-680" class="level1  first last"><a href="/ourdistrict/var-comm">Военный коммисариат</a></li></ul></div></li><li id="item-649" class="level0  first"><a href="/muniobr/muniobr">Муниципальный округ</a><div class='menu_round'><ul><li id="item-650" class="level1  first"><a href="/muniobr/muniobr">Муниципальный округ</a></li><li id="item-581" class="level1  first"><a href="/muniobr/documents">Нормативные документы</a></li><li id="item-612" class="level1  first"><a href="/muniobr/reference">Справочник округа</a></li><li id="item-585" class="level1  first"><a href="/muniobr/history">История округа</a></li><li id="item-586" class="level1  first"><a href="/muniobr/map">Карта округа</a></li><li id="item-575" class="level1  first"><a href="/muniobr/contacts">Контакты</a></li><li id="item-681" class="level1  first last"><a href="/muniobr/local_budget">Местный бюджет</a></li></ul></div></li><li id="item-578" class="level0  first"><a href="/assembly/deputy">Совет Депутатов</a><div class='menu_round'><ul><li id="item-579" class="level1  first"><a href="/assembly/deputy">Депутаты в Совете депутатов</a></li><li id="item-582" class="level1  first"><a href="/assembly/reception">График приема</a></li><li id="item-653" class="level1  first"><a href="/assembly/zasedaniya">Заседания</a></li><li id="item-568" class="level1  first"><a href="/assembly/committee">Комиссии</a></li><li id="item-580" class="level1  first"><a href="/assembly/decree">Решения</a></li><li id="item-603" class="level1  first"><a href="/assembly/public">Публичные слушания</a></li><li id="item-604" class="level1  first"><a href="/assembly/molodejnaya-palata">Молодежная палата</a></li><li id="item-602" class="level1  first"><a href="/assembly/план-работы-совета-депутатов">План работы Совета депутатов</a></li><li id="item-665" class="level1  first"><a href="/assembly/blagoustroystvo">Благоустройство</a></li><li id="item-682" class="level1  first last"><a href="/assembly/powers_deputies">Полномочия депутатов</a></li></ul></div></li><li id="item-565" class="level0  first"><a href="/munitsipalitet/sovet-deputatov">Аппарат Совета депутатов</a><div class='menu_round'><ul><li id="item-654" class="level1  first"><a href="/munitsipalitet/sovet-deputatov">Аппарат Совета депутатов</a></li><li id="item-599" class="level1  first"><a href="/munitsipalitet/slujba">Муниципальный заказ</a></li><li id="item-600" class="level1  first"><a href="/munitsipalitet/zachita">Защита прав потребителей</a></li><li id="item-592" class="level1  first"><a href="/munitsipalitet/municipality">Мероприятия</a></li><li id="item-598" class="level1  first"><a href="/munitsipalitet/municipal-service">Муниципальная служба</a></li><li id="item-613" class="level1  first last"><a href="/munitsipalitet/emergency">Защита населения и территорий от чрезвычайных ситуаций</a></li></ul></div></li><li id="item-605" class="level0  first"><a href="/uslugy/municip-uslugi">Муниципальные услуги</a><div class='menu_round'><ul><li id="item-576" class="level1  first last"><a href="/uslugy/municip-uslugi">Муниципальные услуги</a></li></ul></div></li><li id="item-669" class="level0  first"><a href="/antikor/antikor-deyatelnost">Антикоррупционная деятельность</a><div class='menu_round'><ul><li id="item-672" class="level1  first"><a href="/antikor/антикоррупционная-экспертиза">Антикоррупционная экспертиза</a></li><li id="item-668" class="level1  first last"><a href="/antikor/antikor-deyatelnost">Антикоррупционная деятельность</a></li></ul></div></li></ul>
+							
+<div id="system-message-container">
+</div>
+				
+							<div class='fullwidth'>
+					<div class='width50'>
+						<div class='title'>
+							<h2>Новости</h2>
+						</div>
+						<div id='news_links'><a href='/news'>Смотреть все новости</a></div>
+<div class="newsflash">
+		<div class='newsflash-pretitle'>
+	<h4 class="newsflash-title">
+			О ПРОВЕДЕНИИ ВНЕОЧЕРЕДНОГО ЗАСЕДАНИЯ СОВЕТА ДЕПУТАТОВ МУНИЦИПАЛЬНОГО ОКРУГА НАГАТИНСКИЙ ЗАТОН 11.10.2016		</h4>
+	<div class='date'>04.10.2016</div>
+	<div class='clear'></div>
+	</div>
+
+
+
+<p style="text-align: center;"><span style="font-family: 'times new roman', times; font-size: 14pt; color: #008000;">О ПРОВЕДЕНИИ ВНЕОЧЕРЕДНОГО ЗАСЕДАНИЯ СОВЕТА ДЕПУТАТОВ</span></p>
+<p style="text-align: center;"><span style="font-family: 'times new roman', times; font-size: 14pt; color: #008000;"> МУНИЦИПАЛЬНОГО ОКРУГА НАГАТИНСКИЙ ЗАТОН 11.10.2016</span></p>
+<p style="text-align: justify;"><span style="font-family: 'times new roman', times; font-size: 14pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 11 октября 2016 года в 15.00 в помещении аппарата Совета депутатов (ул. Судостроительная, д. 49, к. 3) состоится внеочередное заседание Совета депутатов муниципального округа Нагатинский затон, на котором планируется рассмотреть следующие вопросы:</span></p>
+<p style="text-align: justify;"><span style="font-family: 'times new roman', times; font-size: 14pt;">1.&nbsp;О рассмотрении проекта изменения схемы размещения нестационарных торговых объектов тип «Пресс-стенд» на территории муниципального округа Нагатинский затон<strong>.</strong></span></p>
+<p style="text-align: justify;"><span style="font-family: 'times new roman', times; font-size: 14pt;">2.&nbsp;О проведении дополнительных мероприятиях по социально-экономическому развитию района Нагатинский затон города Москвы в&nbsp;2016&nbsp;году.</span></p>
+<p style="text-align: justify;"><span style="font-family: 'times new roman', times; font-size: 14pt;">3.&nbsp;О проекте межевания территории квартала, ограниченного: улицей Коломенская, проектируемым проездом, Коломенской набережной, улицей Затонная.</span></p>
+<p style="text-align: justify;"><span style="font-family: 'times new roman', times; font-size: 14pt;">4.&nbsp;<span style="color: #26282f;">О П</span>орядке разработки, реализации и оценки эффективности муниципальных программ муниципального округа Нагатинский затон.</span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt;">&nbsp;</span></p>
+		<div class='newsflash-pretitle'>
+	<h4 class="newsflash-title">
+			О ПРОВЕДЕНИИ ОЧЕРЕДНОГО ЗАСЕДАНИЯ СОВЕТА ДЕПУТАТОВ МУНИЦИПАЛЬНОГО ОКРУГА НАГАТИНСКИЙ ЗАТОН 22.09.2016		</h4>
+	<div class='date'>15.09.2016</div>
+	<div class='clear'></div>
+	</div>
+
+
+
+<p style="text-align: center;"><span style="font-size: 14pt; font-family: 'times new roman', times; color: #008000;">О ПРОВЕДЕНИИ ОЧЕРЕДНОГО ЗАСЕДАНИЯ СОВЕТА ДЕПУТАТОВ </span></p>
+<p style="text-align: center;"><span style="font-size: 14pt; font-family: 'times new roman', times; color: #008000;">МУНИЦИПАЛЬНОГО ОКРУГА НАГАТИНСКИЙ ЗАТОН 22.09.2016</span></p>
+<p style="text-align: left;"><span style="font-size: 14pt; font-family: 'times new roman', times; color: #008000;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000;">22 сентября 2016 года в 15.00 в помещении аппарата Совета депутатов (ул. Судостроительная, д. 49, к. 3) состоится очередное заседание Совета депутатов муниципального округа Нагатинский затон, на котором планируется рассмотреть следующие вопросы:</span></span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt; font-family: 'times new roman', times;">1. О рассмотрении вопроса установки ограждающего устройства на придомовой территории по адресу: Андропова проспект, дом 21.</span></p>
+<p style="text-align: justify;"><span style="font-family: 'times new roman', times; font-size: 14pt;">2.&nbsp;О рассмотрении проекта изменения схемы размещения нестационарных торговых объектов на территории муниципального округа Нагатинский затон в части включения в существующую дислокацию места размещения НТО (тележки «мороженое, горячие напитки, выпечка»).<strong><br /></strong></span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt; font-family: 'times new roman', times;">3.&nbsp;О согласовании Сводного районного календарного плана по досуговой, социально–воспитательной, физкультурно-оздоровительной и спортивной работы с населением по месту жительства на 4-й квартал 2016 года.&nbsp;</span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt; font-family: 'times new roman', times;">4.&nbsp;О плане работы Совета депутатов муниципального округа Нагатинский затон в городе Москве на 4 квартал 2016 года.</span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt; font-family: 'times new roman', times;">5.&nbsp;О плане работы аппарата Совета депутатов муниципального округа Нагатинский затон в городе Москве на 4 квартал 2016 года.</span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt; font-family: 'times new roman', times;">6.&nbsp;Об исполнении бюджета муниципального округа Нагатинский затон за 6 месяцев 2016 года.</span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt; font-family: 'times new roman', times;">7.&nbsp;О названии улицы&nbsp; - Прибрежная и Флагманская, внутриквартальной автомобильной дороги в границах участка застройки от Коломенской ул. до Речников ул.</span></p>
+<p><span style="font-size: 14pt;">&nbsp;</span></p>
+		<div class='newsflash-pretitle'>
+	<h4 class="newsflash-title">
+			Встреча главы Управы с населением Района Нагатинский затон в сентябре 2016 года		</h4>
+	<div class='date'>06.09.2016</div>
+	<div class='clear'></div>
+	</div>
+
+
+
+<p><span style="font-family: 'times new roman', times; font-size: 12pt;">&nbsp; &nbsp; <span style="font-family: 'times new roman', times;">&nbsp; <span style="font-size: 14pt;">&nbsp;Глава управы района Нагатинский затон Ирина Петровна Джиоева проведет встречу с жителями района 21 сентября в 19:00. Мероприятие состоится в актовом зале управы района Нагатинский затон по адресу: Коломенская наб., д.22, корп.2.&nbsp;</span></span></span></p>
+<p><span style="font-family: 'times new roman', times; font-size: 14pt;">&nbsp; &nbsp; &nbsp; &nbsp;На встрече обсудят вопросы&nbsp;подготовки жилищно-коммунальных служб района к работе в зимний период (содержание и уборка территории) и состояния и работы предприятий потребительского рынка и услуг на территории района.</span></p>
+<p><span style="font-family: 'times new roman', times; font-size: 14pt;">&nbsp; &nbsp; &nbsp; &nbsp;В заключении все присутствующие смогут задать интересующие вопросы главе управы. Встреча пройдёт по адресу: Коломенская наб., д.22, корп.2. Начало в 19:00.&nbsp;</span></p>
+<p><span style="font-family: 'times new roman', times; font-size: 14pt;">&nbsp; &nbsp; &nbsp; &nbsp;Дополнительную информацию можно уточнить по телефонам: 8(499)614-17-00, 8(499)725-12-75.</span></p>
+</div>
+
+					</div>
+					<div class='width50'>
+						<div class='title'>
+							<h2>Опрос</h2>
+						</div>
+						
+<div class="poll mod_poll" style="border:none; padding:1px;">
+
+    <h4>Достаточно ли Вы информированы о деятельности органов местного самоуправления?</h4>
+
+<div id="polldiv_1">
+
+<form action="/" method="post" name="poll_vote_1" id="poll_vote_1">
+	<label for="mod_voteid1" class="sectiontableentry2 mod_poll" style="display:block; padding:2px;">
+		<input type="radio" name="voteid" id="mod_voteid1" value="1" alt="1"  />
+			Да, достаточно.	</label>
+		<label for="mod_voteid2" class="sectiontableentry1 mod_poll" style="display:block; padding:2px;">
+		<input type="radio" name="voteid" id="mod_voteid2" value="2" alt="2"  />
+			Немного слышал.	</label>
+		<label for="mod_voteid3" class="sectiontableentry2 mod_poll" style="display:block; padding:2px;">
+		<input type="radio" name="voteid" id="mod_voteid3" value="3" alt="3"  />
+			Затрудняюсь ответить.	</label>
+		<label for="mod_voteid4" class="sectiontableentry1 mod_poll" style="display:block; padding:2px;">
+		<input type="radio" name="voteid" id="mod_voteid4" value="4" alt="4"  />
+			Нет, ничего не знаю.	</label>
+		<div style="padding:2px;" id="poll_buttons_1" >	
+		<div class='votebutton'>
+			<input type="submit" id="submit_vote_1" name="task_button" class="button" value="Проголосовать"  />
+		</div>
+		<div class='voteinfo'>
+		<div id="mod_poll_messages_1" style="margin:5px;">
+					<b>Количество голосов: 2001</b><br>
+					<span class="gray">Можно голосовать только 1 раз в течение 24 часов.</span> </div>		</div>
+		<div class='clear'></div>
+	</div>	
+	<div id="poll_loading_1" style="display:none;">Processing....	</div>		
+
+	<input type="hidden" name="option" value="com_acepolls" />
+	<input type="hidden" name="id" value="1" />
+	    <input type="hidden" name="format" value="raw" />
+    <input type="hidden" name="view" value="poll" />
+	<div><input type="hidden" name="2e06b3cc3ee2815895f7bccb94266028" value="1" /></div></form>
+
+
+<!-- End of #polldiv -->
+</div>
+<div id="poll_links" style="padding-top:5px; ">
+
+		<a class="poll_result_link" href="/component/acepolls/poll/1-dostatochno-li-vy-informirovany-o-deyatelnosti-organov-mestnogo-samoupravleniya">Посмотреть результат</a><br />
+		
+	
+</div>
+</div>
+					</div>
+				</div>
+				
+							<div class='front-bottom'>
+					
+
+<div class="custom"  >
+	<ul class='portals'>
+						<li><a href='' target='_blank'><img src='/templates/ot_corporatetree_new/images/portal/housmos.png'/></a></li>
+						<li><a href='' target='_blank'><img src='/templates/ot_corporatetree_new/images/portal/upravanz.png'/></a></li>
+						<li><a href='' target='_blank'><img src='/templates/ot_corporatetree_new/images/portal/mosduma.png'/></a></li>
+						<li><a href='' target='_blank'><img src='/templates/ot_corporatetree_new/images/portal/ourtown.png'/></a></li>
+						<li><a href='' target='_blank'><img src='/templates/ot_corporatetree_new/images/portal/mosru.png'/></a></li>
+						<li><a href='' target='_blank'><img src='/templates/ot_corporatetree_new/images/portal/moscowroad.png'/></a></li>
+						<li><a href='' target='_blank'><img src='/templates/ot_corporatetree_new/images/portal/dtoivm.png'/></a></li>
+						<li><a href='' target='_blank'><img src='/templates/ot_corporatetree_new/images/portal/mskvset.png'/></a></li>
+						<li><a href='' target='_blank'><img src='/templates/ot_corporatetree_new/images/portal/sovet.png'/></a></li>
+						<li><a href='' target='_blank'><img src='/templates/ot_corporatetree_new/images/portal/gosuslugi.png'/></a></li>
+						<li><a href='' target='_blank'><img src='/templates/ot_corporatetree_new/images/portal/uao.png'/></a></li>
+						<li><a href='' target='_blank'><img src='/templates/ot_corporatetree_new/images/portal/m4s.png'/></a></li>
+						
+					</ul></div>
+<ul class="menu level0">
+<li id="item-639" class="level0  first"><a href="/internet-reception/internet-reception">Интернет-приемная</a></li><li id="item-584" class="level0  first"><a href="/ourdistrict/news">Информация</a></li><li id="item-649" class="level0  first"><a href="/muniobr/muniobr">Муниципальный округ</a></li><li id="item-578" class="level0  first"><a href="/assembly/deputy">Совет Депутатов</a></li><li id="item-565" class="level0  first"><a href="/munitsipalitet/sovet-deputatov">Аппарат Совета депутатов</a></li><li id="item-605" class="level0  first"><a href="/uslugy/municip-uslugi">Муниципальные услуги</a></li><li id="item-669" class="level0  first"><a href="/antikor/antikor-deyatelnost">Антикоррупционная деятельность</a></li></ul>
+				</div>
+				
+						</div>
+		</div>
+		<div class='section footer'>
+			<div class='inner'>
+				<div class='minilogo'>
+					<img src='/templates/ot_corporatetree_new/images/minilogo.png'/>
+				</div>
+								<div class='footer-1'>
+						<div class="otModule module">
+		<div class="otModule-i">
+							<h3><span class="title-module">Контакты</span></h3>
+						<div class="otModuleContent-i clearfix">
+				
+
+<div class="custom"  >
+	<p>8 (499) 616-57-13<br />115407, г. Москва, ул. <br />Судостроительная, д. 49, к. 3</p></div>
+			</div>
+		</div>
+	</div>
+
+				</div>
+													<div class='footer-2'>
+							<div class="otModule module width34 floatright">
+		<div class="otModule-i">
+							<h3><span class="title-module">Меню</span></h3>
+						<div class="otModuleContent-i clearfix">
+				<ul class="menu level0">
+<li id="item-596" class="level0  first"><a href="/">Главная</a></li><li id="item-563" class="level0  first"><a href="http://nzaton.ru/municipality">Мероприятия</a></li><li id="item-564" class="level0  first"><a href="http://nzaton.ru/ads">Объявления</a></li><li id="item-590" class="level0  first"><a href="http://nzaton.ru/news">Новости</a></li><li id="item-505" class="level0  first"><a href="http://nzaton.ru/munitsipalitet/contacts">Контакты</a></li></ul>			</div>
+		</div>
+	</div>
+
+					</div>
+													<div class='footer-3'>
+							<div class="otModule module width34 floatright">
+		<div class="otModule-i">
+							<h3><span class="title-module">Мы в соц. сетях</span></h3>
+						<div class="otModuleContent-i clearfix">
+				
+
+<div class="custom"  >
+	<ul class="menu" style="padding-right: 20%;">
+<li class="custom-social custom_facebook"><a href="#"></a></li>
+<li class="custom-social custom_twitter"><a href="#"></a></li>
+<li class="custom-social custom_blog"><a href="#"></a></li>
+<li class="custom-social custom_youtube"><a href="#"></a></li>
+<li class="custom-social custom_mail last"><a href="mailto:
+ <script type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy77913 = 'm&#117;nnz' + '&#64;';
+ addy77913 = addy77913 + 'm&#97;&#105;l' + '&#46;' + 'r&#117;';
+ document.write('<a ' + path + '\'' + prefix + ':' + addy77913 + '\'>');
+ document.write(addy77913);
+ document.write('<\/a>');
+ //-->\n </script><script type='text/javascript'>
+ <!--
+ document.write('<span style=\'display: none;\'>');
+ //-->
+ </script>Этот адрес электронной почты защищен от спам-ботов. У вас должен быть включен JavaScript для просмотра.
+ <script type='text/javascript'>
+ <!--
+ document.write('</');
+ document.write('span>');
+ //-->
+ </script>"></a></li>
+</ul></div>
+			</div>
+		</div>
+	</div>
+
+					</div>
+								<div class='clear'></div>
+				<div class='copyright'>
+				© 2013 Все права защищены.
+				</div>
+				<div class='vivakom'>
+				<a title="Компания Виваком" target="_blank" href="http://www.vivakom.ru/"><img alt="Компания Виваком"  src="/images/viva_logo.png" /></a> <a class="href_viva" title="Разработка сайтов" class="vivakom" target="_blank" href="http://www.vivakom.ru/">Разработка сайта</a> в компании Виваком				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

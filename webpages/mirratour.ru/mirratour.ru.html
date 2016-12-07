@@ -1,0 +1,488 @@
+<!doctype html>
+<html class="no-js">
+<head>
+	<meta charset="UTF-8">
+<title>Главная | ТА "Мирра"</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/assets/template/general.css" type="text/css">
+<link rel="stylesheet" href="/assets/template/normalize.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/assets/template/js/modernizr.js"></script>
+<script>
+$(document).ready(function(){	
+    jQuery(document).click(
+		function(e){
+			if(jQuery(e.target).hasClass('spoiler-button')) {								
+        		jQuery(e.target).toggleClass("wrap").toggleClass("unwrap");
+        		jQuery('.spoiler-body').slideToggle();
+			}		
+			
+			else if (jQuery(e.target).parents().hasClass('spoiler-body'))
+			{
+				
+			}
+				else
+			{		
+				jQuery('.spoiler-button').removeClass("unwrap");
+				jQuery('.spoiler-body').slideUp();			
+			}
+    	});
+	});
+</script>
+</head>
+<body>
+<div id="main-wrapper">
+	<header id="header">
+    <a href="http://mirratour.ru/" id="logo"></a>
+
+    <div class="top-contacts">
+        <p class="top-phones">+7(495) 280-3358 &nbsp;   +7(495) 517- 4643   </p>
+        <p class="top-address">Москва, ул.Большая Семёновская д.28, оф.7 <br> (вход с левого торца здания)</p>
+    </div>
+
+    <div class="hot-tours-logo"></div>
+
+    <div class="social-icons">
+		<a href="http://facebook.com/mirratour.ru" target="_blank" class="si-1"></a>
+        <a href="http://twitter.com" target="_blank" class="si-2"></a>
+        <a href="http://my.mail.ru" target="_blank" class="si-3"></a>
+        <a href="http://vk.com" target="_blank" class="si-4"></a>
+        <a href="http://ok.ru" target="_blank" class="si-5"></a>
+    </div>
+    <nav id="top-menu">
+		<ul><li class="first active"><a href="http://mirratour.ru/" title="" >Главная</a></li>
+<li><a href="/search.html" title="" >Поиск тура</a></li>
+<li><a href="/zakaz-tura.html" title="" >Заказ тура</a></li>
+<li><a href="/turistam.html" title="" >Туристам</a><ul class="top-sub-menu"><li class="first"><a href="/vizovaya-podderzhka.html" title="" >Визовая поддержка</a></li>
+<li><a href="/strahovanie.html" title="" >Страхование</a></li>
+<li><a href="/sposoby-oplaty.html" title="" >Способы оплаты</a></li>
+<li><a href="/tury-v-kredit.html" title="" >Туры в кредит или рассрочку</a></li>
+<li><a href="/otzyvy-i-predlozheniya.html" title="" >Отзывы и предложения</a></li>
+<li class="last"><a href="/payamtka-dlya-turistov-ot-rospotrebnadzora.html" title="" >Памятка для туристов от Роспотребнадзора</a></li>
+</ul></li>
+<li><a href="/o-kompanii.html" title="" >О компании</a></li>
+<li class="last"><a href="/kontakty.html" title="" >Контакты</a></li>
+</ul>      
+        <div class="clear"></div>
+    </nav>
+	    <script type="text/JavaScript">
+    <!--//--><![CDATA[//><!--
+        function getElementById(id){
+            var o, d=document;
+            if (d.layers) {o=d.layers[id];if(o) o.style=o};
+            if (!o && d.getElementById) o=d.getElementById(id);
+            if (!o && d.all) o = d.all[id];
+            return o;
+        }
+    
+        function webLoginShowForm(i){
+            var a = getElementById('WebLoginLayer0');
+            var b = getElementById('WebLoginLayer2');
+            if(i==1 && a && b) {
+                a.style.display="block";
+                b.style.display="none";
+                document.forms['loginreminder'].txtpwdrem.value = 0;
+            }
+            else if(i==2 && a && b) {
+                a.style.display="none";
+                b.style.display="block";    
+                document.forms['loginreminder'].txtpwdrem.value = 1;
+            }
+        };        
+        function webLoginCheckRemember () {
+            if(document.loginfrm.rememberme.value==1) {
+                document.loginfrm.rememberme.value=0;    
+            } else {
+                document.loginfrm.rememberme.value=1;
+            }
+        }
+        function webLoginEnter(nextfield,event) {
+            if(event && event.keyCode == 13) {
+                if(nextfield.name=='cmdweblogin') {
+                    document.loginfrm.submit();
+                    return false; 
+                }
+                else {
+                    nextfield.focus();
+                    return false; 
+                }
+            } else {
+                return true;
+            }
+        }
+    //--><!]]>
+    </script>
+    <div id='WebLoginLayer0' style='position:relative'><div class="spoiler-wrapper" id="user-account">
+        <div class="spoiler" data-spoiler-link="1">
+			<a href="javascript:void(0);" class="spoiler-button">Авторизация</a>&nbsp;
+        </div>
+        <div class="spoiler-body sd-1 spoiler-content" data-spoiler-link="1">
+             
+<!-- login form section-->
+<form method="post" action="http://www.mirratour.ru//" style="margin: 0px; padding: 0px;"> 
+<div class="user-login-form">  
+    
+    <input type="hidden" value="0" name="rememberme" /> 
+		
+		
+		<div class="user-input-row">
+			<div class="user-input-label">Логин</div>
+			<input type="text" name="username" tabindex="1"  size="" value="" class="user-input">
+		</div>	
+		<div class="user-input-row">
+			<div class="user-input-label">Пароль</div>
+			<input type="password" name="password" tabindex="2"  value=""  class="user-input">
+		</div>
+		
+		<div class="user-input-row user-buttons">			
+			<input type="submit" value="Войти" name="cmdweblogin" class="user-login-button"/>			
+			<div class="user-rememberme-chkbox">
+				<label for="chkbox" style="cursor:pointer">Запомнить</label> 
+				<input type="checkbox" id="chkbox" name="chkbox" tabindex="4" size="1" value=""  onclick="webLoginCheckRemember()" />
+			</div>
+		</div>
+    
+		<div class="user-add-links"><a href="http://www.mirratour.ru/user-register.html" class="user-registration-link">Регистрация</a> <a href="#" class="user-remember-link" onclick="webLoginShowForm(2);return false;">Забыли пароль?</a> </div>
+	
+		
+        
+</div>
+</form>
+        </div>
+    </div>
+
+	
+</div><div id='WebLoginLayer2' style='position:relative;display:none'>
+<div class="spoiler-wrapper" id="user-account">
+        <div class="spoiler" data-spoiler-link="1">
+			<a href="javascript:void(0);" class="spoiler-button unwrap">Введите Email</a>&nbsp;
+        </div>
+        <div class="spoiler-body sd-1 spoiler-content" data-spoiler-link="1">
+            <!-- Password reminder form section -->
+<form action="" method="post" name="loginreminder">
+    <div class="user-remember-pass">
+        <input type="hidden" value="1" name="txtpwdrem"> 
+        <div class="user-remember-input-row">
+        <label for="user-remember-email">Email</label>
+        <input type="text" size="24" class="user-remember-email" name="txtwebemail">
+        </div>        
+ 			
+			<div class="user-remember-button-row">
+				<input type="submit" class="ur-submit" name="cmdweblogin" value="Отправить">
+				 <input type="reset" style="clear: none; display: inline;" class="ur-cancel" onclick="webLoginShowForm(1);" name="cmdcancel" value="Отмена">
+            
+			</div>
+            
+    </div>
+</form>
+       </div>
+    </div></div>
+</header>
+<div class="slider-wrapper">
+	
+	
+	
+<script src="/assets/template/js/jquery.liMarquee.js"></script>
+<script>
+$(document).ready(function(){
+	$('#liMarquee').liMarquee();
+	});
+</script>
+    <div id="liMarquee"><p><strong>Раннее бронирование туров по всем направлениям! &nbsp; Эксклюзивные программы по КИТАЮ!</strong></p></div>
+
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="/assets/template/slidebox/jquery.mSimpleSlidebox.css">
+<script src="/assets/template/slidebox/jquery.mSimpleSlidebox.js"></script>
+    <script>
+        (function ($) {
+            $(document).ready(function () {
+                $(".slidebox").mSlidebox({numberedThumbnails:true});
+            });
+        })(jQuery);
+    </script>
+    <div class="slidebox">
+        <ul>
+            <li><a href="slajd-1.html"><img src="assets/cache/images/slider/970x300-b-1.d20.jpg"><span class="slide-title inline-block">Отдых на море<br />Раннее бронирование&nbsp;Скидки до 40 %</span></a></li><li><a href="slajd-2.html"><img src="assets/cache/images/slider/970x300-s5.d20.jpg"><span class="slide-title inline-block">Отдых в горах</span></a></li><li><a href="slajd-3.html"><img src="assets/cache/images/slider/970x300-274914.d20.jpg"><span class="slide-title inline-block">Туры по России<br />Сочи, Крым, о.Байкал &nbsp;- спешите бронировать!</span></a></li><li><a href="kitaj2.html"><img src="assets/cache/images/assets/snippets/phpthumb/970x300-noimage.d20.jpg"><span class="slide-title inline-block"></span></a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="left-column">
+	<div class="side-block sd-1">
+        <div class="side-title">Наши услуги</div>		
+		<ul class="add-menu"><li><a href="/kitaj.html" title="" >КИТАЙ</a><ul class="add-sub-menu"><li><a href="/shanhaj-gory-avatar-chzhanczyacze-shanhaj-7-dnej6nochej.html" title="" >Шанхай - Горы Аватар (Чжанцзяцзе) - Шанхай   7 дней/6ночей</a></li>
+<li><a href="/shanhaj-usi-suchzhou-hanchzhou-huanshan-7-dnej.html" title="" >Шанхай - Уси - Сучжоу - Ханчжоу - Хуаншань  7 дней</a></li>
+<li class="last"><a href="/vostochnyj-kitaj-singapur-9-dnej-8-nochej.html" title="" >Восточный Китай + Сингапур  9 дней / 8 ночей</a></li>
+</ul></li>
+<li><a href="/tury.html" title="" >Туры</a><ul class="add-sub-menu"><li><a href="/plyazhnyj-otdyh.html" title="" >Пляжный отдых</a></li>
+<li><a href="/exc-search.html" title="" >Экскурсионные туры</a></li>
+<li><a href="/detskij-otdyh.html" title="" >Детский отдых</a></li>
+<li><a href="/lechebnye-tury.html" title="" >Лечебные туры</a></li>
+<li><a href="/avtobusnye-tury.html" title="" >Автобусные туры</a></li>
+<li><a href="/tury-vyhodnogo-dnya.html" title="" >Туры выходного дня</a></li>
+<li><a href="/individualnye-tury.html" title="" >Индивидуальные туры</a></li>
+<li><a href="/gornolyzhnye-tury.html" title="" >Горнолыжные туры</a></li>
+<li><a href="/otdyh-v-gorah.html" title="" >Отдых в горах</a></li>
+<li><a href="/svadebnye-tury.html" title="" >Свадебные туры</a></li>
+<li><a href="/zelenyj-turizm.html" title="" >Зеленый туризм</a></li>
+<li><a href="/nudistskie-kurorty.html" title="" >Нудистские курорты</a></li>
+<li><a href="/korporativnyj-otdyh.html" title="" >Корпоративный отдых</a></li>
+<li class="last"><a href="/veloturizm.html" title="" >Велотуризм</a></li>
+</ul></li>
+<li><a href="/vizy.html" title="" >Визы</a><ul class="add-sub-menu"><li><a href="/kitaj1.html" title="" >КИТАЙ</a></li>
+<li><a href="/avstriya.html" title="" >АВСТРИЯ</a></li>
+<li><a href="/belgiya.html" title="" >БЕЛЬГИЯ</a></li>
+<li><a href="/bolgariya.html" title="" >БОЛГАРИЯ</a></li>
+<li><a href="/vengriya.html" title="" >ВЕНГРИЯ</a></li>
+<li><a href="/greciya.html" title="" >ГРЕЦИЯ</a></li>
+<li><a href="/germaniya.html" title="" >ГЕРМАНИЯ</a></li>
+<li><a href="/gollandiya.html" title="" >ГОЛЛАНДИЯ</a></li>
+<li><a href="/daniya.html" title="" >ДАНИЯ</a></li>
+<li><a href="/ispaniya1.html" title="" >ИСПАНИЯ</a></li>
+<li><a href="/italiya1.html" title="" >ИТАЛИЯ</a></li>
+<li><a href="/latviya.html" title="" >ЛАТВИЯ</a></li>
+<li><a href="/litva.html" title="" >ЛИТВА</a></li>
+<li><a href="/lyuksemburg.html" title="" >ЛЮКСЕМБУРГ</a></li>
+<li><a href="/malta.html" title="" >МАЛЬТА</a></li>
+<li><a href="/norvegiya.html" title="" >НОРВЕГИЯ</a></li>
+<li><a href="/polsha.html" title="" >ПОЛЬША</a></li>
+<li><a href="/portugaliya.html" title="" >ПОРТУГАЛИЯ</a></li>
+<li><a href="/finlyandiya.html" title="" >ФИНЛЯНДИЯ</a></li>
+<li><a href="/franciya.html" title="" >ФРАНЦИЯ</a></li>
+<li><a href="/chehiya.html" title="" >ЧЕХИЯ</a></li>
+<li><a href="/shveciya.html" title="" >ШВЕЦИЯ</a></li>
+<li><a href="/shvejcariya.html" title="" >ШВЕЙЦАРИЯ</a></li>
+<li><a href="/estoniya.html" title="" >ЭСТОНИЯ</a></li>
+<li><a href="/velikobritaniya.html" title="" >ВЕЛИКОБРИТАНИЯ</a></li>
+<li><a href="/vetnam.html" title="" >ВЬЕТНАМ</a></li>
+<li><a href="/izrail.html" title="" >ИЗРАИЛЬ</a></li>
+<li><a href="/indiya1.html" title="" >ИНДИЯ</a></li>
+<li><a href="/kipr1.html" title="" >КИПР</a></li>
+<li><a href="/kuba1.html" title="" >КУБА</a></li>
+<li><a href="/oae.html" title="" >ОАЭ</a></li>
+<li><a href="/tajland.html" title="" >ТАЙЛАНД</a></li>
+<li><a href="/tunis.html" title="" >ТУНИС</a></li>
+<li><a href="/turciya.html" title="" >ТУРЦИЯ</a></li>
+<li><a href="/horvatiya.html" title="" >ХОРВАТИЯ</a></li>
+<li class="last"><a href="/chernogoriya.html" title="" >ЧЕРНОГОРИЯ</a></li>
+</ul></li>
+<li><a href="/aviabilety.html" title="" >Авиабилеты</a></li>
+<li><a href="/zhd-bilety.html" title="" >Ж/д билеты</a></li>
+<li><a href="/strahovanie1.html" title="" >Страхование</a></li>
+<li><a href="http://hotels.mirratour.ru/" title="" >Бронирование отелей</a></li>
+<li><a href="/morskie-i-rechnye-kruizy.html" title="" >Морские и речные круизы</a></li>
+<li><a href="/akcii.html" title="" >Акции</a></li>
+<li class="last"><a href="/tury-v-kredit1.html" title="" >Туры в кредит</a></li>
+</ul>       
+    </div>
+	<div class="side-block sd-1">
+        <div class="info"><!-- Gismeteo informer START -->
+<link rel="stylesheet" type="text/css" href="https://bst1.gismeteo.ru/assets/flat-ui/legacy/css/informer.min.css">
+<div id="gsInformerID-D2TPycAS0KtOgN" class="gsInformer" style="width:220px;height:178px">
+  <div class="gsIContent">
+    <div id="cityLink">
+    <a href="https://www.gismeteo.ru/city/daily/1948/" target="_blank">Погода в Барселоне</a><br/>
+    <a href="https://www.gismeteo.ru/city/daily/3887/" target="_blank">Погода в Ларнаке</a><br/>
+    <a href="https://www.gismeteo.ru/city/daily/6618/" target="_blank">Погода в Хургаде</a><br/>
+    <a href="https://www.gismeteo.ru/city/daily/5003/" target="_blank">Погода в Севастополе</a><br/>
+    <a href="https://www.gismeteo.ru/city/daily/3679/" target="_blank">Погода в Ираклионе</a>
+    </div>
+    <div class="gsLinks">
+      <table>
+        <tr>
+            <td>
+            <div class="leftCol">
+              <a href="https://www.gismeteo.ru/" target="_blank">
+                <img alt="Gismeteo" title="Gismeteo" src="https://bst1.gismeteo.ru/assets/flat-ui/img/logo-mini2.png" align="middle" border="0" />
+                <span>Gismeteo</span>
+              </a>
+            </div>
+            <div class="rightCol">
+              <a href="https://www.gismeteo.ru/" target="_blank">Прогноз на 2 недели</a>
+            </div>
+            </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<script async src="https://www.gismeteo.ru/api/informer/getinformer/?hash=D2TPycAS0KtOgN" type="text/javascript"></script>
+<!-- Gismeteo informer END --></div>
+        <div class="info"><link rel="stylesheet" href="assets/snippets/informer/informer.css">
+<span class="er">Извините.<br>По техническим причинам информер временно недоступен.</span></div>
+    </div>
+	<div class="side-block sd-2">
+        <div class="side-title">Подписка на Новости</div>
+        <div id="subScribe" class="sub">
+<!--<script src="assets/modules/easynewsletter/js/placeholder.js"></script>
+<script src="assets/modules/easynewsletter/js/jquery.js"></script>-->
+<link rel="stylesheet" href="/assets/modules/easynewsletter/css.css" type="text/css">
+
+<form id="subscrForm" method="post">
+	<input type="hidden" value="" name="hid">
+	<input type="text" name="firstname"  value="" placeholder="Имя" class="inputTxt" id="subscrFirst">  	
+	<input type="text" name="email"  value="" placeholder="Email" class="inputTxt" id="subcrEmail">
+	<input type="text" name="lastInp" value="" id="lastInput">
+	<input type="hidden" name="op" value="set">
+	
+	
+<div class="buttonAlign"><input type="submit" id="change" name="subscr_sbmt" class="inputButton" value="Подписаться"></div>
+</form>
+</div>
+    </div>
+</div>
+
+<div id="right-column">
+
+    <div class="banner-wrapper">		
+       <a href="podbor-tura.html" class="banner-item b-0" style="background: url(assets/cache/images/banner/365x150-b-1.25b.jpg) center top no-repeat">
+            <div class="banner-description">
+                <div class="banner-title">Подбор тура</div>
+                Более 2500 туров, 50 направлений по всему миру
+            </div>
+        </a><a href="specialnye-predlozheniya.html" class="banner-item b-1" style="background: url(assets/cache/images/banner/365x150-b-2.25b.jpg) center top no-repeat">
+            <div class="banner-description">
+                <div class="banner-title">Специальные предложения</div>
+                Более 2500 туров, 50 направлений по всему миру
+            </div>
+        </a>
+        <div class="clear"></div>
+    </div>
+
+    <div class="block">
+		<div class="block-title">Витрина туров <a href="/specialnye-predlozheniya.html" class="more-button">Больше туров</a></div>
+		<!--BEGIN OF MODULE BLOCK-->
+<script type="text/javascript" language="JavaScript" src="http://tourclient.ru/f/jsboot/39603/vitrina_tourV2?style=top&conf=top"></script>
+<!--END OF MODULE BLOCK-->
+    </div>
+
+    <div class="block news-tourizm-block">
+        <div class="block-title">Новости туризма</div>
+        <div class="block-wrapper">
+			<!--BEGIN OF MODULE BLOCK-->
+<script type="text/javascript" language="JavaScript" src="http://tourclient.ru/f/jsboot/39603/tourists_newsV2?style=top&conf=top"></script>
+<!--END OF MODULE BLOCK-->
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+	<div class="footer-menu-block">
+        <div class="footer-menu-wrapper">
+           <ul class="footer-menu"><li><a href="/" title="" >Главная</a></li>
+<li><a href="/strany1.html" title="" >Страны</a></li>
+<li><a href="/search.html" title="" >Поиск тура</a></li>
+<li class="last"><a href="/kitaj.html" title="" >Туры по России</a></li>
+</ul>
+        </div>
+
+        <div class="footer-menu-wrapper">
+            <ul class="footer-menu"><li><a href="/zakaz-tura.html" title="" >Заказ  тура</a></li>
+<li><a href="/aviabilety.html" title="" >Авиабилеты</a></li>
+<li><a href="/zhd-bilety.html" title="" >Ж/д билеты</a></li>
+<li class="last"><a href="/arenda-nedvizhimosti.html" title="" >Аренда недвижимости</a></li>
+</ul>
+        </div>
+
+        <div class="footer-menu-wrapper">
+            <ul class="footer-menu"><li><a href="/fotogalereya.html" title="" >Фотогалерея</a></li>
+<li><a href="/bronirovanie-otelej1.html" title="" >Бронирование отелей</a></li>
+<li><a href="/bronirovanie-kruizov.html" title="" >Бронирование круизов</a></li>
+<li class="last"><a href="/villy-appartamenty.html" title="" >Виллы, аппартаменты</a></li>
+</ul>
+        </div>
+
+        <div class="footer-menu-wrapper">
+            <ul class="footer-menu"><li><a href="/o-kompanii.html" title="" >О нас</a></li>
+<li><a href="/novosti.html" title="" >Новости</a></li>
+<li><a href="/poleznaya-informaciya.html" title="" >Полезная информация</a></li>
+<li class="last"><a href="/nashi-partnery.html" title="" >Наши партнеры</a></li>
+</ul>
+        </div>
+
+        <div class="footer-menu-wrapper">
+            <ul class="footer-menu"><li><a href="/kontakty.html" title="" >Контакты</a></li>
+<li class="last"><a href="/otzyvy-i-predlozheniya.html" title="" >Отзывы туристов</a></li>
+</ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <footer id="footer">
+        <div class="copy">&copy; 2015 Мирра. Все права защищены.</div>
+        <div class="countersWrapper">
+            <div class="counters">
+                <img src="/assets/template/todel/topturizm.gif" alt="0">
+                <!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=35233025&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//informer.yandex.ru/informer/35233025/3_1_FFFFFDFF_FAEEDDFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" 
+title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
+ onclick="try{Ya.Metrika.informer({i:this,id:35233025, lang:ru});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter35233025 = new Ya.Metrika({id:35233025,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/35233025" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+				<!-- NetLog -->
+<script language="javascript">
+netlog_js="1.0";
+netlog_r=""+Math.random()+"&s=14014&im=19&r="+escape(document.referrer)+"&pg="+
+escape(window.location.href);
+document.cookie="netlog=1; path=/"; netlog_r+="&c="+(document.cookie?"Y":"N");
+</script>
+<script language="javascript1.1">
+netlog_js="1.1";netlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script>
+<script language="javascript1.2">
+netlog_js="1.2";
+netlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+((screen.colorDepth?screen.colorDepth:screen.pixelDepth));
+</script>
+<script language="javascript1.3">netlog_js="1.3"</script>
+<script language="javascript">netlog_r+="&js="+netlog_js;
+document.write("<a href='http://topturizm.ru/?14014' target='_blank'><img "+
+" src='http://click.topturizm.ru/count.php?"+
+netlog_r+"&' border=0 width=88 height=31 alt=TopTurizm></a>")</script>
+<noscript><a href=http://topturizm.ru/?14014 target=_blank><img
+src="http://click.topturizm.ru/count.php?s=14014&im=19" border=0
+width="88" height="31" alt="TopTurizm"></a></noscript>
+<!-- /NetLog -->
+
+				
+            </div>
+            <div class="touradmin"><a href="http://touradmin.ru/" target="_blank" rel="nofollow">Touradmin — разработка туристических сайтов</a></div>
+        </div>
+    </footer>
+	</div>
+</body>
+</html>

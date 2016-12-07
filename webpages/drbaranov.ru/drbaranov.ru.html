@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Главная</title>
+
+  <meta name="keywords" content="" /> <meta name="description" content="" />
+
+  <meta http-equiv="Content-Language" content="ru">
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+  <meta http-equiv="Page-Enter" content="progid:DXImageTransform.Microsoft.Fade(Duration=2)" />
+  <meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.Fade(Duration=2)"  />
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/style/reset.css" type="text/css">
+  <link rel="stylesheet" href="/style/style.css" type="text/css">
+
+  <script type="text/javascript" src="/js/jquery.js"></script> 
+
+  <script type="text/javascript" src="/js/jquery.lightbox.js"></script>
+  <link rel="stylesheet" type="text/css" href="/js/lightbox/jquery.lightbox.css" media="screen" />
+
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('a[target=lightbox]').lightBox();
+
+        $('.menu a.active').each(function(){
+        	var r = $(this).attr('rel');
+        	$('#' + r).show();
+        });
+
+        $('.menu a').click(function(){
+        	var h = $(this).attr('href');
+        	if (h == '' || h == '#') {
+        		var r = $(this).attr('rel');
+        		$('#' + r).stop(true, true).slideToggle('fast');
+        		return false;
+        	}
+        });
+
+        $('.submenu > table').hover(function(){
+        	$(this).find('a').addClass('over');
+        }, function(){
+        	$(this).find('a').removeClass('over');
+        });
+
+        $('.menu').hover(function(){
+        	$(this).find('a').addClass('over');
+        	$(this).find('.bv').attr('src', '/anima/bva.jpg');
+        	$(this).find('.bn').attr('src', '/anima/bna.jpg');
+        	$(this).find('.bfon').attr('background', '/anima/bfona.jpg');
+        }, function(){
+        	if (!$(this).hasClass('menuactive')) {
+	        	$(this).find('a').removeClass('over');
+        		$(this).find('.bv').attr('src', '/anima/bv.jpg');
+        		$(this).find('.bn').attr('src', '/anima/bn.jpg');
+	        	$(this).find('.bfon').attr('background', '/anima/bfon.jpg');
+        	}
+        });
+
+        $('.submenu > table').hover(function(){
+        	$(this).find('a').addClass('over');
+        	$(this).find('.bv').attr('src', '/anima/bva.jpg');
+        	$(this).find('.bn').attr('src', '/anima/bna.jpg');
+        	$(this).find('.bfon').attr('background', '/anima/bfona.jpg');
+        }, function(){
+        	if (!$(this).hasClass('menuactive')) {
+	        	$(this).find('a').removeClass('over');
+        		$(this).find('.bv').attr('src', '/anima/bv2.jpg');
+        		$(this).find('.bn').attr('src', '/anima/bn2.jpg');
+	        	$(this).find('.bfon').attr('background', '/anima/bfon2.jpg');
+        	}
+        });
+
+        $('.menuactive').each(function(){
+        	$(this).find('a').addClass('over');
+        	$(this).find('.bv').attr('src', '/anima/bva.jpg');
+        	$(this).find('.bn').attr('src', '/anima/bna.jpg');
+        	$(this).find('.bfon').attr('background', '/anima/bfona.jpg');
+        });
+
+    });
+  </script>
+
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" >
+
+<div align="center">
+	<table border="0" cellpadding="0" cellspacing="0" width="990" id="table1">
+		<tr>
+			<td align="left">
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table2">
+				<tr>
+					<td>
+					<img border="0" src="/anima/1.jpg" width="990" height="45"></td>
+				</tr>
+			</table>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table3">
+				<tr>
+					<td>
+					<img border="0" src="/anima/2.jpg" width="436" height="139"></td>
+					<td width="100%" background="/anima/fon1.jpg" align="right">
+					<font face="Verdana" color="#FFFFFF" style="font-size: 16pt; font-weight: 700">
+					+7 (495) 947-62-71</font><font face="Verdana" size="4" color="#FFFFFF"><br>
+					</font><b><font face="Verdana" size="2" color="#00508F">
+					dr.baranov@rambler.ru<br>
+					г. Москва, ул. Маршала Тухачевского, 55</font></b></td>
+					<td>
+					<img border="0" src="/anima/3.jpg" width="34" height="139"></td>
+				</tr>
+			</table>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table4" background="/anima/fon-menu.jpg">
+				<tr>
+					<td><img border="0" src="/anima/l1.jpg" width="66" height="57"></td>
+					<td><a href="/"><img border="0" src="/anima/b1.jpg" width="116" height="38"></a></td>
+					<td><a href="/staff"><img border="0" src="/anima/b2.jpg" width="146" height="38"></a></td>
+					<td><a href="/prices"><img border="0" src="/anima/b3.jpg" width="118" height="38"></a></td>
+					<td><a href="/news"><img border="0" src="/anima/b4.jpg" width="146" height="38"></a></td>
+					<td><a href="/for_patient"><img border="0" src="/anima/b5.jpg" width="117" height="38"></a></td>
+					<td><a href="/reference"><img border="0" src="/anima/b6.jpg" width="97" height="38"></a></td>
+					<td><a href="/contacts"><img border="0" src="/anima/b7.jpg" width="118" height="38"></a></td>
+					<td><img border="0" src="/anima/r1.jpg" width="66" height="57"></td>
+				</tr>
+			</table>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table5">
+				<tr>
+					<td>
+					<img border="0" src="/files/images/norm2.jpg" width="990" height="242"></td>
+				</tr>
+			</table>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table6" bgcolor="#D1EDFF">
+				<tr>
+					<td valign="top" background="/anima/l2-fon.jpg">
+					<img border="0" src="/anima/l2.jpg" width="40" height="655"></td>
+					<td valign="top">
+
+					
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="menu ">
+                            <tr><td><img border="0" class="bv" src="/anima/bv.jpg" width="229" height="5"></td></tr>
+                            <tr>
+                                <td class="bfon" background="/anima/bfon.jpg"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+                                    <td><img border="0" src="/anima/bl.gif" width="45" height="1"></td>
+                                    <td width="100%" align="left"><a href="/gigiena_i_profilaktika.htm" rel="sub1" >Гигиена и профилактика</a></td>
+                                    <td><img border="0" src="/anima/br.gif" width="27" height="1"></td>
+                                </tr></table></td>
+                            </tr>
+                            <tr><td><img border="0" class="bn" src="/anima/bn.jpg" width="229" height="10"></td></tr>
+                        </table>
+
+                                                    
+                        
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="menu ">
+                            <tr><td><img border="0" class="bv" src="/anima/bv.jpg" width="229" height="5"></td></tr>
+                            <tr>
+                                <td class="bfon" background="/anima/bfon.jpg"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+                                    <td><img border="0" src="/anima/bl.gif" width="45" height="1"></td>
+                                    <td width="100%" align="left"><a href="/otbelivanie_zubov.htm" rel="sub7" >Отбеливание зубов</a></td>
+                                    <td><img border="0" src="/anima/br.gif" width="27" height="1"></td>
+                                </tr></table></td>
+                            </tr>
+                            <tr><td><img border="0" class="bn" src="/anima/bn.jpg" width="229" height="10"></td></tr>
+                        </table>
+
+                                                    
+                        
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="menu ">
+                            <tr><td><img border="0" class="bv" src="/anima/bv.jpg" width="229" height="5"></td></tr>
+                            <tr>
+                                <td class="bfon" background="/anima/bfon.jpg"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+                                    <td><img border="0" src="/anima/bl.gif" width="45" height="1"></td>
+                                    <td width="100%" align="left"><a href="/terapiya.htm" rel="sub8" >Терапия</a></td>
+                                    <td><img border="0" src="/anima/br.gif" width="27" height="1"></td>
+                                </tr></table></td>
+                            </tr>
+                            <tr><td><img border="0" class="bn" src="/anima/bn.jpg" width="229" height="10"></td></tr>
+                        </table>
+
+                                                    
+                        
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="menu ">
+                            <tr><td><img border="0" class="bv" src="/anima/bv.jpg" width="229" height="5"></td></tr>
+                            <tr>
+                                <td class="bfon" background="/anima/bfon.jpg"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+                                    <td><img border="0" src="/anima/bl.gif" width="45" height="1"></td>
+                                    <td width="100%" align="left"><a href="/hirurgiya.htm" rel="sub9" >Хирургия</a></td>
+                                    <td><img border="0" src="/anima/br.gif" width="27" height="1"></td>
+                                </tr></table></td>
+                            </tr>
+                            <tr><td><img border="0" class="bn" src="/anima/bn.jpg" width="229" height="10"></td></tr>
+                        </table>
+
+                                                    
+                        
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="menu ">
+                            <tr><td><img border="0" class="bv" src="/anima/bv.jpg" width="229" height="5"></td></tr>
+                            <tr>
+                                <td class="bfon" background="/anima/bfon.jpg"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+                                    <td><img border="0" src="/anima/bl.gif" width="45" height="1"></td>
+                                    <td width="100%" align="left"><a href="/implantologiya.htm" rel="sub10" >Имплантология</a></td>
+                                    <td><img border="0" src="/anima/br.gif" width="27" height="1"></td>
+                                </tr></table></td>
+                            </tr>
+                            <tr><td><img border="0" class="bn" src="/anima/bn.jpg" width="229" height="10"></td></tr>
+                        </table>
+
+                                                    
+                        
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="menu ">
+                            <tr><td><img border="0" class="bv" src="/anima/bv.jpg" width="229" height="5"></td></tr>
+                            <tr>
+                                <td class="bfon" background="/anima/bfon.jpg"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+                                    <td><img border="0" src="/anima/bl.gif" width="45" height="1"></td>
+                                    <td width="100%" align="left"><a href="/parodontologiya.htm" rel="sub11" >Пародонтология</a></td>
+                                    <td><img border="0" src="/anima/br.gif" width="27" height="1"></td>
+                                </tr></table></td>
+                            </tr>
+                            <tr><td><img border="0" class="bn" src="/anima/bn.jpg" width="229" height="10"></td></tr>
+                        </table>
+
+                                                    
+                        
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="menu ">
+                            <tr><td><img border="0" class="bv" src="/anima/bv.jpg" width="229" height="5"></td></tr>
+                            <tr>
+                                <td class="bfon" background="/anima/bfon.jpg"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+                                    <td><img border="0" src="/anima/bl.gif" width="45" height="1"></td>
+                                    <td width="100%" align="left"><a href="/ortopediya.htm" rel="sub12" >Ортопедия</a></td>
+                                    <td><img border="0" src="/anima/br.gif" width="27" height="1"></td>
+                                </tr></table></td>
+                            </tr>
+                            <tr><td><img border="0" class="bn" src="/anima/bn.jpg" width="229" height="10"></td></tr>
+                        </table>
+
+                                                    
+                        
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="menu ">
+                            <tr><td><img border="0" class="bv" src="/anima/bv.jpg" width="229" height="5"></td></tr>
+                            <tr>
+                                <td class="bfon" background="/anima/bfon.jpg"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+                                    <td><img border="0" src="/anima/bl.gif" width="45" height="1"></td>
+                                    <td width="100%" align="left"><a href="/pamyatka.htm" rel="sub13" >Памятка пациенту</a></td>
+                                    <td><img border="0" src="/anima/br.gif" width="27" height="1"></td>
+                                </tr></table></td>
+                            </tr>
+                            <tr><td><img border="0" class="bn" src="/anima/bn.jpg" width="229" height="10"></td></tr>
+                        </table>
+
+                                                    
+                        
+
+					<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table35" background="/anima/fon-panel.jpg">
+						<tr>
+							<td> </td>
+						</tr>
+					</table>
+					<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table33">
+						<tr>
+							<td>
+							<img border="0" src="/anima/newsv.jpg" width="229" height="5"></td>
+						</tr>
+						<tr>
+							<td background="/anima/news-fon.jpg">
+							<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table34">
+								<tr>
+									<td>
+									<img border="0" src="/anima/bl.gif" width="45" height="1"></td>
+									<td width="100%" align="left"><b>
+									<font face="Verdana" size="2" color="#00508F">
+									Новости</font></b></td>
+									<td>
+									<img border="0" src="/anima/br.gif" width="27" height="1"></td>
+								</tr>
+							</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<img border="0" src="/anima/newsn.jpg" width="229" height="10"></td>
+						</tr>
+					</table>
+					<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table38">
+						<tr>
+							<td background="/anima/fon-panel.jpg"> <table border="0" cellpadding="0" cellspacing="0" width="100%" id="table39">
+								<tr>
+									<td>
+									<img border="0" src="/anima/bl.gif" width="45" height="1"></td>
+									<td width="100%" height="300" valign="top" align="left">
+
+									<div class="news">
+									
+                        <div style="padding-bottom: 15px;">
+                        <b>&nbsp;</b><span style="font-size: 19px;"><b>&nbsp;</b><span style="color: rgb(255, 0, 0);">Уважаемые пациенты! В рамках антикризисной программы снижены цены на лечение зубов!</span></span><span style="color: rgb(255, 0, 0);">&nbsp;</span><br />                        </div>
+                        
+                        
+									</div>
+									
+									</td>
+									<td>
+									<img border="0" src="/anima/br.gif" width="27" height="1"></td>
+								</tr>
+							</table>
+
+							<div><img border="0" src="/anima/news-n.jpg" width="229" height="19"></div></td>
+						</tr>
+					</table>
+					</td>
+					<td valign="top">
+					<img border="0" src="/anima/25.gif" width="25" height="1"></td>
+					<td valign="top" width="100%">
+							<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table40">
+								<tr>
+									<td>
+									<img border="0" src="/anima/1x1.gif" width="1" height="23"></td>
+									<td width="100%">
+									<font color="#015191" size="3" face="Arial Black">
+									Главная</font></td>
+								</tr>
+							</table>
+
+							<div class="content">
+							 
+<table width="100%" cellspacing="0" cellpadding="10" border="0" id="table1"> 
+  <tbody> 
+    <tr> 
+      <td valign="top"><b>Наша клиника работает с 2006 года. Мы лечим так, как хотели бы, чтобы лечили нас.<br />«Быть лучшим значит постоянно превосходить самые смелые ожидания знатоков…»<br /></b><br /><b><span style="font-size: 19px;">Добро пожаловать!</span></b><br /><br />В клинике оказываются все виды стоматологической помощи: терапевтическая, хирургическая, ортопедическая, пародонтологическая и имплантология. Основные направления работы: профилактика заболеваний и комплексное лечение. В нашей клинике забудьте о страшных призраках прошлого! Лечение зубов у нас не просто безболезненно – это приятно! А иметь здоровые зубы – приятно вдвойне.<br /><br />Для качественного лечения в клинике используется специальное оборудование, которое позволяет выполнить работу с точностью до десятых долей миллиметра. И если по тем или иным причинам человек утратил большое количество зубов, но не хочет носить съёмные протезы, в таких случаях настоящим спасением становится имплантация. Мы стремимся к тому, чтобы и обстановка, и отношение персонала к пациенту позволяли ему чувствовать себя у нас желанным гостем.<br /><br />Современная стоматология обладает воистину фантастическими возможностями. При полном разрушении зуба, но сохранённом корне, у нас в клинике восстанавливается абсолютно полноценный зуб, не отличимый от настоящего. Для этого используются лучшие материалы последнего поколения, ассортимент которых удовлетворит самого требовательного пациента.<br /><br /><b>Сегодня Вас ожидает:</b><br />Качественная стоматология с высококлассной профилактикой. При этом, основными вопросами, наряду с гигиеной полости рта и предупреждением кариеса, является диагностика и раннее выявление пародонтита и его терапия.</td> 
+      <td valign="top"> 
+        <p align="center"> <a target="lightbox" href="/files/images/interer-kliniki-1_2.JPG" shape="rect"> <img width="300" height="225" border="0" alt="" style="width: 300px; height: 225px;" src="/files/images/interer-kliniki-1_2.JPG" /> <br /><br /></a><b> <a target="lightbox" href="/files/images/interer-kliniki-3-dop_2.JPG" shape="rect"> <img width="300" height="225" border="0" alt="" style="width: 300px; height: 225px;" src="/files/images/interer-kliniki-3-dop_2.JPG" /> <br /><br /></a></b> <a target="lightbox" href="/files/images/foto-recepshen.jpg" shape="rect"> <img width="300" height="225" border="0" alt="" style="width: 300px; height: 225px;" src="/files/images/foto-recepshen.jpg" /> </a> <br /><br /> <a target="lightbox" href="/files/images/foto-4_2.JPG" shape="rect"> <img width="300" height="225" border="0" alt="" style="width: 300px; height: 225px;" src="/files/images/foto-4_2.JPG" /></a></p></td> 
+    </tr> 
+    <tr> 
+      <td valign="top" colspan="2">В повседневной практике используется оборудование для безопасного и качественного лечения пациентов: комфортные высокоскоростные установки «Сирона», цифровая рентгенография, ультразвуковой аппарат «Вектор» для лечения заболеваний пародонта, физиодиспенсер «Каво» для операций на твёрдых тканях, аппараты «Пьезон мастер» и «Эйр фло» для проведения профессиональной гигиены, апекс–локатор и эндодонтический наконечник фирмы «Морита» для лечения корневых каналов, лампа "ZOOM AP" для отбеливания зубов.<br /><br /><b>Ежегодно</b><br />Повышение образования сотрудников происходит в рамках научных конгрессов и семинаров.</td> 
+    </tr> 
+  </tbody> 
+</table> 
+<table width="100%" cellspacing="0" cellpadding="10" border="0" id="table2"> 
+  <tbody> 
+    <tr> 
+      <td align="center"> <a target="lightbox" href="/files/images/interer-kliniki-2_2.JPG" shape="rect"> <img width="150" height="200" border="0" alt="" style="width: 150px; height: 200px;" src="/files/images/interer-kliniki-2_2.JPG" /></a></td> 
+      <td align="center"><a target="lightbox" href="/files/images/interer-kliniki-4-dop_2.JPG" shape="rect"> <img width="200" height="144" border="0" alt="" style="width: 200px; height: 144px;" src="/files/images/interer-kliniki-4-dop_2.JPG" /></a></td> 
+      <td align="center"><a target="lightbox" href="/files/images/interer-kliniki-4_1.JPG" shape="rect"> <img width="150" height="200" border="0" alt="" style="width: 150px; height: 200px;" src="/files/images/interer-kliniki-4_1.JPG" /></a></td> 
+    </tr> 
+  </tbody> 
+</table>
+							</div>
+							
+							</td>
+					<td valign="top" background="/anima/r2-fon.jpg">
+					<img border="0" src="/anima/r2.jpg" width="34" height="655"></td>
+				</tr>
+			</table>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table7" bgcolor="#FFFFFF">
+				<tr>
+					<td><img border="0" src="/anima/n1.jpg" width="54" height="32"></td>
+					<td background="/anima/n-fon.jpg" width="100%"> </td>
+					<td><img border="0" src="/anima/n2.jpg" width="54" height="32"></td>
+				</tr>
+				<tr>
+					<td> </td>
+					<td width="100%">
+					<table border="0" cellpadding="3" cellspacing="0" width="100%" id="table8" class="botmenu">
+						<tr>
+							<td align="center"><a href="/">Главная</a></td>
+							<td align="center"><a href="/staff">Коллектив 
+							клиники</a></td>
+							<td align="center"><a href="/prices">Наши цены</a></td>
+							<td align="center"><a href="/news">Новости клиники</a></td>
+							<td align="center"><a href="/for_patient">Пациентам</a></td>
+							<td align="center"><a href="/reference">Отзывы</a></td>
+							<td align="center"><a href="/contacts">Как нас найти</a></td>
+							<td align="center">
+							<font color="#7CCAFF" face="Verdana" size="1">© 2012 
+							Стоматологическая клиника д-ра Баранова</font></td>
+						</tr>
+					</table>
+					</td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td> </td>
+					<td width="100%"> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td> </td>
+					<td width="100%" align="center" height="40">
+					<font color="#C0C0C0" face="Verdana" size="1">
+					<a href="http://www.fantasy-gpm.ru">
+					<span style="text-decoration: none"><font color="#808080">
+					создание сайта</font></span></a></font><font color="#808080" face="Verdana" size="1"> 
+					- FGPM</font></td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td> </td>
+					<td width="100%"> </td>
+					<td> </td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,978 @@
+
+<!DOCTYPE html PUBLIC>
+<html>
+<head>
+<title>Салон красоты в Отрадном, салон красоты на Тимирязевской, спа салон, спа клуб - Veronika Herba</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content="cалон красоты москва, спа процедуры, центр красоты и здоровья, тимирязевская, отрадное" />
+<meta name="description" content="Центр красоты и здоровья Veronika Herba рад предложить своим клиентам разнообразные косметические и оздоровительные СПА-процедуры, которые позволят всегда выглядеть блистательно и ухоженно." />
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "bd6aaf7b508e03d961e6ec4af1585f3c"]); _ba.push(["host", "www.salonveronika.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!--CSS-->
+
+	
+
+<link rel="stylesheet" type="text/css" href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/css/main/bootstrap.css?1476898910117381" />
+<link rel="stylesheet" type="text/css" href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/templates/veronika/css/style.css?14774011057799393" />
+<link rel="stylesheet" href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/templates/veronika/css/colorbox.css?14029133754342" type="text/css" />
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+
+<!--JS-->
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ 
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" defer src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/js/jquery-1.6.2.min.js?147402743392555"></script>
+<script type="text/javascript" defer src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/js/js.js?147573955916143"></script>
+<script type="text/javascript" defer src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/js/jquery.colorbox.js?146885324127348"></script>
+<script type="text/javascript" defer src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/js/jquery.disable.text.select.pack.js?14029133861205"></script>
+<script type="text/javascript" defer src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/js/jquery.cookie.js?13985896343121"></script>
+<script type="text/javascript" defer src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/js/hover.zoom.js?14770615712500"></script>
+
+
+
+   
+
+
+
+<!--PHP-->
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".colorbox, a[rel=colorbox]").colorbox();
+
+	$(".adv-ul a.mess_1").toggle(function() {
+		$(this).parents("li").find(".send_message_2").show();
+		return false;
+	}, function() {
+		$(this).parents("li").find(".send_message_2").hide();
+		return false;
+	});
+
+	$(".adv-ul a.mess_2").toggle(function() {
+		$(this).parents("li").find(".send_message_3").show();
+		return false;
+	}, function() {
+		$(this).parents("li").find(".send_message_3").hide();
+		return false;
+	});
+
+	$(".adv-ul a.mess_3").toggle(function() {
+		$(this).parents("li").find(".send_message").show();
+		return false;
+	}, function() {
+		$(this).parents("li").find(".send_message").hide();
+		return false;
+	});
+
+	$(".adv-ul a.mess_4").toggle(function() {
+		$(this).parents("li").find(".send_message_4").show();
+		return false;
+	}, function() {
+		$(this).parents("li").find(".send_message_4").hide();
+		return false;
+	});
+
+	// ���������� � �����������
+	$(".send_message input[type=button]").click(function() {
+		var name = $(".send_message input[name=name]").val();
+		var email = $(".send_message input[name=email]").val();
+		var phone = $(".send_message input[name=phone]").val();
+		var text = $(".send_message textarea").val();
+		var error = false;
+
+		if (name.length == 0 || name == '���� ���:') {
+			error = '������� ���� ���';
+		} else if (email.length == 0 || email == 'E-mail:') {
+			error = '������� ��� email';
+		} else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(email))) {
+			error = '��������� email �������� ������';
+		} else if (phone.length == 0 || phone == '�������:') {
+			error = '������� ��� �������';
+		} else if (text.length == 0) {
+			error = '������� ����� ���������';
+		}
+
+		if (!error) {
+			alert('���� ��������� ������� ����������!');
+			$(".send_message input[type=text], .send_message textarea").val('');
+			$.post("/include/functions.php", {action:"send_message_1", name:name, email:email, phone:phone, text:text}, function(data) {
+			});
+		} else {
+			alert(error);
+		}
+
+	});
+
+	// ������ �����������
+	$(".send_message_2 input[type=button]").click(function() {
+		var name = $(".send_message_2 input[name=name]").val();
+		var email = $(".send_message_2 input[name=email]").val();
+		var spec = $(".send_message_2 input[name=spec]").val();
+		var text = $(".send_message_2 textarea").val();
+		var error = false;
+
+		if (name.length == 0 || name == '���� ���:') {
+			error = '������� ���� ���';
+		} else if (email.length == 0 || email == 'E-mail:') {
+			error = '������� ��� email';
+		} else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(email))) {
+			error = '��������� email �������� ������';
+		} else if (text.length == 0) {
+			error = '������� ����� ���������';
+		}
+
+		if (!error) {
+			alert('���� ��������� ������� ����������!');
+			$(".send_message_2 input[type=text], .send_message_2 textarea").val('');
+			$.post("/include/functions.php", {action:"send_message_2", name:name, email:email, spec:spec, text:text}, function(data) {
+			});
+		} else {
+			alert(error);
+		}
+
+	});
+
+	// ������ �� ������������
+	$(".send_message_3 input[type=button]").click(function() {
+		var name = $(".send_message_3 input[name=name]").val();
+		var email = $(".send_message_3 input[name=email]").val();
+		var phone = $(".send_message_3 input[name=phone]").val();
+		var text = $(".send_message_3 textarea").val();
+		var time = $(".send_message_3 input[name=time]").val();
+		var error = false;
+
+		if (name.length == 0 || name == '���� ���:') {
+			error = '������� ���� ���';
+		} else if (phone.length == 0 || phone == '�������:') {
+			error = '������� ��� �������';
+		} else if (text.length == 0) {
+			error = '������� ����� ���������';
+		}
+
+		if (!error) {
+			alert('���� ��������� ������� ����������!');
+			$(".send_message_3 input[type=text], .send_message_3 textarea").val('');
+			$.post("/include/functions.php", {action:"send_message_3", name:name, email:email, phone:phone, text:text, time:time}, function(data) {
+			});
+		} else {
+			alert(error);
+		}
+
+	});
+
+	// ������������ �� ��������
+	$(".send_message_4 input[type=button]").click(function() {
+		var p1 = $(".send_message_4 input[name=p1]").val();
+		var p2 = $(".send_message_4 input[name=p2]").val();
+		var p3 = $(".send_message_4 input[name=p3]").val();
+		var p4 = $(".send_message_4 input[name=p4]").val();
+		var p5 = $(".send_message_4 input[name=p5]").val();
+		var p6 = $(".send_message_4 input[name=p6]").val();
+		var p7 = $(".send_message_4 textarea[name=p7]").val();
+		var p8 = $(".send_message_4 textarea[name=p8]").val();
+		var error = false;
+
+		if (p1.length == 0 || p1 == '���:') {
+			error = '������� ���� ���';
+		} else if (p3.length == 0 || p3 == '���������� �������:') {
+			error = '������� ��� �������';
+		} else if (p4.length == 0 || p4 == 'E-mail:') {
+			error = '������� ����� ���������';
+		}
+
+		if (!error) {
+			alert('���� ��������� ������� ����������!');
+			$(".send_message_4 input[type=text], .send_message_4 textarea").val('').blur();
+			$.post("/include/functions.php", {action:"send_message_4", p1:p1, p2:p2, p3:p3, p4:p4, p5:p5, p6:p6, p7:p7, p8:p8}, function(data) {
+			});
+		} else {
+			alert(error);
+		}
+
+	});
+
+	function str_replace ( search, replace, subject ) {
+
+			if(!(replace instanceof Array)){
+				replace=new Array(replace);
+				if(search instanceof Array){
+					while(search.length>replace.length){
+						replace[replace.length]=replace[0];
+					}
+				}
+			}
+
+			if(!(search instanceof Array))search=new Array(search);
+			while(search.length>replace.length){
+				replace[replace.length]='';
+			}
+
+			if(subject instanceof Array){
+				for(k in subject){
+					subject[k]=str_replace(search,replace,subject[k]);
+				}
+				return subject;
+			}
+
+			for(var k=0; k<search.length; k++){
+				var i = subject.indexOf(search[k]);
+				while(i>-1){
+					subject = subject.replace(search[k], replace[k]);
+					i = subject.indexOf(search[k],i);
+				}
+			}
+
+			return subject;
+		}
+
+	$(".metro1").click(function() {
+
+		map_id = str_replace("BX_GMAP_", "", $(".bx-google-map").attr("id"));
+		var location = new google.maps.LatLng(55.862897249391175, 37.6061305640319);
+		GLOBAL_arMapObjects[''+map_id+''].setCenter(location);
+
+		$(".content-right h3").html('<h3><b>�� �����:</b> ����� �Veronika Herba� �. ��������</h3>');
+
+		return false;
+	});
+
+	$(".metro2").click(function() {
+
+		map_id = str_replace("BX_GMAP_", "", $(".bx-google-map").attr("id"));
+		var location = new google.maps.LatLng(55.812025285918, 37.572907057672);
+		GLOBAL_arMapObjects[''+map_id+''].setCenter(location);
+
+		$(".content-right h3").html('<h3><b>�� �����:</b> ����� �Veronika Herba� �. �������������</h3>');
+
+		return false;
+	});
+
+	$("a.hidden-link").toggle(function() {
+		$(this).next("div:hidden").addClass("permanently-visible").slideDown("fast");
+		return false;
+	}, function() {
+		$(this).next("div.permanently-visible").slideUp("fast").removeClass("permanently-visible");
+		return false;
+	});
+
+	$("a.hide-this").click(function() {
+		$(this).parents("div.permanently-visible").prev("a.hidden-link").click();
+		return false;
+	});
+
+			//document.onselectstart=function() {return false}
+		//document.oncontextmenu=function(){return false}
+		//document.onCopy=function(){return false}
+		// document.onmousedown=function(){return false}
+		//$(".content-right p").disableTextSelect();
+	
+	$(".social_main_box").hover(function() {
+		$(this).animate({left:'-10px'});
+	}, function() {
+		$(this).animate({left:'-337px'});
+	});
+
+});
+</script>
+
+
+</head>
+
+
+<body>
+	<div id="panel"></div>
+    <div class="main">
+    	<div class="header">
+        	<div class="header-left">
+            	<span>Медицинская лицензия №77-01-001045</span>
+				Мы работаем с 1998 года<br />
+				<a href="/photoreports/otzyvy_nashikh_gostey/">Отзывы наших гостей</a>
+            </div>
+            <div class="header-right">
+            	<span>Многоканальный телефон</span>
+                8 (495) 995-15-13
+                <div class="callback_of">
+   	   ﻿<html>
+<head>
+<meta name="description" content="" />
+<meta name="keywords" content="" /> 
+<link rel="stylesheet" type="text/css" href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/templates/veronika/popup/style.css?14743585993005"/>
+<script type="text/javascript" src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/popup/js/script.js?14730699833114"></script>
+</head>
+
+
+    <a href="#" id="callback" class="callbackvh">Заказать звонок</a>
+<div id="popup">
+    <form id="contact_form" role="form" method="post" action="/bitrix/templates/veronika/popup/php/order.php">
+  
+        <h3></h3>
+        <input type="text" name="name"  placeholder="Как к вам обращаться?">
+        <input type="text" name="tel"  class="required" placeholder="Контакный телефон (обязательно)">
+        <textarea name="message" placeholder="Укажите, когда Вам перезвонить" rows="5"></textarea>
+        <a href="#" onclick="yaCounter38246945.reachGoal('ym_callback'); return true;" class="btn button form_submit">Заказать</a>
+
+    </form>
+</div>
+</body>
+</html>   </div>
+             
+   </div>
+   
+        	<a class="logo" href="/"></a>
+            <div class="c"></div>
+
+
+ 
+
+
+
+
+<ul class="menu">
+	<li><a class="" href="/about_us/"><span>О нас</span></a></li><li>
+    <a class="" href="/services/"><span>Услуги</span></a></li>
+	<li><a class="" href="/price_menu/"><span>Цены</span></a></li>
+	<li><a class="" href="/gift_certificate.php"><span>Подарочные сертификаты</span></a></li>
+	<li><a class="" href="/info/offers/"><span>Акции</span></a></li>
+	<li><a class="" href="/info/news/"><span>Новости</span></a></li>
+	<li><a class="" href="/photoreports/"><span>Фотогалерея</span></a></li>
+	<li><a class="" href="/contacts/"><span>Контакты</span></a></li>
+</ul>
+
+        </div><!--end .header -->
+        <div class="content-columns">
+        	<div class="content-bg-top">
+            </div>
+            <div class="content-bg-center">
+            	<div class="content-bg-in">
+                	
+					
+					<div class="main-image carousel-index">
+                        <div class="jcarousel-control">
+                            <div class="jcarousel-control-wrap">
+							                                <a class="active" href="javascript:void(0)">1</a>
+							                                <a >2</a>
+							                                <a >3</a>
+							                            </div>
+                        </div>
+                        <ul class="carousel jcarousel-skin-index">
+						                            <li>
+                            	<a href="" target="_BLANK">
+                                	<img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/imager/a93a5c401930264ff8d1783c9f65434e.jpg?147648520381103" width="965" height="460" alt="" />
+                                </a>
+                                <span class="slider-index-caption">
+                                    <span class="slider-index-title"><a href="" target="_BLANK">Коллекция осенних подарочных сертификатов veronika herba</a></span>
+                                    <span class="slider-index-subtitle"></span>
+                                </span>
+                            </li>
+						                            <li>
+                            	<a href="" target="_BLANK">
+                                	<img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/imager/08a027c828babfcd06d7fffdc14abdeb.jpg?1476485204102046" width="965" height="460" alt="" />
+                                </a>
+                                <span class="slider-index-caption">
+                                    <span class="slider-index-title"><a href="" target="_BLANK">Коллекция осенних подарочных сертификатов veronika herba</a></span>
+                                    <span class="slider-index-subtitle"></span>
+                                </span>
+                            </li>
+						                            <li>
+                            	<a href="" target="_BLANK">
+                                	<img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/imager/fd981e9128833453cc3049e47b1c3bfe.jpg?1476485204148571" width="965" height="460" alt="" />
+                                </a>
+                                <span class="slider-index-caption">
+                                    <span class="slider-index-title"><a href="" target="_BLANK">Коллекция осенних подарочных сертификатов veronika herba</a></span>
+                                    <span class="slider-index-subtitle"></span>
+                                </span>
+                            </li>
+						
+                        </ul>
+                        <div class="c"></div>
+
+                    </div>
+					<!--<div class="main-search"><form action="/search/" method="GET">
+						<input class="type-text" name="q" type="text" value="поиск по сайту" onfocus="if(this.value=='поиск по сайту'){this.value='';}" onblur="if(this.value==''){this.value='поиск по сайту';}" />
+						<input class="type-submit" type="submit" value="Найти" />
+					</form></div>-->
+					
+					
+
+<!-- Модальное Окно -->
+ <!--<div class="modern">
+    <body>
+       <div id="overlay">
+            <div class="popup">
+                    <a class="ModalHover" href="http://www.salonveronika.ru/info/offers/562/"><img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/лазер.jpg?147394416278034" max-width="980" min-width="450"></a>
+                <button class="close" title="Закрыть" onclick="document.getElementById('overlay').style.display='none';"></button>
+            </div>
+        </div>
+        <script src="http://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
+        <script src="http://yastatic.net/jquery/cookie/1.0/jquery.cookie.min.js"></script>
+        <script type="text/javascript">
+        $(function() {
+            // Проверяем запись в куках о посещении
+            // Если запись есть - ничего не делаем
+            if (!$.cookie('hideModal')) {
+           // если cookie не установлено появится окно
+           // с задержкой 5 секунд
+            var delay_popup = 15000;
+            setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+            }
+            // Запоминаем в куках, что посетитель уже заходил
+            $.cookie('hideModal', true, {
+            // Время хранения cookie в днях
+                expires: 7,
+                path: '/'
+            });
+        });
+        </script>
+    </body>
+ </div> --><p>
+</p>
+<h1 style="text-align: center;"><span style="color: grey;">Veronika Herba – центр красоты и здоровья, СПА процедуры, салон красоты <br>
+ в Отрадном и на Тимирязевской </span></h1><br>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        О САЛОНЕ</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+<table width="99%" cellspacing="0" cellpadding="0"  style="color: grey; margin: 10px;">
+<tbody>
+<br>
+<tr>
+	<td width="53%" valign="top" style="margin: 0 0 10px">
+		<p align="justify">
+			Естественное желание каждой женщины – выглядеть притягательно и сексуально. О вечной молодости, красоте тела и кожи представительницы прекрасного пола мечтали с давних времен. С этой целью в ход шли различные лекарственные травы, сборы и СПА-процедуры. Впрочем, о молодости думают не только женщины, но и мужчины, которые стремятся подчеркнуть свою привлекательность и достоинства.
+		</p>
+		<p style="text-align: justify;">
+			&nbsp;
+		</p>
+		<p align="justify">
+			Московский центр красоты и здоровья Veronika Herba предлагает нашим клиентам различные оздоровительные и косметические СПА-процедуры, которые помогут вам всегда выглядеть ухожено и молодо.
+		</p>
+		<p align="justify">
+			&nbsp;
+		</p>
+		<p align="justify">
+			В нашей команде работают опытные специалисты, которые досконально знают и применяют эффективные, современные методики омоложения и оздоровления организма. Все процедуры проводятся на современном, инновационном оборудовании с применением эффективных, гипоаллергенных и безопасных косметических средств.
+		</p>
+		<p align="justify">
+			&nbsp;
+		</p>
+	</td>
+	<td width="5%" valign="top">
+		&nbsp;
+	</td>
+	<td width="42%" valign="top">
+		<p align="justify">
+			<strong>СПА-салон красоты предлагает вашу вниманию</strong>:
+		</p>
+		<p align="justify">
+			&nbsp;
+		</p>
+		<div>
+			<ul>
+				<li style="margin-bottom: 5px"><a href="/services/spa_and_wellness/spa_ceremony_for_the_body/">Различные эффективные программы по уходу за телом</a>;</li>
+				<li style="margin-bottom: 5px"><a href="/services/cosmetology/personal/apparatus_cosmetology/">Аппаратную косметологию</a>;</li>
+				<li style="margin-bottom: 5px"><a href="/services/cosmetology/dermatocosmetology/">Дерматокосметологию</a>;</li>
+				<li style="margin-bottom: 5px"><a href="/services/weight_loss/the_procedures_for_weight_loss_and_correction_of/manual_procedures/">Антицеллюлитный массаж</a><a href="/services/cosmetology/personal/injection/"></a>;</li>
+				<li style="margin-bottom: 5px"><a href="/services/weight_loss/"> Прессотерапию</a><a href="/services/spa_and_wellness/therapeutic_and_rehabilitation_techniques/"></a>;</li>
+				<li style="margin-bottom: 5px"><a href="/services/cosmetology/personal/laser_rejuvenation/">Омолаживающие программы для кожи лица и шеи, а также зоны декольте;</a> </li>
+				<li style="margin-bottom: 5px"><a href="/services/weight_loss/">Методы и программы похудения</a>.</li>
+			</ul>
+		</div>
+	</td>
+</tr>
+</tbody>
+</table>
+	<div style="color: grey; font-size: 16px; margin: 10px">
+	<p style="text-align: justify;" >
+	Опыт, профессионализм и талант специалистов центра красоты и здоровья, помогут вам всегда выглядеть по-королевски, подчеркнут ваши достоинства и индивидуальность, подарят молодость, успех, заряд позитива и бодрости.
+	</p>
+	<br>
+	<p style="text-align: justify;" >
+	«Вероника» - салон красоты в Москве, где царит атмосфера тепла, радости и уюта, которыми мы поделимся с вами!
+	</p>
+	</div>      
+</div>
+</div>
+
+  <!--<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        Варианты оформления подарочных сертификатов</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">
+	      </div>
+    </div>
+  </div>-->
+  <!--<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        Услуги, которые мы рекомендуем для подарка</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">
+	<table width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+	<td width="53%" valign="top">
+		<p align="justify">
+			Естественное желание каждой женщины – выглядеть притягательно и сексуально. О вечной молодости, красоте тела и кожи представительницы прекрасного пола мечтали с давних времен. С этой целью в ход шли различные лекарственные травы, сборы и СПА-процедуры. Впрочем, о молодости думают не только женщины, но и мужчины, которые стремятся подчеркнуть свою привлекательность и достоинства.
+		</p>
+		<p align="justify">
+			&nbsp;
+		</p>
+		<p align="justify">
+			Московский центр красоты и здоровья Veronika Herba предлагает нашим клиентам различные оздоровительные и косметические СПА-процедуры, которые помогут вам всегда выглядеть ухожено и молодо.
+		</p>
+		<p align="justify">
+			&nbsp;
+		</p>
+		<p align="justify">
+			В нашей команде работают опытные специалисты, которые досконально знают и применяют эффективные, современные методики омоложения и оздоровления организма. Все процедуры проводятся на современном, инновационном оборудовании с применением эффективных, гипоаллергенных и безопасных косметических средств.
+		</p>
+		<p align="justify">
+			&nbsp;
+		</p>
+	</td>
+	<td width="5%" valign="top">
+		&nbsp;
+	</td>
+	<td width="42%" valign="top">
+		<p align="justify">
+			<strong>СПА-салон красоты предлагает вашу вниманию</strong>:
+		</p>
+		<p align="justify">
+			&nbsp;
+		</p>
+		<div>
+			<ul>
+				<li><a href="/services/spa_and_wellness/spa_ceremony_for_the_body/">различные эффективные программы по уходу за телом</a>;</li>
+				<li><a href="/services/cosmetology/personal/apparatus_cosmetology/">аппаратную косметологию</a>;</li>
+				<li><a href="/services/cosmetology/dermatocosmetology/">дерматокосметологию</a>;</li>
+				<li><a href="/services/weight_loss/the_procedures_for_weight_loss_and_correction_of/manual_procedures/">антицеллюлитный массаж</a><a href="/services/cosmetology/personal/injection/"></a>;</li>
+				<li><a href="/services/weight_loss/"> прессотерапию</a><a href="/services/spa_and_wellness/therapeutic_and_rehabilitation_techniques/"></a>;</li>
+				<li><a href="/services/cosmetology/personal/laser_rejuvenation/">омолаживающие программы для кожи лица и шеи, а также зоны декольте</a>, а также <a href="/services/weight_loss/">методы и программы похудения</a>.</li>
+			</ul>
+		</div>
+	</td>
+</tr>
+</tbody>
+</table>
+<p align="justify">
+	Опыт, профессионализм и талант специалистов центра красоты и здоровья, помогут вам всегда выглядеть по-королевски, подчеркнут ваши достоинства и индивидуальность, подарят молодость, успех, заряд позитива и бодрости.
+</p>
+<p align="justify">
+	&nbsp;
+</p>
+<p align="justify">
+	«Вероника» - салон красоты в Москве, где царит атмосфера тепла, радости и уюта, которыми мы поделимся с вами!
+</p>      </div>
+    </div>
+  </div>
+</div>
+</div>-->
+	 &nbsp;
+
+								</div>
+            </div>
+            <div class="content-bg-bottom">
+            </div>
+
+
+
+
+				
+			
+            <div class="index-news-block">
+				<div class="index-news-title"><span>Новости и акции</span></div>
+				<div class="index-news-wrapper">
+					<div class="index-news-inside">
+						<ul class="carousel-news jcarousel-skin-news">
+													<li>
+								<a class="index-news-link" href="/info/news/obuchenie_v_headquarters_podarok_ot_veronika_herba/">
+									<span class="index-news-img">
+										<span class="index-news-date">19.10.20</span>
+										<img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/imager/e740026386d265023268de0cadf238da.jpg?147696597513513" width="190" height="190" alt="" />
+									</span>
+									<span class="index-news-name">Участие в творческом марафоне - подарок от Veronika Herba</span>
+								</a>
+								<span class="index-news-desc"><span style="color: #f16d7e;">По случаю успешного завершения учебы&nbsp;в HEADQUARTERS*&nbsp;</span><span style="color: #f16d7e;">Veronika Herba дарит парикмахеру-стилисту Александре Дугиной участие&nbsp;</span><br>
+<span style="color: #f16d7e;"> </span><span style="color: #f16d7e;">
+в настоящем творческом марафоне</span><span style="color: #f16d7e;">.&nbsp;</span><br>
+ <br>
+ Вместе с командой HEADQUARTERS Александра сможет окунуться в настоящую креативную атмосферу, освоить и отработать новейшие технологии в окрашивании волос, актуальные методы создания модных стрижек, примерить фантастические мэйки, текстуры на моделях &amp; much-much more…<br>
+<hr>
+ <i>*HEADQUARTERS LEARNING – авторская система&nbsp;</i><i>академических курсов и новейших обучающих методик,&nbsp;</i><i>которая позволит по-новому осмыслить суть парикмахерского&nbsp;</i><i>мастерства, получить универсальные знания и довести&nbsp;</i><i>до совершенства владение профессиональными навыками</i><br></span>
+							</li>
+													<li>
+								<a class="index-news-link" href="/info/news/osenniy_vypusk_gazety_veronika_herba/">
+									<span class="index-news-img">
+										<span class="index-news-date">01.10.20</span>
+										<img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/imager/25919b218a6ddf5087a297731f7a0cd5.jpg?147648520413866" width="190" height="190" alt="" />
+									</span>
+									<span class="index-news-name">Осенний выпуск газеты Veronika Herba</span>
+								</a>
+								<span class="index-news-desc">Уважаемые гости! Предлагаем Вашему вниманию осенний выпуск газеты Veronika Herba.<br>
+ <br>
+ <a href="/autumn newspaper.pdf">Посмотреть газету...</a></span>
+							</li>
+													<li>
+								<a class="index-news-link" href="/info/news/osennee_spa_dlya_tela_dushi_i_nastroeniya/">
+									<span class="index-news-img">
+										<span class="index-news-date">20.09.20</span>
+										<img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/imager/dc9ff35166d6b67f888995db00afa023.jpg?147648520411219" width="190" height="190" alt="" />
+									</span>
+									<span class="index-news-name">Осеннее спа. Для тела, души и настроения!</span>
+								</a>
+								<span class="index-news-desc"><a href="http://www.salonveronika.ru/info/news/osennee_spa_dlya_tela_dushi_i_nastroeniya/">Встречайте новые рецепты красоты в Veronika Herba!</a></span>
+							</li>
+													<li>
+								<a class="index-news-link" href="/info/news/9_sentyabrya_mezhdunarodnyy_den_krasoty/">
+									<span class="index-news-img">
+										<span class="index-news-date">09.09.20</span>
+										<img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/imager/7f4b74f5a360dc496ba29defe470aa39.jpg?147648520413194" width="190" height="190" alt="" />
+									</span>
+									<span class="index-news-name">9 сентября - Международный День Красоты!</span>
+								</a>
+								<span class="index-news-desc"><p style="text-align: left;">
+ <a href="http://www.salonveronika.ru/info/news/9_sentyabrya_mezhdunarodnyy_den_krasoty/">С Днем Красоты, друзья!</a><br>
+ <a href="http://www.salonveronika.ru/info/news/9_sentyabrya_mezhdunarodnyy_den_krasoty/">
+	Делимся красотой, позитивом и улыбками!&nbsp;</a>
+</p></span>
+							</li>
+													<li>
+								<a class="index-news-link" href="/info/offers/562/">
+									<span class="index-news-img">
+										<span class="index-news-date">01.09.20</span>
+										<img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/imager/053e44902805870cc56004151ad59715.jpg?147648520411476" width="190" height="190" alt="" />
+									</span>
+									<span class="index-news-name">Специальные цены в отделении &quot;Косметология&quot;</span>
+								</a>
+								<span class="index-news-desc">С 1 по 30 сентября 2016 года в отделении "Косметология" процедуры&nbsp;<span style="color: #f16c4d;">"Лазерная эпиляция" </span>на аппарате Cynosure Elite MPX<span style="color: #f16c4d;"> по специальным ценам.</span> <br>
+ <br>
+ <a href="http://www.salonveronika.ru/info/offers/562/">Посмотреть цены на период акции</a></span>
+							</li>
+													<li>
+								<a class="index-news-link" href="/info/news/563/">
+									<span class="index-news-img">
+										<span class="index-news-date">01.09.20</span>
+										<img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/imager/ebfa139ec5e60a1ec200f805106f08b2.jpg?147696638916341" width="190" height="190" alt="" />
+									</span>
+									<span class="index-news-name">Вот и осень...</span>
+								</a>
+								<span class="index-news-desc">Тихо, по-английски удалилось лето. И вот уже изумруд листвы постепенно сменяется янтарём. И солнце - яркий небесный апельсин - греет вполсилы. И осень уже развешивает тюлевые туманы, дышит прохладой и сочиняет блюз под звон дождливых струй. Самое время выгуливать свой яркий зонт, неспешно шагая с тем, кто готов согревать твои руки.<br>
+ <br>
+<blockquote>
+	 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</blockquote>
+<br></span>
+							</li>
+												</ul>
+					</div>
+				</div><!-- index-news-wrapper -->
+			</div><!-- index-news-block -->
+
+
+			<!--<noindex>
+            <div class="news-title">Новости, акции, спецпредложения</div>
+            <div class="news-block">
+				            	<div class="news-item ">
+                	<a href="/info/new_services/271/"><img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/imager/bd71728917eb48e7b45d64af2d503ef9.jpg?14764852043616" width="95" height="95" alt="" class="news-image" /></a>                    <p class="news-text">
+                    	<span class="news-title-a"><a href="/info/new_services/271/">Фракционное лазерное омоложение на станции AFFIRM</a></span>
+                        Мы рады представить Вам инновационную технологию, которая создала революцию в эстетической косметологии - <font color="#f16c4d">ФРАКЦИОННОЕ ЛАЗЕРНОЕ ОМОЛОЖЕНИЕ</font> на лазерном аппарате AFFIRM производства ведущей американской компании CYNOSURE.  
+<br />
+ 
+<br />
+ Фракционный лазер AFFIRM по праву называется самой интеллектуальной системой неабляционного фракционного лазерного омоложения. Процедура одобрена к применению FDA (Управление по контролю за качеством пищевых продуктов и лекарственных препаратов США) и зарегистрирована в России. 
+<br />
+ 
+<br />
+ Эта система признана лучшей фракционной технологией в США и отмечена престижным призом Американского общества лазерной медицины и хирургии ASLMS. 
+<br />
+ 
+<br />
+ Позвольте себе вторую молодость! 
+<br />
+ 
+<br />
+ <a href="/services/cosmetology/lazernoe_otdelenie.php" >Подробнее о новой услуге...</a>                    </p>
+                	<div class="c"></div>
+                </div>
+				            	<div class="news-item bn">
+                	<a href="/info/offers/309/"><img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/imager/c0a0b6f18132697f0b4564a7512eaacf.jpg?14764852043667" width="95" height="95" alt="" class="news-image" /></a>                    <p class="news-text">
+                    	<span class="news-title-a"><a href="/info/offers/309/">Каникулы в Сан-Тропе</a></span>
+                        ...Морская лазурная синева, шуршанье парусов, всплеск дельфинов, неугомонный крик чаек и тонкая нитка горизонта&hellip;  
+<br />
+ ...Пляж, песок и <font color="#f16c4d">спа-коктейли</font>, которые мы приготовили для Вас из ароматов, создающих Ваше летнее настроение.  
+<br />
+ 
+<br />
+ Акция продлится с 1 июня по 31 августа.   
+<br />
+ 
+<br />
+ <a href="http://www.salonveronika.ru/info/offers/309/" >Подробнее об акции...</a>                    </p>
+                	<div class="c"></div>
+                </div>
+				            	<div class="c"></div>
+            </div>
+			</noindex>-->
+            
+
+
+
+       <!--<div class="pre-block">
+         
+    <div class="pre-block1">
+	   <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title></title>
+
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" type="text/css" href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/templates/veronika/css/remodal.css?1470129681893">
+<link rel="stylesheet" type="text/css" href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/templates/veronika/css/remodal-default-theme.css?14733393647659">
+<link rel="stylesheet" type="text/css" href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/templates/veronika/css/style.css?14774011057799393" />
+
+
+  
+</head>
+<body>
+
+<div class="home">
+  <p><a class="mainButton" href="#modal"><i class="fa fa-pencil-square-o" aria-hidden="true" class="fa_first"></i> Запись на консультацию</a></p>
+</div>
+
+<div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+ <div class="remodalBorder">
+  <p><img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/imager/logo.png"></p>
+  <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+      <form id="form">
+        <h2 id="modalTitle">Запись на консультацию<br></h2>
+        <input type="text" class="putName" name="name" placeholder="Ваше ваше имя" required>
+        <input type="phone" class="putPhone" name="phone" placeholder="Введите номер телефона" required>
+        <input type="text" class="putEmail" name="email" placeholder="Введите E-mail" required>
+                <select id="spec" type="text" class="putSelect" name="spec" placeholder="Выберете специалиста" required>
+ <option value="Рубашова Татьяна Владимировна">Рубашова Татьяна Владимировна</option>
+ <option value="Горшкова Алена Владимировна">Горшкова Алена Владимировна</option>
+ <option value="Ларионов Александр Анатольевич">Ларионов Александр Анатольевич</option>
+ <option value="Вохмянин Александр Викторович">Вохмянин Александр Викторович</option>
+         </select>
+        <input type="data" class="putSelect" name="data" placeholder="Выберете дату" readonly="readonly" size="30" onclick="showcalendar(this)"/>
+        <input type="submit" name="submit" class="btn" value="ЗАПИСАТЬСЯ">
+        <input type="hidden" name="formData" value="Запись на консультацию">
+        <p style="margin:0;"><a style="font-size:12px; text-align:center; color:rgba(255, 255, 255, .3);" ></p>
+    </form>
+</div>
+</div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/forms/forma-first/js/remodal.min.js?14433438427653"></script>
+<script src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/forms/forma-first/js/script.js?1470228211834"></script>
+<script src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/forms/forma-first/js/calendar.js?14697986356333"></script>
+
+</body>
+</html>      </div>
+</div>-->
+
+
+<footer>
+<div class="wrap">
+
+<div class="footer-phone">
+
+<p>Разделы</p>
+            <ul class="footer-menu">
+
+                <li>
+<ul class="foot_menu">
+	<li><a href="/about_us/">О нас</a></li>
+	<li><a href="/services/">Услуги</a></li>
+	<li><a href="/price_menu/">Цены</a></li>
+	<li><a href="/info/offers/">Акции</a></li>
+	<li><a href="/info/news/">Новости</a></li>
+	<li><a href="/info/blog/">Блог</a></li>
+	<li><a href="/contacts/">Контакты</a></li>
+</ul></li>
+                
+            </ul>
+      </div>
+
+<div class="footer-phone">
+<p>Услуги</p>
+            <ul class="footer-menu">
+
+                <li><a href="/services/cosmetology/">Косметология</a></li>
+                <li><a href="/services/meditsinskaya-podologiya/dermatologiya/">Дерматология</a></li>
+                <li><a href="/services/ortopediya/">Ортопедия</a></li>
+                <li><a href="/services/beauty/">Бьюти</a></li>
+                <li><a href="/services/meditsinskaya-podologiya/">Медицинская подология</a></li>
+                <li><a href="/services/laboratornye-metody-issledovaniya/">Лабораторные методы исследования</a></li>
+
+            </ul>
+      </div>
+            <div class="footer-right clearfix">
+                <div class="footer-phone">
+                    <p>КОНТАКТЫ</p>
+                    <div class="footer-phone-num">
+                    
+
+<div class="footer-div" itemscope itemtype="http://schema.org/DaySpa"  itemprop="itemReviewed" >
+
+			<div class="footer-div" itemprop="name">
+			VERONIKA HERBA		</div>
+	
+	
+		<div class="footer-div" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+		 		 		 	   		   <div class="footer-div" itemprop="addressLocality">МОСКВА</div>
+	   	   		  <div class="footer-div" itemprop="streetAddress"> ул. ДЕКАБРИСТОВ Д.20, К.1</div>
+	   	 </div>
+		
+		 <div class="footer-div" >
+		 			 			<span itemprop="telephone">8 (495) 995-15-13</span>
+		 	 </div>
+		
+		
+	
+	
+	
+    
+	
+	<div class="footer-div">
+		 			 			<time itemprop="openingHours" datetime="Mo-Fr 9:00&#8722;20:00">ПН-ВС</time>
+		 			 , 			<time itemprop="openingHours" datetime="St,Sn">9-21</time>
+		 	</div>
+		
+	
+	
+	
+
+	</div>
+
+
+
+</div>
+                </div>
+
+
+<div class="footer-phone">
+
+                <ul class="footer-social clearfix">
+                    <p>
+	&nbsp; &nbsp; &nbsp;СОЦИАЛЬНЫЕ СЕТИ
+</p>
+<li><a href="http://vk.com/veronikaherba" target="_blank" class="fa fa-vk"></a></li>
+<li><a href="http://www.facebook.com/veronikaherba" target="_blank" class="fa fa-facebook-square"></a></li>
+<li><a href="http://www.instagram.com/veronikaherba/" target="_blank" class="fa fa-instagram"></a></li>                </ul>
+        </div>
+                <div class="footer-subscribe clearfix">
+                    <form id="subscribe_form" action="#">
+                        <input type="text" class="footer-subscribe-text required" placeholder="Ваш e-mail:" name="EMAIL" />
+                        <input type="submit" class="footer-subscribe-button" value="ПОДПИСКА НА НОВОСТИ" />
+                    </form>
+                </div>
+            </div>
+            <!-- /.footer-right clearfix -->
+        </div></footer>
+        <!-- /.wrap -->
+
+
+
+                <div class="copyright">2005-2016 “Veronika Herba” - салон красоты Москва</div>
+                <div class="footer-dev"></div> 
+
+
+<span style="margin-left:120px;position:absolute;">
+
+<script type="text/javascript">
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t12.2;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+</script>
+</span>
+</div>
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter38246945 = new Ya.Metrika({
+                    id:38246945,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/38246945" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+
+<a href="#" class="scrollup">Наверх</a>
+<script type="text/javascript">
+$(document).ready(function(){
+ 
+$(window).scroll(function(){
+if ($(this).scrollTop() > 100) {
+$('.scrollup').fadeIn();
+} else {
+$('.scrollup').fadeOut();
+}
+});
+ 
+$('.scrollup').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+ 
+});
+</script>
+</html>

@@ -1,0 +1,527 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta name='Description' content=''>
+    <meta name='Keywords' content=''>
+    <title>Контактная информация компании «Кампотекс»</title>
+    <link href='http://www.woolhouse.ru/index/nobel.css' rel='stylesheet' type='text/css'>
+    <link rel='shortcut icon' href='favicon.ico'>
+    <!--link rel='icon' type='image/gif' href='animated_favicon1.gif'-->
+    <script type="text/javascript" src="/box/jquery.js"></script>
+    <script type="text/javascript" src="/box/jquery.history.js"></script>
+<!--    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>-->
+    <script type="text/javascript" src="/box/jCarousel/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#mycarousel').jcarousel({
+                wrap: 'circular',
+                visible: 1,
+                scroll: 1,
+                itemLoadCallback: {
+                    onBeforeAnimation: mycarousel_fadeOut,
+                    onAfterAnimation: mycarousel_fadeIn
+                }
+            });
+            function mycarousel_fadeOut(carousel) {
+                var JCcontainerID = carousel.clip.context.id;
+                $('#' + JCcontainerID).fadeOut();
+            }
+
+            function mycarousel_fadeIn(carousel) {
+                var JCcontainerID = carousel.clip.context.id;
+                $('#' + JCcontainerID).fadeIn();
+            }        
+
+            //prevent right-click
+            $(document).bind("contextmenu",function(e){
+                  return false;
+            });
+            $(document).bind("cut copy paste",function(e) {
+                  e.preventDefault();
+            });
+           
+        })
+    </script>
+    <link href='http://www.woolhouse.ru/box/jCarousel/skin.css' rel='stylesheet' type='text/css'>
+	<script src="/foto_script/js/jquery-1.7.2.min.js"></script>
+<script src="/foto_script/js/jquery-ui-1.8.18.custom.min.js"></script>
+<script src="/foto_script/js/jquery.smooth-scroll.min.js"></script>
+<script src="/foto_script/js/lightbox.js"></script>
+<link rel="stylesheet" href="/foto_script/css/lightbox.css" type="text/css" media="screen" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64936913-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body onload='sale();'>
+<script type="text/javascript">
+function sale(){
+    if(screen.width>1200) document.getElementById('main').className= 'maina';
+    $.post('/box/ajax_scrwidth.php', {scrw: screen.width});}
+</script>
+<script type="text/javascript" src="http://www.woolhouse.ru/form/login.js"></script>
+<!--<script type="text/javascript" src="http://www.woolhouse.ru/index/sneg2.js"></script>   -->
+     <div id=login style="display: none;">
+          <form action='http://www.woolhouse.ru/contacts.php' method='post' enctype='multipart/form-data' onsubmit='return login_proverka_m();' class=form2>
+        	<table border=0 cellpadding=0 cellspacing=0 width="100%">
+              <tr><td colspan=2 class=zag2>Введите логин и пароль</td></tr>
+                          	<tr><td class=textcont>Логин:&nbsp;</td><td width="100%"><input type=text name="login_m" id="login_m" class=cont maxlength=50></td></tr>
+              <tr><td colspan=2><img src="http://www.woolhouse.ru/index/1x1.gif" width=1 height=5 alt='' border=0></td></tr>
+              <tr><td class=textcont>Пароль:&nbsp;</td><td><input type=password name="pass_m" id="pass_m" class=cont maxlength=50></td></tr>
+              <tr><td colspan=2><a href="http://www.woolhouse.ru/registration.php" class=reg>Регистрация</a><br><a href="http://www.woolhouse.ru/forgotpass.php" class=reg>Забыли пароль</a></td></tr>
+            	<tr><td colspan=2 class=but><input type="submit" value="Войти" name="login2" class=cursor title="Войти">&nbsp;&nbsp;<input type=button value="Отмена" class=cursor title="Отмена" onclick="cancel_vhod();"></td></tr>
+        	</table>
+          </form>
+      </div>
+      <!--<div style="position: absolute;  text-align: center; z-index:1000; width:350px; height:auto; border: solid 1px #1BB107; background-color: #FFFCED; margin-top:300px; margin-left: 35%; color: #434343; font-family: Arial, Helvetica, sans-serif; font-size: 14px; padding-bottom: 20px; line-height: 25px;" id="prisss">
+		<img align=right src="/index/xclose.gif" width=19 height=19 style="cursor:pointer" onclick="document.getElementById('prisss').style.display='none'">
+		<br><b>Уважаемые покупатели!</b><br>Поздравляем вас с наступающим Новым годом и Рождеством!<br>
+		На все товары действует скидка 5%!<br>
+При добавлении товара в корзину вы увидете сумму скидки на товар.
+
+
+		<br>
+</div>-->
+<table id=main cellspacing=0 cellpadding=0 border=0 class=main align=center>
+    <!--Head--><!--<tr><td class=head1>
+        <table cellspacing=0 cellpadding=0 border=0 width="100%"><tr>
+            <td class=head11>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://www.woolhouse.ru/index/tel.gif" width=15 height=18 alt='' border=0 hspace=1 align=right>(495) 781-58-34&nbsp;&nbsp;&nbsp;+7 (499) 705-22-71&nbsp;&nbsp;&nbsp;+7 (911) 698-05-58</td>
+            <td class=head12><div id="korzina" style="display:none;"></div></td>
+            <td align=right>
+                            </td>
+       </tr></table>
+    </td></tr>-->    
+    <tr>
+  <td class=head2>
+    <div style="background: url('http://www.woolhouse.ru/index/log.png') no-repeat center;" onclick="document.location.href='http://www.woolhouse.ru'; return false;">
+      <p class="left">Производитель<br /><span>изделий из натуральной шерсти</span></p>
+      <p class="right">+7 (495) 781-58-34<br />+7 (499) 705-22-71<br />+7 (911) 698-05-58</p>
+    </div>
+  </td>
+</tr>    <!--Menu--> <tr><td>
+        <table cellspacing=0 cellpadding=0 border=0 class=menu><tr>
+            <td class=menu><a href="http://www.woolhouse.ru/" class=menu>&nbsp;&nbsp;&nbsp;Главная&nbsp;&nbsp;&nbsp;</a></td>
+			<td class=menua><a href="http://www.woolhouse.ru/shop/" class=menu_int><strong>Интернет-магазин</strong></a></td>
+            <td class=menu><a href="http://www.woolhouse.ru/company.php" class=menu>&nbsp;&nbsp;&nbsp;О компании&nbsp;&nbsp;&nbsp;</a></td>
+            <td class=menu><a href="http://www.woolhouse.ru/optovikam.php" class=menu>&nbsp;&nbsp;&nbsp;Купить оптом&nbsp;&nbsp;&nbsp;</a></td>
+            <td class=menu><a href="http://www.woolhouse.ru/production.php" class=menu>&nbsp;Наше производство&nbsp;</a></td>
+            <td class=menu><a href="http://www.woolhouse.ru/advices.php" class=menu>&nbsp;Полезная информация&nbsp;</a></td>
+<!--            <td class=menu><a href="http://www.woolhouse.ru/action.php" class=menu>&nbsp;Акции&nbsp;</a></td>-->
+<!--            <td class=menu><a href="http://www.woolhouse.ru/hotline.php" class=menu>Вопрос-ответ</a></td>-->
+                                    
+                       <td class=menu><a href="http://www.woolhouse.ru/contacts.php" class=menua>Купить в Розницу</a></td>
+			
+        </tr></table>
+    </td></tr>
+    <tr><td class=center>
+        <div class=text1><div class=text2><div class=text3>
+                <!--h1>Контактная информация</h1-->
+    <table border=0 cellpadding=0 cellspacing=0><tr>
+        <td valign=top><div class=text4></div></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td valign=top></td>
+    </tr></table>
+	
+        <h2>Где купить</h2>
+    <div class=text4>
+
+            <h1>Фирменные магазины</h1>
+        <script type="text/javascript" src="http://api-maps.yandex.ru/2.0/?coordorder=longlat&load=package.full&wizard=constructor&lang=ru-RU"></script>
+
+                <div class=buy>Магазины в Пскове</div>
+
+
+
+        
+                <div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+                <div class=buy2ph><img width="300" height="199" src="/images/thumbs/1466060919.jpg" alt=' ТК "Акваполис"' border=0></div>                <div class=buy2><b> ТК "Акваполис"</b></div>
+                <div class=buy2> ул. Кузбасской дивизии, 19, 2 этаж<br />
+ 8(911) 360-00-22</div>
+                    </div>
+                                    <div style="clear:both;"></div>
+                    <div class="buy2ph"><img width="300" height="199" src="/images/thumbs/1465215518.jpg" alt=' ТК "Акваполис"' border=0></div><div class="buy2ph"><img width="300" height="199" src="/images/thumbs/1465215598.jpg" alt=' ТК "Акваполис"' border=0></div><div class="buy2ph"><img width="300" height="199" src="/images/thumbs/1465215658.jpg" alt=' ТК "Акваполис"' border=0></div>                </div>
+
+                <div style="clear:both;"></div>
+                <div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+                <div class=buy2ph><img width="300" height="199" src="/images/thumbs/1465217167.jpg" alt='Магазин "Woolhouse"' border=0></div>                <div class=buy2><b>Магазин "Woolhouse"</b></div>
+                <div class=buy2>ул.Пушкина, д. 1<br />
+тел: 66-50-01,<br />
+ 8 (911) 895-51-78</div>
+                    </div>
+                                    <div style="clear:both;"></div>
+                    <div class="buy2ph"><img width="300" height="199" src="/images/thumbs/1465217189.jpg" alt='Магазин "Woolhouse"' border=0></div><div class="buy2ph"><img width="300" height="199" src="/images/thumbs/1465217205.jpg" alt='Магазин "Woolhouse"' border=0></div><div class="buy2ph"><img width="300" height="199" src="/images/thumbs/1465217254.jpg" alt='Магазин "Woolhouse"' border=0></div>                </div>
+
+                <div style="clear:both;"></div>
+                <div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+                                <div class=buy2><b>ТК "Империал"</b></div>
+                <div class=buy2>Коммунальная 41, 1 этаж<br />
+тел: 8 (911) 358-87-23</div>
+                    </div>
+                                    <div style="clear:both;"></div>
+                                    </div>
+
+                <div style="clear:both;"></div><div class="clear"></div>            <div class=buy>Магазины в Великих Луках</div>
+
+
+
+        
+                <div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+                                <div class=buy2><b>г. Великие Луки</b></div>
+                <div class=buy2>Торговый Центр «Апельсин»<br />
+ул. Вокзальная д. 11<br />
+Магазин Woolhouse<br />
++7 (981) 350-11-76</div>
+                    </div>
+                                    <div style="clear:both;"></div>
+                                    </div>
+
+                <div style="clear:both;"></div><div class="clear"></div>            <div class=buy>Магазины в Санкт-Петербурге</div>
+
+
+
+        
+                <div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+                <div class=buy2ph><img width="238" height="300" src="/images/thumbs/1461581959.jpg" alt='Магазин "Woolhouse"' border=0></div>                <div class=buy2><b>Магазин "Woolhouse"</b></div>
+                <div class=buy2>ТРК "Питер РАДУГА"<br />
+пр. Космонавтов, д. 14, 1 этаж<br />
+тел: 8 (911) 695-88-46</div>
+                    </div>
+                                    <div style="clear:both;"></div>
+                    <div class="buy2ph"><img width="300" height="199" src="/images/thumbs/1465214595.jpg" alt='Магазин "Woolhouse"' border=0></div><div class="buy2ph"><img width="300" height="199" src="/images/thumbs/1465214511.jpg" alt='Магазин "Woolhouse"' border=0></div><div class="buy2ph"><img width="300" height="199" src="/images/thumbs/1465214547.jpg" alt='Магазин "Woolhouse"' border=0></div>                </div>
+
+                <div style="clear:both;"></div><div class="clear"></div>                <h1>Наши партнеры</h1>
+<!--    <script type="text/javascript">
+/* 	function showhide(idd){
+ 	 	if (document.getElementById(idd).style.display=='none')
+            document.getElementById(idd).style.display='block';
+ 	 	else document.getElementById(idd).style.display='none';
+ 	}*/</script>-->
+            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Брянск</div>
+        <div class=buy2 id="d83" >ИП Чернов Андрей Иванович<br />
+ул. 1-й проезд Станке Димитрова, д.14<br />
+ул. Крахмалева д.39<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Владимир</div>
+        <div class=buy2 id="d84" >ИП Чернов Олег Иванович<br />
+ул. Западная д. 57<br />
+ул. Студенческая д. 6д<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г.Волгоград</div>
+        <div class=buy2 id="d58" >ИП Новосельцева Е.А.<br />
+400074, г. Волгоград, ул.Рабоче-Крестьянская, д.44 офис 208<br />
+</div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Вологда</div>
+        <div class=buy2 id="d103" >ИП Чернов А. И.<br />
+проспект Советский, д.22<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Дзержинск</div>
+        <div class=buy2 id="d102" >ИП Чернов А. И<br />
+проспект Ленина д. 1в<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a><br />
+</div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Ессентуки</div>
+        <div class=buy2 id="d76" >357500, г. Ессентуки , ул. Октябрьская, 339<br />
+ООО "Массаж 26.ру"<br />
+<a href="http://www.wool-26.ru" target=_blank class=text>wool-26.ru</a></div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Иваново</div>
+        <div class=buy2 id="d96" >ИП Чернов О.И.<br />
+ул. 1ая Полевая д.32   <br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Калуга</div>
+        <div class=buy2 id="d107" >Чернов А.И.<br />
+г. Калуга, ул. Космонавта Комарова д.30<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Коломна</div>
+        <div class=buy2 id="d98" >ИП Аникин С.В.<br />
+Окский проспект д.3а оф.81<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Кострома</div>
+        <div class=buy2 id="d99" >ИП Чернов О.И.<br />
+ул.Ленина  д.32/1<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Красноярск</div>
+        <div class=buy2 id="d115" >ИП Маренников А.М.<br />
+г. Красноярск, ул. Ястынская, д. 9А</div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Красногорск</div>
+        <div class=buy2 id="d127" >ИП Добычин М.С.<br />
+г. Красногорск, Красногорский бульвар, д.10<br />
+<a href="http://www.wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г.Липецк</div>
+        <div class=buy2 id="d128" >ИП Аникин С.В.<br />
+г. Липецк, ул. Водопьянова, д.29<br />
+<a href="http://www.wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Минеральные Воды</div>
+        <div class=buy2 id="d78" >357200, г. Минеральные Воды, ул. Советская, 28<br />
+ООО "Массаж26.ру"<br />
+<a href="http://www.wool-26.ru" target=_blank class=text>www.wool-26.ru</a></div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Москва</div>
+        <div class=buy2 id="d109" >ИП Магдалянова Мария Хвичевна<br />
+г. Москва,<br />
+ул Москоречье д4 к3. <br />
+ул.Россошанская д.6<br />
+ул.Ратная д.10а <br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Москва</div>
+        <div class=buy2 id="d88" >ИП Белоус Виталий Владимирович<br />
+ул. 26-ти Бакинских Комиссаров, д.14<br />
+ул. Новочерёмушкинская, д.20/23<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Москва</div>
+        <div class=buy2 id="d87" >ИП Чернова Любовь Сергеевна<br />
+ул. Люблинская д. 179/1<br />
+ул. Героев Панфиловцев д. 11 корпус 1<br />
+МО, г.Люберцы, Коммунистическая, д. 4<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Мурманск</div>
+        <div class=buy2 id="d93" >ИП Федотов Геннадий Александрович, <br />
+г.Мурманск ул. Самойловой, д. 3</div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Мытищи</div>
+        <div class=buy2 id="d126" >ИП Чернова Л.С.<br />
+г. Мытищи Московская область ул. Комарова, д. 2, корп. 1<br />
+<a href="http://www.wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г.Нижний Новгород</div>
+        <div class=buy2 id="d129" >ИП Чернова Л.С.<br />
+г.Нижний Новгород, ул. Академика Блохиной, д.7а<br />
+<a href="http://www.wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Нижний Новгород</div>
+        <div class=buy2 id="d117" >ООО "Магик Текс"<br />
+г. Нижний Новгород, ул. Героя Смирнова, д. 12<br />
+<a href="http://www.korolevstvoshersti.ru" target=_blank class=text>korolevstvoshersti.ru</a></div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Орехово-Зуево</div>
+        <div class=buy2 id="d130" >ИП Чернов О.И.<br />
+г.Орехово-Зуево, ул. Мадонская, д.12-Б<br />
+<a href="http://www.wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Орёл</div>
+        <div class=buy2 id="d106" >Чернов А.И.<br />
+г. Орёл, ул. Набережная Дубровицкого д.76<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Подольск</div>
+        <div class=buy2 id="d90" >ИП Белоус Виталий Владимирович<br />
+Революционный пр. д. 53/44<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Рязань</div>
+        <div class=buy2 id="d104" >ИП Аникин С.В.<br />
+ул. Яхонтова, д. 15<br />
+проезд Завражного, д. 12<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г.Рыбинск</div>
+        <div class=buy2 id="d131" >ИП Чернова Л.С.<br />
+ул.Ленина, д.146<br />
+<a href="http://www.wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Санкт-Петербург</div>
+        <div class=buy2 id="d125" >ИП Добычин М.С. <br />
+Колпино, ул.Московская, д.4 <br />
+ул. Радищева, д.18<br />
+ул. Рузовская д.13 <br />
+<a href="http://www.wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Серпухов</div>
+        <div class=buy2 id="d112" >ИП Новиков А.С.<br />
+г. Серпухов, ул Советская, д. 47<br />
+</div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Тверь</div>
+        <div class=buy2 id="d85" >ИП Аникин Сергей Валерьевич<br />
+ул.Бебеля, д.3<br />
+пр. Чайковского д. 40/2<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Тула</div>
+        <div class=buy2 id="d86" >ИП Аникин Сергей Валерьевич<br />
+ул. Белкина д. 6б,<br />
+ул. Пролетарская д.24<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г.Череповец</div>
+        <div class=buy2 id="d132" >ИП Чернова Л.С.<br />
+ул. Металлургов, д.10<br />
+<a href="http://www.wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+                    <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Тюмень</div>
+        <div class=buy2 id="d116" >ООО "Комфорт Тайм" <br />
+г. Тюмень, ул. Пермякова, д. 7/1<br />
+<a href="http://komfortwool.ru" target=_blank class=text>komfortwool.ru</a><br />
+<br />
+</div>
+        </div>
+        <div style="clear:both;"></div>            <div style="float:left; margin-right: 20px; width:45%;">
+        <div class=buy>г. Ярославль</div>
+        <div class=buy2 id="d105" >Чернов А.И. <br />
+г. Ярославль, ул. Радищева, д.34<br />
+<a href="http://wool-action.ru" target=_blank class=text>wool-action.ru</a></div>
+        </div>
+                </div>
+<br><br><br><br>
+    			<script type="text/javascript" src="http://www.woolhouse.ru/form/kont.js"></script>
+        <h3>Написать нам письмо</h3>
+		<form action='http://www.woolhouse.ru/form/kont.php' method='post' enctype='multipart/form-data' onsubmit='return kont_proverka();' class=form>
+			<table border=0 cellpadding=2 cellspacing=0 width="100%">
+				<tr><td class=textcont>ФИО*:&nbsp;</td><td colspan=2><input type=text name="name_kont" id="name_kont"  value="" class=cont></td></tr>
+                <tr><td class=textcont>Е-mail:&nbsp;</td><td colspan=2><input type=text name="email" id="email" value="" class=cont></td></tr>
+				<tr><td class=textcont>Телефон:&nbsp;</td><td colspan=2><input type=text name="telephon" id="telephon"  value="" class=cont></td></tr>
+				<tr><td class=textcont>Текст письма*:&nbsp;</td><td colspan=2><textarea name="text_kont" id="text_kont" cols=44 rows=10 class=cont></textarea></td></tr>
+				<tr><td class=textcont>Код подтверждения*:&nbsp;</td><td><input type=text id="code" name="code" size=4 maxlength="4" class=cont2></td><td width=330><img src="http://www.woolhouse.ru/form/code.php" alt=""></td></tr>
+				<tr><td colspan="3"><noindex style="font-size: 80%;">Вводя эти символы, я соглашаюсь на  обработку моих персональных данных в соответствии с требованиями <a href="http://www.consultant.ru/document/cons_doc_LAW_61801/" target="_blank" rel="nofollow">Федерального закона от 27 июля 2006 г. №152-ФЗ «О персональных данных»</a></noindex></td></tr>
+                <tr><td colspan=3 class=textcont>* обязательно для заполнения</td></tr>
+				<tr><td colspan=3 align=right><input type=submit value="Отправить" class=cursor></td></tr>
+			</table>
+		</form>
+	        </div></div></div>   
+    </td></tr>
+    <!--Copyright-->    <tr><td>
+       <table cellspacing=0 cellpadding=0 border=0 class=copy>
+       <tr><td colspan=5 class=copy></td></tr>
+       <tr><td class=copy1>© 2013 WoolHouse
+	   <table><tr><td style="font-size: 12px;">
+	   ООО «Кампотекс» является правообладателем размещенных на данном сайте фотографий товаров. Любое использование фотографий без согласия правообладателя является незаконным и влечет ответственность, предусмотренную законодательством РФ.</td></tr>
+	   </table>
+	   </td>
+            <td class=copy2>
+                г.Москва, ул. Электродная, д.11, стр. 19, офис 2<br>
+                Тел.: 8 (495) 781-58-34, +7(499)705-22-71<br>
+                Моб.: +7(911)698-05-58<br>
+				sip номер: http://call2sip.ru/#101@kampoteks7.onpbx.ru<br>
+                <img src="http://www.woolhouse.ru/index/mail.gif" width=12 height=8 border=0 alt="E-mail">&nbsp;
+                <a href='&#109&#97&#105&#108t&#111:%6b%61%6dpo%74%65%6b%73%37%40%6d%61%69%6c.%72%75' class=copy1>&#107a&#109&#112&#111t&#101&#107&#1157@m&#97&#105&#108&#46&#114u</a>            </td>
+            <td class=copy3 align=center><img src="http://www.woolhouse.ru/index/1x1.gif" width=40 height=1 border=0 alt=""></td>
+            <td class=copy3 align=center>
+            
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+var yaParams = {/*Здесь параметры визита*/};
+</script>
+ 
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter140824 = new Ya.Metrika({id:140824, enableAll: true,params:window.yaParams||{ }});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/140824" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+          <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter28118826 = new Ya.Metrika({id:28118826,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    trackHash:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/28118826" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+            <!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t44.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+<!-- RedHelper -->
+<script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async" 
+	src="https://web.redhelper.ru/service/main.js?c=woolhouse">
+</script> 
+<!--/Redhelper -->
+<!-- Return call -->
+<!-- /Return call -->
+</td>
+            <td class=copy4>Сделано в <a href="http://www.coffeestudio.ru" class=copy2>агентстве интернет-рекламы «CoffeeStudio»</a><br><a href="http://www.coffeestudio.ru/sait/99/" class=copy2>Информация о сайте</a><br></td>
+        </tr></table>
+		
+    </td></tr></table>
+</body>
+</html>

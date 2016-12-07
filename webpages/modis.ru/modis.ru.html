@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MODIS</title>
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="format-detection" content="telephone=no">
+
+   <meta name='yandex-verification' content='5dc8e3d4fe7c3751' />
+   
+  <!--
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="Mon, 22 Jul 2002 11:12:01 GMT">
+  -->
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" />
+
+    <!-- Сбрасывание стандартных стилей браузеров для HTML-элементов-->
+    <link rel="stylesheet" href="/netcat_template/template/2/css/reset.css"/>
+
+    <!-- jQuery -->
+    <!--<script src="/netcat_template/template/2/javascript/jquery-1.8.3.min.js"></script>-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Использование jQuery UI -->
+    <script src="/netcat_template/template/2/javascript/jquery-ui-1.9.0.custom.min.js"></script>
+
+    <!-- Подключаемые стили Jquery UI-->
+    <link rel="stylesheet" href="/netcat_template/template/2/css/jquery-ui-1.10.4.custom.css"/>
+    
+    
+
+    <!-- Стили Nivo Slider -->
+    <link rel="stylesheet" href="/netcat_template/template/2/css/nivo-slider.css"/>
+
+    <!-- Тема Nivo Slider -->
+    <link rel="stylesheet" href="/netcat_template/template/2/css/default.css"/>
+
+    
+    <!--[if gte IE 9]>
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+    <!-- Cтили IE9 -->
+    <!--[if IE 9]>
+    <link rel="stylesheet" href="/netcat_template/template/2/css/ie9.css">
+    <![endif]-->
+
+    <!-- Cтили IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" href="/netcat_template/template/2/css/ie8.css">
+    <![endif]-->
+
+    <!-- Заполнитель CSS without the vendor prefixes -->
+    <script src="/netcat_template/template/2/javascript/prefixfree.min.js"></script>  
+   
+    <!--[if lt IE 9]>
+    <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('main');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+    </script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js">
+    <script src = "http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" ></script>
+    <script src="https://raw.githubusercontent.com/srobbin/jquery-backstretch/master/jquery.backstretch.min.js"></script>
+    <![endif]-->
+
+    <!-- Скрипт Nivo Slider -->
+    <script src="/netcat_template/template/2/javascript/jquery.nivo.slider.pack.js"></script>
+    
+    <script src="/netcat_template/template/2/javascript/jquery.cookie.js"></script>
+       
+    <!-- Пользовательские скрипты -->
+    <script src="/netcat_template/template/2/javascript/script.js?32"></script>
+    <script src="/netcat_template/template/2/javascript/slideout.js"></script>
+
+    <!--[if IE 7]>
+    <script src="/netcat_template/template/2/javascript/ie7.js"></script>
+    <![endif]-->
+    <!--[if IE 8]>
+    <script src="/netcat_template/template/2/javascript/ie8.js"></script>
+    <![endif]-->
+    
+     <!-- Пользовательскиe стили -->
+    <link rel="stylesheet" href="/netcat_template/template/2/css/style.css?30" />
+    <link rel="stylesheet" href="/netcat_template/template/2/css/stylenew.css?24" />
+
+   <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63683808-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter33432318 = new Ya.Metrika({ id:33432318, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/33432318" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->   
+      
+   
+
+</head>
+<body class=""
+    data-uri="/"
+>
+
+   
+    
+      
+   
+    <!-- Слой перекрытия -->
+    <div id="navbar_overlay"></div>
+    
+    <main class="main-content" id="panel">
+        
+        <div class="page-wrapper">
+
+            <div class="main-header">
+               <header role="banner">
+                   <!-- CONTAINER -->
+                   <div class="container">
+                       <!-- КОНТАКТЫ В ШАПКЕ -->
+                       <div class="contacts_header"><strong>Телефон горячей линии</strong>
+                           <p>8 800 700-5-700</p>
+                       </div>
+                       <!-- END КОНТАКТЫ В ШАПКЕ -->
+
+                       <!-- ЛОГОТИП-->
+                       <a class="logo" href="/" style='cursor: default;'><img src="/netcat_template/template/2/images/logo.png" alt="MODIS" title="MODIS"></a>
+                       <!-- END КОМПАНИИ -->
+                       <div class="two-icons">
+                                                      
+                                                      <a href="/modisbonus/" style="position: absolute; top: 10px; right:175px; display:none;"><img src="/netcat_template/template/2/images/pic1.png"></a>
+                           <a href="/shops/" style="position: absolute; top: 10px; right:90px;"><img src="/netcat_template/template/2/images/pic2.png"></a>
+                       </div>
+                        <!-- begin swip  -->
+                        <div class="swip js-slideout-toggle">
+                                    <div class="swipe-area"></div>
+                                    <a href="#" data-toggle=".main-container" id="sidebar-toggle">
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                </a>
+                         </div>
+                         <!-- end swip -->  
+                       
+                                             
+                   </div>
+                   <!-- END CONTAINER -->                  
+
+               </header>
+               <!-- END HEADER -->
+
+               <!-- ГЛАВНАЯ НАВИГАЦИЯ -->
+               <nav class="main_nav" role="navigation">
+                   <ul> 
+                                          <li><a href='/woman/ladies/'>Женщинам</a></li><li><a href='/for-men/men/'>Мужчинам</a></li><li><a href='/for-children/'>Детям</a></li><li><a href='/axessuary/'>Аксессуары</a></li><li><a href='/kosmetika/'>Косметика</a></li><li><a href='/cards/'>Подарочные карты</a></li><li><a href='/news-specials/'>Новости и акции</a></li><li><a href='/shops/'>Магазины</a></li><li><a href='/about/'>О нас</a></li>                   </ul>
+               </nav>
+               <!-- END ГЛАВНАЯ НАВИГАЦИЯ -->
+           </div>
+           <div class="main">           
+               
+<!-- SLIDER -->
+<div class="theme-default slider_main_page big_container">
+<div class="slider nivoSlider superslider">
+ <a href="http://modis.ru/skidka-20-na-sleduyuschuyu-pokupku/" >
+     <img src="/netcat_files/2540_311.jpg" alt="">
+ </a>
+
+ <a href="http://modis.ru/shops/" >
+     <img src="/netcat_files/2540_307.jpg" alt="">
+ </a>
+
+ <a href="http://modis.ru/tovar-nedeli/" >
+     <img src="/netcat_files/2540_306.jpg" alt="">
+ </a>
+
+ <a href="http://modis.ru/spetsialnoe-trikotazhnoe-predlozhenie-1/" >
+     <img src="/netcat_files/2540_309.png" alt="">
+ </a>
+
+ <a href="http://modis.ru/spetsialnoe-trikotazhnoe-predlozhenie-1/" >
+     <img src="/netcat_files/2540_310.png" alt="">
+ </a>
+</div>
+</div>
+<!-- END SLIDER -->
+                <div class="preview-slider">                    
+                    <div class="theme-default slider_main_page big_container">
+                        <div class="slider nivoSlider">
+                            <a href="http://modis.ru/cards/">
+                                <img src="/netcat_files/2542_1.jpg" alt=""></a>
+                            <a href="http://modis.ru/disney/" >
+                                <img src="/netcat_files/2545_1.jpg" alt=""></a>
+                            <a href="http://modis.ru/likvidatsiya-proshloy-kollektsii/">
+                                <img src="/netcat_files/2546_1.jpg"></a>
+                        </div>
+                    </div>
+                </div>                
+                <div class="preview clearfix big_container">
+                    <a href="http://modis.ru/cards/">
+                        <img src="/netcat_files/2542_1.jpg" alt="image"></a>
+                    <a href="http://modis.ru/disney/">
+                        <img src="/netcat_files/2545_1.jpg" alt="image"></a>
+                    <a href="http://modis.ru/likvidatsiya-proshloy-kollektsii/" class="last_preview">
+                        <img src="/netcat_files/2546_1.jpg" alt="image"></a>
+         
+         
+         </div>
+   <div class='container'> <div class='nc_row'>
+    <p>&ensp;&ensp;</p></div>
+</div>
+<div class='container'> <div class='nc_row'>
+    <br><br><br>
+<p style="text-align: center;"><a href="http://modis.ru/shops/"><img alt="" src="http://modis.ru/netcat_files/2564_10.png" style="width: 269px; height: 38px;" /></a></p>
+<br><br><br></div>
+</div>
+            </div>
+		    <!-- END MAIN -->
+
+
+
+		<div class="push-footer"></div>
+	</div>
+
+    <footer class="page big_container" role="contentinfo">
+              <div class="
+          top_footer
+          top_footer--detailed
+        ">
+          <div class="top_footer__groups">
+            <table class="top_footer__table">
+              <tr>
+                <td class="
+                  top_footer__cell
+                  top_footer__cell--catalog
+                ">
+                  <div class="
+                    top_footer__group
+                    top_footer__group--catalog
+                  ">
+                    <div class="top_footer__group_header">
+                      Каталог
+                    </div>
+                    <ul class="top_footer__group_list">
+                      <li class="top_footer__group_item"><a class="top_footer__group_link" href='/woman/ladies/'>Женщинам</a></li><li class="top_footer__group_item"><a class="top_footer__group_link" href='/for-men/men/'>Мужчинам</a></li><li class="top_footer__group_item"><a class="top_footer__group_link" href='/for-children/'>Детям</a></li><li class="top_footer__group_item"><a class="top_footer__group_link" href='/axessuary/'>Аксессуары</a></li><li class="top_footer__group_item"><a class="top_footer__group_link" href='/kosmetika/'>Косметика</a></li><li class="top_footer__group_item"><a class="top_footer__group_link" href='/cards/'>Подарочные карты</a></li><li class="top_footer__group_item"><a class="top_footer__group_link" href='/news-specials/'>Новости и акции</a></li>                    </ul>
+                  </div>
+                </td>
+                <td class="
+                  top_footer__cell
+                  top_footer__cell--about
+                ">
+                  <div class="
+                    top_footer__group
+                    top_footer__group--about
+                  ">
+                    <a class="top_footer__group_header" href="/about/">
+                      О компании
+                    </a>
+                    <ul class="top_footer__group_list">
+                      <li class="top_footer__group_item">
+                        <a class="top_footer__group_link" href="/about/work/">Работа в MODIS</a>
+                      </li>
+                      <li class="top_footer__group_item">
+                        <a class="top_footer__group_link" href="/about/us/">О нас</a>
+                      </li>
+                      <li class="top_footer__group_item">
+                        <a class="top_footer__group_link" href="/about/producers/">Производителям</a>
+                      </li>
+                      <li class="top_footer__group_item">
+                        <a class="top_footer__group_link" href="/about/purchase/">Поставщикам</a>
+                      </li>
+                      <li class="top_footer__group_item">
+                        <a class="top_footer__group_link" href="/about/rent/">Арендодателям</a>
+                      </li>
+                      <li class="top_footer__group_item">
+                        <a class="top_footer__group_link" href="/about/hq/">Центральный офис</a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+                <td class="
+                  top_footer__cell
+                  top_footer__cell--help
+                ">
+                  <div class="
+                    top_footer__group
+                    top_footer__group--help
+                  ">
+                    <div class="top_footer__group_header">
+                      Помощь
+                    </div>
+                    <ul class="top_footer__group_list">
+                      <li class="top_footer__group_item">
+                        <a class="top_footer__group_link" href="/shops/">Магазины</a>
+                      </li>
+                      <li class="top_footer__group_item">
+                        <a class="top_footer__group_link" href="/safety-policy/">Политика безопасности</a>
+                      </li>
+                                            <li class="top_footer__group_item">
+                        <a class="top_footer__group_link" href="/contacts/">Контакты</a>
+                      </li>
+                      <li class="top_footer__group_item">
+                        <a class="
+                          top_footer__group_link
+                          top_footer__group_link--sizes
+                        ">Размеры</a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+                <td class="
+                  top_footer__cell
+                  top_footer__cell--spacer
+                "></td>
+                <td class="
+                  top_footer__cell
+                  top_footer__cell--subscribe
+                ">
+                  <div class="
+                    top_footer__group
+                    top_footer__group--subscribe
+                  ">
+                    <div class="top_footer__subscribe_header">
+                      Подписаться <br />
+                      на новостную рассылку
+                    </div>
+                    <div class="top_footer__subscribe_subheader">
+                      Подпишитесь на стильные новости <br />
+                      и горячие предложения
+                    </div>
+
+                    <div class="top_footer__subscribe_form">
+                      <form class="search_form" method="post" action="post.php" onsubmit="submitForms(this); return false;">
+                        <!-- for="input_search" -->
+                        <input type="email" name="email" class="input_search" id="input_search" placeholder="Ваш email"
+                               required="required">
+        
+                        <button type="submit" class="submit_search" name="submit_search"></button>
+
+                        <div class="clearfix"></div>
+
+                        <label>
+                          <div class="footer__personal_wrapper">
+                            <div class="footer__personal">
+                              <div class="
+                                personal_info__checker
+                                default_checkbox
+                                default_checkbox--12
+                                default_checkbox--checked
+                              "></div>
+                              <div class="personal_info__label">
+                                <span class="personal_info__label_span">
+                                  я согласен на обработку персональных данных
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </label>
+                      </form>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="social_footer__wrapper">
+            <div class="social_footer">
+              <a href="https://www.facebook.com/modisfashionrussia" target="_blank" class="facebook"></a>              <a href="https://vk.com/modis" target="_blank" class="vk"></a>              <a href="http://ok.ru/modis" target="_blank" class="ok_icon"></a>                            <a href="https://instagram.com/modis_rus/" target="_blank" class="ins"></a>            </div>
+          </div>
+
+          <div class="top_footer__lower_text">
+            MODIS — марка доступной модной базовой одежды для всей семьи, основанная в 2006 году. <br />
+            Федеральная сеть MODIS — это более 120 магазинов по всей России. <br />
+            Цены в MODIS прятно удивляют даже самых бережливых покупателей.
+          </div>
+
+          <div class="top_footer__lower_logo"></div>
+
+        </div>
+          
+      <div class="container clearfix">
+          <!-- COPYRIGHT -->
+          <p class="copyright clearfix">
+            <em>&copy;&nbsp;modis</em> 
+            <strong>Телефон горячей линии 8 800 700-5-700</strong>
+          </p>
+
+          <div class="footer__price_disclaimer">* Цены на сайте не являются публичной офертой и могут отличаться от цен в магазинах сети.</div>
+      </div>
+      <!-- END CONTAINER -->
+    
+    </footer>
+    <!-- END FOOTER -->
+
+<script>
+$(document).ready(function(){
+  var hash = location.hash;
+  if(hash == "#footer"){
+    // $(".footer_buttons__wrapper").removeAttr("style");
+    $(".footer_buttons__wrapper").show();
+  }
+});
+</script>
+<div class="footer_buttons__wrapper">
+  <div class="footer_buttons__bg"></div>
+  <table class="footer_buttons__table">
+    <tr>
+      <td class="
+        footer_buttons__cell
+        footer_buttons__cell--call
+      ">
+        <a class="footer_buttons__button"
+          href="tel:+78007005700"
+        >
+          <div class="footer_buttons__icon">
+            <img 
+              alt="Позвонить"
+              class="footer_buttons__icon_img"
+              src="/netcat_template/template/2/images/icon__footer_call.png"
+            />
+          </div>
+          <div class="footer_buttons__label">
+            Позвонить
+          </div>
+        </a>
+      </td>
+      <td class="
+        footer_buttons__cell
+        footer_buttons__cell--map
+      ">
+        <div class="
+          footer_buttons__button
+          footer_buttons__button--map
+        ">
+          <div class="footer_buttons__icon">
+            <img 
+              alt="Приехать"
+              class="footer_buttons__icon_img"
+              src="/netcat_template/template/2/images/icon__footer_pin.png"
+            />
+          </div>
+          <div class="footer_buttons__label">
+            Приехать
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="
+  common_popup
+  shop_popup
+">
+  <div class="
+    common_popup__inner
+    shop_popup__inner
+  ">
+    <div class="
+      common_popup__closer
+      shop_popup__closer
+    "></div>
+
+    <div class="shop_popup__header">
+      Выберите адрес магазина
+    </div>
+
+    <div class="shop_popup__input_group">
+      <div class="shop_popup__input_label">
+        Город
+      </div>
+      <div class="shop_popup__select_wrapper">
+        <select class="
+          shop_popup__select
+          shop_popup__select--city
+        ">
+          <option value="">Выберите город</options>
+          <option data-encoded="%D0%90%D0%B7%D0%BE%D0%B2" value="Азов">Азов</option><option data-encoded="%D0%90%D1%80%D0%B7%D0%B0%D0%BC%D0%B0%D1%81" value="Арзамас">Арзамас</option><option data-encoded="%D0%90%D1%80%D0%BC%D0%B0%D0%B2%D0%B8%D1%80" value="Армавир">Армавир</option><option data-encoded="%D0%90%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D1%8C" value="Астрахань">Астрахань</option><option data-encoded="%D0%91%D0%B0%D1%80%D0%BD%D0%B0%D1%83%D0%BB" value="Барнаул">Барнаул</option><option data-encoded="%D0%91%D0%B5%D0%BB%D0%B3%D0%BE%D1%80%D0%BE%D0%B4" value="Белгород">Белгород</option><option data-encoded="%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8%D0%B9+%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4" value="Великий Новгород">Великий Новгород</option><option data-encoded="%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4" value="Волгоград">Волгоград</option><option data-encoded="%D0%92%D0%BE%D0%BB%D0%B6%D1%81%D0%BA%D0%B8%D0%B9" value="Волжский">Волжский</option><option data-encoded="%D0%92%D0%BE%D0%BB%D0%BE%D0%B3%D0%B4%D0%B0" value="Вологда">Вологда</option><option data-encoded="%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6" value="Воронеж">Воронеж</option><option data-encoded="%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA" value="Дзержинск">Дзержинск</option><option data-encoded="%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3" value="Екатеринбург">Екатеринбург</option><option data-encoded="%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%BE" value="Иваново">Иваново</option><option data-encoded="%D0%98%D0%B6%D0%B5%D0%B2%D1%81%D0%BA" value="Ижевск">Ижевск</option><option data-encoded="%D0%99%D0%BE%D1%88%D0%BA%D0%B0%D1%80-%D0%9E%D0%BB%D0%B0" value="Йошкар-Ола">Йошкар-Ола</option><option data-encoded="%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C" value="Казань">Казань</option><option data-encoded="%D0%9A%D0%B5%D0%BC%D0%B5%D1%80%D0%BE%D0%B2%D0%BE" value="Кемерово">Кемерово</option><option data-encoded="%D0%9A%D0%B8%D1%80%D0%BE%D0%B2" value="Киров">Киров</option><option data-encoded="%D0%9A%D0%BB%D0%B8%D0%BD" value="Клин">Клин</option><option data-encoded="%D0%9A%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%BC%D0%B0" value="Кострома">Кострома</option><option data-encoded="%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80" value="Краснодар">Краснодар</option><option data-encoded="%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D1%8F%D1%80%D1%81%D0%BA" value="Красноярск">Красноярск</option><option data-encoded="%D0%9A%D1%83%D1%80%D0%B3%D0%B0%D0%BD" value="Курган">Курган</option><option data-encoded="%D0%9A%D1%83%D1%80%D1%81%D0%BA" value="Курск">Курск</option><option data-encoded="%D0%9B%D0%B8%D0%BF%D0%B5%D1%86%D0%BA" value="Липецк">Липецк</option><option data-encoded="%D0%9C%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA" value="Магнитогорск">Магнитогорск</option><option data-encoded="%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0" value="Москва">Москва</option><option data-encoded="%D0%9D%D0%B0%D0%BB%D1%8C%D1%87%D0%B8%D0%BA" value="Нальчик">Нальчик</option><option data-encoded="%D0%9D%D0%B5%D0%B2%D0%B8%D0%BD%D0%BD%D0%BE%D0%BC%D1%8Bc%D1%81%D0%BA" value="Невинномыcск">Невинномыcск</option><option data-encoded="%D0%9D%D0%B8%D0%B6%D0%BD%D0%B5%D0%BA%D0%B0%D0%BC%D1%81%D0%BA" value="Нижнекамск">Нижнекамск</option><option data-encoded="%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9+%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4" value="Нижний Новгород">Нижний Новгород</option><option data-encoded="%D0%9D%D0%BE%D0%B2%D0%BE%D0%BA%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BA" value="Новокузнецк">Новокузнецк</option><option data-encoded="%D0%9D%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA" value="Новороссийск">Новороссийск</option><option data-encoded="%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA" value="Новосибирск">Новосибирск</option><option data-encoded="%D0%9D%D0%BE%D0%B3%D0%B8%D0%BD%D1%81%D0%BA" value="Ногинск">Ногинск</option><option data-encoded="%D0%9E%D0%BC%D1%81%D0%BA" value="Омск">Омск</option><option data-encoded="%D0%9E%D1%80%D0%B5%D0%BB" value="Орел">Орел</option><option data-encoded="%D0%9E%D1%80%D0%B5%D0%BD%D0%B1%D1%83%D1%80%D0%B3" value="Оренбург">Оренбург</option><option data-encoded="%D0%9E%D1%80%D1%81%D0%BA" value="Орск">Орск</option><option data-encoded="%D0%9F%D0%B5%D0%BD%D0%B7%D0%B0" value="Пенза">Пенза</option><option data-encoded="%D0%9F%D0%B5%D1%80%D0%BC%D1%8C" value="Пермь">Пермь</option><option data-encoded="%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA" value="Петрозаводск">Петрозаводск</option><option data-encoded="%D0%9F%D1%8F%D1%82%D0%B8%D0%B3%D0%BE%D1%80%D1%81%D0%BA" value="Пятигорск">Пятигорск</option><option data-encoded="%D0%A0%D0%B5%D1%83%D1%82%D0%BE%D0%B2" value="Реутов">Реутов</option><option data-encoded="%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2-%D0%BD%D0%B0-%D0%94%D0%BE%D0%BD%D1%83" value="Ростов-на-Дону">Ростов-на-Дону</option><option data-encoded="%D0%A0%D1%8F%D0%B7%D0%B0%D0%BD%D1%8C" value="Рязань">Рязань</option><option data-encoded="%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0" value="Самара">Самара</option><option data-encoded="%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3" value="Санкт-Петербург">Санкт-Петербург</option><option data-encoded="%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2" value="Саратов">Саратов</option><option data-encoded="%D0%A1%D0%BC%D0%BE%D0%BB%D0%B5%D0%BD%D1%81%D0%BA" value="Смоленск">Смоленск</option><option data-encoded="%D0%A1%D0%BE%D1%87%D0%B8" value="Сочи">Сочи</option><option data-encoded="%D0%A1%D0%9F%D0%91+%D0%9A%D0%BE%D0%BB%D0%BF%D0%B8%D0%BD%D0%BE" value="СПБ Колпино">СПБ Колпино</option><option data-encoded="%D0%A1%D1%82%D0%B0%D0%B2%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D1%8C" value="Ставрополь">Ставрополь</option><option data-encoded="%D0%A1%D1%82%D0%B5%D1%80%D0%BB%D0%B8%D1%82%D0%B0%D0%BC%D0%B0%D0%BA" value="Стерлитамак">Стерлитамак</option><option data-encoded="%D0%A1%D1%83%D1%80%D0%B3%D1%83%D1%82" value="Сургут">Сургут</option><option data-encoded="%D0%A1%D1%8B%D0%BA%D1%82%D1%8B%D0%B2%D0%BA%D0%B0%D1%80" value="Сыктывкар">Сыктывкар</option><option data-encoded="%D0%A2%D0%B0%D0%B3%D0%B0%D0%BD%D1%80%D0%BE%D0%B3" value="Таганрог">Таганрог</option><option data-encoded="%D0%A2%D0%B0%D0%BC%D0%B1%D0%BE%D0%B2" value="Тамбов">Тамбов</option><option data-encoded="%D0%A2%D0%B2%D0%B5%D1%80%D1%8C" value="Тверь">Тверь</option><option data-encoded="%D0%A2%D0%BE%D0%BB%D1%8C%D1%8F%D1%82%D1%82%D0%B8" value="Тольятти">Тольятти</option><option data-encoded="%D0%A2%D1%83%D0%BB%D0%B0" value="Тула">Тула</option><option data-encoded="%D0%A2%D1%8E%D0%BC%D0%B5%D0%BD%D1%8C" value="Тюмень">Тюмень</option><option data-encoded="%D0%A3%D0%BB%D1%8C%D1%8F%D0%BD%D0%BE%D0%B2%D1%81%D0%BA" value="Ульяновск">Ульяновск</option><option data-encoded="%D0%A3%D1%84%D0%B0" value="Уфа">Уфа</option><option data-encoded="%D0%A7%D0%B5%D0%B1%D0%BE%D0%BA%D1%81%D0%B0%D1%80%D1%8B" value="Чебоксары">Чебоксары</option><option data-encoded="%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA" value="Челябинск">Челябинск</option><option data-encoded="%D0%A7%D0%B5%D1%80%D0%B5%D0%BF%D0%BE%D0%B2%D0%B5%D1%86" value="Череповец">Череповец</option><option data-encoded="%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%BB%D1%8C" value="Ярославль">Ярославль</option>        </select>
+      </div>
+      
+    </div>
+
+    <div class="shop_popup__input_group">
+      <div class="shop_popup__input_label">
+        Адрес
+      </div>
+      <div class="shop_popup__select_wrapper">
+        <select class="
+          shop_popup__select
+          shop_popup__select--shop
+        ">
+          <option value="">Сначала выберите город</option>
+        </select>
+
+        <select class="shop_popup__hidden_select">
+          <option data-city-name="empty" value="">Сначала выберите город</option>
+                    <option data-city-name="" value="83"></option>
+          <option data-city-name="" value="84"></option>
+          <option data-city-name="" value="85"></option>
+          <option data-city-name="" value="86"></option>
+          <option data-city-name="" value="87"></option>
+          <option data-city-name="" value="88"></option>
+          <option data-city-name="" value="89"></option>
+          <option data-city-name="" value="90"></option>
+          <option data-city-name="" value="91"></option>
+          <option data-city-name="" value="92"></option>
+          <option data-city-name="" value="117"></option>
+          <option data-city-name="" value="118"></option>
+          <option data-city-name="" value="119"></option>
+          <option data-city-name="" value="132"></option>
+          <option data-city-name="" value="133"></option>
+          <option data-city-name="" value="134"></option>
+          <option data-city-name="Азов" value="1">Ул. Привокзальная, д. 10Б, Семь ветров, 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Арзамас" value="2">Ул. Калинина, д. 46, ТРЦ «Омега», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Армавир" value="3">Ул. Воровского, д. 69, ТРК «Красная площадь», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Астрахань" value="4">Ул. Кирова, д. 7, ТЦ «ЦУМ», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Барнаул" value="5">Пр. Космонавтов, д. 6В, Алтай, 1 этаж, магазин " MODIS"</option>
+          <option data-city-name="Белгород" value="6">Пр. Богдана Хмельницкого, д. 164, ТРЦ «РИО», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Великий Новгород" value="7">Ул. Большая Санкт-Петербургская, д. 39, Волна, 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Волгоград" value="8">Пр. Университетский, д. 107, ТРЦ «Акварель», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Волгоград" value="9">Пл. Дзержинского, д. 1Б , ТЦ «Диамант», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Волгоград" value="10">Б-р. 30 Лет Победы, д. 21, ТРЦ «Парк Хаус», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Волгоград" value="11">Ул. Историческая, д. 175, ТЦ «Реал», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Волжский" value="12">Б-р. Профсоюзов, д.1Б, Планета Лето, 2 этаж, магазин "MODIS", ДИСКОНТ</option>
+          <option data-city-name="Вологда" value="13">Окружное шоссе, д. 12, ТРЦ «РИО», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Вологда" value="159">ул.Благовещенская д.4</option>
+          <option data-city-name="Воронеж" value="14">Ул. 20-летия Октября, д. 90, Пассаж «Солнечный Рай», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Воронеж" value="15">Пр. Ленинский, д. 174П, ТРК «Максимир», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Воронеж" value="16">Пр. Патриотов, д. 3А, ТЦ «Юго-Запад», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Дзержинск" value="17">Ул. Петрищева, д. 4, ТЦ «Роял», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Екатеринбург" value="18">Ул. Халтурина, д. 55, ТРК «Карнавал», 0 этаж, магазин "MODIS"</option>
+          <option data-city-name="Екатеринбург" value="19">Ул. Амундсена, д. 65, литер Б, ТЦ «КИТ», 0 этаж, магазин "MODIS"</option>
+          <option data-city-name="Екатеринбург" value="20">Ул. Сулимова, д. 50, Парк Хаус, 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Екатеринбург" value="21">Ул. Вайнера, д. 10, ТЦ «Успенский», 4 этаж, магазин "MODIS"</option>
+          <option data-city-name="Иваново" value="24">Ул. Куконковых, д. 141, ТРЦ Ашан, 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Иваново" value="25">Ул. 8 марта, д. 32, ТРЦ «Серебряный город», 2 уровень, магазин "MODIS"</option>
+          <option data-city-name="Ижевск" value="27">Ул. Удмуртская, д. 304, ТЦ «Аврора-Парк», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Ижевск" value="28">Ул. Петрова, д. 29, ТЦ «Петровский», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Йошкар-Ола" value="29">Ул. Карла Маркса, д. 99, ТЦ «Форум», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Казань" value="30">Пр. Хусаина Ямашева, д. 46/33, ТЦ «Парк Хаус», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Казань" value="31">Ул. Хусаина Мавлютова, д. 45, ТРК «Сити-Центр», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Кемерово" value="34">Октябрьский проспект, д. 34</option>
+          <option data-city-name="Киров" value="35">Ул. Пролетарская, д. 15, ТРЦ «Максимум», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Клин" value="36">Ул. Карла Маркса, д. 4, ТК «Дарья», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Кострома" value="38">Давыдовский-3 мкрн., д. 32, ТРЦ «Авокадо», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Краснодар" value="40">Ул. Крылатая, д. 2, ТРЦ «OZ MALL», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Краснодар" value="41">Ул. им. Володи Головатого, д. 313, литер А, 0 этаж, магазин "MODIS"</option>
+          <option data-city-name="Краснодар" value="42">Ул. Уральская, д. 79/1, ТРК «СБС Мегамолл», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Краснодар" value="43">Ул. Дзержинского, д. 100, ТРЦ «Красная площадь», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Красноярск" value="44">Ул. Телевизорная, д. 1, Торговый Квартал, стр. 4, магазин "MODIS"</option>
+          <option data-city-name="Курган" value="154">Ул. Невежина, д. 3/10, ТЦ «РИО», магазин "MODIS"</option>
+          <option data-city-name="Курск" value="46">Ул. Студенческая, д. 1, Студенческая, магазин "MODIS"</option>
+          <option data-city-name="Курск" value="47">Ул. Карла Маркса, д. 10, ТЦ «Европа», 4 этаж, магазин "MODIS"</option>
+          <option data-city-name="Липецк" value="48">Ул. Советская, д. 66, ТРЦ «Европа», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Липецк" value="49">Ул. Героя России Эдуарда Белана, д. 26, Ашан, 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Магнитогорск" value="50">Пр. Карла Маркса, д. 153, ТРК «Гостинный двор», магазин "MODIS"</option>
+          <option data-city-name="Магнитогорск" value="51">Пр. Ленина, д. 77, ТЦ «Континент», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Москва" value="52">Б-р Ходынский, д. 4, ТВК «Авиапарк», 3-й торговый уровень, магазин "MODIS"</option>
+          <option data-city-name="Москва" value="53">М. Тушинская, Пятницкое шоссе, д. 43, ТЦ «Верный», магазин "MODIS"</option>
+          <option data-city-name="Москва" value="54">Пр. Мира, д. 211, ТЦ «Золотой Вавилон», 2-й торговый уровень, магазин "MODIS"</option>
+          <option data-city-name="Москва" value="55">Ул. Воронцовская, д. 49/28, стр. 1, Универмаг ’Сотый’, 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Москва" value="158">ул. Кировоградская, д.13А</option>
+          <option data-city-name="Нальчик" value="57">Ул. Кирова, д. 1Д, ТРЦ «Галерея», 0 этаж, магазин "MODIS"</option>
+          <option data-city-name="Невинномыcск" value="58">Ул. Гагарина, д. 1Б, Гранд, 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Нижнекамск" value="59">Ул. Менделеева, д. 31А, ТЦ «Барс», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Нижний Новгород" value="60">Ул. Московское шоссе, д. 12, ТЦ «РИО», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Нижний Новгород" value="61">Ул. Родионова, д. 187, ТРЦ «Фантастика», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Новокузнецк" value="63">Ул. Кирова, д. 55, ТЦ «Сити Молл», магазин "MODIS"</option>
+          <option data-city-name="Новороссийск" value="64">Анапское шоссе, д. 2, ТК «Красная Площадь», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Новосибирск" value="66">Красный Проспект, д. 101, ТРК «Ройял парк», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Новосибирск" value="67">Площадь Карла Маркса, д. 2, ТЦ «Галерея Фестиваль», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Новосибирск" value="68">Ул. Фрунзе, д. 238, ТЦ «Сибирский Молл», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Ногинск" value="70">Соборная, д. 12, ТЦ «На соборной», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Омск" value="71">Ул. 70 лет Октября, д. 19, ТЦ «FestiValCity», этаж 3, магазин "MODIS"</option>
+          <option data-city-name="Орел" value="72">Ул. Комсомольская, д. 23А, А1, ТЦ «Галерея», магазин "MODIS"</option>
+          <option data-city-name="Оренбург" value="74">Пр. Дзержинского, д. 23, ТРЦ «Север», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Орск" value="75">Ул. Васнецова, д. 16, ТЦ «ЦУМ», 0 этаж, магазин "MODIS"</option>
+          <option data-city-name="Пенза" value="76">Ул. Кирова, д. 73/23, «А», ТЦ «ЦУМ», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Пенза" value="77">Центральная, д. 1, ТЦ «Ритейл Парк», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Пермь" value="78">Ул. Мира, д. 41/1, ТЦ «Столица», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Петрозаводск" value="79">Пр. Ленина, д. 14, ТЦ «Макси», магазин "MODIS"</option>
+          <option data-city-name="Пятигорск" value="80">Ул. Бунимовича, д. 7, ТЦ «Планета», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Реутов" value="81">Носовихинское шоссе, д. 9, ТЦ «Алфавит», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Реутов" value="82">2й км. МКАД, д. 2, ТРЦ «РИО» («Шоколад»), 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Ростов-на-Дону" value="93">Ул. Зорге, д. 33, ТЦ «Талер», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Ростов-на-Дону" value="94">Ул. М. Нагибина, д. 17, ТРЦ «РИО», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Рязань" value="95">Московское шоссе, д. 21, ТЦ «Премьер», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Рязань" value="96">Московское шоссе, д. 65А, М5 Молл, 1 этаж, магазин "MODIS", ДИСКОНТ</option>
+          <option data-city-name="Самара" value="97">Московское шоссе 18 км., д. 25С, ТЦ «Московский», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Самара" value="98">Пр. Кирова, д. 147, ТРК «Вива-Лэнд», 4 этаж, магазин "MODIS"</option>
+          <option data-city-name="Самара" value="99">Ул. Дыбенко, д. 30, ТРК «Космопорт», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Санкт-Петербург" value="100">Петергофское шоссе, д. 51, Жемчужная плаза, 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Санкт-Петербург" value="101">Ул. Коллонтай, д. 3, Лондон Молл, 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Санкт-Петербург" value="102">Ул. Ленсовета, д. 97, литер А, ТРК «Континент», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Санкт-Петербург" value="103">Пр. Гражданский, д. 41, корпус 2, литер Б, ТЦ «Академ-Парк», цокольный этаж, магазин "MODIS"</option>
+          <option data-city-name="Санкт-Петербург" value="104">Ул. Белы Куна, д. 3, литер А, ТЦ «Международный», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Санкт-Петербург" value="105">Ул., д. 31 или Рыбацкое ст., литер А, ТЦ «Порт Находка», магазин "MODIS"</option>
+          <option data-city-name="Санкт-Петербург" value="106">Пр. Просвещения, д. 19, литер А, ТРК «Норд», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Санкт-Петербург" value="107">Пр. Коломяжский, д. 17, корпус 1, литер А, ТЦ «Сити Молл», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Санкт-Петербург" value="108">Пр. Ленинский, д. 100, корпус 1, ТЦ «Фиолент», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Санкт-Петербург" value="109">Балканская площадь, д. 5, литер А, ТЦ «Балканский», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Санкт-Петербург" value="110">Ул. Торфяная дорога, д. 7, литер Б, ТЦ «Гулливер», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Санкт-Петербург" value="111">Пр. Заневский, д. 71, ТЦ «Заневский Каскад», магазин "MODIS"</option>
+          <option data-city-name="Саратов" value="113">Пр. Кирова, д. 43, ТЦ «Детский мир», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Саратов" value="114">Ул. Танкистов, д. 1, ТЦ «Форум», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Смоленск" value="115">Ул. Ново-Московская, д. 2/8, ТРЦ «Галактика», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Смоленск" value="116">Ул. 25 Сентября, д. 35А, ТЦ «Макси», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Сочи" value="120">Ул. Новая заря, д. 7, ТРК «Море Молл», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="СПБ Колпино" value="37">Ул. Пролетарская, д. 36, литер А, ТРК «Меркурий», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Ставрополь" value="121">Пр. Карла Маркса, д. 47-49, ТЦ «Европейский», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Ставрополь" value="122">Ул. Краснофлотская, д. 91, ТЦ «Ниагара», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Стерлитамак" value="123">Ул. Артема, д. 96, ТРЦ «Арбат», 0 этаж, магазин "MODIS"</option>
+          <option data-city-name="Сургут" value="124">Югорский тракт, д. 38, ТРЦ «Сити Молл», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Сыктывкар" value="125">Ул. Октябрьский проспект, д. 131/3, ТРЦ «Июнь», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Таганрог" value="126">Площадь Мира, д. 7, ТРЦ «Мармелад», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Тамбов" value="128">Ул. Советская, д. 99А, ТЦ «РИО», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Тамбов" value="129">Ул. Советская, д. 194Б, Ашан, 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Тверь" value="130">Пр. Октябрьский, д. 103(строительный), Торговый парк N1, 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Тольятти" value="131">Автозаводское шоссе, д. 6, Парк Хаус, 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Тольятти" value="135">Ул. Революционная, д. 52А, ТЦ «Русь на Волге», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Тула" value="137">Улица Путейская, д. 5, Интерсити (Сарафан), 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Тула" value="160">ул. Пролетарская, д.2</option>
+          <option data-city-name="Тюмень" value="138">Ул. Московский тракт, д. 118, ТРЦ «Колумб», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Тюмень" value="139">Ул. Максима Горького, д. 42, ТЦ «Магеллан», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Ульяновск" value="140">Московское шоссе, д. 91, ТЦ «Пушкаревское кольцо», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Уфа" value="141">Ул. Минигали Губайдуллина, д. 6, ТЦ «Аркада», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Уфа" value="142">Ул. Кольцевая, д. 65/3, ТЦ «Меркурий», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Уфа" value="143">Академика Королева, д. 14, ТЦ «Звездный», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Уфа" value="144">Ул. Цурюпы, д. 97, ТК «Центральный», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Чебоксары" value="145">Ул. Ленинского Комсомола, д. 21А, ТЦ «Мадагаскар», 3 этаж, магазин "MODIS"</option>
+          <option data-city-name="Челябинск" value="147">Ул. Сони Кривой, д. 26, ТЦ «Школьник», 2 этаж, магазин "MODIS"</option>
+          <option data-city-name="Челябинск" value="148">Ул. Молдавская, д. 16, ТРЦ «Фокус», магазин "MODIS"</option>
+          <option data-city-name="Череповец" value="149">Ул. Ленинградская, д. 1, ТРЦ «Северо-Западный», магазин "MODIS"</option>
+          <option data-city-name="Ярославль" value="152">Пр. Ленинградский, д. 123, ТЦ «Альтаир», 1 этаж, магазин "MODIS"</option>
+          <option data-city-name="Ярославль" value="153">Тутаевское шоссе, д. 1, ТРЦ «РИО», цокольный этаж, магазин "MODIS"</option>
+        </select>
+      </div>
+      
+    </div>
+
+    <div class="shop_popup__submit_wrapper">
+      <div class="
+        shop_popup__submit
+        shop_popup__submit--disabled
+      ">
+        Смотреть на карте
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="
+  common_popup
+  size_popup
+">
+  <div class="
+    common_popup__inner
+    size_popup__inner
+  ">
+    <div class="
+      common_popup__closer
+      size_popup__closer
+    "></div>
+
+    <div class="size_popup__tabs">
+      <div class="
+        size_popup__tab
+        size_popup__tab--selected
+      ">Женские размеры</div>
+      <div class="size_popup__tab">Мужские размеры</div>
+      <div class="size_popup__tab">Детские размеры</div>
+    </div>
+
+    <div class="size_popup__pages">
+      <div class="
+        size_popup__page
+        size_popup__page--visible
+      ">
+        <img 
+          alt="Руководство по женским размерам одежды"
+          class="size_popup__img"
+          src="/netcat_template/template/2/images/size/women.gif"
+        />
+      </div>
+      <div class="size_popup__page">
+        <img 
+          alt="Руководство по мужским размерам одежды"
+          class="size_popup__img"
+          src="/netcat_template/template/2/images/size/men.gif"
+        />
+      </div>
+      <div class="size_popup__page">
+        <img 
+          alt="Руководство по детским размерам одежды"
+          class="size_popup__img"
+          src="/netcat_template/template/2/images/size/children.gif?001"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    </main><!-- END main-content -->
+    
+    
+    
+    
+  <div class="
+      common_popup
+      process_popup
+    "
+  >
+    <span class="vertical_aligner"></span>
+    <div class="
+        common_popup__inner
+        process_popup__inner
+    ">
+      <div class="
+          common_popup__closer
+          process_popup__closer
+      "></div>
+
+      <div class="process_popup__info">
+        <p>
+            Настоящим я даю разрешение ЗАО «Одежда 3000» обрабатывать мои персональные данные: имя, номер мобильного телефона, адрес электронной почты.
+        </p>
+        <p>
+            Также я разрешаю ЗАО «Одежда 3000» в целях информирования о товарах, работах, услугах осуществлять обработку вышеперечисленных персональных данных и направлять на указанный мною адрес электронной почты и/или на номер мобильного телефона рекламу и информацию о товарах, работах, услугах ЗАО «Одежда 3000» и его партнеров.
+        </p>
+        <p>
+            Согласие может быть отозвано мною в любой момент путем направления письменного уведомления по адресу ЗАО «Одежда 3000».
+        </p>
+      </div>
+    </div>
+  </div>
+
+  
+    <script src="/netcat_template/template/2/javascript/jquery.mask.min.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+      $.cookie('test_cookie', 'cookie_value', { path: '/' });
+      if ($.cookie('test_cookie') == 'cookie_value') {
+        if($(".body--subscribe_popup").length == 0){ // чтобы не пересекаться с другим попапом
+          $("body").addClass("body--big_sub_popup   body--overflow_hidden");
+        }
+      }
+    });
+    </script>
+  <div class="
+    big_sub_popup
+    common_popup
+  ">
+    <div class="
+      big_sub_popup__inner
+      common_popup__inner
+    ">
+      <div class="
+        big_sub_popup__closer
+        common_popup__closer
+      "></div>
+
+      <div class="big_sub__left"></div>
+      <form 
+        class="big_sub__right"
+        action="/netcat/add.php" 
+        method="post"
+      >
+        <input type='hidden' name='catalogue' value='1'>
+        <input type='hidden' name='sub' value='8'>
+        <input type='hidden' name='cc' value='352'>
+                <input type='hidden' name='posting' value='1'>
+        <input type='hidden' name='isNaked' value='1'>
+        <input type='hidden' name='nc_token' value='7aac62340a45d98746c7013bf7043be9' />
+        <div class="big_sub__header">
+          Подпишитесь на нашу <br />
+          новостную рассылку
+        </div>
+        <div class="big_sub__subheader">
+          Получайте первыми информацию о наших <br />
+          новинках и эксклюзивных предложениях
+        </div>
+
+        <div class="
+          while_waiting
+          big_sub__while_waiting
+        ">
+          Отправка заявки на рассылку...
+        </div>
+
+        <div class="
+          after_success
+          big_sub__after_success
+        ">
+          Спасибо, Вы подписаны на рассылку!
+        </div>
+
+        <div class="
+          before_success
+          big_sub__before_success
+        ">
+
+          <div class="big_sub__inputs">
+            <div class="big_sub__input_wrapper">
+              <input 
+                class="big_sub__input"
+                type="text"
+                name="f_client_name"
+                required="required"
+                placeholder="Имя"
+              />
+            </div>
+            <div class="big_sub__input_wrapper">
+              <input 
+                class="big_sub__input"
+                type="tel"
+                name="f_client_phone"
+                data-verification="phone"
+                placeholder="Телефон"
+              />
+            </div>
+            <div class="big_sub__input_wrapper">
+              <input 
+                class="big_sub__input"
+                type="email"
+                name="f_client_email"
+                required="required"
+                data-verification="email"
+                placeholder="Введите свой e-mail"
+              />
+            </div>
+          </div>
+          <div class="big_sub__collections_wrapper">
+            <div class="big_sub__collections_header">
+              Выберите интересующие коллекции
+            </div>
+            <div class="big_sub__collections">
+              <div class="big_sub__collection">
+                <input
+                  class="
+                    big_sub__input
+                    big_sub__input--hidden_checkbox
+                  "
+                  type="checkbox"
+                  name="f_women_checked"
+                />
+                <div class="big_sub__collection_label">
+                  Женская
+                </div>
+              </div>
+              <div class="big_sub__collection">
+                <input
+                  class="
+                    big_sub__input
+                    big_sub__input--hidden_checkbox
+                  "
+                  type="checkbox"
+                  name="f_men_checked"
+                />
+                <div class="big_sub__collection_label">
+                  Мужская
+                </div>
+              </div>
+              <div class="big_sub__collection">
+                <input
+                  class="
+                    big_sub__input
+                    big_sub__input--hidden_checkbox
+                  "
+                  type="checkbox"
+                  name="f_children_checked"
+                />
+                <div class="big_sub__collection_label">
+                  Детская
+                </div>
+              </div>
+            </div>
+
+            <div class="big_sub__policy_wrapper">
+              <span class="big_sub__checkbox big_sub__checkbox--checked"></span>
+              <span class="big_sub__checkbox_label">
+                Я согласен(-сна) с <span class="big_sub__policy">политикой конфиденциальности</span>
+              </span>
+            </div>
+            <div class="big_sub__submit_wrapper">
+              <span class="
+                big_sub__submit
+                big_sub__submit--disabled
+              ">Подписаться</span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

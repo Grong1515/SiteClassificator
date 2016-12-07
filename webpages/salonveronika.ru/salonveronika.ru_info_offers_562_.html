@@ -1,0 +1,733 @@
+
+<!DOCTYPE html PUBLIC>
+<html>
+<head>
+<title>Новости</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content="Новости Veronika Herba" />
+<meta name="description" content="Новости Veronika Herba" />
+<link href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/cache/css/s1/veronika/page_994dccfce8d7a8b3150d2a1e82115466/page_994dccfce8d7a8b3150d2a1e82115466.css?1467731855355" type="text/css"  rel="stylesheet" />
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "bd6aaf7b508e03d961e6ec4af1585f3c"]); _ba.push(["host", "www.salonveronika.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!--CSS-->
+
+	
+
+<link rel="stylesheet" type="text/css" href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/css/main/bootstrap.css?1476898910117381" />
+<link rel="stylesheet" type="text/css" href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/templates/veronika/css/style.css?14774011057799393" />
+<link rel="stylesheet" href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/templates/veronika/css/colorbox.css?14029133754342" type="text/css" />
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+
+<!--JS-->
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ 
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" defer src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/js/jquery-1.6.2.min.js?147402743392555"></script>
+<script type="text/javascript" defer src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/js/js.js?147573955916143"></script>
+<script type="text/javascript" defer src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/js/jquery.colorbox.js?146885324127348"></script>
+<script type="text/javascript" defer src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/js/jquery.disable.text.select.pack.js?14029133861205"></script>
+<script type="text/javascript" defer src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/js/jquery.cookie.js?13985896343121"></script>
+<script type="text/javascript" defer src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/js/hover.zoom.js?14770615712500"></script>
+
+
+
+   
+
+
+
+<!--PHP-->
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".colorbox, a[rel=colorbox]").colorbox();
+
+	$(".adv-ul a.mess_1").toggle(function() {
+		$(this).parents("li").find(".send_message_2").show();
+		return false;
+	}, function() {
+		$(this).parents("li").find(".send_message_2").hide();
+		return false;
+	});
+
+	$(".adv-ul a.mess_2").toggle(function() {
+		$(this).parents("li").find(".send_message_3").show();
+		return false;
+	}, function() {
+		$(this).parents("li").find(".send_message_3").hide();
+		return false;
+	});
+
+	$(".adv-ul a.mess_3").toggle(function() {
+		$(this).parents("li").find(".send_message").show();
+		return false;
+	}, function() {
+		$(this).parents("li").find(".send_message").hide();
+		return false;
+	});
+
+	$(".adv-ul a.mess_4").toggle(function() {
+		$(this).parents("li").find(".send_message_4").show();
+		return false;
+	}, function() {
+		$(this).parents("li").find(".send_message_4").hide();
+		return false;
+	});
+
+	// ���������� � �����������
+	$(".send_message input[type=button]").click(function() {
+		var name = $(".send_message input[name=name]").val();
+		var email = $(".send_message input[name=email]").val();
+		var phone = $(".send_message input[name=phone]").val();
+		var text = $(".send_message textarea").val();
+		var error = false;
+
+		if (name.length == 0 || name == '���� ���:') {
+			error = '������� ���� ���';
+		} else if (email.length == 0 || email == 'E-mail:') {
+			error = '������� ��� email';
+		} else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(email))) {
+			error = '��������� email �������� ������';
+		} else if (phone.length == 0 || phone == '�������:') {
+			error = '������� ��� �������';
+		} else if (text.length == 0) {
+			error = '������� ����� ���������';
+		}
+
+		if (!error) {
+			alert('���� ��������� ������� ����������!');
+			$(".send_message input[type=text], .send_message textarea").val('');
+			$.post("/include/functions.php", {action:"send_message_1", name:name, email:email, phone:phone, text:text}, function(data) {
+			});
+		} else {
+			alert(error);
+		}
+
+	});
+
+	// ������ �����������
+	$(".send_message_2 input[type=button]").click(function() {
+		var name = $(".send_message_2 input[name=name]").val();
+		var email = $(".send_message_2 input[name=email]").val();
+		var spec = $(".send_message_2 input[name=spec]").val();
+		var text = $(".send_message_2 textarea").val();
+		var error = false;
+
+		if (name.length == 0 || name == '���� ���:') {
+			error = '������� ���� ���';
+		} else if (email.length == 0 || email == 'E-mail:') {
+			error = '������� ��� email';
+		} else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(email))) {
+			error = '��������� email �������� ������';
+		} else if (text.length == 0) {
+			error = '������� ����� ���������';
+		}
+
+		if (!error) {
+			alert('���� ��������� ������� ����������!');
+			$(".send_message_2 input[type=text], .send_message_2 textarea").val('');
+			$.post("/include/functions.php", {action:"send_message_2", name:name, email:email, spec:spec, text:text}, function(data) {
+			});
+		} else {
+			alert(error);
+		}
+
+	});
+
+	// ������ �� ������������
+	$(".send_message_3 input[type=button]").click(function() {
+		var name = $(".send_message_3 input[name=name]").val();
+		var email = $(".send_message_3 input[name=email]").val();
+		var phone = $(".send_message_3 input[name=phone]").val();
+		var text = $(".send_message_3 textarea").val();
+		var time = $(".send_message_3 input[name=time]").val();
+		var error = false;
+
+		if (name.length == 0 || name == '���� ���:') {
+			error = '������� ���� ���';
+		} else if (phone.length == 0 || phone == '�������:') {
+			error = '������� ��� �������';
+		} else if (text.length == 0) {
+			error = '������� ����� ���������';
+		}
+
+		if (!error) {
+			alert('���� ��������� ������� ����������!');
+			$(".send_message_3 input[type=text], .send_message_3 textarea").val('');
+			$.post("/include/functions.php", {action:"send_message_3", name:name, email:email, phone:phone, text:text, time:time}, function(data) {
+			});
+		} else {
+			alert(error);
+		}
+
+	});
+
+	// ������������ �� ��������
+	$(".send_message_4 input[type=button]").click(function() {
+		var p1 = $(".send_message_4 input[name=p1]").val();
+		var p2 = $(".send_message_4 input[name=p2]").val();
+		var p3 = $(".send_message_4 input[name=p3]").val();
+		var p4 = $(".send_message_4 input[name=p4]").val();
+		var p5 = $(".send_message_4 input[name=p5]").val();
+		var p6 = $(".send_message_4 input[name=p6]").val();
+		var p7 = $(".send_message_4 textarea[name=p7]").val();
+		var p8 = $(".send_message_4 textarea[name=p8]").val();
+		var error = false;
+
+		if (p1.length == 0 || p1 == '���:') {
+			error = '������� ���� ���';
+		} else if (p3.length == 0 || p3 == '���������� �������:') {
+			error = '������� ��� �������';
+		} else if (p4.length == 0 || p4 == 'E-mail:') {
+			error = '������� ����� ���������';
+		}
+
+		if (!error) {
+			alert('���� ��������� ������� ����������!');
+			$(".send_message_4 input[type=text], .send_message_4 textarea").val('').blur();
+			$.post("/include/functions.php", {action:"send_message_4", p1:p1, p2:p2, p3:p3, p4:p4, p5:p5, p6:p6, p7:p7, p8:p8}, function(data) {
+			});
+		} else {
+			alert(error);
+		}
+
+	});
+
+	function str_replace ( search, replace, subject ) {
+
+			if(!(replace instanceof Array)){
+				replace=new Array(replace);
+				if(search instanceof Array){
+					while(search.length>replace.length){
+						replace[replace.length]=replace[0];
+					}
+				}
+			}
+
+			if(!(search instanceof Array))search=new Array(search);
+			while(search.length>replace.length){
+				replace[replace.length]='';
+			}
+
+			if(subject instanceof Array){
+				for(k in subject){
+					subject[k]=str_replace(search,replace,subject[k]);
+				}
+				return subject;
+			}
+
+			for(var k=0; k<search.length; k++){
+				var i = subject.indexOf(search[k]);
+				while(i>-1){
+					subject = subject.replace(search[k], replace[k]);
+					i = subject.indexOf(search[k],i);
+				}
+			}
+
+			return subject;
+		}
+
+	$(".metro1").click(function() {
+
+		map_id = str_replace("BX_GMAP_", "", $(".bx-google-map").attr("id"));
+		var location = new google.maps.LatLng(55.862897249391175, 37.6061305640319);
+		GLOBAL_arMapObjects[''+map_id+''].setCenter(location);
+
+		$(".content-right h3").html('<h3><b>�� �����:</b> ����� �Veronika Herba� �. ��������</h3>');
+
+		return false;
+	});
+
+	$(".metro2").click(function() {
+
+		map_id = str_replace("BX_GMAP_", "", $(".bx-google-map").attr("id"));
+		var location = new google.maps.LatLng(55.812025285918, 37.572907057672);
+		GLOBAL_arMapObjects[''+map_id+''].setCenter(location);
+
+		$(".content-right h3").html('<h3><b>�� �����:</b> ����� �Veronika Herba� �. �������������</h3>');
+
+		return false;
+	});
+
+	$("a.hidden-link").toggle(function() {
+		$(this).next("div:hidden").addClass("permanently-visible").slideDown("fast");
+		return false;
+	}, function() {
+		$(this).next("div.permanently-visible").slideUp("fast").removeClass("permanently-visible");
+		return false;
+	});
+
+	$("a.hide-this").click(function() {
+		$(this).parents("div.permanently-visible").prev("a.hidden-link").click();
+		return false;
+	});
+
+			//document.onselectstart=function() {return false}
+		//document.oncontextmenu=function(){return false}
+		//document.onCopy=function(){return false}
+		// document.onmousedown=function(){return false}
+		//$(".content-right p").disableTextSelect();
+	
+	$(".social_main_box").hover(function() {
+		$(this).animate({left:'-10px'});
+	}, function() {
+		$(this).animate({left:'-337px'});
+	});
+
+});
+</script>
+
+
+</head>
+
+
+<body>
+	<div id="panel"></div>
+    <div class="main">
+    	<div class="header">
+        	<div class="header-left">
+            	<span>Медицинская лицензия №77-01-001045</span>
+				Мы работаем с 1998 года<br />
+				<a href="/photoreports/otzyvy_nashikh_gostey/">Отзывы наших гостей</a>
+            </div>
+            <div class="header-right">
+            	<span>Многоканальный телефон</span>
+                8 (495) 995-15-13
+                <div class="callback_of">
+   	   ﻿<html>
+<head>
+<meta name="description" content="" />
+<meta name="keywords" content="" /> 
+<link rel="stylesheet" type="text/css" href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/templates/veronika/popup/style.css?14743585993005"/>
+<script type="text/javascript" src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/popup/js/script.js?14730699833114"></script>
+</head>
+
+
+    <a href="#" id="callback" class="callbackvh">Заказать звонок</a>
+<div id="popup">
+    <form id="contact_form" role="form" method="post" action="/bitrix/templates/veronika/popup/php/order.php">
+  
+        <h3></h3>
+        <input type="text" name="name"  placeholder="Как к вам обращаться?">
+        <input type="text" name="tel"  class="required" placeholder="Контакный телефон (обязательно)">
+        <textarea name="message" placeholder="Укажите, когда Вам перезвонить" rows="5"></textarea>
+        <a href="#" onclick="yaCounter38246945.reachGoal('ym_callback'); return true;" class="btn button form_submit">Заказать</a>
+
+    </form>
+</div>
+</body>
+</html>   </div>
+             
+   </div>
+   
+        	<a class="logo" href="/"></a>
+            <div class="c"></div>
+
+
+ 
+
+
+
+
+<ul class="menu">
+	<li><a class="" href="/about_us/"><span>О нас</span></a></li><li>
+    <a class="" href="/services/"><span>Услуги</span></a></li>
+	<li><a class="" href="/price_menu/"><span>Цены</span></a></li>
+	<li><a class="" href="/gift_certificate.php"><span>Подарочные сертификаты</span></a></li>
+	<li><a class="active" href="/info/offers/"><span>Акции</span></a></li>
+	<li><a class="" href="/info/news/"><span>Новости</span></a></li>
+	<li><a class="" href="/photoreports/"><span>Фотогалерея</span></a></li>
+	<li><a class="" href="/contacts/"><span>Контакты</span></a></li>
+</ul>
+
+        </div><!--end .header -->
+        <div class="content-columns">
+        	<div class="content-bg-top">
+            </div>
+            <div class="content-bg-center">
+            	<div class="content-bg-in">
+                	
+										<div class="content-iner">
+						<div class="content-left">
+                        
+ 
+<ul class="left-menu" style="height: auto; width: 265px;"> 	 	
+  <li><a href="/info/offers/" >Акции</a></li>
+ 	
+  <li><a href="/info/news/" >Новости</a></li>
+ 	
+  <li><a href="/info/new_services/" >Новые услуги</a></li>
+ </ul>
+ 
+<!--<div class="clients-title">Нашим клиентам</div>-->
+ 
+<!--<div class="clients-title"><a href="/gift_certificate.php" ><img width="267" height="132" src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/medialibrary/88e/88e5556df8ee627adce0d479caf6ecaf.png?131732640023104" title="ban.png" alt="ban.png"  /></a></div>-->
+ 
+<!--<div class="clients-title"> <a href="/coupon_16.pdf" title="распечатать купон" target="_blank" ><img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/medialibrary/c17/c17b8fd7554cb0079e0db8818cce1530.jpg?1358193600105442" border="0" alt="Happy hour.jpg" width="267" height="132"  /></a></div>-->
+ 
+<div class="clients-title"> 
+  <br />
+ </div>
+ 
+<!--<div class="clients-title"> <br>
+<ul class="adv-ul">
+	<li><a a="" href="#modal-order" data-toggle="modal" class="mess_1">Ваш вопрос специалисту</a>
+	<div class="send_message_2" style="margin: 8px 0px; display: none;">
+		<p>
+ <input name="name" type="text" class="input-text" value="Ваше имя:" onblur="if(this.value==''){this.value='Ваше имя:';}" onfocus="if(this.value=='Ваше имя:'){this.value='';}">
+		</p>
+		<p>
+ <input name="email" type="text" class="input-text" value="E-mail:" onblur="if(this.value==''){this.value='E-mail:';}" onfocus="if(this.value=='E-mail:'){this.value='';}">
+		</p>
+		<p>
+ <input name="spec" type="text" class="input-text" value="Имя специалиста:" onblur="if(this.value==''){this.value='Имя специалиста:';}" onfocus="if(this.value=='Имя специалиста:'){this.value='';}">
+		</p>
+		<p>
+ <textarea name="text" cols="" rows="" class="textarea" onblur="if(this.value==''){this.value='Ваш вопрос:';}" onfocus="if(this.value=='Ваш вопрос:'){this.value='';}">Ваш вопрос:</textarea>
+		</p>
+		<p>
+ <input type="button" value="Отправить сообщение" class="button-input" onclick="yaCounter38246945.reachGoal('ym_pagecallback'); return true;">
+		</p>
+		<p style="margin-top: 10px;">
+ <a href="/archive/" style="color:red;">Архив вопросов</a>
+		</p>
+	</div>
+ </li>
+	<li><a href="#" class="mess_2">Запись на консультацию</a>
+	<div class="send_message_3" style="margin: 8px 0px; display: none;">
+		<p>
+ <input name="name" type="text" class="input-text" value="Ваше имя:" onblur="if(this.value==''){this.value='Ваше имя:';}" onfocus="if(this.value=='Ваше имя:'){this.value='';}">
+		</p>
+		<p>
+ <input name="email" type="text" class="input-text" value="E-mail:" onblur="if(this.value==''){this.value='E-mail:';}" onfocus="if(this.value=='E-mail:'){this.value='';}">
+		</p>
+		<p>
+ <input name="phone" type="text" class="input-text" value="Контактный телефон:" onblur="if(this.value==''){this.value='Контактный телефон:';}" onfocus="if(this.value=='Контактный телефон:'){this.value='';}">
+		</p>
+		<p>
+ <textarea name="text" cols="" rows="" class="textarea" onblur="if(this.value==''){this.value='Кратко опишите тему консультации:';}" onfocus="if(this.value=='Кратко опишите тему консультации:'){this.value='';}">Кратко опишите тему консультации:</textarea>
+		</p>
+		<p>
+ <input name="time" type="text" class="input-text" value="Желаемые дата и время консультации:" onblur="if(this.value==''){this.value='Желаемые дата и время консультации:';}" onfocus="if(this.value=='Желаемые дата и время консультации:'){this.value='';}">
+		</p>
+		<p>
+ <input type="button" value="Отправить сообщение" class="button-input">
+		</p>
+	</div>
+ </li>
+	<li><a href="#" class="mess_3">Обратиться к руководству</a></li>
+</ul> </div>-->
+
+</div>
+						<div class="content-right">
+					
+
+<!-- Модальное Окно -->
+ <!--<div class="modern">
+    <body>
+       <div id="overlay">
+            <div class="popup">
+                    <a class="ModalHover" href="http://www.salonveronika.ru/info/offers/562/"><img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/лазер.jpg?147394416278034" max-width="980" min-width="450"></a>
+                <button class="close" title="Закрыть" onclick="document.getElementById('overlay').style.display='none';"></button>
+            </div>
+        </div>
+        <script src="http://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
+        <script src="http://yastatic.net/jquery/cookie/1.0/jquery.cookie.min.js"></script>
+        <script type="text/javascript">
+        $(function() {
+            // Проверяем запись в куках о посещении
+            // Если запись есть - ничего не делаем
+            if (!$.cookie('hideModal')) {
+           // если cookie не установлено появится окно
+           // с задержкой 5 секунд
+            var delay_popup = 15000;
+            setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+            }
+            // Запоминаем в куках, что посетитель уже заходил
+            $.cookie('hideModal', true, {
+            // Время хранения cookie в днях
+                expires: 7,
+                path: '/'
+            });
+        });
+        </script>
+    </body>
+ </div> -->
+<h1></h1>
+
+
+<div class="overflow"><img width="620" alt="эпиляция сентябрь.jpg" src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/medialibrary/ab0/ab07e4e98a6c57b602e7728824034d17.jpg?1472796876280331" height="958"><br>
+ <img width="620" alt="эпиляция1.jpg" src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/medialibrary/c43/c43e4684fc52e57d5474c6e941286363.jpg?1453982650344295" height="868"><br></div>
+
+<script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,twitter"></div>
+<noindex>
+
+
+
+
+
+										</div>
+						<div class="c"></div>
+					</div>
+								</div>
+            </div>
+            <div class="content-bg-bottom">
+            </div>
+
+
+
+
+				
+			
+
+
+
+       <!--<div class="pre-block">
+         
+    <div class="pre-block1">
+	   <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title></title>
+
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" type="text/css" href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/templates/veronika/css/remodal.css?1470129681893">
+<link rel="stylesheet" type="text/css" href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/templates/veronika/css/remodal-default-theme.css?14733393647659">
+<link rel="stylesheet" type="text/css" href="//www.salonveronika.ru.opt-css.1c-bitrix-cdn.ru/bitrix/templates/veronika/css/style.css?14774011057799393" />
+
+
+  
+</head>
+<body>
+
+<div class="home">
+  <p><a class="mainButton" href="#modal"><i class="fa fa-pencil-square-o" aria-hidden="true" class="fa_first"></i> Запись на консультацию</a></p>
+</div>
+
+<div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+ <div class="remodalBorder">
+  <p><img src="//www.salonveronika.ru.opt-images.1c-bitrix-cdn.ru/upload/imager/logo.png"></p>
+  <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+      <form id="form">
+        <h2 id="modalTitle">Запись на консультацию<br></h2>
+        <input type="text" class="putName" name="name" placeholder="Ваше ваше имя" required>
+        <input type="phone" class="putPhone" name="phone" placeholder="Введите номер телефона" required>
+        <input type="text" class="putEmail" name="email" placeholder="Введите E-mail" required>
+                <select id="spec" type="text" class="putSelect" name="spec" placeholder="Выберете специалиста" required>
+ <option value="Рубашова Татьяна Владимировна">Рубашова Татьяна Владимировна</option>
+ <option value="Горшкова Алена Владимировна">Горшкова Алена Владимировна</option>
+ <option value="Ларионов Александр Анатольевич">Ларионов Александр Анатольевич</option>
+ <option value="Вохмянин Александр Викторович">Вохмянин Александр Викторович</option>
+         </select>
+        <input type="data" class="putSelect" name="data" placeholder="Выберете дату" readonly="readonly" size="30" onclick="showcalendar(this)"/>
+        <input type="submit" name="submit" class="btn" value="ЗАПИСАТЬСЯ">
+        <input type="hidden" name="formData" value="Запись на консультацию">
+        <p style="margin:0;"><a style="font-size:12px; text-align:center; color:rgba(255, 255, 255, .3);" ></p>
+    </form>
+</div>
+</div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/forms/forma-first/js/remodal.min.js?14433438427653"></script>
+<script src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/forms/forma-first/js/script.js?1470228211834"></script>
+<script src="//www.salonveronika.ru.opt-js.1c-bitrix-cdn.ru/bitrix/templates/veronika/forms/forma-first/js/calendar.js?14697986356333"></script>
+
+</body>
+</html>      </div>
+</div>-->
+
+
+<footer>
+<div class="wrap">
+
+<div class="footer-phone">
+
+<p>Разделы</p>
+            <ul class="footer-menu">
+
+                <li>
+<ul class="foot_menu">
+	<li><a href="/about_us/">О нас</a></li>
+	<li><a href="/services/">Услуги</a></li>
+	<li><a href="/price_menu/">Цены</a></li>
+	<li><a href="/info/offers/">Акции</a></li>
+	<li><a href="/info/news/">Новости</a></li>
+	<li><a href="/info/blog/">Блог</a></li>
+	<li><a href="/contacts/">Контакты</a></li>
+</ul></li>
+                
+            </ul>
+      </div>
+
+<div class="footer-phone">
+<p>Услуги</p>
+            <ul class="footer-menu">
+
+                <li><a href="/services/cosmetology/">Косметология</a></li>
+                <li><a href="/services/meditsinskaya-podologiya/dermatologiya/">Дерматология</a></li>
+                <li><a href="/services/ortopediya/">Ортопедия</a></li>
+                <li><a href="/services/beauty/">Бьюти</a></li>
+                <li><a href="/services/meditsinskaya-podologiya/">Медицинская подология</a></li>
+                <li><a href="/services/laboratornye-metody-issledovaniya/">Лабораторные методы исследования</a></li>
+
+            </ul>
+      </div>
+            <div class="footer-right clearfix">
+                <div class="footer-phone">
+                    <p>КОНТАКТЫ</p>
+                    <div class="footer-phone-num">
+                    
+
+<div class="footer-div" itemscope itemtype="http://schema.org/DaySpa"  itemprop="itemReviewed" >
+
+			<div class="footer-div" itemprop="name">
+			VERONIKA HERBA		</div>
+	
+	
+		<div class="footer-div" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+		 		 		 	   		   <div class="footer-div" itemprop="addressLocality">МОСКВА</div>
+	   	   		  <div class="footer-div" itemprop="streetAddress"> ул. ДЕКАБРИСТОВ Д.20, К.1</div>
+	   	 </div>
+		
+		 <div class="footer-div" >
+		 			 			<span itemprop="telephone">8 (495) 995-15-13</span>
+		 	 </div>
+		
+		
+	
+	
+	
+    
+	
+	<div class="footer-div">
+		 			 			<time itemprop="openingHours" datetime="Mo-Fr 9:00&#8722;20:00">ПН-ВС</time>
+		 			 , 			<time itemprop="openingHours" datetime="St,Sn">9-21</time>
+		 	</div>
+		
+	
+	
+	
+
+	</div>
+
+
+
+</div>
+                </div>
+
+
+<div class="footer-phone">
+
+                <ul class="footer-social clearfix">
+                    <p>
+	&nbsp; &nbsp; &nbsp;СОЦИАЛЬНЫЕ СЕТИ
+</p>
+<li><a href="http://vk.com/veronikaherba" target="_blank" class="fa fa-vk"></a></li>
+<li><a href="http://www.facebook.com/veronikaherba" target="_blank" class="fa fa-facebook-square"></a></li>
+<li><a href="http://www.instagram.com/veronikaherba/" target="_blank" class="fa fa-instagram"></a></li>                </ul>
+        </div>
+                <div class="footer-subscribe clearfix">
+                    <form id="subscribe_form" action="#">
+                        <input type="text" class="footer-subscribe-text required" placeholder="Ваш e-mail:" name="EMAIL" />
+                        <input type="submit" class="footer-subscribe-button" value="ПОДПИСКА НА НОВОСТИ" />
+                    </form>
+                </div>
+            </div>
+            <!-- /.footer-right clearfix -->
+        </div></footer>
+        <!-- /.wrap -->
+
+
+
+                <div class="copyright">2005-2016 “Veronika Herba” - салон красоты Москва</div>
+                <div class="footer-dev"></div> 
+
+
+<span style="margin-left:120px;position:absolute;">
+
+<script type="text/javascript">
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t12.2;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+</script>
+</span>
+</div>
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter38246945 = new Ya.Metrika({
+                    id:38246945,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/38246945" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+
+<a href="#" class="scrollup">Наверх</a>
+<script type="text/javascript">
+$(document).ready(function(){
+ 
+$(window).scroll(function(){
+if ($(this).scrollTop() > 100) {
+$('.scrollup').fadeIn();
+} else {
+$('.scrollup').fadeOut();
+}
+});
+ 
+$('.scrollup').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+ 
+});
+</script>
+</html>

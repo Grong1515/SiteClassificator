@@ -1,0 +1,947 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="/bitrix/templates/minimal_black/favicon.ico" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Home Cinema Hall</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<link href="/bitrix/js/main/core/css/core.css?1354041738" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/minimal_black/components/bitrix/news.list/top_block/style.css?1339763980" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/minimal_black/components/bitrix/menu/left_menu/style.css?1339763980" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/minimal_black/components/bitrix/breadcrumb/template/style.css?1339763980" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/minimal_black/components/bitrix/news.list/photos_index/style.css?1339763980" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/minimal_black/components/bitrix/news.list/bottom_block/style.css?1339763980" type="text/css" rel="stylesheet" />
+<link href="/bitrix/components/bitrix/menu/templates/.default/style.css?1339763982" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/minimal_black/styles.css?1344597979" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/minimal_black/template_styles.css?1344597979" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/bitrix/js/main/core/core.js?1354041738"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1477475553','SERVER_TZ_OFFSET':'10800','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'46e49ebb05eb73390b885df16662d7c6','SITE_ID':'s1','JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Все уведомления','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти'})</script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ajax.js?1354041738"></script>
+<script type="text/javascript" src="/bitrix/js/main/session.js?1339763981"></script>
+<script type="text/javascript">
+bxSession.Expand(1440, '46e49ebb05eb73390b885df16662d7c6', false, '013198368458daa53d4055e0bd7690b9');
+</script>
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/minimal_black/colors.css" />
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/minimal_black/print.css" media="print" />
+<script src="/bitrix/templates/minimal_black/js/jquery-1.7.1.min.js"></script>	
+<script src="/bitrix/templates/minimal_black/js/gallery/galleria-1.2.7.js"></script>
+<script src="/bitrix/templates/minimal_black/js/hashchange.js"></script>
+
+<script>Galleria.loadTheme('/bitrix/templates/minimal_black/js/gallery/themes/classic/galleria.classic.min.js');</script>
+
+<!--[if IE]>
+<style>
+#vertical-multilevel-menu li ul.root-item{
+margin-left:250px!important;
+}
+.instruments-panel-top{
+ width:135px!important;
+}
+</style>
+<![endif]-->
+<style>
+	#content-wrapper{
+		position:relative;
+overflow:hidden;
+	}
+	#page-loader-dlk{
+		position:absolute;
+		right:0;
+		top:0;
+		display:none;
+		z-index:9999;
+	}	
+	#galleria{
+		width:715px;
+		height:520px
+	}
+</style>
+<script type="text/javascript">
+	$("#music-button-play").live('click', function(event){
+		event.preventDefault();
+		event.stopPropagation();
+		if (window.location.hash!=""){
+			window.location.replace("/"+window.location.hash.substr(1)+"?stop=0");
+		}
+		else{
+			window.location.replace("?stop=0");
+		}
+	});
+	$("#music-button-stop").live('click', function(event){
+		event.preventDefault();
+		event.stopPropagation();
+		if (window.location.hash!=""){
+			window.location.replace("/"+window.location.hash.substr(1)+"?stop=1");
+		}
+		else{
+			window.location.replace("?stop=1");
+		}
+	});	
+	$("#button-finder").live('click',function(){
+		if ($(".input-finder-text").val()!=''){
+			$("#search_hch").submit();
+		}
+	});
+	function get_page_by_hash(strload){
+		$('#dlk-main-container').load(strload+' #dlk-content-loader', function(){
+			if($("#slides1").length>0) {
+				$.getScript("/bitrix/templates/minimal_black/js/slider_index/jquery-latest.js");
+				$.getScript("/bitrix/templates/minimal_black/js/slider_index/jquery.bxslider2.min.js");
+				$.getScript("/bitrix/templates/minimal_black/js/slider_index/scripts.js");		
+			}
+			if($("#galleria").length>0) {
+				Galleria.run('#galleria', {showCounter:false, debug: false});	
+			}
+		});
+	}
+
+	$(window).hashchange(function(){
+         var linkaj = window.location.hash.replace("#", "/");
+		 if (linkaj==""){
+			linkaj="/"
+		 }
+         get_page_by_hash(linkaj);
+        });
+	
+	$('.aj-link-sel').live('click', function(event){
+		event.preventDefault();
+		 var strload=$(this).attr('href');
+		if ( window.history && history.pushState ) {
+			window.history.pushState("", "", $(this).attr("href")); 
+			window.history.replaceState("", "", $(this).attr("href"));
+			get_page_by_hash(strload);
+		}else{
+			if (strload.substr(0,25)=="http://homecinemahall.com"){
+				window.location.hash = "#"+strload.substr(26);
+			}
+			else{
+				window.location.hash = "#"+strload.substr(1);
+			}
+		}
+	});
+
+	window.onload=function(){
+		window.setTimeout(function(){
+			window.addEventListener("popstate", function(e) {
+					e.preventDefault();
+					var strload=window.location.href;
+					if ( window.history && history.pushState ) {
+						window.history.replaceState("", "", strload);
+						get_page_by_hash(strload);
+					}else{
+						if (strload.substr(0,25)=="http://homecinemahall.com"){
+							window.location.hash = "#"+strload.substr(26);
+						}
+						else{
+							window.location.hash = "#"+strload.substr(1);
+						}
+					}		
+			}, false);	
+		},1);
+	}
+	$(document).ready(function(){
+			if($("#galleria").length>0) {
+				Galleria.run('#galleria', {showCounter:false, debug: false});	
+			}
+	});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34018649-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<script>
+ if (window.location.hash!=''){
+  window.location.replace("/"+window.location.hash.substr(1));
+ }
+</script>
+<div id="dlk-main-container">
+<div id="dlk-content-loader">
+
+		<div id="panel"></div>
+	<table border="0" id="grid" align="center" cellspacing="10" celpadding="10">
+		<tr>
+			<td id="header-row" colspan="2" height="100" align="center">
+					
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td width="246" >
+
+<div style="padding-left:4px;" >
+
+<div class="top_block">
+
+				<a href="" class="aj-link-sel">МНОГОКАНАЛЬНЫЙ  ТЕЛЕФОН</a>
+</div>
+
+				<a href="" class="aj-link-sel"><img class="preview_picture" border="0" src="/upload/iblock/2c6/2c6d29ca29edf5b4113e8496a087094e.jpg" width="227" height="112" alt="МНОГОКАНАЛЬНЫЙ  ТЕЛЕФОН" title="МНОГОКАНАЛЬНЫЙ  ТЕЛЕФОН" style="float:left" /></a>
+</div>
+</td>
+
+
+	<td width="246" >
+
+<div style="padding-left:4px;" >
+
+<div class="top_block">
+
+				<a href="/correct/system/" class="aj-link-sel">АКУСТИЧЕСКИЕ СИСТЕМЫ НОВОГО ПОКОЛЕНИЯ</a>
+</div>
+
+				<a href="/correct/system/" class="aj-link-sel"><img class="preview_picture" border="0" src="/upload/iblock/b64/b644b4552b513b0ae36f5284b23006df.jpg" width="227" height="112" alt="АКУСТИЧЕСКИЕ СИСТЕМЫ НОВОГО ПОКОЛЕНИЯ" title="АКУСТИЧЕСКИЕ СИСТЕМЫ НОВОГО ПОКОЛЕНИЯ" style="float:left" /></a>
+</div>
+</td>
+
+
+	<td width="246" >
+
+<div style="padding-left:4px;" >
+
+<div class="top_block">
+
+				<a href="/mebel/" class="aj-link-sel">КИНОТЕАТРАЛЬНЫЕ КРЕСЛА</a>
+</div>
+
+				<a href="/mebel/" class="aj-link-sel"><img class="preview_picture" border="0" src="/upload/iblock/d39/d394e8bddf7f1c75b99bfa9052ff9a36.jpg" width="227" height="112" alt="КИНОТЕАТРАЛЬНЫЕ КРЕСЛА" title="КИНОТЕАТРАЛЬНЫЕ КРЕСЛА" style="float:left" /></a>
+</div>
+</td>
+
+
+	<td width="246" >
+
+<div style="padding-left:4px;" >
+
+<div class="top_block">
+
+				<a href="/correct/doors/" class="aj-link-sel">ЗВУКОИЗОЛИРУЮЩИЕ ДВЕРИ</a>
+</div>
+
+				<a href="/correct/doors/" class="aj-link-sel"><img class="preview_picture" border="0" src="/upload/iblock/a38/a38d9aeda6da6f59b2d2646c69aa6346.jpg" width="227" height="112" alt="ЗВУКОИЗОЛИРУЮЩИЕ ДВЕРИ" title="ЗВУКОИЗОЛИРУЮЩИЕ ДВЕРИ" style="float:left" /></a>
+</div>
+</td>
+
+
+</tr>
+</table> 			</td>
+		</tr>
+		<tr>
+			<td id="menu-row" colspan="2">
+					<div id="search">
+					
+<form id="search_hch" action="/search.php">
+
+<div class="search-name">Поиск:</div>
+		<input class="input-finder-text" type="text" name="q" maxlength="50" />
+		<input type="submit" name="s" id="search-submit-button" value=""/>
+<div class="instruments-panel-top">	
+		<img id="button-finder" src="/bitrix/templates/minimal_black/images/lupa.png" alt="find"></img>
+<a id="music-button-stop" href="?stop=1"><img class="music-button" src="/bitrix/templates/minimal_black/images/new/sound.png" alt="start"></img></a>
+<a href="/"><img class="img-flag rus flag-selected" src="/bitrix/templates/minimal_black/images/new/rus.png" alt="rus"></img></a>
+<a href="/en/"><img class="img-flag eng " src="/bitrix/templates/minimal_black/images/new/eng.png" alt="eng"></img></a>
+</div>
+</form>					</div>
+			</td>
+		</tr>
+		<tr>
+		<td id="left_column" width="250" height="600" valign="top" align="left">
+		<div style="width:250px;">
+			<div id="logo" align="center">
+				<a href="/"><img src="/bitrix/templates/minimal_black/images/new/logo_hch.png"></a>
+			</div>
+
+			<div id="main_menu">
+			<script src="/bitrix/templates/minimal_black/components/bitrix/menu/left_menu/script.js?1339763980" type="text/javascript"></script>
+<ul id="vertical-multilevel-menu">
+
+			
+		
+							<li><a href="/about/" class="aj-link-sel root-item">О компании</a>
+					<ul class="root-item">
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/about/history/" class="aj-link-sel">История и специализация</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/about/public/" class="aj-link-sel">Публикации</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/about/articles/" class="aj-link-sel">Статьи о персональных кинозалах</a></li>
+				
+			
+		
+			
+		
+						</ul></li>		
+		
+							<li><a href="/project/" class="aj-link-sel root-item">Проектирование и строительство</a>
+					<ul class="root-item">
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/project/standart/" class="aj-link-sel">Стандарты персонального кинозала</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/project/podbor/" class="aj-link-sel">Подбор AV аппаратуры и мебели</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/project/acustic/" class="aj-link-sel">Акустический проект</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/project/instproject/" class="aj-link-sel">Инсталляционный и дизайн проекты</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/project/decoration/" class="aj-link-sel">Строительно-монтажные и отделочные работы</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/project/install/" class="aj-link-sel">Инсталляция и управление</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/project/upravlenie/" class="aj-link-sel">Аксессуары кинозала</a></li>
+				
+			
+		
+			
+		
+						</ul></li>		
+		
+							<li><a href="/mebel/" class="aj-link-sel root-item">Кинотеатральная мебель</a>
+					<ul class="root-item">
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/mebel/Tron/" class="aj-link-sel">Tron</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/mebel/Glam/" class="aj-link-sel">Glam</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/mebel/kamal/" class="aj-link-sel">Kamal</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/mebel/romantic/" class="aj-link-sel">Romantic</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/mebel/luxury/" class="aj-link-sel">Luxury</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/mebel/ring/" class="aj-link-sel">Ring</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/mebel/deco/" class="aj-link-sel">Deco</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/mebel/elit/" class="aj-link-sel">Elit</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/mebel/classic/" class="aj-link-sel">Classic</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/mebel/techno/" class="aj-link-sel">Techno</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/mebel/luxwide/" class="aj-link-sel">Luxwide</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/mebel/akses/" class="aj-link-sel">Аксессуары кресел</a></li>
+				
+			
+		
+			
+		
+						</ul></li>		
+		
+							<li><a href="/correct/" class="aj-link-sel root-item">Акустическая продукция</a>
+					<ul class="root-item">
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/correct/acoustic-recommendation/" class="aj-link-sel">Акустические рекомендации и экспертиза</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/correct/modules/" class="aj-link-sel">Звукокорректирующие модули и конструкции</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/correct/doors/" class="aj-link-sel">Акустические двери</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/correct/system/" class="aj-link-sel">Акустические системы</a></li>
+				
+			
+		
+			
+		
+						</ul></li>		
+		
+							<li><a href="/portfolio/" class="aj-link-sel root-item">Портфолио</a>
+					<ul class="root-item">
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/portfolio/kinozal/" class="aj-link-sel">Кинозалы</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/portfolio/projects/" class="aj-link-sel">Проекты</a></li>
+				
+			
+		
+			
+		
+						</ul></li>		
+		
+			
+									<li><a href="/demo_zal/" class="aj-link-sel root-item">Демо-зал</a></li>
+				
+			
+		
+			
+		
+			
+		
+			
+									<li><a href="/contacts/" class=" root-item">Контакты</a></li>
+				
+			
+		
+				
+
+
+</ul>
+			</div>
+
+			<div id="tel" align="center">
+				<img src="/bitrix/templates/minimal_black/images/new/tel.png">
+			</div>
+
+</div>
+		</td>
+			<td style="background:#353636;" style="height:626px;" id="content">
+				<div style="padding-top:1px;background:#353636;height:626px;" id="content-wrapper">
+				
+
+
+ <script src="/bitrix/templates/minimal_black/js/slider_index/jquery-latest.js" type="text/javascript"></script>
+<script src="/bitrix/templates/minimal_black/js/slider_index/jquery.bxslider2.min.js" type="text/javascript"></script>
+<script src="/bitrix/templates/minimal_black/js/slider_index/scripts.js" type="text/javascript"></script>	
+<style>
+#slides1
+{
+	margin: -8px 0 0 0;
+	padding:0;
+}
+</style>
+
+<ul id="slides1">
+
+
+<li style="width:741px;"><img src="/upload/iblock/898/898db8d6260180c5de02ad72deb2bb46.jpg"></li>
+
+
+
+
+<li style="width:741px;"><img src="/upload/iblock/800/80002af1949da5685ee2894bc2b42e79.jpg"></li>
+
+
+
+
+<li style="width:741px;"><img src="/upload/iblock/346/3464b8dcbb61760d8eaeb33573d01043.jpg"></li>
+
+
+
+
+<li style="width:741px;"><img src="/upload/iblock/987/9872122b6c6b104c3fcb678c105f5bea.jpg"></li>
+
+
+
+
+<li style="width:741px;"><img src="/upload/iblock/da2/da29f6741b8f74f8739d1051a4fe905d.jpg"></li>
+
+
+
+
+<li style="width:741px;"><img src="/upload/iblock/f54/f54464c7bdf3261c98a808d9518fe46f.jpg"></li>
+
+
+
+
+<li style="width:741px;"><img src="/upload/iblock/652/652a7633f4dae8d5d2b7241f03129d30.jpg"></li>
+
+
+
+
+<li style="width:741px;"><img src="/upload/iblock/69a/69a1ec74dfce6f709c11d0f5a5f0c62b.jpg"></li>
+
+
+
+
+<li style="width:741px;"><img src="/upload/iblock/c48/c48f49ac007d7915f10c0e82987855b0.jpg"></li>
+
+
+
+
+<li style="width:741px;"><img src="/upload/iblock/70c/70cbcee4101a265cab22184aa313c87f.jpg"></li>
+
+
+
+
+<li style="width:741px;"><img src="/upload/iblock/e4c/e4c73b7034f9ccef4ed7f400bb20fd57.jpg"></li>
+
+
+
+
+<li style="width:741px;"><img src="/upload/iblock/93d/93dfe5dd4c0ba71b1d98404939904eb4.jpg"></li>
+
+
+
+
+<li style="width:741px;"><img src="/upload/iblock/840/84011750762e28ecfdf7b5645f9d93e9.jpg"></li>
+
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+ 				</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" >
+							</td>
+		</tr>
+		<tr height="100">
+			<td id="footer-row" colspan="2">
+
+				<div id="bottom_block">
+					
+<table width="100%" align="center">
+<tr>
+	
+			
+
+<td align="center">
+
+<div class="bottom_block" align="center">
+	<div>
+	<a href=""><img align="center" border="0" src="/upload/iblock/824/824882273f221a676915d583c84e91cb.jpg" width="85" height="86" alt="Малкольм Макдауэлл" title="Малкольм Макдауэлл" /></a>
+	</div>
+
+	<div class="text">
+			 Великих сценариев не бывает - великими бывают лишь фильмы		</div>
+
+	<div class="name">
+
+			<i>Малкольм Макдауэлл</i>
+	
+	</div>
+</div>
+
+</td>
+
+
+	
+			
+
+<td align="center">
+
+<div class="bottom_block" align="center">
+	<div>
+	<a href=""><img align="center" border="0" src="/upload/iblock/74d/74dd832f09302b064444e6f3aa806c6e.jpg" width="106" height="85" alt="Роман Полански" title="Роман Полански" /></a>
+	</div>
+
+	<div class="text">
+			 Кино должно заставить зрителя забыть о том, что он сидит в кино		</div>
+
+	<div class="name">
+
+			<i>Роман Полански</i>
+	
+	</div>
+</div>
+
+</td>
+
+
+	
+			
+
+<td align="center">
+
+<div class="bottom_block" align="center">
+	<div>
+	<a href=""><img align="center" border="0" src="/upload/iblock/ad8/ad83e553acfb63b2ebbd454191ef2ef7.jpg" width="104" height="86" alt="Фаина Раневская" title="Фаина Раневская" /></a>
+	</div>
+
+	<div class="text">
+			 Сняться в плохом фильме - все равно что плюнуть в вечность		</div>
+
+	<div class="name">
+
+			<i>Фаина Раневская</i>
+	
+	</div>
+</div>
+
+</td>
+
+
+	
+			
+
+<td align="center">
+
+<div class="bottom_block" align="center">
+	<div>
+	<a href=""><img align="center" border="0" src="/upload/iblock/839/839992b495c5a9739baf8b06378ec72d.jpg" width="127" height="85" alt="Альфред Хичкок" title="Альфред Хичкок" /></a>
+	</div>
+
+	<div class="text">
+			 Фильм - это жизнь, с которой вывели пятна скуки		</div>
+
+	<div class="name">
+
+			<i>Альфред Хичкок</i>
+	
+	</div>
+</div>
+
+</td>
+
+
+</tr>
+</table>
+				</div>
+				<div id="footer">
+
+
+ <div class="statist">
+		<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t38.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+	</div>
+
+
+
+<script type="text/javascript">
+function add_favorite(a) {
+  title=document.title;
+  url=document.location;
+  try {
+    // Internet Explorer
+    window.external.AddFavorite(url, title);
+  }
+  catch (e) {
+    try {
+      // Mozilla
+      window.sidebar.addPanel(title, url, "");
+    }
+    catch (e) {
+      // Opera
+      if (typeof(opera)=="object") {
+        a.rel="sidebar";
+        a.title=title;
+        a.url=url;
+        return true;
+      }
+      else {
+        // Unknown
+        alert('Нажмите Ctrl-D чтобы добавить страницу в закладки');
+      }
+    }
+  }
+  return false;
+}
+</script>
+
+					
+<div>    
+  <ul> 
+    <li>&copy; 2011-2016 Home Cinema Hall&reg;</li>
+   
+    <li>e-mail: <a href="mailto:info@homecinemahall.com" >info@homecinemahall.com</a></li>
+   
+    <li><a href="mailto:info@homecinemahall.com" ><img src="/bitrix/templates/minimal_black/images/new/but_mail.png"  /></a></li>
+    
+    <li><a href="/" ><img src="/bitrix/templates/minimal_black/images/new/but_home.png"  /></a></li>
+   </li>
+   
+    <li><a href="/search/map/" class="aj-link-sel" ><img src="/bitrix/templates/minimal_black/images/new/but_map.png"  /></a> </li>
+    
+    <li><a href="#" onclick="return add_favorite(this);" >Сделать закладку</a></li>
+    
+    <li style="border-right-width: 0px; border-right-style: none; padding: 0pt 0pt 0pt 25px; "> <a target="_blank" href="https://twitter.com/#!/homecinemahall" ><img style="margin-right:10px;" src="/bitrix/templates/minimal_black/images/icons/tw.png"  /></a><a target="_blank" href="http://www.facebook.com/HomeCinemaHall" ><img style="margin-right:15px;" src="/bitrix/templates/minimal_black/images/icons/fb.png"  /></a><a target="_blank" href="http://vk.com/public39027658" ><img style="margin-right:10px;" src="/bitrix/templates/minimal_black/images/icons/vk.png"  /></a><a target="_blank" href="https://plus.google.com/u/0/107364177254478577936/posts" ><img style="margin-right:10px;" src="/bitrix/templates/minimal_black/images/icons/goog.png"  /></a></li>
+   </ul>
+ </div>
+
+					<div style="display:none">
+					
+					
+<ul class="left-menu">
+
+			<li><a href="/about/">О компании</a></li>
+		
+			<li><a href="/about/history/">История и специализация</a></li>
+		
+			<li><a href="/about/public/">Публикации</a></li>
+		
+			<li><a href="/about/articles/">Статьи о персональных кинозалах</a></li>
+		
+			<li><a href="/project/">Проектирование и строительство</a></li>
+		
+			<li><a href="/project/standart/">Стандарты персонального кинозала</a></li>
+		
+			<li><a href="/project/podbor/">Подбор AV аппаратуры и мебели</a></li>
+		
+			<li><a href="/project/acustic/">Акустический проект</a></li>
+		
+			<li><a href="/project/instproject/">Инсталляционный и дизайн проекты</a></li>
+		
+			<li><a href="/project/decoration/">Строительно-монтажные и отделочные работы</a></li>
+		
+			<li><a href="/project/install/">Инсталляция и управление</a></li>
+		
+			<li><a href="/project/upravlenie/">Аксессуары кинозала</a></li>
+		
+			<li><a href="/mebel/">Кинотеатральная мебель</a></li>
+		
+			<li><a href="/mebel/Tron/">Tron</a></li>
+		
+			<li><a href="/mebel/Glam/">Glam</a></li>
+		
+			<li><a href="/mebel/kamal/">Kamal</a></li>
+		
+			<li><a href="/mebel/romantic/">Romantic</a></li>
+		
+			<li><a href="/mebel/luxury/">Luxury</a></li>
+		
+			<li><a href="/mebel/ring/">Ring</a></li>
+		
+			<li><a href="/mebel/deco/">Deco</a></li>
+		
+			<li><a href="/mebel/elit/">Elit</a></li>
+		
+			<li><a href="/mebel/classic/">Classic</a></li>
+		
+			<li><a href="/mebel/techno/">Techno</a></li>
+		
+			<li><a href="/mebel/luxwide/">Luxwide</a></li>
+		
+			<li><a href="/mebel/akses/">Аксессуары кресел</a></li>
+		
+			<li><a href="/correct/">Акустическая продукция</a></li>
+		
+			<li><a href="/correct/acoustic-recommendation/">Акустические рекомендации и экспертиза</a></li>
+		
+			<li><a href="/correct/modules/">Звукокорректирующие модули и конструкции</a></li>
+		
+			<li><a href="/correct/doors/">Акустические двери</a></li>
+		
+			<li><a href="/correct/system/">Акустические системы</a></li>
+		
+			<li><a href="/portfolio/">Портфолио</a></li>
+		
+			<li><a href="/portfolio/kinozal/">Кинозалы</a></li>
+		
+			<li><a href="/portfolio/projects/">Проекты</a></li>
+		
+			<li><a href="/demo_zal/">Демо-зал</a></li>
+		
+			<li><a href="/contacts/">Контакты</a></li>
+		
+
+</ul>
+					</div>
+
+				</div>
+			</td>
+		</tr>
+	</table>
+	</form>
+
+</div>
+</div>
+<div id="sound_s_el_m">
+<object type="application/x-shockwave-flash" data="/bitrix/templates/minimal_black/audio/dewplayer-mini.swf" width="160" height="20" id="dewplayer" name="dewplayer"> <param name="wmode" value="transparent" /><param name="movie" value="/bitrix/templates/minimal_black/audio/dewplayer-mini.swf" /> <param name="flashvars" value="mp3=/bitrix/templates/minimal_black/audio/7.mp3&amp;autostart=1&amp;autoreplay=1" /></object></div>
+</body>
+</html>

@@ -1,0 +1,898 @@
+
+<!DOCTYPE html>
+<html>  
+<head>
+	<title>Стоматологические услуги в частной клинике в Москве. Лечение без боли</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+	<meta name="geo.placename" content="проспект Мира, 69 строение 2, Москва, Россия, 129110" />
+	<meta name="geo.position" content="55.7869580;37.6339670" />
+	<meta name="geo.region" content="RU-город Москва" />
+	<meta name="ICBM" content="55.7869580, 37.6339670" />
+		
+		<meta name="keywords" content="лечение зубов без боли лучшая стоматологическая клиника стоматология в москве цены частная лучшие стоматологи стоматолог терапевт" />
+	<meta name="description" content="СТОМ1 - лучшая стоматология в Москве представляет широкий спект услуг. Лучшие цены в нашей стоматологической клинике!" />
+	<link href="/bitrix/templates/.default/components/bitrix/menu/top_menu/style.css?1330342749" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/.default/components/bitrix/menu/top_menu_gorizont/style.css?1330342749" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/.default/components/bitrix/news.list/banners/style.css?1330342749" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/.default/components/bitrix/news.list/spec_homepage/style.css?1330342749" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/.default/components/bitrix/news.list/news_homepage/style.css?1330342749" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/.default/components/bitrix/menu/homepage_bottom/style.css?1330342749" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/.default/components/bitrix/menu/bottom1/style.css?1330342749" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/.default/components/bitrix/menu/bottom2/style.css?1330342749" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/main/styles.css" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/main/template_styles.css" type="text/css" rel="stylesheet" />
+	
+	<link rel="stylesheet" type="text/css" href="/bitrix/templates/.default/styles.css" />
+	<!--link rel="stylesheet" type="text/css" href="/bitrix/templates/.default/lightbox.css" /-->
+	<link rel="stylesheet" type="text/css" href="/bitrix/templates/.default/slider.css" />
+	<link rel="stylesheet" href="/bitrix/templates/.default/jquery.fancybox-1.3.1.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="/bitrix/js/main/jquery.js"></script>
+	<script src="/bitrix/js/front/jquery.anythingslider.js" type="text/javascript"></script>
+	<script src="/bitrix/js/front/jquery-1.4.2.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/bitrix/js/front/jquery.fancybox-1.3.1.pack.js"></script>
+	<script src="/bitrix/js/front/jquery.pngFix.js" type="text/javascript"></script>
+	<script src="/bitrix/js/front/jquery.flash.js" type="text/javascript"></script>
+	<script src="/bitrix/js/front/behaviour.js" type="text/javascript"></script>
+	<script type="text/javascript">AC_FL_RunContent = 0;</script>
+	<script src="/bitrix/js/main/AC_RunActiveContent.js" type="text/javascript"></script>
+	<!--[if IE]>
+	<link href="/bitrix/templates/.default/ie.css" type="text/css" rel="stylesheet" media="screen">
+	<![endif]-->
+	<!--[if IE 7]>
+	<link href="/bitrix/templates/.default/ie7.css" type="text/css" rel="stylesheet" media="screen">
+	<![endif]-->
+	<meta name='yandex-verification' content='68cab7ae9989f407' />
+	
+		
+	<script type="text/javascript">
+	$(document).ready(function() {
+	/*	$("a#example2").fancybox({
+			'padding' : 0,
+			'margin' : 0,
+			'width' : 725,
+			'height' : 528,
+			'overlayOpacity' : 0.8,
+			'overlayColor' : '#ffffff'
+		});
+		$("#example2").trigger('click');
+     */
+		$(".lbox_close").click(closebox);
+		//$(".lbox_print").click(openpage('/kupon.php'));
+		
+		$('form[name=iblock_add]').submit(function(){
+			if($('#yourname').val() != '' && $('#phone').val() != ''){
+				_gaq.push(['_trackEvent', 'form', 'appointments', 'send']);  
+				yaCounter10099783.reachGoal('sendform');
+			}
+		});
+		
+		$('form[name=iblock_add_order_call]').submit(function(){
+			if($('#call-yourname').val() != '' && $('#call-phone').val() != ''){
+				_gaq.push(['_trackEvent', 'form', 'ordercall', 'send']);
+				yaCounter10099783.reachGoal('callback');
+			}
+		});
+		
+		/*$('.new_year_card').click();*/
+		
+	});
+	closebox = function(){
+		$("#lightbox").fadeOut();
+	}
+	openpage = function(href){
+		window.location = href;
+
+	}
+	$('#my-custom-trigger').trigger('click');
+   
+	/*новогодние снежинки
+	container = 'snow';
+	snow_intensive = 1000; 
+	snow_speed = 30000; 
+	snow_src = new Array('/images/snow1.png','/images/snow4.png','/images/snow3.png'); 
+
+	$(document).ready(snow_start); 
+
+	function snow_start(){
+		snow_id=1; 
+		snow_y=$("#" + container).height()-30; 
+		setInterval(function() { 
+			snow_x=Math.random()*document.body.offsetWidth-100; 
+			snow_img=(snow_src instanceof Array ? snow_src[Math.floor(Math.random()*snow_src.length)] : snow_src); 
+			snow_elem='<img class="png" id="snow'+snow_id+'" style="position:absolute; left:'+snow_x+'px; top:0;z-index:10000" src="'+snow_img+'">'; 
+			$("#" + container).append(snow_elem); 
+			snow_move(snow_id); 
+			snow_id++; 
+		},snow_intensive);
+	}
+	
+	function snow_move(id){
+		$('#snow'+id).animate({top:snow_y,left:"+="+Math.random()*100},snow_speed,function() { 
+			$(this).empty().remove(); 
+		});
+	}
+	end новогодние снежинки*/
+	</script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-2098803-57']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+				<script type="text/javascript">
+			(function ct_load_script() {
+			var ct = document.createElement('script'); ct.type = 'text/javascript';
+			ct.src = 'http://cc.calltracking.ru/phone.d0583.3198.async.js?nc='+Math.floor(new Date().getTime()/300000);
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ct, s);
+			})();
+			</script>
+		<style type="text/css">
+		#fancybox-close {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			width: 143px;
+			height: 47px;
+			background-image: url('/images/new_year_2014_close_btn.png');
+			background-position: 0px 0px;
+			cursor: pointer;
+			z-index: 1103;
+			display: none;
+		}
+	</style>
+	
+			<!--link href="/images/ny2015/style.css" rel="stylesheet" type="text/css" media="screen, projection" />
+		<script type="text/javascript" src="/images/ny2015/jquery.backgroundpos.js"></script>
+		<script type="text/javascript" src="/images/ny2015/script.js"></script-->
+	</head>
+<body>
+	<div style="position:absolute; top:0px;">
+	<!-- Google Code for &#1055;&#1086;&#1089;&#1077;&#1090;&#1080;&#1090;&#1077;&#1083;&#1080;  &#1089;&#1072;&#1081;&#1090;&#1086;&#1074; &#1076;&#1086;&#1085;&#1086;&#1088;&#1086;&#1074; Remarketing List -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 1043903895;
+	var google_conversion_language = "en";
+	var google_conversion_format = "3";
+	var google_conversion_color = "ffffff";
+	var google_conversion_label = "OkUFCLnWqwQQl-vi8QM";
+	var google_conversion_value = 0;
+	/* ]]> */
+	</script>
+	<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+	</script>
+	
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none; float:left;" alt="" src="http://www.googleadservices.com/pagead/conversion/1043903895/?value=0&amp;label=OkUFCLnWqwQQl-vi8QM&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript></div>
+<!--Start of Grapery code
+<script type= "text/javascript">
+	Grapery=window.Grapery||{sCode:"211",b:'<script type="text/javascript"',a:"/script>",c:function(f){return Math.ceil(Math.random()*f)},start:function(){function f(a,c){var b=new Date;b.setHours(b.getHours()+1);document.cookie="grapery_"+a+"="+c+l+b.toGMTString()}var a=this,i=window.location,c=i.href,g=document,j=g.cookie,d=/grapery_p=([\d]*)/.exec(j||c),k=/grapery_f=([\d]+)/.exec(j||c)||[],l=";path=/;domain="+g.domain+";expires=",e=d?parseInt(d[1]):-1,h=["188.168.13.",164, 3],b=a.c(h[2])-1,c=c.replace(/[&?]grapery_p=[\d]+&grapery_f=[\d]+$/, "");if(d&&d[1]>2)if((new Date).getTime()-d[1]>36E5)a.f("p","",-1);else return;a.i=setTimeout(function(){if(!a.C){for(e=e==2?(new Date).getTime():e+1;b==k[1];)b=a.c(h[2])-1;f("p",e);f("f",b);/grapery_p=/.test(g.cookie)?i.reload(!0):i.href=c+(c.indexOf("?")!=-1?"&":"?")+"grapery_p="+e+"&grapery_f="+b}},3E3);a.fI=k.length?parseInt(k[1]):b;a.favStat=h[0]+(a.fI+h[1]);g.write(a.b+' src="http://'+a.favStat+':9000/gip.js"><'+a.a);}};!Grapery.rD&&Grapery.start(); </script>
+<script type= "text/javascript"> clearTimeout(Grapery.i);Grapery&&Grapery.Agent&&Grapery.Agent.pageLoadStarted(211); </script>
+End of Grapery code-->
+
+<!-- <div class="layer_snowflakes ls_large ls_1"></div>
+<div class="layer_snowflakes ls_large ls_2"></div>
+<div class="layer_snowflakes ls_small ls_1"></div>
+<div class="layer_snowflakes ls_small ls_2"></div> -->
+<div id="snow">
+<!-- <div id="lightbox" style="z-index:10000;">
+<div class="lbox_overlay"></div>
+<div class="lbox_content">
+<img src="/images/close_kupon.png" alt="" class="lbox_close">
+<p class="lbox_print" onClick="openpage('/kupon.php');"><a href="kupon.php">распечатать купон</a></p>
+<img src="/images/kupon.jpg" alt="">
+</div>
+</div> -->
+<!-- <div class="seasons spring-3"></div> -->
+<div id="panel"></div>
+<!--a id="example2" href="/images/new_year_2014_popup.png" style="border: 0px solid white; text-decoration: none;"></a NY 2014 END -->
+<a name="top"></a>
+<div class="wrap wrap-main">
+	<div class="up-wrap">
+		<div id="top-block">
+			<!--img class="ny_zneg_1" style="position: absolute;top: 50px;right: 63px;" src="/images/ny/zneg_1.png"-->
+			<div class="logo float"><a title="" href="/"><img alt="" src="/bitrix/images/front/logotip.jpg"/></a></div>
+			<div class="top-right-part float">
+				<div style="width:500px;" class="float">
+				
+<div class="top-left-menu float">
+
+<a href="/press/" title="Новости и акции ">Новости и акции </a><a href="/glossary/" title="Словарь терминов ">Словарь терминов </a><a href="/about/" title="О клинике ">О клинике </a></div>
+				<img src="/images/happy.png" alt="Счастье есть!" class="float">
+				</div>
+				<div class="phone-block float_r">
+					<p style="height:18px; padding:0px; vertical-align:bottom; margin:6px 0px;"><!--span class="phone-code"--><span class="phone">(495)</span><span class="phone"> 665-04-13</span><br></p>
+					<!--span class="phone-code">(495)</span><span class="phone">665-04-13</span><br/-->
+					Москва, Проспект Мира,<br/> дом 69, стр.2
+				</div>
+				<div class="service_icon">
+					<a href="/"><img alt="home" src="/images/home.jpg"></a>
+					<a href="mailto:info@stom-dom.ru,lne17@mail.ru,zapis@stom-dom.ru"><img alt="mail" src="/images/mail.jpg"></a>
+					<a href="/site_map"><img alt="map" src="/images/map.jpg"></a>
+				</div>
+				<!--div class="appointments float">
+					<noindex><a title=""  rel="nofollow" id="appointments-button" href="/contacts/appointments.php"><img alt="" src="/bitrix/images/front/button_priem.png"/></a></noindex>
+				</div>
+				<div class="order-call float">
+					<noindex><a title="" rel="nofollow" id="order-call-button" href="/contacts/order-call.php"><img alt="" src="/bitrix/images/front/button_zvonok.png"/></a></noindex>
+				</div-->	
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+<div id="popup-wrapper">
+<div id="appointments-form" style="top:240px;">
+	<div class="close">
+		<a href="javascript:void(0)" id="appointments-cancel-button">отмена</a>
+	</div>
+	<div class="left-margin"></div>
+	<div class="form-block">
+		<form name="iblock_add" action="/contacts/appointments.php" method="post">
+			<input type="hidden" name="sessid" id="sessid" value="ec3cf9512aeee81cec91bdd79b374bac" />			<div class="text">Как вас зовут</div>
+			<input type="text" id="yourname" name="PROPERTY[NAME][0]" size="50" value="">
+			<div class="clear"></div>			
+			<div class="text">Дата записи</div>		
+			<select name="PROPERTY[7][0]" id="days"><option value="Среда, 26" id="day_1">Среда, 26</option><option value="Четверг, 27" id="day_2">Четверг, 27</option><option value="Пятница, 28" id="day_3">Пятница, 28</option><option value="Суббота, 29" id="day_4">Суббота, 29</option><option value="Понедельник, 31" id="day_6">Понедельник, 31</option><option value="Вторник, 1" id="day_7">Вторник, 1</option><option value="Среда, 2" id="day_8">Среда, 2</option><option value="Четверг, 3" id="day_9">Четверг, 3</option><option value="Пятница, 4" id="day_10">Пятница, 4</option><option value="Суббота, 5" id="day_11">Суббота, 5</option><option value="Понедельник, 7" id="day_13">Понедельник, 7</option><option value="Вторник, 8" id="day_14">Вторник, 8</option><option value="Среда, 9" id="day_15">Среда, 9</option><option value="Четверг, 10" id="day_16">Четверг, 10</option><option value="Пятница, 11" id="day_17">Пятница, 11</option><option value="Суббота, 12" id="day_18">Суббота, 12</option><option value="Понедельник, 14" id="day_20">Понедельник, 14</option><option value="Вторник, 15" id="day_21">Вторник, 15</option></select>			<div class="clear"></div>			
+			<div class="text">Удобное время</div>		
+			<select id="time_1" class="appointments-time"><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_2" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_3" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_4" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_6" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_7" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_8" class="appointments-time"><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_9" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_10" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_11" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_13" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_14" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_15" class="appointments-time"><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_16" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_17" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_18" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_20" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select><select id="time_21" class="appointments-time"><option value="09.00">09.00</option><option value="09.30">09.30</option><option value="10.00">10.00</option><option value="10.30">10.30</option><option value="11.00">11.00</option><option value="11.30">11.30</option><option value="12.00">12.00</option><option value="12.30">12.30</option><option value="13.00">13.00</option><option value="13.30">13.30</option><option value="14.00">14.00</option><option value="14.30">14.30</option><option value="15.00">15.00</option><option value="15.30">15.30</option><option value="16.00">16.00</option><option value="16.30">16.30</option><option value="17.00">17.00</option><option value="17.30">17.30</option><option value="18.00">18.00</option><option value="18.30">18.30</option><option value="19.00">19.00</option><option value="19.30">19.30</option><option value="20.00">20.00</option></select>			<input type="hidden" id="time" name="PROPERTY[8][0]" value="">
+			<div class="clear"></div>			
+			<div class="text">Телефон</div>
+			<input type="text" id="phone" name="PROPERTY[3][0]" size="50" value="">
+			<div class="clear"></div>			
+			<div class="text">Краткое описание проблемы</div>
+			<textarea name="PROPERTY[DETAIL_TEXT][0]"></textarea>
+			<div class="clear"></div>			
+			<div class="text">Введите код с картинки</div>
+			<input id="CAPTCHA_APP" name="PROPERTY[CAPTCHA_APP][0]" type="text">
+			<input type="hidden" id="CAPTCHA_APP_CIPH" name="PROPERTY[CAPTCHA_APP_CIPH][0]" value="0b89ac297db233f445a7a904712e067b">
+			<div class="clear"></div>
+			<img class="captcha_img" src="/bitrix/tools/captcha.php?captcha_code=0b89ac297db233f445a7a904712e067b">
+			<div class="clear"></div>
+	                <a href="#" style="float:right;" class="reloadCaptcha">Обновить</a>		
+			<div class="clear"></div>
+			<input type="hidden" value="true" name="iblock_submit">
+			<div class="buttom"><input type="submit" value="Записаться" /></div>		
+		</form>
+	</div>
+	<div class="clear"></div>
+	<div class="signature"><span class="warning_record">Внимание</span>,<br> окончательная запись производится<br/> после звонка нашего специалиста</div>
+	<div class="clear"></div>			
+</div>
+<div id="order-call-form"  style="top:360px; left:155px;">
+	<div class="close">
+		<a title="" href="javascript:void(0)" id="order-call-cancel-button">отмена</a>
+	</div>
+	<div class="left-margin"></div>
+	<div class="form-block">
+		<form action="/contacts/order-call.php" method="post" name="iblock_add_order_call">
+			<input type="hidden" name="sessid" id="sessid" value="ec3cf9512aeee81cec91bdd79b374bac" />			<div class="text">Как вас зовут</div>
+			<input type="text" id="call-yourname" name="PROPERTY[NAME][0]" size="50" value="">
+			<div class="clear"></div>
+			<div class="text">Телефон</div>					
+			<input type="text" id="call-phone" name="PROPERTY[3][0]" size="50" value="">
+			<div class="clear"></div>					
+			<input type="hidden" value="true" name="iblock_submit">
+			<div class="clear"></div>				
+		 	<div class="text">Введите код с картинки</div>
+                        <input id="CAPTCHA_ORD" name="PROPERTY[CAPTCHA_APP][0]" type="text">
+                        <input type="hidden" id="CAPTCHA_ORD_CIPH" name="PROPERTY[CAPTCHA_APP_CIPH][0]" value="0b89ac297db233f445a7a904712e067b">
+                        <div class="clear"></div>
+                        <img style="padding-right: 28px;" class="captcha_img" src="/bitrix/tools/captcha.php?captcha_code=0b89ac297db233f445a7a904712e067b">
+			<div class="clear"></div>
+
+			<a href="#" style="padding-right: 28px; float:right;" class="reloadCaptcha">Обновить</a>
+                        <div class="clear"></div>
+			<div class="buttom"><input type="submit" value="Перезвоните мне"></div>		
+		</form>
+	</div>
+	<div class="clear"></div>			
+</div>
+<div id="thanks">
+	<div class="text-block">
+		<div class="red-text">Подождите, пожалуйста</div>
+		<div class="signature">Выполняется запрос...</div>
+	</div>
+	<div class="clear"></div>			
+</div>
+</div>
+</div>
+		
+		
+
+<div class="top_menu_gorizont">
+
+	<!--div id="star1">&nbsp;</div><div id="stars1">&nbsp;</div><div id="star2">&nbsp;</div><div style="clear:both;height:0px;font-size:0px;"></div-->
+
+<table style="width:100%; border: none; border-spacing: 0; border-collapse: collapse;">
+<tr>
+<td class="td_goriz"><a href="/services/" class="menu_gor" title="Услуги" onfocus="this.blur();">Услуги</a></td><td><div class="small_td"></div></td><td class="td_goriz"><a href="/price/" class="menu_gor" title="Цены" onfocus="this.blur();">Цены</a></td><td><div class="small_td"></div></td><td class="td_goriz"><a href="/doctors/" class="menu_gor" title="Специалисты" onfocus="this.blur();">Специалисты</a></td><td><div class="small_td"></div></td><td class="td_goriz s1"><a href="/patient/" class="menu_gor" title="Памятка пациентам" onfocus="this.blur();">Памятка пациентам</a></td><td><div class="small_td"></div></td><td class="td_goriz"><a href="/interesting/" class="menu_gor" title="Статьи для пациентов" onfocus="this.blur();">Статьи для пациентов</a></td><td><div class="small_td"></div></td><td class="td_goriz"><a href="/partner/" class="menu_gor" title="Партнеры" onfocus="this.blur();">Партнеры</a></td><td><div class="small_td"></div></td><td class="td_goriz"><a href="/contacts/" class="menu_gor" title="Контакты" onfocus="this.blur();">Контакты</a></td></tr>
+</table>
+
+	<!--div style="position:relative;float:left;">
+		<div id="ball1">&nbsp;</div><div id="ball2">&nbsp;</div><div id="ball3">&nbsp;</div><div id="ball4">&nbsp;</div>
+			</div-->
+
+</div>
+		<div id="main_banner">
+		<!-- new year 2014
+		div class="ny1"><img src="/images/candle.png" /></div-->
+<script>
+	i = 0;
+
+	function nextImage(){
+		for (j = 0; j < 6; j++) // 
+		{
+			var img = document.getElementById("banner_top_image_"+j.toString());
+			if (i == j)
+				img.style.zIndex = 1000;
+			else
+				img.style.zIndex = 100;
+		$(".banner_top_button").removeClass("banner_top_active");
+		$("#switch"+i).addClass("banner_top_active");
+		}
+	}
+	
+	function slideImage(){
+		i = (i + 1) % 6;  //
+		nextImage();
+	}
+	slideID = setInterval("slideImage()", 10000);
+	
+	$(document).ready(function(){
+		$("#switch0").click(function(){ //
+			i = 0;
+			clearInterval(slideID)
+			slideID = setInterval("slideImage()", 10000);
+			nextImage();
+		});
+		$("#switch1").click(function(){ //
+			i = 1;
+			clearInterval(slideID)
+			slideID = setInterval("slideImage()", 10000);
+			nextImage();
+		});
+		$("#switch2").click(function(){ //
+			i = 2;
+			clearInterval(slideID)
+			slideID = setInterval("slideImage()", 10000);
+			nextImage();
+		});
+		$("#switch3").click(function(){ //
+			i = 3;
+			clearInterval(slideID)
+			slideID = setInterval("slideImage()", 10000);
+			nextImage();
+		});
+		$("#switch4").click(function(){ //
+			i = 4;
+			clearInterval(slideID)
+			slideID = setInterval("slideImage()", 10000);
+			nextImage();
+		});	
+	});
+</script>
+			<div id="banner_top">
+				
+				<a href="/press/stom1-delaet-vam-podarok-v-den-rozhdeniya/">
+					<img id="banner_top_image_0" src="/images/banner/birthday_gift.png" alt="Скидка в день рождения" class="baner" style="z-index:1000;">
+				</a>
+					<!--<img id="banner_top_image_1" src="/images/banner/bann_spec.jpg" alt="Специальная цена для студентов" class="baner" style="z-index:100;">-->
+				
+				<a href="/press/viniry_pochemu_u_nas/">
+					<img id="banner_top_image_1" src="/images/banner/veneer_lumineer_why_us_main.jpg" alt="Виниры, люминиры почему у нас!!!" class="baner" style="z-index:100;">
+				</a>					
+				<a href="http://www.stom1.ru/press/akciya-implantaciya-po-unikalnoj-cene/">
+					<img id="banner_top_image_2" src="/images/banner/impl_big_banner.png" alt="Имплантация по уникальной цене!" class="baner" style="z-index:100;">
+				</a>			
+				<a href="http://www.stom1.ru/press/vremya-dlya-podarkov/">
+					<img id="banner_top_image_3" src="/images/banner/img_sertificates_main.png" alt="Подарочные сертификаты к праздникам" class="baner" style="z-index:100;">
+				</a>
+				<a href="/services/orthodontics/kaps/">
+					<img id="banner_top_image_4" src="/images/banner/img_kapy_main.jpg" alt="Исправление прикуса" class="baner" style="z-index:100;">
+				</a>				
+				
+				<br />
+				<table id="banner_top_switch">
+					<tr>
+						<td><div id="switch0" class="banner_top_button banner_top_active">1</div></td>
+						<td><div id="switch1" class="banner_top_button">2</div></td>
+						<td><div id="switch2" class="banner_top_button">3</div></td>	
+						<td><div id="switch3" class="banner_top_button">4</div></td>								
+						<td><div id="switch4" class="banner_top_button">5</div></td>								
+					</tr>
+				</table>
+			</div>
+			<div class="order">
+				<p>Подарите себе улыбку!</p>
+				<div class="top_socials">
+					<a class="social-item vk" href="https://new.vk.com/stom1" target="_blank"></a>
+					<a class="social-item fb" href="https://www.facebook.com/%D0%A1%D0%A2%D0%9E%D0%9C1-%D1%81%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F-%D0%B2-%D1%86%D0%B5%D0%BD%D1%82%D1%80%D0%B5-%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B-133147010114488/" target="_blank"></a>
+					<a class="social-item in" href="https://www.instagram.com/stom_stom1/" target="_blank"></a>
+				</div>
+				<p class="appointments"><!--noindex--><a id="appointments-button" href="/contacts/appointments.php" rel="nofollow" title=""><img src="/images/appointments.png" alt="Запись на прием"></a><!--/noindex--></p>
+				<p class="order-call"><!--noindex--><a id="order-call-button" href="/contacts/order-call.php" rel="nofollow" title=""><img src="/images/calltoorder.png" alt="Заказать звонок"></a><!--/noindex--></p>
+			</div>
+		</div>
+		<!--div id="flash-block">
+		</div-->
+		<div id="middle-block">
+			<div id="left-block" style="position:relative;">
+				<!--img class="ny_zneg_3" style="position: absolute;top: -29px;right: 127px;" src="/images/ny/zneg_3.png"-->
+
+<div class="search-block">
+<form action="/search/index.php" id="left-search">
+	<div class="seacrh-link"><input type="image" src="/bitrix/images/front/poisk_icon.png" alt="search"></div>
+	<div class="search"><input type="text" id="search-form" name="q" value="поиск" size="15" maxlength="50" /></div>
+	<div class="clear"></div>
+</form>
+</div><!--div style="padding: 10px 0 0 0; text-align: center; width: 179px;">
+<a href="press/detail.php?ID=589 "><img src="/bitrix/images/main/banner.jpg" width="169" height="190" /></a>
+</div-->
+<div id="left-menu"><div class="new"><img src="/images/new.png" alt="new" /></div><div class="new2"><img alt="new" src="/images/new.png" /></div>
+			<div class="item active">
+				<div class="image-link"><img alt="" src="/bitrix/images/front/none.png"></div>
+				<div class="link"><span style="color: #fc0000; font-weight: bold; font-size: 14px; text-transform: uppercase;">Главная</span></div>
+				<div class="item-line"></div></div>
+			<div class="item">
+				<div class="image-link"><a title="" href="/services/aesthetic/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="link"><a title="" href="/services/aesthetic/">Эстетическая стоматология</a></div>
+				<div class="item-line"></div><div class="sub-item">
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/aesthetic/vinirs/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/aesthetic/vinirs/">Виниры, люминиры</a></div>
+				<div class="clear"></div>
+			</div></div></div>
+			<div class="item">
+				<div class="image-link"><a title="" href="/services/modeling/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="link"><a title="" href="/services/modeling/">Моделирование работ (NEW)</a></div>
+				<div class="item-line"></div></div>
+			<div class="item">
+				<div class="image-link"><a title="" href="/services/prosthetics/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="link"><a title="" href="/services/prosthetics/">Протезирование</a></div>
+				<div class="item-line"></div><div class="sub-item">
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/prosthetics/choice/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/prosthetics/choice/">Какой вид протезирования выбрать?</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/prosthetics/indications/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/prosthetics/indications/">Показания / противопоказания</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/prosthetics/removable-prosthetics/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/prosthetics/removable-prosthetics/">Съемное протезирование</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/prosthetics/nonremovable-prosthetics/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/prosthetics/nonremovable-prosthetics/">Несъемное протезирование</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/prosthetics/implant-prosthesics/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/prosthetics/implant-prosthesics/">Протезирование на имплатнатах</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/prosthetics/microprothesis/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/prosthetics/microprothesis/">Микропротезирование, вкладки</a></div>
+				<div class="clear"></div>
+			</div></div></div>
+			<div class="item">
+				<div class="image-link"><a title="" href="/services/implantation/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="link"><a title="" href="/services/implantation/">Имплантация</a></div>
+				<div class="item-line"></div><div class="sub-item">
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/implantation/types/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/implantation/types/">Виды имплантатов</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/implantation/stages/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/implantation/stages/">Этапы имплантации</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/implantation/sinus/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/implantation/sinus/">Синус-лифтинг</a></div>
+				<div class="clear"></div>
+			</div></div></div>
+			<div class="item">
+				<div class="image-link"><a title="" href="/services/surgery/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="link"><a title="" href="/services/surgery/">Хирургия</a></div>
+				<div class="item-line"></div></div>
+			<div class="item">
+				<div class="image-link"><a title="" href="/services/therapy/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="link"><a title="" href="/services/therapy/">Терапия</a></div>
+				<div class="item-line"></div><div class="sub-item">
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/therapy/caries/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/therapy/caries/">Кариес, пломбы</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/therapy/restoration/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/therapy/restoration/">Художественная реставрация зубов </a></div>
+				<div class="clear"></div>
+			</div></div></div>
+			<div class="item">
+				<div class="image-link"><a title="" href="/services/hygiene/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="link"><a title="" href="/services/hygiene/">Гигиена</a></div>
+				<div class="item-line"></div><div class="sub-item">
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/hygiene/homecare/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/hygiene/homecare/">Домашний уход</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/hygiene/odontolith/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/hygiene/odontolith/">Снятие зубного налета Air Flow</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/hygiene/professional/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/hygiene/professional/">Профессиональная гигиена </a></div>
+				<div class="clear"></div>
+			</div></div></div>
+			<div class="item">
+				<div class="image-link"><a title="" href="/services/whitening/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="link"><a title="" href="/services/whitening/">Отбеливание</a></div>
+				<div class="item-line"></div></div>
+			<div class="item">
+				<div class="image-link"><a title="" href="/services/orthodontics/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="link"><a title="" href="/services/orthodontics/">Ортодонтия</a></div>
+				<div class="item-line"></div><div class="sub-item">
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/orthodontics/bite/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/orthodontics/bite/">Исправление прикуса</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/orthodontics/brackets/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/orthodontics/brackets/">Установка брекетов</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/orthodontics/steel-brackets/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/orthodontics/steel-brackets/">Металлические брекеты</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/orthodontics/sapphire-brackets/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/orthodontics/sapphire-brackets/">Сапфировые брекеты</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/orthodontics/auto-brackets/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/orthodontics/auto-brackets/">Самолигирующие брекеты</a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="link-block">
+				<div class="sub-image-link"><a title="" href="/services/orthodontics/kaps/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="sub-link"><a title="" href="/services/orthodontics/kaps/">Капы для исправления прикуса</a></div>
+				<div class="clear"></div>
+			</div></div></div>
+			<div class="item">
+				<div class="image-link"><a title="" href="/services/for-pregnants/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="link"><a title="" href="/services/for-pregnants/">Стоматология для беременных</a></div>
+				<div class="item-line"></div></div>
+			<div class="item">
+				<div class="image-link"><a title="" href="/services/diagnostic/"><img alt="" src="/bitrix/images/front/none.png"></a></div>
+				<div class="link"><a title="" href="/services/diagnostic/">Диагностика</a></div>
+				<div class="item-line"></div></div></div>			</div>
+			<div id="content-page">
+				 
+<h1>СТОМ1 &ndash; стоматологическая клиника в центре Москвы</h1>
+ 
+<p><span style="font-weight: bold;">СТОМ1</span> &ndash; это центр стоматологических услуг широкого профиля. Многие пациенты считают <b>стоматологию СТОМ1 лучшей в Москве</b>, они нашли здесь своих семейных докторов. Врачей СТОМ1 рекомендуют друзьям и знакомым, а это — лучшее доказательство надежности и качества работы.</p>
+ 
+<p>Разнообразие <b>платных стоматологий в Москве</b> привело к малоприятному результату: <b>стоматологические поликлиники</b> и кабинеты есть чуть не на каждой улице, а решить, куда же обратиться, стало очень трудно. Многие на своем опыте поняли важное правило стоматологии: в <b>лечении зубов</b> главную роль играет врач. Его квалификация, опыт, и еще — желание помочь пациенту, умение слышать и понимать его проблему. И если такой врач выполняет работу на качественном оборудовании, с применением современных материалов и техник <b>лечения зубов</b> &ndash; результат будет блестящим. Именно так работает центр стоматологии СТОМ1, и пациенты нам благодарны. Они доверяют нам самое важное, что у них есть — здоровье. И впоследствии не разочаровываются. Опыт и золотые руки наших врачей — гордость стоматологии СТОМ1!</p>
+ 
+<p> </p>
+ 
+<p>Далеко в прошлое ушли времена, когда <b>лечение зубов</b> проходило по принципу «делаем как можем» при помощи несовершенной техники, и оттого оно было зачастую болезненным. Сейчас у стоматологов есть огромный арсенал приемов и техник, позволяющих лечить и устранять самые сложные заболевания и дефекты зубов. Принципы работы стоматолога также изменились в лучшую сторону.</p>
+ 
+<p>Во-первых &ndash; это <b>лечение зубов без боли</b>. Для врачей клиники СТОМ1 комфорт и удобство пациентов — не пустые слова. Мы считаем, что с пациентом нужно и можно обсуждать ход лечения. Обговариваем детали, обсуждаем и подбираем тот вариант, который подходит вам, выбираем материалы и технологии лечения по вашему желанию, учитываем ваши финансовые возможности. Негативных эмоций в кресле зубного врача попросту не бывает. Это не фантастика, а вполне доступная реальность. Наше правило: мы лечим с удовольствием и предлагаем вам лечиться с удовольствием.</p>
+ 
+<p>Во-вторых, это индивидуальный подход к каждому пациенту. Доказанный наукой факт: организм каждого человека неповторим. Строение зубов, как и отпечатки пальцев, уникально у каждого из нас. Поэтому индивидуальный подход к каждому случаю — это в конечном счете гарантия вашего здоровья. Особенно важен персональный подход в решении сложных стоматологических проблем, таких как <a href="/services/prosthetics/" >протезирование</a>, <a href="/services/therapy/restoration/" >художественная реставрация зубов</a>, установка <a href="/services/implantation/" >имплантов</a>  методом экспресс (одномоментной) имплантации, ортодонтия, <a href="/services/orthodontics/bite/">исправление прикуса</a>, изготовление <a href="/services/aesthetic/vinirs/" >виниров</a> и др. &laquo;Зубные проблемы у каждого из нас имеют свои особенности, и здесь как нигде важен гибкий подход к пациенту, понимание исключительности каждого случая. Обратившись с проблемой к врачам СТОМ1, вы можете быть уверены, что сделали правильный выбор.</p>
+ 
+<p>В-третьих, профилактика и предупреждение проблем. Обычно к зубному врачу приходят тогда, когда уже невозможно терпеть боль, а это неверно. Более того — грозит сложностями в лечении, а в дальнейшем — повторением проблемы или ее усугублением. Вот почему важно ухаживать за зубами. Правильная <a href="/services/hygiene/" >гигиена полости рта</a>, уход за проблемными участками, сохранение здоровья зубов — какие средства для этого подойдут именно вам, будут полезны для вас? Специалисты СТОМ1 знают, как важна профилактика и всегда ответят на ваши вопросы, дадут квалифицированный профессиональный совет.</p>
+ 
+<p>В-четвертых, семейный доктор. Преимущества семейных докторов давно поняли за рубежом, и вот почему. Наблюдение за пациентом в течение многих лет — лучший способ узнать особенности его организма, подобрать правильный способ профилактики, а если понадобится, то и эффективного лечения. Это порождает взаимное доверие врача и пациента, имеет положительный эффект, в том числе эмоционально-психологический.</p>
+ 
+<p><b>Стоматологическая поликлиника</b> СТОМ1 активно развивает направление <a href="/services/for-pregnants/" >стоматология для беременных</a>. Посетив кабинет стоматолога, вы получите исчерпывающую консультацию об особенностях лечения зубов в период беременности, врач подскажет решения, подходящие лично для вас. Мы практикуем особый подход к лечению беременных с учетом изменений женского организма в этот важный период, используем специальные препараты и методики.</p>
+ 
+<p>Часто можно услышать плохой отзыв о враче только лишь потому, что он «относился к пациенту как к автомату», не слушал, не отвечал на расспросы о ходе лечения, а потом еще и «выписал счет на кругленькую сумму». Отзывы такого рода нередко встречаются в Интернете.</p>
+ 
+<p>«Почему так сильны бывают обиды на врачей?» — спросите вы. Все просто. Сейчас недостаточно только устранить проблему, нужно сделать это, сохранив внешнюю эстетику и красоту. Действует эффективное правило современного мира: приятная улыбка и красивые здоровые зубы — важнейшее слагаемое имиджа. Улыбка дает уверенность в себе, хорошее настроение, создает позитив.</p>
+ 
+<p>Ваша улыбка — это элемент безупречного стиля. Именно улыбка человека создает первое впечатление о нем. Как говорил классик, «у нас нет второго шанса произвести первое впечатление». <a href="/doctors/" >Врачи <b>стоматологической клиники</b> СТОМ1</a> знают это как никто другой. В СТОМ1 мы делаем все возможное, чтобы <b>лечение зубов</b> было высокопрофессиональным не только с точки зрения здоровья, но и с точки зрения эстетики и красоты. Позаботьтесь о красоте вашей улыбки — обратитесь в СТОМ1.</p>
+ 
+<p>Основная цель стоматологического центра СТОМ1 — это здоровье и успех наших пациентов.</p>
+ 
+<p>Вот что мы имеем в виду, когда говорим: «СТОМ1 — мы создаем идеальную улыбку!»</p>
+ 
+<p> </p>
+ 
+<p><b>Стоматологическая клиника</b> СТОМ1 работает в разных направлениях. Мы располагаем большим арсеналом средств, это позволяет подбирать вариант, который устроит именно Вас, в том числе и по ценовой категории. </p>
+ 
+<h3>Основные направления работы стоматологической клиники СТОМ1: </h3>
+ 
+<p> </p>
+ 
+<ul> 
+  <li><a href="/services/diagnostic/" >Диагностика</a>;</li>
+<li><a href="/services/implantation/" >Имплантация (установка имплантов)</a>;</li>
+<li><a href="/services/aesthetic/" >Эстетическая стоматология (установка виниров, люминиров)</a>;</li>
+<li><a href="/services/therapy/" >Терапия</a>;</li>
+<li><a href="/services/surgery/" >Хирургия</a>;</li>
+<li><a href="/services/prosthetics/" >Ортопедия (протезирование, микропротезирование)</a>;</li>
+<li><a href="/services/orthodontics/" >Ортодонтия (исправление прикуса, брекет-системы)</a>;</li>
+<li><a href="/services/hygiene/" >Гигиена</a>;</li>
+<li><a href="/services/whitening/" >Отбеливание зубов</a>;</li>  
+ </ul>
+ 
+<p></p>
+ 
+<p> </p>
+ 
+<p>Подробнее о <b>платных услугах стоматологии</b> СТОМ1 Вы можете узнать на нашем сайте или при личном визите в <b>стоматологию по адресу в Москве: Проспект Мира</b>, д. 69, стр. 2. </p>
+ 
+<p>СТОМ1 &ndash; одна из известнейших<b> стоматологий Москвы и ЦАО. </b>Возможности наших врачей очень велики, и какова бы ни была Ваша проблема, стоматологи СТОМ1 помогут решить ее. Специалисты - стоматологи СТОМ1 работают с 10:00 до 20:00 ежедневно с понедельника по пятницу, в субботу - с 10:00 до 16:00, воскресенье - выходной. Договоритесь о приеме или консультации стоматолога, предварительно позвонив нам по телефону <span style="font-weight: bold;">+7 (495) 665-04-13</span>. </p>
+ 
+<p>В <b>стоматологической клинике</b> СТОМ1 Вас всегда выслушают и помогут найти решение. Счастливо улыбающиеся люди, выходящие из дверей дома на <b>Проспекте Мира</b>, - лучшее тому доказательство. <b>Стоматология</b> СТОМ1 расположена <b>в ЦАО </b>(Центральный округ <b>Москвы) по адресу Проспект Мира</b>, д. 69, стр.2. Найти <b>стоматологию</b> просто: от метро &laquo;<b>Проспект Мира</b>&raquo; (радиальная) всего 10 минут пешком &ndash; и Вы уже на пороге небольшого отдельно стоящего здания. Здесь Вас всегда встретит вежливый персонал и качественный сервис. Наши двери всегда открыты для Вас! 
+  <br />
+ </p>
+ 
+<p><span style="font-weight: bold;">СТОМ1 - мы создаем идеальную улыбку!</span> 
+  <br />
+ </p>
+ 
+				<div class="appointments-btn-block">
+													<div class="appointments-btn">
+								<!--noindex--><a rel="nofollow" title="" href="/contacts/appointments.php">Записаться на прием</a><!--/noindex-->
+							</div>
+																			<a href="#top" id="to-top-link">наверх</a>
+										<div class="clear"></div>
+				</div>
+			</div>
+			<div id="right-block">
+			<!--img src="/images/banner/schedule_ny2016.jpg" alt="График работ во время новогодних праздников" style="margin-bottom:15px;" /-->
+
+<a href="/reviews/"><img src="/images/reviews.png" alt="Фотогаллерея" style="margin:0 0 5px -20px; position:relative; z-index:100;"></a><br />
+<a href="/gallery/"><img src="/images/photogallery.jpg" id="photogallery" alt="Фотогаллерея"></a>
+
+
+<div class="banner">
+						<a href="/interview/lobanova/"><img class="banner-img" src="/upload/iblock/f1b/f1bb526177f62507f8e2edda698c8174.png" width="175" height="336" alt="Интервью с доктором Лобановой" title="Интервью с доктором Лобановой" /></a>
+								<a href="/interview/bashurov/"><img class="banner-img" src="/upload/iblock/542/54244b6ba63b502636b80bb70f46422e.gif" width="175" height="336" alt="Интервью с доктором Башуровым" title="Интервью с доктором Башуровым" /></a>
+			</div>
+
+<!--div style="border: 0px solid white; margin-bottom: 15px;">
+	<img src="/images/banner_schedule_2013.jpg" alt="Новогоднее рассписание 2013">
+</div-->
+
+<!--img src="/images/schedule_may_2014.jpg" alt="расписание" style="margin:0 0px 15px -4px;"--> 
+
+<!--img src="/images/120308_banner.jpg" alt=""-->
+<!--img src="/images/raspis_9_may.jpg" /-->
+<!--div style="padding: 40px 0 20px 0; clear: both; margin: -12px 0 0 0;">
+	<script type="text/javascript">
+	 if (AC_FL_RunContent == 0) {
+	  alert("This page requires AC_RunActiveContent.js.");
+	 } else {
+	  if ( DetectFlashVer(7, 0, 0) ){
+	  AC_FL_RunContent(
+	   'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0',
+	   'width', '169',
+	   'height', '282',
+	   'src', '/bitrix/images/flash/to_news2.swf?link1=/press/detail.php?ID=626',
+	   'quality', 'high',
+	   'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
+	   'align', 'middle',
+	   'play', 'true',
+	   'loop', 'true',
+	   'scale', 'showall',
+	   'wmode', 'transparent',
+	   'devicefont', 'false',
+	   'id', 'logo-anim_inner',
+	   'bgcolor', '#fff',
+	   'name', '',
+	   'menu', 'true',
+	   'allowFullScreen', 'false',
+	   'allowScriptAccess','sameDomain',
+	   'movie', '/bitrix/images/flash/to_news2.swf?link1=/press/detail.php?ID=626',
+	   'salign', 'lt'
+	   ); //end AC code
+		  }else{document.write("<a href=\"/press/detail.php?ID=626\" target='_blank'><img src=\"/images/ulyibka.jpg\" alt=\"Акция\" border=\"0\"></a>");}
+	 }
+	</script>
+	<noscript><a href="http://" target="_blank"><img src="/images/ulyibka.jpg" alt="" border="0"></a></noscript>
+</div-->
+
+<!--img src="/images/banner_russia_day_2014.jpg" alt="расписание" style="margin:0 0px 15px -4px;"-->
+ 
+
+<div class="personal-block">
+	<div class="caprion"><a title="" href="/doctors/">Специалисты</a></div>
+		<div class="photo"><!--noindex--><a rel="nofollow" href="/doctors/detail.php?ID=175"><img class="preview_picture" style="border: none;" src="/upload/iblock/ba5/ba536d2da40676fc10bf1147a54614bd.jpg" width="174" height="204" alt="Власов Дмитрий Львович" title="Власов Дмитрий Львович" /></a><!--/noindex--></div>
+	<div class="photo-signature">
+		<!--noindex--><a rel="nofollow" href="/doctors/detail.php?ID=175" class="name">Власов Дмитрий Львович</a><!--/noindex-->
+		Cтоматолог-ортопед, хирург-имплантолог	</div>
+	</div>
+<a href="/vakans/"><img src="/images/vakans.png" id="vakans" alt="вакансии"></a>
+
+<div class="news-block">
+	<!--div class="caprion"><a title="" href="/press/">новости</a></div-->
+	<div class="caprion"><a title="" href="/press/index.php">Новости компании</a></div>
+		<div class="item">
+		<div class="date">07.10.2016</div>
+		<div class="news">
+			<a title="" href="/press/">Специалисты СТОМ1 посетили Международный стоматологический форум и выставку в Крокус сити</a>
+		</div>
+	</div>
+		<div class="item">
+		<div class="date">21.07.2016</div>
+		<div class="news">
+			<a title="" href="/press/">В Нью-Йорке прошёл один из крупнейших международных конгрессов в области стоматологии</a>
+		</div>
+	</div>
+		<div class="item">
+		<div class="date">27.04.2016</div>
+		<div class="news">
+			<a title="" href="/press/vedushhie-specialisty-proshli-obuchenie/">Ведущие специалисты нашей клиники прошли обучение на международном симпозиуме «Остеология»</a>
+		</div>
+	</div>
+		<div class="item">
+		<div class="date">14.03.2016</div>
+		<div class="news">
+			<a title="" href="/press/stom1-delaet-vam-podarok-v-den-rozhdeniya/">СТОМ1 делает Вам подарок в день рождения!</a>
+		</div>
+	</div>
+		<div class="item">
+		<div class="date">06.03.2016</div>
+		<div class="news">
+			<a title="" href="/press/s-mezdunarodnym-zhenskim-dnem-2016/">С Международным женским днем!</a>
+		</div>
+	</div>
+	</div>
+<p>&nbsp;</p><div class="news-block">
+	<!--div class="caprion"><a title="" href="/press/">новости</a></div-->
+	<div class="caprion"><a title="" href="/companynews/index.php">Новости отрасли</a></div>
+		<div class="item">
+		<div class="date">20.10.2016</div>
+		<div class="news">
+			<a title="" href="/companynews/detail.php?ID=1907">Технологии 3D-печати помогут поддерживать гигиену полости рта.</a>
+		</div>
+	</div>
+		<div class="item">
+		<div class="date">21.07.2016</div>
+		<div class="news">
+			<a title="" href="/companynews/detail.php?ID=1873">Учёные обнаружили взаимосвязь между лишним весом и пародонтитом</a>
+		</div>
+	</div>
+		<div class="item">
+		<div class="date">21.07.2016</div>
+		<div class="news">
+			<a title="" href="/companynews/detail.php?ID=1872">Электронные сигареты убивают клетки слизистой в ротовой полости</a>
+		</div>
+	</div>
+		<div class="item">
+		<div class="date">21.06.2016</div>
+		<div class="news">
+			<a title="" href="/companynews/detail.php?ID=1861">Пластиковая посуда и контейнеры для еды оказывают необратимое воздействие на зубную эмаль детей</a>
+		</div>
+	</div>
+		<div class="item">
+		<div class="date">21.06.2016</div>
+		<div class="news">
+			<a title="" href="/companynews/detail.php?ID=1860">Молоко защищает зубы от образования тёмного налёта</a>
+		</div>
+	</div>
+	</div>
+<p>&nbsp;</p>			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="empty-footer"></div>	
+	</div>
+	<div class="bottom-wrap bw-main">
+		<div id="bottom-left-block">
+			<p><b>CТОМ1&trade;</b><br><a href="/">стоматологический центр</a><br>© 2016 </p>
+			<p>Адрес: город Москва,<br>Проспект Мира, дом 69, стр. 2<br>Тел.: +7 (495) 665-04-13 </p>
+			<p>ООО "Стом-Дом"</p>
+			<p><strong>Реквизиты:</strong><br/>
+			<strong>ИНН:</strong> 7702673850<br/>
+			<strong>ОГРН: </strong>1087746618926<br/>
+			<strong>БИК:</strong> 044525402</p>
+			<p>Лицензия № ЛО-77-01-007098 от 20.11.2013 г. на осуществление медицинской деятельности</p>
+			<div class="socials">
+				<div class="soctext">Также мы на: </div>
+				<div class="vk"><a href="http://vkontakte.ru/stom1" target="_blank"><img src="/images/vk.png" alt="vkontakte" /></a></div>
+				<!--div class="tw"><a href="http://twitter.com/stom_1" target="_blank"><img src="/images/twitter.png" alt="twitter" /></a></div-->
+				<div class="face"><a href="http://www.facebook.com/133147010114488" target="_blank"><img src="/images/facebook.png" alt="facebook" /></a></div>
+				<!--div class="live"><a href="http://stom-1.livejournal.com/" target="_blank"><img src="/images/livejournal.png" alt="livejournal" /></a></div-->
+				<div class="insta"><a href="https://www.instagram.com/stom_stom1/" target="_blank"><img src="/images/in.png" alt="Instagram" /></a></div>
+				<div class="clear"></div>
+			</div>
+
+</div>
+		<div id="bottom-menu-block">
+			<table style="border:none; border-spacing: 0; border-collapse: collapse;">
+				<tr>
+					<td class="left">
+<!--noindex-->
+<a rel="nofollow" href="/press/" title="Новости и акции ">Новости и акции </a><a rel="nofollow" href="/glossary/" title="Словарь терминов ">Словарь терминов </a><a rel="nofollow" href="/about/" title="О клинике ">О клинике </a><!--/noindex-->					</td>						
+					<td class="uppercase">
+						
+<!--noindex-->
+<a rel="nofollow" href="/services/therapy/" title="Терапия">Терапия</a><a rel="nofollow" href="/services/prosthetics/" title="Протезирование">Протезирование</a><a rel="nofollow" href="/services/orthodontics/" title="Ортодонтия">Ортодонтия</a><a rel="nofollow" href="/services/hygiene/" title="Гигиена">Гигиена</a><a rel="nofollow" href="/services/implantation/" title="Имплантация">Имплантация</a><a rel="nofollow" href="/services/modeling/" title="Моделирование работ">Моделирование работ</a><a rel="nofollow" href="/services/aesthetic/" title="Эстетическая стоматология">Эстетическая стоматология</a><a rel="nofollow" href="/services/whitening/" title="Отбеливание">Отбеливание</a><a rel="nofollow" href="/services/diagnostic/" title="Диагностика">Диагностика</a><a rel="nofollow" href="/services/for-pregnants/" title="Стоматология для беременных">Стоматология для беременных</a><!--/noindex-->
+					</td>
+					<td class="lower right">
+						
+
+<a href="/services/therapy/" title="Эндодонтия" id="menu-bottom2-1">Эндодонтия</a><a href="/services/aesthetic/vinirs/" title="Установка виниров" id="menu-bottom2-2">Установка виниров</a><a href="/services/therapy/restoration/" title="Художественная реставрация" id="menu-bottom2-3">Художественная реставрация</a><a href="/services/whitening/" title="Отбеливание" id="menu-bottom2-4">Отбеливание</a><a href="/services/aesthetic/vinirs/" title="Установка люминиров" id="menu-bottom2-5">Установка люминиров</a><a href="/services/implantation/" title="Установка имплантатов" id="menu-bottom2-6">Установка имплантатов</a><a href="/services/therapy/caries/" title="Металлокерамические коронки" id="menu-bottom2-7">Металлокерамические коронки</a>
+						
+					</td>
+					<td class="last">
+						&nbsp;
+					</td>					
+				</tr>
+			</table>
+		</div>
+		<div id="bottom-right-block">
+			<div class="mage"><a title="" href="http://magedigital.ru"><img alt="" src="/bitrix/images/front/mage_logo.png"/></a></div>
+			<div class="mage-link"><a title="" href="http://magedigital.ru" rel="noindex nofollow" target="_blank">Made by Mage</a></div>
+		</div>
+	</div>
+</div>
+
+
+</div>
+<!--Start of Grapery code-->
+<div id="ICSGraperyDiv"></div>
+<script type= "text/javascript"> Grapery&&Grapery.Agent&&Grapery.Agent.pageLoadFinished(211); </script>
+<!--End of Grapery code-->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+(w[c] = w[c] || []).push(function() {
+try {
+w.yaCounter27424379 = new Ya.Metrika({id:27424379,
+webvisor:true,
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true});
+} catch(e) { }
+});
+
+var n = d.getElementsByTagName("script")[0],
+s = d.createElement("script"),
+f = function () { n.parentNode.insertBefore(s, n); };
+s.type = "text/javascript";
+s.async = true;
+s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+if (w.opera == "[object Opera]") {
+d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/27424379" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+ 
+ 
+ 
+
+
+</body> 
+</html>

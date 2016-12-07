@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" dir="ltr">
+<head>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <title>Мебельная фабрика ПанДиван - Производство мягкой мебели – это то, что делает нас профессионалами</title>
+  <base href="http://pandivan.msk.ru/" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="производство мягкой мебели " />
+  <meta name="description" content="Производство мягкой мебели – процесс нудный, сложный, требующий постоянного контроля на каждом этапе. Но нам нравится этим заниматься " />
+  <link href="/templates/pdivan/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+  <link rel="stylesheet" href="http://pandivan.msk.ru/templates/pdivan/css/template.css" type="text/css" />
+
+  <script type="text/javascript">
+jQuery(document).ready(function() {
+
+//Sort Ascending by title
+  jQuery('.juimage').first().addClass('firstimage');
+
+  jQuery("#asc_btn").click(function(){
+
+
+      jQuery("#catalogsort").jSort({
+          sort_by: 'div.catalog-item-pricesort',
+          is_num: true,
+          item: 'div.items-row',
+          order: 'asc'
+      });
+      jQuery('.sorting_price li').removeClass('active');
+      jQuery('.items-row').css({ 'opacity' : 0 }).fadeTo("slow",1);
+        jQuery(this).addClass('active');
+
+  });
+
+  //Sort Descending by title
+  jQuery("#desc_btn").click(function(){
+
+      jQuery("#catalogsort").jSort({
+          sort_by: 'div.catalog-item-pricesort',
+          is_num: true,
+          item: 'div.items-row',
+          order: 'desc'
+      });
+      jQuery('.sorting_price li').removeClass('active');
+      jQuery('.items-row').css({ 'opacity' : 0 }).fadeTo("slow",1); 
+        jQuery(this).addClass('active');
+  });
+  
+
+ jQuery(".wrapper_item").hover(
+      function () {
+		 jQuery(this).addClass("hover_time").stop().animate({},1000);
+        jQuery(this).children(".catalog-item-link, .catalog-item-category").addClass("red_hover");
+		var link_prodict = jQuery(this).children("a.catalog-item-link").attr("href");
+		jQuery(this).children(".catalog-item-category").after("<a class='look_prod' href='" + link_prodict + "'><span>Смотреть</span></a>");
+      }, 
+	  function(){
+         jQuery(this).children(".catalog-item-link, .catalog-item-category").removeClass("red_hover");
+		 jQuery(".look_prod").remove();
+		 jQuery(this).removeClass("hover_time");		
+      }
+	  
+	  );
+
+  
+  
+});
+  </script>
+  <script type="text/javascript" src="http://pandivan.msk.ru/templates/pdivan/js/jquery_sort.js"></script>
+</head>
+<body>
+
+<div id="tpl_wrapper">
+
+  <div id="tpl_header" class="header_mainpage ">
+    <div id="tpl_logo">
+            <img src="http://pandivan.msk.ru/templates/pdivan/images/pandivan-logo.png" alt="" />
+          </div>
+	<div class="header_title">
+		<h1>Производство мягкой мебели <br>
+		в Москве и МО под реализацию
+		</h1>
+	</div>
+    <div id="tpl_headerphone">
+		<span>Звоните:</span><br />
+      +7 (496) 252-5088<br />
+      +7 (495) 526-2111
+    </div>
+	
+	<div class="clear"></div>
+    <div id="tpl_topmenusearch">
+      		<div class="moduletable-topmenu">
+					
+<ul class="menu">
+<li class="item-103 parent"><a href="/catalog.html" >Каталог</a></li><li class="item-157"><a href="/divany.html" >Диваны</a></li><li class="item-158"><a href="/uglovye-divany.html" >Угловые диваны</a></li><li class="item-155"><a href="/kresla.html" >Кресла</a></li><li class="item-156"><a href="/krovati.html" >Кровати</a></li><li class="item-154 parent"><a href="/kresla-i-pufy.html" >Пуфы и банкетки</a></li><li class="item-135 parent"><a href="/articles.html" >Статьи</a></li><li class="item-104"><a href="/sotrudnichestvo.html" >Для магазинов</a></li><li class="item-102"><a href="/about.html" >О фабрике</a></li><li class="item-106"><a href="/contact.html" >Контакты</a></li></ul>
+		</div>
+	
+      <div class="clear"></div>
+    </div>
+  </div>
+  
+  
+  <div id="tpl_content">
+     <div id="tpl_centercol">
+                
+<div id="system-message-container">
+</div>
+        <div class="blog-featured">
+
+	
+	
+			<div class="items-row cols-1 row-0">
+				<div class="item column-1">
+			
+
+
+	
+
+
+
+
+<h1>ПанДиван - профессионал  своего дела!</h1>
+<p>Производство мягкой мебели - процесс нудный, сложный, требующий постоянного контроля на каждом этапе. Но нам нравится этим заниматься! В конце концов, надо же изготовить <a href="http://pandivan.msk.ru/catalog/kresla.html">недорогие мягкие кресла</a>, на которых и самим будет приятно сидеть. Как говорится: хочешь сделать хорошо - делай сам. Зато нам не стыдно привести гостей и с гордостью сказать: эту мебели сделали на нашей фабрике. Но мы не жадные, и с удовольствием поделимся с каждым желающим.</p>
+<p>Вы не верит нам на слово? Правильно, сегодня так делать нельзя, особенно, если можно посмотреть собственными глазами в галерее.</p>
+
+
+<div class="item-separator"></div>
+		</div>
+									<span class="row-separator"></span>
+				</div>
+
+				
+
+
+</div>
+
+		
+		
+		<div class="clear"></div>
+        		<div class="moduletable">
+					<h3>Хиты продаж</h3>
+					
+	<div class="catalog-category-item">
+		<div class="wrapper_item">
+		<div class="catalog-item-img">
+			<a href="/krovati/tahta-jpg.html">
+				<p><img src="/images/catalog/6_result.png" border="0" alt="" /></p>
+</a>
+				<span class="stateparam2">Хит продаж</span>		</div>
+		<a class="catalog-item-link" href="/krovati/tahta-jpg.html">Тахта "Релакс"</a>
+
+		<div class="catalog-item-category">Категория:
+		<a href="/krovati.html">Кровати		</a></div>
+		<div class="catalog-item-params">Цена: от <span>8 200</span> руб.</div>
+				<div class="catalog-item-params prices2">розн. цена: от <span>9 700</span> руб.</div>
+				<div class="catalog-item-params"></div>
+		</div>
+	</div>
+
+	<div class="catalog-category-item">
+		<div class="wrapper_item">
+		<div class="catalog-item-img">
+			<a href="/divany/divan-kushetka-ellis-3-krasnaya-kozha-seryj.html">
+				<p><img src="/images/catalog/divan_elips3/DSC_3015_result-2.png" border="0" alt="" /></p>
+</a>
+				<span class="stateparam2">Хит продаж</span>		</div>
+		<a class="catalog-item-link" href="/divany/divan-kushetka-ellis-3-krasnaya-kozha-seryj.html">Диван-Кушетка Эллис 3</a>
+
+		<div class="catalog-item-category">Категория:
+		<a href="/divany.html">Диваны		</a></div>
+		<div class="catalog-item-params">Цена: от <span>0</span> руб.</div>
+				<div class="catalog-item-params"></div>
+		</div>
+	</div>
+
+	<div class="catalog-category-item">
+		<div class="wrapper_item">
+		<div class="catalog-item-img">
+			<a href="/divany/divan-antonio-4-knizhka.html">
+				<p><img src="/images/catalog/divan_antonino4/DSC_2438_result-2.png" border="0" alt="" /></p>
+</a>
+				<span class="stateparam2">Хит продаж</span>		</div>
+		<a class="catalog-item-link" href="/divany/divan-antonio-4-knizhka.html">Диван Антонио 4</a>
+
+		<div class="catalog-item-category">Категория:
+		<a href="/divany.html">Диваны		</a></div>
+		<div class="catalog-item-params">Цена: от <span>0</span> руб.</div>
+				<div class="catalog-item-params">Механизм «Еврокнижка»</div>
+		</div>
+	</div>
+
+<div class="clear"></div>
+		<a class="btn_catalog" href="http://pandivan.msk.ru/catalog.html" target="_blank">Смотреть полный каталог продукции</a>
+   		</div>
+			<div class="moduletable">
+					<h3>Мебель, приятная не только глазу</h3>
+					
+
+<div class="custom"  >
+	<p>В производстве мягкой мебели самое главное помнить, что она должна быть не только красивая, но и удобная. Ведь люди ей не любоваться будут, а использовать для сидения и периодически - лежания. Так, к примеру, <a href="/catalog/divany.html">качественные диваны от производителя</a> вполне пришлись бы по духу Обломову: в них можно провести, не вставая, десятки лет, а они не вытрутся и не потеряют форму.</p>
+<p>Угловые диваны при этом еще и будут занимать невостребованную часть помещения, в которой раньше только пыль копилась. Теперь угол комнаты станет центром притяжения всей семьи. Главное, рассчитать размер дивана, чтобы все поместились.</p>
+<p>А если семья у вас большая, то мы предложим вам производство мягкой мебели на заказ, необходимого размера и конфигурации. Места на нем хватит всем. Для тех, кто предпочитает <a href="/articles/elite.html">только элитные диваны</a>, мы тоже можем предложить несколько интересных моделей.</p>
+<p>Когда придут гости, их можно усадить в кресла, чтобы не отдавать вакантное место на диване. Но есть мебель, которую нельзя уступать никому - кровать! От того, насколько правильно она выбрана, зависит мир и спокойствие в семье.</p>
+<p>На а приятные мелочи вроде пуфов и банкеток позволят вытянуть уставшие ноги после трудового дня или станут любимым спальным местом четвероногих питомцев.</p>
+<h3>Почему заказывать мебель нужно у нас?</h3>
+<p>Себя хвалить, конечно же, стыдно и недостойно, но мы этим и не будем заниматься. Просто расскажем, что получается, если за производство мягкой мебели беремся мы:</p>
+<ul>
+<li>Скорее всего, диван или кровать, заказанная в ПанДиван, вам надоест. <strong>Лет через 10</strong>. Ведь популярная эксклюзивная мебель, как и любая другая, заказанная у нас, будет долго надоедать вам отличным внешним видом и не давать повода купить новую.</li>
+<li>Вам придется регулярно рассказывать своим знакомым, где вы заказали это кресло, как проехать к магазину, и сколько оно стоит. А такие расспросы несколько утомляют, особенно после первых десяти раз.</li>
+<li>Если вы владеете магазином мягкой мебели, то рискуете, что <strong>через некоторое время ассортимент сузится до одного поставщика</strong>, и вам придется уменьшить поставки от других фирм, которые занимаются производством мягкой мебели.</li>
+<li>Будет достаточно сложно побороть<strong> искушение заказать сразу несколько диванов</strong>, учитывая скидки и специальные предложения.</li>
+</ul>
+<p>Но если эти недостатки вас не испугали, то вы всегда можете пообщаться с нами по телефону <br /><strong>+7 (906) 778 7870 и +7 (498) 720 7605</strong>, обсудить детали и, в конце концов, заказать производство мягкой мебели, о которой вы всегда мечтали.</p></div>
+		</div>
+	
+		
+		
+		
+        
+      </div>
+    <div class="clear"></div>
+  </div>
+
+  <div id="tpl_footer">
+      <div id="tpl_footerl">&nbsp;</div>
+	  <div id="tpl_footer_logo">
+                  <img src="http://pandivan.msk.ru/templates/pdivan/images/pandivan-logo.png" alt="" />
+               <span class='copyright'> © 2008-2016 Pandivan.Ru. Все права защищены! </span>
+      </div>
+      <div id="tpl_footer_contact">
+              <table cellpadding="0" cellspacing="0">
+                <tr >
+                  <td style="text-align:right;"><span class='tpl_footer_contact1'> +7 (496)</span> <span class='tpl_footer_contact2'>252-5088</span><br>
+					<span class='tpl_footer_contact1'> +7 (495)</span> <span class="tpl_footer_contact2">526-2111 </span>
+                   </td>
+                    <td class="tpl_footer_contact3"><img src="http://pandivan.msk.ru/templates/pdivan/images/ico_phone.png" alt="" /></td>
+                </tr>
+                <tr>
+                  <td colspan="3" class="tpl_footer_contact4">Наш адрес: Московская область, г.Железнодорожный, Ласточкин проезд, Владение 6</td>
+                  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter19529941 = new Ya.Metrika({id:19529941,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/19529941" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t22.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+                </tr>
+                <tr>
+                  <td colspan="3"></td>
+                </tr>
+              </table>
+
+            </div>
+      </div>
+    <div class="clear"></div>
+  </div>
+
+
+</div>
+
+</body>
+</html>

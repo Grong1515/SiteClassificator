@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Главная</title>
+
+  <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Салон красоты "Люир" оказывает парикмахерские услуги, маникюр, педикюр, массаж и другие косметологические услуги." />
+  <meta name="keywords" content="салон красоты, парикмахерские услуги, маникюр, педикюр, массаж, татуаж, наращивание ресниц, ламинирование волос, биогель, дарсонваль, эпиляция, визаж, спа, spa" />
+  <meta name="author" content="Author Name" />
+
+  <link rel="favourites icon" href="http://www.luir-salon.ru/favicon.ico" />
+	<link rel="stylesheet" href="luir/style2.css" type="text/css" media="screen" title="default" charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="luir/jquery.lightbox-0.5.css" media="screen" />
+
+    <link rel="stylesheet" href="http://www.luir-salon.ru/luir/print.css" media="print" type="text/css" />
+    <link rel="alternate" type="application/rss+xml" title="Frog Default RSS Feed" href="http://www.luir-salon.ru//?rss.xml" />
+	<script type="text/javascript" src="luir/js/jquery.js"></script>  
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js" ></script> 
+
+	<script type="text/javascript" src="luir/js/jquery.tweetable.js"></script>
+	<script type="text/javascript" src="luir/js/jcarousellite.js"></script>
+	<script type="text/javascript" src="luir/js/jquery.lightbox-0.5.js"></script>
+	
+	
+	<script type="text/javascript">
+	$(function() {
+
+		$('a[@rel*=lightbox]').lightBox(); 
+	
+	   	$("#client_slider").jCarouselLite({
+        	btnNext: ".next",
+        	btnPrev: ".prev"
+    });
+		
+	$("#latest_work > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true);
+ 	$('#tweet_feed').tweetable({username: 'collis', time: true, limit: 2});
+
+	});
+	</script>
+	
+
+
+	<!--[if IE 6]>
+		
+		<link rel="stylesheet" href="luir/ie6.css" type="text/css" media="screen" title="default" charset="utf-8" />
+		
+		<script type='text/javascript' src="src="luir/js/ie6_pngfix.js"></script>
+	
+		<script>  
+	  		DD_belatedPNG.fix('*');
+		</script>
+	
+	<![endif]-->
+	
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="luir/ie7.css" type="text/css" media="screen" title="default" charset="utf-8" />
+	<![endif]-->
+
+<meta charset="UTF-8">
+</head>
+<body>
+<div id='wrapper'>
+<div id="header">
+ <div id='logo'>
+			<a href='http://www.luir-salon.ru/'><img src='luir/images/site/logo.gif' alt='Салон красоты Люир в Отрадном' /></a> <a href='http://www.luir-salon.ru/'><img src='luir/images/site/tel.png' alt='(967) 196-50-47' / align='right'></a>
+		</div>
+
+  <div id="nav">
+    <ul>
+      <li><a class="current" href="http://www.luir-salon.ru/">Главная</a></li>
+      <li><a href="http://www.luir-salon.ru/?uslugi.html" >Услуги и цены</a></li>
+      <li><a href="http://www.luir-salon.ru/?news.html" >Новости</a></li>
+      <li><a href="http://www.luir-salon.ru/?gallery.html" >Галерея</a></li>
+      <li><a href="http://www.luir-salon.ru/?contacts.html" >Контакты</a></li>
+      <li><a href="http://www.luir-salon.ru/?-.html" >Запись ОНЛАЙН</a></li>
+ 
+    </ul>
+  </div> <!-- end #navigation -->
+</div> <!-- end #header -->		<div id="latest_work" >
+			<div id='latest_ribbon'>Акции</div>
+			
+			<ul class="ui-tabs-nav">
+	    		<li class="ui-tabs-nav-item ui-tabs-selected" id="nav-latest-1"><a href="#latest-1">
+			ламинирование</a></li>
+	    		<li class="ui-tabs-nav-item" id="nav-latest-2"><a href="#latest-2">
+			окрашивание</a></li>
+	    		<li class="ui-tabs-nav-item" id="nav-latest-3"><a href="#latest-3">
+			маникюр</a></li>
+	   			<li class="ui-tabs-nav-item" id="nav-latest-4"><a href="#latest-4">
+			педикюр</a></li>
+			</ul>
+
+			<div id="latest-1" class="ui-tabs-panel" >
+				<a href='?news/2011/04/16/news-5.html' title='Шилак, перманентный маникюр'><img src="luir/images/portfolio/latest/latest1.jpg" alt="Шилак" /></a>
+			</div>
+			
+		
+			<div id="latest-2" class="ui-tabs-panel ui-tabs-hide" >
+				<a href='?news/2011/01/23/-18-30.html' title='УЗ пилинг'><img src="luir/images/portfolio/latest/latest2.jpg" alt="Ультрозвуковая чистка лица со скидкой 30 %" /></a>
+			</div>
+
+    		<div id="latest-3" class="ui-tabs-panel ui-tabs-hide" >
+				<a href='?uslugi/biogel.html' title='Акция: биогель + френч, педикюр + биогель'><img src="luir/images/portfolio/latest/latest3.jpg" alt="" /></a>
+			</div>
+			
+    		<div id="latest-4" class="ui-tabs-panel ui-tabs-hide" >
+				<a href='?uslugi/visage.html' title='Аквагрим'><img src="luir/images/portfolio/latest/latest4.jpg" alt="Аквагрим на детский праздник!" /></a>
+			</div>
+	
+		</div><div id="col_large">
+<div id='content'>
+  
+<p>
+  <h1><a href="http://www.luir-salon.ru/?news/2014/12/26/news-6-copy-copy.html" >ПРЕДНОВОГОДНИЕ  АКЦИИ зима 2014-2015</a></h1>
+  	<p>ВНИМАНИЕ! В ПРЕДВЕРИИ НОВОГО ГОДА В НАШЕМ САЛОНЕ КРАСОТЫ ПРОХОДИТ  АКЦИЯ<br />
+<ul class='service_list'><br />
+<li> 30% СКИДКА НА МАНИКЮР И ПЕДИКЮР + В ПОДАРОК &#8211; ПАРАФИНОТЕРАПИЯ И МАССАЖ РУК<br />
+</ul></p>
+
+	<p>ЖЕЛАТЕЛЬНА ПРЕДВАРИТЕЛЬНАЯ ЗАПИСЬ!</p>    Fri, 26 Dec 2014</p>
+
+
+<p>
+  <h1><a href="http://www.luir-salon.ru/?news/2013/12/24/news-6-copy.html" >АКЦИИ: Зима 2013 - 2014</a></h1>
+  	<p>Предновогодние скидки на все косметологические услуги до 50%.<br />
+<ul class='service_list'><br />
+<li> Наращивание волос любой сложности  от 15 000 руб<br />
+<li> Татуаж губ  с растушевкой &#8211; 8 000 руб <br />
+<li> Татуаж бровей &#8211; 6 000  руб <br />
+<li> Татуаж бровей по волоскам &#8211; 7 000 руб <br />
+<li> Заполнение ресничного края верхнего века &#8211; 4 000 руб <br />
+<li> Подводка верхнего века со стрелкой &#8211; 5 000 руб<br />
+</ul></p>
+
+	<p>Звоните мы ждем вас!!!!!!</p>   Tue, 24 Dec 2013</p>
+
+<p>
+  <h1><a href="http://www.luir-salon.ru/?news/2012/12/17/news-6.html" >Акция! В  январе 2013 скидка 20%</a></h1>
+  	<p>В  январе 2013 скидка 20% на косметологические услуги:<br />
+<ul class='service_list'><br />
+<li> Перманентный макияж (татуаж) <br />
+<li> Пилинг <br />
+<li> Массаж лица <br />
+<li> Депиляция <br />
+<li> Микронидлинг <br />
+<li> Наращивание ресниц <br />
+<li> Чистка лица <br />
+</ul></p>   Mon, 17 Dec 2012</p>
+
+<p>
+  <h1><a href="http://www.luir-salon.ru/?news/2011/04/16/news-5.html" >Акция! Новинка! Перманентный маникюр</a></h1>
+  	<p>Shellac (ШИЛАК) – первый гибрид лака и геля, сочетающий в себе самые лучшие свойства профессиональных лаков для ногтей. <br />
+Носится как гель, выглядит как лак, снимается за считанные минуты, укрепляет и защищает ногти, гипоаллергенный. Препарат не повреждает натуральные ногти и не требует перерыва в ношении. </p>
+
+	<p>ЦЕНА   2000 руб. (С маникюром)<br />
+ЦЕНА   2200 руб. (ШИЛАК ФРЕНЧ)</p>   Sat, 16 Apr 2011</p>
+
+<p>
+  <h1><a href="http://www.luir-salon.ru/?news/2011/01/23/-18-30.html" >Только до 18 февраля! УЗ чистка лица со скидкой 30%</a></h1>
+  	<p>ВНИМАНИЕ АКЦИЯ !!!<br />
+БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ ВРАЧА -ДЕРМАТОКОСМЕТОЛОГА !!!<br />
+УЛЬТРАЗВУКОВОЙ ПИЛИНГ (ЧИСТКА) НА НОВЕЙШЕМ АППАРАТЕ С ИСПОЛЬЗОВАНИЕМ ПОВЕРХНОСТНОГО ГЛИКОЛЕВОГО ПИЛИНГА (ДЛЯ ЖИРНОЙ КОЖИ), ОЧИЩАЮЩЕЙ ПРОТИВОВОСПАЛИТЕЛЬНОЙ МАСКИ И ЛЕЧЕБНОЙ СЫВОРОТКИ 2300 ДО 1600! <br />
+АКЦИЯ ДЕЙСТВУЕТ  ДО 18 ФЕВРАЛЯ!!!</p>  <a href="http://www.luir-salon.ru/?news/2011/01/23/-18-30.html" >Подробнее&#8230;</a> Sun, 23 Jan 2011</p>
+
+ 
+   
+
+</div></div> <!-- end #content -->
+<div id="col_small">
+<div id='side'>
+  <h1 class='blue'>Акции</h1>
+<ul class='archives'>
+<li>Первое посещение - скидка 10% на все услуги
+<li>30% СКИДКА НА МАНИКЮР И ПЕДИКЮР + В ПОДАРОК - ПАРАФИНОТЕРАПИЯ И МАССАЖ РУК
+<li>Предновогодние скидки на все косметологические услуги до 50%. Только в декабре 2013!
+<li>Наращивание волос любой сложности от 15 000 руб
+<li>Татуаж губ с растушевкой – 8 000 руб 
+<li>Татуаж бровей – 6 000 руб 
+<li>Татуаж бровей по волоскам – 7 000 руб
+<li>Заполнение ресничного края верхнего века – 4 000 руб 
+<li>Подводка верхнего века со стрелкой – 5 000 руб
+<li><strong>Постоянным клиентам скидки до 
+25% на все виды услуг!</strong>
+</ul>
+<br>
+<h1 class='blue'>Наши новости</h1>
+<ul class='archives'>
+  <li><a href="http://www.luir-salon.ru/?news/2014/12/26/news-6-copy-copy.html" >ПРЕДНОВОГОДНИЕ  АКЦИИ зима 2014-2015</a></li> 
+  <li><a href="http://www.luir-salon.ru/?news/2013/12/24/news-6-copy.html" >АКЦИИ: Зима 2013 - 2014</a></li> 
+  <li><a href="http://www.luir-salon.ru/?news/2012/12/17/news-6.html" >Акция! В  январе 2013 скидка 20%</a></li> 
+  <li><a href="http://www.luir-salon.ru/?news/2011/04/16/news-5.html" >Акция! Новинка! Перманентный маникюр</a></li> 
+  <li><a href="http://www.luir-salon.ru/?news/2011/01/23/-18-30.html" >Только до 18 февраля! УЗ чистка лица со скидкой 30%</a></li> 
+  <li><a href="http://www.luir-salon.ru/?news/2010/12/20/-.html" >Аквагрим на детский праздник!</a></li> 
+  <li><a href="http://www.luir-salon.ru/?news/2010/11/02/news-2.html" >Новинка сезона - Биогель!</a></li> 
+  <li><a href="http://www.luir-salon.ru/?news/2010/11/02/news-1.html" >Уважаемые Дамы и Господа!</a></li> 
+</ul>
+
+<br>
+ 
+</div>
+</div> <!-- end #sidebar -->
+<div class='clear'></div>
+	<div id='footer'>
+		<p>Copyright 2011 www.luir-salon.ru  Все права защищены.  <a href='#top' class='hide'>Back to top</a></p> 
+<!-- Yandex.Metrika informer -->
+<a href="http://metrika.yandex.ru/stat/?id=2448760&amp;from=informer"
+target="_blank"><img src="//bs.yandex.ru/informer/2448760/1_0_3D243DFF_1D041DFF_1_pageviews"
+width="80" height="15" alt="Яндекс.Метрика" border="0" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter2448760 = new Ya.Metrika(2448760);
+             yaCounter2448760.clickmap(true);
+             yaCounter2448760.trackLinks(true);
+        
+        } catch(e) {}
+    });
+})(window, 'yandex_metrika_callbacks');
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/2448760" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+	</div></div> <!-- end #page -->
+</body>
+</html>

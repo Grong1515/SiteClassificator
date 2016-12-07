@@ -1,0 +1,1420 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<link rel="icon" type="image/png" href="http://microlab.ru/favicon.png" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Компьютерная компания Майкролэб - Cерверное оборудование: серверные корпуса Negorack, материнские платы Supermicro, контроллеры Adaptec</title>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script type="text/javascript" src="/scripts/popup.js"></script>
+<script type="text/javascript" src="/lightbox/js/jquery.lightbox-0.5.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/lightbox/css/jquery.lightbox-0.5.css" media="screen" />
+<script type="text/javascript">
+    $(function() {
+        $('#gallery a').lightBox({fixedNavigation:true});
+    });
+</script>
+
+<script type="text/javascript" src="/scripts/jquery.validate.js"></script>
+<script type="text/javascript" src="/scripts/slider.js"></script>
+<script src="/scripts/jquery.treeview.js" type="text/javascript"></script>
+<script src="/scripts/jquery.corner2.js" type="text/javascript" ></script>
+<script type="text/javascript">
+
+    $(function(){
+        $('div.inner').wrap('<div class="outer"></div>');
+        $('div.rounded, div.inner').each(function() {
+            var t = $(this).corner("keep");
+            eval(t);
+        });
+
+    });
+</script>
+
+
+<link rel="stylesheet" href="/style.css" type="text/css"/>
+<link rel="stylesheet" href="/scripts/tree.css" type="text/css" />
+<link rel="stylesheet" href="/scripts/popup.css" type="text/css" />
+<link rel="stylesheet" href="/scripts/cart.css" type="text/css" />
+<meta property="og:image" content="http://www.microlab.ru/images/logo.png" />
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+
+    // Expand Panel
+    $("#open").click(function(){
+        $("div#panel").slideDown("slow");
+
+    });
+
+    // Collapse Panel
+    $("#close").click(function(){
+        $("div#panel").slideUp("slow");
+    });
+
+    // Switch buttons from "Log In | Register" to "Close Panel" on click
+    $("#toggle a").click(function () {
+        $("#toggle a").toggle();
+    });
+
+});
+
+
+        function show()
+        {
+            $.ajax({
+                url: "/blocks/carttop.php?rfr=1&value=rur",
+                cache: false,
+                success: function(html){
+                    $("#carttop").html(html);
+                }
+            });
+        }
+
+        function add2cart(id)
+        {
+            $.ajax({
+                url: "/blocks/carttable.php?add="+id,
+                cache: false,
+                success: function(html){
+                    $("#carttable").html(html);
+                    show();
+                }
+            });
+
+        }
+
+        function op(){}
+
+</script>
+
+
+</head>
+<body>
+<noindex>
+    		<div id="toppanel"  >
+	<div id="panel"  >
+
+
+				<div id = 'carttable'><script>
+function removeFromCart(value)
+		{
+			$.ajax({
+				url: "/blocks/carttable.php?add=remove&value="+value,
+				cache: false,
+				success: function(html){
+				$("#carttable").html(html);
+				show();
+				}
+			});
+
+		}
+</script>
+
+</div>
+
+	</div> <!-- /login -->
+
+    <!-- The tab on top -->
+	<div class="tab">
+		<ul class="login">
+	    	<li class="left">&nbsp;</li>
+	        <li><div id = 'carttop'>Корзина пуста</div></li>
+			<li class="sep">|</li>
+			<li id="toggle">
+				<a id="open" class="open" href="javascript:op();"></a>
+				<a id="close" style="display: none;" class="close" href="javascript:op();"></a>
+			</li>
+	    	<li class="right">&nbsp;</li>
+		</ul>
+	</div> <!-- / top -->
+
+</div> <!--panel -->
+</noindex>
+<!--<div style="position:absolute; top:0; left: 550px; width:350px; height:100px; z-index:0;" ><br />
+
+<h3>Уважаемые партнёры</h3>20-23 марта возможны сбои в работе телефонной линии в связи с плановыми работами МОЭК. В случае отключений будет работать номер <b>+7 903 576 4027</b>.
+<br>
+Приносим извинения за неудобства.
+</div> -->
+
+<!--<div style="position:absolute; top:0; left: 550px; width:400px; height:100px; z-index:0;" ><br />
+
+<h3>Уважаемые партнёры</h3>10 марта возможны сбои в работе телефонной линии. В случае отключений будет работать номер <b>+7 968 354 8573</b>.
+Так же вы можете обращаться к нам по электронной почте <b><a href="mailto:info@microlab.ru" style="color:#222">info@microlab.ru</a></b> или через сервис <b>JivoStie</b> в нижней части страницы.
+<br>
+Приносим извинения за неудобства.
+</div>-->
+<!--<div style="position:absolute; top:-20px; left:600px; width:220px; height:135px; z-index:-1; background-image:url(/images/chr/treeandhouse.gif);"></div>-->
+
+<div class="hat1">Майкролэб
+
+<div class="hat2">Информационные технологии для бизнеса
+</div>
+</div>
+
+<div class="middle_line"></div>
+<div class="hat" >
+
+		<table border="0" cellpadding="0" cellspacing="0" class="top_table" width="100%">
+     	<tr>
+        <td onClick="location.href='/'"  class="logo">
+
+		</td>
+        <td class="top_bg" align="right" valign="bottom">
+
+
+
+			<table border="0" style="padding-right:10px; padding-bottom:3px; background:none; float:right;" cellpadding="0" cellspacing="0" >
+
+
+<tbody><tr><td align="left" >
+<img src="/images/phone.png" style="position:absolute; right:130px; top:28px;" />
+<img src="/images/mail.png" style="position:absolute; right:137px; top:94px;" />
+
+						<font style="font-size:16px;  font-family:Cambria;"><font color="#aaa">+7 495</font> <font style="font-size:16px;">234 2867</font><br />
+			
+			<font color="#aaa">+7 499</font> <font style="font-size:16px;">788 9141</font><br />
+
+						<font color="#aaa">+7 499</font> <font style="font-size:16px;">788 9521</font><br />
+
+
+			<font color="#aaa">+7 968</font> <font style="font-size:16px;">354 8573</font>
+
+			</font>
+			</td></tr>
+
+		<tr><td style="font-size:14px; font-family:Cambria; padding-top:5px" align="left"><a href="mailto:info@microlab.ru" style="color:#222">info@microlab.ru</a></td></tr>
+		</tbody></table>
+
+		</td>
+		</table>
+
+</div>
+<div class="rega" ><div style="position: absolute;
+     width: 280px;
+     top: 105px; 
+     right:80px;">
+    <!-- <form action="/dispatcher.php"  method="post" name="form" id="login">
+        <p class = "input"> 
+            <input type = "text" placeholder="Логин" name = "log" alt = "Логин" size="10" style="float: left; position: relative;
+left: -4px; height:16px;">
+            <input type = "password" placeholder="Пароль" name = "password" size="10" style="float: left; position: relative;
+left: -2px; height:16px;">
+        </p>
+
+        <p>	
+            <input type="submit" value="Войти"  name ="login" class="button" style="height:23px;" >
+        </p>
+    </form> -->
+    <div style="position: absolute; bottom: -20px;" >
+        <TABLE style="" >
+            <tr>
+                <td><a href="/lklk/" ><img src="/images/lkfinish.png" ></a></td>
+                <td style="font-size: 13px; font-family: Cambria;" ><p><a href="/lklk/" style="color:000000";>Авторизация</a></p></td>
+                <td><p>||</p></td>
+                <td style="font-size: 13px; font-family: Cambria;"><p><a href="/reg/" style="color:000000";>Регистрация</a></p></td></tr>
+        </TABLE>
+    </div>
+</div></div>
+<div class = "vnutr">
+<table border="0" cellpadding="0" cellspacing="0"  width="100%" height="900">
+  <tr>
+    <td  valign="top">
+		 <table border="0" cellpadding="0" cellspacing="0" width="100%" height = "870" >
+     	 <tr>
+        	 	<td align="left" valign="top" width="238">
+<table width="234"><tr><td>
+
+<script>
+
+$(document).ready(function(){
+	//global vars
+	var searchBoxes = $(".text");
+
+	var searchBox2 = $("#search2");
+	var searchBox2Default = "Поиск";
+	var searchBox3 = $("#search3");
+	var searchBox3Default = "";
+	var searchBox4 = $("#search4");
+	var searchBox4Default = "";
+	
+	//Effects for both searchbox
+	searchBoxes.focus(function(e){
+		$(this).addClass("active");
+	});
+	searchBoxes.blur(function(e){
+		$(this).removeClass("active");
+	});
+	
+	//Searchbox1, set focus when document is ready
+
+	
+	//Searchbox2 show/hide default text if needed
+	searchBox2.focus(function(){
+		if($(this).attr("value") == searchBox2Default) {
+			$(this).attr("value", "");
+			$(this).attr("style", "color:#000000"); 
+		}
+	});
+	searchBox2.blur(function(){
+		if($(this).attr("value") == "") { 
+			$(this).attr("value", searchBox2Default);
+			$(this).attr("style", "color:#999999"); 
+		}
+	});	
+	
+	//$("input.password").wrap('type = password').replaceWith('type = ""').remove();
+	
+	
+	searchBox3.focus(function(){
+		if($(this).attr("value") == searchBox3Default) {
+			$(this).attr("value", "");
+			$(this).attr("style", "color:#000000");
+		}
+	});
+	searchBox3.blur(function(){
+		if($(this).attr("value") == "") {
+			$(this).attr("value", searchBox3Default);
+			$(this).attr("style", "color:#999999");
+			
+		}
+	});
+	searchBox4.focus(function(){
+		if($(this).attr("value") == searchBox4Default) {
+			$(this).attr("value", "");
+			$(this).attr("style", "color:#000000");
+			this.type = 'password'; 			
+		}
+	});
+	searchBox4.blur(function(){
+		if($(this).attr("value") == "") { 
+			$(this).attr("value", searchBox4Default);
+			$(this).attr("style", "color:#999999");
+			this.type = 'text';		
+		}
+	});
+});
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="/scripts/jquery-autocomplete/jquery.autocomplete.css" />
+<script type='text/javascript' src='/scripts/jquery-autocomplete/jquery.autocomplete.js'></script>
+
+
+	 
+<script type="text/javascript">
+
+$(document).ready(function() {
+  
+  function liFormat (row, i, num) {
+    if (row[1]){	var result = '<font class = "engine_desc">'+ row[0] + '</font><br><font class=engine_part>Part # ' + row[1] + '</font><br><font class=engine_art>Артикул: ' + row[2] + '</font>';}
+    else {	var result = '<font class = "engine_desc">'+row[0]+'</font>';}
+  	return result;
+  }
+  function selectItem(li) {
+  
+  	alert("Выбрана запись с ID: ");
+  }
+
+
+	$("#search2").autocomplete("/blocks/search_engine.php", {
+			selectFirst: false,
+      formatItem:liFormat,     
+      maxItemsToShow:20,
+    	onItemSelect:selectItem
+	});
+
+	
+
+});
+</script>
+
+
+<form method="get" action="/catalogue/" style="margin:0; padding:0;" >
+	<input class="search" id="search2" type="text" name="search" value='Поиск' style='color:#999999;' />
+	<input type="submit" class="search_submit"  value=""/>
+</form>
+
+</td></tr></table><div class = "leftmenu" >
+<script type="text/javascript">
+
+
+
+
+		$(function() {
+			$("#tree").treeview({
+				collapsed: true,
+				animated: "fast",
+				unique: true,
+				control:"#sidetreecontrol"
+			});
+			
+			
+				$("#tree2").treeview({
+				collapsed: true,
+				animated: "fast",
+				unique: true,
+				control:"#sidetreecontrol"
+			});
+		})	
+			
+			
+			
+</script>		
+
+<style>
+
+#tree {
+margin-top:-18px;
+margin-left:5px;
+}
+
+#tree2 {
+margin-top:-18px;
+
+margin-left:5px;
+}
+
+</style>
+
+<div id="sidetree">
+
+
+<h4>Hardware</h4>
+<ul id = 'tree'>	<li  >
+	<A HREF="/catalogue/2" class = left_blue >Компьютеры и серверы</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/23" class = left_blue >Компьютеры ML Cornet</A>
+		<li  >
+	<A HREF="/catalogue/21" class = left_blue >Компьютеры ML Mustang</A>
+		<li  >
+	<A HREF="/catalogue/22" class = left_blue >Серверы ML LAN Server</A>
+		<li  >
+	<A HREF="/catalogue/3868" class = left_blue >Apple - компьютеры и серверы</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/11" class = left_blue >Ноутбуки и планшеты</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/13" class = left_blue >Ноутбуки HP</A>
+		<li  >
+	<A HREF="/catalogue/586" class = left_blue >Ноутбуки Lenovo</A>
+		<li  >
+	<A HREF="/catalogue/1750" class = left_blue >Ноутбуки Apple MacBook</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/4" class = left_blue >Мониторы</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/5547" class = left_blue >Мониторы Philips</A>
+		<li  >
+	<A HREF="/catalogue/25" class = left_blue >Мониторы LG</A>
+		<li  >
+	<A HREF="/catalogue/889" class = left_blue >Мониторы BenQ</A>
+		<li  >
+	<A HREF="/catalogue/5555" class = left_blue >Мониторы AOC</A>
+		<li  >
+	<A HREF="/catalogue/26" class = left_blue >Мониторы Samsung</A>
+		<li  >
+	<A HREF="/catalogue/4994" class = left_blue >Мониторы Dell</A>
+		<li  >
+	<A HREF="/catalogue/4831" class = left_blue >Аксессуары для мониторов</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/4835" class = left_blue >Кабели HDMI, Display Port, DVI, SVGA</A>
+		<li  >
+	<A HREF="/catalogue/47" class = left_blue >Переключатели монитора KVM</A>
+		<li  >
+	<A HREF="/catalogue/4836" class = left_blue >Держатели мониторов</A>
+	</UL></UL>	<li  >
+	<A HREF="/catalogue/5" class = left_blue >Комплектующие</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/28" class = left_blue >Процессоры INTEL</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/2259" class = left_blue >Intel Celeron</A>
+		<li  >
+	<A HREF="/catalogue/977" class = left_blue >Intel Pentium</A>
+		<li  >
+	<A HREF="/catalogue/1733" class = left_blue >Intel Core™ i3, i5, i7</A>
+		<li  >
+	<A HREF="/catalogue/976" class = left_blue >Intel Xeon</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/1326" class = left_blue >Системы охлаждения</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/1742" class = left_blue >Вентиляторы для CPU настольных компьютеров</A>
+		<li  >
+	<A HREF="/catalogue/3551" class = left_blue >Вентиляторы для CPU серверных систем</A>
+		<li  >
+	<A HREF="/catalogue/1730" class = left_blue >Вентиляторы для корпусов</A>
+		<li  >
+	<A HREF="/catalogue/5511" class = left_blue >Термопаста</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/27" class = left_blue >Материнские платы</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/39" class = left_blue >Asus</A>
+		<li  >
+	<A HREF="/catalogue/38" class = left_blue >Gigabyte</A>
+		<li  >
+	<A HREF="/catalogue/1982" class = left_blue >ASRock</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/29" class = left_blue >Модули памяти</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/408" class = left_blue >DIMM DDR-3, DDR-4</A>
+		<li  >
+	<A HREF="/catalogue/2228" class = left_blue >SO-DIMM для ноутбуков</A>
+		<li  >
+	<A HREF="/catalogue/41" class = left_blue >DIMM ECC DDR3 и DDR4 для серверов</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/30" class = left_blue >Жесткие диски (винчестеры, SSD)</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/537" class = left_blue >HDD Seagate</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/982" class = left_blue >Seagate настольные</A>
+		<li  >
+	<A HREF="/catalogue/1264" class = left_blue >Seagate cерверные</A>
+		<li  >
+	<A HREF="/catalogue/4539" class = left_blue >Seagate внешние</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/1918" class = left_blue >HDD Western Digital</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/3264" class = left_blue >WD Настольные</A>
+		<li  >
+	<A HREF="/catalogue/3265" class = left_blue >WD Серверные</A>
+		<li  >
+	<A HREF="/catalogue/1496" class = left_blue >WD Внешние</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/3240" class = left_blue >HDD HGST (Western Digital)</A>
+		<li  >
+	<A HREF="/catalogue/1251" class = left_blue >HDD Toshiba</A>
+		<li  >
+	<A HREF="/catalogue/2042" class = left_blue >SSD накопители</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/31" class = left_blue >Видеокарты</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/35" class = left_blue >Видеокарты Asus</A>
+		<li  >
+	<A HREF="/catalogue/36" class = left_blue >Видеокарты Gigabyte</A>
+		<li  >
+	<A HREF="/catalogue/37" class = left_blue >Видеокарты Sapphire</A>
+		<li  >
+	<A HREF="/catalogue/2790" class = left_blue >Видеокарты PNY</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/32" class = left_blue >Оптические приводы DVD±RW, Blu-Ray, Card Reader</A>
+		<li  >
+	<A HREF="/catalogue/34" class = left_blue >Носители информации</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/767" class = left_blue >Диски FDD, CD, DVD, Tape</A>
+		<li  >
+	<A HREF="/catalogue/766" class = left_blue >Flash Drive USB Kingston</A>
+		<li  >
+	<A HREF="/catalogue/3534" class = left_blue >Flash Drive USB Transcend</A>
+		<li  >
+	<A HREF="/catalogue/5644" class = left_blue >Кассеты для ленточных библиотек</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/53" class = left_blue >Контроллеры, адаптеры, кабели</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/994" class = left_blue >Контроллеры Adaptec SAS, SATA, SCSI</A>
+		<li  >
+	<A HREF="/catalogue/1628" class = left_blue >Контроллеры LSI SAS, SATA</A>
+		<li  >
+	<A HREF="/catalogue/2138" class = left_blue >Адаптеры, переходники</A>
+		<li  >
+	<A HREF="/catalogue/1897" class = left_blue >Кабели SAS, SATA</A>
+		<li  >
+	<A HREF="/catalogue/742" class = left_blue >Кабели USB, FireWire</A>
+		<li  >
+	<A HREF="/catalogue/4933" class = left_blue >Акссессуары для корпусов, материнских плат</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/57" class = left_blue >Корпуса, платформы, блоки питания</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/908" class = left_blue >In-Win - корпуса ATX, Mini-, midi-tower, Slim</A>
+		<li  >
+	<A HREF="/catalogue/2240" class = left_blue >AeroCool, Fox - корпуса ATX</A>
+		<li  >
+	<A HREF="/catalogue/5471" class = left_blue >Thermaltake - корпуса ATX</A>
+		<li  >
+	<A HREF="/catalogue/2025" class = left_blue >Procase - серверные корпуса</A>
+		<li  >
+	<A HREF="/catalogue/5101" class = left_blue >ASUS - серверные платформы</A>
+		<li  >
+	<A HREF="/catalogue/867" class = left_blue >Корпуса для HDD 2.5" & 3.5" USB,eSATA, DocStation</A>
+		<li  >
+	<A HREF="/catalogue/4701" class = left_blue >Блоки питания FSP, ThermalTake, Chieftec</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/5329" class = left_blue >Negorack - серверные корпуса и аксессуары к ним</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/1615" class = left_blue >Negorack 1U - серверные корпуса</A>
+		<li  >
+	<A HREF="/catalogue/4842" class = left_blue >Negorack 2U - серверные корпуса</A>
+		<li  >
+	<A HREF="/catalogue/4113" class = left_blue >Negorack 3U - серверные корпуса</A>
+		<li  >
+	<A HREF="/catalogue/4843" class = left_blue >Negorack 4U - серверные корпуса</A>
+		<li  >
+	<A HREF="/catalogue/3304" class = left_blue >Комплектующие для корпусов Negorack</A>
+		<li  >
+	<A HREF="/catalogue/2239" class = left_blue >Корзины Negorack, SNT для HDD SAS/SATA</A>
+		<li  >
+	<A HREF="/catalogue/909" class = left_blue >Блоки питания серверные Negorack, Etasis, Rsenda</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/5445" class = left_blue >Supermicro - корпуса, мат.платы, платформы</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/40" class = left_blue >Supermicro - серверные материнские платы</A>
+		<li  >
+	<A HREF="/catalogue/3550" class = left_blue >Supermicro - серверные корпуса</A>
+		<li  >
+	<A HREF="/catalogue/3307" class = left_blue >Supermicro - блоки питания</A>
+		<li  >
+	<A HREF="/catalogue/3308" class = left_blue >Supermicro - серверные платформы</A>
+		<li  >
+	<A HREF="/catalogue/5446" class = left_blue >Supermicro - аксессуары</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/59" class = left_blue >Клавиатуры, "мыши"</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/1757" class = left_blue >Genius. Клавиатуры и "мыши"</A>
+		<li  >
+	<A HREF="/catalogue/5632" class = left_blue >Defender. Клавиатуры и "мыши"</A>
+		<li  >
+	<A HREF="/catalogue/1756" class = left_blue >Logitech. Клавиатуры и "мыши"</A>
+		<li  >
+	<A HREF="/catalogue/5247" class = left_blue >Gembird. Клавиатуры и "мыши"</A>
+		<li  >
+	<A HREF="/catalogue/3531" class = left_blue >Microsoft. Клавиатуры и "мыши"</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/56" class = left_blue >Мультимедиа, аудиотехника</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/4370" class = left_blue >Звуковые карты Asus</A>
+		<li  >
+	<A HREF="/catalogue/590" class = left_blue >Акустика Genius, Edifier, Logitech</A>
+		<li  >
+	<A HREF="/catalogue/2504" class = left_blue >WEB-камеры</A>
+		<li  >
+	<A HREF="/catalogue/5840" class = left_blue >IP-камеры</A>
+		<li  >
+	<A HREF="/catalogue/33" class = left_blue >Системы видеомонтажа, TV-тюнеры</A>
+	</UL></UL>	<li  >
+	<A HREF="/catalogue/19" class = left_blue >Сетевое оборудование</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/43" class = left_blue >Hewlett-Packard - сетевое оборудование</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/1099" class = left_blue >Коммутаторы HP (14xx,18xx,19xx) - малые и средние предприятия</A>
+		<li  >
+	<A HREF="/catalogue/2318" class = left_blue >Коммутаторы HP (25xx,26xx,36xx,38xx,55xx) доступ к ЛВС филиалов</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/785" class = left_blue >D-Link - сетевое оборудование</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/787" class = left_blue >D-Link Коммутаторы неуправляемые</A>
+		<li  >
+	<A HREF="/catalogue/416" class = left_blue >D-Link Коммутаторы управляемые</A>
+		<li  >
+	<A HREF="/catalogue/5025" class = left_blue >D-Link Модули для коммутаторов</A>
+		<li  >
+	<A HREF="/catalogue/797" class = left_blue >D-Link Маршрутизаторы, межсетевые экраны</A>
+		<li  >
+	<A HREF="/catalogue/786" class = left_blue >D-Link Wi-Fi: Точки доступа, адаптеры, антенны</A>
+		<li  >
+	<A HREF="/catalogue/3458" class = left_blue >D-Link IP-камеры</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/6" class = left_blue >ASUS - сетевое оборудование</A>
+		<li  >
+	<A HREF="/catalogue/1586" class = left_blue >ZyXEL - межсетевые экраны, маршрутизаторы</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/4297" class = left_blue >ZyXel - Оборудование Wi-Fi</A>
+		<li  >
+	<A HREF="/catalogue/4295" class = left_blue >ZyXel - Межсетевые экраны</A>
+		<li  >
+	<A HREF="/catalogue/4296" class = left_blue >ZyXel - E-iCard -  Дополнительные сервисы</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/1454" class = left_blue >Allied Telesis - коммутаторы, медиаконвертеры</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/1843" class = left_blue >ATI - коммутаторы</A>
+		<li  >
+	<A HREF="/catalogue/5012" class = left_blue >ATI - оптические модули SFP (Small Form Pluggable)</A>
+		<li  >
+	<A HREF="/catalogue/1844" class = left_blue >ATI - медиаконвертеры</A>
+		<li  >
+	<A HREF="/catalogue/5011" class = left_blue >ATI - сетевые карты</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/44" class = left_blue >CISCO - сетевое оборудование</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/3708" class = left_blue >Cisco Catalyst. Коммутаторы</A>
+		<li  >
+	<A HREF="/catalogue/3709" class = left_blue >Cisco SB. Коммутаторы</A>
+		<li  >
+	<A HREF="/catalogue/5737" class = left_blue >Cisco SB. IP-Телефония</A>
+		<li  >
+	<A HREF="/catalogue/3725" class = left_blue >Cisco. Маршрутизаторы, межсетевые экраны</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/4518" class = left_blue >Ubiquiti - беспроводное оборудование</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/5472" class = left_blue >Ubiquiti AirMAX - точки доступа</A>
+		<li  >
+	<A HREF="/catalogue/5473" class = left_blue >Ubiquiti UniFi</A>
+		<li  >
+	<A HREF="/catalogue/5477" class = left_blue >Ubiquiti - домашние решения</A>
+		<li  >
+	<A HREF="/catalogue/5474" class = left_blue >Ubiquiti AirMAX - антенны</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/5829" class = left_blue >MikroTik - коммутаторы, маршрутизаторы, WiFi-оборудование</A>
+		<li  >
+	<A HREF="/catalogue/5109" class = left_blue >TP-Link - коммутаторы, маршрутизаторы, беспроводное оборудование</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/5114" class = left_blue >TP-Link - коммутаторы Fast Ethernet</A>
+		<li  >
+	<A HREF="/catalogue/5115" class = left_blue >TP-Link - коммутаторы Gigabit Ethernet</A>
+		<li  >
+	<A HREF="/catalogue/5626" class = left_blue >TP-Link - Адаптеры, конвертеры, принт-серверы</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/46" class = left_blue >Сетевые карты Intel, 3COM, D-Link</A>
+		<li  >
+	<A HREF="/catalogue/169" class = left_blue >Кабель UTP, FTP категории 5, 5е</A>
+		<li  >
+	<A HREF="/catalogue/45" class = left_blue >Сетевые аксессуары, инструменты</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/168" class = left_blue >Разъёмы, розетки, стяжки</A>
+		<li  >
+	<A HREF="/catalogue/4490" class = left_blue >Тестеры, инструменты</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/5768" class = left_blue >Коммутационные шнуры</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/52" class = left_blue >Стойки, шкафы 19", консоли</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/3361" class = left_blue >Rackpro. Стойки, шкафы 19"</A>
+		<li  >
+	<A HREF="/catalogue/5062" class = left_blue >Аксессуары к шкафам RackPro, блоки розеток</A>
+		<li  >
+	<A HREF="/catalogue/4404" class = left_blue >Hyperline. Стойки, шкафы 19"</A>
+		<li  >
+	<A HREF="/catalogue/3362" class = left_blue >ZPAS. Стойки, шкафы 19"</A>
+		<li  >
+	<A HREF="/catalogue/3492" class = left_blue >ЦМО. Стойки, шкафы 19"</A>
+		<li  >
+	<A HREF="/catalogue/2656" class = left_blue >Консоли Negorack и переключатели KVM для стоек и шкафов 19"</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/48" class = left_blue >Системы Хранения Данных (SAN)</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/1362" class = left_blue >Infortrend - дисковые массивы</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/3357" class = left_blue >EonStor DS SAS to SAS/SATA</A>
+		<li  >
+	<A HREF="/catalogue/3890" class = left_blue >EonStor JBOD</A>
+		<li  >
+	<A HREF="/catalogue/4969" class = left_blue >EonStor ESDS</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/1487" class = left_blue >D-Link - серверы хранения</A>
+		<li  >
+	<A HREF="/catalogue/1361" class = left_blue >QNAP - серверы хранения</A>
+		<li  >
+	<A HREF="/catalogue/4849" class = left_blue >Synology - серверы хранения</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/1721" class = left_blue >Источники Бесперебойного Питания</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/51" class = left_blue >UPS American Power Conversion</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/232" class = left_blue >Back UPS</A>
+		<li  >
+	<A HREF="/catalogue/237" class = left_blue >Smart UPS</A>
+		<li  >
+	<A HREF="/catalogue/236" class = left_blue >Smart UPS 19" Rackmount</A>
+		<li  >
+	<A HREF="/catalogue/936" class = left_blue >Smart UPS On-Line</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/1686" class = left_blue >UPS Ippon</A>
+		<li  >
+	<A HREF="/catalogue/252" class = left_blue >Фильтры питания и дополнительное оборудование</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/50" class = left_blue >Принтеры, копиры, МФУ</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/1913" class = left_blue >Kyocera-Mita - принтеры и МФУ</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/4867" class = left_blue >Kyocera - монохромные лазерные принтеры и МФУ формата A4</A>
+		<li  >
+	<A HREF="/catalogue/4868" class = left_blue >Kyocera - цветные лазерные принтеры и МФУ формата A4</A>
+		<li  >
+	<A HREF="/catalogue/4870" class = left_blue >Kyocera -TASKalfa - МФУ формата A3</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/60" class = left_blue >Hewlett Packard, принтеры и МФУ</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/62" class = left_blue >HP LaserJet - монохромные лазерные</A>
+		<li  >
+	<A HREF="/catalogue/3506" class = left_blue >HP Color LaserJet - цветные лазерные</A>
+		<li  >
+	<A HREF="/catalogue/1188" class = left_blue >HP DeskJet, HP OfficeJet - струйные</A>
+		<li  >
+	<A HREF="/catalogue/4167" class = left_blue >HP DesignJet - струйные плоттеры</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/61" class = left_blue >Epson - принтеры и МФУ</A>
+		<li  >
+	<A HREF="/catalogue/1599" class = left_blue >Xerox - принтеры и МФУ</A>
+		<li  >
+	<A HREF="/catalogue/3" class = left_blue >Canon - принтеры, МФУ, копировальные аппараты</A>
+		<li  >
+	<A HREF="/catalogue/4279" class = left_blue >3D-печать, принтеры и расходные материалы</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/63" class = left_blue >Сканеры</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/64" class = left_blue >Сканеры Hewlett Packard</A>
+		<li  >
+	<A HREF="/catalogue/376" class = left_blue >Сканеры Epson</A>
+		<li  >
+	<A HREF="/catalogue/65" class = left_blue >Сканеры Canon</A>
+		<li  >
+	<A HREF="/catalogue/3218" class = left_blue >Сканеры Mustek</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/463" class = left_blue >Расходные материалы</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/67" class = left_blue >Картриджи HP DeskJet</A>
+		<li  >
+	<A HREF="/catalogue/66" class = left_blue >Картриджи HP LaserJet</A>
+		<li  >
+	<A HREF="/catalogue/1129" class = left_blue >Картриджи HP LaserJet Color</A>
+		<li  >
+	<A HREF="/catalogue/4364" class = left_blue >Картриджи Kyocera-Mita, тонер и барабаны</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/4828" class = left_blue >Картриджи Kyocera-Mita монохромные</A>
+		<li  >
+	<A HREF="/catalogue/4829" class = left_blue >Картриджи Kyocera-Mita цветные</A>
+		<li  >
+	<A HREF="/catalogue/5239" class = left_blue >Картриджи Kyocera-Mita TASKalfa</A>
+		<li  >
+	<A HREF="/catalogue/4830" class = left_blue >Тонер Kyocera-Mita</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/464" class = left_blue >Картриджи EPSON</A>
+		<li  >
+	<A HREF="/catalogue/527" class = left_blue >Картриджи CANON струйные</A>
+		<li  >
+	<A HREF="/catalogue/469" class = left_blue >Картриджи CANON лазерные</A>
+		<li  >
+	<A HREF="/catalogue/1640" class = left_blue >Картриджи XEROX</A>
+		<li  >
+	<A HREF="/catalogue/1772" class = left_blue >Картриджи Samsung, Brother</A>
+		<li  >
+	<A HREF="/catalogue/3419" class = left_blue >Бумага офисная</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/418" class = left_blue >Телефоны, факсы, АТС</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/5410" class = left_blue >IP-Телефоны Yealink, Siemens, Panasonic</A>
+		<li  >
+	<A HREF="/catalogue/1058" class = left_blue >Проводные телефоны Panasonic</A>
+		<li  >
+	<A HREF="/catalogue/428" class = left_blue >Радиотелефоны Panasonic</A>
+		<li  >
+	<A HREF="/catalogue/1059" class = left_blue >Системные телефоны Panasonic</A>
+		<li  >
+	<A HREF="/catalogue/424" class = left_blue >АТС Panasonic</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/2451" class = left_blue >АТС Panasonic TDE 100/200</A>
+		<li  >
+	<A HREF="/catalogue/1060" class = left_blue >АТС Panasonic TDA 100/200</A>
+		<li  >
+	<A HREF="/catalogue/1579" class = left_blue >АТС Panasonic гибридные</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/423" class = left_blue >FAX Panasonic</A>
+		<li  >
+	<A HREF="/catalogue/1123" class = left_blue >Телефонные аксессуары</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/3961" class = left_blue >Услуги</A>
+	</UL><h4>Software</h4><ul id = 'tree2'>	<li  >
+	<A HREF="/catalogue/9" class = left_blue >1C</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/715" class = left_blue >1C:Предприятие 8</A>
+		<li  >
+	<A HREF="/catalogue/3206" class = left_blue >1С-Битрикс</A>
+		<li  >
+	<A HREF="/catalogue/4259" class = left_blue >1С-Отчётность</A>
+		<li  >
+	<A HREF="/catalogue/4397" class = left_blue >1С:CRM</A>
+		<li  >
+	<A HREF="/catalogue/4712" class = left_blue >1С:Документооборот (СЭЛД)</A>
+		<li  >
+	<A HREF="/catalogue/686" class = left_blue >1C:ИТС</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/8" class = left_blue >MICROSOFT</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/295" class = left_blue >Операционные системы Windows</A>
+		<li  >
+	<A HREF="/catalogue/294" class = left_blue >Серверные операционные системы</A>
+		<li  >
+	<A HREF="/catalogue/296" class = left_blue >Приложения</A>
+		<li  >
+	<A HREF="/catalogue/2430" class = left_blue >Средства разработки</A>
+		<li  >
+	<A HREF="/catalogue/5489" class = left_blue >Продукты с электронными ключами (ESD)</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/2368" class = left_blue >Антивирусы и системы безопасности</A>
+	<ul>	<li  >
+	<A HREF="/catalogue/2397" class = left_blue >Symantec</A>
+		<li  >
+	<A HREF="/catalogue/331" class = left_blue >Kaspersky Lab</A>
+		<li  >
+	<A HREF="/catalogue/350" class = left_blue >Eset</A>
+		<li  >
+	<A HREF="/catalogue/2348" class = left_blue >Dr.Web</A>
+	</UL>	<li  >
+	<A HREF="/catalogue/316" class = left_blue >Symantec</A>
+		<li  >
+	<A HREF="/catalogue/320" class = left_blue >Adobe</A>
+		<li  >
+	<A HREF="/catalogue/14" class = left_blue >Corel</A>
+		<li  >
+	<A HREF="/catalogue/315" class = left_blue >ABBYY</A>
+		<li  >
+	<A HREF="/catalogue/4792" class = left_blue >Acronis</A>
+		<li  >
+	<A HREF="/catalogue/351" class = left_blue >Autodesk</A>
+		<li  >
+	<A HREF="/catalogue/330" class = left_blue >Embarcadero</A>
+		<li  >
+	<A HREF="/catalogue/1431" class = left_blue >Famatech</A>
+		<li  >
+	<A HREF="/catalogue/337" class = left_blue >Promt</A>
+		<li  >
+	<A HREF="/catalogue/1528" class = left_blue >The BAT</A>
+		<li  >
+	<A HREF="/catalogue/1521" class = left_blue >WinRAR</A>
+		<li  >
+	<A HREF="/catalogue/1538" class = left_blue >Nero AG</A>
+		<li  >
+	<A HREF="/catalogue/2887" class = left_blue >TheGreenBow</A>
+	</UL>
+
+</div></div></td>
+				<td width="2" valign="top" rowspan="2"><img src="/images/vert.jpg" width="2" /></td>
+      		  	<td valign="top" rowspan="2">
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<script type="text/javascript" src="/scripts/jquery.history.js"></script>
+	<script type="text/javascript">
+
+	jQuery.noConflict();
+
+
+	jQuery(document).ready(function(){
+		jQuery("a[rel='history']").click(function(){
+			//
+			var hash = this.href;
+			hash = hash.replace(/^.*#/, '');
+			jQuery.historyLoad(hash);
+			return false;
+		});
+	});
+	</script>
+
+
+					<table border="0" cellpadding="0" cellspacing="0"  width="100%">
+					  <tr><td align="left" valign="top" class="menu" style="-webkit-box-shadow: #555 1px 1px 7px;
+-moz-box-shadow: #555 1px 1px 7px;
+box-shadow: #555 1px 1px 7px; "  >
+
+<script type='text/javascript'>
+
+function mainmenu(){
+$(" #nav ul ").css({display: "none"}); // Opera Fix
+$(" #nav li").hover(function(){
+		$(this).find('ul:first').css({visibility: "visible",display: "none"}).show(400);
+		},function(){
+		$(this).find('ul:first').css({visibility: "hidden"});
+		});
+}
+
+ 
+ 
+ $(document).ready(function(){					
+mainmenu();});
+
+
+</script>
+
+<style>
+
+.menu{
+background: #488ACC;
+width:100%;
+min-width:720px;
+}
+#nav, #nav ul{
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+margin:0;
+padding:0;
+list-style-type:none;
+list-style-position:outside;
+position:relative;
+border:1px solid #73AACD;
+border-top:0px;
+border-right:0px;
+z-index:50;
+}
+
+#nav a{
+display:block;
+padding-top:7px;
+padding-bottom:8px;
+padding-left:25px;
+padding-right:25px;
+border-right:1px solid #73AACD;
+border-top:1px solid #73AACD;
+color:#fff;
+text-decoration:none;
+background: #488ACC; 
+z-index:50;
+
+}
+
+#nav a:hover{
+background: #286AaC;
+color:#fff;
+z-index:50;
+}
+
+#nav li{
+float:left;
+position:relative;
+z-index:50;
+}
+
+#nav ul {
+position:absolute;
+display:none;
+top:30px;
+z-index:50;
+
+}
+
+#nav li ul a{
+font-size:10px;
+width:130px;
+height:auto;
+float:left;
+z-index:50;
+padding-left:15px;
+padding-right:15px;
+
+padding-top:6px;
+padding-bottom:6px;
+}
+
+#nav ul ul{
+top:auto;
+z-index:50;
+
+}	
+
+#nav li ul ul {
+left:161px;
+}
+
+#nav li:hover ul ul, #nav li:hover ul ul ul, #nav li:hover ul ul ul ul{
+display:none;
+}
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li li li li:hover ul{
+display:block;
+}
+</style>
+
+<table cellpadding="0" cellspacing="0" class="menu" >
+
+<tr><td>
+
+<ul id = "nav">
+<li><a href="/" style = 'background-color:#286AaC;' id = "menu0" >Главная</a></li>
+<li><a href="/news/"  id = "menu1" >Новости</a>
+</li>
+
+<li><a href="/promo/"  id = "menu1" >Акции</a>
+</li>
+
+
+<li><a href="/solutions/"  id = "menu2" >Услуги</a>
+
+<ul>  <li><a href="/solutions/outsourcing/">Аутсорсинг</a>
+  <li><a href="/solutions/computers/">Компьютеры</a>
+  <li><a href="/solutions/distribution/">Дистрибуция</a>
+  <li><a href="/solutions/1c/">Финансовые системы 1С</a>
+  <li><a href="/solutions/web/">WEB-решения</a>
+  <li><a href="/solutions/net/">Сетевые технологии</a>
+<ul>  <li><a href="/solutions/net/zyxel/">Администрирование сети</a>
+</UL></UL>
+
+</li>
+<li><a href="/company/"  id = "menu3" >О компании</a>
+
+  <ul>
+    <li><a href="/company/about/" >О компании</a></li>  <li><a href="/company/payment/" >Оформление и оплата заказа</a></li>  <li><a href="/company/delivery/" >Доставка товара</a></li>  <li><a href="/company/warranty/" >Гарантия</a></li>  <li><a href="/company/moneyback/" >Обмен и возврат товара</a></li>  <li><a href="/company/diploms/" >Дипломы и сертификаты</a></li>  <li><a href="/company/partners/" >Наши партнёры</a></li>  <li><a href="/company/job/" >Вакансии</a></li>  </ul>
+</li>
+<li><a href="//" onclick="return false" >Прайс-листы</a>
+<ul>
+<li><a href=http://www.microlab.ru/ml_all.zip>Весь прайс-лист (ml_all.zip)</a></li>
+<li><a href=http://www.microlab.ru/ml_hard.zip>Оборудование (ml_hard.zip)</a></li>
+<li><a href=http://www.microlab.ru/ml_soft.zip>Программное обеспечение (ml_soft.zip)</a></li>
+</ul>
+</li>
+<li><a href="/support/"  id = "menu4" >Поддержка</a>
+ 
+ 
+  
+ 
+ 
+</li>
+
+
+
+<li><a href="/contacts/"  id = "menu4" >Контакты</a>
+</ul>
+</td>
+
+
+</tr>
+</table>
+</td></tr>
+					  <tr><td valign="top"  >
+
+					  <div class="main"  style="margin-top:7px;">
+						<div id="load">
+
+						<table><tr><td >
+
+
+<table width="100%" cellpadding="0" cellspacing="0" >
+<tr>
+<td style = "">
+
+</td>
+</tr>
+
+<tr><td valign="top"  style="padding-bottom:20px; padding-right:15px;">
+
+<div class="rounded rc10">
+<table cellpadding="5" >
+<tr><td >
+<h3><a href="/solutions/outsourcing/">Аутсорсинг</a></h3>
+<a href="/solutions/outsourcing/"><img src="/images/solutions/outsourcing copy.jpg"  style="width:120px; float:left; padding:10px; border:0px; " /></a>
+<div style="text-align:justify"><br>Компания «Майкролэб» предоставляет комплекс  IT-услуг, позволяющий полностью исполнять в рамках контракта по IT-аутсорсингу функции IT-отдела, системного администратора компании, группы технической поддержки, службы сервиса.</div>
+</td></tr>
+<tr><td align="right"><a href = "/solutions/outsourcing/">подробнее о направлении</a></td></tr>
+</table>
+</div>
+
+</td>
+</tr>
+
+		<tr><td valign="top"  style="padding-bottom:20px; padding-right:15px;">
+
+<div class="rounded rc10">
+<table cellpadding="5" >
+<tr><td >
+<h3><a href="/solutions/computers/">Компьютеры</a></h3>
+<a href="/solutions/computers/"><img src="/images/solutions/computer.png"  style="width:120px; float:left; padding:10px; border:0px; " /></a>
+<div style="text-align:justify"><br>Наши специалисты имеют почти 20-летний опыт работы с <h1>компьютерным оборудованием</h1>. Мы следим за тенденциями, новинками и развитием технологий на нашем рынке. Наш стиль - взвешенность при оценке возможностей, достоинств и недостатков технологических решений. Наши экспертные решения тщательно сбалансированы, конфигурации серверов и рабочих станций оптимизированы на основе нашего многолетнего опыта и с учетом тенденций развития компьютерной отрасли на ближайшие годы. <br> Качество сборки обеспечивается высокой ответственностью и профессионализмом наших сотрудников. <br /><br /> Мы предлагаем своим заказчикам умеренные, конкурентные цены. Мы не стремимся за дешевизной в ущерб качеству и функционалу. Но Вы  не будете переплачивать и за излишний функционал. Наши компьютеры - это отличное качество, высокая надежность и производительность по адекватной цене.</div>
+</td></tr>
+<tr><td align="right"><a href = "/solutions/computers/">подробнее о направлении</a></td></tr>
+</table>
+</div>
+
+</td>
+</tr>
+
+		<tr><td valign="top"  style="padding-bottom:20px; padding-right:15px;">
+
+<div class="rounded rc10">
+<table cellpadding="5" >
+<tr><td >
+<h3><a href="/solutions/distribution/">Дистрибуция</a></h3>
+<a href="/solutions/distribution/"><img src="/images/solutions/distribution.jpg"  style="width:120px; float:left; padding:10px; border:0px; " /></a>
+<div style="text-align:justify"><br>Наша компания занимается <h1>продажей компьютеров</h1>, периферии и офисного оборудования. Ассортимент предлагаемой нашей компанией продукции состоит из более чем 10’000 наименований и способен удовлетворить самые взыскательные запросы наших клиентов. Это поставка оборудования крупнейших производителей компьютерного и телекоммуникационного оборудования, оргтехники: 3Com, D-Link, LinkSys, ZyXel, Dell, Sony, Toshiba, IBM, LG, NEC, Samsung, ASUS, Supermicro, Gigabyte, Hewlett Packard, Canon, Xerox, Seagate, Fujitsu, APC, Panasonic, negorack. Надежность поставок обеспечена развитой службой логистики, а также 15-летними отношениями.<br /><br />
+
+<h1>Продажа расходных материалов</h1> мировых лидеров в производстве печатной и копировальной техники Canon, Xerox, HP, Epson, Samsung, Kyocera, Ricoh, Konica-Minolta, Panasonic.
+<br /><br />
+Мы поставляем <h1>программное обеспечение</h1> Microsoft, Borland, Pervasive, Entensys, Acronis, ACD Systems, Symantec, Corel, Adobe, 1С Предприятие, ABBYY, Promt, Kaspersky Lab, Eset. Консультации наших специалистов помогут выбрать оптимальные решения.
+</div>
+</td></tr>
+<tr><td align="right"><a href = "/solutions/distribution/">подробнее о направлении</a></td></tr>
+</table>
+</div>
+
+</td>
+</tr>
+
+		<tr><td valign="top"  style="padding-bottom:20px; padding-right:15px;">
+
+<div class="rounded rc10">
+<table cellpadding="5" >
+<tr><td >
+<h3><a href="/solutions/1c/">Финансовые системы 1С</a></h3>
+<a href="/solutions/1c/"><img src="/images/solutions/1c.jpg"  style="width:120px; float:left; padding:10px; border:0px; " /></a>
+<div style="text-align:justify"><p>Наша компания является официальным сертифицированным партнером фирмы «1С» в рамках программы 1С:ФРАНЧАЙЗИНГ.
+</p>
+<p>
+Мы предоставляем квалифицированную помощь в выборе программного обеспечения, необходимого для работы Вашего предприятия, продадим, установим, настроим выбранное ПО и обучим ваших специалистов. 
+Мы готовы построить модель автоматизации деятельности вашей компании путем описания всех необходимых для учета бизнес-процессов и разработать индивидуальную    программно-аппаратную конфигурацию, оптимально подходящую для учета и управления на Вашем предприятии. Обеспечиваем полное последующее сопровождение внедренных нами типовых и специализированных систем учета. </p></div>
+</td></tr>
+<tr><td align="right"><a href = "/solutions/1c/">подробнее о направлении</a></td></tr>
+</table>
+</div>
+
+</td>
+</tr>
+
+		<tr><td valign="top"  style="padding-bottom:20px; padding-right:15px;">
+
+<div class="rounded rc10">
+<table cellpadding="5" >
+<tr><td >
+<h3><a href="/solutions/web/">WEB-решения</a></h3>
+<a href="/solutions/web/"><img src="/images/solutions/web.jpg"  style="width:120px; float:left; padding:10px; border:0px; " /></a>
+<div style="text-align:justify"><br />Наша компания предлагает профессиональную <h1>разработку и дизайн сайтов</h1>, <h1>сопровождение сайтов</h1> в течение всего жизненного цикла, <h1>поисковую оптимизацию</h1> и <h1>продвижение сайта<h1> в результатах поиска по заданным ключевым словам в поисковых системах Яндекс и Google.</div>
+</td></tr>
+<tr><td align="right"><a href = "/solutions/web/">подробнее о направлении</a></td></tr>
+</table>
+</div>
+
+</td>
+</tr>
+
+		<tr><td valign="top"  style="padding-bottom:20px; padding-right:15px;">
+
+<div class="rounded rc10">
+<table cellpadding="5" >
+<tr><td >
+<h3><a href="/solutions/net/">Сетевые технологии</a></h3>
+<a href="/solutions/net/"><img src="/images/solutions/lan.png"  style="width:120px; float:left; padding:10px; border:0px; " /></a>
+<div style="text-align:justify"><p>Устанавливаем и настраиваем сети, как простые, из нескольких компьютеров, так и сложные, состоящие из десятков компьютеров со сложной топологией, в том числе и интрасети. Мы проконсультируем и обучим специалистов Вашей компании методологии и   инструментам, применяемым для обеспечения безопасности компьютерной инфраструктуры.</p></div>
+</td></tr>
+<tr><td align="right"><a href = "/solutions/net/">подробнее о направлении</a></td></tr>
+</table>
+</div>
+
+</td>
+</tr>
+
+		
+</table>
+
+</td>
+
+
+<td width="220" valign="top">
+
+
+<style>
+
+div.submenu_cab{
+background-color:#85B4DE;
+padding:3px;
+}
+
+a.submenu_cab{
+color:#FFFFFF;
+text-decoration:none;
+}
+a.submenu_cab:hover{
+color:#FFFFFF;
+text-decoration:none;
+}
+a.submenu_cabOn{
+color:#FFFFFF;
+text-decoration:none;
+}
+
+td.submenu_cab{
+padding:5px;
+border-bottom:1px #4870aA solid;
+}
+
+td.submenu_cab:hover{
+padding:5px;
+background-color:#28508A;
+}
+
+td.submenu_cabOn{
+padding:5px;
+background-color:#28508A;
+border-bottom:1px #4870aA solid;
+}
+
+
+</style>
+
+
+	<div class="rounded rc10" >
+
+	<table width="100%" >
+	<tr><td  valign="top"><h2 style="border-bottom:#CCCCCC 2px solid; margin-top:9px;">Новости</h2></td></tr>
+		<tr><td  valign="top"><a href = "/news/226/"  class="contacts"><div style="position:relative; left:-5px; display:inline">&bull;</div><div style="display:inline">Разработан скрипт для взлома Wi-Fi сети WPA/WPA2 без брутфорса</div></a><font color="#888888"> - 10 октября 2016г.</font></td></tr>
+
+		<tr><td  valign="top"><a href = "/news/225/"  class="contacts"><div style="position:relative; left:-5px; display:inline">&bull;</div><div style="display:inline">HP покупает весь принтерный бизнес Samsung</div></a><font color="#888888"> - 12 сентября 2016г.</font></td></tr>
+
+		<tr><td  valign="top"><a href = "/news/224/"  class="contacts"><div style="position:relative; left:-5px; display:inline">&bull;</div><div style="display:inline">Logitech представила свои первые бесшумные мыши</div></a><font color="#888888"> - 07 сентября 2016г.</font></td></tr>
+
+		
+	</table>
+	
+	</div>
+<script type="text/javascript"> 
+
+    $(function() {
+
+        $('a.qr').lightBox();
+
+    });
+
+</script> 
+
+
+<table width="120"  class="contacts">
+<tr><td class="td">Время работы:</td></tr>
+<tr><td align="right">пн-пт, 9:30 - 19:00</td></tr>
+<tr><td class="td">E-Mail:</td></tr>
+<tr><td align="right">info@microlab.ru</td></tr>
+<tr><td class="td">Skype:</td></tr>
+<tr><td align="right">microlab-ru</td></tr>
+<tr><td class="td">Адрес:</td></tr>
+<tr><td align="right">г. Москва, Большой Толмачёвский переулок, дом 5<br><br>
+<table>
+<tr><td><img src = "/images/other/metro.png" width = 14></td><td align = left>Третьяковская</td></tr>
+<tr><td><img src = "/images/other/metro.png" width = 14></td><td align = left>Новокузнецкая</td></tr>  
+<tr><td><img src = "/images/other/metro.png" width = 14></td><td align = left>Полянка</td></tr>
+</table></td></tr>
+</table>
+
+<br/>
+<div class="rounded rc10" >
+<table width="100%" >
+	<tr><td  valign="top"><h2 style="border-bottom:#CCCCCC 2px solid; margin-top:9px;">Поддержка</h2>
+	</td></tr>
+	<tr><td>
+	<a class="contacts" href="/support/40/"><div style="position:relative; left:-5px; display:inline">&bull;</div><div style="display:inline">Сравнение версий MS Windows 7</div></a><br/>
+		<a class="contacts" href="/support/55/"><div style="position:relative; left:-5px; display:inline">&bull;</div><div style="display:inline">Современный компьютер 2013</div></a><br/>
+		<a class="contacts" href="/support/56/"><div style="position:relative; left:-5px; display:inline">&bull;</div><div style="display:inline">Сравнительная таблица процессоров Intel® семейства Xeon™</div></a><br/>
+		<a class="contacts" href="/support/negorack/"><div style="position:relative; left:-5px; display:inline">&bull;</div><div style="display:inline">Серверные корпуса Negorack</div></a><br/>
+		<a class="contacts" href="/support/supermicro/"><div style="position:relative; left:-5px; display:inline">&bull;</div><div style="display:inline">Решения Supermicro</div></a><br/>
+		<a class="contacts" href="/support/35/"><div style="position:relative; left:-5px; display:inline">&bull;</div><div style="display:inline">Сравнение версий MS Office 2016</div></a><br/>
+		</td></tr>
+</table>
+</div>
+<table width="100%" >
+<tr><td align="right"><a href="/images/qr-code-big.gif" class="qr" rel = "lightbox" ><img src = "/images/qr-code.gif" /></a></td></tr>
+</table>
+
+
+<br /><br />
+<table width="100%"><tr><td align="right">
+	<!-- Dr.Web Сертифицированный партнер -->
+<a href="http://microlab.ru/links.php?go=http://www.drweb.com/" target="_top" rel="nofollow">
+<img src="http://st.drweb.com/static/new-www/files/shields/RU/OLD/Sertif_partner.gif" border="0" width="130" height="54" align="texttop" alt="Dr.Web Сертифицированный партнер">
+</a>
+<!-- end -->
+</td></tr></table>
+</td>
+
+
+</tr>
+
+
+
+</table>																																										
+						
+																			<!-- nikital@microlab.ru -->
+																																																														   <!-- nikital@microlab.ru -->
+						</div>
+					  </div>
+
+					  </td></tr>
+					</table>
+
+			   </td>
+     	</tr>
+		<tr><td valign="bottom">
+
+
+
+<div class="counters">
+
+
+     <!-- begin of Top100 code -->
+                              <script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?99"></script>
+                            <noscript>
+                              <img src="http://counter.rambler.ru/top100.cnt?99" alt="" width="1" height="1" border="0" />
+                            </noscript>
+                              <!-- end of Top100 code -->
+                              <!-- begin of Top100 logo -->
+                              <a href="http://microlab.ru/links.php?go=http://top100.rambler.ru/home?id=99" rel = "nofollow" ><img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-blue.gif" alt="Rambler's Top100" width="88" height="31" border="0" /></a>
+                              <!-- end of Top100 logo -->
+
+<!--LiveInternet counter-->
+                            <script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank rel = 'nofollow'><img src='http://counter.yadro.ru/hit?t18.11;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border=0 width=88 height=31><\/a>")//--></script>
+                            <!--/LiveInternet-->
+
+                              <!--Rating@Mail.ru COUNTER-->
+                            <script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script>
+                            <script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script>
+                            <script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script>
+                            <script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script>
+                            <script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://microlab.ru/links.php?go=http://top.mail.ru/jump?from=253478"'+
+' rel = "nofollow" target="_top"><img src="http://de.cd.b3.a0.top.mail.ru/counter'+
+'?id=253478;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border="0" height="31" width="88"/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script>
+                            <noscript>
+                              <a
+target="_top" href="http://microlab.ru/links.php?go=http://top.mail.ru/jump?from=253478" rel = "nofollow" ><img
+src="http://de.cd.b3.a0.top.mail.ru/counter?js=na;id=253478;t=57"
+border="0" height="31" width="88"
+alt="Рейтинг@Mail.ru"/></a>
+                            </noscript>
+                            <script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script>
+
+                            <!--/COUNTER-->
+
+
+  </div>
+
+
+
+
+		</td></tr>
+   	 	</table>
+	 </td>
+  </tr>
+
+
+
+  <tr><td class="bottom"><img src='/images/loadingAnimation.gif' width="1" height="1" style="visibility:hidden;">
+
+  <table width="100%"><tr>
+  
+  <td width="250">&#169; 1992-2015 Майкролэб Инвестмент
+
+
+  </td></tr></table>
+
+  </td></tr>
+</table>
+</div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">var yaParams = {/*Здесь параметры визита*/};</script><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter10519681 = new Ya.Metrika({id:10519681, enableAll: true,params:window.yaParams||{ }}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/10519681" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = '16349';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script><script async="async" src="https://w.uptolike.com/widgets/v1/zp.js?pid=1372661" type="text/javascript"></script>
+<!-- {/literal} END JIVOSITE CODE -->
+</body>
+</html>

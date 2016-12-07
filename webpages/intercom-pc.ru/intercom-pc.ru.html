@@ -1,0 +1,1393 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0043)http://shop.intercom-pc.ru/cgi-bin/shop.cgi -->
+<!-- Copyright 1998-2004 Site Makers | master@sitemakers.ru | http://www.sitemakers.ru  --><HTML><HEAD><TITLE>ÈÍÒÅÐÊÎÌ [INTERCOM]. Ñåðâåðû, êîìïüþòåðû, íîóòáóêè - Äîáðî ïîæàëîâàòü! - -</TITLE>
+<META content=all,index,follow name=robots>
+<META content="7 days" name=revisit-after>
+<META content=yes name=allow-search>
+<META content="Äîáðî ïîæàëîâàòü! -  -  -      " name=searchtitle>
+<META content="       " name=description>
+<META 
+ content="INTERCOM, Intercom-PC, intercom-pc, Intercom, Èíòåðêîì, Ñåðâåð, Ñåðâåðû, Ñåðâåðíîå îáîðóäîâàíèå, Intel, Þíèòîâûé ñåðâåð, Þíèòîâûå ñåðâåðû, Þíèòîâûå ñåðâåðà, Ïðîäàæà ñåðâåðîâ, Êîìïüþòåðíûé ìàãàçèí" 
+name=keywords>
+<META content=ðóññêèé,ru,russian,rus name=language>
+<META content=global name=distribution>
+<META content="Site Makers. http://www.sitemakers.ru" name=author-corporate>
+<META content=master@sitemakers.ru name=publisher-email>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<META content=index,follow name=robots>
+<SCRIPT language=JavaScript><!--
+function x(mode) {
+with(document.form) { rzm.value=mode; submit(); }
+return;
+}
+function sg(x,n) {
+with(document.form) {
+if(elements[x].checked==true) {
+window.open('shop.cgi?rzm=add&tvr='+n,n,'width=400,height=200,scrollbars'); 
+}
+else { 
+window.open('shop.cgi?rzm=del&tvr='+n,n,'width=400,height=200,scrollbars'); 
+}
+void(0);
+}
+return;
+}
+function sg2(x,n) {
+with(document.form) {
+if(elements[x].checked==false) {
+elements[x].checked=true;
+window.open('shop.cgi?rzm=add&tvr='+n,n,'width=400,height=200,scrollbars');
+void(0);
+}
+}
+return;
+}
+
+function sp(checkbox){
+var fldkol, fldcen, fldsum;
+fldkol = "k"+checkbox.name;
+fldcen = "c"+checkbox.name;
+fldsum = "i"+checkbox.name;
+with(document.form) {
+ if(checkbox.checked) { elements[fldkol].value = "1"; }
+ else { elements[fldkol].value = "0"; }
+ elements[fldsum].value = parseFloat(elements[fldkol].value)*parseFloat(elements[fldcen].value);
+}
+get_sum_itogo();
+return;
+}
+function sc(textbox){
+get_sum_itogo();
+return;
+}
+function get_sum_itogo() {
+var i, str, kol, cen, sum, sum_all;
+sum_all=0;
+with(document.form) {
+ for (i=0; i<elements.length; i++) {
+  str=elements[i].name.substring(0,1);
+  if(str == 'c' && i<(elements.length-3)) {
+   cen=elements[i].value;
+   str=elements[i+2].name.substring(0,1);
+   if(str == 'k') {
+    kol=elements[i+2].value;
+    str=elements[i+3].name.substring(0,1);
+    if(str == 'i') {
+     if(kol>0) {
+      elements[i+1].checked=true;
+      sum=parseFloat(cen)*parseFloat(kol);
+      elements[i+3].value=sum;
+      sum_all+=sum;
+     }
+     else {
+      kol=elements[i+2].value=0;
+      elements[i+1].checked=false;
+      sum=elements[i+3].value=0;
+     }
+    }
+   }
+  }
+ }
+ itogo.value=sum_all;
+}
+return;
+}
+
+function sitog(rx) {
+with(document.form) {
+
+rzm.value=rx;
+submit();
+}
+return;
+}
+function dd()
+{
+var x, x1=0;
+with(document.form) {
+x="q"+fio.value; if(x=="q") { alert("Íå óêàçàíî ÔÈÎ"); return; }
+x="q"+tel.value; if(x=="q") { alert("Íå óêàçàí òåëåôîí"); return; }
+x="q"+email.value; if(x=="q") { alert("Íå óêàçàí e-mail"); return; }
+x="q"+address.value; if(x=="q") { alert("Íå óêàçàí àäðåñ"); return; }
+rzm.value="end";
+submit();
+}
+}
+
+function gg(txt) {
+var i, str;
+with(document.form) {
+	for (i=0; i<elements.length; i++) {
+  	if(elements[i].type=='checkbox' && elements[i].checked) {
+			str=elements[i].name.substring(0,2);
+			if(str == 'sg') { str =elements[i].name.substring(2,elements[i].name.length); scomp.value=scomp.value+''+str+','; }
+		}
+	}
+	str=scomp.value;
+}
+document.location=txt+'&scomp='+str;
+}
+function saletvr(rx,tx) { with(document.form) { rzm.value=rx; tvr.value=tx; submit(); } return; }
+
+
+var bV=parseInt(navigator.appVersion);
+NS4=(document.layers) ? true : false;
+IE4=((document.all)&&(bV>=4))?true:false;
+ver4 = (NS4 || IE4) ? true : false;
+isExpanded = false;
+function initIt() {
+  if(IE4) { t=document.all.tags("DIV"); for(i=0; i<t.length; i++) { if(t(i).className=="child") t(i).style.display="none"; } }
+}
+function exp2IE(el) {
+ var t1,t2;
+ if(IE4) { t1=eval(el+"Child"); t2=document.images[el+'Img']; if(t1.style.display=="none") { t1.style.display="block"; t2.src="../sysminus.gif"; } else { t1.style.display="none"; t2.src="../sysplus.gif"; } return false; }
+ else { return true; }
+}
+onload=initIt;
+//--></SCRIPT>
+
+<META content="MSHTML 6.00.6000.16640" name=GENERATOR><style type="text/css">
+<!--
+.style6 {font-size: 70px}
+.style7 {
+	font-size: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style8 {
+	color: #0000FF;
+	font-weight: bold;
+}
+.style9 {color: #0000FF}
+-->
+</style>
+<HEAD>
+<meta name="verify-v1" content="pUVuQlGHnd//117TqizfNcWb4J3lID2aYNqqr3EfV8I=" />
+</HEAD>
+<BODY text=#444444 vLink=#444444 aLink=#444444 link=#444444 bgColor=#ffffff 
+leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<STYLE>A {
+	COLOR: #444444; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+.xxx {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.xxx:hover {
+	COLOR: #cc0000
+}
+.xxx2 {
+	COLOR: #444444; TEXT-DECORATION: underline
+}
+A.xxx2:hover {
+	COLOR: #000000
+}
+.xxx3 {
+	FONT-WEIGHT: bold; COLOR: #300090; TEXT-DECORATION: underline
+}
+A.xxx3:hover {
+	COLOR: #cc0000
+}
+SELECT {
+	FONT-SIZE: 10px; FONT-FAMILY: tahoma
+}
+INPUT {
+	FONT-SIZE: 10px; FONT-FAMILY: tahoma
+}
+FORM {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+DD {
+	MARGIN-TOP: 5px; MARGIN-BOTTOM: 0px
+}
+DL {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+DT {
+	MARGIN-TOP: 0px; FONT-WEIGHT: bold; MARGIN-BOTTOM: 0px
+}
+P {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+il {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+UL {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+OL {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+BLOCKQUOTE {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+BODY {
+	FONT-SIZE: 8pt; FONT-FAMILY: Verdana
+}
+.txt {
+	FONT-SIZE: 8pt; FONT-FAMILY: Verdana
+}
+.txt0 {
+	FONT-SIZE: 10px; FONT-FAMILY: Tahoma
+}
+TD {
+	FONT-SIZE: 11px; FONT-FAMILY: Tahoma
+}
+TH {
+	FONT-SIZE: 11px; FONT-FAMILY: Tahoma
+}
+.txt1 {
+	FONT-SIZE: 11px; FONT-FAMILY: Tahoma
+}
+.txt2 {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana
+}
+.zgl {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #292975; FONT-FAMILY: Verdana
+}
+.zgl2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #292975; FONT-FAMILY: Verdana
+}
+.child {
+	DISPLAY: none
+}
+.childo {
+	DISPLAY: block
+}
+</STYLE>
+
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR bgColor=#ffffff>
+          <TD vAlign=top background=images/top1.jpg><IMG height=7 alt="" 
+            src="images/e1.gif" width=180 border=0><BR>
+            <CENTER>
+            </CENTER>
+            
+            <A 
+            href="http://shop.intercom-pc.ru/cgi-bin/shop.cgi"><IMG height=1 
+            alt="" src="images/e1.gif" width=1 border=0></A><BR></TD>
+          <TD vAlign=top background=images/top3_bgr.jpg><IMG alt="" 
+            src="images/view.jpg" border=0></TD>
+          <TD><IMG height=140 alt="" src="images/top21.jpg" width=10 
+            border=0><BR></TD>
+          <TD vAlign=top width="100%" background=images/top3_bgr.jpg><IMG 
+            height=7 alt="" src="images/e1.gif" width=300 border=0><BR>
+            <P align=right nowrap><A 
+            href="index.htm"><IMG 
+            alt="Â íà÷àëî" src="images/b1.gif" align=absMiddle 
+            border=0></A> &nbsp; <A 
+            href="http://intercom-pc.ru/contacts.php"><IMG 
+            alt=Èíôîðìàöèÿ src="images/b2.gif" align=absMiddle 
+            border=0></A> &nbsp; <A 
+            href="http://shop.intercom-pc.ru/cgi-bin/view.cgi?rzm=map"></A> &nbsp;&nbsp;</P>
+            <div align="center">
+              <p class="style6"><img src="images/top3.gif" width="300" height="100"><BR>
+                </p>
+              </div></TD>
+          <TD vAlign=top background=images/top41.jpg><IMG height=5 alt="" 
+            src="images/e1.gif" width=250 border=0><BR>
+            <FORM name=finds7 action=search.php method=get><A 
+            href="mailto:info@intercom-pc.ru"><IMG alt="Îòïðàâèòü ïèñüìî" 
+            src="images/b5.gif" align=absMiddle border=0></A> &nbsp; <A 
+            onclick='window.external.AddFavorite("http://www.intercom-pc.ru","INTERCOM. Ñåðâåðû, êîìïüþòåðû, íîóòáóêè");return false' 
+            href="http://shop.intercom-pc.ru/cgi-bin/shop.cgi#"><IMG 
+            alt="Äîáàâèòü â èçáðàííîå" src="images/b6.gif" align=absMiddle 
+            border=0></A> &nbsp; <A 
+            onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.intercom-pc.ru'); return false;" 
+            href="http://shop.intercom-pc.ru/cgi-bin/shop.cgi#"></A> &nbsp; 
+              <INPUT type=hidden value=view name=rzm><INPUT 
+            class=itext onchange=document.finds7.submit(); size=14 name="search"> 
+            <A class=xxx3 href="javascript: document.finds7.submit();"><IMG 
+            alt="" src="images/b4.gif" align=absMiddle border=0></A> 
+          </FORM></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#ffffff><img src="images/top11.jpg" width="180" height="24" border=0><BR></TD>
+          <TD width="100%" bgColor=#f9ac00>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <A 
+            href="index.htm"><FONT 
+            color=#000000><B>Êàòàëîã òîâàðîâ</B></FONT></A> &nbsp;&nbsp;&nbsp; 
+            <A href="news.php"><FONT 
+            color=#000000>Íîâîñòè</FONT></A> &nbsp;&nbsp;&nbsp; <A 
+            href="info.php"><FONT 
+            color=#000000>Èíôîðìàöèÿ</FONT></A> &nbsp;&nbsp;&nbsp; <A 
+            href="about.php"><FONT 
+            color=#000000>Î êîìïàíèè</FONT></A> &nbsp;&nbsp;&nbsp; <A 
+            href="search.php"><FONT 
+            color=#000000>Ïðàéñ-ëèñò</FONT></A> </TD>
+          <TD><IMG height=24 alt="" src="images/top51.jpg" width=205 
+            border=0><BR></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR vAlign=top>
+          <TD background=images/left_bgr.jpg><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR bgColor=#c0c0c0>
+                <TD><IMG height=20 src="images/e1.gif" width=10 
+                  border=0><BR></TD>
+                <TD width="100%"><FONT class=txt1><A 
+                  href="index.htm"><FONT 
+                  color=#ffffff><B><B>Êàòàëîã òîâàðîâ</B></B></FONT></A> 
+                  &nbsp;&nbsp;&nbsp; </FONT></TD>
+                <TD><IMG height=20 src="images/e1.gif" width=10 
+                  border=0><BR></TD></TR></TBODY></TABLE>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR bgColor=#f9f9f9>
+                <TD colSpan=3><IMG height=10 src="images/e1.gif" width=1 
+                  border=0><BR></TD></TR>
+              <TR bgColor=#f9f9f9>
+                <TD width="6%"><IMG height=1 src="images/e1.gif" width=10 
+                  border=0><BR></TD>
+                <TD width="85%"><FONT class=txt1><A 
+                  href="serv_base.php">Ñåðâåðû íà÷àëüíîãî óðîâíÿ </A><BR>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD background=images/b2_3.gif><IMG 
+                        src="images/b2_3.gif" 
+                  border=0></TD></TR></TBODY></TABLE>
+                  <A 
+                  href="serv_rackmount.php">Ñåðâåðû 1U-2U </A><BR>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD background=images/b2_3.gif><IMG 
+                        src="images/b2_3.gif" 
+                  border=0></TD></TR></TBODY></TABLE>
+                  <A 
+                  href="serv_corp.php">Êîðïîðàòèâíûå ñåðâåðû </A><BR>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD background=images/b2_3.gif><IMG 
+                        src="images/b2_3.gif" 
+                  border=0></TD></TR></TBODY></TABLE>
+                  <A 
+                  href="serv_performance.php">Ïðîèçâîäèòåëüíûå ñåðâåðû </A><BR>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD background=images/b2_3.gif><IMG 
+                        src="images/b2_3.gif" 
+                  border=0></TD></TR></TBODY></TABLE>
+                  <A 
+                  href="pc_office.php">Îôèñíûå êîìïüþòåðû </A><BR>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD background=images/b2_3.gif><IMG 
+                        src="images/b2_3.gif" 
+                  border=0></TD></TR></TBODY></TABLE>
+                  <A 
+                  href="pc_home.php">Äîìàøíèå êîìïüþòåðû </A><BR>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD background=images/b2_3.gif><IMG 
+                        src="images/b2_3.gif" 
+                  border=0></TD></TR></TBODY></TABLE>
+                  <A 
+                  href="pc_workstation.php">Ðàáî÷èå ñòàíöèè </A><A 
+                  href="index.htm&amp;new=1"></A><BR>
+                  <IMG 
+                  height=3 src="images/e1.gif" width=1 border=0><BR>
+                  <IMG 
+                  height=3 src="images/e1.gif" width=1 
+                border=0><BR></FONT></TD>
+                <TD width="9%"><IMG height=1 src="images/e1.gif" width=10 
+                  border=0><BR></TD></TR></TBODY></TABLE>
+            <BR>
+                <TABLE width="100%" height="291" border=0 cellPadding=0 cellSpacing=0>
+                  <TBODY>
+                    <TR>
+                      <TD height="20"><IMG height=1 src="images/e1.gif" width=1 
+border=0></TD>
+                      <TD bgColor=#13006f colSpan=2><IMG height=20 
+                  src="images/e1.gif" width=10 border=0><BR></TD>
+                      <TD align=middle bgColor=#13006f><p><A 
+                  href="sale.php"><FONT 
+                  color=#ffffff><B>Ðàñïðîäàæà</B></FONT></A><BR>
+                        </p>                      </TD>
+                      <TD bgcolor="#13006f"><BR></TD>
+                    </TR>
+                    <TR bgColor=#ffffff>
+                      <TD height="269"><IMG height=1 src="images/e1.gif" width=1 
+border=0></TD>
+                      <TD bgColor=#e0e0e0><IMG height=1 src="images/e1.gif" 
+                  width=1 border=0><BR></TD>
+                      <TD>&nbsp;</TD>
+                      <TD width="100%"><TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                        <TBODY>
+                          <TR vAlign=top>
+                            <TD width="100%" height="129"><CENTER>
+                                <BR>
+                                <a 
+                        href="sale.php"><img src="images/test1.jpg" 
+                        alt="" width="120" height="58" 
+                        border=0></a>
+                                <FONT 
+                        size=2>AXXRACKFP SR1500 </FONT><br>
+                              <FONT size=2><B> 230 ðóá</B> </FONT><BR>
+                              <A class=xxx3 
+                        href="sale.php">êóïèòü </A>
+                            </CENTER></TD>
+                          </TR>
+                          <TR>
+                            <TD background=images/b2_3.gif height=1><IMG 
+                        src="images/b2_3.gif" border=0></TD>
+                          </TR>
+                          <TR vAlign=top>
+                            <TD width="100%" height="138"><CENTER>
+                                <BR>
+                                <a 
+                        href="sale.php"><img src="images/test2.jpg" 
+                        alt="" width="120" height="66" border=0></a>
+                                <P><FONT 
+                        size=2>ADWPCIEXPR SR15X0</FONT><br>
+                                  <FONT FONT size=2><B>285 ðóá</B> </FONT><BR>
+                                  <A class=xxx3 
+                        href="sale.php">êóïèòü </A></P>
+                            </CENTER></TD>
+                          </TR>
+                        </TBODY>
+                      </TABLE>
+                  </TBODY>
+                </TABLE>
+                <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR bgColor=#c0c0c0>
+                <TD height="10"><IMG height=20 src="images/e1.gif" width=10 
+                  border=0></TD>
+                <TD width="100%"><FONT class=txt1><FONT 
+                  color=#ffffff><B>Ïîèñê</B></FONT> </FONT></TD>
+                <TD><IMG height=20 src="images/e1.gif" width=10 
+                  border=0><BR></TD></TR></TBODY></TABLE>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR bgColor=#f9f9f9>
+                <TD colSpan=3>&nbsp;</TD>
+              </TR>
+              <TR bgColor=#f9f9f9>
+                <TD><IMG height=1 src="images/e1.gif" width=10 
+                  border=0><BR></TD>
+                <TD width="100%"><FONT class=txt1>
+                  <SCRIPT language=JavaScript type=text/javascript><!--
+function go1(x){ with(document.finds73) { if(x=="2") { pnum.value=nprod.value; nprod.value=""; } submit(); } }
+//--></SCRIPT>
+
+                  <FORM name="form1" method="get" action="search.php">
+                    <INPUT 
+                  type=hidden value=view name=rzm> 
+                  <INPUT type=hidden name=pnum> 
+                  <INPUT style="WIDTH: 100%" size=9 name="search"
+                  width="100%">
+                  <BR><IMG 
+                  height=5 src="images/e1.gif" width=1 border=0><BR>
+                  </FORM></FONT></TD>
+                <TD><IMG height=1 src="images/e1.gif" width=10 
+                  border=0><BR></TD></TR>
+              <TR bgColor=#f9f9f9>
+                <TD colSpan=3><IMG height=10 src="images/e1.gif" width=1 
+                  border=0><BR></TD></TR></TBODY></TABLE></TD>
+          <TD width="100%" rowSpan=2>
+            <TABLE width="100%" height="5" border=0 cellPadding=0 cellSpacing=0>
+              <TBODY>
+              <TR>
+                <TD><IMG height=1 alt="" src="images/e1.gif" width=20 
+                  border=0><BR></TD>
+                <TD width="100%"><div align="right"><FONT class=txt1><!-- <font class=zgl2><b>Äîáðî ïîæàëîâàòü!</b></font><br><br> -->
+                  </FONT>
+                    <table width="100%" height="116" border="0">
+                      <tr>
+                        <td width="509"><FONT color=#00008b class="style7"><img src="images/e1.gif" height="1" width="200">Êàòàëîã òîâàðîâ</FONT></td>
+                        <td><div align="right"><img src="images/logo2008.gif" alt="Àññîöèèðîâàííûé ó÷àñòíèê ïàðòíåðñêîé ïðîãðàììû Intel" width="68" height="62"></div></td>
+                      </tr>
+                    </table>
+                </div>
+                  <CENTER>
+                    <INPUT type=hidden 
+                  name=rzm> 
+                    <INPUT type=hidden name=tvr> 
+                    <INPUT type=hidden 
+                  name=type> 
+                    <INPUT type=hidden name=itogo> 
+                    <INPUT type=hidden 
+                  name=tvrlst> 
+                    <INPUT type=hidden name=tvrlst> 
+                  </CENTER>
+                  <FONT class=txt1><FORM name=form action=shop.cgi method=post>
+                    <TABLE width="100%" height="541" border=0 cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD width="50%">
+                        <TABLE class=txt1 cellSpacing=0 cellPadding=0 
+                        width="100%" border=0>
+                          <TBODY>
+                          <TR vAlign=top>
+                            <TD align=middle><A 
+                              href="servers.php"><IMG src="images/servers.jpg" 
+                              alt="Ñåðâåðû" width="100" height="120" 
+                              border=0><BR>
+                            </A></TD>
+                            <TD>&nbsp;</TD>
+                            <TD width="100%">
+                              <TABLE class=txt1 cellSpacing=0 cellPadding=5 
+                              width="100%" border=0>
+                                <TBODY>
+                                <TR vAlign=top>
+                                <TD><A class=xxx3 
+                                href="servers.php"><B>Ñåðâåðû</B></A>
+                                  <P></P>
+                                  <A class=xxx2 
+                                href="serv_base.php">Íà÷àëüíîãî Óðîâíÿ </A><BR>
+                                  <IMG height=3 
+                                src="images/e1.gif" width=1 border=0><BR>
+                                  <A 
+                                class=xxx2 
+                                href="serv_rackmount.php">1 è 2õ Þíèòîâûå</A><BR>
+                                  <IMG height=3 
+                                src="images/e1.gif" width=1 border=0><BR>
+                                  <A 
+                                class=xxx2 
+                                href="serv_corp.php">Êîðïîðàòèâíûå</A><BR>
+                                  <IMG height=3 
+                                src="images/e1.gif" width=1 border=0><BR>
+                                  <A 
+                                class=xxx2 
+                                href="serv_performance.php">Ïðîèçâîäèòåëüíûå</A><BR>
+                                  <IMG height=3 
+                                src="images/e1.gif" width=1 border=0><BR>
+                                  <IMG height=3 
+                                src="images/e1.gif" width=1 
+                                border=0></TD>
+                                </TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+                      <TD vAlign=top width=1 
+                        background=images/b2_1.gif><IMG 
+                        src="images/b2_1.gif" border=0></TD>
+                      <TD width="50%">
+                        <TABLE class=txt1 cellSpacing=0 cellPadding=0 
+                        width="100%" border=0>
+                          <TBODY>
+                          <TR vAlign=top>
+                            <TD align=middle><A 
+                              href="computers.php"><IMG src="images/computers.jpg" 
+                              alt=Êîìïüþòåðû width="100" height="115" 
+                              border=0><BR>
+                            </A></TD>
+                            <TD>&nbsp;</TD>
+                            <TD width="100%">
+                              <TABLE class=txt1 cellSpacing=0 cellPadding=5 
+                              width="100%" border=0>
+                                <TBODY>
+                                <TR vAlign=top>
+                                <TD><A class=xxx3 
+                                href="computers.php"><B>Êîìïüþòåðû</B></A>
+                                  <P></P>
+                                  <A class=xxx2 
+                                href="pc_office.php">Îôèñíûå</A><BR>
+                                  <IMG 
+                                height=3 src="images/e1.gif" width=1 
+                                border=0><BR>
+                                  <A class=xxx2 
+                                href="pc_home.php">Äîìàøíèå</A><BR>
+                                  <IMG height=3 
+                                src="images/e1.gif" width=1 border=0><BR>
+                                  <A 
+                                class=xxx2 
+                                href="pc_workstation.php">Ðàáî÷èå ñòàíöèè </A><BR>
+                                  <IMG height=3 
+                                src="images/e1.gif" width=1 border=0><BR>
+                                  <IMG height=3 
+                                src="images/e1.gif" width=1 
+                                border=0><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD background=images/b2_2.gif height=1><IMG 
+                        src="images/b2_2.gif" border=0></TD>
+                      <TD align=middle></TD>
+                      <TD background=images/b2_2.gif height=1><IMG 
+                        src="images/b2_2.gif" border=0></TD></TR>
+                    <TR vAlign=top>
+                      <TD width="50%">
+                        <TABLE class=txt1 cellSpacing=0 cellPadding=0 
+                        width="100%" border=0>
+                          <TBODY>
+                          <TR vAlign=top>
+                            <TD align=middle><A 
+                              href="notebooks3.php"><IMG src="images/notebooks.jpg" 
+                              alt="Íîóòáóêè" width="100" height="106" 
+                              border=0><BR>
+                            </A></TD>
+                            <TD>&nbsp;</TD>
+                            <TD width="100%">
+                              <TABLE class=txt1 cellSpacing=0 cellPadding=5 
+                              width="100%" border=0>
+                                <TBODY>
+                                <TR vAlign=top>
+                                <TD><A 
+                                href="notebooks3.php" class=xxx3><strong>Íîóòáóêè</strong></A>
+                                  <P></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+                      <TD vAlign=top width=1 
+                        background=images/b2_1.gif><IMG 
+                        src="images/b2_1.gif" border=0></TD>
+                      <TD width="50%">
+                        <TABLE class=txt1 cellSpacing=0 cellPadding=0 
+                        width="100%" border=0>
+                          <TBODY>
+                          <TR vAlign=top>
+                            <TD align=middle><A 
+                              href="monitors.php"><IMG 
+                              src="images/monitors.jpg" 
+                              alt="Ìîíèòîðû" width="100" height="115" border=0><BR>
+                            </A></TD>
+                            <TD>&nbsp;</TD>
+                            <TD width="100%">
+                              <TABLE class=txt1 cellSpacing=0 cellPadding=5 
+                              width="100%" border=0>
+                                <TBODY>
+                                <TR vAlign=top>
+                                <TD><A class=xxx3 
+                                href="monitors.php"><B>Ìîíèòîðû</B></A>
+                                  <P></P>
+                                <BR>
+                                <IMG height=3 src="images/e1.gif" 
+                                width=1 
+                          border=0><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD background=images/b2_2.gif height=1><IMG 
+                        src="images/b2_2.gif" border=0></TD>
+                      <TD align=middle></TD>
+                      <TD background=images/b2_2.gif height=1><IMG 
+                        src="images/b2_2.gif" border=0></TD></TR>
+                    <TR vAlign=top>
+                      <TD width="50%">
+                        <TABLE class=txt1 cellSpacing=0 cellPadding=0 
+                        width="100%" border=0>
+                          <TBODY>
+                          <TR vAlign=top>
+                            <TD align=middle><A 
+                              href="complekt.php"><BR>
+                            </A></TD>
+                            <TD>&nbsp;</TD>
+                            <TD width="100%">
+                              <TABLE class=txt1 cellSpacing=0 cellPadding=5 
+                              width="100%" border=0>
+                                <TBODY>
+                                <TR vAlign=top>
+                                <TD><TABLE class=txt1 cellSpacing=0 cellPadding=0 
+                        width="100%" border=0>
+                                  <TBODY>
+                                    <TR vAlign=top>
+                                      <TD align=middle><a 
+                              href="complekt.php"><img 
+                              alt="Êîìïëåêòóþùèå" 
+                              src="images/12.jpg" border=0></a><A 
+                              href="http://intercom-pc.ru/notebooks/index.php"><BR>
+                                      </A></TD>
+                                      <TD>&nbsp;</TD>
+                                      <TD width="100%"><TABLE class=txt1 cellSpacing=0 cellPadding=5 
+                              width="100%" border=0>
+                                          <TBODY>
+                                            <TR vAlign=top>
+                                              <TD><A class=xxx3 
+                                href="complekt.php"><B>Êîìïëåêòóþùèå</B></A><A 
+                                href="http://intercom-pc.ru/notebooks/index.php" class=xxx3></A>
+                                                  <P><A class=xxx2 
+                                href="processor.php">Ïðîöåññîðû</A><BR>
+                                                    <IMG height=3 
+                                src="images/e1.gif" width=1 border=0><BR>
+                                                    <A 
+                                class=xxx2 
+                                href="mother_desk.php">Ìàòåðèíñêèå ïëàòû Desktop </A><BR>
+                                                    <IMG height=3 
+                                src="images/e1.gif" width=1 border=0><BR>
+                                                    <A 
+                                class=xxx2 
+                                href="mother_serv.php">Ñåðâåðíûå ìàòåðèíñêèå ïëàòû </A><BR>
+                                                    <IMG height=3 
+                                src="images/e1.gif" width=1 border=0><BR>
+                                                    <A 
+                                class=xxx2 
+                                href="video.php">Âèäåîêàðòû</A></P></TD>
+                                            </TR>
+                                          </TBODY>
+                                      </TABLE>
+									   <IMG height=3 
+                                src="images/e1.gif" width=1 border=0></TD>
+                                    </TR>
+                                  </TBODY>
+                                </TABLE>
+                                  <p>&nbsp;</p>                                  </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+                      <TD vAlign=top width=1 
+                        background=images/b2_1.gif><IMG 
+                        src="images/b2_1.gif" border=0></TD>
+                      <TD width="50%">
+                        <TABLE class=txt1 cellSpacing=0 cellPadding=0 
+                        width="100%" border=0>
+                          <TBODY>
+                          <TR vAlign=top>
+                            <TD align=middle><A 
+                              href="index.htm&amp;group=13"></A></TD>
+                            <TD>&nbsp;</TD>
+                            <TD width="100%">
+                              <TABLE class=txt1 cellSpacing=0 cellPadding=5 
+                              width="100%" border=0>
+                                <TBODY>
+                                <TR vAlign=top>
+                                <TD><A class=xxx3 
+                                href="storage.php"><B>Íîñèòåëè 
+                                èíôîðìàöèè</B></A>
+                                <P></P>
+                                <A class=xxx2 
+                                href="hard_drive.php">Æåñòêèå äèñêè</A><BR>
+                                <IMG height=3 
+                                src="images/e1.gif" width=1 border=0><BR>
+                                <A 
+                                class=xxx2 
+                                href="dvd.php">Îïòè÷åñêèå íàêîïèòåëè </A><BR>
+                                <IMG height=3 
+                                src="images/e1.gif" width=1 border=0><BR>
+                                <a href="usbflash.php">Êàðòû 
+                                ïàìÿòè USB </a><BR>
+                                <IMG height=3 
+                                src="images/e1.gif" width=1 border=0><BR>
+                                <A 
+                                class=xxx2 
+                                href="tapes.php">Ñòðèìåðû</A><BR>
+                                <IMG height=3 
+                                src="images/e1.gif" width=1 border=0><BR>
+                                <IMG height=3 
+                                src="images/e1.gif" width=1 
+                                border=0></TD>
+                          </TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+                  <TABLE width="100%" height="5" border=0 cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=25 src="images/t1.gif" width=10 
+                        border=0><BR></TD>
+                      <TD align=middle background=images/t2.gif><A class=xxx3 
+                        href="http://shop.intercom-pc.ru/cgi-bin/shop.cgi">Ïåðèôåðèÿ, îôèñíàÿ ìåáåëü, êàíöåëÿðèÿ</A><BR></TD>
+                      <TD><IMG height=25 src="images/t3.gif" width=10 
+                        border=0><BR></TD></TR>
+                    <TR>
+                      <TD background=images/t4.gif><IMG height=1 
+                        src="images/e1.gif" width=10 border=0></TD>
+                      <TD width="100%"><IMG height=4 src="images/e1.gif" 
+                        width=6 border=0><BR>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width="33%">
+                              <CENTER>
+                              <P><A 
+                              href="http://shop.intercom-pc.ru/cgi-bin/shop.cgi?rzm=view&group=1"><IMG src="images/1.jpg" 
+                              alt="Îôèñíàÿ ìåáåëü" width="100" height="100" 
+                              border=0><BR>
+                              </A><BR>
+                              <A class=xxx2 
+                              href="http://shop.intercom-pc.ru/cgi-bin/shop.cgi?rzm=view&group=1">Îôèñíàÿ ìåáåëü                              </A></P>
+                              </CENTER></TD>
+                            <TD vAlign=top width=1 
+                            background=images/b2_1.gif><IMG 
+                              src="images/b2_1.gif" border=0></TD>
+                            <TD width="33%">
+                              <CENTER>
+                              <P><A 
+                              href="http://shop.intercom-pc.ru/cgi-bin/shop.cgi?rzm=view&group=2"><IMG src="images/2.jpg" 
+                              alt="Êàíöòîâàðû" width="100" height="100" 
+                              border=0><BR>
+                              </A><BR>
+                              <A class=xxx2 
+                              href="http://shop.intercom-pc.ru/cgi-bin/shop.cgi?rzm=view&group=2">Êàíöòîâàðû                              </A></P>
+                              </CENTER></TD>
+                            <TD vAlign=top width=1 
+                            background=images/b2_1.gif><IMG 
+                              src="images/b2_1.gif" border=0></TD>
+                            <TD width="33%">
+                              <CENTER>
+                              <P><A 
+                              href="http://shop.intercom-pc.ru/cgi-bin/shop.cgi?rzm=view&group=9"><IMG src="images/9.jpg" 
+                              alt="Ðàñõîäíûå ìàòåðèàëû" width="100" height="100" 
+                              border=0><BR>
+                              </A><BR>
+                              <A class=xxx2 
+                              href="http://shop.intercom-pc.ru/cgi-bin/shop.cgi?rzm=view&group=9">Ðàñõîäíûå ìàòåðèàëû                              </A></P>
+                              </CENTER></TD></TR></TBODY></TABLE></TD>
+                      <TD background=images/t5.gif><IMG height=1 
+                        src="images/e1.gif" width=10 border=0></TD></TR>
+                    <TR>
+                      <TD><IMG height=10 src="images/t6.gif" width=10 
+                        border=0><BR></TD>
+                      <TD background=images/t7.gif><IMG height=10 
+                        src="images/e1.gif" width=10 border=0></TD>
+                      <TD><IMG height=10 src="images/t8.gif" width=10 
+                        border=0><BR></TD></TR></TBODY></TABLE><IMG height=10 
+                  src="images/e1.gif" width=6 border=0><BR>
+                      <FONT 
+                  class=zgl>Íîâîñòè</FONT><BR>
+                      <IMG height=5 
+                  src="images/e1.gif" width=1 border=0><BR>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=#c0c0c0>
+                        <TABLE cellSpacing=1 cellPadding=10 width="100%" 
+                        border=0>
+                          <TBODY>
+                          <TR bgColor=#ffffff>
+                            <TD height="5"><TABLE width="100%" height="2329" 
+                              border=0 cellPadding=0 cellSpacing=0>
+                              <TBODY>
+                                <TR vAlign=top>
+                                  <TD width="100%"><p><a href="http://www.ixbt.com/news/hard/index.shtml?15/47/81">02.02.12<BR>
+                                        <span class="style8">Çà âòîðîé êâàðòàë Seagate óäàëîñü îòãðóçèòü â äâà ðàçà áîëüøå æ¸ñòêèõ äèñêîâ, ÷åì WD</span></a></TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p><a href="http://www.ixbt.com/soft/windows-8.shtml">02.02.12<BR>
+                                        <span class="style8">Microsoft Windows 8: îáçîð êëþ÷åâûõ íîâîââåäåíèé â ïðåäâàðèòåëüíîé âåðñèè Developer Preview</span></a></TD>
+                                </TR>
+								<TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p><a href="http://www.ixbt.com/video3/tahiti-part1.shtml">02.02.12<BR>
+                                        <span class="style8">Íîâûé ëèäåð 3D-ãðàôèêè  AMD Radeon HD 7970: áîëåå òîíêèé òåõïðîöåññ, íîâûå ôóíêöèè, íîâûå ãîðèçîíòû</span></a></TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p>01.02.12<BR>
+                                          <span class="style9"><a href="http://www.ixbt.com/news/hard/index.shtml?15/47/89" class="style8">Åâðîêîìèññèÿ çàïîäîçðèëà Samsung â íàðóøåíèè àíòèìîíîïîëüíîãî çàêîíîäàòåëüñòâà</a></span></TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p>01.02.12<BR>
+                                          <span class="style8"><a href="http://www.ixbt.com/news/hard/index.shtml?15/47/77" class="style8">Ìîäóëè ïàìÿòè ADATA Premier ñî÷åòàþò ÷àñòîòó 1600 ÌÃö è îáúåì äî 8 ÃÁ</a></span></TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p>17.11.09<BR>
+                                          <A
+                                href="http://www.microsoft.com/rus/news/issues/2009/11/Microsoft_Technology_Centers.mspx" target="_blank" class=xxx3 style9>Â Ðîññèè îòêðûò ïåðâûé â Öåíòðàëüíîé è Âîñòî÷íîé Åâðîïå Òåõíîëîãè÷åñêèé öåíòð Microsoft</A><BR>
+                                    Ñåãîäíÿ ñîñòîÿëàñü òîðæåñòâåííàÿ öåðåìîíèÿ îòêðûòèÿ Òåõíîëîãè÷åñêîãî öåíòðà Microsoft  ïåðâîãî â ñòðàíàõ Öåíòðàëüíîé è Âîñòî÷íîé Åâðîïû. Ðîññèÿ ñòàëà äåñÿòîé ñòðàíîé â ìèðå, ãäå ôóíêöèîíèðóåò ïîäîáíûé öåíòð. Íà áàçå åãî ðåñóðñîâ ïàðòíåðû Microsoft ñìîãóò ðàçðàáàòûâàòü, òåñòèðîâàòü è äåìîíñòðèðîâàòü ÈÒ-ðåøåíèÿ äëÿ çàêàç÷èêîâ. </TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p>27.10.09<BR>
+                                          <A class=xxx3 target="_blank"
+                                href="http://www.microsoft.com/rus/news/issues/2009/10/Windows7.mspx">Microsoft îáúÿâèëà î âûõîäå Windows 7</A><BR>
+                                    Ñåãîäíÿ êîðïîðàöèÿ Microsoft îôèöèàëüíî îáúÿâèëà î âûâîäå íà ìèðîâîé è ðîññèéñêèé ðûíîê Windows 7. Íîâàÿ îïåðàöèîííàÿ ñèñòåìà ïðèçâàíà îáëåã÷èòü ðàáîòó ïîëüçîâàòåëåé íà êîìïüþòåðå. Äðóæåñòâåííûé èíòåðôåéñ è èííîâàöèîííûå ôóíêöèè Windows 7 óïðîñòÿò âûïîëíåíèå åæåäíåâíûõ çàäà÷ è ïîçâîëÿò èñïîëüçîâàòü âîçìîæíîñòè êîìïüþòåðîâ âñåõ òèïîâ è ðàçìåðîâ ìàêñèìàëüíî ýôôåêòèâíî. 
+                                    
+                                    
+                                    
+                                    
+                                  </TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p>24.10.09<BR>
+                                          <A class=xxx3 target="_blank"
+                                href="http://www.intel.com/cd/products/services/emea/rus/latest/433907.htm?cid=rss-107037-c1-244220">Ñèñòåìíûå ïëàòû Intel® äëÿ íàñòîëüíûõ ÏÊ, èìåþùèå ñåðòèôèêàò WHQL íà ñîâìåñòèìîñòü ñ ÎÑ Microsoft Windows 7</A><BR>
+                                    Èùåòå ñèñòåìíûå ïëàòû, ñîâìåñòèìûå ñ Microsoft Windows 7? Ëàáîðàòîðèè Intel® çàâåðøèëè ñåðòèôèêàöèîííîå òåñòèðîâàíèå äëÿ ïðîâåðêè ñîâìåñòèìîñòè ñèñòåìíûõ ïëàò Intel® äëÿ íàñòîëüíûõ ÏÊ ñ íîâåéøåé îïåðàöèîííîé ñèñòåìîé Microsoft Windows 7, ÷òîáû âû ìîãëè âîñïîëüçîâàòüñÿ âñåìè ôóíêöèîíàëüíûìè âîçìîæíîñòÿìè ýòîé ïîòðÿñàþùåé íîâîé îïåðàöèîííîé ñèñòåìû.
+                                  </TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD height="99"><p>03.11.11<BR>
+                                          <span class="style8"><a href="http://www.ixbt.com/cpu/intel-ci7-39x0-lga2011.shtml">Ïðîöåññîðû Intel Core i7-3930K è Core i7-3960X Extreme Edition äëÿ ïëàòôîðìû LGA2011: </a></span><a href="http://www.ixbt.com/cpu/intel-ci7-39x0-lga2011.shtml">íîâûé ìàêñèìàëüíûé óðîâåíü ñ îáúåäèíåíèåì âñåõ ñèëüíûõ ñòîðîí ïðåäøåñòâåííèêîâ</a></TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p>22.09.09<BR>
+                                          <A class=xxx3 target="_blank"
+                                href="http://www.intel.com/cd/products/services/emea/rus/processors/corei5/overview/428363.htm">Ïðîöåññîð Intel® Core i5</A><BR>
+                                    Ïðîöåññîðû Intel Core i5 àâòîìàòè÷åñêè ðàñïðåäåëÿþò âû÷èñëèòåëüíóþ ìîùíîñòü òóäà, ãäå îíà òðåáóåòñÿ áîëüøå âñåãî. Ïðè ñîçäàíèè âèäåî â ôîðìàòå HD, çàïèñè öèôðîâîé ìóçûêè, ðåäàêòèðîâàíèè ôîòîãðàôèé, à òàêæå â ñàìûõ ñîâðåìåííûõ èãðàõ ïðîöåññîð Intel Core i5 îòêðîåò ïåðåä âàìè áåçãðàíè÷íûå âîçìîæíîñòè äëÿ ìíîãîçàäà÷íîñòè è ïðîäóêòèâíîé ðàáîòû.
+                                  </TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p>10.08.09<BR>
+                                          <A class=xxx3 target="_blank"
+                                href="http://www.intel.com/cd/products/services/emea/rus/latest/425428.htm?cid=rss-107037-c1-236240">Ïðîöåññîð Intel® Core2 Quad äëÿ ìîáèëüíûõ ÏÊ</A><BR>
+                                    Ìíîãîÿäåðíûå ïðîöåññîðû Intel® Core2 Quad äëÿ ìîáèëüíûõ ÏÊ, ðàçðàáîòàííûå äëÿ   ýôôåêòèâíîé îáðàáîòêè âûñîêèõ âû÷èñëèòåëüíûõ è ãðàôè÷åñêèõ íàãðóçîê. Ïðîöåññîðû   Intel® Core2 Quad äëÿ ìîáèëüíûõ ÏÊ îáåñïå÷èâàþò ìàêñèìàëüíîå âðåìÿ àâòîíîìíîé   ðàáîòû è íåîáõîäèìóþ ïðîèçâîäèòåëüíîñòü äëÿ ðàáîòû ñ ìóëüòèìåäèéíûìè   ïðèëîæåíèÿìè è ìíîãîçàäà÷íûìè ñðåäàìè â ìîáèëüíîì ðåæèìå. </TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p>26.06.09<BR>
+                                          <A class=xxx3 target="_blank"
+                                href="http://www.microsoft.com/rus/news/issues/2009/06/windows7.mspx">Êîðïîðàöèÿ Microsoft íàçâàëà äàòó âûõîäà ðóññêîÿçû÷íîé âåðñèè Windows 7</A><BR>
+                                    Îïåðàöèîííàÿ ñèñòåìà ïîÿâèòñÿ íà ðîññèéñêîì ðûíêå 22 îêòÿáðÿ 2009 ãîäà. Áëàãîäàðÿ ñïåöèàëüíûì óñëîâèÿì ïåðåõîäà íà Windows 7 ïîêóïàòåëÿì íîâûõ êîìïüþòåðîâ íå ïðèäåòñÿ ïëàòèòü çà ëèöåíçèþ íà íîâóþ ÎÑ. Íà÷èíàÿ ñ 26 èþíÿ 2009 ãîäà ïîêóïàòåëè îïðåäåëåííûõ ìîäåëåé ÏÊ ñ ïðåäóñòàíîâëåííîé ÎÑ Windows Vista Home Premium, Business èëè Ultimate ïîëó÷àò âîçìîæíîñòü ïåðåõîäà íà ñîîòâåòñòâóþùóþ ðåäàêöèþ Windows 7 ñðàçó ïîñëå åå âûõîäà íà ðîññèéñêèé ðûíîê áåç íåîáõîäèìîñòè îïëà÷èâàòü ëèöåíçèþ íà íîâóþ îïåðàöèîííóþ ñèñòåìó. Äåéñòâèå ñïåöèàëüíûõ óñëîâèé ïðîäëèòñÿ äî 31 ÿíâàðÿ 2010 ãîäà.
+                                    
+                                    
+                                  </TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p>22.05.09<BR>
+                                          <A class=xxx3 target="_blank"
+                                href="http://www.intel.com/cd/products/services/emea/rus/latest/344533.htm">Ïðîöåññîðû Intel® Xeon® ñåðèè 5000</A><BR>
+                                    Èíòåëëåêòóàëüíûé ïðîöåññîð Intel® Xeon® ñåðèè 5500 àâòîìàòè÷åñêè ðåãóëèðóåò ïðîèçâîäèòåëüíîñòü ñåðâåðà â ñîîòâåòñòâèè ñ ïîòðåáíîñòÿìè âàøåãî ïðèëîæåíèÿ. Çà ñ÷åò ýòîãî ïðîèçâîäèòåëüíîñòü àäàïòèðóåòñÿ ê ðàáî÷èì íàãðóçêàì, îáåñïå÷èâàåòñÿ èíòåëëåêòóàëüíîå óïðàâëåíèå ýíåðãîïîòðåáëåíèåì è ýôôåêòèâíîñòü âèðòóàëèçàöèè.
+                                  </TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p>25.04.09<BR>
+                                          <A class=xxx3 target="_blank"
+                                href="http://www.intel.com/cd/products/services/emea/rus/latest/419590.htm">Íàáîð ìèêðîñõåì Intel® E7210</A><BR>
+                                    Íàáîð ìèêðîñõåì Intel® E7210 ïîçâîëÿåò ñîçäàâàòü íåäîðîãèå, íî íàäåæíûå ñåðâåðíûå ïëàòôîðìû íà÷àëüíîãî óðîâíÿ íà áàçå ïðîöåññîðà Intel® Pentium® 4 ñ ïîääåðæêîé òåõíîëîãèè Hyper-Threading. Äëÿ ýêîíîìíûõ êîðïîðàòèâíûõ ïîëüçîâàòåëåé ñåðâåð íà÷àëüíîãî óðîâíÿ ïðåäîñòàâëÿåò âïå÷àòëÿþùóþ ïðîèçâîäèòåëüíîñòü áåç óùåðáà äëÿ íàäåæíîñòè ñèñòåìû è ïðåäñòàâëÿåò ñîáîé çíà÷èòåëüíûé øàã âïåðåä ïî ñðàâíåíèþ ñ "ñåðâåðàìè" íà áàçå íàñòîëüíûõ ÏÊ. 
+                                  </TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p>04.03.09<BR>
+                                          <A class=xxx3 target="_blank"
+                                href="http://www.intel.com/cd/products/services/emea/rus/processors/xeon3000/344503.htm">Ïðîöåññîðû Intel® Xeon® ñåðèè 3000</A><BR>
+                                    Ïëàòôîðìû íà áàçå ïðîöåññîðîâ ñåðèè Intel® Xeon® 3000 îáëàäàþò ýôôåêòèâíûìè âû÷èñëèòåëüíûìè ðåñóðñàìè. Íîâûå ïðîöåññîðû ñ ìèêðîàðõèòåêòóðîé Intel® Core èçãîòîâëåíû ïî 45-íàíîìåòðîâîé ïðîèçâîäñòâåííîé òåõíîëîãèè è îáëàäàþò âûñîêîé ïðîèçâîäèòåëüíîñòüþ è ýôôåêòèâíîñòüþ â ñî÷åòàíèè ñ äîñòóïíîé öåíîé. 
+                                    
+                                    Îíè ïðåêðàñíî ïîäõîäÿò äëÿ âëàäåëüöåâ ìàëîãî áèçíåñà, êîòîðûì íóæíî ðàçâèâàòüñÿ, ýôôåêòèâíî óïðàâëÿòü îïåðàöèÿìè è çàùèùàòü îäèí èç ñàìûõ âàæíûõ ñâîèõ àêòèâîâ  èíôîðìàöèþ.
+                                  </TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p>07.02.09<BR>
+                                          <A class=xxx3 target="_blank"
+                                href="http://www.intel.com/cd/products/services/emea/rus/latest/300149.htm">Íàáîð ìèêðîñõåì Intel® G965 Express</A><BR>
+                                    Íàñòîëüíûå ÏÊ íà áàçå íàáîðà ìèêðîñõåì Intel® P965 Express è ïðîöåññîðà Intel® Core2 Duo èëè ïðîöåññîðà Intel® Pentium® D îáåñïå÷èàþò íåïðåâçîéäåííóþ ïðîèçâîäèòåëüíîñòü è èííîâàöèîííûå âîçìîæíîñòè äëÿ ïîëüçîâàòåëåé öèôðîâîãî äîìà. Ïîëåçíûå èçìåíåíèÿ ðàñøèðÿþò âîçìîæíîñòè öèôðîâîãî äîìà, îáåñïå÷èâàÿ ýêîíîìèþ ýíåðãèè è ñíèæåíèå øóìà ïðè ðàáîòå ñèñòåìû.
+                                  </TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p>05.02.09<BR>
+                                          <A class=xxx3 target="_blank"
+                                href="http://www.intel.com/cd/products/services/emea/rus/latest/247213.htm">Íàáîð ìèêðîñõåì Intel® 975X Express</A><BR>
+                                    Ïëàòôîðìû íà áàçå íàáîðà ìèêðîñõåì Intel® 975X Express è ïðîöåññîðà Intel® Pentium® Extreme Edition îáåñïå÷èâàþò èñêëþ÷èòåëüíî âûñîêóþ ïðîèçâîäèòåëüíîñòü äëÿ èãð, ìóëüòèìåäèéíûõ ðàçâëå÷åíèé è ðåñóðñîåìêèõ áèçíåñ-ïðèëîæåíèé ñåãîäíÿøíåãî è çàâòðàøíåãî äíÿ.
+                                    
+                                    Íàáîð ìèêðîñõåì Intel® 975X Express îáåñïå÷èâàåò âûñî÷àéøóþ ïðîèçâîäèòåëüíîñòü ïëàòôîðì Intel® è ïîääåðæêó íîâåéøèõ äâóõúÿäåðíûõ ïðîöåññîðîâ, çà ñ÷åò ÷åãî äîïîëíèòåëüíûå èíòåëëåêòóàëüíûå ðåñóðñû óïðàâëÿþò ÷åòûðüìÿ ïîòîêàìè, ïîëó÷àåìûìè îò ïðîöåññîðà è óñòàíàâëèâàþò ïðèîðèòåòû ýòèõ ïîòîêîâ.
+                                    
+                                    Â äîïîëíåíèå ê ïîääåðæêå ìíîãîïîòî÷íîñòè, íàáîð ìèêðîñõåì Intel® 975X Express îáåñïå÷èâàåò ôóíêöèè îïòèìèçàöèè ïðîèçâîäèòåëüíîñòè, íàïðèìåð, ïîääåðæêó íåñêîëüêèõ âèäåîêàðò 2x8, òåõíîëîãèè Intel® MPT, àäðåñàöèþ äî 8 ÃÁ ïàìÿòè ñ ïîääåðæêîé 64-ðàçðÿäíîãî ðåæèìà, à òàêæå ïîääåðæêó êîäà êîððåêöèè îøèáîê ïàìÿòè.
+                                  </TD>
+                                </TR>
+                                <TR>
+                                  <TD background=images/b2_3.gif 
+                                height=1><IMG src="images/b2_3.gif" 
+                                border=0></TD>
+                                </TR>
+                                <TR vAlign=top>
+                                  <TD><p>03.01.11<BR>
+                                          <span class="style8"><a href="http://www.ixbt.com/cpu/intel-ci5i7-lga1155.shtml">Ïðîöåññîðû Core i5 è i7 â êîíñòðóêòèâå LGA1155</a></span>: íîâàÿ àðõèòåêòóðà Sandy Bridge è åå òðèóìôàëüíîå âîñøåñòâèå íà ðûíîê</TD>
+                                </TR>
+                              </TBODY>
+                            </TABLE></TD>
+                          </TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+                        </FORM>
+                          <BR>
+                  </FONT></TD>
+                <TD><IMG height=1 alt="" src="images/e1.gif" width=20 
+                  border=0><BR></TD></TR></TBODY></TABLE></TD>
+          <TD background=images/right_bgr.jpg><IMG height=10 
+            src="images/e1.gif" width=6 border=0><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD><IMG height=1 src="images/e1.gif" width=1 
+border=0></TD>
+                <TD bgColor=#13006f colSpan=2><IMG height=20 
+                  src="images/e1.gif" width=10 border=0><BR></TD>
+                <TD align=middle bgColor=#13006f><A 
+                  href="serv_rackmount.php"><FONT 
+                  color=#ffffff><B>Þíèòîâûå ñåðâåðû</B></FONT></A><BR></TD>
+                <TD><IMG height=20 src="images/t9.gif" width=20 
+                  border=0><BR></TD></TR>
+              <TR bgColor=#ffffff>
+                <TD><IMG height=1 src="images/e1.gif" width=1 
+border=0></TD>
+                <TD bgColor=#e0e0e0><IMG height=1 src="images/e1.gif" 
+                  width=1 border=0><BR></TD>
+                <TD><IMG height=1 src="images/e1.gif" width=10 
+                border=0></TD>
+                <TD width="100%"><IMG height=4 src="images/e1.gif" 
+                  width=10 border=0><BR>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD width="100%">
+                        <CENTER>
+                        <P><A 
+                        href="serv_base.php"><IMG src="images/1U.jpg" 
+                        alt="Îäíîþíèòîâûå ñåðâåðû" width="150" height="55" 
+                        border=0></A></P>
+                        <p><FONT 
+                        size=2>Îäíîþíèòîâûå ñåðâåðû</FONT><br>
+                            <FONT size=2><B>îò 1094 ó.å.</B> </FONT><BR>
+                                <A class=xxx3 
+                        href="serv_base.php">êóïèòü                                  </A>                        </p>
+                        </CENTER></TD></TR>
+                    <TR>
+                      <TD background=images/b2_3.gif height=1><IMG 
+                        src="images/b2_3.gif" border=0></TD></TR>
+                    <TR vAlign=top>
+                      <TD width="100%">
+                        <CENTER>
+                        <P><a 
+                        href="serv_rackmount.php"><img src="images/2U.jpg" 
+                        alt="Äâóõþíèòîâûå ñåðâåðû" width="150" height="74" border=0></a></P>
+                        <P><FONT 
+                        size=2>Äâóõþíèòîâûå ñåðâåðû</FONT><br><FONT size=2><B>îò 2520 ó.å.</B>
+                          </FONT><BR>
+                          <A class=xxx3 
+                        href="serv_rackmount.php">êóïèòü                          </A></P>
+                        </CENTER></TD></TR></TBODY></TABLE></TD>
+                <TD background=images/t10.gif><IMG height=1 
+                  src="images/e1.gif" width=10 border=0></TD></TR>
+              <TR>
+                <TD><IMG height=1 src="images/e1.gif" width=1 
+border=0></TD>
+                <TD bgColor=#e0e0e0><IMG height=1 src="images/e1.gif" 
+                  width=1 border=0><BR></TD>
+                <TD background=images/t11.gif colSpan=2><IMG height=1 
+                  src="images/e1.gif" width=10 border=0></TD>
+                <TD><IMG height=10 src="images/t12.gif" width=20 
+                  border=0><BR></TD></TR></TBODY></TABLE><IMG height=10 
+            src="images/e1.gif" width=6 border=0><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD><IMG height=1 src="images/e1.gif" width=1 
+border=0></TD>
+                <TD bgColor=#13006f colSpan=2><IMG height=20 
+                  src="images/e1.gif" width=10 border=0><BR></TD>
+                <TD align=middle bgColor=#13006f><FONT color=#ffffff><B>Ðåæèì 
+                  ðàáîòû</B></FONT><BR></TD>
+                <TD><IMG height=20 src="images/t9.gif" width=20 
+                  border=0><BR></TD></TR>
+              <TR bgColor=#ffffff>
+                <TD><IMG height=1 src="images/e1.gif" width=1 
+border=0></TD>
+                <TD bgColor=#e0e0e0><IMG height=1 src="images/e1.gif" 
+                  width=1 border=0><BR></TD>
+                <TD><IMG height=1 src="images/e1.gif" width=10 
+                border=0></TD>
+                <TD width="100%"><IMG height=4 src="images/e1.gif" 
+                  width=10 border=0><BR>
+                  <CENTER>Îôèñ:</CENTER>
+                  <TABLE>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <DIV 
+                        align=right>ÏÍ&nbsp;<BR>ÂÒ&nbsp;<BR>ÑÐ&nbsp;<BR>×Ò&nbsp;<BR>ÏÒ&nbsp;<BR><FONT 
+                        color=#ff0000>ÑÁ&nbsp;<BR>ÂÑ&nbsp;</FONT> </DIV></TD>
+                      <TD width=30>
+                        <DIV align=center><FONT color=#000000><NOBR 
+                        id=circle><BR><BR><BR><BR><BR><FONT 
+                        color=#ff0000><BR></FONT></NOBR></FONT><FONT 
+                        color=#000000><NOBR id=circle></NOBR></FONT><FONT 
+                        color=#000000><NOBR id=circle></NOBR></FONT></DIV></TD>
+                      <TD width=80>
+                        <DIV align=left><BR><BR>
+                        10-19<BR>
+                        <BR><BR><FONT 
+                        color=#ff0000>âûõîäíîé</FONT></DIV></TD></TR></TBODY></TABLE>
+                  <CENTER>On-line çàêàç: êðóãëîñóòî÷íî</CENTER></TD>
+                <TD background=images/t10.gif><IMG height=1 
+                  src="images/e1.gif" width=10 border=0></TD></TR>
+              <TR>
+                <TD><IMG height=1 src="images/e1.gif" width=1 
+border=0></TD>
+                <TD bgColor=#e0e0e0><IMG height=1 src="images/e1.gif" 
+                  width=1 border=0><BR></TD>
+                <TD background=images/t11.gif colSpan=2><IMG height=1 
+                  src="images/e1.gif" width=10 border=0></TD>
+                <TD><IMG height=10 src="images/t12.gif" width=20 
+                  border=0><BR></TD></TR></TBODY></TABLE><IMG height=10 
+            src="images/e1.gif" width=6 border=0><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD><IMG height=1 src="images/e1.gif" width=1 
+border=0></TD>
+                <TD bgColor=#13006f colSpan=2><IMG height=20 
+                  src="images/e1.gif" width=10 border=0><BR></TD>
+                <TD align=middle bgColor=#13006f><FONT 
+                  color=#ffffff><B>Êîíòàêòû</B></FONT><BR></TD>
+                <TD><IMG height=20 src="images/t9.gif" width=20 
+                  border=0><BR></TD></TR>
+              <TR bgColor=#ffffff>
+                <TD><IMG height=1 src="images/e1.gif" width=1 
+border=0></TD>
+                <TD bgColor=#e0e0e0><IMG height=1 src="images/e1.gif" 
+                  width=1 border=0><BR></TD>
+                <TD><IMG height=1 src="images/e1.gif" width=10 
+                border=0></TD>
+                <TD width="100%"><IMG height=4 src="images/e1.gif" 
+                  width=10 border=0><BR>
+                  <TABLE class=rekv cellSpacing=0 cellPadding=0 width="100%" 
+                  border=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD>e-mail:&nbsp;&nbsp;</TD>
+                      <TD><A class=xxx3 
+                        href="mailto:info@intercom-pc.ru">info@intercom-pc.ru</A></TD>
+                    </TR>
+                    <TR vAlign=top>
+                      <TD>òåë.:&nbsp;&nbsp;</TD>
+                      <TD>(495) 956-3012</TD></TR>
+                    <TR vAlign=top>
+                      <TD>ôàêñ:&nbsp;&nbsp;</TD>
+                      <TD>(495) 956-3012</TD></TR>
+                    <TR vAlign=top>
+                      <TD>àäðåñ:&nbsp;&nbsp;</TD>
+                      <TD>Ìîñêâà, 2-îé Ñèëèêàòíûé ïðîåçä, äîì 14, îôèñ 6</TD></TR></TBODY></TABLE></TD>
+                <TD background=images/t10.gif><IMG height=1 
+                  src="images/e1.gif" width=10 border=0></TD></TR>
+              <TR>
+                <TD><IMG height=1 src="images/e1.gif" width=1 
+border=0></TD>
+                <TD bgColor=#e0e0e0><IMG height=1 src="images/e1.gif" 
+                  width=1 border=0><BR></TD>
+                <TD background=images/t11.gif colSpan=2><IMG height=1 
+                  src="images/e1.gif" width=10 border=0></TD>
+                <TD><IMG height=10 src="images/t12.gif" width=20 
+                  border=0><BR></TD></TR></TBODY></TABLE><IMG height=10 
+            src="images/e1.gif" width=6 border=0><BR>
+                <CENTER>
+                  <form name="form2" method="post" action="../vopros.php">
+                    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                      <TBODY>
+                        <TR>
+                          <TD><IMG height=1 src="images/e1.gif" width=1 
+border=0></TD>
+                          <TD bgColor=#13006f colSpan=2><IMG height=20 
+                  src="images/e1.gif" width=10 border=0><BR></TD>
+                          <TD align=middle bgColor=#13006f><FONT 
+                  color=#ffffff><B>Çàäàéòå âîïðîñ</B></FONT><BR></TD>
+                          <TD><IMG height=20 src="images/t9.gif" width=20 
+                  border=0><BR></TD>
+                        </TR>
+                        <TR bgColor=#ffffff>
+                          <TD><IMG height=1 src="images/e1.gif" width=1 
+border=0></TD>
+                          <TD bgColor=#e0e0e0><IMG height=1 src="images/e1.gif" 
+                  width=1 border=0><BR></TD>
+                          <TD><IMG height=1 src="images/e1.gif" width=10 
+                border=0></TD>
+                          <TD width="100%"><IMG height=4 src="images/e1.gif" 
+                  width=10 border=0><BR>
+                            Òåêñò Âàøåãî âîïðîñà:
+                            <SCRIPT language=JavaScript><!--
+function d2submit() {
+  var x, x1, x2, x3, x4;
+  x0="q"+document.reg.name.value;
+  x1="q"+document.reg.Mail.value;
+  x2="q"+document.reg.email.value;
+  if(x0=="q") { alert("Ââåäèòå, ïîæàëóéñòà, Âàøå èìÿ"); return; }
+  if(x2=="q") { alert("Ââåäèòå, ïîæàëóéñòà, Âàø e-mail"); return; }
+  if(x1=="q") { alert("Ââåäèòå, ïîæàëóéñòà, Òåêñò âîïðîñà"); return; }
+  document.reg.submit();	   
+}
+//--></SCRIPT>
+                              <TEXTAREA style="WIDTH: 100%" name="vopros" rows=5 cols=15 width="100%"></TEXTAREA>
+                            <BR>
+                            ÔÈÎ: <B>*</B><BR>
+                            <INPUT style="WIDTH: 100%" name="fio" 
+                  width="100%">
+                            <BR>
+                            E-mail: <B>*</B><BR>
+                            <INPUT 
+                  style="WIDTH: 100%" name="email" width="100%">
+                            <BR>
+                            <IMG height=5 
+                  src="images/e1.gif" width=1 border=0><BR>
+                              <CENTER>
+                                <label>
+                                <input type="submit" name="Submit" value="Îòïðàâèòü">
+                                </label>
+                              </CENTER>
+                            <IMG 
+                  height=5 src="images/e1.gif" width=1 
+                border=0><BR></TD>
+                          <TD background=images/t10.gif><IMG height=1 
+                  src="images/e1.gif" width=10 border=0></TD>
+                        </TR>
+                        <TR>
+                          <TD><IMG height=1 src="images/e1.gif" width=1 
+border=0></TD>
+                          <TD bgColor=#e0e0e0><IMG height=1 src="images/e1.gif" 
+                  width=1 border=0><BR></TD>
+                          <TD background=images/t11.gif colSpan=2><IMG height=1 
+                  src="images/e1.gif" width=10 border=0></TD>
+                          <TD><IMG height=10 src="images/t12.gif" width=20 
+                  border=0><BR></TD>
+                        </TR>
+                      </TBODY>
+                    </TABLE>
+                  </form>
+                  <BR>
+              <br>
+              <!-- HotLog -->
+              <script language="javascript">
+hotlog_js="1.0";
+hotlog_r=""+Math.random()+"&s=57201&im=105&r="+escape(document.referrer)+"&pg="+
+escape(window.location.href);
+document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");
+              </script>
+              <script language="javascript1.1">
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script>
+              <script language="javascript1.2">
+hotlog_js="1.2";
+hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+(((navigator.appName.substring(0,3)=="Mic"))?
+screen.colorDepth:screen.pixelDepth)</script>
+              <script language="javascript1.3">hotlog_js="1.3"</script>
+              <script language="javascript">hotlog_r+="&js="+hotlog_js;
+document.write("<img "+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script>
+              <noscript>
+              <img
+src="http://hit4.hotlog.ru/cgi-bin/hotlog/count?s=57201&im=105" border=0 
+width="88" height="31" alt="HotLog">
+              </noscript>
+              <!-- /HotLog -->
+              <br>
+              <!--TopList COUNTER-->
+              <script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script>
+              <script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script>
+              <script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script>
+              <script language="JavaScript1.3"><!--
+js=13//--></script>
+              <script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=104529;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=31 width=88>')
+if(js>11)d.write('<'+'!-- ')//--></script>
+              <noscript>
+              <img
+src="http://top.list.ru/counter?js=na;id=104529;t=57"
+border=0 height=31 width=88
+alt="TopList">
+              </noscript>
+              <script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script>
+              <!--TopList COUNTER-->
+              <!--begin of Top100 logo-->
+              <br>
+              <img src="http://images.rambler.ru/top100/banner-88x31-rambler-blue.gif" alt="Rambler's Top100" width=88 height=31 border=0>
+              <!--end of Top100 logo -->
+              <!--begin of Top100-->
+              <a href="http://top100.rambler.ru/top100/"> <img src="http://counter.rambler.ru/top100.cnt?195343" alt="Rambler's Top100" width=1 height=1 border=0></a>
+              <!--end of Top100 code-->
+                </CENTER></TD></TR>
+        <TR>
+          <TD vAlign=bottom background=images/left_bgr.jpg><IMG height=30 
+            alt="" src="images/bot0.jpg" width=180 border=0><BR></TD>
+          <TD vAlign=bottom background=images/right_bgr.jpg><IMG 
+            height=70 alt="" src="images/bot1.jpg" width=161 
+          border=0><BR></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR vAlign=top>
+          <TD><IMG height=53 alt="" src="images/bot2.jpg" width=180 
+            border=0><BR></TD>
+          <TD width="100%" background=images/bot3_bgr.jpg><IMG height=21 
+            alt="" src="images/e1.gif" width=1 
+            border=0><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; </TD>
+          <TD><IMG height=53 alt="" src="images/bot4.jpg" width=250 
+            border=0><BR></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR vAlign=top>
+          <TD><IMG height=47 alt="" src="images/bot5.jpg" width=180 
+            border=0><BR></TD>
+          <TD width="100%" 
+            bgColor=#292975>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT 
+            color=#ffffff>Copyright © <A href="http://www.intercom-pc.ru/"><FONT 
+            color=#ffffff>INTERCOM</FONT></A> 2010. Âñå ïðàâà 
+            çàùèùåíû.<BR>
+          </FONT><IMG height=5 src="images/e1.gif" width=1 
+            border=0><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT 
+            color=#ffffff>Ðàçðàáîòêà: <A class=xxx2 
+            title="Copyright © ÇÀÎ Èíòåðêîì-Êîìïüþòåðíûé ñàëîí" 
+            href="http://www.intercom-pc.ru/"><FONT color=#ffffff>ÇÀÎ Èíòåðêîì-Êîìïüþòåðíûé ñàëîí.</FONT></A></FONT></TD>
+          <TD><IMG height=47 alt="" src="images/bot6.jpg" width=317 
+            border=0><BR></TD></TR></TBODY></TABLE><FONT 
+  class=txt0></FONT></TD></TR></TBODY></TABLE>
+</BODY>
+</HTML>
+

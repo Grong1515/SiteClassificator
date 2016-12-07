@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Kissdent</title>
+	
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+	<meta name="keywords" content="Клиника современной стоматологии в Москве. Протезирование и имплантация под ключ, отбеливание." />
+	<meta name="description" content="Клиника современной стоматологии в Москве." />
+	
+	<!-- Redirect to http://browsehappy.com/ on IE 8-  -->
+	<!--[if lte IE 8]>
+		<style type="text/css">
+			body{display:none!important;}
+		</style>
+		
+		<meta http-equiv="refresh" content="0; url=http://browsehappy.com/">
+	<![endif]-->
+	
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/uikit.min.css" type="text/css" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" />	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700,800&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+	<!-- bxSlider CSS file -->
+	<link href="js/bx-slider/jquery.bxslider.css" rel="stylesheet" />
+
+	<!-- JS -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/uikit.min.js"></script>	
+
+ <script>
+
+        (function()
+        {	// != кнопки «залипают, моргают, пропадают
+            var images = [];
+            images.push(new Image());
+            images[0].src ='images/btn_close_active.png';
+
+            images.push(new Image());
+            images[1].src = 'images/btn_comand_active.png';
+
+            images.push(new Image());
+            images[2].src = 'images/btn_call_us_active.png';
+            
+            images.push(new Image());
+            images[3].src = 'images/btn_proced_active.png';
+            
+            images.push(new Image());
+            images[4].src = 'images/btn_get_consult_active.png';
+            
+            images.push(new Image());
+            images[5].src = 'images/send_btn_active.png';
+
+
+            images.push(new Image());
+            images[6].src = 'images/btn_close_hover.png';
+
+            images.push(new Image());
+            images[7].src = 'images/btn_comand_hover.png';
+
+            images.push(new Image());
+            images[8].src = 'images/btn_call_us_hover.png';
+
+            images.push(new Image());
+            images[9].src = 'images/btn_proced_hover.png';
+
+            images.push(new Image());
+            images[10].src = 'images/btn_get_consult_hover.png';
+
+            images.push(new Image());
+            images[11].src = 'images/send_btn_hover.png';
+
+
+        })();
+
+    </script>
+
+</head>
+<body>
+<!-- NoScript Alert -->
+<noscript><p class="uk-margin-top uk-margin-bottom uktext-large uk-text-danger uk-text-center">Ваш браузер не поддерживает JavaScript, сайт будет работать некорректно. Пожалуйста проверьте настройки!<br />Your browser does not support JavaScript, please check browser settings!</p></noscript>
+
+<!-- Popup -->
+<div id="box" class="popupClose"></div>
+<div class="popup">
+	<a href="#" id="popupClose" class="popupClose"></a>
+
+	<p class="popup_line1 uk-text-center">записаться на </p>
+	<p class="popup_line2 uk-text-center"> бесплатную </p>
+	<p class="popup_line3 uk-text-center">консультацию</p>
+
+	<form action="form.php" class="form_proced" ="" method="post">
+		<div class="uk-margin-top">
+			<input type="text" name="phone" placeholder="Телефон" />
+		</div>
+		<div class="uk-margin-top">
+			<input type="text" name="name" placeholder="Имя" />
+		</div>	
+		<div class="uk-margin-top">
+			<button class="btn btn_proced" onclick="yaCounter36539025.reachGoal('clickSendOrder'); return true;"></button>
+		</div>			
+	</form>
+	<span class="confid">Конфиденциально <br /> Мы не передаем ваши данные третьим лицам</span>
+</div>
+<!-- #END POPUP-->
+
+<!-- Popup2 -->
+<div id="box2" class="popupClose2"></div>
+<div class="popup2">
+	<a href="#" id="popupClose2" class="popupClose2"></a>
+
+	<p class="popup2_line1 uk-text-center">Заказать звонок </p>
+
+	<form action="form.php" class="form_proced" ="" method="post">
+		<div class="uk-margin-top">
+			<input type="text" name="phone" placeholder="Телефон" />
+		</div>
+		<div class="uk-margin-top">
+			<input type="text" name="name" placeholder="Имя" />
+		</div>	
+		<div class="uk-margin-top">
+			<button class="btn btn_proced" onclick="yaCounter36539025.reachGoal('clickOrderCall'); return true;"></button>
+		</div>			
+	</form>
+	<br />
+	<span class="confid">Конфиденциально <br /> Мы не передаем ваши данные третьим лицам</span>
+</div>
+<!-- #END POPUP-->
+
+<!-- Popup3 -->
+<div id="box3" class="popupClose3"></div>
+<div class="popup3">
+	<a href="#" id="popupClose3" class="popupClose3"></a>
+
+	<p class="popup2_line1 uk-text-center">Спасибо! </p>
+	<p class="thk uk-text-center">
+		Мы перезвоним вам <br />
+		в течении 30 минут
+	</p>
+	<div class="uk-margin-top">
+		<button class="btn btn_proced_close popupClose3"></button>
+	</div>			
+</div>
+<!-- #END POPUP-->
+
+
+
+
+
+<header id="header" class="uk-clearfix">
+	<div class="max-width uk-container-center">
+		
+		<div class="uk-clearfix uk-margin-top">
+			<div class="logo uk-float-right ">
+				<img src="images/logo.png" alt="" />
+			</div>			
+		</div>
+		<div class="uk-clearfix">
+			<div class="box_address header_box uk-float-right uk-text-center">
+				<img src="images/icon-map-marker.png" alt="" />
+				<p class="color_skin_default">
+					<a href="#location" class="data_call_link color_skin_default link_dotted"> М. Полянка, Октябрьская <br />
+					1-й Спасоналивковский пер., д.17, к.1</a>
+				</p>
+			</div>			
+		</div>
+		<div class="uk-clearfix uk-margin-top">
+			<div class="box_phone header_box uk-float-right uk-text-center">
+				<img src="images/icon-phone.png" alt="" />
+				<p class="color_skin_default">
+					<span><a href="tel:+74992301529" class="color_skin_default data_call_link">+7 (499) 230-15-29</a></span>
+					<p class="color_skin_default" style="margin-top:20px;">				
+						<span><a href="tel:+79166192929" class="color_skin_default data_call_link">+7 (916) 619-29-29</a></span>
+					</p>
+				</p>
+			</div>			
+		</div>
+
+	</div>
+</header>
+
+<!--<div class="uk-container-center max-width  min-width">
+	<h2 class="header_border_line header_discount color_skin_headers uk-text-center"><span>только до 15 сентября</span></h2>
+	<h2 class="header_default header_discount_desc color_skin_headers uk-text-center">скидка на все услуги 1о%</h2>
+</div>-->
+
+
+<div class="free_consult">
+	<div class="uk-container-center max-width">
+		<div class="uk-grid">
+			<div class="uk-width-3-10 consult_lines">
+				<p class="color_skin_headers consult_line1">ЗАПИШИТЕСЬ НА</p>
+				<p class="color_skin_headers consult_line2">БЕСПЛАТНУЮ</p>
+				<p class="color_skin_headers consult_line3">КОНСУЛЬТАЦИЮ</p>
+			</div>
+			<div class="uk-width-4-10">
+				<form action="form.php" method="post" class="form_data">		
+					<div class="uk-grid">
+						<div class="uk-width-1-2">
+							<input type="text" name="name" placeholder="Имя" class="form_field_text">
+						</div>
+						<div class="uk-width-1-2">
+							<input type="text" name="phone" placeholder="Телефон" class="form_field_text">
+						</div>
+						<div class="uk-width-1-1">
+							<button class="btn send_btn uk-width-1-1 uk-margin-top" onclick="yaCounter36539025.reachGoal('clickSendOrder'); return true;"></button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="uk-width-3-10">
+				<p class="color_skin_default consult_desc">
+					1. Узнайте, возможна ли для Вас<br />
+   					имплантация?
+				</p>
+				<p class="color_skin_default consult_desc">
+					2. Получите направление на <br />
+     				онтопантограмму и анализы
+				</p>
+				<p class="color_skin_default consult_desc">
+					3. Получите помощь в выборе<br />
+   					 системы имплантации
+				</p>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+<div class="uk-container-center max-width">	
+	<div class="min-width">
+		<div class="discount_header_wrapper uk-container-center uk-margin-top">
+			<h2 class="color_skin_white discount_header uk-text-center">акция</h2>
+		</div>
+	</div>	
+
+	<div class="uk-text-center min-width img_bio_wrapper">
+		<img src="images/img_bio.jpg" alt="" />
+	</div>
+	<div class="uk-text-center quote_wrapper uk-clearfix">
+		<h2 class="color_skin_default">имплантация под ключ</h2>
+		<!--<p class="color_skin_default">всего 48 тыс. рублей</p>-->
+		<p class="color_skin_default">по специальной цене</p>
+	</div>
+
+</div>
+
+
+
+<div class="steps_wrapper uk-margin-top">
+	<div class="uk-container-center max-width uk-clearfix">
+		<h2 class="uk-text-center color_skin_default steps_header">
+			Этапы имплантации и протезирования
+		</h2>
+		<p class="steps_header_desc color_skin_default uk-text-center">Установка имплантов — очень простая процедура</p>
+		<div class="uk-clearfix st_wrapper">
+			<div class="step_box uk-float-left"><img src="images/step1.jpg" alt="" /></div>
+			<div class="step_box uk-float-left"><img src="images/step2.jpg" alt="" /></div>
+			<div class="step_box uk-float-left"><img src="images/step3.jpg" alt="" /></div>
+			<div class="step_box uk-float-left"><img src="images/step4.jpg" alt="" /></div>
+			<div class="step_box uk-float-left"><img src="images/step5.jpg" alt="" /></div>
+			<div class="step_box uk-float-left"><img src="images/step6.jpg" alt="" /></div>
+		</div>
+		<div class="st_number_line"></div>
+		<div class="uk-clearfix">
+			<div class="step_after_text color_skin_blue uk-float-left">Консультация</div>
+			<div class="step_after_text color_skin_blue uk-float-left">Установка <br /> импланта</div>
+			<div class="step_after_text color_skin_blue uk-float-left">Осмотр после установки</div>
+			<div class="step_after_text color_skin_blue uk-float-left">Установка формирователя<br /> десны</div>
+			<div class="step_after_text color_skin_blue uk-float-left">Снятие оттиска под металлокерамическую коронку</div>
+			<div class="step_after_text color_skin_blue uk-float-left">Установка металлокерамической коронки на имплантанте</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="uk-container-center max-width">	
+	<div class="call_now_wrapper min-width uk-container-center uk-margin-top uk-margin-bottom">
+		<div class="uk-grid">
+			<div class="uk-width-1-2">
+				<div class="uk-clearfix">
+					<div class="uk-float-left cn_line1 color_skin_default">
+						Не знаете, какую <br /> систему выбрать?
+					</div>
+					<div class="uk-float-left cn_line2 color_skin_default">
+						ЗВОНИТЕ
+					</div>
+				</div>
+				<div class="uk-width-1-1 cn_line3">
+					Специалист поможет Вам сделать выбор!
+				</div>
+				<div class="uk-width-1-1 cn_line4">
+					<img src="images/icon-phone-big.jpg" alt=""> <span>+7 (499) 230-15-29</span>
+				</div>
+			</div>
+			<div class="uk-width-1-2">
+				<div class="uk-clearfix">
+					<div class="uk-float-left cn_line1 color_skin_default">
+						Или запишитесь и<br /> приходите в нашу<br /> клинику
+					</div>
+					<div class="uk-float-left cn_line22 color_skin_default">
+						НА БЕСПЛАТНУЮ<br /> КОНСУЛЬТАЦИЮ
+					</div>
+				</div>
+				<div class="uk-width-1-1 cn_line33">
+					Специалист подробно ответит на все Ваши<br /> вопросы об имплантации и протезировании
+				</div>
+			</div>			
+			<div class="uk-width-1-1 uk-text-center">
+				<button class="btn btn_call_now uk-margin-top popMe"></button>
+			</div>
+
+		</div>
+
+		
+
+	</div>
+</div>
+
+
+
+<div class="why_us uk-clearfix">
+	<div class="uk-container-center max-width">
+		<h2 class="uk-text-center color_skin_default why_us_header">почему именно мы ?</h2>
+		
+		<div class="why_floater fl1">
+			15 летний опыт работы
+		</div>
+		
+		<div class="why_floater fl2">
+			<b>Широкий спектр услуг:</b> <br />
+			лечение кариеса, виниры, все виды<br /> протезирования, имплантация
+		</div>
+		
+		<div class="why_floater fl3">
+			Выгодные предложения для Вас  
+		</div>
+
+		<div class="why_floater fl4">
+			Индивидуальный подход к каждому<br /> пациенту  
+		</div>
+
+		<div class="why_floater fl5">
+			Наши специалисты владеют самыми<br /> современными технологиями в области<br /> стоматологии  
+		</div>
+
+		<div class="why_floater fl6">
+			Мы находимся в самом центре<br /> Москвы рядом с метро  
+		</div>
+
+	</div>
+</div>
+
+
+
+
+<div class="rews_wrapper uk-clearfix">
+	<div class="uk-container-center max-width uk-clearfix">
+		<h2 class="uk-text-center color_skin_default rews_header">
+			Отзывы
+		</h2>
+
+		<div class="uk-width-medium-1-1 slider_partners">
+			<div class="uk-container-center max-width uk-border-rounded partners_erapper">
+				<ul class="bxslider">
+				  	<li>
+				  		<div class="uk-grid">
+							<div class="uk-width-3-10">
+								<img src="images/certificate.png" alt="" />
+							</div>
+							<div class="uk-width-7-10">
+								<h2 class="rews_slide_header uk-text-right color_skin_default">
+									Полянская Наталья
+								</h2>
+									<p class="rew_age uk-text-right">
+										31 год
+									</p>
+
+								<div class="coment_wrapper uk-clearfix">
+									<p class="rew_text">
+										Я очень довольна клиникой, персоналом и особенно лечащим врачом.<br /> 
+										Андрей А. очень внимательный и грамотный врач. Буду продолжать <br />
+										посещать данную поликлинику. Огромное спасибо!
+									</p>
+								</div>
+							</div>
+						</div>
+				  	</li>
+				  
+				  	<li>
+				  		<div class="uk-grid">
+							<div class="uk-width-3-10">
+								<img src="images/certificate.png" alt="" />
+							</div>
+							<div class="uk-width-7-10">
+								<h2 class="rews_slide_header uk-text-right color_skin_default">
+									Грязнов Александр
+								</h2>
+
+								<div class="coment_wrapper uk-clearfix">
+									<p class="rew_text">
+										Очень доволен, хорошая клиника, настоящие профи!  
+									</p>
+								</div>
+							</div>
+						</div>
+				  	</li>
+
+				  	<li>
+				  		<div class="uk-grid">
+							<div class="uk-width-3-10">
+								<img src="images/certificate.png" alt="" />
+							</div>
+							<div class="uk-width-7-10">
+								<h2 class="rews_slide_header uk-text-right color_skin_default">
+									Антонова Татьяна
+								</h2>
+
+								<div class="coment_wrapper uk-clearfix">
+									<p class="rew_text">
+										Замечательный доктор Андрей Анатольевич Хохлов. Настоящий профессионал, которому можно доверить свою челюсть! 
+									</p>
+								</div>
+							</div>
+						</div>
+				  	</li>
+
+				  	<li>
+				  		<div class="uk-grid">
+							<div class="uk-width-3-10">
+								<img src="images/certificate.png" alt="" />
+							</div>
+							<div class="uk-width-7-10">
+								<h2 class="rews_slide_header uk-text-right color_skin_default">
+									Хоштарна Д. Д.
+								</h2>
+
+								<div class="coment_wrapper uk-clearfix">
+									<p class="rew_text">
+										Внимательные доктора, отличное отношение к клиенту. Все подробно объясняют и консультируют 
+									</p>
+								</div>
+							</div>
+						</div>
+				  	</li>
+
+				  	<li>
+				  		<div class="uk-grid">
+							<div class="uk-width-3-10">
+								<img src="images/certificate.png" alt="" />
+							</div>
+							<div class="uk-width-7-10">
+								<h2 class="rews_slide_header uk-text-right color_skin_default">
+									Мордасова Анастасия
+								</h2>
+
+								<div class="coment_wrapper uk-clearfix">
+									<p class="rew_text">
+										Мы очень любим клинику Андрея Анатольевича за профессионализм и индивидуальный подход в лечении всей нашей семьи 
+									</p>
+								</div>
+							</div>
+						</div>
+				  	</li>
+
+				  	<li>
+				  		<div class="uk-grid">
+							<div class="uk-width-3-10">
+								<img src="images/certificate.png" alt="" />
+							</div>
+							<div class="uk-width-7-10">
+								<h2 class="rews_slide_header uk-text-right color_skin_default">
+									Хрусталёва Алина
+								</h2>
+
+								<div class="coment_wrapper uk-clearfix">
+									<p class="rew_text">
+										Отличное лечение, очень внимательные сотрудники 
+									</p>
+								</div>
+							</div>
+						</div>
+				  	</li>
+
+
+				</ul>
+			</div>		
+		</div>
+	</div>
+</div>
+
+
+<div class="proced_wrapper uk-clearfix">
+	<div class="uk-container-center max-width uk-clearfix">
+		<div class="uk-display-inline-block form_proced_wrapper">
+			<p class="proced_text_line1 uk-text-center">записаться на</p>
+			<p class="proced_text_line2 uk-text-center">бесплатную</p>
+			<p class="proced_text_line3 uk-text-center">консультацию</p>
+			
+			<form action="form.php" class="form_proced" ="" method="post">
+				<div class="uk-margin-top">
+					<input type="text" name="phone" placeholder="Телефон" />
+				</div>
+				<div class="uk-margin-top">
+					<input type="text" name="name" placeholder="Имя" />
+				</div>	
+				<div class="uk-margin-top">
+					<button class="btn btn_proced" onclick="yaCounter36539025.reachGoal('clickSendOrder'); return true;"></button>
+				</div>			
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<div id="location" class="map_location_wrapper uk-clearfix">
+ 	<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Zl_KaCuZDNKXxgieQNesGWw6sLOMWh-A&&height=461"></script>
+</div>
+
+<div class="after_map uk-container-center max-width">
+	<div class="map_area_title uk-clearfix">
+		<h2>нас легко найти</h2>
+	</div>
+	
+	<div class="map_area_plashka uk-clearfix">
+		<p>
+			<img src="images/icon-map-marker.png" alt="" /> 
+			М. Полянка, Октябрьская <br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-й Спасоналивковский пер., д.17, к.1
+		</p>
+		<p>
+			<img src="images/icon-phone.png" alt="" /> 
+			+7 (499) 230-15-29
+		</p>
+		<p style="margin-top:-1px; margin-left:40px;"> 
+			+7 (916) 619-29-29 </p>
+		<p>
+			<img src="images/icon-time.png" alt="" />
+			 10:00 - 20:00&nbsp;Без выходных<br /> 
+<!--			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+		</p>
+	</div>
+</div>
+
+
+<footer id="footer" class="">
+	<div class="uk-container-center max-width">
+		<div class="uk-clearfix">
+			<div class="uk-float-left">
+				<div class="uk-grid footer_box1">
+					<div class="uk-width-5-10">
+						<img src="images/icon-phone.png" alt="" style="margin-top: 11px; margin-right: 8px;">
+						<p class="color_skin_orange uk-float-left" style="margin-top: -49px; margin-left: 25px;">
+						  <br>
+						   +7 (499) 230-15-29
+						 </p>
+						<p class="color_skin_orange uk-float-left" style="margin-top:-15px; margin-left:25px;">
+							+7 (916) 619-29-29
+						</p>
+					</div>
+					<div class="uk-width-1-2 uk-margin-remove prob_line">
+						<p class="color_skin_orange uk-float-left uk-margin-left">
+							Лицензия<br /> № ЛО-77-01-006733<br/> от 23.09.2013
+						</p>
+					</div>
+
+				</div>
+			</div>
+			<div class="uk-float-left " >
+				<button class="btn btn_call_us popMe2"></button><div class="brand_futer">ООО "ЭЛЛАНА" <br>под брендом "KISS DENT"</div>
+			</div>
+			<div class="uk-float-left copy footer_box2">
+				<a href="http://n-solution.ru" target="_blank"><img src="images/logo2.png" alt="" class="uk-display-inline-block" /> <div class="ssilka_site"> Разработка сайта </div></a>
+			</div>
+		</div>		
+	</div>
+</footer>
+
+<!-- bxSlider Javascript file -->
+<script src="js/bx-slider/jquery.bxslider.min.js"></script>
+
+<script>
+
+$(function () {	
+
+  // SLIDER
+  $('.bxslider').bxSlider({
+
+        auto: false,
+
+        mode: 'horizontal',
+
+        infiniteLoop: true,
+
+        useCSS: false,
+
+        speed: 1000,
+
+        pager: 'short'
+
+    });
+
+
+//form
+$('form').submit(function(e){
+    e.preventDefault();
+//vars
+var name =  $(this).find("input[name=name]").val();
+var phone =  $(this).find("input[name=phone]").val();
+
+//alert(name+' / '+phone);
+
+ $.post(
+			  "form.php",
+			  {
+				name: name,
+				phone: phone
+
+			  },
+				function (data){
+					//alert(data);
+					if(data != "" && data.length > 1){
+						closePopup('');
+						closePopup('2');
+	                    showPopup('3');
+
+	                    setTimeout(function(){
+	                        closePopup('3');
+	                    }, 6000);
+					}
+					else{
+						alert('Пожалуйста введите правильные данные!');
+					}
+				}
+			);
+}); // end form submit fnc
+
+
+
+
+$('.popupClose').click(function(e){
+  	e.preventDefault();
+    closePopup('');
+});
+
+$('.popMe').click(function(e){
+  e.preventDefault();
+  showPopup('');
+});
+
+$('.popupClose2').click(function(e){
+  	e.preventDefault();
+    closePopup('2');
+});
+
+$('.popMe2').click(function(e){
+  e.preventDefault();
+  showPopup('2');
+});
+
+$('.popupClose3').click(function(e){
+  	e.preventDefault();
+    closePopup('3');
+});
+
+$('.popMe3').click(function(e){
+  e.preventDefault();
+  showPopup('3');
+});
+
+
+
+
+
+function closePopup(num){
+   $('#box'+num).fadeOut(200);
+   $('.popup'+num).fadeOut(200);
+}
+
+function showPopup(num){
+   $('#box'+num).fadeIn(300);
+   $('.popup'+num).fadeIn(300);
+}
+
+
+});
+
+
+</script>
+</div> <!-- #wrapper -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter36539025 = new Ya.Metrika({
+                    id:36539025,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/36539025" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

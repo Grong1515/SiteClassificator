@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/sites/temegon.ru/themes/tem/favicon.ico" type="image/x-icon" />
+<link rel="canonical" href="http://www.temegon.ru/" />
+<meta name="revisit-after" content="1 day" />
+  <title>Медицинский центр Темегон</title>
+  <link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/cck/theme/content-module.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/colorbox/styles/stockholmsyndrome/colorbox_stockholmsyndrome.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/libraries/jquery.ui/themes/south-street/jquery-ui.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/libraries/jquery.ui/themes/south-street/ui.datepicker.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date_popup/themes/jquery.timeentry.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/filefield/filefield.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/typogrify/typogrify.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/views/css/views.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/temegon.ru/themes/tem/style.responsive.css?l" />
+<link type="text/css" rel="stylesheet" media="screen" href="/sites/temegon.ru/themes/tem/style.css?l" />
+    <script type="text/javascript" src="/sites/temegon.ru/themes/tem/jquery.js?l"></script>
+<script type="text/javascript" src="/misc/drupal.js?l"></script>
+<script type="text/javascript" src="/sites/temegon.ru/files/languages/ru_aef642373bc04c38c1c5d3e2dc3d8a86.js?l"></script>
+<script type="text/javascript" src="/misc/collapse.js?l"></script>
+<script type="text/javascript" src="/sites/all/libraries/colorbox/colorbox/jquery.colorbox-min.js?l"></script>
+<script type="text/javascript" src="/sites/all/modules/colorbox/js/colorbox.js?l"></script>
+<script type="text/javascript" src="/sites/all/modules/colorbox/styles/stockholmsyndrome/colorbox_stockholmsyndrome.js?l"></script>
+<script type="text/javascript" src="/sites/all/modules/poormanscron/poormanscron.js?l"></script>
+<script type="text/javascript" src="/sites/temegon.ru/themes/tem/script.js?l"></script>
+<script type="text/javascript" src="/sites/temegon.ru/themes/tem/script.responsive.js?l"></script>
+<script type="text/javascript">
+
+jQuery.extend(Drupal.settings, { "basePath": "/", "colorbox": { "transition": "elastic", "speed": 350, "opacity": "0.85", "slideshow": false, "slideshowAuto": false, "slideshowSpeed": 2500, "slideshowStart": "", "slideshowStop": "", "current": "{current} из {total}", "previous": "« Предыдущий", "next": "Следующий »", "close": "Закрыть", "overlayClose": true, "maxWidth": "100%", "maxHeight": "100%" }, "cron": { "basePath": "/poormanscron", "runNext": 1477479530 } });
+
+</script>
+  <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lte IE 7]><link rel="stylesheet" href="/sites/temegon.ru/themes/tem/style.ie7.css" media="screen" /><![endif]-->
+<link href="/sites/temegon.ru/themes/tem/nivo/themes/default/default.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/sites/temegon.ru/themes/tem/nivo/nivo-slider.css" media="screen" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/sites/temegon.ru/themes/tem/nivo/jquery.nivo.slide.js"></script>
+<script type="text/javascript" src="/sites/temegon.ru/themes/tem/device.min.js"></script>
+<script>
+function myresp(){
+
+$('.responsive  #extra1-block-8 img').css('width',$('.v-sheet').innerWidth()+'px');
+$('.responsive  #extra1-block-8 img').css('max-width','270px');
+$('#banner1-block-5').width($('.v-sheet').innerWidth());
+$('#banner1-block-11').width($('.v-sheet').innerWidth()*1-72);
+$('#banner1-block-12 img').width($('#banner1-block-12').innerWidth()*1);
+	if($('.ffi-sheet').width()<1100){
+		$('.ffi-sheet').css('padding','3px');
+	}else{
+	$('.ffi-sheet').css('padding','30px');
+	}
+	
+}
+
+function mobime(){
+	  $('.v-hmenu').hide();
+			$('.v-nav').append('<div class="per-menu-btn"><span></span><span></span>МЕНЮ<span></span><span></span></div>');
+			$('body').append('<div class="mobimenu"><ul></div>');
+			$('.mobimenu').append($('.v-hmenu').html());
+	
+			$('.mobimenu ul').removeClass('v-hmenu');
+			
+			$('.per-menu-btn').click(function() {
+				$('.mobimenu').toggle();
+			});
+}
+
+$( document ).ready(function() {
+myresp();
+
+     if(device.androidPhone() || device.mobile() || 1==61){
+		 mobime();
+	 }	
+});
+
+$(window).resize(function(){
+myresp()
+});
+</script>
+
+
+
+</head>
+
+<body class="front not-logged-in page-node node-type-page no-sidebars">
+
+<div id="v-main">
+<!--
+<div id="v-maintabdiv">
+<table id="v-maintab"<tr>
+<td>
+Ежедневно с 9 до 21
+</td><td>
++7 (4967) 54-28-57
+</td><td>
++7 (4967) 54-28-57
+</td><td>
+г.Подольск, ул. Чехова, д. 6 (напротив ЗАГСА)
+</td></tr></table>
+</div>
+-->
+    <div class="v-sheet clearfix">
+<nav class="v-nav clearfix">
+     
+    <div class="v-hmenu-extra1"><div id="extra1-block-8">
+<div class="v-article content">
+<p><a href="http://temegon.ru/"><img alt="" src="/sites/temegon.ru/files/logo.jpg" style="width: 272px; height: 131px;" width="272" height="131" /></a></p>
+</div>
+</div>
+</div>
+<ul class="v-hmenu"><li class="leaf first active-trail active"><a href="/node/1" title='МЕДИЦИНСКИЙ ЦЕНТР "ТЕМЕГОН"' class="active">Главная</a></li>
+<li class="leaf"><a href="/about-us" title="О компании">О клинике</a></li>
+<li class="leaf"><a href="/uslugi" title="Услуги">Услуги</a></li>
+<li class="leaf"><a href="/tseny" title="Цены">Цены</a></li>
+<li class="leaf"><a href="/help-me" title="Заявка на прием">Запись на прием</a></li>
+<li class="leaf last"><a href="/contacts" title="Контакты">Контакты</a></li>
+</ul>
+</nav><div id="banner1"><div id="banner1-block-5">
+<div class="content">
+	<div class="slider-wrapper theme-default"  style="margin:auto;">
+		<div class="nivoSlider" id="slider2">
+		<img src="/sites/temegon.ru/themes/ser.jpg">
+<img src="/sites/temegon.ru/themes/uzi.jpg">
+		<img src="/sites/temegon.ru/themes/s1.jpg">
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider2').nivoSlider({
+        animSpeed: 500,
+        pauseTime: 3000,
+        startSlide: 0,
+        controlNav: false, // 1,2,3... navigation
+        controlNavThumbs: false, // Use thumbnails for Control Nav
+        directionNav: false});
+    });
+    </script></div>
+</div>
+<div id="banner1-block-11">
+<div class="content">
+<div class="pro-title">Запись онлайн со скидкой 5%</div>
+<div class="pro-body">
+<table><tbody><tr><td><img alt="" src="/sites/temegon.ru/files/phone.png" style="align:left;"></td><td><br><span style="font-size:18px;">
+
+<b><a href="/contacts" class="phone1">+7 (4967) 54-28-57</a></b><br>
+<b><a href="/contacts" class="phone2">+7 (4967) 54-66-65</a></b><br>
+<b><a href="/contacts" class="phone3">+7 (968) 877-55-55</a></b>
+
+
+
+
+</span></td><td style="width: 40px;" class="nomob">&nbsp;</td><td class="nomob"><img alt="" src="/sites/temegon.ru/files/soc.png" style="align:left;"></td><td class="nomob"><br><span style="font-size:18px;">г.Подольск, ул. Чехова, д. 6<br>Ежедневно с 9 до 20</span></td></tr></tbody></table>
+</div>
+
+<div class="pro-form2">
+
+<a href="help-me">Заявка на прием</a>
+
+</div></div>
+</div>
+</div><div class="v-layout-wrapper clearfix">
+                <div class="v-content-layout">
+                    <div class="v-content-layout-row">
+                                                <div class="v-layout-cell v-content clearfix">
+
+
+
+<div id="node-1" class="node page">
+<article class="v-post v-article">
+                                <h1 class="v-postheader">МЕДИЦИНСКИЙ ЦЕНТР &quot;ТЕМЕГОН&quot;</h1>
+                        
+
+                <div class="v-postcontent v-postcontent-0 clearfix"><div class="v-article">
+    <p><a href="/sites/temegon.ru/files/image_1.jpeg" class="colorbox" rel="cbox-resized"><img alt="" src="/sites/temegon.ru/files/resize/image_1-400x290.jpeg" style="width: 400px; height: 290px; float: left; margin: 5px;" width="400" height="290" /></a>&nbsp;&nbsp;&nbsp; Клиника &nbsp;«ТеМегон» успешно работает в Подольске с 1996года, начала свою деятельность&nbsp; с оказания стоматологических услуг. &nbsp;За 20 лет работы была оказана помощь более 16 000 пациентам в лечении, удалении, протезировании и&nbsp;имплантации&nbsp;зубов.</p>
+<p>&nbsp;&nbsp;&nbsp; Сегодня Медицинский центр «ТеМегон» значительно расширил перечень предоставляемых услуг. С целью оказания помощи пациентам с заболеваниями сердечно - сосудистой системы работает Центр Сердечно-сосудистой&nbsp; хирургической диагностики, можно пройти обследования по всем видам&nbsp; ультразвуковой диагностики,&nbsp; сдать медицинские&nbsp;анализы.</p>
+<p>&nbsp;&nbsp;<a href="/about-us">&nbsp;далее</a></p>
+  </div>
+</div>
+</article></div>
+
+
+</div>
+                                            </div>
+                </div>
+            </div>
+    </div>
+<footer class="v-footer clearfix">
+  <div class="v-footer-inner">
+
+  </div>
+<div id="copyright"><div id="block-block-14" class="clear-block block block-block">
+<div class="content">
+<table border="0" cellpadding="1" cellspacing="1"><tbody><tr><td><table style="max-width:250px;" id="fta2" border="0" cellpadding="1" cellspacing="1"><tbody><tr><td><img alt="" src="/sites/temegon.ru/files/wifi.png"></td><td><img alt="" src="/sites/temegon.ru/files/visa-curved.png" ></td><td><img alt="" src="/sites/temegon.ru/files/mastercard-curved.png"></td></tr></tbody></table></td><td  >&nbsp;</td><td style="width: 30%; text-align: right;"  id="fta3"><a class="phone1" href="http://temegon.ru/contacts">+7 (4967) 54-28-57</a><br> <a class="phone2" href="http://temegon.ru/contacts">+7 (4967) 54-66-65</a><br> <a class="phone3" href="http://temegon.ru/contacts">+7 (968) 877-55-55</a><br> г.Подольск, ул. Чехова, д. 6</td></tr></tbody></table><p>&nbsp;</p></div>
+</div>
+</div>
+<p><a href="http://podolsk-media.ru/" target="_blank">Создание сайта</a> © 2016<br></p>
+</footer>
+
+</div>
+
+
+</body>
+</html>

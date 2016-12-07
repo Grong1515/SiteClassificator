@@ -1,0 +1,750 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru">
+    <head>
+    	          <base href="http://www.microprom.ru/contacts" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Микронаушник, купить микронаушник для экзамена, интересные товары, увлекательные подарки" />
+  <meta name="title" content="Контакты" />
+  <meta name="description" content="Микропром - лучшие микронаушники для экзаменов, и другие интересные товары." />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Контакты</title>
+  <link href="/templates/microprom/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="/plugins/system/jceutilities/css/jceutilities.css?v=224" type="text/css" />
+  <link rel="stylesheet" href="/plugins/system/jceutilities/themes/squeeze/css/style.css?version=224" type="text/css" />
+  <link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
+  <script type="text/javascript" src="/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="/plugins/system/jceutilities/js/mediaobject.js?v=224"></script>
+  <script type="text/javascript" src="/plugins/system/jceutilities/js/jceutilities.js?v=224"></script>
+  <script type="text/javascript" src="/media/system/js/caption.js"></script>
+  <script type="text/javascript" src="/media/system/js/modal.js"></script>
+  <script type="text/javascript">
+	MediaObject.init({flash:"10,0,22,87",windowmedia:"5,1,52,701",quicktime:"6,0,2,0",realmedia:"7,0,0,0",shockwave:"8,5,1,0"});window.addEvent('domready', function(){window.jcepopup=new JCEUtilities({popup:{legacy:0,resize:1,icons:1,overlay:1,overlayopacity:0.8,overlaycolor:"#000000",fadespeed:500,scalespeed:500,hideobjects:1,scrollpopup:1},tooltip:{className:"tooltip",opacity:1,speed:150,position:"br",offsets:{x: 16, y: 16}},imgpath:"plugins/system/jceutilities/img",theme:"squeeze",themecustom:"",themepath:"plugins/system/jceutilities/themes"});});
+window.addEvent('load', function() {
+
+SqueezeBox.initialize({});
+
+$$('a.modal').each(function(el) {
+el.addEvent('click', function(e) {
+new Event(e).stop();
+SqueezeBox.fromElement(el);
+});
+});
+});
+  </script>
+
+		<meta name="robots" content="noyaca"/>
+		<meta name="robots" content="noodp"/>
+                <link rel="stylesheet" type="text/css" href="/templates/microprom/styles/style.css" />
+        <!--[if IE 6]>
+                 <link rel="stylesheet" type="text/css" href="/templates/microprom/styles/ie6.css" />
+        <![endif]-->
+        <script type="text/javascript" src="/media/system/js/validate.js"></script>
+        <script type="text/javascript" src="/templates/microprom/pjs/slideshow.js"></script>
+        <script type="text/javascript" src="/templates/microprom/pjs/backgroundSlider.js"></script>
+        <script type="text/javascript">
+            function myValidate(f) {
+                if (document.formvalidator.isValid(f)) {
+                    return true;
+                }
+                return false;
+            }
+           
+            window.addEvent('domready', function() {
+                // Decorate the login windows to use a modal.
+
+
+                $ES('a.modal').each(function(a){
+                    if (a.getProperty('rel')==null){
+                        a.setProperty('rel', '{size: {x: 500, y: 330}, ajaxOptions: {method: "get"}}');
+                        if (a.getProperty('href').contains('?')) {
+                            a.setProperty('href', a.getProperty('href')+'&tmpl=component');
+                        } else {
+                            a.setProperty('href', a.getProperty('href')+'?tmpl=component');
+                        }
+                    }
+
+                    if (a.getProperty('rel')=='review'){
+                        a.setProperty('rel', '{size: {x: 700, y: 500}, ajaxOptions: {method: "get"}}');
+                        if (a.getProperty('href').contains('?')) {
+                            a.setProperty('href', a.getProperty('href')+'&tmpl=component');
+                        } else {
+                            a.setProperty('href', a.getProperty('href')+'?tmpl=component');
+                        }
+                    }
+                });
+
+               
+            });
+        </script>
+        <script language="JavaScript" type="text/javascript">//<![CDATA[
+            function check_reviewform() {
+                var form = document.getElementById('reviewform');
+                //alert (form.comment.value.length);
+                var ausgewaehlt = false;
+                for (var i=0; i<form.user_rating.length; i++)
+                    if (form.user_rating[i].checked)
+                        ausgewaehlt = true;
+                if (!ausgewaehlt)  {
+                    alert('Пожалуйста, проголосуйте за этот товар чтобы полностью выразить свое мнение!');
+                    return false;
+                }
+                else if (form.comment.value.length < 58) {
+                    alert('Пожалуйста, добавьте несколько слов в текст Вашего отзыва. Он должен содержать не менее 10 знаков.');
+                    return false;
+                }
+                else if (form.review_usrname.value.length==0) {
+                    alert('Пожалуйста, укажите свое имя');
+                    return false;
+                }
+                else if (form.comment.value.length > 748) {
+                    alert('Пожалуйста, уменьшите текст отзыва. Он должен содержать не более 700 знаков');
+                    return false;
+                }
+                else if (form.review_check.value.length > 0) {
+              //  return false;
+                }
+                else {
+                    $('reviewform').send({                   // отсылаем данныеupdate: resID,                // обновляем слой вывода результата
+                        onComplete: function() {
+                            $('thank_you').setStyle('display', 'block');
+                            $('forma').setStyle('display', 'none');
+                        } });
+                  // //  new Ajax('index.php', {method: 'post'}).request();
+                    return false;
+                    
+                }
+            }
+            function click_all(){
+                $('all_reviews').setStyle('display', 'block');
+                $('review_form').setStyle('display', 'none');
+                $('first').addClass('open').removeClass('closed');
+                $('last').addClass('closed').removeClass('open');
+            }
+
+            function click_form(){
+                $('all_reviews').setStyle('display', 'none');
+                $('review_form').setStyle('display', 'block');
+                $('first').addClass('closed').removeClass('open');
+                $('last').addClass('open').removeClass('closed');
+            }
+
+            function refresh_counter() {
+                
+                var form = document.getElementById('reviewform');
+                form.counter.value= form.comment.value.length-48;
+            }
+            //]]>
+        </script>
+        <script type="text/javascript" src="http://www.microprom.ru/swfobject.js"></script>
+
+
+        <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?45"></script>
+
+        <script type="text/javascript">
+             VK.init({apiId: 2730239, onlyWidgets: true});
+        </script>
+
+        <script type="text/javascript">
+            window.___gcfg = {lang: 'ru'};
+
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+        
+        <link href="http://stg.odnoklassniki.ru/share/odkl_share.css" rel="stylesheet">
+        <script src="http://stg.odnoklassniki.ru/share/odkl_share.js" type="text/javascript" ></script>
+        
+    </head>
+    <body oncopy='return false' onload="ODKL.init();">
+
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+
+        <!-- main -->
+
+
+
+
+
+        <div id="main">
+
+            <!--  header   -->
+
+            <!-- end header -->
+
+
+            <!--  header   -->
+
+            <!-- end header -->
+
+
+            <!--  header  -->
+            <div id="header">
+                <div class="head-b"></div>
+                <a class="logo" href="/index.php"><img src="/templates/microprom/images/logo.png" width="197" height="60" alt="" /></a>
+
+                <div class="menu_top">
+                </div>
+
+
+                <div class="menu1">
+                    <div>
+                        <table style="height: 231px;">
+                            <tr><td><img src="/images/html_head/hv_l0.gif" border="0"></td></tr>
+                            <tr valign="top">
+                                <td class="topleftmen">
+                                    ﻿<div id="bugCart" class="vmCartModule"><div class="cartModule">
+    <a href="/component/virtuemart/?page=shop.cart">
+                    <img src="http://www.microprom.ru/components/com_virtuemart/shop_image/ps_image/scart_e.png" alt="VirtueMart" border="0" /></a>
+    <br />
+
+
+
+<div class="miniCartInfo">
+
+    <div style="clear: both;"></div>
+            Ваша корзина пуста.    </div>
+
+
+<div class="payment_methods">
+    <a href="/dostavka" title="Варианты оплаты">
+        <img src="/templates/microprom/images/payment.jpg"  alt="payment"/>
+    </a>
+</div>
+</div>
+
+
+
+
+
+
+
+</div>
+<form action="index.php"  method="post" class="search">
+    
+    <input name="searchword" class="inp" type="text"  />
+    <input class="go" type="image" src="/templates/microprom/images/button-go.gif" />
+    <input type="hidden" name="option" value="com_search" />
+    <input type="hidden" name="task"   value="search" />
+</form>
+
+                                </td>
+                            </tr>
+                            <tr><td><img src="/images/html_head/hv_l7.gif" border="0"></td></tr>
+                        </table>
+                    </div>
+                </div>
+
+
+                ﻿
+                <div class="img_rotator">
+
+                    <div id="slideshowContainer" class="slideshowContainer">
+                        <a href='http://www.microprom.ru/shop?page=shop.browse&category_id=8'><img class='slideshowThumbnail' src='/img_rotator/loader-004.jpg' alt='Photo' /></a><a href='http://www.microprom.ru/shop?page=shop.browse&category_id=25'><img class='slideshowThumbnail' src='/img_rotator/loader-003.jpg' alt='Photo' /></a><a href='http://www.microprom.ru/shop?page=shop.browse&category_id=24'><img class='slideshowThumbnail' src='/img_rotator/loader-005.jpg' alt='Photo' /></a><a href='http://www.microprom.ru/shop?page=shop.browse&category_id=27'><img class='slideshowThumbnail' src='/img_rotator/loader-001.png' alt='Photo' /></a><a href='http://www.microprom.ru/dostavka'><img class='slideshowThumbnail' src='/img_rotator/loader-008.jpg' alt='Photo' /></a>                    </div>
+
+                    <a href="#" style="z-index:1000;position:absolute;top:100px;" onclick="show.previous(); return false;"><img src="/templates/microprom/images/arrow_left.png" width="23" height="33" alt="" /></a><a style="left:653px;z-index:1000;position:absolute;top:100px;" href="#" onclick="show.next(); return false;"><img src="/templates/microprom/images/arrow_right.png" width="23" height="33" alt="" /></a></p>
+                    <script type="text/javascript">
+                    window.addEvent('domready',function(){
+                        var obj = {
+                            wait: 5000,
+                            effect: 'fade',
+                            duration: 900,
+                            loop: true,
+                            thumbnails: false,
+                            backgroundSlider: false,
+                            onClick: function(i){
+                                var linkarr =$('slideshowContainer').getElements('a');
+                                document.location.href=linkarr[i].href;
+                            }
+                        }
+                        show = new SlideShow('slideshowContainer','slideshowThumbnail',obj);
+                        show.play();
+                    });
+                    </script>
+                </div>
+
+                <div class="menu2">
+                    <div style="padding-left:12px;margin-top:8px;">
+                        <table cellpadding="0" cellspacing="0" >
+                            <tr valign="middle">
+                                <td valign="middle" height="33px;" class="tblmen"><ul id="mainlevel"><li class="topli1"><a href="/index" class="mainlevel" >Главная</a></li><li class="topli2"><a href="/aboutus" class="mainlevel" >О компании</a></li><li class="topli3"><a href="/catalog" class="mainlevel" >Каталог</a></li><li class="topli4"><a href="/dostavka" class="mainlevel" >Оплата и доставка</a></li><li class="topli5"><a href="/statji-blog" class="mainlevel" >Помощь</a></li><li class="topli6"><a href="/sotrydnichestvo" class="mainlevel" >Сотрудничество</a></li><li class="topli7"><a href="/contacts" class="mainlevel" id="active_menu">Контакты</a></li></ul></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+				<div class="hidden_menuleft">﻿<div id="bugCart" class="vmCartModule"><div class="cartModule">
+    <a href="/component/virtuemart/?page=shop.cart">
+                    <img src="http://www.microprom.ru/components/com_virtuemart/shop_image/ps_image/scart_e.png" alt="VirtueMart" border="0" /></a>
+    <br />
+
+
+
+<div class="miniCartInfo">
+
+    <div style="clear: both;"></div>
+            Ваша корзина пуста.    </div>
+
+
+<div class="payment_methods">
+    <a href="/dostavka" title="Варианты оплаты">
+        <img src="/templates/microprom/images/payment.jpg"  alt="payment"/>
+    </a>
+</div>
+</div>
+
+
+
+
+
+
+
+</div>
+<form action="index.php"  method="post" class="search">
+    
+    <input name="searchword" class="inp" type="text"  />
+    <input class="go" type="image" src="/templates/microprom/images/button-go.gif" />
+    <input type="hidden" name="option" value="com_search" />
+    <input type="hidden" name="task"   value="search" />
+</form>
+</div>
+
+                <ul class="gif-menu">
+                    <li><a href="/component/user/login?tmpl=component" class="modal"><img src="/templates/microprom/images/e.gif" width="70" height="27" alt="" /></a></li>
+                    <li class="li80"><a href="/component/user/register?tmpl=component" class="modal"><img src="/templates/microprom/images/e.gif" width="80" height="27" alt="" /></a></li>
+                    <li><a href="http://www.microprom.ru/contacts"><img src="/templates/microprom/images/e.gif" width="70" height="27" alt="" /></a></li>
+                </ul>
+
+
+
+                <div class="menu-vibor">
+                    <div class="mwrap">
+                        <h1 class="menu_zagol">On-line консультация</h1>
+<div style="float:left;padding-right:8px;padding-top:4px">
+<a href="https://siteheart.com/webconsultation/332637?byhref=1" target="siteheart_332637" onclick="sh_o=window.open;sh_o('https://siteheart.com/webconsultation/332637', 'siteheart_332637', 'width=550,height=400,top=30,left=30,resizable=yes'); return false;"><img  alt="chat" src="/templates/microprom/images/mimage_06.jpg"/></a>
+  </div>
+    <div style="padding-top:3px">
+                            Вам нужна помощь?<br/>
+                            Спросите нас сейчас!<br/><br/>
+                            24 часа в сутки<br/>
+                            7 дней в неделю
+                            </div>
+                            <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="menu-vibor2">
+                    <div class="mwrap">
+                        <h1 class="menu_zagol">Магазин в Москве</h1>
+                           
+                            ст. м. Чистые пруды, Тургеневская<br>
+Сретенский бульвар<br>
+                            ул. Мясницкая, д. 30/1, этаж 3,  оф. 10
+                           
+                            <div style="padding-top:5px">
+                                Пн-Пт 11:00-19:00; Перерыв с 13:00 до 13:40; Cб-Вс Выходной<br/></div>
+<div style="padding-top:6px;"><img class="mimage" src="/templates/microprom/images/mimage_13.jpg"><a href="http://www.microprom.ru/gdekypit">Как нас найти?</a></div>
+
+
+                    </div>
+                </div>
+                <div class="menu-vibor3">
+                    <div class="mwrap">
+                        <h1 class="menu_zagol">Горячая линия из Москвы</h1>
+<table border="0">
+  <tr><td>
+       </td>
+      <td>+7 (495) 5076131 <br> +7 (926) 1489317</td>
+   </tr>
+  <tr>
+    <td><img class="mimage" src="/images/user_images/skype.png">
+    </td>      
+    <td>Skype: <a href="skype:Microprom?call">Microprom</a>
+      </tr>
+     <tr><td><img class="mimage" src="/templates/microprom/images/mimage_15.jpg">
+       </td>
+      <td><a class="grey" href="http://www.microprom.ru/callback/form.php" onClick="popupWin = window.open(this.href, 'contacts', 'location,width=660,height=350,top=0'); popupWin.focus(); return false;">Заказать обратный звонок</a></td>
+   </tr>
+</table>
+                    </div>
+                </div>
+
+                <div class="menu-vibor4">
+                    <div class="mwrap">
+                        <h1 class="menu_zagol">Прочие средства связи</h1>
+<table border="0">
+    <tr>
+     <td><img src="/images/user_images/icq.png">
+     </td>      
+     <td>ICQ: 575216999</td>
+    </tr>
+    <tr>
+     <td>
+<img src="/images/user_images/vk_sm.png">
+     </td>
+     <td><a href="http://vkontakte.ru/club8047270">Наша группа Вконтакте</a>
+     </td>
+    </tr>
+    <tr>
+     <td><img class="mimage" src="/images/user_images/email.png">
+     </td>
+     <td>E-mail: <a href="mailto:client@microprom.ru">client@microprom.ru</a>
+     </td>
+    </tr>     
+</table>
+                    </div>
+                </div>
+
+
+
+                <div class="phone"><img src="/templates/microprom/images/phone.png" width="163" height="20" alt="" /></div>
+
+            </div><!-- end header -->
+
+
+            <!--  content  -->
+            <div id="content">
+                <div class="c-top"><div class="c-bot">
+                        <!-- col-left -->
+                        <div id="col-left">
+
+
+                            
+                                                        
+
+
+
+                                		<div class="moduletable">
+							<h1>Новости</h1>
+						
+
+<div class="one-news">
+<h4>
+		<a href="/the-news/178" class="contentpagetitle">
+		22.10.16 -  Как мы работаем в праздники.</a>
+	</h4>
+
+
+<div>
+<div>Уважаемые покупатели!</div>
+<div>Обращаем Ваше внимание на то, что <strong style="font-weight: bold;">04.11.16,</strong> в праздничный день, наш магазин на ул. Мясницкая 30/1 работать не будет, остальные дни - согласно графику.</div>
+<div>Напоминаем, что Вы можете в любое время (<strong style="font-weight: bold;">24 часа  в сутки!</strong>)  оформить заказ через наш сайт. Заказы, оформленные через сайт в  праздничный день, будут обработаны в первый рабочий день после  праздника.</div>
+<div>Поздравляем Вас с наступающим Днём народного единства!</div>
+</div></div>
+    <div class="news-divider"></div>
+    <div class="one-news">
+<h4>
+		<a href="/the-news/177" class="contentpagetitle">
+		08.06.16 - Режим работы в праздники.</a>
+	</h4>
+
+
+<div>Дорогие покупатели!</div>
+<div>Обращаем Ваше внимание на график работы магазина на ул. Мясницкая 30/1 в период предпраздничных и праздничных дней:<strong> 10.06.16</strong> – в обычном режиме, с 11:00 до 19:00 <strong>(перерыв с 13:00 до 13:40)</strong>;<strong> 13.06.16 – выходной.</strong></div>
+<div>Также Вы можете в любое время (<strong>24 часа  в сутки!</strong>) оформить    заказ через наш сайт. Заказы, оформленные через сайт в праздничный  день,   будут обработаны в первый рабочий день после праздника. Поздравляем Вас с Днём России и желаем приятных выходных!</div></div>
+    <div class="news-divider"></div>
+    <div class="one-news">
+<h4>
+		<a href="/the-news/176" class="contentpagetitle">
+		26.04.16 - Режим работы в праздники.</a>
+	</h4>
+
+
+<div>Дорогие покупатели!</div>
+<div>Обращаем Ваше внимание на график работы магазина на ул. Мясницкая 30/1 в период предпраздничных и праздничных дней:  <strong>29.04.16</strong> – в обычном режиме; <strong>30.04.16 – 03.05.16 – выходной</strong>;<strong> 04.05.16 – 06.05.16</strong> –  работаем в обычном режиме; <strong>07.05.16 – 09.05.16 –  выходной;</strong></div>
+<div>Также Вы можете в любое время (<strong>24 часа  в сутки!</strong>) оформить     заказ через наш сайт. Заказы, оформленные через сайт в праздничный   день,   будут обработаны в первый рабочий день после праздника.</div>
+<div>Желаем Вам приятных длинных выходных и ждем Вас в нашем магазине!</div></div>
+    <div class="news-divider"></div>
+    <div class="one-news">
+<h4>
+		<a href="/the-news/175" class="contentpagetitle">
+		02.03.16 - Режим работы в праздники.</a>
+	</h4>
+
+
+<div>Дорогие покупатели!</div>
+<div>Обращаем Ваше внимание на график работы магазина на ул. Мясницкая 30/1 в период предпраздничных и праздничных дней:<strong> 04.03.16</strong> – в обычном режиме, с 11:00 до 19:00 <strong>(перерыв с 13:00 до 13:40)</strong>;<strong> 05.03.16 – 08.03.16 – выходной.</strong></div>
+<div>Также Вы можете в любое время (<strong>24 часа  в сутки!</strong>) оформить    заказ через наш сайт. Заказы, оформленные через сайт в праздничный  день,   будут обработаны в первый рабочий день после праздника.</div>
+Поздравляем Вас с наступающим <strong>праздником весны - 8 марта</strong> и ждём Вас в нашем магазине <strong>за подарками</strong> с понедельника по пятницу с 11:00 до 19:00!</div>
+    
+<p class="all-news"><a href="/the-news">Все новости</a></p>		</div>
+			<div class="moduletable">
+							<h1>Опрос</h1>
+						<form action="index.php" method="post" name="form2">
+
+<table width="95%" border="0" cellspacing="0" cellpadding="1" align="center" class="poll">
+<thead>
+	<tr>
+		<td style="font-weight: bold;color:#08A1ED">
+			Пишите ли вы отзывы о своих покупках?		</td>
+	</tr>
+</thead>
+	<tr>
+		<td align="left">
+			<table class="pollstableborder" cellspacing="0" cellpadding="0" border="0">
+							<tr>
+					<td class="sectiontableentry2" valign="top">
+						<input type="radio" name="voteid" id="voteid61" value="61" alt="61" />
+					</td>
+					<td class="sectiontableentry2" valign="top">
+						<label for="voteid61">
+							Да, регулярно						</label>
+					</td>
+				</tr>
+											<tr>
+					<td class="sectiontableentry1" valign="top">
+						<input type="radio" name="voteid" id="voteid62" value="62" alt="62" />
+					</td>
+					<td class="sectiontableentry1" valign="top">
+						<label for="voteid62">
+							Да, если что-то не понравилось						</label>
+					</td>
+				</tr>
+											<tr>
+					<td class="sectiontableentry2" valign="top">
+						<input type="radio" name="voteid" id="voteid63" value="63" alt="63" />
+					</td>
+					<td class="sectiontableentry2" valign="top">
+						<label for="voteid63">
+							Иногда, если что-то очень понравилось/не понравилось						</label>
+					</td>
+				</tr>
+											<tr>
+					<td class="sectiontableentry1" valign="top">
+						<input type="radio" name="voteid" id="voteid64" value="64" alt="64" />
+					</td>
+					<td class="sectiontableentry1" valign="top">
+						<label for="voteid64">
+							Нет						</label>
+					</td>
+				</tr>
+											<tr>
+					<td class="sectiontableentry2" valign="top">
+						<input type="radio" name="voteid" id="voteid65" value="65" alt="65" />
+					</td>
+					<td class="sectiontableentry2" valign="top">
+						<label for="voteid65">
+							А где-то можно оставить свой отзыв?						</label>
+					</td>
+				</tr>
+											<tr>
+					<td class="sectiontableentry1" valign="top">
+						<input type="radio" name="voteid" id="voteid66" value="66" alt="66" />
+					</td>
+					<td class="sectiontableentry1" valign="top">
+						<label for="voteid66">
+							Другое						</label>
+					</td>
+				</tr>
+										</table>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding:10px 0 10px 0px">
+			<div align="center">
+				<input type="submit" name="task_button" class="button" value="Голосовать" />
+			</div>
+		</td>
+	</tr>
+</table>
+
+	<input type="hidden" name="option" value="com_poll" />
+	<input type="hidden" name="task" value="vote" />
+	<input type="hidden" name="id" value="19" />
+	<input type="hidden" name="00b785d4cea4f25a23e5026bddcfc7b8" value="1" /></form>		</div>
+	
+                                                    </div><!-- end col-left -->
+
+                        <!-- col-right -->
+                        <div id="col-right">
+                            <div class="error">
+                                
+                            </div>
+                                                        
+
+                                                            
+<div id="page">
+
+
+
+<h1 class="contentheadingart">
+	Контакты</h1>
+
+
+
+
+
+
+
+
+
+Вы можете связаться с нами следующими способами:<br /><br /> 
+<table style="border: 1px solid #e6e6e6; width: 100%; padding-left: 20px; text-align: center; height: 150px;" border="1" cellpadding="0" cellspacing="0">
+<tbody style="text-align: center;">
+<tr style="text-align: center;">
+<td style="text-align: center;">Телефоны</td>
+<td style="text-align: center;">E-mail</td>
+<td style="text-align: center;">ICQ</td>
+<td style="text-align: center;">Skype</td>
+</tr>
+<tr style="text-align: center;">
+<td style="text-align: center;">+7(495) 507-61-31<br /><br />+7(926) 148-93-17<br /></td>
+<td style="text-align: center;">
+<p>
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy87160 = 'cl&#105;&#101;nt' + '&#64;';
+ addy87160 = addy87160 + 'm&#105;cr&#111;pr&#111;m' + '&#46;' + 'r&#117;';
+ var addy_text87160 = 'cl&#105;&#101;nt' + '&#64;' + 'm&#105;cr&#111;pr&#111;m' + '&#46;' + 'r&#117;';
+ document.write( '<a ' + path + '\'' + prefix + ':' + addy87160 + '\'>' );
+ document.write( addy_text87160 );
+ document.write( '<\/a>' );
+ //-->\n </script> <script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '<span style=\'display: none;\'>' );
+ //-->
+ </script>Этот e-mail адрес защищен от спам-ботов, для его просмотра у Вас должен быть включен Javascript
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '</' );
+ document.write( 'span>' );
+ //-->
+ </script><br />(по любым вопросам)<br />
+   
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy30442 = 's&#97;l&#101;s_&#111;pt' + '&#64;';
+ addy30442 = addy30442 + 'm&#105;cr&#111;pr&#111;m' + '&#46;' + 'r&#117;';
+ var addy_text30442 = 's&#97;l&#101;s_&#111;pt' + '&#64;' + 'm&#105;cr&#111;pr&#111;m' + '&#46;' + 'r&#117;';
+ document.write( '<a ' + path + '\'' + prefix + ':' + addy30442 + '\'>' );
+ document.write( addy_text30442 );
+ document.write( '<\/a>' );
+ //-->\n </script> <script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '<span style=\'display: none;\'>' );
+ //-->
+ </script>Этот e-mail адрес защищен от спам-ботов, для его просмотра у Вас должен быть включен Javascript
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '</' );
+ document.write( 'span>' );
+ //-->
+ </script> <br />(по вопросам оптовых закупок)<br />
+   
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy58711 = '4f&#101;&#101;db&#97;ck' + '&#64;';
+ addy58711 = addy58711 + 'm&#105;cr&#111;pr&#111;m' + '&#46;' + 'r&#117;';
+ var addy_text58711 = '4f&#101;&#101;db&#97;ck' + '&#64;' + 'm&#105;cr&#111;pr&#111;m' + '&#46;' + 'r&#117;';
+ document.write( '<a ' + path + '\'' + prefix + ':' + addy58711 + '\'>' );
+ document.write( addy_text58711 );
+ document.write( '<\/a>' );
+ //-->\n </script> <script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '<span style=\'display: none;\'>' );
+ //-->
+ </script>Этот e-mail адрес защищен от спам-ботов, для его просмотра у Вас должен быть включен Javascript
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '</' );
+ document.write( 'span>' );
+ //-->
+ </script><br />(ваши отзывы и предложения, а также любые спорные ситуации)<br />
+</p>
+</td>
+<td style="text-align: center;">575216999</td>
+<td style="text-align: center;">Microprom</td>
+</tr>
+<tr style="text-align: center;">
+<td colspan="4" style="text-align: center;"><br /> <a onclick="sh_o=window.open;sh_o('https://siteheart.com/webconsultation/332637', 'siteheart_332637', 'width=550,height=400,top=30,left=30,resizable=yes'); return false;" target="siteheart_332637" href="https://siteheart.com/webconsultation/332637?byhref=1">Онлайн чат</a><br /> <br /></td>
+</tr>
+</tbody>
+</table>
+<br />Магазин Микропром в Москве:<br /><br /><span style="color: #08a1ed;">Ровно 30 секунд от метро!<br /></span>Проезд до станций: м. Тургеневская, Чистые Пруды, Сретенский бульвар. <br />Далее выход по указателям "На ул.Мясницкая" <br />Адрес: г. Москва, ул.Мясницкая, д. 30/1/C1, 3 этаж, офис 10.<br /><br />
+<div style="text-align: justify;">Ждем Вас в нашем магазине!</div>
+<br /><br /><small><a style="text-align: left;" href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=ru&amp;geocode=&amp;q=%D0%BC%D1%8F%D1%81%D0%BD%D0%B8%D1%86%D0%BA%D0%B0%D1%8F+30%2F1%2F%D0%A11&amp;sll=55.765348,37.639353&amp;sspn=0.008523,0.019226&amp;ie=UTF8&amp;ll=55.766362,37.638752&amp;spn=0.003621,0.006437&amp;z=16&amp;iwloc=A"><span style="color: #08a1ed;">Просмотреть увеличенную карту</span></a></small><br /><br />
+<p style="text-align: center;"><img src="/images/map-chistye_prudy_micromart.gif" height="429" border="0" width="440" /></p>
+<br /><br />
+<p style="text-align: center;"><a href="/images/panorama.jpg" target="_blank"><img src="/images/panorama_small.jpg" height="206" border="0" width="520" /></a></p>
+<p style="text-align: center;"><a href="/images/panorama2.jpg" target="_blank"><img src="/images/foto1.jpg" height="274" border="0" width="513" /></a></p>
+<br /><br />
+<p style="text-align: center;"><img src="/images/foto2.jpg" height="504" border="0" width="529" /></p>
+
+</div>
+
+                            
+                                                    </div><!-- end col-right -->
+
+                        <div class="cl"></div>
+
+                    </div></div>
+            </div><!-- content -->
+        </div><!-- end main -->
+
+
+        <!--  footer -->
+        <div id="footer">
+            <p class="copyright">&copy; 2002-2016 Microprom.ru</p>
+            <!-- Yandex.Metrika counter -->
+            <div style="display:none;"><script type="text/javascript">
+            (function(w, c) {
+                (w[c] = w[c] || []).push(function() {
+                    try {
+                        w.yaCounter11332303 = new Ya.Metrika({id:11332303, enableAll: true, webvisor:true});
+                    }
+                    catch(e) { }
+                });
+            })(window, "yandex_metrika_callbacks");
+                </script></div>
+            <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+            <noscript><div><img src="//mc.yandex.ru/watch/11332303" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+            <p class="copyleft"><a href="http://www.microprom.ru/catalog">Каталог</a>  &nbsp; |&nbsp; <a href="/sitemap?sitemap=1">Карта сайта</a>&nbsp; |&nbsp; Создание сайта: <a target="_blank" href="http://www.develity.com">develity.com</a></p>
+
+        </div>
+        <div  id="footer"><p class="copyright">
+
+                <table><tr><td>
+                            <!--LiveInternet counter--><script type="text/javascript"><!--
+                            document.write("<a href='http://www.liveinternet.ru/click' "+
+                                "target=_blank><img src='http://counter.yadro.ru/hit?t44.1;r"+
+                                escape(document.referrer)+((typeof(screen)=="undefined")?"":
+                                ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                                screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+                                ";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+                                "' alt='' title='LiveInternet' "+
+                                "border='0' width='31' height='31'><\/a>")
+                            //--></script><!--/LiveInternet-->
+                        </td>
+                        <td style="padding-left: 20px">
+
+
+                            <!-- Нас ищут по словам: микронаушник,беспроводной микронаушник,миниатюрные наушники,наушник студент,наушник  экзамен,невидимый наушник,радионаушник,микрофон экзамен,микро наушник,купить микронаушник,микронаушник Москва
+                            --> </td></tr>
+            </p></div>
+
+
+
+        <!-- end footer -->
+
+    </body>
+</html>

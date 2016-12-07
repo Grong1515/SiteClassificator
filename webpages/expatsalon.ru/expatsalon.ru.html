@@ -1,0 +1,524 @@
+<!DOCTYPE HTML> 
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<html lang="ru">
+	<meta name="viewport" content="width=1000" />
+  
+	<title>Салон красоты - мы говорим по-английски</title>
+
+	<link rel="stylesheet" href="http://www.expatsalon.ru/wp-content/themes/expatsalon/style.css" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+  
+	<!-- JQUERY -->
+	<script src="http://www.expatsalon.ru/wp-content/themes/expatsalon/js/jquery-1.9.0.min.js"></script>
+	<!-- JQUERY -->
+		
+	<!-- Fancybox -->
+	<script type="text/javascript" src="http://www.expatsalon.ru/wp-content/themes/expatsalon/js/jquery.fancybox.pack.js"></script>
+	<link rel="stylesheet" href="http://www.expatsalon.ru/wp-content/themes/expatsalon/css/jquery.fancybox.css" />
+		
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$('.fancybox').fancybox({
+				scrolling	: 'no'
+			});
+		});
+	</script>
+	<!-- Fancybox -->
+	
+	<!-- Плавная прокрутка -->
+	<script>
+		$(document).ready(function() {
+			$("a.scrollto").click(function () {
+				var elementClick = $(this).attr("href")
+				var destination = $(elementClick).offset().top;
+				jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+				return false;
+			});
+		});
+	</script>
+	<!-- Плавная прокрутка -->
+
+	<!-- Табы услуг -->
+	<script type="text/javascript">
+	  $(document).ready(function() {
+
+		//When page loads...
+		$(".tab_content").hide(); 
+		$("ul.tabs li:first").addClass("active").show(); 
+		$(".tab_content:first").show(); 
+
+		//On Click Event
+		$("ul.tabs li").click(function() {
+
+			$("ul.tabs li").removeClass("active"); 
+			$(this).addClass("active"); 
+			$(".tab_content").hide(); 
+
+			var activeTab = $(this).find("a").attr("href"); 
+			$(activeTab).fadeIn(); 
+			return false;
+		});
+	  });
+	</script>
+	<!-- Табы услуг -->
+	
+	<!--[if lt IE 9]> 
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+	<![endif]-->
+	
+  <link rel='stylesheet' id='colorbox-theme1-css'  href='http://www.expatsalon.ru/wp-content/plugins/jquery-colorbox/themes/theme1/colorbox.css?ver=4.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.expatsalon.ru/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-polls-css'  href='http://www.expatsalon.ru/wp-content/plugins/wp-polls/polls-css.css?ver=2.63' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.expatsalon.ru/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='http://www.expatsalon.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var photocrati_ajax = {"url":"http:\/\/www.expatsalon.ru\/photocrati_ajax","wp_site_url":"http:\/\/www.expatsalon.ru","wp_site_static_url":"http:\/\/www.expatsalon.ru"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.expatsalon.ru/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/ajax/static/ajax.js?ver=3.6'></script>
+<!-- <meta name="NextGEN" version="2.0.11" /> -->
+<style type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background-image: url('http://www.expatsalon.ru/wp-content/plugins/wp-polls/images/default/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+</style>
+
+<!-- All in One SEO Pack 2.0.3 by Michael Torbert of Semper Fi Web Design[134,187] -->
+<meta name="description" content="Салон красоты - мы говорим по-английски" />
+
+<meta name="keywords" content="Салон красоты - мы говорим по-английски" />
+
+<link rel="canonical" href="http://www.expatsalon.ru" />
+<!-- /all in one seo pack -->
+</head>
+<body>
+
+<div id="container">
+	
+	<div id="header">
+		<div id="header2">
+			<div id="logo"><a href="/"><img src="http://www.expatsalon.ru/wp-content/themes/expatsalon/images/logo.png" alt="Салон красоты &#8212; мы говорим по-английски" title="Салон красоты &#8212; мы говорим по-английски"></a></div>
+			
+			<div id="adress">
+				<strong><h8>We speak English</h8></strong><br>
+				<a class="fancybox" href="#popup-map">Малый Патриарший переулок, 3</a><br>(вход через ворота в арку)
+				
+				<div id="search">
+					<form method="get" id="searchform" action="http://www.expatsalon.ru/">
+						<input type="text" class="field" name="s" id="s" value="Поиск по сайту" placeholder="Поиск по сайту" />
+						<input type="submit" class="submit" name="submit" id="searchsubmit" value="" />
+					</form>
+				</div><!-- #search -->
+			</div><!-- #adress -->
+			
+			<div id="time-job">
+				<strong>Время работы:</strong><br>
+				Ежедневно с 9:00 до 21:00,<br>Без перерывов и выходных!
+				<a href="http://expatsalon.ru/"><img src="http://www.expatsalon.ru/wp-content/themes/expatsalon/images/flag-rus.png" alt="Русский"></a>
+				<a href="http://en.expatsalon.ru/"><img src="http://www.expatsalon.ru/wp-content/themes/expatsalon/images/flag-eng.png" alt="Английский"></a>
+			</div><!-- #time-job -->
+			
+			<div id="zapis-online">
+				<a id="zapis-online-btn" class="fancybox" href="#popup-zapis"></a>
+				<a id="call-btn" class="fancybox" href="#popup-zvonok"></a>
+			</div><!-- #zapis-online -->
+			
+			<div id="phone">
+				+7 (495) <strong>650-37-49</strong><br>+7 (906) <strong>780-74-37</strong><br>+7 (906) <strong>780-97-74</strong>
+
+
+<a href="https://www.facebook.com/Expatsalon"><img src="http://www.expatsalon.ru/wp-content/themes/expatsalon/images/facebook24.png" alt="facebook"></a>
+<a href="https://www.instagram.com/expatsalon/"><img src="http://www.expatsalon.ru/wp-content/themes/expatsalon/images/instagram24.png" alt="instagram"></a>
+
+			
+</div><!-- #phone -->
+			
+			<div class="clearfix"></div><!-- clearfix -->
+		</div><!-- #header2 -->
+	</div><!-- #header -->
+	
+	<div id="nav">
+		<div id="m1"><a href="/">Главная</a></div>
+                <div id="m2"><a href="/o-salone.html">О салоне</a></div>
+		<div id="m3"><a href="/parikmaxerskij-zal.html">Цены</a></div>
+		<div id="m4"><a href="/nashi-specialisty.html">Наши специалисты</a></div>
+		<div id="m5"><a href="/fotogalereya.html">Фотогалерея</a></div>
+	        <div id="m6"><a href="/novosti.html">Beauty News</a></div>
+		<div id="m7"><a href="/druzya-i-partnery.html">Друзья и партнеры</a></div>
+		<div id="m8"><a href="/kontakty.html">Контакты</a></div>
+		<div class="clearfix"></div><!-- clearfix -->
+	</div><!-- #nav -->
+	<div id="main">
+		
+<div id="banner"> 
+
+
+
+
+
+
+
+
+
+
+   <div class="sp-slideshow">
+			
+				<input id="button-1" type="radio" name="radio-set" class="sp-selector-1" checked="checked" />
+				<label for="button-1" class="button-label-1"></label>
+				
+				<input id="button-2" type="radio" name="radio-set" class="sp-selector-2" />
+				<label for="button-2" class="button-label-2"></label>
+				
+				<input id="button-3" type="radio" name="radio-set" class="sp-selector-3" />
+				<label for="button-3" class="button-label-3"></label>
+				
+				<input id="button-4" type="radio" name="radio-set" class="sp-selector-4" />
+				<label for="button-4" class="button-label-4"></label>
+				
+				<input id="button-5" type="radio" name="radio-set" class="sp-selector-5" />
+				<label for="button-5" class="button-label-5"></label>
+				
+				<label for="button-1" class="sp-arrow sp-a1"></label>
+				<label for="button-2" class="sp-arrow sp-a2"></label>
+				<label for="button-3" class="sp-arrow sp-a3"></label>
+				<label for="button-4" class="sp-arrow sp-a4"></label>
+				<label for="button-5" class="sp-arrow sp-a5"></label>
+				
+				<div class="sp-content">
+					<div class="sp-parallax-bg"></div>
+					<ul class="sp-slider clearfix">
+						<li><img src="images/image1.png" alt="image01" /></li>
+						<li><img src="images/image2.png" alt="image02" /></li>
+						<li><img src="images/image3.png" alt="image03" /></li>
+						<li><img src="images/image4.png" alt="image04" /></li>
+						<li><img src="images/image5.png" alt="image05" /></li>
+					</ul>
+				</div><!-- sp-content -->
+				
+			</div><!-- sp-slideshow -->
+
+
+
+
+
+			<div id="b-forma">
+				<h3>Получи скидку -15% на все услуги в свой первый визит!<br>
+				<span>Оставьте ваши данные ниже:</span></h3>
+				
+				<div class="wpcf7" id="wpcf7-f174-p170-o1">
+					<form action="/test.html#wpcf7-f174-p170-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+						<div style="display: none;">
+							<input type="hidden" name="_wpcf7" value="174" />
+							<input type="hidden" name="_wpcf7_version" value="3.5.2" />
+							<input type="hidden" name="_wpcf7_locale" value="ru_RU" />
+							<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f174-p170-o1" />
+							<input type="hidden" name="_wpnonce" value="df211a54db" />
+						</div>
+			
+						Ваше имя: <span style="color: #e94357;">*</span><br>
+						<input type="text" name="your-name" placeholder="Как к Вам обращаться" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" />
+						<div class="clearfix"></div><!-- clearfix -->
+							
+						Ваша почта: <span style="color: #e94357;">*</span><br>
+						<input type="text" name="your-phone" placeholder="Куда Вам отправить предложение" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" />
+						<div class="clearfix"></div><!-- clearfix -->
+							
+						<input type="submit" value="" class="wpcf7-form-control wpcf7-submit" />
+						<div class="wpcf7-response-output wpcf7-display-none"></div>
+						
+						<div class="clearfix"></div><!-- clearfix -->
+					</form>
+				</div>
+			</div><!-- #b-forma -->
+		</div><!-- #banner -->
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div id="b3">
+			<a href="/parikmaxerskij-zal.html"><img src="/images/b1.jpg" alt="Парикмахерский зал" style="margin: 0 6px 0 0;"></a>
+			<a href="/manikyurnyj-zal.html"><img src="/images/b2.jpg" alt="Маникюрный зал" style="margin: 0 6px 0 0;"></a>
+			<a href="/kosmetologiya.html"><img src="/images/b3.jpg" alt="Косметология"></a>
+			<div class="clearfix"></div><!-- clearfix -->
+		</div><!-- #b3 -->
+		
+		<!--<div id="preimushestva">
+			<h1>ЭксПат выгодно отличается от других московских салонов красоты:</h1>
+			
+			<div id="p-left">
+				<div id="n1">
+					<h4>Простотой!</h4>
+					<p>Лаконичность и ненавязчивая простота во всем — дорогом интерьере, внимательном и уважительном общении с клиентами.</p>
+				</div>
+
+				<div id="n2">
+					<h4>Понятным прейскурантом цен!</h4>
+					<p>Клиенты сами могут легко оценить, во сколько им обойдутся услуги нашего салона, чтобы конечная их стоимость не стала сюрпризом, как это часто бывает в обычных московских салонах.</p>
+				</div>
+
+				<div id="n3">
+					<h4>Демократичностью!</h4>
+					<p>В общении и стоимости услуг, которая немного ниже, чем в среднем по Москве в салонах такого же уровня.</p>
+				</div>
+
+				<div id="n4">
+					<h4>Доступностью!</h4>
+					<p>Салон расположен в самом центре Москвы, рядом с метро Маяковская, Тверская и Пушкинская; открыт ежедневно с 9 утра до 9 вечера.</p>
+				</div>
+
+				<div id="n5">
+					<h4>Уровнем комфортности!</h4>
+					<p>Салон оснащен высококачественным современным оборудованием — удобными креслами, мойками с массажем и поднимающимися ножками, СПА педикюрными креслами с массажем и джакузи и др.</p>
+				</div>
+			</div><!-- #p-left 
+			
+			<div id="p-right">
+				<div id="n6">
+					<h4>Атмосферой уюта и защищенности!</h4>
+					<p>Салон грамотно зонирован на отделы так, чтобы обеспечить максимум комфорта клиентам.</p>
+				</div>
+
+				<div id="n7">
+					<h4>Профессионализмом и высоким качеством услуг!</h4>
+					<p>Благодаря слаженному коллективу профессионалов, которые, несмотря на напряженный график работы, постоянно повышают свою квалификацию, мы оказываем услуги самого высокого качества, используя в работе передовые технологи, новейшее оборудование и лучшие косметические продукты со всего мира. Иными словами, у нас есть все необходимое для того, чтобы вы остались довольны своей внешностью.</p>
+				</div>
+
+				<div id="n8">
+					<h4>Приятными мелочами!</h4>
+					<p>В салоне вы можете бесплатно использовать Wi-fi интернет, IPads, портативные DVD players для просмора фильмов.</p>
+				</div>
+
+				<div id="n9">
+					<h4>Бесплатными угощениями!</h4>
+					<p>Кофе-эспрессо, чай, апельсиновый фрэш, кока-кола, а также чистка ювелирных украшений ультразвуком — все это предлагается бесплатно.</p>
+					</div>
+
+				<div id="n10">
+					<h4>Бонусами!</h4>
+					<p>Запись на консультацию к любому из специалистов салона бесплатна.</p>
+				</div>
+			</div><!-- #p-right 
+			<div class="clearfix"></div><!-- clearfix 
+		</div><!-- #preimushestva -->
+		
+		<!--   <div id="banner-s">
+			<a href="/giftcert"><img src="/images/banner-s.jpg"></a>
+		</div><!-- banner-s -->
+		
+		<!-- <div id="banner-s2">
+			<img src="/images/banner-s2.jpg">
+		</div><!-- banner-s -->
+		
+
+
+
+
+
+
+
+
+		<!--<div id="main-otziv">
+			<h3>Отзывы клиентов</h3>
+			
+			<ul>
+										<li><strong>Наталька, 21.08.2013</strong><p>«Хочу сказать огромное спасибо мастеру Зое, которая просто спасла мою голову после неудачного окрашивания. Хорошо, что есть такие специалисты. Теперь буду обращаться только к ней.»</p>
+</li>
+							<li><strong>Алиса, 21.08.2013</strong><p>«Уютный салон, приятный администратор, вкусный кофе, хорошая прическа.»</p>
+</li>
+							<li><strong>Евгения, 21.08.2013</strong><p>«Мне понравилось. Качественно, комфортно, максимум внимания и профессионализма. Супер, я Ваш постоянный клиент, так держать. Какая у Вас система скидок?»</p>
+</li>
+							<li><strong>Наталька, 21.08.2013</strong><p>«Хочу сказать огромное спасибо мастеру Зое, которая просто спасла мою голову после неудачного окрашивания. Хорошо, что есть такие специалисты. Теперь буду обращаться только к ней.»</p>
+</li>
+						</ul>
+						<p style="text-align: right; font-style: italic;"><a href="/otzyvy-klientov.html" style="color: #b91301;">Все отзывы</a></p>
+		</div><!-- main-otziv -->
+		
+		
+
+
+
+
+		
+		<div class="clearfix"></div><!-- clearfix -->
+		
+		<div id="brends" style="margin: 0 0 40px 0;">
+			<img src="/images/brands.jpg">
+		</div><!--  -->
+		
+		<article>
+			<h2>Салон красоты «The Expat salon» в Москве</h2>
+
+			<p>The Expat salon основан в апреле 2004 года. Созданный по западным стандартам, он ориентирован на обслуживание иностранцев, проживающих и работающих в Москве. Всё в салоне — от дружелюбной атмосферы и звуков родной речи до косметических брендов (Wella, Sebastian, Davines, Paul Mitchel, Sexy Hair, OPI, Creative, Payot, Demaquest) понятно и знакомо тем, кто волею случая вынужден жить в чужой стране.</p>
+
+			<p>Но больше всего мы гордимся профессионализмом наших мастеров, их внимательным и заботливым отношением к клиентам, а также тем, что, по происшествии 9 лет работы, мы обрели популярность. Наш салон знают и ценят не только те, кто принадлежит экспат-сообществу, но и соотечественники, которым пришелся по душе наш уровень обслуживания.</p>
+
+			<p><strong>Приходите, двери нашего салона открыты для вас!</strong></p>
+		</article>
+		
+		<hr>
+	</div><!-- #main -->
+
+	<div id="footer">
+		<!--<div id="f1">Вступайте в наши сообщества и получайте привилегии...</div>
+		<div id="f2">
+			<script type="text/javascript" src="//yandex.st/share/share.js"
+			charset="utf-8"></script>
+			<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="button" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,friendfeed,moikrug,gplus,surfingbird"></div> 
+		</div>
+		<div class="clearfix"></div>
+		
+		<div id="f3">
+			<img src="/images/block-vk.jpg">
+		</div>
+		<div id="f4">
+			<img src="/images/block-fb.jpg">
+		</div>
+		<div class="clearfix"></div><!-- clearfix -->
+		
+		<div id="copy">
+			<div id="copy-l"><img src="/images/copy-l.jpg">© Copyright 2013-2015 The Expat Salon</div>
+			<div id="copy-r">Москва, Малый Патриарший переулок, 3<br> +7(495) <strong>650-3749</strong>, +7(906) <strong>780-7437</strong>, +7(906) <strong>780-9774</strong></div>
+		</div>
+		<div class="clearfix"></div><!-- clearfix -->
+		
+	</div> <!-- #footer -->
+</div> <!-- #container -->
+
+<!---------------------------------------->
+
+<!-- Форма обратного звонка -->
+
+<div id="popup-zvonok" style="width: 400px; margin: 10px 0; display: none;">
+	<h2>Заказать обратный звонок</h2>
+
+	<img src="/images/phone.jpg" style="margin: 15px 0;" />
+
+	<p>Пожалуйста, заполните краткую контактную информацию. Наши сотрудники свяжутся с вами в течение 20 минут.</p>
+
+	<div class="wpcf7" id="wpcf7-f172-p170-o1">
+		<form action="/" method="post" class="wpcf7-form" novalidate="novalidate">
+			<div style="display: none;">
+				<input type="hidden" name="_wpcf7" value="172" />
+				<input type="hidden" name="_wpcf7_version" value="3.5.2" />
+				<input type="hidden" name="_wpcf7_locale" value="ru_RU" />
+				<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f172-p170-o1" />
+				<input type="hidden" name="_wpnonce" value="08cc835f95" />
+			</div>
+			
+			<div id="zvonok-bg">
+				<div id="zvonok-left">Телефон:</div>
+
+				<div id="zvonok-right">
+					<input type="text" name="your-phone" placeholder="Например: 74950000000" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" /><br><small>На какой номер Вам перезвонить</small>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<input type="submit" value="" class="wpcf7-form-control wpcf7-submit" />
+			
+			<div class="wpcf7-response-output wpcf7-display-none"></div>
+		</form>
+	</div>
+</div>
+<!-- #Форма обратного звонка -->
+
+<!-- Всплывающая карта -->
+<div id="popup-map" style="width: 800px; display: none;">
+<iframe width="800" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.ru/maps/ms?msa=0&amp;msid=211005545775292056618.0004e8fe180554a704204&amp;hl=ru&amp;ie=UTF8&amp;t=m&amp;ll=55.762891,37.59191&amp;spn=0.00332,0.008572&amp;z=17&amp;output=embed"></iframe><br /><small>Просмотреть <a href="https://www.google.ru/maps/ms?msa=0&amp;msid=211005545775292056618.0004e8fe180554a704204&amp;hl=ru&amp;ie=UTF8&amp;t=m&amp;ll=55.762891,37.59191&amp;spn=0.00332,0.008572&amp;z=17&amp;source=embed" style="color:#0000FF;text-align:left">The Expat Salon</a> на карте большего размера</small>
+</div>
+<!-- #Всплывающая карта -->
+
+<!-- Форма зявки -->
+<div id="popup-zapis" style="width: 520px; margin: 10px 0; display: none;">
+	<div id="form-zapis-pop-up">
+		<h2>Записаться в салон</h2>
+				
+		<div class="wpcf7" id="wpcf7-f176-p170-o1">
+			<form action="/" method="post" class="wpcf7-form" novalidate="novalidate">
+				<div style="display: none;">
+					<input type="hidden" name="_wpcf7" value="176" />
+					<input type="hidden" name="_wpcf7_version" value="3.5.2" />
+					<input type="hidden" name="_wpcf7_locale" value="ru_RU" />
+					<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f176-p170-o1" />
+					<input type="hidden" name="_wpnonce" value="a728601f7b" />
+				</div>
+				
+				Ваше имя: <span style="color: #e94357;">*</span><br>
+				<input type="text" name="your-name" placeholder="Как к Вам обращаться" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" />
+				<div class="clearfix"></div><!-- clearfix -->
+						
+				Ваш телефон: <span style="color: #e94357;">*</span><br>
+				<input type="text" name="your-phone" placeholder="Например, 74950000000" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" />
+				<div class="clearfix"></div><!-- clearfix -->
+						
+				Ваш E-mail:<br>
+				<input type="email" name="email-436" placeholder="Для связи с Вами" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" />
+				<div class="clearfix"></div><!-- clearfix -->
+						
+				Перечень выбранных услуг:<br>
+				<textarea name="textarea-642" placeholder="Например, Стимулирующий массаж головы Wella SP Maxximum tonic на 18 июля в 13:00"  class="wpcf7-form-control wpcf7-textarea" /></textarea>
+				<div class="clearfix"></div><!-- clearfix -->
+						
+				<input type="submit" value="" class="wpcf7-form-control wpcf7-submit" />
+				<div class="wpcf7-response-output wpcf7-display-none"></div>
+				<div class="clearfix"></div><!-- clearfix -->
+			</form>
+		</div>
+	</div><!-- #form-zapis-pop-up -->
+</div>
+<!-- #Форма зявки -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jQueryColorboxSettingsArray = {"jQueryColorboxVersion":"4.6","colorboxInline":"false","colorboxIframe":"false","colorboxGroupId":"","colorboxTitle":"","colorboxWidth":"false","colorboxHeight":"false","colorboxMaxWidth":"false","colorboxMaxHeight":"false","colorboxSlideshow":"false","colorboxSlideshowAuto":"false","colorboxScalePhotos":"true","colorboxPreloading":"false","colorboxOverlayClose":"true","colorboxLoop":"true","colorboxEscKey":"true","colorboxArrowKey":"true","colorboxScrolling":"true","colorboxOpacity":"0.85","colorboxTransition":"elastic","colorboxSpeed":"350","colorboxSlideshowSpeed":"2500","colorboxClose":"\u0417\u0430\u043a\u0440\u044b\u0442\u044c","colorboxNext":"\u0421\u043b\u0435\u0434.","colorboxPrevious":"\u041f\u0440\u0435\u0434.","colorboxSlideshowStart":"\u0417\u0430\u043f\u0443\u0441\u0442\u0438\u0442\u044c \u0441\u043b\u0430\u0439\u0434\u0448\u043e\u0443","colorboxSlideshowStop":"\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u0441\u043b\u0430\u0439\u0434\u0448\u043e\u0443","colorboxCurrent":"{current} \u0438\u0437 {total} \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0439","colorboxXhrError":"This content failed to load.","colorboxImgError":"This image failed to load.","colorboxImageMaxWidth":"90%","colorboxImageMaxHeight":"90%","colorboxImageHeight":"false","colorboxImageWidth":"false","colorboxLinkHeight":"false","colorboxLinkWidth":"false","colorboxInitialHeight":"100","colorboxInitialWidth":"300","autoColorboxJavaScript":"true","autoHideFlash":"true","autoColorbox":"true","autoColorboxGalleries":"","addZoomOverlay":"","useGoogleJQuery":"","colorboxAddClassToLinks":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.expatsalon.ru/wp-content/plugins/jquery-colorbox/js/jquery.colorbox-min.js?ver=1.3.21'></script>
+<script type='text/javascript' src='http://www.expatsalon.ru/wp-content/plugins/jquery-colorbox/js/jquery-colorbox-wrapper-min.js?ver=4.6'></script>
+<script type='text/javascript' src='http://www.expatsalon.ru/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.40.0-2013.08.13'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.expatsalon.ru\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"\u041e\u0442\u043f\u0440\u0430\u0432\u043a\u0430..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.expatsalon.ru/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.5.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"http:\/\/www.expatsalon.ru\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.expatsalon.ru/wp-content/plugins/wp-polls/polls-js.js?ver=2.63'></script>
+</body>
+</html>

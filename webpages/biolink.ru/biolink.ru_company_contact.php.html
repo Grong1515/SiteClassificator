@@ -1,0 +1,624 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" /><meta name="keywords" content="Идентификация в корпоративной сети, Замена парольного входа, Контроль доступа, Учет рабочего времени, Форма Т-13, Биометрия, Дактилоскопия, АДИС, Мультибиометрия, Распознавание по лицу, Отпечатки пальцев, Citrix Logon, Idenium Servise, Authentication Center, BioLink SDK, BioTime, BioFortress, U-Match, FingerPass IC, банки, аэропорты, автотехцентры, кафе и рестораны, магазинов и супермаркеты," /><meta name="description" content="Biolink - передовые биометрические решения" /><title>Контактная информация - Компания - Biolink</title>
+<link href="/bitrix/templates/template_styles.css" type="text/css" rel="stylesheet" />
+
+<link href="/bitrix/templates/.default/components/bitrix/menu/left/style.css" type="text/css" rel="stylesheet" /><link href="/bitrix/templates/menu_left_hf/styles.css" type="text/css" rel="stylesheet" /><link href="/bitrix/templates/menu_left_hf/template_styles.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="/bitrix/templates/scripts.js"></script>
+
+<script src="/bitrix/templates/menu_left_hf/jquery-1.6.1.min.js" type="text/javascript"></script>
+<script src="/bitrix/templates/menu_left_hf/script.js" type="text/javascript"></script>
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+</head>
+
+<body>
+
+
+
+
+
+
+<div class="panel"></div>
+<div class="over"></div>
+<div class="new_callback" style="display:none">
+
+
+
+        <div class="form form_for_feedback">
+<div class="form_top">
+	<h2>Заказать обратный звонок</h2>
+    <div class="close"></div>
+</div>
+
+<!---
+<img src="/bitrix/tools/captcha.php">
+-->
+
+<form name="callback_new" action="/" method="POST" enctype="multipart/form-data" class='zf form' ><input type="hidden" name="sessid" id="sessid" value="2ca804bd686b0b63548774a583d74d1f" /><input type="hidden" name="WEB_FORM_ID" value="25" />
+        
+    <div class="for_form_errors">
+</div>
+<div class="form_middle">
+	
+	<div class="feedback_description">Заполните форму, и наш специалист перезвонит в удобное для Вас время!</div>
+      
+          <label id="label_name" for="form_name">Имя</label>
+     <input class="form_questions" id="form_name" type="text" name="form_text_1094" value=""  />
+           
+          <label id="label_company" for="form_company">Название компании</label>
+     <input class="form_questions" id="form_company" type="text" name="form_text_1095" value=""  />
+           
+          <label id="label_phone" for="form_phone">Телефон (с кодом города)</label>
+     <input class="form_questions" id="form_phone" type="text" name="form_text_1096" value=""  />
+           
+          <label id="label_time" for="form_time">Удобное время звонка</label>
+     <input class="form_questions" id="form_time" type="text" name="form_text_1097" value=""  />
+          <img src="/bitrix/tools/captcha.php" />
+                   <br /> 
+                   <input style="width: 170px; height: 20px;" id="captcha_word" name="captcha_word33" type="text" placeholder="Введите текст с картинки" /> 
+
+  <div class="button cl">
+    <input class="new_contacts_btn" name="web_form_submit1" type="submit" value="Заказать звонок" onclick="checkForm()"/>
+  </div>
+  
+
+</div>    
+        
+        
+        
+    </form>
+
+<div class="form_bottom"></div>
+
+</div>    
+        
+
+
+
+  <!--  
+
+
+
+<div class="form form_for_feedback">
+<div class="form_top">
+	<h2>Заказать обратный звонок</h2>
+    <div class="close"></div>
+</div>
+<form name="callback_new" action="/company/contact.php" method="POST" enctype="multipart/form-data" class='zf form' ><input type="hidden" name="sessid" id="sessid" value="ce51f57334b810c2c80c1f9950b49da8" /><input type="hidden" name="WEB_FORM_ID" value="25" /><div class="for_form_errors">
+</div>
+<div class="form_middle">
+	
+	<div class="feedback_description">Заполните форму, и наш специалист перезвонит в удобное для Вас время!</div>
+      
+          <label id="label_name" for="form_name">Имя</label>
+     <input class="form_questions" id="form_name" type="text" name="form_text_1094" value=""  />
+           
+          <label id="label_company" for="form_company">Название компании</label>
+     <input class="form_questions" id="form_company" type="text" name="form_text_1095" value=""  />
+           
+          <label id="label_phone" for="form_phone">Телефон (с кодом города)</label>
+     <input class="form_questions" id="form_phone" type="text" name="form_text_1096" value=""  />
+           
+          <label id="label_time" for="form_time">Удобное время звонка</label>
+     <input class="form_questions" id="form_time" type="text" name="form_text_1097" value=""  />
+        
+
+  <div class="button cl">
+    <input class="new_contacts_btn" name="web_form_submit" type="submit" value="Заказать звонок" />
+  </div>
+  
+
+</div>
+</form>
+
+<div class="form_bottom"></div>
+
+</div>
+ -->
+</div>
+
+        
+
+ <div class="wrap_out">
+
+
+	<div class="header">
+            
+				<div class="header_in">
+					<a class="new_logo" href="/"></a>
+                    <span class="after_logo">Биометрические системы</span>
+                    <div class="phone_wrap"><span title="+7 (495) 645-87-03">+7 (495) 645-87-03</span></div>
+                    
+                    <div class="header_contacts">
+                    	<div class="call_order"><a class="show_callback_wnd" href="#">Заказать звонок</a></div>
+                        <div class="write_letter"><a href="mailto:sales@biolink.ru">sales@biolink.ru</a></div>
+                    </div>	
+					
+                    <div class="clear"></div>
+                
+					<div class="menu">
+					<ul class="first_level">
+    <li class="actives">
+        <a href="/products/">Продукты и решения</a>
+        <div class="hidden dropdown1">
+            <div>
+                <ul>
+                    <li class="dd1">
+                        <h2><a href="http://www.biotime.ru">BioLink BioTime</a></h2>
+                        <p>Биометрическая система учета рабочего<br /> времени и контроля  доступа в помещения</p>
+                    </li>
+                    <li class="dd2">
+                        <h2><a href="http://www.biolink.ru/products/biolink-ci-system/">BioLink CI</a></h2>
+                        <p>Мультибиометрическая система идентификации<br /> клиентов банка</p>
+                    </li>
+                    <li class="dd3">
+                        <h2><a href="http://www.idenium.ru">BioLink IDenium</a></h2>
+                        <p>Биометрическая система аутентификации<br /> пользователей и Single Sign-On</p>
+                    </li>
+
+                    <li class="dd4">
+                        <h2><a href="http://www.biolink.ru/products/software/AMIS/">BioLink AMIS</a></h2>
+                        <p>Мультибиометрическая платформа для<br /> высоконагруженных систем массовой идентификации</p>
+                    </li>
+                    <li class="dd5">
+                        <h2><a href="http://www.biolink.ru/products/sdk/">BioLink SDK</a></h2>
+                        <p>Комплект разработчика для интеграции биометрии <br />в сторонние приложения</p>
+                    </li>
+                    <li class="dd6">
+                        <h2><a href="http://www.biolink.ru/products/sdk/XMatcher/XMatcher.php">BioLink XMatcher</a></h2>
+                        <p>Высокопроизводительный сервер<br /> сравнения отпечатков пальцев</p>
+                    </li>
+                    <li class="dd7">
+                        <h2><a href="http://www.biolink.ru/products/">Биометрическое оборудование </a></h2>
+                        <p>Фирменная линейка сканеров отпечатков пальцев<br /> U-Match и биометрических терминалов FingerPass</p>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+        </div>
+    </li>
+    
+        <li class="actives">
+        
+        <a href="/company/">О компании</a>
+        <div class="hidden dropdown2">
+            <div>
+                <ul>
+                    <li><a href="http://www.biolink.ru/company/about.php">О компании BioLink</a></li>
+                    <li><a href="http://biolink.ru/company/customers.php">Наши клиенты</a></li>
+                    <li><a href="http://www.biolink.ru/company/press/news.php">Новости</a></li>
+                    <li><a href="http://www.biolink.ru/company/contact.php">Контакты</a></li>
+                    <li><a href="http://www.biolink.ru/company/press/newspaper.php">Пресса о нас</a></li>
+                    <li style="background:none"><a href="http://www.biolink.ru/partners/partnersprogram/">Партнерская программа</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li class="actives"><a href="/company/customers.php">Наши клиенты</a></li>
+    <li class="actives1"><a href="/company/contact.php">Контакты</a></li>
+    <li class="actives">
+    	<a href="http://support.biolinksolutions.com/Default_ru">Поддержка</a>
+        <div class="hidden dropdown3">
+        	<div>Поддержка клиентов осуществляется через <a href="http://support.biolinksolutions.com/Default_ru">портал технической поддержки</a> компании BioLink</div>
+        </div>
+    </li>
+    <li class="actives">
+    	<a href="/partners/partnersprogram/">Партнеры</a>
+        <div class="hidden dropdown4">
+        	<div>
+            	<ul>
+                    <li><a href="http://www.biolink.ru/partners/standpartner/form.php">Стать партнером BioLink</a></li>
+                    <li style="background:none"><a href="http://www.biolink.ru/partners/our_partners.php">Найти партнера в Вашем регионе</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li class="li_buy actives"><a href="/order/">Купить</a></li>
+</ul>					</div>
+                
+                </div>
+                
+			</div>
+
+	<!-- //header -->
+    <div class="wrap_in">
+
+	<div class="topImg" style="background:url(/bitrix/templates/main/images/banners/ru/company.jpg?>) no-repeat;">
+				<div class=banner_top1><a __bxhref="/bitrix/rk.php?id=29&amp;event1=banner&amp;event2=click&amp;event3=1+%2F+%5B29%5D+%5BTOP%5D+%E1%E0%ED%ED%E5%F0+1_5sekretov&amp;goto=http%3A%2F%2Fwww.biolink.ru%2Fcompany%2Fpress%2Fnews%2F3691%2F" href="http://www.biolink.ru/company/press/news/3691/"> <img width="305" height="60" __bxsrc="/upload/rk/banneres/1_o.gif " onclick="window.location='http://www.biolink.ru/company/press/news/3691/'" onmouseout="document.banner01.src='/upload/rk/banneres/1_s.gif ';" onmouseover="document.banner01.src='/upload/rk/banneres/1_o.gif';" name="banner01" src="/upload/rk/banneres/1_s.gif" /> </a> </div>
+		<div class=banner_top2><a __bxhref="/bitrix/rk.php?id=30&amp;event1=banner&amp;event2=click&amp;event3=1+%2F+%5B30%5D+%5BTOP%5D+%E1%E0%ED%ED%E5%F0+biotime&amp;goto=%2Fcompany%2Fpress%2Fpress%2F4162%2F" href="/company/press/press/4162/"><img width="305" height="60" __bxsrc="/upload/rk/banneres/Bio_Win7_blue.jpg" onmouseover="document.banner03.src='/upload/rk/banneres/Bio_Win7_orange.jpg';" onclick="window.location='/company/press/news/4011/'" onmouseout="document.banner03.src='/upload/rk/banneres/Bio_Win7_blue.jpg ';" src="/upload/rk/banneres/Bio_Win7_blue.jpg" name="banner03" /> </a> </div>
+		<div class=banner_top3><a __bxhref="/bitrix/rk.php?id=31&amp;event1=banner&amp;event2=click&amp;event3=1+%2F+%5B31%5D+%5BTOP%5D+%E1%E0%ED%ED%E5%F0+2_IC&amp;goto=http%3A%2F%2Fwww.biolink.ru%2Fproducts%2Fbioterminals%2Ftm.php" href="http://www.biolink.ru/products/bioterminals/tm.php"> <img width="305" height="60" __bxsrc="/upload/rk/banneres/biolink_TM_orange.jpg" src="/upload/rk/banneres/biolink_TM_blue.jpg" name="banner02" onmouseover="document.banner02.src='/upload/rk/banneres/biolink_TM_orange.jpg';" onmouseout="document.banner02.src='/upload/rk/banneres/biolink_TM_blue.jpg';" onclick="window.location='http://www.biolink.ru/products/bioterminals/tm.php'" /> </a></div>
+			</div>
+
+<div class="center_a">
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ Left_col ~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ Center_Col ~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+  <table class="t">
+    <tbody>
+      <tr> <td>
+          <div class="a_rc">
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ Left_col -Menu ~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+            <div class="br_b">
+              <div class="br_t">
+                <div class="br_c">
+                  <ul>
+
+
+	
+
+
+	                		
+				<li ><a href="/company/about.php">О компании</a></li>
+
+		
+	
+
+	
+
+	
+
+
+	
+		<li ><a href="/company/press/">Пресс-центр</a>
+                                                                <ul>
+	
+
+	
+
+	
+
+
+	                		
+				<li ><a href="/company/press/press.php">Пресс-релизы</a></li>
+
+		
+	
+
+	
+
+	
+
+
+	                		
+				<li ><a href="/company/press/news.php">Новости</a></li>
+
+		
+	
+
+	
+
+	
+
+
+	                		
+				<li ><a href="/company/press/events.php">События</a></li>
+
+		
+	
+
+	
+
+	
+
+
+	                		
+				<li ><a href="/company/press/newspaper.php">BioLink в прессе</a></li>
+
+		
+	
+
+	
+
+	
+
+
+	                		
+				<li ><a href="/company/press/campaigns.php">Маркетинговые акции</a></li>
+
+		
+	
+
+	
+
+	
+
+
+	                		
+				<li ><a href="/company/press/photo.php">Фотогалерея</a></li>
+
+		
+	
+
+	
+
+	</ul></li>
+
+
+	                		
+				<li ><a href="/company/customers.php">Заказчики и проекты</a></li>
+
+		
+	
+
+	
+
+	
+
+
+	                		
+				<li ><a href="/company/webinar.php">Бесплатные вебинары по системе BioTime</a></li>
+
+		
+	
+
+	
+
+	
+
+
+	                		
+				<li ><a href="/company/licenses.php">Лицензии и сертификаты</a></li>
+
+		
+	
+
+	
+
+	
+
+
+	                		
+				<li ><a href="/company/career.php">Работа</a></li>
+
+		
+	
+
+	
+
+	
+
+
+	                		
+				<li class="active"><a href="/company/contact.php">Контактная информация</a></li>
+
+		
+	
+
+	
+
+	
+
+
+	                		
+				<li ><a href="/company/technology.php">Технологические партнеры</a></li>
+
+		
+	
+
+	
+
+
+                   </ul>
+                 </div>
+               </div>
+			</div>
+
+
+
+
+
+
+<div class="buttons_contaner">
+	<a href="/order/" class="inner_btn_buy animate_btn"></a>
+    <a href="#" class="inner_btn_call show_callback_wnd animate_btn"></a>
+</div>
+
+          </div>
+         </td> <td>
+          <div class="a_cc">
+            <div class="a_ccc">
+      
+
+
+
+
+
+
+
+              <h1><span><a style="background: url('/bitrix/templates/main/images/home.gif') no-repeat 0px 15px;" href="/"></a><a href="/company/">Компания</a><a>Контактная информация</a></span></h1>
+
+ 
+<h2>Контактная информация</h2>
+ 
+<br />
+ 
+<h3><strong>ООО Биолинк Солюшенс</strong></h3>
+ 
+<ul> </ul>
+ 
+<table cellspacing="0" cellpadding="7" border="0" style="width: 668px; height: 282px; border-collapse: collapse;"> 
+  <tbody> 
+    <tr align="left"><td width="33%" valign="top"> 
+        <p>Телефоны:</p>
+       </td><td width="67%" valign="top"> 
+        <p>+7 (495) 645-87-04&nbsp; 
+          <br />
+         </p>
+       </td></tr>
+   
+    <tr align="left"><td valign="top"> 
+        <p>Факс:</p>
+       </td><td valign="top"> 
+        <p>+7 (495) 645-87-04</p>
+       </td></tr>
+   
+    <tr align="left"><td valign="top"> 
+        <p>Адрес:</p>
+       </td><td align="left" valign="top"> 
+        <p>Россия, 125493, Москва, ул. Авангардная, д. 3. </p>
+       </td></tr>
+   
+    <tr align="left"><td valign="top"> 
+        <p>По вопросам закупки:</p>
+       </td><td align="left" valign="top"> 
+        <p><a href="mailto:sales@biolink.ru" __bxhref="mailto:sales@biolink.ru">sales@biolink.ru</a></p>
+       </td></tr>
+   
+    <tr align="left"><td valign="top"> 
+        <p>По вопросам партнерства:</p>
+       </td><td align="left" valign="top"> 
+        <p><a href="mailto:sales@biolink.ru" __bxhref="mailto:sales@biolink.ru">sales@biolink.ru</a></p>
+       </td></tr>
+   
+    <tr align="left"><td valign="top"> 
+        <p>Техподдержка:</p>
+       </td><td align="left" valign="top"> 
+        <p><a href="http://support.biolinksolutions.com/Default_ru" target="_blank" __bxhref="http://support.biolinksolutions.com/Default_ru">Портал технической поддержки</a></p>
+       </td></tr>
+   
+    <tr><td align="left" valign="top"><span style="color: rgb(255, 0, 0);"></span>&nbsp; 
+        <p> 
+          <br />
+         </p>
+       </td><td align="left" valign="top"> 
+        <p style="text-align: left;">Время работы Службы технической поддержки с 10.00 до 18.00&nbsp; 
+          <br />
+         </p>
+       </td></tr>
+   </tbody>
+ </table>
+ 
+<br />
+ 
+<p></p>
+ 
+<h3><strong>Схема проезда</strong></h3>
+ <img height="16" border="0" width="16" src="http://img.yandex.ru/i/map-found.gif" __bxsrc="http://img.yandex.ru/i/map-found.gif" /> <a href="http://maps.yandex.ru/map.xml?mapID=2000&amp;mapX=4173483&amp;mapY=7491864&amp;scale=10&amp;slices=1&amp;descx=4173483&amp;descy=7491864" __bxhref="http://maps.yandex.ru/map.xml?mapID=2000&amp;mapX=4173483&amp;mapY=7491864&amp;scale=10&amp;slices=1&amp;descx=4173483&amp;descy=7491864"><strong>Посмотреть схему на карте</strong></a> 
+<p></p>
+ 
+<p></p>
+ 
+<br />
+ <img height="569" width="610" src="/images/biolink_adress1.jpg" __bxsrc="/images/biolink_adress1.jpg" /> 
+<br />
+ 
+<div class="up"> 
+  <br />
+ 
+  <br />
+ <a href="index.php" __bxhref="index.php">Наверх</a></div>
+ 
+             </div>
+           </div>
+         </td> </tr>
+     </tbody>
+   </table>
+ </div>
+
+
+
+	<div class="gbContemt"></div><!-- //gbContemt -->
+	
+    </div>
+    
+</div>  
+  
+  
+<div class="footer">
+            <div class="footer_in">
+                <div class="ul4">
+                	<ul class="ul1">
+                    	<li class="first_li"><a href="http://www.biolink.ru/products/">Продукты и решения</a></li>
+                        <li><a href="http://www.biotime.ru">Учет рабочего времени</a></li>
+                        <li><a href="http://www.idenium.ru">Аутентификация пользователей</a></li> 
+                        <li><a href="http://www.biolink.ru/products/sdk/">Интеграция (SDK)</a></li>
+                        <li><a href="http://www.biolink.ru/products/biolink-ci-system/">Идентификация клиентов банка</a></li>
+                        <li><a href="http://www.biolink.ru/products/software/AMIS/">Массовая идентификация</a></li> 
+                    </ul>
+                    
+                    <ul class="ul2">
+                    	<li class="first_li"><a href="http://www.biolink.ru/solutions/markets/">Отрасли</a></li>
+                        <li><a href="http://www.biolink.ru/solutions/markets/banking.php">Банки</a></li>
+                        <li><a href="http://www.biolink.ru/solutions/markets/retail.php">Retail & HoReCa</a></li>
+                        <li><a href="http://www.biolink.ru/solutions/markets/government.php">Национальные проекты</a></li>
+                        <li><a href="http://www.biolink.ru/solutions/markets/healthcare.php">Здравоохранение</a></li>
+                        <li><a href="http://www.biolink.ru/solutions/markets/airports.php">Аэропорты</a></li>
+                        <li><a href="http://www.biolink.ru/solutions/markets/law.php">Силовые структуры</a></li>   
+                    </ul>
+                    
+                    <ul class="ul3">
+                    	<li class="first_li"><a href="http://www.biolink.ru/products/">Биометрическое оборудование</a></li>
+                        <li><a href="http://www.biolink.ru/products/scanners/ofis">Сканеры отпечатков пальцев</a></li> 
+                        <li><a href="http://www.biolink.ru/products/bioterminals/">Биометрические терминалы</a></li> 
+                        <li><a href="http://www.biolink.ru/products/scanners/emb">Встраиваемые сканеры</a></li>
+                        <li><a href="http://www.biolink.ru/products/scanners/special">Специализированные модели</a></li>                        
+                    </ul>
+                    
+                    <ul class="ul4">
+                    	<li class="first_li"><a href="http://www.biolink.ru/company/">О компании BioLink</a></li>
+                        <li><a href="http://www.biolink.ru/company/about.php">О компании</a></li> 
+                        <li><a href="http://www.biolink.ru/company/contact.php">Контакты</a></li> 
+                        <li><a href="http://www.biolink.ru/company/customers.php">Успешные проекты</a></li> 
+                        <li><a href="http://www.biolink.ru/company/press/news.php">Новости</a></li>
+                        <li><a href="http://www.biolink.ru/company/press/newspaper.php">Пресса о нас</a></li> 
+                        <li><a href="http://www.biolink.ru/partners/our_partners.php">Наши партнеры</a></li>                         
+                    </ul>
+
+					<div class="clear"></div>
+                </div>
+                
+                
+                <div class="ul4_after">
+                	<div class="left">
+                    	<div class="footer_phone">+ 7(495) 645-87-03</div>
+                        <div class="footer_order_call"><a class="show_callback_wnd" href="#">Заказать обратный звонок</a></div>
+                        <div class="footer_email"><a href="mailto:sales@biolink.ru">sales@biolink.ru</a></div>
+                    </div>
+                    <div class="right">
+                    	<h3>О компании BioLink</h3>
+                        <p>BioLink Solutions - мировой эксперт и лидер российского биометрического рынка.  Комплексные решения компании ориентированы на применение в самых различных сегментах: от информационной инфраструктуры малых и средних фирм до масштабных проектов идентификации в рамках отдельных отраслей и целых государств. Портфолио компании включает более 5000 успешных внедрений по всему миру.</p>
+                        <p style="margin-top:10px">&copy; ООО Биолинк Солюшенс, 2007-2016. Все права защищены<br />
+                        При использовании материала указание источника BioLink Solutions и гиперссылка на <a style="color:#FFFFFF" href="http://www.biolink.ru/">http://www.biolink.ru/</a> обязательны</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+<a style="position:fixed; right:10px; bottom:0px" href="https://siteheart.com/webconsultation/516128?s=1" target="siteheart_sitewindow_516128" onclick="o=window.open;o('https://siteheart.com/webconsultation/516128?s=1', 'siteheart_sitewindow_516128', 'width=550,height=400,top=30,left=30,resizable=yes'); return false;"><img src="http://webindicator.siteheart.com/webindicator/image/1346677843?ent=516128&company=515409" border="0" alt="SiteHeart" /> </a>
+
+
+
+<!-- Yandex.Metrika -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter961894 = new Ya.Metrika(961894); } catch(e){}
+</script></div>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/961894"  alt="" /></div></noscript>
+<!-- /Yandex.Metrika -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6723766-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- Oliwa-pro service --><script type="text/javascript" src="http://cabinet.oliwa-pro.ru/service/service.php?url=15" charset="utf-8"></script><!-- /Oliwa-pro service -->
+<!-- Oliwa-pro chat --><script type="text/javascript" src="http://cabinet.oliwa-pro.ru/chat/check_online.php?site_id=15" charset="utf-8"></script><!-- /Oliwa-pro chat -->
+
+</body>
+</html>

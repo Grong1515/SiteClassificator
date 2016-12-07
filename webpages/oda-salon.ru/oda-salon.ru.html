@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <title>Салон красоты "ОДА" - парикмахерские услуги, макияж, маникюр, педикюр, массаж</title>
+
+  <link rel="stylesheet" href="/css/nivo-slider.css" type="text/css" />
+  <link rel="stylesheet" href="/css/default.css" type="text/css" />
+  <link rel="stylesheet" href="/css/superfish.css" type="text/css" />
+  <link rel="stylesheet" href="/css/superfish-vertical.css" type="text/css" />
+
+  <script src="/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/js/core.js" type="text/javascript"></script>
+  <script src="/js/caption.js" type="text/javascript"></script>
+  <script src="/js/mootools-more.js" type="text/javascript"></script>
+  <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+  <script src="/js/jquery.min.js" type="text/javascript"></script>
+  <script src="/js/jquery.nivo.slider.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+window.addEvent('load', function() {
+				new JCaption('img.caption');
+			});
+window.addEvent('domready', function() {
+			$$('.hasTip').each(function(el) {
+				var title = el.get('title');
+				if (title) {
+					var parts = title.split('::', 2);
+					el.store('tip:title', parts[0]);
+					el.store('tip:text', parts[1]);
+				}
+			});
+			var JTooltips = new Tips($$('.hasTip'), { maxTitleChars: 50, fixed: false});
+		});
+	google.maps.event.addDomListener(window, 'load', mapload);
+
+    function mapload() {
+		var options = {
+			zoom : 11,
+			center: new google.maps.LatLng(55.784785, 37.623913),
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+			,disableDefaultUI: false
+,streetViewControl: false
+, navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL}
+,mapTypeControl: false
+
+		}
+
+        var map = new google.maps.Map(document.getElementById("map"), options);
+
+	var opts = new Object;
+	opts.title = "гостиница Ренессанс";
+	opts.position = new google.maps.LatLng(55.784785, 37.623913);
+	opts.map = map;
+	marker = new google.maps.Marker(opts);
+
+	var opts2 = new Object;
+	opts2.title = "гостиница Марриотт Корт Ярд";
+	opts2.position = new google.maps.LatLng(55.757996,37.604409);
+	opts2.map = map;
+	marker2 = new google.maps.Marker(opts2);
+
+    }
+
+  </script>
+
+<link rel="stylesheet" href="/css/position.css" type="text/css" media="screen,projection" />
+<link rel="stylesheet" href="/css/layout.css" type="text/css" media="screen,projection" />
+<link rel="stylesheet" href="/css/general.css" type="text/css" media="screen,projection" />
+<link rel="stylesheet" href="/css/personal.css" type="text/css" media="screen,projection" />
+<link rel="stylesheet" href="/css/jScrollPane.css" type="text/css" media="screen,projection" />
+<link rel="stylesheet" href="/css/print.css" type="text/css" media="print" />
+<link rel="stylesheet" type="text/css" href="/highslide/highslide.css" />
+
+
+<script src="/js/hoverIntent.js" type="text/javascript"></script>
+<script src="/js/superfish.js" type="text/javascript"></script>
+<!--
+<script src="/js/cufon-yui.js" type="text/javascript"></script>
+<script src="/js/cufon-replace.js" type="text/javascript"></script>
+-->
+<script src="/js/mank-sans.cufonfonts.js" type="text/javascript"></script>
+<script src="/js/bebas.cufonfonts.js" type="text/javascript"></script>
+<script type='text/javascript' src='/js/mosaic.1.0.1.min.js'></script>
+<script type='text/javascript' src='/js/jquery.easing.js'></script>
+<script type="text/javascript" src="/highslide/highslide-with-gallery.js"></script>
+
+<script type="text/javascript">
+					var $j = jQuery.noConflict();
+
+					$j(document).ready(function(){
+						$j('.main_menu ul li').hover(
+							function() {
+								$j(this).find('> ul').stop(false, true).fadeIn();
+								$j(this).addClass('act_button');
+								$j(this).find('>ul ul').stop(false, true).fadeOut('fast');
+							},
+							function() {
+								$j(this).find('ul').stop(false, true).fadeOut('fast');
+								$j(this).removeClass('act_button');
+
+							}
+						);
+						function preloadImages(imgs){
+						var picArr = [];
+						for (i = 0; i<imgs.length; i++){
+							picArr[i]= new Image(100,100);
+							picArr[i].src=imgs[i];
+						}
+					}
+					preloadImages([
+					' /img/foot_bulet_hover.gif']);
+					});
+					$j(document).ready(function() {
+				$j('.excursions_line li').mosaic({
+					animation	:	'slide'
+			});
+	});
+				$j(document).ready(function()
+					{
+						jQuery('.social_block_icon a').hover(function(){
+								 jQuery(this).find('img').animate({marginTop: '-=5'},  300);
+						  }, function(){
+								 jQuery(this).find('img').animate({marginTop: '+=5'}, 200);
+						});
+						jQuery('#show_m').click(function(){
+								jQuery(this).toggleClass('show_m_active');
+								jQuery('#show_map').toggleClass('show_map');
+						  });
+
+					});
+
+
+
+
+</script>
+
+<script type="text/javascript">
+hs.graphicsDir = '/highslide/graphics/';
+hs.align = 'center';
+hs.transitions = ['expand', 'crossfade'];
+hs.outlineType = 'rounded-white';
+hs.fadeInOut = true;
+hs.numberPosition = 'caption';
+hs.dimmingOpacity = 0.75;
+
+// Add the controlbar
+if (hs.addSlideshow) hs.addSlideshow({
+	//slideshowGroup: 'group1',
+	interval: 2000,
+	repeat: false,
+	useControls: true,
+	fixedControls: 'fit',
+	overlayOptions: {
+		opacity: .75,
+		position: 'bottom center',
+		hideOnMouseOut: true
+	}
+});
+
+</script>
+
+		<!--[if lt IE 8]>
+            <div style=' clear: both; text-align:center; position: relative;'>
+                <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" alt="" /></a>
+
+            </div>
+       <![endif]-->
+
+</head>
+
+<body class="main">
+
+<div style="z-index:11111;position:relative;top:10px;">
+    <div style="margin-left:840px;">
+русский&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a style="font-style:normal;text-decoration:underline;" href="/?lang=eng&goto=/">english</a>    </div>
+</div>
+
+<div id="all">
+  <div id="header">
+   <div class="head">
+		          <div class="logo">
+                <a href="/"><img src="/img/logo.png"  alt="" /></a>
+                </div>
+
+<div class="custom"  >
+	<div class="social_block_icon">
+        <div class="socila_title">
+<embed src="/webfiles/files/music.mp3" hidden="true" autostart="true" type="audio/x-mpeg" loop="true" pluginspage="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab"><a href="?no_music=1"><img src="/img/sound_mute.png" /></a>        </div>
+    </div>
+</div>
+
+
+
+<!--current active-->
+<div class="main_menu">
+<ul class="jt-menu">
+    <li class="deeper parent"><a href="/about/">О салоне</a>
+    <ul>
+        <li><a href="/history/">История</a></li>
+        <li class="deeper parent"><a href="/news/">Новости</a>
+        <li class="deeper parent"><a href="/specials/">Акции</a></li>
+    </ul></li>
+    <li><a href="/services/">Услуги</a></li>
+    <li><a href="/gallery/">Галерея</a></li>
+    <li><a href="/catalog/">Каталог</a></li>
+    <li><a href="/contacts/">Контакты</a></li>
+    <li><a href="/records/"></a></li>    
+</ul>
+
+<script type="text/javascript">
+   jQuery.noConflict();
+   jQuery(document).ready(function(){
+        jQuery("ul.jt-menu").superfish({
+            animation:  {opacity:'show', height:'show', width:'show'},
+            delay:      100,
+			speed:      'normal',
+            autoArrows: false
+        });
+    });
+</script>
+
+</div>
+
+<!-- BEGIN: Vinaora Nivo Slider >> http://vinaora.com/ -->
+<div class="slide_projects">
+<div class="slider-wrapper theme-default">
+    <div id="vt_nivo_slider140" class="nivoSlider">
+		<img src="/img/slider_pic1.jpg" alt="Vinaora Nivo Slider" title="ПРОДЛИТЕ ОЩУЩЕНИЕ ЛЕТА!!! МАНИКЮР + ГЕЛЬ ЛАК 1600 руб. ПЕДИКЮР + ГЕЛЬ ЛАК 4500 руб. Запись и подробности по тел + 7 495 937 30 76     " />
+        <img src="/img/slider_pic2.jpg" alt="Vinaora Nivo Slider" title="ПРОДЛИТЕ ОЩУЩЕНИЕ ЛЕТА!!! МАНИКЮР + ГЕЛЬ ЛАК 1600 руб. ПЕДИКЮР + ГЕЛЬ ЛАК 4500 руб. Запись и подробности по тел + 7 495 937 30 76     " />
+        <img src="/img/slider_pic3.jpg" alt="Vinaora Nivo Slider" title="ПРОДЛИТЕ ОЩУЩЕНИЕ ЛЕТА!!! МАНИКЮР + ГЕЛЬ ЛАК 1600 руб. ПЕДИКЮР + ГЕЛЬ ЛАК 4500 руб. Запись и подробности по тел + 7 495 937 30 76     " />
+        <img src="/img/slider_pic4.jpg" alt="Vinaora Nivo Slider" title="ПРОДЛИТЕ ОЩУЩЕНИЕ ЛЕТА!!! МАНИКЮР + ГЕЛЬ ЛАК 1600 руб. ПЕДИКЮР + ГЕЛЬ ЛАК 4500 руб. Запись и подробности по тел + 7 495 937 30 76     " />
+        <img src="/img/slider_pic5.jpg" alt="Vinaora Nivo Slider" title="ПРОДЛИТЕ ОЩУЩЕНИЕ ЛЕТА!!! МАНИКЮР + ГЕЛЬ ЛАК 1600 руб. ПЕДИКЮР + ГЕЛЬ ЛАК 4500 руб. Запись и подробности по тел + 7 495 937 30 76     " />
+        <img src="/img/slider_pic6.jpg" alt="Vinaora Nivo Slider" title="ПРОДЛИТЕ ОЩУЩЕНИЕ ЛЕТА!!! МАНИКЮР + ГЕЛЬ ЛАК 1600 руб. ПЕДИКЮР + ГЕЛЬ ЛАК 4500 руб. Запись и подробности по тел + 7 495 937 30 76     " />
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+	jQuery.noConflict();
+	jQuery(window).load(function() {
+		jQuery('#vt_nivo_slider140').nivoSlider({
+			effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
+			slices: 15, // For slice animations
+			boxCols: 8, // For box animations
+			boxRows: 4, // For box animations
+			animSpeed: 500, // Slide transition speed
+			pauseTime: 3000, // How long each slide will show
+			startSlide: 0, // Set starting Slide (0 index)
+			directionNav: 1, // Next & Prev navigation
+			directionNavHide: 0, // Only show on hover
+			controlNav: 0, // 1,2,3... navigation
+			controlNavThumbs: 0, // Use thumbnails for Control Nav
+			controlNavThumbsFromRel: 0, // Use image rel for thumbs
+			controlNavThumbsSearch: '.jpg', // Replace this with...
+			controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
+			keyboardNav: 1, // Use left & right arrows
+			pauseOnHover: 1, // Stop animation while hovering
+			manualAdvance: 0, // Force manual transitions
+			captionOpacity: 0.8, // Universal caption opacity
+			prevText: 'Prev', // Prev directionNav text
+			nextText: 'Next', // Next directionNav text
+			beforeChange: function(){}, // Triggers before a slide transition
+			afterChange: function(){}, // Triggers after a slide transition
+			slideshowEnd: function(){}, // Triggers after all slides have been shown
+			lastSlide: function(){}, // Triggers when last slide is shown
+			afterLoad: function(){} // Triggers when slider has loaded
+		});
+    });
+</script>
+<!-- END: Vinaora Nivo Slider >> http://vinaora.com/ -->
+
+  </div>
+  </div>
+    <div id="content" >
+        <div class="padding_content">
+            <div id="system-message-container"></div>
+            <div class="wrapper_overflow">
+                <div id="sidebar-1" >
+          		   <div class="moduletable">
+					    <h3>Наши услуги</h3>
+                        <div class="custom"  >
+	                        <ul class="left_list">
+                                <li><a href="/haircut/">Стрижки</a></li>
+<li><a href="/styling/">Укладки</a></li>
+<li><a href="/wedding/">Все для Свадьбы</a></li>
+<li><a href="/haircolor/">Окрашивание волос</a></li>
+<li><a href="/hairtreat/">Уход за волосами</a></li>
+<li><a href="/manicure/">Маниюр</a></li>
+<li><a href="/pedicure/">Педикюр</a></li>
+<li><a href="/epilation/">Дэпиляция</a></li>
+<li><a href="/massage/">Массаж</a></li>
+<li><a href="/bodytreat/">Уход за телом</a></li>                            </ul>
+                        </div>
+            		</div>
+			        <div class="moduletable locations">
+					    <h3>Наши адреса</h3>
+                        <div class="custom locations"  >
+                        125009, Москва<br />
+Вознесенский переулок, дом 7<br />
+<a href="http://maps.yandex.ru/-/CVbAvPPX" target=_blank><font style="font-style: normal;color:#000000">метро Тверская, Охотный ряд</font></a> <br />
+<a href="http://courtyardmoscow.ru" target=_blank><font style="font-style: normal;color:#000000">Кортъярд Марриотт Москва Центр Отель</font></a> <br />
+тел: (495) 937-30-76                    <div class="wrapper_overflow"><a href="javascript:void(0)" class="readmore" id="show_m">На карте</a></div>
+                    <div id="show_map" style="visibility:hidden">
+                        <div id="map" style="z-index:111111;margin-left:auto;margin-right:auto;text-align:center;width: 300px; height: 250px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="maincolbck">
+            <div id="maincolumn" >
+                <div class="blog main">
+
+                    <div class="items-leading">
+            			<div class="leading-0">
+
+<h2>Добро пожаловать</h2>
+На сегодняшний день салон красоты «Ода» зарекомендовал себя стабильным партнером сети Марриот.  Наши постоянные гости - это люди со всего мира. Мы гордимся тем, что возвращаясь в Москву, выбрав свой любимый отель они вновь приходят к нам. И наша дружба растягивается на долгие годы. Этому сопутсвует профессионализм наших мастеров.
+
+Более 20 лет Салон Красоты «Ода» успешно оказывает высококвалифицированные услуги в сфере индустрии красоты, а так же здоровья и прекрасного настроения.
+                            <!--<div class="top_line"><a href="/" class="readmore">Подробнее</a></div>-->
+                            <div style="clear:both"></div>
+                            <div class="item-separator"></div>
+                		</div>
+			        </div>
+                </div>
+
+            	<div class="moduletable news_block_module">
+				    <h3>Что нового?</h3>
+
+
+
+<span class='news_block_module'>
+
+    <div class='item contentpaneopen news_block_module' >
+        <span class='createdate news_block_module'>20.10</span>
+        <span class='news_block_module'>
+            <p><span style="color: rgb(0, 0, 0);"><span style="font-size: 16px;"><span style="font-family: verdana,geneva,sans-serif;"><strong>&quot;Проснись тело&quot; Скульптурирующий массаж!</strong></span></span></span></p>
+        </span>
+        <a href="/news/2/" class='readon news_block_module' >далее...</a><span class="article_separator"> </span>
+        <div style="clear: both;"></div>
+    </div>
+
+    <div class='item contentpaneopen news_block_module' >
+        <span class='createdate news_block_module'>04.10</span>
+        <span class='news_block_module'>
+            <p><strong style="margin: 0px; padding: 0px; text-align: center; color: rgb(0, 0, 0); line-height: 15px; font-family: verdana, geneva, sans-serif; font-size: 16px;">Новинка!<br />
+Saryna Key от Maracoonoil !</strong></p>
+        </span>
+        <a href="/news/1/" class='readon news_block_module' >далее...</a><span class="article_separator"> </span>
+        <div style="clear: both;"></div>
+    </div>
+</span>
+
+                </div>
+
+
+
+            	<div class="moduletable">
+                    <div class="custom">
+                    	<div class="grey_block">
+                        <img src="/webfiles/images/RZaVzGVixYc.jpg" class="fleft1">
+<div class="some_title">Intimates!</div>
+Создано специально для тех, кто ценит в образе естественность и натуральность.
+<div class="wrapper_overflow">
+     <a href="/maindown/" class="readmore">Подробнее</a>
+</div>                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+  </div>
+
+<div class="push"></div>
+</div>  
+<div id="footer-outer">
+  <div id="footer-sub">
+    <div id="footer">
+      <p class="copy" style="margin-left:540px;">
+           САЛОН КРАСОТЫ ОДА &copy; 2012      </p>
+<div style="float:left;margin-top:5px;">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t26.5;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border='0' width='88' height='15'><\/a>")
+//--></script><!--/LiveInternet-->
+<img src="/img/visa.jpg">
+</div>
+    </div>
+    <!-- end footer -->
+
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,294 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru">
+	<head>
+				  <base href="http://www.budenovsky.ru/" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="joomla, Joomla" />
+  <meta name="description" content="Joomla! - the dynamic portal engine and content management system" />
+  <meta name="generator" content="" />
+  <title>Буденовский компьютерный центр - Официальный сайт</title>
+  <link href="/index.php?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+  <link href="/index.php?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+  <link href="/templates/budenov/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="http://www.budenovsky.ru/templates/budenov/css/base.css" type="text/css" />
+
+		<meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE8"/>
+		<link rel="stylesheet" type="text/css" href="/templates/budenov/css/style.css" media="all"/>
+		<link rel="stylesheet" type="text/css" href="/templates/budenov/css/map.css" media="all"/>
+		<link rel="stylesheet" type="text/css" href="/templates/budenov/menu/css/menu.css" media="all"/>
+		<script src="/templates/budenov/js/jquery-1.4.2.js" type="text/javascript"></script>
+		<script src="/templates/budenov/js/tooltit.js" type="text/javascript"></script>
+		<script src="/templates/budenov/js/base.js" type="text/javascript"></script>
+		<script src="/templates/budenov/js/jquery.bgiframe.js" type="text/javascript"></script>
+		<script src="/templates/budenov/js/table.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			//Подсветка компани с одинаковым name так и отдельно наведенных
+			$('.maping').mouseover(function(){
+				$(this).css("z-index","1000")
+				}).mouseout(function(){
+				$(this).css("z-index","100")
+			});			
+			$('.maping a')
+			.mouseover(function(){
+				var s = $('div[id="'+$(this).attr('name')+'"]').attr("name");
+				this.title = "";
+				$(this).click(function() {
+					window.location.href = "?option=com_sobi2&sobi2Task=sobi2Details&sobi2Id="+s+"&Itemid=7&default="+s;
+					return false;
+					});
+				
+				k = $(this).attr('name');
+				$('a[name="'+k+'"]').addClass("active1");
+				//$($(this).attr('name')).addClass("active1");
+			})
+			.mouseout(function(){
+				//this.title = s;
+				k = $(this).attr('name');
+				$('a[name="'+k+'"]').removeClass("active1");
+				});
+
+//Конец		
+//Подсветка компаний по умолчанию  добавляем класс vcomp
+
+			$(".vcomp").each(function() {
+				var j = $(this).attr("id");
+				$('a[name="'+j+'"]').addClass("active2");
+				});
+//Bug select IE
+			$('.sub-menu, .tooltp').bgiframe();
+
+
+		});
+	</script>
+	
+		<!--[if IE 6]>
+		<script src="/templates/budenov/js/DD_belatedPNG.js" type="text/javascript"></script>
+		<script>DD_belatedPNG.fix('span, img, b');</script>
+		<![endif]-->
+		
+		
+		<!--[if IE 7]>
+		<script type="text/javascript">
+			//click menu fix
+			$(document).ready(function() {
+				$("a.mainlevel, a.mainlevel_current").click(function(){
+					window.location.href=$(this).attr("href");
+					//alert("ok");
+					});
+			});
+		</script>
+		<![endif]-->
+</head>
+<body>
+<div class="site-wrapp">
+	<div class="site">
+
+		<!-- Head -->
+		<div class="head">
+
+			<!-- logo -->
+			<h1 class="logo"><a href="/" title="www">Буденовский компьютерный центр<span><!-- x --></span></a></h1>
+			<!-- End logo -->
+
+			<!-- Head title -->
+			<h2 class="top-tit">
+				<img src="/templates/budenov/images/front.png" alt="" />
+				<span>Торговый прорыв на компьютерном фронте</span>
+			</h2>
+			<!-- End Head title -->
+
+			<!-- Address block-->
+			<address class="top-tit-add">
+				<span>Г. МОСКВА ПРОСПЕКТ БУдЕННОГО 53,ТЕЛ. 785 75 75
+				время работы с 10.00 до 20.00 без праздников и выходных</span>
+				<img src="/templates/budenov/images/addres.png" alt="" />
+			</address>
+			<!-- End Address block -->
+
+
+			<!-- Head menu -->
+				<script type="text/javascript" language="JavaScript" src="http://www.budenovsky.ru/templates/budenov/menu/js/menu.js"></script> <ul class="menu" > <li class="current"> <a href="/home" class="mainlevel_current" id="active_menu"> <span><b>Главная</b><em><img src="/templates/budenov/images/menu/1.png" alt="" /></em></span></span> </a>  </li><li> <a href="/2010-04-06-09-27-22" class="mainlevel"> <span><b>О центре</b><em><img src="/templates/budenov/images/menu/2.png" alt="" /></em></span></span> </a>  </li><li> <a href="/2010-04-06-11-35-06" class="mainlevel"> <span><b>План центра</b><em><img src="/templates/budenov/images/menu/3.png" alt="" /></em></span></span> </a>  </li><li> <a href="/2010-04-06-11-37-05?catid=96" class="mainlevel"> <span><b>Список компаний</b><em><img src="/templates/budenov/images/menu/4.png" alt="" /></em></span></span> </a>  </li><li> <a href="/2010-04-06-11-38-11" class="mainlevel"> <span><b>Как нас найти</b><em><img src="/templates/budenov/images/menu/5.png" alt="" /></em></span></span> </a>  </li><li> <a href="/2014-01-23-09-24-11" class="mainlevel"> <span><b>Категории товаров</b><em><img src="/templates/budenov/images/menu/6.png" alt="" /></em></span></span> </a>  </li> </ul>
+			<!-- End Head menu -->
+
+		</div>
+		<!-- End Head -->
+
+		<!-- Content -->
+		<div class="wrapp">
+			<div class="content-wrapp">
+				<div class="content">
+					<!-- Content block -->
+													<div class="c-block1">
+												
+													<div class="c-block1-in">
+							<ul class="breadCrumb">
+<li style="color:#000;" class="current">Главная</li></ul>
+
+							
+												
+<address style="text-align: center;"><strong>Внимание:</strong> Теперь в КЦ "Буденовский" вы можете приобрести мелкую бытовую технику (кофеварки, чайники, пылесосы, мультиварки, фены, машинки для стрижки, утюги и др.). Павильон Е-17</address>
+<p style="text-align: center;"><img src="/templates/budenov/images/dobro.png" border="0" style="color: #333333; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.3em;" /></p>
+<p style="text-align: justify;">Компьютерный Центр «Буденовский» - это <strong><span style="text-decoration: underline;">специализированный</span></strong> торговый центр по продаже цифровой техники. Ноутбуки , компьютеры мониторы и другая цифровая техника... В общем</p>
+<p><strong><span style="color: #000000; font-family: Verdana, sans-serif; font-weight: normal; line-height: normal; font-size: medium;"><strong>У НАС <span style="color: #ff0000;">ВСЁ ЕСТЬ !</span></strong></span></strong></p>
+<p style="text-align: justify;">Огромный выбор ноутбуков , компьютеров , комплектующих , телефонов , мониторов , электронных книг в нашем цифровом торговом центре. Плюс к этому</p>
+<p><strong><span style="color: #000000; font-family: Verdana, sans-serif; font-weight: normal; line-height: normal; font-size: medium;"><strong>У НАС <span style="color: #ff0000;">ДЁШЕВО !</span></strong></span></strong></p>
+<p style="text-align: justify;">В КЦ Буденовский <span style="font-family: Verdana, sans-serif; font-size: 15px;"><strong><span style="color: #ff0000;">более 200 магазинов</span></strong></span>. Мощная конкуренция между продавцами и большой ассортимент предлагаемых товаров позволят Вам приобрести товар по реально низким ценам.</p>
+<p><strong><span style="color: #000000; font-family: Verdana, sans-serif; font-weight: normal; line-height: normal; font-size: medium;"><strong>У НАС <span style="color: #ff0000;">УДОБНО !</span></strong></span></strong></p>
+<p style="text-align: justify;"><strong>К нам удобно добираться на общественном транспорте</strong>. Мы находимся рядом с Шоссе Энтузиастов. От ст. метро "Шоссе Энтузиастов" до нас 10-12 мин. ходьбы или 1 остановка на трамвае , троллейбусе или автобусе.</p>
+<p style="text-align: justify;"><strong>К нам удобно добираться на автомобиле</strong>. Вы можете подъехать со стороны Пр-та Буденого или со стороны Гаражной Улицы.</p>
+<p><strong> </strong></p>
+<p style="margin-bottom: 0cm;" lang="ru-RU"><span style="font-family: Verdana, sans-serif; color: #ff0000;"><span style="font-weight: 800; font-size: x-small;"> </span></span></p>
+<p style="margin-bottom: 0cm;" lang="ru-RU"><span style="font-family: Verdana, sans-serif; color: #ff0000;"><span style="font-size: x-small;"><strong><span style="color: #000000; font-weight: normal; line-height: normal; font-size: 15px;"><strong><span style="color: #ff0000;">ПАРКОВКА В КЦ «Буденовский» - БЕСПЛАТНАЯ !</span></strong></span></strong></span></span></p>
+<p><strong>У нас удобно покупать</strong>. Внутренний интерьер нашего комплекса позволит Вам чувствовать себя комфортно. Светлые и широкие торговые ряды , уютный температурный режим и доброжелательная атмосфера - это фирменный стиль нашего комплекса. Если Вы проголодались , то на территории комплекса есть <strong>два замечательных кафе</strong> , в которых Вы можете вкусно и недорого перекусить , пообедать или просто попить кофе , ожидая , например заказанный Вами товар.</p>
+<p><a class="img-l"><img class="bd1" src="/templates/budenov/images/img1.jpg" border="0" /></a></p>
+<p><span style="font-family: arial; color: #000000;"><span style="line-height: normal;"><br /></span></span></p>
+<p>Компьютерный Центр «Буденовский» - это крупный торговый комплекс, который состоит из двух зданий: огромного современного торгового центра и трехэтажного офисного здания. КЦ «Буденовский» расположен очень удобно для подъезда как пешком, так и на машине. Щиты и указатели, сопровождающие Вас от ближайшей станции метро «Шоссе Энтузиастов», не дадут сбиться с пути, который займет 10 минут пешком. Недалеко находятся Казанская ж/д (станция Новая), м. Семеновская и м. Авиамоторная.</p>
+<p>Еще издалека можно увидеть логотип «Буденовского» центра на крыше офисного здания. Если Вы приехали на своей машине, то Вас приятно удивит большая парковочная стоянка. Вы можете воспользоваться любым из 3-х входов в торговый зал площадью 8300 м2, который отделан по европейскому стандарту. Высокие потолки, широкие проходы, система вентиляции и кондиционирования, уютное кафе сделают ваше пребывание приятным.</p>
+<p>В Компьютерном Центре расположены 220 просторных магазинов и павильонов. Все они находятся в одном торговом зале и радуют разнообразием ассортимента. Оформление многих павильонов – это работа профессиональных дизайнеров, поэтому в течение всего времени пребывания в Компьютерном Центре Вас не покидает мысль о том, что это действительно современный, удобный во всех отношениях торговый комплекс.</p>
+<p><img src="/images/stories/glavn2.jpg" border="0" width="530" height="370" /></p>
+<p>Но главное, цены ниже, чем в специализированных компьютерных салонах, а еще – чем выше концентрация разных фирм-продавцов на квадратный метр, тем выше вероятность покупки нужного товара по более низкой цене.</p>
+<p>Здесь возможно все: от усовершенствования своего старенького компьютера до знакомства и приобретения последних достижений компьютерной и другой техники. Важно, что они появляются весьма оперативно. Вчера читали о них в Интернете, а сегодня едем покупать в Компьютерный Центр «Буденовский».</p>
+<p>Итак, компьютеры и ноутбуки, комплектующие и оргтехника, расходные материалы, СD и DVD, аудио- видео- и фототехника, компьютерная мебель, телефония и сотовая связь, системы безопасности и видео-наблюдения, бытовая техника – все это здесь, у нас в Компьютерном Центре «Буденовский».</p>
+<p>Приезжайте! Мы рады Вас видеть в нашем Торговом Центре!</p>
+<p><strong>Время работы с 10:00 до 20:00 без праздников и выходных!</strong></p>
+<span class="article_separator">&nbsp;</span>
+	
+
+
+							</div>
+						</div>
+					<!-- End Content block -->
+
+				</div>
+			</div>
+			<!-- End Content -->
+
+			<!-- Sidebar -->
+			<div class="sidebar">
+				<div class="s-block">
+		<h3 class="tit1"> 
+			<img src="/templates/budenov/images/find-t.png" alt="" /> 
+			<span>Поиск товара</span> 
+		</h3> 
+		<form method="get" action="index.php" name="Sobi2dmenu" id="Sobi2dmenu" class="tovary">	
+		<p>
+		<input type="hidden" name="option" value="com_sobi2" />
+		<input type="hidden" name="Itemid" value="7" />	
+<select name="catid" id="catid"  size="1" class="inputbox" ><option value="0" >-- Выберите категорию</option><option value="1614" >3d телевизоры</option><option value="105" >blu-ray болванки</option><option value="104" >bluetooth адаптеры</option><option value="103" >bluetooth устройства</option><option value="112" >CD плееры</option><option value="115" >CD/DVD болванки</option><option value="141" >flash карты</option><option value="149" >FM трансмитеры</option><option value="1654" >GPRS модули</option><option value="153" >GPRS модули</option><option value="154" >GPS навигаторы</option><option value="155" >GPS приемники для КПК и ноутбука</option><option value="159" >GSM антены</option><option value="1603" >Hands-free</option><option value="1664" >i-phone</option><option value="162" >IP-видеокамеры</option><option value="163" >LCD дисплеи для фотоаппаратов</option><option value="164" >LCD телевизоры</option><option value="170" >MP3 плееры</option><option value="1593" >PC игры</option><option value="177" >RJ45, RJ12</option><option value="1577" >SCSI</option><option value="178" >SkyLink телефоны</option><option value="183" >TV антены</option><option value="184" >TV тюнеры</option><option value="190" >USB Flash накопители</option><option value="191" >USB Hub</option><option value="205" >USB аксессуары</option><option value="192" >USB боксы для жестких дисков</option><option value="195" >USB кардридеры</option><option value="196" >USB контроллеры</option><option value="197" >USB модемы</option><option value="210" >VoIP оборудование</option><option value="211" >web камеры</option><option value="214" >wi-fi адаптеры</option><option value="215" >wi-fi антены</option><option value="216" >wi-fi маршрутизаторы</option><option value="217" >wi-fi оборудование другое</option><option value="223" >YOTA оборудование</option><option value="1569" >ZIP диски</option><option value="1639" >абонентское обслуживание организаций</option><option value="225" >авто акустика</option><option value="226" >авто антенны</option><option value="227" >авто магнитолы</option><option value="228" >авто навигация</option><option value="230" >авто сигнализации</option><option value="231" >автокомпрессоры</option><option value="234" >автомобильные GPS приемники</option><option value="235" >автомобильные адаптеры для ноутбуков</option><option value="236" >автомобильные видеорегистраторы</option><option value="237" >автомобильные держатели</option><option value="239" >автомобильные зарядные устройства</option><option value="241" >автомобильные инверторы</option><option value="242" >автомобильные подголовники с DVD плеером</option><option value="243" >автомобильные подлокотники с DVD плеером</option><option value="1659" >автомобильные телевизоры</option><option value="250" >адаптеры питания</option><option value="1583" >аккумуляторы для КПК</option><option value="1604" >аккумуляторы для мобильных</option><option value="264" >аккумуляторы для ноутбуков</option><option value="265" >аккумуляторы для радиотелефонов</option><option value="267" >аккумуляторы для фото</option><option value="268" >аккумуляторы и батареи</option><option value="262" >аккумуляторы кислотные</option><option value="280" >аксессуары для MP 3 плееров</option><option value="282" >аксессуары для АТС</option><option value="1608" >аксессуары для видео</option><option value="283" >аксессуары для геймеров</option><option value="284" >аксессуары для КПК</option><option value="1606" >аксессуары для мобильных другие</option><option value="287" >аксессуары для монтажа оборудования</option><option value="291" >аксессуары для монтажа сетей</option><option value="288" >аксессуары для навигаторов</option><option value="1579" >аксессуары для ноутбуков другие</option><option value="1673" >аксессуары для ПК</option><option value="1584" >аксессуары для планшетных компьютеров</option><option value="1599" >аксессуары для портативных консолей</option><option value="290" >аксессуары для приставок</option><option value="1611" >аксессуары для радиостанций</option><option value="293" >аксессуары для фото</option><option value="295" >аксессуары для шитья</option><option value="1609" >аксессуары для штативов</option><option value="307" >аксессуары к сетевому оборудованию</option><option value="1616" >акустические кабели</option><option value="1617" >акустические разъемы</option><option value="1576" >акустические системы для ПК</option><option value="317" >алко-тестеры</option><option value="319" >антенны</option><option value="1662" >антенны для КПК</option><option value="324" >антенны для радиостанций</option><option value="1607" >антенны для радиотелефонов</option><option value="1620" >антенные кабели</option><option value="329" >антивирусы</option><option value="331" >антирадары</option><option value="334" >АТС</option><option value="340" >аудио оборудование для ноутбуков</option><option value="1618" >аудио переходники</option><option value="1656" >аудиокассеты</option><option value="345" >аудиокниги</option><option value="361" >беспроводные охранно-пожарные системы</option><option value="366" >блоки питания</option><option value="369" >блоки питания для ноутбуков</option><option value="373" >боксы для подводной съемки</option><option value="379" >брелки USB Flash</option><option value="380" >брошюровщики</option><option value="1633" >БУ компьютеры и комплектующие</option><option value="1663" >БУ КПК</option><option value="1634" >БУ мобильные телефоны</option><option value="1635" >БУ мониторы</option><option value="1636" >БУ ноутбуки</option><option value="382" >бумага для принтеров</option><option value="384" >бумага для факсов</option><option value="1623" >бумага плотная</option><option value="1622" >бумага цветная</option><option value="387" >бухгалтерские бланки</option><option value="1675" >бытовая техника</option><option value="400" >вентиляторы и системы охлаждения</option><option value="1619" >видео кабели</option><option value="407" >видеодомофоны цветные и черно-белые</option><option value="410" >видеокамеры</option><option value="413" >видеокарты</option><option value="418" >видеокассеты</option><option value="1560" >видеомонтаж</option><option value="420" >видеопроигрыватели</option><option value="421" >видеорегистраторы</option><option value="1665" >внешние аккумуляторы для мобильных устройств</option><option value="435" >внешние жесткие диски</option><option value="440" >внешние оптические приводы</option><option value="1585" >внешние приводы zip</option><option value="1580" >внешние устройства для ноутбуков</option><option value="445" >внешние флоппи дисководы</option><option value="1637" >восстановление информации</option><option value="453" >вызывные панели</option><option value="456" >вышивальные машины</option><option value="458" >вэб серверы для работы с базами данных</option><option value="459" >вязальные машины</option><option value="461" >гарнитуры</option><option value="460" >гарнитуры для мобильных</option><option value="463" >гарнитуры для радиостанций</option><option value="464" >гарнитуры для радиотелефонов</option><option value="466" >геймпады</option><option value="468" >генераторы</option><option value="480" >графические станции</option><option value="482" >датчики для охранно-пожарных систем</option><option value="484" >держатели для КПК</option><option value="486" >детекторы валют</option><option value="487" >детекторы движения</option><option value="488" >джойстики</option><option value="489" >диагностика</option><option value="1651" >диагностика и настройка серверов</option><option value="1638" >диагностика ПК</option><option value="490" >диктофоны</option><option value="492" >дискеты</option><option value="1570" >диски для видеокамер</option><option value="499" >дисплеи и запчасти для PSP</option><option value="500" >доводчики</option><option value="502" >домашние кинотеатры и компоненты</option><option value="503" >домашние компьютеры</option><option value="508" >жесткие диски</option><option value="513" >жесткие диски для ноутбуков</option><option value="718" >журналы</option><option value="1670" >запчасти для мобильных</option><option value="1586" >запчасти для оргтехники</option><option value="1581" >запчасти и комплектующие для ноутбуков другие</option><option value="1605" >зарядные устройства для мобильных</option><option value="549" >звуковые карты</option><option value="572" >игровые компьютеры</option><option value="575" >игровые приставки</option><option value="1602" >игры для консолей</option><option value="593" >изготовление печатей</option><option value="594" >изготовление штампов</option><option value="595" >измерительные приборы</option><option value="600" >инструмент</option><option value="606" >интернет-телефония (VoIP)</option><option value="1615" >интерфейсные адаптеры</option><option value="1578" >интерфейсные контроллеры</option><option value="1144" >интерфейсные разъемы</option><option value="1588" >инфраконвертеры</option><option value="365" >источники бесперебойного питания</option><option value="616" >кабели витая пара</option><option value="620" >кабели интерфейсные</option><option value="622" >кабели сетевые</option><option value="1625" >канцтовары</option><option value="1575" >кардридеры внутренние</option><option value="1626" >картриджи для принтеров</option><option value="1627" >картриджи для факсов</option><option value="372" >кейсы (сумки) для дисков</option><option value="679" >клавиатуры</option><option value="687" >коврики для мыши</option><option value="712" >компьютерная мебель</option><option value="730" >компьютеры Apple</option><option value="1600" >контроллеры PSP</option><option value="750" >контрольные панели мониторинга</option><option value="752" >копировальная техника</option><option value="758" >корпоративные лицензии программного обеспечения для организаций</option><option value="760" >корпуса (системные блоки)</option><option value="774" >КПК</option><option value="780" >кронштейны для ЖК и Плазменных панелей</option><option value="782" >ксенон партроники</option><option value="783" >ксерокопирование</option><option value="794" >ламинаторы</option><option value="1653" >ламинирование, брошюрование</option><option value="796" >лампы</option><option value="1674" >Лампы и светильники</option><option value="814" >маникюрный инструмент</option><option value="822" >материнские платы</option><option value="827" >медиа плееры</option><option value="834" >метеостанции</option><option value="1657" >микрофоны</option><option value="845" >многофункциональные устройства</option><option value="847" >мобильные телефоны</option><option value="848" >моддинг</option><option value="850" >модемы</option><option value="855" >модернизация компьютеров</option><option value="857" >модернизация ноутбуков</option><option value="869" >мониторы</option><option value="1573" >моноблоки</option><option value="874" >монтаж охранных систем и систем контроля доступа</option><option value="878" >музыка</option><option value="889" >мыши</option><option value="912" >настольные игры</option><option value="1649" >настройка мобильных</option><option value="1648" >настройка ПК</option><option value="920" >наушники</option><option value="922" >нетбуки</option><option value="933" >ноутбуки</option><option value="949" >оборудования для фотостудий</option><option value="952" >обучающие программы</option><option value="959" >оперативная память</option><option value="1621" >оптические кабели и переходники</option><option value="1658" >оптические приборы</option><option value="974" >оружие пневматическое</option><option value="977" >офисная мебель</option><option value="978" >офисные компьютеры</option><option value="980" >офисные программы</option><option value="1661" >офисные серверы</option><option value="985" >охранно-пожарные сигнализации</option><option value="1000" >патчпанели</option><option value="1571" >планшетные компьютеры</option><option value="1026" >планшеты</option><option value="1031" >платы видеозахвата </option><option value="1558" >плоттерная резка</option><option value="1594" >ПО для GPS</option><option value="1595" >ПО для КПК</option><option value="1597" >ПО для планшетных компьютеров</option><option value="1596" >ПО для смартфонов</option><option value="1592" >ПО прикладное</option><option value="1591" >ПО системное</option><option value="1650" >подключение к операторам сотовой связи</option><option value="1062" >полиграфические услуги</option><option value="1064" >портативные DVD плееры</option><option value="1598" >портативные игровые консоли</option><option value="1067" >портативные телевизоры</option><option value="1085" >приводы оптических дисков</option><option value="1091" >принтеры</option><option value="1101" >проводные телефонные аппараты</option><option value="1122" >процессоры</option><option value="1669" >прошивка мобильных устройств</option><option value="1130" >пульты Д/У</option><option value="1613" >радар детекторы</option><option value="1137" >радиостанции</option><option value="1138" >радиотелефоны</option><option value="1140" >радиоуправляемые модели</option><option value="1152" >рации</option><option value="1156" >резаки</option><option value="1641" >ремонт игровых консолей</option><option value="1171" >ремонт компьютеров</option><option value="1172" >ремонт КПК</option><option value="1643" >ремонт микроэлектроники</option><option value="1642" >ремонт мобильных</option><option value="1645" >ремонт мониторов</option><option value="1175" >ремонт ноутбуков</option><option value="1647" >ремонт ортехники</option><option value="1676" >ремонт планшетов</option><option value="1672" >ремонт техники Apple</option><option value="1677" >ремонт фотоаппаратов</option><option value="1189" >рули</option><option value="1196" >садовый инвентарь</option><option value="1198" >сборка компьютеров</option><option value="1207" >серверное оборудование</option><option value="1214" >серверы</option><option value="1224" >сетевые зарядные устройства</option><option value="1229" >сетевые карты</option><option value="1230" >сетевые карты для ноутбуков</option><option value="1232" >сетевые коммутаторы</option><option value="820" >сетевые маршрутизаторы</option><option value="1236" >сетевые фильтры</option><option value="1590" >системы безопасности для компьютеров</option><option value="1243" >системы видеонаблюдения</option><option value="1249" >системы охлаждения для ноутбуков</option><option value="1557" >системы спутникового телевидения</option><option value="1254" >сканеры</option><option value="1277" >стабилизаторы напряжения</option><option value="1660" >стойки для дисков</option><option value="1301" >сувениры и подарки</option><option value="1327" >счетчики банкнот</option><option value="1337" >телевизоры</option><option value="1349" >термопленка</option><option value="1630" >тонеры</option><option value="1365" >трансформаторы</option><option value="1366" >тренинги по технике APPLE</option><option value="1377" >усилители</option><option value="1381" >услуги ламинирования</option><option value="1401" >устройства для чтения электронных книг</option><option value="1415" >факсы</option><option value="1418" >фильмы</option><option value="1420" >фильтры для воды</option><option value="1432" >флоппи дисководы</option><option value="1444" >фотоальбомы</option><option value="1445" >фотоаппараты</option><option value="1449" >фотобумага</option><option value="1456" >фотовспышки</option><option value="1459" >фотопечать</option><option value="1460" >фотопленки</option><option value="1462" >фоторамки</option><option value="1467" >фотоуслуги</option><option value="1479" >цифровые рамки</option><option value="1486" >часы</option><option value="1629" >чернила, заправочные комплекты</option><option value="1589" >чехлы для CD</option><option value="1587" >шреддеры</option><option value="1537" >штемпельная продукция</option><option value="1543" >электронные книги</option><option value="1566" >электронные сигареты</option></select></p>
+<p>
+	<span class="wrapp-button"><button type="submit"></button></span> 
+</p> 
+</form>
+</div>
+
+<div class="s-blosk1">
+					<div class="s-blosk1-in">
+
+						<h3 class="tit1">
+							<img src="/templates/budenov/images/any-comp.png" alt="" />
+							<span>Cлучайная компания</span>
+						</h3>
+
+						<a class="a-block" href="/2010-04-06-11-37-05?sobi2Task=sobi2Details&amp;sobi2Id=26&amp;default=26">
+							<span class="a-block-in">
+								<span class="a-block-in1">
+									<span class="a-block-tit">Дельта (Губин)</span>
+									<b><!-- x --></b>
+								</span>
+							</span>
+						</a>
+
+						<p>ООО "Дельта" занимается сборкой компьютеров и серверов, диагностикой и ремонтом.						</p>
+
+						<p>Местоположение: Е18<br/>
+							Телефон: 8-926-881-61-97</p>
+					</div>
+				</div>
+<div class="bannergroup">
+
+<div class="banneritem"><a href="/component/banners/click/1"><img src="http://www.budenovsky.ru/images/banners/mcm274x100.png" alt="Баннер" /></a><div class="clr"></div>
+	</div>
+
+</div><div class="bannergroup">
+
+<div class="banneritem"><img src="http://www.budenovsky.ru/images/banners/masterel.png" alt="Баннер" /><div class="clr"></div>
+	</div>
+
+</div><div class="bannergroup">
+
+<div class="banneritem"><a href="/component/banners/click/4" target="_blank"><img src="http://www.budenovsky.ru/images/banners/230675.jpg" alt="Баннер" /></a><div class="clr"></div>
+	</div>
+
+</div><div class="bannergroup">
+
+<div class="banneritem"><a href="/component/banners/click/2" target="_blank"><img src="http://www.budenovsky.ru/images/banners/274275.png" alt="Баннер" /></a><div class="clr"></div>
+	</div>
+
+</div>
+			</div>
+			<!-- End Sidebar -->
+			<div class="clear"><!-- c --></div>
+			<div class="push"><!-- c --></div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<div class="footer">
+		<p class="copyright">Создание сайта — <a href="http://www.sitegu.ru">Сайт Гуру</a><br /><br /><br /><br /> <!-- Yandex.Metrika informer --> <a href="http://metrika.yandex.ru/stat/?id=23334748&amp;from=informer" target="_blank" rel="nofollow"><img src="http://bs.yandex.ru/informer/23334748/3_1_FFFFFFFF_EFEFEFFF_0_pageviews" border="0" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" style="width: 88px; height: 31px; border: 0;" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter -->
+<script type="text/javascript">// <![CDATA[
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter23334748 = new Ya.Metrika({id:23334748,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+// ]]></script>
+<noscript><div><img src="//mc.yandex.ru/watch/23334748" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --></p>
+<address><strong>Контактная информация:</strong> Телефон: +7 (495) 7857575 <strong>Почта:</strong> <a href="mailto:mail@budenovsky.ru">budensite@mail.ru</a><br /><span style="font-size: smaller;"><strong>Внимание:</strong> По вопросам консультации и приобретения определенных товаров обращайтесь непосредственно к фирмам-арендаторам. Контакты фирм, торгующих определенным видом товара можно получить, воспользовавшись поиском товара.</span></address>
+<div style="clear: both; padding-left: 14px;">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border='0' width='88' height='15'><\/a>")
+//--></script><!--/LiveInternet-->
+<!-- Yandex.Metrika -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter1986235 = new Ya.Metrika(1986235);
+yaCounter1986235.clickmap(true);
+yaCounter1986235.trackLinks(true);
+} catch(e){}
+</script></div>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/1986235" alt="" /></div></noscript>
+<!-- /Yandex.Metrika -->
+</div>
+<div class="f1718"></div>	</div>
+	<!-- End Footer -->
+</div>
+</body>
+</html>

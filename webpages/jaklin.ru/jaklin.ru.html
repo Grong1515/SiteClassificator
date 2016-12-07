@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="/bitrix/cache/css/s1/jaklin_new/kernel_main/kernel_main.css?147522987248075" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/jaklin_new/page_4d7e0ae77239bd074af703152197de0a/page_4d7e0ae77239bd074af703152197de0a.css?14752298725611" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/jaklin_new/template_2c394e0e94dc16081867bcee4d0f1b51/template_2c394e0e94dc16081867bcee4d0f1b51.css?147722405731343" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'','SERVER_TIME':'1477469477','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'95bab1cb8508ddd01bb41419ef4ac79d'});</script>
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/jaklin_new/kernel_main/kernel_main.js?1475229872267920"></script>
+<script type="text/javascript" src="/bitrix/js/main/jquery/jquery-1.8.3.min.js?147285828093636"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js?147285828070997','/bitrix/js/main/core/core_ajax.js?147285828020978','/bitrix/js/main/json/json2.min.js?14728582793467','/bitrix/js/main/core/core_ls.js?14728582807365','/bitrix/js/main/session.js?14728582792511','/bitrix/js/main/core/core_window.js?147285828074754','/bitrix/js/main/core/core_popup.js?147285828031170','/bitrix/js/main/core/core_date.js?147285828034276','/bitrix/js/main/utils.js?147285827919858','/bitrix/components/bitrix/map.yandex.view/templates/.default/script.js?14728582611540','/bitrix/templates/jaklin_new/js/slick/slick.js?147285828279234','/bitrix/templates/jaklin_new/js/grids.js?14728582822906','/bitrix/templates/jaklin_new/js/jquery.maskedinput-1.3.min.js?14728582823343','/bitrix/templates/jaklin_new/js/fancybox/jquery.easing-1.3.pack.js?14728582826717','/bitrix/templates/jaklin_new/js/fancybox/jquery.fancybox-1.3.4.pack.js?147285828215624','/bitrix/templates/jaklin_new/js/fancybox/jquery.fancybox-1.3.4.js?147285828229398']); </script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css?14728582802854','/bitrix/js/main/core/css/core_popup.css?147285828033075','/bitrix/js/main/core/css/core_date.css?14728582809689','/bitrix/templates/jaklin_new/components/bitrix/catalog.section.list/uslugi/style.css?14728582821524','/bitrix/templates/jaklin_new/components/bitrix/news.list/masters-slider/style.css?1474033312539','/bitrix/templates/jaklin_new/components/bitrix/catalog.section.list/price_line/style.css?1472858282604','/bitrix/components/bitrix/map.yandex.system/templates/.default/style.css?1472858267666','/bitrix/templates/jaklin_new/components/bitrix/news.list/saloni-list/style.css?1472858282520','/bitrix/templates/jaklin_new/components/bitrix/news.list/portfolio-main/style.css?1472858282428','/bitrix/templates/jaklin_new/components/bitrix/menu/top/style.css?1473959969802','/bitrix/templates/jaklin_new/components/bitrix/menu/bottom/style.css?1472858281685','/bitrix/templates/jaklin_new/js/slick/slick.css?14728582821767','/bitrix/templates/jaklin_new/js/slick/slick-theme.css?14728582823186','/bitrix/templates/jaklin_new/js/fancybox/jquery.fancybox-1.3.4.css?14728582828494','/bitrix/templates/jaklin_new/template_styles.css?147722405313735']); </script>
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/jaklin_new/template_f74ba9f0dca95ddd524e2294783b83ac/template_f74ba9f0dca95ddd524e2294783b83ac.js?1475229872139154"></script>
+<script type="text/javascript" src="/bitrix/cache/js/s1/jaklin_new/page_8c65acd25c119e2b7cf75efcee222cf8/page_8c65acd25c119e2b7cf75efcee222cf8.js?14752298721897"></script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "f0da4ee12a301fe45cc10ca1e59b2841"]); _ba.push(["host", "www.jaklin.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+		
+		<title>«Жаклин» - Салоны красоты Жаклин в Люберцах и Жуковском</title>
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+		
+				
+				
+		
+		
+		<link rel="stylesheet" href="/bitrix/templates/jaklin_new/css/media/media_320_767.css" />
+		<link rel="stylesheet" href="/bitrix/templates/jaklin_new/css/media/media_768_1199.css" />
+		<link rel="stylesheet" href="/bitrix/templates/jaklin_new/css/media/media_1600.css" />
+		
+		<script type="text/javascript" src="/bitrix/templates/jaklin_new/js/script.js"></script>
+		
+	</head>
+	<body>
+		<div id="panel">
+					</div>
+		
+		<div class="pp_overlay"></div>
+		<header class="index">
+			<div class="work_area">
+				<div class="f_line">
+					<div class="two_colum">
+						<a href="/saloni/salon-lubertsi-julebino.html" class="small">Люберцы</a>
+							<a class="tel_header" href="tel:84957899299">
+								
+8 (495) 789-92-99							</a>
+						</div>
+					<div class="two_colum">
+						<a href="/saloni/salon-jukovskii.html" class="small">Жуковский</a>
+						<a class="tel_header" href="tel:84955518626">
+							
+8 (495) 551-86-26						</a>
+					</div>
+					<div class="have_question_btn tablet-hidden"><span>Задать вопрос</span></div>
+					<div class="empty_block tablet-hidden"></div>
+				</div>
+			</div>
+			<div class="s_line menu_top">
+				<div class="work_area">	
+					
+<ul class="left-menu top">
+
+			<li><a href="/uslugi/">Услуги</a></li>
+		
+			<li><a href="/masters/">Мастера</a></li>
+		
+			<li><a href="/price/">Цены</a></li>
+		
+			<li><a href="/podarochnyy_sertifikat/">Подарочный сертификат</a></li>
+		
+			<li><a href="/saloni/">Салоны</a></li>
+		
+			<li><a href="/novosti/">Новости</a></li>
+		
+			<li><a href="">Запись онлайн</a></li>
+		
+
+</ul>
+				</div>
+			</div>
+										<div class="main_slider">
+											<div class="slide">
+							<div class="for_all_page">
+								<p class="site_name">JAKLIN</p>
+								<h1 class="sub_text">Салоны красоты в Люберцах и Жуковском</h1>
+							</div>
+							<div class="cont-link"><a href="">Для того чтобы хорошо выглядеть женщины и мужчины всех возрастов<br>  обращаются за помощью к профессионалам</a></div>
+						</div>
+									</div>
+				<div class="slider-bottom-text">
+					<div class="inset-block">
+											 </div>
+				</div>
+					</header>
+		
+		
+		
+		<div class="body">
+			
+
+<div class="block-uslugi">
+	<div class="work_area">
+	<h2 class="title_h2">Услуги</h2>
+	<div class="description-iblock">Дополнительным преимуществом наших центров красоты являются ненавязчивые сдержанные интерьеры салонов, которые располагают к полноценному отдыху. В салонах имеются мини-магазины, в которых можно купить профессиональные средства по уходу известных торговых марок по цене ниже, чем в других точках продаж. 
+Отдельно стоит обратить внимание на использование инновационных технологий, с помощью которых проводятся некоторые процедуры. </div>	<div class="padding-50"></div>
+	
+	  <div class="uslugi">					<a href="/uslugi/parikmaherskie-uslugi.html" class="category">			<div class="category-inset">
+									<img src="/upload/resize_cache/iblock/625/225_225_2/6253408eeeb89d99a9edb37091ab4b39.jpg" alt="Парикмахерские услуги" />				<p class="name">Парикмахерские услуги</p>
+			</div>
+		</a>
+						<a href="/uslugi/nogtevoi-servis.html" class="category">			<div class="category-inset">
+									<img src="/upload/resize_cache/iblock/19d/225_225_2/19df463fede7952a5c722b2de30935fa.jpg" alt="Ногтевой сервис" />				<p class="name">Ногтевой сервис</p>
+			</div>
+		</a>
+						<a href="/uslugi/kosmetologiya.html" class="category">			<div class="category-inset">
+									<img src="/upload/resize_cache/iblock/243/225_225_2/243056b659d88c05ee147a7589887ae1.jpg" alt="Косметология" />				<p class="name">Косметология</p>
+			</div>
+		</a>
+						<a href="/uslugi/makiyaj.html" class="category">			<div class="category-inset">
+									<img src="/upload/resize_cache/iblock/c11/225_225_2/c11dfb8a4b9e9d352e57562542cbd4bc.jpg" alt="Макияж" />				<p class="name">Макияж</p>
+			</div>
+		</a>
+						<a href="/uslugi/studiya-tatuaja.html" class="category">			<div class="category-inset">
+									<img src="/upload/resize_cache/iblock/a0b/225_225_2/a0bedc8d5588b7eb183c03200d3fc1fd.jpg" alt="Студия татуажа" />				<p class="name">Студия татуажа</p>
+			</div>
+		</a>
+						<a href="/uslugi/massaj.html" class="category">			<div class="category-inset">
+									<img src="/upload/resize_cache/iblock/8d2/225_225_2/8d2713d745e8aaa1a4178cd99c81625c.jpg" alt="Массажный салон" />				<p class="name">Массажный салон</p>
+			</div>
+		</a>
+						<a href="/uslugi/solyarii.html" class="category">			<div class="category-inset">
+									<img src="/upload/resize_cache/iblock/a36/225_225_2/a3600bad4d6edfc734f8016ae5e544db.jpg" alt="Солярий" />				<p class="name">Солярий</p>
+			</div>
+		</a>
+		<div class="last-block-for-question-btn">
+		<p>Остались вопросы?</p>
+		<button class="span-have-question">Напишите нам</button>
+	</div>
+	<div class="clear"></div>
+</div>	</div>
+</div>
+
+<div class="big-container masters">
+	<div class="work_area">
+		<h2 class="title_h2">Мастера</h2>
+		<div class="description-iblock">Салоны красоты «Jaklin» в Люберцах и Жуковском – это настоящие зоны комфорта для тех, кто привык всегда выглядеть безупречно. <br>
+В наших центрах красоты работают специалисты высокого класса, которые не только окажут весь необходимый комплекс услуг,<br>
+но и помогут провести время в обстановке психологического комфорта и релакса.
+</div>	  
+				<div class="news-list-masters">
+					<a class="master-a" href="/saloni/komanda-lubertsi/nikiforova.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/6be/350_350_0/6be9de45e740a03dc33e2bedfcaf83b9.jpg" alt="Никифорова Татьяна" />
+				</div>
+				<p class="name">Никифорова Татьяна</p>
+								<p class="job-list">Мастер по макияжу, Мастер парикмахерского зала</p>
+			</div>
+		</a>
+					<a class="master-a" href="/saloni/komanda-zhukovskiy/melikyan.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/24d/350_350_0/24dda580d1c81e2a1ec3633c8fec3f35.jpg" alt="Меликян Алекс" />
+				</div>
+				<p class="name">Меликян Алекс</p>
+								<p class="job-list">Мастер парикмахерского зала</p>
+			</div>
+		</a>
+					<a class="master-a" href="/saloni/komanda-zhukovskiy/skvorcova_elena.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/080/350_350_0/0801dc1502e9d907fd0e9d72e758a83f.jpg" alt="Скворцова Елена Анатольевна" />
+				</div>
+				<p class="name">Скворцова Елена Анатольевна</p>
+								<p class="job-list">Косметолог</p>
+			</div>
+		</a>
+					<a class="master-a" href="/saloni/komanda-zhukovskiy/dibrova.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/553/350_350_0/553f58cb068671a8e44217e73b962b38.jpeg" alt="Диброва Наталья Юрьевна" />
+				</div>
+				<p class="name">Диброва Наталья Юрьевна</p>
+								<p class="job-list">Косметолог, Мастер татуажа</p>
+			</div>
+		</a>
+					<a class="master-a" href="/saloni/komanda-zhukovskiy/sobakina.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/012/350_350_0/01259c9fe8333686e4ac943eed34532d.jpg" alt="Собакина Ольга" />
+				</div>
+				<p class="name">Собакина Ольга</p>
+								<p class="job-list">Мастер по макияжу</p>
+			</div>
+		</a>
+					<a class="master-a" href="/saloni/komanda-lubertsi/gegina.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/983/350_350_0/983522454a0d95fa77707daa3337a69d.jpg" alt="Гегина Мария" />
+				</div>
+				<p class="name">Гегина Мария</p>
+								<p class="job-list">Администратор</p>
+			</div>
+		</a>
+					<a class="master-a" href="/saloni/komanda-zhukovskiy/malenkina.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/cd7/350_350_0/cd7240a8cff77dcc103ae2be040ad7de.jpg" alt="Маленкина Марина" />
+				</div>
+				<p class="name">Маленкина Марина</p>
+								<p class="job-list">Косметолог</p>
+			</div>
+		</a>
+					<a class="master-a" href="/saloni/komanda-lubertsi/yakovleva.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/903/350_350_0/903a2f0a193650577227d5b58399ed33.jpg" alt="Яковлева Ольга Львовна" />
+				</div>
+				<p class="name">Яковлева Ольга Львовна</p>
+								<p class="job-list">Специалист по СПА</p>
+			</div>
+		</a>
+					<a class="master-a" href="/saloni/komanda-lubertsi/mirzoeva.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/5c5/350_350_0/5c5ddc219bae6ed781ed5ec2787735ab.jpg" alt="Мирзоева Зарина" />
+				</div>
+				<p class="name">Мирзоева Зарина</p>
+								<p class="job-list">Мастер ногтевого сервиса</p>
+			</div>
+		</a>
+					<a class="master-a" href="/saloni/komanda-lubertsi/terehova_nadya.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/9db/350_350_0/9db14c9a46124a7782aa298a57ccb287.jpg" alt="Терехова Надежда" />
+				</div>
+				<p class="name">Терехова Надежда</p>
+								<p class="job-list">Мастер ногтевого сервиса</p>
+			</div>
+		</a>
+					<a class="master-a" href="/saloni/komanda-lubertsi/neupokoeva.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/bfb/350_350_0/bfb46ad62dee2c931a1f6fb6454fd7b0.jpg" alt="Кабилова Анна" />
+				</div>
+				<p class="name">Кабилова Анна</p>
+								<p class="job-list">Мастер парикмахерского зала</p>
+			</div>
+		</a>
+					<a class="master-a" href="/saloni/komanda-zhukovskiy/savushkina.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/16b/350_350_0/16bdb67909c92ab3b1691e2ebe5ebced.jpg" alt="Савушкина Ирина" />
+				</div>
+				<p class="name">Савушкина Ирина</p>
+								<p class="job-list">Мастер ногтевого сервиса</p>
+			</div>
+		</a>
+					<a class="master-a" href="/saloni/komanda-zhukovskiy/97-kornilova.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/d24/350_350_0/d24c7fcf468bc254231f0b0cadc3b596.jpg" alt="Корнилова Анна Викторовна" />
+				</div>
+				<p class="name">Корнилова Анна Викторовна</p>
+								<p class="job-list">Косметолог</p>
+			</div>
+		</a>
+					<a class="master-a" href="/saloni/komanda-lubertsi/popova.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/65c/350_350_0/65c6c3f49f7d841117ff4a1b5c54f65c.jpg" alt="Попова Вера" />
+				</div>
+				<p class="name">Попова Вера</p>
+								<p class="job-list">Мастер ногтевого сервиса</p>
+			</div>
+		</a>
+					<a class="master-a" href="/saloni/komanda-lubertsi/kuznecova.html">
+			<div class="master">
+				<div class="cont-img">
+										<img src="/upload/resize_cache/iblock/e6c/350_350_0/e6c09b8aa8092db419dcaa5a8255c21e.jpg" alt="Кузнецова Ирина" />
+				</div>
+				<p class="name">Кузнецова Ирина</p>
+								<p class="job-list">Мастер парикмахерского зала</p>
+			</div>
+		</a>
+	</div>
+	</div>
+</div>
+
+<div class="big-container prices">
+	<div class="work_area">
+		<h2 class="title_h2">Цены</h2>
+		<div class="description-iblock price-desc">Наши клиенты будут приятно удивлены доступностью нашего ценового диапазона и большим количеством специальных предложений и различных акций, которые мы предлагаем. </div>
+		<div class="bths-line">	<button class="price_btn  studiya-tatuaja" data-id="4" data-type="section-uslugi">Студия татуажа</button>
+	<button class="price_btn  massaj" data-id="30" data-type="element-uslugi">Массажный салон</button>
+	<button class="price_btn  solyarii" data-id="32" data-type="element-uslugi">Солярий</button>
+</div>
+		<div class="cont-write"></div>
+	</div>
+</div>
+
+<div class="big-container saloni">
+	<div class="work_area">
+		<h2 class="title_h2">Салоны</h2>
+		<div class="description-iblock salon-desc">Наши салоны красоты «Jaklin» в городе Люберцы и Жуковский располагаются в очень удобном месте, имеющим удобные схемы проезда и места для парковки автомобилей.</div>
+				<div class="news-list-saloni for-ajax">
+
+		
+	<a href="/saloni/salon-lubertsi-julebino.html" class="salon">
+		<div class="cont-salon">
+			<div class="map">
+				 
+				 
+					 		
+					<script type="text/javascript">
+function BX_SetPlacemarks_MAP_YqU6fQXpam(map)
+{
+	if(typeof window["BX_YMapAddPlacemark"] != 'function')
+	{
+		/* If component's result was cached as html,
+		 * script.js will not been loaded next time.
+		 * let's do it manualy.
+		*/
+
+		(function(d, s, id)
+		{
+			var js, bx_ym = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "/bitrix/components/bitrix/map.yandex.view/templates/.default/script.js";
+			bx_ym.parentNode.insertBefore(js, bx_ym);
+		}(document, 'script', 'bx-ya-map-js'));
+
+		var ymWaitIntervalId = setInterval( function(){
+				if(typeof window["BX_YMapAddPlacemark"] == 'function')
+				{
+					BX_SetPlacemarks_MAP_YqU6fQXpam(map);
+					clearInterval(ymWaitIntervalId);
+				}
+			}, 300
+		);
+
+		return;
+	}
+
+	var arObjects = {PLACEMARKS:[],POLYLINES:[]};
+	arObjects.PLACEMARKS[arObjects.PLACEMARKS.length] = BX_YMapAddPlacemark(map, {'TEXT':'55.681659605,37.8884828743, 55.681659605,37.8884828743','LON':'37.8884828743','LAT':'55.681659605'});
+}
+</script>
+<div class="bx-yandex-view-layout">
+	<div class="bx-yandex-view-map">
+		<script>
+			var script = document.createElement('script');
+			script.src = 'http://api-maps.yandex.ru/2.0/?load=package.full&mode=release&lang=ru-RU&wizard=bitrix';
+			(document.head || document.documentElement).appendChild(script);
+			script.onload = function () {
+				this.parentNode.removeChild(script);
+			};
+		</script>
+		<script type="text/javascript">
+
+if (!window.GLOBAL_arMapObjects)
+	window.GLOBAL_arMapObjects = {};
+
+function init_MAP_YqU6fQXpam()
+{
+	if (!window.ymaps)
+		return;
+
+	if(typeof window.GLOBAL_arMapObjects['MAP_YqU6fQXpam'] !== "undefined")
+		return;
+
+	var node = BX("BX_YMAP_MAP_YqU6fQXpam");
+	node.innerHTML = '';
+
+	var map = window.GLOBAL_arMapObjects['MAP_YqU6fQXpam'] = new ymaps.Map(node, {
+		center: [55.681659605, 37.8884828743],
+		zoom: 15,
+		type: 'yandex#map'
+	});
+
+	if (map.behaviors.isEnabled("scrollZoom"))
+		map.behaviors.disable("scrollZoom");
+	if (map.behaviors.isEnabled("dblClickZoom"))
+		map.behaviors.disable("dblClickZoom");
+	map.behaviors.enable("drag");
+	if (map.behaviors.isEnabled("rightMouseButtonMagnifier"))
+		map.behaviors.disable("rightMouseButtonMagnifier");
+	map.controls.add('scaleLine');
+	if (window.BX_SetPlacemarks_MAP_YqU6fQXpam)
+	{
+		window.BX_SetPlacemarks_MAP_YqU6fQXpam(map);
+	}
+}
+
+(function bx_ymaps_waiter(){
+	if(typeof ymaps !== 'undefined')
+		ymaps.ready(init_MAP_YqU6fQXpam);
+	else
+		setTimeout(bx_ymaps_waiter, 100);
+})();
+
+
+/* if map inits in hidden block (display:none)
+*  after the block showed
+*  for properly showing map this function must be called
+*/
+function BXMapYandexAfterShow(mapId)
+{
+	if(window.GLOBAL_arMapObjects[mapId] !== undefined)
+		window.GLOBAL_arMapObjects[mapId].container.fitToViewport();
+}
+
+</script>
+<div id="BX_YMAP_MAP_YqU6fQXpam" class="bx-yandex-map" style="height: 300px; width: 300px;">загрузка карты...</div>	</div>
+</div>
+ 
+							</div>
+			<p class="name">Салон красоты “Жаклин"<br />в Жулебино и Люберцах</p>
+			<p class="info">г. Люберцы, ул. Октябрьский проспект д. 131 (ТЦ "Подосинки")<br />
+(495)789-92-99 Время работы: 9.00 - 21.00 ежедневно.
+<div><iframe width="457" height="300" src="https://www.youtube.com/embed/dwL5bgPMvhc" frameborder="0" allowfullscreen></iframe></div></p>
+		</div>
+	</a>
+		
+	<a href="/saloni/salon-jukovskii.html" class="salon">
+		<div class="cont-salon">
+			<div class="map">
+				 
+				 
+					 		
+					<script type="text/javascript">
+function BX_SetPlacemarks_MAP_d3nkPVuTbv(map)
+{
+	if(typeof window["BX_YMapAddPlacemark"] != 'function')
+	{
+		/* If component's result was cached as html,
+		 * script.js will not been loaded next time.
+		 * let's do it manualy.
+		*/
+
+		(function(d, s, id)
+		{
+			var js, bx_ym = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "/bitrix/components/bitrix/map.yandex.view/templates/.default/script.js";
+			bx_ym.parentNode.insertBefore(js, bx_ym);
+		}(document, 'script', 'bx-ya-map-js'));
+
+		var ymWaitIntervalId = setInterval( function(){
+				if(typeof window["BX_YMapAddPlacemark"] == 'function')
+				{
+					BX_SetPlacemarks_MAP_d3nkPVuTbv(map);
+					clearInterval(ymWaitIntervalId);
+				}
+			}, 300
+		);
+
+		return;
+	}
+
+	var arObjects = {PLACEMARKS:[],POLYLINES:[]};
+	arObjects.PLACEMARKS[arObjects.PLACEMARKS.length] = BX_YMapAddPlacemark(map, {'TEXT':'55.6100913418,38.0739394584, 55.6100913418,38.0739394584','LON':'38.0739394584','LAT':'55.6100913418'});
+}
+</script>
+<div class="bx-yandex-view-layout">
+	<div class="bx-yandex-view-map">
+<script type="text/javascript">
+
+if (!window.GLOBAL_arMapObjects)
+	window.GLOBAL_arMapObjects = {};
+
+function init_MAP_d3nkPVuTbv()
+{
+	if (!window.ymaps)
+		return;
+
+	if(typeof window.GLOBAL_arMapObjects['MAP_d3nkPVuTbv'] !== "undefined")
+		return;
+
+	var node = BX("BX_YMAP_MAP_d3nkPVuTbv");
+	node.innerHTML = '';
+
+	var map = window.GLOBAL_arMapObjects['MAP_d3nkPVuTbv'] = new ymaps.Map(node, {
+		center: [55.6100913418, 38.0739394584],
+		zoom: 15,
+		type: 'yandex#map'
+	});
+
+	if (map.behaviors.isEnabled("scrollZoom"))
+		map.behaviors.disable("scrollZoom");
+	if (map.behaviors.isEnabled("dblClickZoom"))
+		map.behaviors.disable("dblClickZoom");
+	map.behaviors.enable("drag");
+	if (map.behaviors.isEnabled("rightMouseButtonMagnifier"))
+		map.behaviors.disable("rightMouseButtonMagnifier");
+	map.controls.add('scaleLine');
+	if (window.BX_SetPlacemarks_MAP_d3nkPVuTbv)
+	{
+		window.BX_SetPlacemarks_MAP_d3nkPVuTbv(map);
+	}
+}
+
+(function bx_ymaps_waiter(){
+	if(typeof ymaps !== 'undefined')
+		ymaps.ready(init_MAP_d3nkPVuTbv);
+	else
+		setTimeout(bx_ymaps_waiter, 100);
+})();
+
+
+/* if map inits in hidden block (display:none)
+*  after the block showed
+*  for properly showing map this function must be called
+*/
+function BXMapYandexAfterShow(mapId)
+{
+	if(window.GLOBAL_arMapObjects[mapId] !== undefined)
+		window.GLOBAL_arMapObjects[mapId].container.fitToViewport();
+}
+
+</script>
+<div id="BX_YMAP_MAP_d3nkPVuTbv" class="bx-yandex-map" style="height: 300px; width: 300px;">загрузка карты...</div>	</div>
+</div>
+ 
+							</div>
+			<p class="name">Салон красоты “Жаклин"<br />в Жуковском</p>
+			<p class="info">г. Жуковский, ул. Гагарина д. 85<br />
+(495) 551-86-26 Время работы: 9.00 - 21.00 ежедневно.
+<div><iframe width="457" height="300" src="https://www.youtube.com/embed/MDBABXpzRsU" frameborder="0" allowfullscreen></iframe></div></p>
+		</div>
+	</a>
+<div class="clear"></div>
+</div>
+	</div>
+</div>
+<div class="big-container portfolio" style="color:#fff;">
+	<div class="work_area">
+		<h2 class="title_h2">Портфолио</h2>
+		
+				
+				<div class="news-list-portfolio">
+
+		
+		<img class="main_portfolio_image " data-id="1184" src="/upload/resize_cache/iblock/1fd/200_200_2/1fdb8251981e94c84df3f1b94257c76a.jpg" alt="Работа" />
+		
+		<img class="main_portfolio_image " data-id="1183" src="/upload/resize_cache/iblock/606/200_200_2/606b049431137003ac6f8f9ba1d4f542.JPG" alt="Оборудование" />
+		
+		<img class="main_portfolio_image " data-id="1182" src="/upload/resize_cache/iblock/a12/200_200_2/a12549a92c34f643db032cd7a674338b.jpg" alt="Укладка и макияж" />
+		
+		<img class="main_portfolio_image " data-id="1181" src="/upload/resize_cache/iblock/cac/200_200_2/cace5549a4a50b7b3a707ff1df73c529.jpg" alt="Макияж" />
+		
+		<img class="main_portfolio_image " data-id="1180" src="/upload/resize_cache/iblock/828/200_200_2/828e6690060763b7f0ab510ec05b0ec4.jpg" alt="Макияж" />
+		
+		<img class="main_portfolio_image " data-id="1179" src="/upload/resize_cache/iblock/f8b/200_200_2/f8b37da52641f2ac8db1f2a52eac936b.jpg" alt="Макияж" />
+		
+		<img class="main_portfolio_image sm-hidden" data-id="1178" src="/upload/resize_cache/iblock/2c1/200_200_2/2c167d50420cfd1ecd1d43c0aa08f478.jpg" alt="Макияж" />
+		
+		<img class="main_portfolio_image sm-hidden" data-id="1177" src="/upload/resize_cache/iblock/fb9/200_200_2/fb96631a3e71eaa1dd45e3a3b654cd60.jpg" alt="Макияж" />
+		
+		<img class="main_portfolio_image sm-hidden" data-id="1176" src="/upload/resize_cache/iblock/107/200_200_2/1075fda3b8a8e8bee2ceb37111fa07e9.JPG" alt="Макияж" />
+		
+		<img class="main_portfolio_image sm-hidden" data-id="1175" src="/upload/resize_cache/iblock/34c/200_200_2/34c65acfdb4e3f1a8dfdeeca5ea7332d.JPG" alt="Макияж" />
+		
+		<img class="main_portfolio_image sm-hidden" data-id="1174" src="/upload/resize_cache/iblock/0f0/200_200_2/0f0dd09e3d2a0d23c22c1209075cfca4.JPG" alt="Макияж" />
+		
+		<img class="main_portfolio_image sm-hidden" data-id="1173" src="/upload/resize_cache/iblock/961/200_200_2/961e7dedfa9a0ca8413de5b0721bb278.JPG" alt="Макияж" />
+		
+		<img class="main_portfolio_image sm-hidden tablet-hidden" data-id="1172" src="/upload/resize_cache/iblock/0ad/200_200_2/0adb108674ce283e7609c14a42d06e7d.JPG" alt="Вечерняя укладка" />
+		
+		<img class="main_portfolio_image sm-hidden tablet-hidden" data-id="1171" src="/upload/resize_cache/iblock/72b/200_200_2/72bc8726e37c095b08fc2cc4c2c0a388.JPG" alt="Вечерняя укладка" />
+		
+		<img class="main_portfolio_image sm-hidden tablet-hidden" data-id="1170" src="/upload/resize_cache/iblock/7ae/200_200_2/7aed9faf6a77667fbd2a7f26fd3eeb6e.jpg" alt="Вечерняя укладка и макияж" />
+		
+		<img class="main_portfolio_image sm-hidden tablet-hidden" data-id="1169" src="/upload/resize_cache/iblock/1cd/200_200_2/1cd78b29bea5ee97a29e884151e02cc6.jpg" alt="Вечерняя укладка и макияж" />
+		
+		<img class="main_portfolio_image sm-hidden tablet-hidden" data-id="1168" src="/upload/resize_cache/iblock/f1e/200_200_2/f1ee41d911139d607302ad36376aab86.jpg" alt="Вечерняя укладка и макияж" />
+		
+		<img class="main_portfolio_image sm-hidden tablet-hidden" data-id="1167" src="/upload/resize_cache/iblock/f97/200_200_2/f97d74cf621d6d8b05e4c01555e9fb2a.jpg" alt="Вечерняя укладка и макияж" />
+		
+		<img class="main_portfolio_image sm-hidden tablet-hidden" data-id="1166" src="/upload/resize_cache/iblock/0e0/200_200_2/0e07670515cb681af4f3f5413a60fef0.jpg" alt="Вечерняя укладка и макияж" />
+		
+		<img class="main_portfolio_image sm-hidden tablet-hidden" data-id="1165" src="/upload/resize_cache/iblock/1df/200_200_2/1df32f8675cc2c0964b5c2fba5a460a9.jpg" alt="Вечерняя укладка и макияж" />
+	<div class="clear"></div>
+</div>
+
+	</div>
+</div>
+
+		</div> <!-- work_area -->
+		
+		<footer>
+			<div class="work_area sm-hidden">
+				<div class="l_colum">
+					<p class="title_colum">Мы в сетях</p>
+					<div class="seti">
+						<a target="_blank" href="https://vk.com/club51519084"><div class="vk"></div></a>
+						<a target="_blank" href="https://www.instagram.com/jaklin_lub/"><div class="in"></div></a>
+						<a target="_blank" href="https://www.facebook.com/jaklinlub/"><div class="f"></div></a>
+					</div>
+				</div>
+				<div class="r_colum">
+					<div class="f_line">
+													<p class="name">JAKLIN</p>						<p class="sub_name tablet-hidden">Салон красоты в Люберцах</p>
+						<div class="seti tablet-visible">
+							<a target="_blank" href="https://vk.com/club51519084"><div class="vk"></div></a>
+							<a target="_blank" href="https://www.instagram.com/jaklin_lub/"><div class="in"></div></a>
+							<a target="_blank" href="https://www.facebook.com/neupokoevaa"><div class="f"></div></a>
+						</div>
+					</div>
+					<div class="s_line">
+						
+<ul class="left-menu bottom">
+
+			<li><a href="/uslugi/">Услуги</a></li>
+		
+			<li><a href="/saloni/">Салоны</a></li>
+		
+			<li><a href="/portfolio/">Портфолио</a></li>
+		
+			<li><a href="/galereya/">Галерея</a></li>
+		
+			<li><a href="/podarochnyy_sertifikat/">Подарочный сертификат</a></li>
+		
+			<li><a href="">Запись онлайн</a></li>
+		
+
+</ul>
+					</div>
+					<div class="last_line">
+						<div class="block-tel">
+							<div>Люберцы 
+								<a class="tel_header" href="tel:84957899299">
+									
+8 (495) 789-92-99								</a>
+							</div>
+							<div>Жуковский 
+								<a class="tel_header" href="tel:84955518626">
+									
+8 (495) 551-86-26								</a>
+							</div>
+						</div>
+						<div class="copyright">copyright 2016</div>
+					</div>
+				</div>
+			</div>
+			<div class="work_area sm-visible">
+				<div class="bottom_text_title">
+											<p class="name">JAKLIN</p>					<p class="sub_name">Салон красоты в Люберцах</p>
+				</div>
+				<div class="block-tel">
+					<div>Люберцы 
+						<a class="tel_header" href="tel:84957899299">
+							
+8 (495) 789-92-99						</a>
+					</div>
+					<div>Жуковский 
+						<a class="tel_header" href="tel:84955518626">
+							
+8 (495) 551-86-26						</a>
+					</div>
+				</div>
+				<div class="seti">
+					<a target="_blank" href="https://vk.com/club51519084"><div class="vk"></div></a>
+					<a target="_blank" href="https://www.instagram.com/jaklin_lub/"><div class="in"></div></a>
+					<a target="_blank" href="https://www.facebook.com/neupokoevaa"><div class="f"></div></a>
+				</div>
+			</div>
+			
+		</footer>
+		
+				<div class="modal close_modal"></div>
+		<div class="modal_portfolio close_modal"></div>
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter10180294 = new Ya.Metrika({ id:10180294, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/10180294" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+	</body>
+</html>

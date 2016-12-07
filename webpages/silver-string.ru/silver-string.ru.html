@@ -1,0 +1,388 @@
+<html>
+<head>
+	<title>Женская одежда больших размеров от производителя</title>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" /> 
+	<link rel="stylesheet" type="text/css" href="/design/style.css?dd" media="all" />
+	<link rel="stylesheet" type="text/css" href="/design/index.css" media="all" />	<link rel="icon" href="/favicon.ico" type="image/x-icon" /> 
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="/css/jcarousel-skins/preview/skin.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/css/fancybox.css" />
+	<link type="text/css" rel="stylesheet" href="/css/jquery.jqzoom.css" media="screen" />
+	<meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/site.js"></script>
+	<script type="text/javascript" src="/js/jcarousellite.js"></script>
+	<script type="text/javascript" src="/js/jquery.jcarousel.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.form.js"></script>
+	<script type="text/javascript" src="/js/app.js"></script>
+	<script type="text/javascript" src="/js/catalog.js"></script>
+	<script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
+    <link rel="stylesheet" media="screen" type="text/css" href="/css/datepicker.css" />
+    <script type="text/javascript" src="/js/datepicker.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="/js/jquery.jqzoom-core.js"></script>
+    <script type="text/javascript" src="/js/jquery.fancybox.js"></script>
+<style>#mainarea {background: #383838 url('/design/mainback/13.jpg') no-repeat center top;}</style>
+    	<script type="text/javascript">
+        $(document).ready(function() {
+            $(".skidka-ban").css("top", "468px");
+            $(".skidka-ban").mouseover(function() {
+				var bannerTop = "656px";
+				if ($("div.shedule").css("display") == "none")
+					bannerTop = "454px";
+                //console.log((bannerTop - 13) + "px");
+                $(this).animate({
+                    width: "289px",
+                    height: "182.5px",
+                    left: "-29px",	
+                    top: bannerTop
+                }, 'fast');
+            }).mouseout(function() {
+                var bannerTop = "670px";
+                if ($("div.shedule").css("display") == "none")
+					bannerTop = "468px";
+                $(this).animate({
+                    width: "231px",
+                    height: "146px",
+                    left: "0",
+                    top: bannerTop
+                }, 50)
+            });
+        });
+	    $(function() {
+        var scheduleExclusion = [
+                    ];
+        var holidays = [[1, 2, 3, 4, 5, 7], [23], [8], [], [1, 9], [12], [], [], [], [], [4], []];
+        var now = new Date();
+        $('div.shedule').DatePicker({
+            date: now,
+            flat: true, 
+            mode: 'single',
+            onRender: function(date) {
+                var customClassname = '';
+                if (date.getDay() == 0){
+                    customClassname = 'datepickerNotWorking';
+                }
+                if ($.inArray(date.getDate(), holidays[date.getMonth()]) > -1) {
+                    customClassname = 'datepickerNotWorking';
+                }
+                for (var i in scheduleExclusion) {
+                    if (scheduleExclusion[i].date.toDateString() == date.toDateString()) {
+                        customClassname = scheduleExclusion[i].working ? '' : 'datepickerNotWorking';
+                        break;
+                    }
+                }
+                return {
+                    className: customClassname,
+                    disabled: (date.valueOf() < now.valueOf())
+                }
+            },
+            onChange: function(formated, dates) {
+                checkDay(formated, dates);
+            }
+        }).hide();
+        var checkDay = function(formated, day) {
+            var working = day.getDay() != 0;
+            if ($.inArray(day.getDate(), holidays[day.getMonth()]) > -1) {
+                working = false;
+            }
+            for (var i in scheduleExclusion) {
+                if (scheduleExclusion[i].date.toDateString() == day.toDateString()) {
+                    working = scheduleExclusion[i].working;
+                    break;
+                }
+            }
+            if (!working) {
+                $('div.work-time').text('Выходной');
+            } else {
+                $('div.work-time').text('с 9:00 до 18:00');
+            }
+            $('#scheduleUpdate input.date').val(
+                day.getFullYear() + '-' + 
+                (day.getMonth() + 1) + '-' + 
+                day.getDate()
+            );
+        };
+        $('div.shedule').append(
+            '<div class="work-time"></div>'
+        );
+        checkDay('26.10.2016', now);
+        $('a.calendar-toggle').click(function(e) {
+            $('div.shedule').slideToggle('slow');
+            if ($(".skidka-ban").css("top") == "468px") $(".skidka-ban").animate({ top: "670px" }, 'slow');
+            else $(".skidka-ban").animate({ top: "468px" }, 'slow');
+            
+            e.preventDefault();
+        });
+    });
+	function add2bookmarks() {
+	 var url="http://silver-string.ru";
+	 var title="Серебряная Нить";
+	 if((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) {
+	  window.external.AddFavorite(url,title);
+	 }
+	 else {
+	  var msg = "Закладка будет добавлена при нажатии (CTRL+D)";
+	  alert(msg);
+	 }
+	}
+    function cartUpdate(count, sum) {
+        $('#cart_count').text(count);
+        $('#cart_sum').text(sum);
+    }
+
+	function clearField(fielditem, text) {
+	 if(!fielditem.value)
+	  fielditem.value = text;
+	}
+	function emptyField(fielditem, text) {
+	 if(fielditem.value == text)
+	  fielditem.value = "";
+	}
+	function checkFeedbackForm() {
+	 if(!document.feedbackform.name.value || (document.feedbackform.name.value == "Представьтесь")) {
+	  alert("Необходимо представиться");
+	  document.feedbackform.name.focus();
+	  return false;
+	 }
+	 if(!document.feedbackform.email.value || (document.feedbackform.email.value == "Ваш email")) {
+	  alert("Необходимо указать еmail");
+	  document.feedbackform.email.focus();
+	  return false;
+	 }
+	 if(!document.feedbackform.phone.value || (document.feedbackform.phone.value == "Ваш телефон")) {
+	  alert("Необходимо указать контактный телефон");
+	  document.feedbackform.phone.focus();
+	  return false;
+	 }
+	 if(!document.feedbackform.city.value || (document.feedbackform.city.value == "Ваш город")) {
+	  alert("Необходимо указать город");
+	  document.feedbackform.city.focus();
+	  return false;
+	 }
+	 if(!document.feedbackform.time.value || (document.feedbackform.time.value == "Удобное время звонка")) {
+	  alert("Необходимо указать удобное время звонка");
+	  document.feedbackform.time.focus();
+	  return false;
+	 }
+	 return true;
+	}
+        
+	</script>
+	<style>
+	#basket_prew {position:fixed;top:200px;left:40%;width:200px;height:150px;display:none;}
+	</style>
+     <script type="text/javascript"
+	src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js">
+	</script>
+</head>
+<body>
+	<div id="topline">
+		<div class="container">
+			<div id="auth">
+		<a href="#" onclick="$('.pw_login').show(); return false;"><strong>Вход</strong> (опт)</a> &nbsp; | &nbsp; <a href="/dealers/registration/"><strong>Регистрация</strong> (опт)</a>
+			</div>
+			<div class="text">
+				Производство и оптовые продажи женской одежды больших размеров (52-72)
+			</div>
+		</div>
+	</div>
+	<div id="header" class="container">
+		<a href="/" class="logolink"><img src="/design/logo.png" width="264" height="95" alt="Серебряная нить" class="logo" /></a>
+		<div class="contacts">
+			<big>8 (495) 601-27-27</big><br />
+			<a id="callme" href="#">Обратный звонок</a>
+		</div>
+		<form action="/search/" method="get">
+			<input type="text" name="query" size="40" class="search" />
+			<input type="submit" value="" class="submit" />
+		</form>
+	</div>
+	<div id="mainarea">
+		<div class="container">
+			<div id="topmenu">
+				<ul>
+					<li><a href="/catalog/">Каталог</a></li>
+					<li><a href="/dealers/">Оптовикам</a></li>
+					<li><a href="/shops/">Где купить</a></li>
+					<script>document.write('<li><a href="http://ss-shop.ru/">Интернет-магазин</a></li>');</script>
+					<li><a href="/contacts/">Контакты</a></li>
+					<!--<li><a href="/about/job/" style="color: red">Вакансии</a></li>-->
+					<div style="clear: left;"></div>
+				</ul>
+			</div>
+		</div>
+		<hr class="top" />
+		<div class="container">
+
+			<div>
+				<div>
+
+			<div id="content">
+			
+			
+											
+														<div id="catalogmenu">
+	<ul>
+		<li><a href="/catalog/autumn2016/">Осень-Зима 2016</a></li>
+		<li><a href="/catalog/group-73/">Блузки, топы</a></li>
+		<li><a href="/catalog/group-67/">Брюки, юбки</a></li>
+		<li><a href="/catalog/group-82/">Платья, сарафаны</a></li>
+		<li><a href="/catalog/group-80/">Верхняя одежда</a></li>
+		<li><a href="/catalog/group-83/">Жакеты, жилеты</a></li>
+		<li><a href="/catalog/group-68/">Костюмы</a></li>
+		<li><a href="/catalog/group-84/">Трикотаж (Португалия)</a></li>
+		<li><a href="/catalog/sale/">Распродажа 50%-80%</a></li>
+	</ul>
+</div>
+				</div>
+			</div>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="container">
+			<div class="left">
+			<a href="/" class="logolink"><img src="/design/logo.png" width="211" height="76" alt="Серебряная нить" class="logo" /></a>
+				<script>
+					document.write('<p>');
+					document.write('Розничный интернет-магазин:<br />');
+					document.write('<big><a href="http://ss-shop.ru/" targer="_blank">ss-shop.ru</a></big>');
+					document.write('</p>');
+				</script>
+			</div>
+			<div id="bottommenu">
+				<div class="menucol">
+					О нас
+					<ul>
+						<li><a href="/about/">Наше производство</a></li>
+						<li><a href="/about/comments/">Отзывы клиентов</a></li>
+						<li><a href="/about/meetings/">Выставки, мероприятия</a></li>
+						<li><a href="/about/diploms/">Дипломы, награды</a></li>
+						<li><a href="/about/partners/">Партнеры</a></li>
+						<li><a href="/about/video/">Видеотека</a></li>
+					</ul>
+				</div>
+				<div class="menucol">
+					Помощь
+					<ul>
+						<li><a href="/delivery/">Доставка (опт)</a></li>
+						<li><a href="/payment/">Оплата (опт)</a></li>
+					</ul>
+				</div>
+				<div class="menucol">
+					Оптовикам
+					<ul>
+						<li><a href="/dealers/registration/">Регистрация (опт)</a></li>
+						<li><a href="/dealers/signin/">Вход (опт)</a></li>
+						<li><a href="/franchizing/">Франчайзинг</a></li>
+					</ul>
+				</div>
+				<div class="menucol">
+					Контакты
+					<ul>
+						<li><a href="/contacts/">Контакты</a></li>
+						<li><a href="/map/">Схема проезда</a></li>
+					</ul>
+				</div>
+			</div>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+	<div id="bottomline">
+		<div class="container">
+			<div id="social">
+<!-- Социальные сети -->
+<script type="text/javascript">(function(w,doc) {
+if (!w.__utlWdgt ) {
+    w.__utlWdgt = true;
+    var d = doc, s = d.createElement('script'), g = 'getElementsByTagName';
+    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+    s.src = ('https:' == w.location.protocol ? 'https' : 'http')  + '://w.uptolike.com/widgets/v1/uptolike.js';
+    var h=d[g]('body')[0];
+    h.appendChild(s);
+}})(window,document);
+</script>
+<div data-share-size="30" data-like-text-enable="false" data-background-alpha="0.0" data-pid="1335327" data-mode="share" data-background-color="#7a3b3b" data-hover-effect="rotate-cw" data-share-shape="round" data-share-counter-size="12" data-icon-color="#ffffff" data-text-color="#000000" data-buttons-color="#888888" data-counter-background-color="#901f1f" data-share-counter-type="disable" data-orientation="horizontal" data-following-enable="false" data-sn-ids="fb.vk.tw.ok." data-selection-enable="false" data-exclude-show-more="true" data-share-style="0" data-counter-background-alpha="1.0" data-top-button="false" class="uptolike-buttons" ></div>
+<!-- / Социальные сети -->
+			</div>
+			<div class="right">
+				<div class="mail">
+					<a href="mailto:info@silver-string.ru">info@silver-string.ru</a>
+				</div>
+				<div class="counter">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t45.4;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+				</div>
+			</div>
+			<div class="text">
+				© 1997 - 2016, ООО «Серебряная нить Лтд.»<br />
+				127572, Москва, ул. Новгородская, д. 38, Помещение 9. Проезд: м. "Алтуфьево"<br />
+				+7 (495) 926-17-20, 601-25-00, 601-27-00
+			</div>
+		</div>
+	</div>
+<!-- Форма обратного звонка -->
+            <div class="pw_callme">
+            	<div style="text-align: right;">
+                	<a class="close" href="javascript:void(0);"><ins></ins>Закрыть</a>
+                </div>
+                <div class="text reset1">Хочу купить вашу продукцию оптом. <br />Позвоните мне!</div>
+                <form action="/feedback/" method="post">
+               <div class="tf_wrap">
+                    <input id="2username" class="tf" name="name" type="text" />
+                    <label>Пожалуйста представьтесь</label>
+                </div>
+                <div class="tf_wrap">
+                    <input id="2usermail" class="tf" name="email" type="text" />
+                    <label>Ваша электронная почта</label>
+                </div>
+                <div class="tf_wrap">
+                    <input id="2userphone" class="tf" name="phone" type="text" />
+                    <label>Ваш телефон</label>
+                </div>
+                <div class="tf_wrap">
+                    <input id="2usercity" class="tf" name="city" type="text" />
+                    <label>Ваш город</label>
+                </div>
+                <div class="tf_wrap">
+                    <input id="2usertime" class="tf" name="time" type="text" />
+                    <label>Удобное время для звонка</label>
+                </div>
+                <div style="text-align:center;padding: 3px 0px;"><img src="/check_code.php"></div>
+                <div class="tf_wrap">
+                    <input id="2usertime" class="tf" name="check_code" type="text" />
+                    <label>Код с картинки</label>
+                </div>
+                <input type="hidden" name="is_js" value="0" id="is_js">
+                <div class="btn_p">
+                    <input type="submit" style="float:left;" class="btn2" name="" onclick="$('#is_js').val(1);return true;" value="Отправить" />
+                    <input type="button" style="float:right;" class="btn2" name="" value="Очистить" onclick="$('.pw_callme .tf_wrap input').val('');$('.pw_callme label').show();" />
+                </div>
+                </form>
+            </div>
+<!-- / Форма обратного звонка -->
+<!-- Форма авторизации -->
+<div class="pw_login">
+	<a class="close" href="javascript: $('.pw_login').hide();">Закрыть</a>
+	<a class="register" href="/dealers/registration/" style="position:absolute;"><ins></ins>Регистрация</a>
+	<form action="/dealers/" method="post">
+		<div class="tf_wrap">
+			<input id="userlogin" class="tf" name="login" type="text" />
+			<label>Введите Ваш e-mail</label>
+		</div>
+		<div class="btn_p">
+			<input class="btn2" type="submit" name="" value="Войти" />
+		</div>
+	</form>
+</div>
+<!-- / Форма авторизации -->
+</body>
+</html>

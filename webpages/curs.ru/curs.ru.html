@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Курс</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<link rel="stylesheet" href="/bitrix/templates/curs/add_css/reset.css?14251393721571" />
+		<link href="/bitrix/templates/curs/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<style>
+		.preload {
+			display: none;
+		}
+
+		#gototop {
+			width: 100px;
+			height: 18px;
+			position: fixed;
+			right: 15px;
+			bottom: 10px;
+			z-index: 1000000;
+		}
+
+		#top {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		#gototop_link {
+			text-decoration: none;
+			border: 0 none;
+			outline-width: 0;
+		}
+
+		#gototop_button {
+			cursor: pointer;
+			background: url(/bitrix/templates/curs/images/top.png) /*tpa=http://1.curs.z8.ru/images/top.png*/ no-repeat scroll 0px 0px;
+			background-color: transparent;
+			color: #ffffff;
+			font-size: 11px;
+			height: 18px;
+			padding-top: 3px;
+			padding-right: 0px;
+			padding-bottom: 10px;
+			padding-left: 0px;
+			text-align: center;
+			width: 100px;
+			display: block;
+		}
+
+		#gototop_button:hover, #gototop_button:focus, #gototop_button:active, a:hover #gototop_button {
+			color: #ffffff;
+			background-color: transparent;
+		}
+		</style>
+		<!--[if lte IE 6]>
+			<link href="--php echo $this--baseurl ---plugins-content-mavikthumbnails-highslide-highslide-ie6.css" tppabs="" rel="stylesheet" type="text/css" />
+		<![endif]-->
+		<link href="/bitrix/templates/curs/add_css/template_css.css?142529067311470" rel="stylesheet" type="text/css" />
+		<link href="/bitrix/templates/curs/add_css/suckerfish_l1.css?14251393723098"	rel="stylesheet" type="text/css" />
+		<!--[if IE 7]><link href="/bitrix/templates/curs/add_css/ie7_css_l1.css?14251393722510" type="text/css" /><![endif]-->
+		<script type="text/javascript" src="/bitrix/templates/curs/js/mootools.js?142513937274404"></script>
+		<script type="text/javascript" src="/bitrix/templates/curs/js/template_scripts.js?14251393724307"></script>
+		<script type="text/javascript">
+		if( MooTools.version >= '1.2' ) {
+			window.addEvent('domready',function() {
+			new SmoothScroll({ duration: 1250 }, window);
+			var gototop = $('gototop');
+			gototop.setStyle('opacity','0').setStyle('display','block');
+			});
+			window.addEvent('scroll',function(e) {
+				var gototop = $('gototop');
+				if(Browser.Engine.trident4) {
+					gototop.setStyles({
+						'position': 'absolute',
+						'bottom': window.getPosition().y + 10,
+						'width': 100
+					});
+				}
+				gototop.fade((window.getScroll().y > 300) ? 'in' : 'out')
+			});
+		} else {
+			window.addEvent('domready',function() {
+			$('gototop').setStyle('opacity','0');
+			new SmoothScroll();
+			var Change = new Fx.Style('gototop', 'opacity', {duration:1250});
+			var scroll = window.getScrollTop();
+			if (scroll > 300){
+				if ($('gototop').getStyle('opacity','0') == 0){Change.start(1);$('gototop').setStyle('display','');}
+			}
+			});
+			window.addEvent('scroll',function(e) {
+			var scroll = window.getScrollTop();
+			var Change = new Fx.Style('gototop', 'opacity', {duration:1250});
+			function Show(){ $('gototop').setStyle('display','');}
+			function Hide(){ setTimeout("$('gototop').setStyle('display','none')",1250);}
+			if (scroll > 300){
+				if ($('gototop').getStyle('opacity','0') == 0){Show();Change.start(1);}
+			} else {
+				if ($('gototop').getStyle('opacity','1') == 1){Change.start(0);Hide();}
+			}
+			});
+		}
+
+		</script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content="платформа Celesta Showcase Flute Челеста Шоукейс Флейта" />
+<meta name="description" content="Компания КУРС. Разработка программного обеспечения для бизнеса." />
+<link href="/bitrix/cache/css/s1/curs/kernel_main/kernel_main.css?14252756105560" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/curs/template_3a7ada402377e8483ff09fcdc5390187/template_3a7ada402377e8483ff09fcdc5390187.css?142527561019830" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','USER_ID':'','SERVER_TIME':'1477472341','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'9d0e064767b985cbb8d4af349d06638b'});</script>
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/curs/kernel_main/kernel_main.js?1425547498294653"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_db.js?142513936310954"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_frame_cache.js?142513936314187"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js?142513936397612','/bitrix/js/main/core/core_ajax.js?142513936335278','/bitrix/js/main/json/json2.min.js?14251393633467','/bitrix/js/main/core/core_ls.js?142513936310330','/bitrix/js/main/session.js?14251393633170','/bitrix/js/main/core/core_window.js?142513936396525','/bitrix/js/main/utils.js?142513936330972','/bitrix/js/main/core/core_fx.js?142513936316537']); </script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css?14251393635336','/bitrix/templates/curs/styles.css?1425139372419','/bitrix/templates/curs/template_styles.css?142513937217654']); </script>
+
+
+<script type="text/javascript">
+bxSession.Expand(1440, '9d0e064767b985cbb8d4af349d06638b', false, '09c400c5550d7370fa87f2b290d6b726');
+</script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "86578cfbd4697abd526844b7909d25cd"]); _ba.push(["host", "curs.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+	</head>
+
+	<body>
+				<a id="top"></a>
+		<div class="preload">
+			<img src="/bitrix/templates/curs/images/top.png" alt="gototop" />
+		</div>
+		<div id="gototop" style="display: none">
+			<a id="gototop_link" href="#top"
+				title="НАВЕРХ"><span id="gototop_button">НАВЕРХ</span></a>
+		</div>
+		<div id="wrapper_main">
+
+			<div id="wrapper_top">
+				<a id="logo" href="/">
+					<img src="/bitrix/templates/curs/images/logo.gif" alt="Logo" />
+				</a>
+				<object type="application/x-shockwave-flash" style="width: 600px; height: 160px;" data="/bitrix/templates/curs/images/atom.swf">
+					<param name="movie" value="/bitrix/templates/curs/images/atom.swf" />
+					<param name="quality" value="high" />
+					<param name="menu" value="false" />
+					<param name="wmode" value="transparent" />
+					<param name="autoplay" value="true" />
+					<PARAM NAME=scale VALUE=noscale>
+					<PARAM NAME=salign VALUE=LT>
+					<img src="/bitrix/templates/curs/images/blank.gif" alt="Без флеша" height="1"
+						width="1" />
+				</object>
+			</div>
+
+
+			
+<div id="wrapper_menu_std">
+	<div id="wrapper_menu2">
+		<div id="horiz-menu">
+			<ul class="menu">
+				
+					
+					
+						
+															<li class="level1 active" id="current">
+								<a href="/"><span>Главная</span></a></li>
+							
+						
+					
+					
+				
+					
+					
+													<li class="level1 topli " >
+								<a href="/platforma-kurs/"><span>Платформа курс</span></a>
+								<ul>
+						
+					
+					
+				
+					
+					
+						
+															<li class="" >
+								<a href="/platforma-kurs/kurs-showcase/"><span>КУРС: Showcase</span></a></li>
+							
+						
+					
+					
+				
+					
+					
+						
+															<li class="" >
+								<a href="/platforma-kurs/kurs-celesta/"><span>КУРС: Celesta</span></a></li>
+							
+						
+					
+					
+				
+					
+					
+						
+															<li class="" >
+								<a href="/platforma-kurs/kurs-flute/"><span>КУРС: Flute</span></a></li>
+							
+						
+					
+					
+				
+					
+					
+						
+															<li class="" >
+								<a href="/platforma-kurs/kurs-pythoncalculator-sistema-raschyeta-pokazateley-na-baze-platformy-flute/"><span>КУРС: PythonCalculator</span></a></li>
+							
+						
+					
+					
+				
+					
+					
+						
+															<li class="" >
+								<a href="/platforma-kurs/kurs-xml2spreadsheet/"><span>КУРС: XML2Spreadsheet</span></a></li>
+							
+						
+					
+					
+				
+					
+					
+						
+															<li class="" >
+								<a href="/platforma-kurs/kurs-geo/"><span>КУРС: GEO</span></a></li>
+							
+						
+					
+					
+				
+											</ul></li>					
+					
+						
+															<li class="level1 " >
+								<a href="/proekty/"><span>Проекты</span></a></li>
+							
+						
+					
+					
+				
+					
+					
+						
+															<li class="level1 " >
+								<a href="/o-kompanii/"><span>О компании</span></a></li>
+							
+						
+					
+					
+				
+					
+					
+						
+															<li class="level1 " >
+								<a href="/kontakty/"><span>Контакты</span></a></li>
+							
+						
+					
+					
+				
+							</ul>
+		</div>
+	</div>
+</div>
+
+
+			<div id="wrapper_inside">
+									<div id="wrapper_banner" class="clearfix">
+						<p><img src="/bitrix/templates/curs/images/manage.jpg" border="0" /></p>
+					</div>
+					<div id="slider" class="slider_up"></div>
+				
+				<div id="wrapper_content" class="clearfix wrapper_centered">
+					<div id="component">
+						<div id="wrapper_content_mainbody">
+							<div id="mainbody">
+
+							
+							
+
+<h4>Дорогие друзья и коллеги!</h4>
+<p>
+	Мы предлагаем Вашему вниманию платформу для разработки WEB-приложений в области автоматизации управления. <a
+		href="/platforma-kurs/">Платформа КУРС</a> позволяет в минимальные
+	сроки создавать решения, позволяющие максимально точно автоматизировать бизнес-процессы заказчиков. Также мы
+	предлагаем Вам уже разработанные с помощью платформы КУРС решения в различных областях автоматизации
+	управленческой деятельности, разработанные как специалистами компании КУРС, так и нашими партнерами.
+</p>
+<p>
+	Платформа КУРС является программным продуктом, распространяемым по правилам <em>open source, </em>т.е.<em> </em>продуктом
+	<a href="/platforma-kurs/dostup-k-iskhodnomu-kodu-produktov-kurs/">с открытым исходным кодом</a>. Это
+	позволяет нашим партнерам полностью контролировать процесс разработки решений и не испытывтаь неудобств,
+	связанных с лицензионной политикой вендоров.
+</p>
+<p>Мы вместе с нашими партнерами проводим регулярные обучающие семинары, на которых мы готовим специалистов,
+	умеющих с помощью платформы КУРС быстро создавать решения для широкого круга задач.</p>
+<p>Присоединяйтесь, и мы сделаем мир лучше!</p>
+
+
+
+
+
+</div>
+	</div>
+		</div>
+			</div>
+			<div id="wrapper_footer">
+
+				<!-- Copyright Information -->
+
+				
+<ul id="bottom_menu">
+
+			<li><a href="/" class="selected">Главная</a></li>
+	
+			<li><a href="/kontakty/">Контакты / Обратная связь</a></li>
+	
+			<li><a href="/map/">Карта сайта</a></li>
+	
+
+</ul>
+
+				<div id="informations">www.kurs-it.ru, www.curs.ru © 1998-2016</div>
+			</div>
+			</div>
+			</div>
+			<!-- IE6 alert -->
+</body>
+</html>

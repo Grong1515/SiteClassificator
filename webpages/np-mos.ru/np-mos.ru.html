@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" >
+<head>
+	<link href="/templates/npmos2/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+<!--- ADD CSS Files -->
+
+
+
+	<link href="/templates/npmos2/css/template.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/templates/npmos2/css/joomla.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/templates/npmos2/css/colors.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/templates/npmos2/css/lvdropdown.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/templates/npmos2/css/typo.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/templates/npmos2/css/modules.css" rel="stylesheet" type="text/css" media="all" />
+	
+<!--- Older Browser CSS -->
+<!--[if IE 7]>
+	<link href="/templates/npmos2/css/ie7.css" rel="stylesheet" type="text/css" media="all" />
+<![endif]-->
+<!--[if lt IE 7]>
+	<link href="/templates/npmos2/css/ie5x6x.css" rel="stylesheet" type="text/css" media="all" />
+<![endif]-->
+
+
+<!--- ADD JavaScript Files -->
+
+	<script type="text/javascript" src="/templates/npmos2/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		var jq = jQuery.noConflict();
+	</script>
+	<script type="text/javascript" src="/templates/npmos2/js/lv-dropdown.js"></script>
+	<script type="text/javascript" src="/templates/npmos2/js/jq.easy-tooltip.min.js"></script>
+	<script type="text/javascript" src="/templates/npmos2/js/jq.easy-caption.min.js"></script>
+	<script type="text/javascript" src="/templates/npmos2/js/jq.corner.packed.js"></script>
+	<script type="text/javascript" src="/templates/npmos2/js/reflection.js"></script>
+	<script type="text/javascript" src="/templates/npmos2/js/effects.js"></script>
+
+
+<!-- Layout parameters -->
+	<style type="text/css">
+
+	/* Template layout parameters */
+	
+
+	#wrapper {
+		margin-top:10px;
+	}
+	#foot_container {
+		margin-bottom:0px;
+	}
+	#topmenu ul.menu, #topmenu ul.menu li a, #topmenu ul.menu li span.separator {
+		background-image: url('/templates/npmos2/images/dropdown-smooth.png');
+	}
+	#topmenu ul.menu li.parent a, #topmenu ul.menu li.parent span.separator {
+		background-image: url('/templates/npmos2/images/menu-parent-smooth.png');
+	}
+	#topmenu ul.menu li.parent a:hover, #topmenu ul.menu li.parent span.separator:hover, 
+	#topmenu ul.menu li#current.parent a, #topmenu ul.menu li#current.parent span.separator {
+		background-image: url('/templates/npmos2/images/menu-parent-hover-smooth.png');
+	}
+				.contentheading {
+			background-image: none !important;
+		    padding-left: 0px !important;
+		    line-height: normal !important;
+		}
+		
+</style>
+<!-- Define fonts -->
+	<style type="text/css">
+
+	/* Template fonts */
+	
+	body {
+		font-size:14px;
+
+					font-family:Arial, Helvetica, Sans-Serif;
+						line-height:1.3em;
+	}
+
+</style>
+<!-- ADD own template colors -->
+	<style type="text/css">
+
+	/* Template colors */
+
+	body {
+		background-color: #F3F7CD;
+		color: #555555;
+	}
+	span#copy a {
+		color: #555555;
+	}
+	a, a:link, a:visited, a:active, a:focus {
+		color: #A52A2A;
+	}
+
+	#wrapper, #foot_container {
+		background-color: #EFEFEF;
+		border: 1px solid #FFFFFF;
+	}
+
+	
+	#header {
+		background-color: #A52A2A;
+		border-top:1px solid #000000;
+		border-left:1px solid #000000;	
+		border-right:1px solid #000000;	
+	}
+	.heckl, .heckr {  
+		border-top: 10px solid #222222;
+	}
+
+	#footer {
+		background-color: #A52A2A;
+		border:1px solid #444444;
+		border-bottom:2px solid #444444;
+	}
+	.feckl, .feckr {  
+		border-bottom: 10px solid #222222;
+	}
+	#footer a#gotop {
+		color: #FFFFFF;
+	}
+	#footermodule1234, #footermodule1234 a, #footermodule1234 ul.menu, #footermodule5, #footermodule5 a {
+		color: #5B6C71;
+	}
+	#subfoot {
+		background-color: #313131;
+		border-top:1px solid #FFFFFF;
+		border-bottom:1px solid #222222;
+	}
+	.copytext {
+		color: #5B6C71;
+	}
+
+	#maincontent {
+		background-color: #F9F9F9;
+		border: 3px double #E9E9E9;
+	}
+	
+	.item-page, .item, .leading-0, .leading-1, .leading-2, .leading-3, .leading-4, .leading-5 {
+		background-color:#FFFFFF;
+		border: 1px solid #E9E9E9;
+	}
+
+	.contentheading, .contentheading a {
+		color: #484848 !important;
+	}
+	div.item-separator {
+		border-bottom:3px double #EEEEEE !important;
+	}
+
+	#wrapper #leftcol h3.moduleh3, #wrapper #rightcol h3.moduleh3	 {
+		background-color: #A52A2A;
+		border-top:	1px solid #555555;
+		color: #DDDDDD;
+	}
+	#wrapper #leftcol h3.moduleh3	 {
+		border-left: 1px solid #999999;
+		border-right: 1px solid #555555;
+	}
+	#wrapper #rightcol h3.moduleh3	 {
+		border-right: 1px solid #999999;
+		border-left: 1px solid #555555;
+	}
+	.h3eckl, .h3eckr {  
+		border-top: 10px solid #222222;
+	}
+
+	#leftcol .module div.lvround-inner, #leftcol .module_menu div.lvround-inner, #leftcol .module_text div.lvround-inner, 
+	#rightcol .module div.lvround-inner, #rightcol .module_menu div.lvround-inner, #rightcol .module_text div.lvround-inner {
+		background-color: #F9F9F9;
+		border: 1px solid #DDDDDD;
+		color: #505050;
+	}
+	#subhead {
+		background-color: #F9F9F9;
+		border: 1px solid #FFFFFF;
+	}
+	.breadcrumbs, .breadcrumbs span {
+		color: #555555;
+	}
+	#leftcol .module div div, #leftcol .module_menu div div, #leftcol .module_text div div, 
+	#rightcol .module div div, #rightcol .module_menu div div, #rightcol .module_text div div {
+		border: 1px solid #FFFFFF;
+	}
+
+	/**** Global Modules ****/
+
+	div.module {
+		color:#505050;
+		background-color:#FFFFFF;
+		border:1px solid #DDDDDD;
+	}
+	div.module h3.moduleh3 {
+		background-color:#EFEFEF;
+		border:1px solid #DDDDDD;
+	}
+
+
+	.input, .inputbox {
+		color: #555555;
+		background-color: #EFEFEF;
+		border-top: 1px solid #CCCCCC;
+		border-left: 1px solid #CCCCCC;
+		border-right: 1px solid #FFFFFF;
+		border-bottom: 1px solid #FFFFFF;
+	}
+	.input:hover, .inputbox:hover {
+		color: #555555;
+		background-color: #F9F9F9;
+	}
+
+	input.button, button.button, button.validate, .pagenav, ul.pagenav li a {
+		color: #555;
+		background-color: #efefef;
+		color: #555555;
+		background-color: #EFEFEF;
+		border-top: 1px solid #CCCCCC;
+		border-left: 1px solid #CCCCCC;
+		border-right: 1px solid #FFFFFF;
+		border-bottom: 1px solid #FFFFFF;
+	}
+	input.button:hover, button.button:hover, button.validate:hover, .pagenav, ul.pagenav li a:hover {
+		color: #000000;
+		background-color: #FFFFFF;
+	}
+
+	/**** Mainmenu with suffix: _menu ****/
+	
+	.module_menu ul.menu li a, .module_menu ul.menu li span.separator {
+		color: #333333;
+		border-bottom:1px dotted #CCCCCC;
+	}
+	.module_menu ul.menu li a:hover, .module_menu ul.menu li a:active, .module_menu ul.menu li a:focus {
+		color: #000000!important;
+	}
+	.module_menu ul.menu li.current a {
+		color: #000000;
+	}
+	.module_menu ul.menu li.current ul li a {
+		color: #000000;
+	}
+
+	/**** Default Tooltips ****/
+
+	.easy-tooltip-default {
+		border: 1px solid #A6A7AB; 
+		background-color: #F2F3F5; 
+		color: #800000;
+	}
+
+
+</style>
+<!-- ADD own dropdown-menu colors -->
+	<style type="text/css">
+
+	/* Dropdown menu colors */
+
+	#topmenu ul.menu {
+		background-color:#F0EDC9 !important;
+		border-top:3px double #FFFFFF !important;
+		border-bottom:3px double #FFFFFF !important;
+	}
+	#topmenu ul.menu li {
+		border-right:1px solid #A52A2A !important;
+	}
+	#topmenu ul.menu li a, #topmenu ul.menu li span.separator {
+		border-top:1px solid #FFFFFF !important;
+		border-right:1px solid #FCFCFC !important;
+		border-left:1px solid #FCFCFC !important;
+		border-bottom:1px solid #FAFAFA !important;
+		color:#CCCCCC;
+		background-color:#A52A2A;
+	}
+	#topmenu ul.menu a:hover {
+		color:#FFFFFF;
+	}
+	
+	/** LEVEL 2 **/
+	#topmenu ul.menu ul {
+		border:2px solid #000000 !important;
+		background-color:#222222;
+	}
+	#topmenu ul.menu li ul li a, #topmenu ul.menu li ul li span.separator {
+		border-top:1px solid #000000 !important;
+		border-right:1px solid #333333 !important;
+		border-left:1px solid #333333 !important;
+		border-bottom:1px solid #333333 !important;
+		color:#999999;
+	}
+	#topmenu ul.menu li ul li a:hover {
+		color:#FFFFFF;
+	}
+	#topmenu ul.menu li li {
+		background-color:#171717;
+	}
+	#topmenu ul.menu li li:hover {
+		background-color:#212121;
+	}
+
+</style>
+
+
+
+
+<!-- math the width of the 3 columns -->
+<style type="text/css">
+	#leftcol {width: 20%;}
+	#rightcol {width: 20%;}
+	#content_outmiddle {width: 58%;}
+	#content_outright {width: 79%;}
+	#content_outleft {width: 79%;}
+</style>
+
+	  <base href="http://www.np-mos.ru/" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Муниципальный, округ, Ново-Переделкино, Москва" />
+  <meta name="rights" content="МО Ново-Переделкино" />
+  <meta name="description" content="Муниципальный округ Ново-Переделкино" />
+  <title>Совет депутатов муниципального округа Ново-Переделкино, адрес ул. Лукинская, дом 5, тел. 8(495)733-50-20 - Муниципальный округ Ново-Переделкино</title>
+  <link href="/?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+  <link href="/?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+  <link href="/templates/npmos2/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="/templates/npmos2/css/common.css" type="text/css" />
+  <link rel="stylesheet" href="/plugins/system/jcemediabox/css/jcemediabox.css?ff4df6712a744cff51e19ec8b1c23609" type="text/css" />
+  <link rel="stylesheet" href="/plugins/system/jcemediabox/themes/standard/css/style.css?941d8d97f4ab8adc51b69d7a4bf63d20" type="text/css" />
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/caption.js" type="text/javascript"></script>
+  <script src="/plugins/system/jcemediabox/js/jcemediabox.js?6e9750c48743c85f15efdaf3aee9f88a" type="text/javascript"></script>
+  <script type="text/javascript">
+window.addEvent('load', function() {
+				new JCaption('img.caption');
+			});JCEMediaBox.init({popup:{width:"",height:"",legacy:0,lightbox:0,shadowbox:0,resize:1,icons:1,overlay:1,overlayopacity:0.8,overlaycolor:"#000000",fadespeed:500,scalespeed:500,hideobjects:0,scrolling:"fixed",close:2,labels:{'close':'Закрыть','next':'Далее','previous':'Назад','cancel':'Отмена','numbers':'{$current} из {$total}'},cookie_expiry:"",google_viewer:0,pdfjs:0},tooltip:{className:"tooltip",opacity:0.8,speed:150,position:"br",offsets:{x: 16, y: 16}},base:"/",imgpath:"plugins/system/jcemediabox/img",theme:"standard",themecustom:"",themepath:"plugins/system/jcemediabox/themes"});
+  </script>
+ 
+</head>
+<body>
+			<div id="wrapper" style="max-width:1180px;">
+							
+		
+			<div id="header_container">
+				
+				<div id="header">
+								
+								
+					<div id="logo">
+										
+							<a class="imglogo" href="/"><img alt="Logo" src="/templates/npmos2/images/logo/logo-transparent.png"/></a>
+																													</div>	
+								
+					<span class="heckl">&nbsp;</span>
+					<span class="heckr">&nbsp;</span>
+				</div>
+						
+				
+		
+								<div id="topmenu_container">
+					<div id="topmenu">
+			             
+<ul class="menu">
+<li class="item-28 current active"><a href="/" >ГЛАВНАЯ СТРАНИЦА</a></li><li class="item-29"><a href="/newspaper" >ГАЗЕТЫ МЕСТНОГО САМОУПРАВЛЕНИЯ</a></li><li class="item-150"><a href="/gazety-upravy" >ГАЗЕТЫ УПРАВЫ РАЙОНА И АППАРАТА СОВЕТА ДЕПУТАТОВ</a></li><li class="item-18"><a href="/contacts" >КОНТАКТЫ</a></li></ul>
+
+					</div>
+					<div class="clr"></div>
+				</div>
+								</div>
+		<!--
+<script type="text/javascript" src="//yandex.st/share/share.js"
+charset="utf-8"></script>
+<div class="yashare-auto-init" data-yashareL10n="ru"
+data-yashareType="button" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,lj,moikrug,gplus"
+></div>
+--->
+		                                                                                                                                                                  
+		<div id="container">
+							
+		
+							<div id="leftcol">
+		             	<div class="module-outer_menu">
+					<h3 class="moduleh3"><strong>МУНИЦИПАЛЬНЫЙ ОКРУГ НОВО-ПЕРЕДЕЛКИНО</strong>
+				<span class="h3eckl">&nbsp;</span>
+			</h3>
+				<div class="module_menu">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						
+<ul class="menu">
+<li class="item-174"><a href="/glava-mo" >ГЛАВА МО</a></li><li class="item-55"><a href="/deputaty" >СОВЕТ ДЕПУТАТОВ</a></li><li class="item-134"><a href="/map" >КАРТА МУНИЦИПАЛЬНОГО ОКРУГА</a></li><li class="item-95 deeper parent"><a href="/municzipalnoe-obrazovanie" >МУНИЦИПАЛЬНЫЙ ОКРУГ</a><ul><li class="item-2"><a href="/municzipalnoe-obrazovanie/istoricheskaya-spravka-o-rajone" >Историческая справка</a></li><li class="item-191"><a href="/municzipalnoe-obrazovanie/pochetnye-zhiteli" >Почетные жители</a></li></ul></li><li class="item-88 deeper parent"><a href="/videoarxiv" >ОТЧЁТ ГЛАВЫ МУНИЦИПАЛЬНОГО ОКРУГА О ВЫПОЛНЕНИИ ПОРУЧЕНИЙ ИЗБИРАТЕЛЕЙ</a><ul><li class="item-93"><a href="/videoarxiv/videoobrashheniya-glavy-municzipalnogo-okruga" >Видеообращения главы муниципального округа</a></li></ul></li><li class="item-27 deeper parent"><a href="/municzipalnoe-sobranie" >ГРАФИК ПРИЕМА СОВЕТА ДЕПУТАТОВ И ДРУГИЕ МАТЕРИАЛЫ</a><ul><li class="item-37"><a href="/municzipalnoe-sobranie/resheniya-sobraniya" >Решения совета депутатов и другие материалы</a></li><li class="item-192"><a href="/municzipalnoe-sobranie/zasedaniya-komissij-soveta-deputatov-munitsipalnogo-okruga" >Заседания комиссий Совета депутатов муниципального округа</a></li><li class="item-94"><a href="/municzipalnoe-sobranie/otchety-glavy-upravy-i-glav-organizaczij" >Отчеты главы управы и руководителей учреждений</a></li></ul></li><li class="item-90 deeper parent"><a href="/videotranslyaczii-zasedanij-soveta-deputatov" >ВИДЕОТРАНСЛЯЦИИ ЗАСЕДАНИЙ СОВЕТА ДЕПУТАТОВ</a><ul><li class="item-189"><a href="/videotranslyaczii-zasedanij-soveta-deputatov/arkhiv-zasedanij-soveta-deputatov" >Архив заседаний Совета депутатов</a></li></ul></li><li class="item-50 deeper parent"><a href="/municzipalitet" >АППАРАТ СОВЕТА ДЕПУТАТОВ</a><ul><li class="item-49"><a href="/municzipalitet/apparat-municzipaliteta" >Аппарат</a></li><li class="item-91"><a href="/municzipalitet/municzipalnaya-sluzhba" >Муниципальная служба</a></li><li class="item-78"><a href="/municzipalitet/municzipalnye-uslugi" >Муниципальные услуги</a></li></ul></li><li class="item-84"><a href="/normativno-pravovye-akty" >НОРМАТИВНО-ПРАВОВЫЕ АКТЫ</a></li></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer_menu">
+					<h3 class="moduleh3"><strong>МЕРОПРИЯТИЯ В НОВО-ПЕРЕДЕЛКИНО</strong>
+				<span class="h3eckl">&nbsp;</span>
+			</h3>
+				<div class="module_menu">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						
+<ul class="menu">
+<li class="item-11"><a href="/tekushhie-plany-meropriyatij-municzipaliteta" >Планы мероприятий</a></li><li class="item-190"><a href="/patrioticheskoe-vospitanie" >Патриотическое воспитание</a></li><li class="item-12"><a href="/kruzhki-i-sekczii-dlya-detej" >Кружки и секции для детей</a></li></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer_menu">
+					<h3 class="moduleh3"><strong>ОБЩАЯ ИНФОРМАЦИЯ</strong>
+				<span class="h3eckl">&nbsp;</span>
+			</h3>
+				<div class="module_menu">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						
+<ul class="menu">
+<li class="item-73 deeper parent"><a href="/antikorrupczionnaya-ekspertiza-municzipalnyx-normativno-pravovyx-aktov-mnpa" >АНТИКОРРУПЦИОННАЯ ЭКСПЕРТИЗА МУНИЦИПАЛЬНЫХ НОРМАТИВНО-ПРАВОВЫХ АКТОВ (МНПА)</a><ul><li class="item-77"><a href="/antikorrupczionnaya-ekspertiza-municzipalnyx-normativno-pravovyx-aktov-mnpa/arxiv" >Архив</a></li><li class="item-75"><a href="/antikorrupczionnaya-ekspertiza-municzipalnyx-normativno-pravovyx-aktov-mnpa/proekty-mnpa-municzipalnogo-sobraniya" >Проекты МНПА Совета депутатов</a></li></ul></li><li class="item-40"><a href="/prokuror-razyasnyaet" >ПРОКУРОР РАЗЪЯСНЯЕТ</a></li><li class="item-38"><a href="/stranicza-mchs" >СТРАНИЦА МЧС</a></li><li class="item-43 deeper parent"><a href="/patrioticheskaya-stranicza" >&quot;СЛУЖУ РОССИИ!&quot;</a><ul><li class="item-193"><a href="/patrioticheskaya-stranicza/otdel-voennogo-komissariata-goroda-moskvy-po-solntsevskomu-rajonu-informiruet" >Отдел военного комиссариата города Москвы по Солнцевскому району информирует</a></li></ul></li><li class="item-72"><a href="/informacziya-solnczevskogo-voenkomata" >ИНФОРМАЦИЯ ОТДЕЛА ВКГМ ПО СОЛНЦЕВСКОМУ РАЙОНУ</a></li><li class="item-89"><a href="/upravlenie-soczialnoj-zashhity-rajona-novo-peredelkino-informiruet" >УПРАВЛЕНИЕ СОЦИАЛЬНОЙ ЗАЩИТЫ РАЙОНА НОВО-ПЕРЕДЕЛКИНО ИНФОРМИРУЕТ</a></li><li class="item-81"><a href="/qwestion" >ЗАДАТЬ ВОПРОС</a></li><li class="item-83"><a href="/answer" >ОТВЕТЫ НА ПРЕДЫДУЩИЕ ВОПРОСЫ</a></li><li class="item-149"><a href="/ob-yavleniya" >ОБЪЯВЛЕНИЯ</a></li></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer">
+					<h3 class="moduleh3"><strong>МУНИЦИПАЛЬНЫЕ СМИ</strong>
+				<span class="h3eckl">&nbsp;</span>
+			</h3>
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						
+
+<div class="custom"  >
+	<hr />
+<p><a href="http://gazeta.np-mos.ru/" target="_blank"><strong>Электронная газета местного самоуправления муниципального округа Ново-Переделкино</strong></a></p>
+<p><strong><a href="/newspaper">Выпуски газет Местного самоуправления</a></strong></p>
+<p><a href="/gazety-upravy.html"><strong>Выпуски газет Управы и аппарата Совета депутатов</strong></a></p>
+<p><strong>ПОСЛЕДНИЕ ВЫПУСКИ ГАЗЕТ</strong></p>
+<p>ГАЗЕТА МЕСТНОГО САМОУПРАВЛЕНИЯ МУНИЦИПАЛЬНОГО ОКРУГА НОВО-ПЕРЕДЕЛКИНО</p>
+<p><span style="text-decoration: underline;"><em>выпуск № 11 (61) декабрь 2014 года</em></span></p>
+<p><a href="/images/stories/vlad/gazeta/Mun/2014-12M.pdf" title="Нажмите для просмотра всей газеты"><span style="text-decoration: underline;"><em><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/stories/vlad/gazeta/Mun/2014-12Mj.jpg" alt="2014-12Mj" /></em></span></a></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<hr />
+<p>ГАЗЕТА УПРАВЫ И АППАРАТА СОВЕТА ДЕПУТАТОВ<strong><br /></strong></p>
+<p><span style="text-decoration: underline;"><em>выпуск № 19</em><em> (69) декабрь 2014 года  </em></span></p>
+<p><a href="/images/stories/vlad/gazeta/Uprava/2014-12U.pdf"><strong><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/stories/vlad/gazeta/Uprava/2014-12Uj.jpg" alt="2014-12Uj" /></strong></a></p>
+<p> </p>
+<hr /></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer">
+					<h3 class="moduleh3"><strong>БАННЕРЫ</strong>
+				<span class="h3eckl">&nbsp;</span>
+			</h3>
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						
+
+<div class="custom"  >
+	<p> </p>
+<p><a href="http://www.kremlin.ru/"><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/stories/vlad/bannery/b-prezident.jpg" alt="" /></a><br /><a href="http://www.government.ru/"><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/stories/vlad/bannery/b-rusprav.jpg" alt="" /></a><br /><a href="http://www.gosuslugi.ru/"><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/stories/vlad/bannery/b-gosuslugi.jpg" alt="" /></a><br /><a href="http://www.mos.ru/"><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/stories/vlad/bannery/b-mosprav.jpg" alt="" /></a><br /><a href="http://www.duma.mos.ru/"><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/stories/vlad/bannery/b-mosduma.jpg" alt="" /></a><br /><a href="http://amom.mos.ru/"><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/stories/vlad/bannery/logos_amom2.JPG" alt="" /></a><br /><a href="http://zao.mos.ru/"><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/stories/vlad/bannery/b-zao.jpg" alt="" /></a></p>
+<p><a href="http://www.zaosport.ru/"><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/stories/vlad/bannery/b-sport.jpg" alt="" /></a></p>
+<p><a href="http://www.molparlam.ru/"><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/stories/vlad/bannery/b-molodezh.jpg" alt="" /></a></p>
+<p><br /><a href="http://novo-peredelkino.mos.ru/"><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/stories/vlad/bannery/b-uprava.jpg" alt="" /></a><br /><br /><a href="http://www.tks-np.ru/"><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/stories/vlad/bannery/b-tks.jpg" alt="" /></a><br /><br /><a href="http://www.borec.ru"><img style="display: block; margin-left: auto; margin-right: auto;" src="/images/stories/vlad/bannery/b-borec.jpg" alt="" /></a><br /><br /></p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+		<div class="module-outer">
+				<div class="module">
+			<div>
+				<div>
+					<div class="lvround-inner">
+						
+
+<div class="custom"  >
+	<center><!--Openstat--><span id="openstat2372773"></span>
+<script type="text/javascript">
+var openstat = { counter: 2372773, image: 5083, color: "ae4141", next: openstat, track_links: "all" };
+(function(d, t, p) {
+var j = d.createElement(t); j.async = true; j.type = "text/javascript";
+j.src = ("https:" == p ? "https:" : "http:") + "//openstat.net/cnt.js";
+var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(j, s);
+})(document, "script", document.location.protocol);
+</script><!--/Openstat--></center></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="shadow-left">&nbsp;</span>
+		<span class="shadow-right">&nbsp;</span>
+	</div>
+	
+				</div>
+					
+		    <div id="content_outleft">
+					
+		
+				<div id="maincontent">
+					
+<div id="system-message-container">
+</div>						
+					<div class="blog-featuredmainpage">
+	<h1 class="componentheading">
+	Совет депутатов муниципального округа Ново-Переделкино, адрес ул. Лукинская, дом 5, тел. 8(495)733-50-20	</h1>
+
+<div class="items-leading">
+			<div class="leading-0">
+			
+	<h2 class="contentheading">
+					<a href="/48-material-na-glavnoj/material-na-glavnoj/1271-komissii-soveta-deputatov">
+			Заседание комиссии Совета депутатов</a>
+			</h2>
+
+
+
+
+
+
+
+<p><img style="margin-right: 15px; margin-bottom: 15px; float: left;" src="/images/IMG_7545.JPG" alt="IMG 7545" />25 октября 2016 года в Совете депутатов муниципального округа Ново-Переделкино (ул. Лукинская д.5) состоялось заседание комиссии по развитию муниципального округа. По инициативе жителей района Ново-Переделкино и совместно с ними обсуждались вопросы переноса автобусных остановок и новые маршруты общественного транспорта.</p>
+
+			<p class="readmore">
+				<a href="/48-material-na-glavnoj/material-na-glavnoj/1271-komissii-soveta-deputatov">
+					Подробнее...</a>
+		</p>
+
+
+<div class="item-separator"></div>
+		</div>
+			</div>
+	
+	
+			<div class="items-row cols-1 row-0">
+				<div class="item column-1">
+			
+	<h2 class="contentheading">
+					<a href="/48-material-na-glavnoj/material-na-glavnoj/1270-vstrecha-glavy-upravy-s-zhitelyami-rajona">
+			Встреча главы управы с жителями района</a>
+			</h2>
+
+
+
+
+
+
+
+<p><img style="margin-right: 15px; margin-bottom: 15px; float: left;"  src="/images/1_2.jpg" alt="1 2" />19 октября 2016 года в актовом зале ГБОУ «Школа №1238» состоялась встреча главы управы района Ново-Переделкино с населением, в которой приняли участие глава муниципального округа Ново-Переделкино в городе Москве Э.М. Макаренко и депутат Совета депутатов В.А. Доценко.</p>
+<p>Основной вопрос повестки дня: «О снижении задолженности за жилищно-коммунальные услуги»</p>
+			<p class="readmore">
+				<a href="/48-material-na-glavnoj/material-na-glavnoj/1270-vstrecha-glavy-upravy-s-zhitelyami-rajona">
+					Подробнее...</a>
+		</p>
+
+
+<div class="item-separator"></div>
+		</div>
+									<span class="row-separator"></span>
+				</div>
+
+				
+	
+			<div class="items-row cols-1 row-1">
+				<div class="item column-1">
+			
+	<h2 class="contentheading">
+					<a href="/48-material-na-glavnoj/material-na-glavnoj/1268-otchetno-vybornaya-konferentsiya-soveta-veteranov-rajona-novo-peredelkino">
+			Отчетно-выборная конференция Совета ветеранов  района Ново-Переделкино</a>
+			</h2>
+
+
+
+
+
+
+
+<p><img style="margin-right: 15px; margin-bottom: 15px; float: left;" 
+  src="/images/1_1.jpg" alt="1 1" />18 октября 2016 года в актовом зале здании гимназии №1596 состоялась Отчетно-выборная конференция Совета ветеранов района Ново-Переделкино.</p>
+<p>Доклад об отчёте, о проделанной работе за 2013 - 2016 года представила председатель Совета ветеранов района Ново-Переделкино Дина Дмитриевна Лиходедова. Особо отмечено, пристальное внимание в деятельности первичных ветеранских организаций уделяется не только работе с ветеранами ВОВ, одиноким пенсионерам, ветеранам труда, Вооруженных сил и инвалидам, но и патриотическому воспитанию подростков и молодёжи. В ходе конференции определены наиболее направления будущей совместной работы.</p>
+			<p class="readmore">
+				<a href="/48-material-na-glavnoj/material-na-glavnoj/1268-otchetno-vybornaya-konferentsiya-soveta-veteranov-rajona-novo-peredelkino">
+					Подробнее...</a>
+		</p>
+
+
+<div class="item-separator"></div>
+		</div>
+									<span class="row-separator"></span>
+				</div>
+
+				
+	
+			<div class="items-row cols-1 row-2">
+				<div class="item column-1">
+			
+	<h2 class="contentheading">
+					<a href="/48-material-na-glavnoj/material-na-glavnoj/1265-voskresnyj-den-v-oblastnom-teatre-yunogo-zritelya">
+			Воскресный день в областном Театре юного зрителя</a>
+			</h2>
+
+
+
+
+
+
+
+<p><img style="margin-right: 15px; margin-bottom: 15px; float: left;" src="/images/32_1.jpg" alt="32 1" />9 октября 2016 года более 20 семей района Ново-Переделкино провели воскресный день в областном Театре юного зрителя. Такой осенний подарок сделали жителям друзья района Всероссийский Мотоклуб "Ночные Волки" и проект "Мотомилосердие".</p>
+<p>Спектакль «Солдатик» поставлен по сказке Г.Х. Андерсена «Стойкий оловянный солдатик». Это красивая история о верности, бесстрашии, хрупкости, настоящей любви и подлинном героизме.</p>
+
+			<p class="readmore">
+				<a href="/48-material-na-glavnoj/material-na-glavnoj/1265-voskresnyj-den-v-oblastnom-teatre-yunogo-zritelya">
+					Подробнее...</a>
+		</p>
+
+
+<div class="item-separator"></div>
+		</div>
+									<span class="row-separator"></span>
+				</div>
+
+				
+	
+			<div class="items-row cols-1 row-3">
+				<div class="item column-1">
+			
+	<h2 class="contentheading">
+					<a href="/48-material-na-glavnoj/material-na-glavnoj/1263-18-oktyabrya-2016-goda-sostoyalos-ocherednoe-zasedanie-soveta-deputatov-novo-peredelkino-v-gorode-moskve">
+			18  октября 2016 года состоялось очередное заседание Совета депутатов Ново-Переделкино в городе Москве</a>
+			</h2>
+
+
+
+
+
+
+
+<p><img style="margin-right: 15px; margin-bottom: 15px; float: left;" src="/images/77_nperedel.gif" alt="77 nperedel" />В заседании Совета депутатов муниципального округа Ново-Переделкино в городе Москве, которое состоялось 18 октября 2016 года по адресу: ул. Лукинская, д. 5, приняли участие депутаты: А. К.Баринова, В.А. Доценко, С.М. Краснопольская, Л.А. Львова, Д.О. Салов, А. Н. Фадеев, Н. М. Хрыкина, Т.И. Шацкая. Вел заседание глава муниципального округа Ново-Переделкино в городе Москве Э.М. Макаренко.</p>
+<p>На заседании присутствовали: от аппарата Совета депутатов, начальник организационно- правового отдела Гончаров Е.А., юрисконсульт-консультант Г.С. Неровный; от управы – О. В. Илларионов- первый заместитель главы управы района Ново-Переделкино города Москвы, Т. В. Гусева - заместитель главы управы района Ново-Переделкино города Москвы по вопросам экономики, потребительского рынка.</p>
+			<p class="readmore">
+				<a href="/48-material-na-glavnoj/material-na-glavnoj/1263-18-oktyabrya-2016-goda-sostoyalos-ocherednoe-zasedanie-soveta-deputatov-novo-peredelkino-v-gorode-moskve">
+					Подробнее...</a>
+		</p>
+
+
+<div class="item-separator"></div>
+		</div>
+									<span class="row-separator"></span>
+				</div>
+
+				
+	
+			<div class="items-row cols-1 row-4">
+				<div class="item column-1">
+			
+	<h2 class="contentheading">
+					<a href="/48-material-na-glavnoj/material-na-glavnoj/1258-munitsipalnogo-okruga-novo-peredelkino">
+			Очередное заседание Совета депутатов муниципального округа Ново-Переделкино</a>
+			</h2>
+
+
+
+
+
+
+
+<p><img style="margin-right: 15px; margin-bottom: 15px; float: left;" src="/images/77_nperedel.gif" alt="77 nperedel" />18 октября 2016 года в 15:00 по адресу: ул. Лукинская, дом 5 состоится очередное заседание Совета депутатов муниципального округа Ново-Переделкино в городе Москве.</p>
+<p>Предварительная повестка дня и проекты решений:</p>
+<p><a href="/images/18_10_2016__102.docx">1. О рассмотрении проекта ГПЗУ на размещение объекта ИЖС по адресу: Чоботовская 5-я аллея, кадастровый номер: 77:07:0015005:2986767</a></p>
+<p><a href="/images/18_10_2016%20_103.doc">2. О согласовании проекта перечня ярмарок выходного дня на 2017 год на территории муниципального округа Ново-Переделкино в городе Москве городе Москве</a></p>
+
+			<p class="readmore">
+				<a href="/48-material-na-glavnoj/material-na-glavnoj/1258-munitsipalnogo-okruga-novo-peredelkino">
+					Подробнее...</a>
+		</p>
+
+
+<div class="item-separator"></div>
+		</div>
+									<span class="row-separator"></span>
+				</div>
+
+				
+	
+			<div class="items-row cols-1 row-5">
+				<div class="item column-1">
+			
+	<h2 class="contentheading">
+					<a href="/48-material-na-glavnoj/material-na-glavnoj/1248-shkola-etiketiya">
+			«Школа Этикетия»</a>
+			</h2>
+
+
+
+
+
+
+
+<p><img style="margin-right: 15px; margin-bottom: 15px; float: left;" src="/images/DSC_0027.JPG" alt="DSC 0027" />В ЦСПСиД «Журавушка» начались первые занятия в рамках совместного проекта Совета депутатов муниципального округа Ново-Переделкино в городе Москве и автора методики по культурному развитию детей и подростков Юлианы Шевченко «Школа Этикетия».</p>
+<p>Сейчас работа ведется в группах кратковременного пребывания.</p>
+
+			<p class="readmore">
+				<a href="/48-material-na-glavnoj/material-na-glavnoj/1248-shkola-etiketiya">
+					Подробнее...</a>
+		</p>
+
+
+<div class="item-separator"></div>
+		</div>
+									<span class="row-separator"></span>
+				</div>
+
+				
+	<div class="items-more">
+	<h3>Еще статьи...</h3>
+
+<ol>
+	<li>
+		<a href="/48-material-na-glavnoj/material-na-glavnoj/1246-ekskursiya-v-muzej-pozharnoj-okhrany">
+			Экскурсия в музей пожарной охраны</a>
+	</li>
+	<li>
+		<a href="/48-material-na-glavnoj/material-na-glavnoj/1245-kvest-grazhdanskaya-oborona-organizovannoe-sovetom-deputatov-munitsipalnogo-okruga-novo-peredelkino-v-gorode-moskve-v-ramkakh-realizatsii-plana-meropriyatij">
+			«Квест «Гражданская оборона» </a>
+	</li>
+	<li>
+		<a href="/48-material-na-glavnoj/material-na-glavnoj/1244-17-sentyabrya-rajon-novo-peredelkino-otmetil-svoj-25-letnij-yubilej">
+			17 сентября район Ново-Переделкино отметил свой 25 летний юбилей!</a>
+	</li>
+	<li>
+		<a href="/48-material-na-glavnoj/material-na-glavnoj/1236-den-uchitelya">
+			День учителя</a>
+	</li>
+</ol>
+	</div>
+
+	<div class="pagination">
+
+					<p class="counter">
+				Страница 1 из 46			</p>
+						<ul><li class="pagination-start"><span class="pagenav">В начало</span></li><li class="pagination-prev"><span class="pagenav">Назад</span></li><li><span class="pagenav">1</span></li><li><a title="2" href="/?start=7" class="pagenav">2</a></li><li><a title="3" href="/?start=14" class="pagenav">3</a></li><li><a title="4" href="/?start=21" class="pagenav">4</a></li><li><a title="5" href="/?start=28" class="pagenav">5</a></li><li><a title="6" href="/?start=35" class="pagenav">6</a></li><li><a title="7" href="/?start=42" class="pagenav">7</a></li><li><a title="8" href="/?start=49" class="pagenav">8</a></li><li><a title="9" href="/?start=56" class="pagenav">9</a></li><li><a title="10" href="/?start=63" class="pagenav">10</a></li><li class="pagination-next"><a title="Вперёд" href="/?start=7" class="pagenav">Вперёд</a></li><li class="pagination-end"><a title="В конец" href="/?start=315" class="pagenav">В конец</a></li></ul>	</div>
+
+</div>
+
+				</div>
+				<div class="clr"></div>
+				<span class="shadow-left">&nbsp;</span>
+				<span class="shadow-right">&nbsp;</span>
+					
+		
+			</div>
+				
+			<div class="clr"></div>
+		</div>
+			
+		
+		
+		<div class="clr"></div>
+	</div>
+			<div id="foot_container" style="max-width:1180px;">
+					
+		
+		
+							
+	
+			
+			<div id="subfoot">
+								
+					<div class="copytext">&copy; www.np-mos.ru</div>
+							</div>
+					
+	
+		<div class="clr"></div>
+			<div id="footer">
+				<div class="footer-inner">
+					<span class="feckl">&nbsp;</span>
+					<span class="feckr">&nbsp;</span>
+					<div id="scroll_up"> <a href="#" class="lv-tooltip" id="gotop" title="Scroll to top">&uarr;&uarr;&uarr;</a></div>
+										</div>
+				<div class="footer-bottom">
+									
+				  		<span id="date">26.10.2016</span>
+								  		<span id="copy"><a href="http://www.np-mos.ru/" title="." target="_blank">.</a></span>
+				</div>
+			</div>		
+		<div class="clr"></div>
+	</div>	
+		
+	
+	
+	<!-- Yandex.Metrika counter --><script type="text/javascript">var yaParams = {domain:"www.np-mos.ru"};</script><script type="text/javascript">
+    (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter28599916 = new Ya.Metrika({id:28599916, enableAll:true, trackHash:true, webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true, params:window.yaParams||{ }}); } catch(e) {} });
+    var n = d.getElementsByTagName("script")[0],
+    s = d.createElement("script"),
+    f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+    if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script>
+	<noscript><div><img src="//mc.yandex.ru/watch/28599916" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+	
+	
+</body>
+</html>

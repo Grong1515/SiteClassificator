@@ -1,0 +1,964 @@
+		<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Главная страница</title>
+        <meta name="keywords" content="лучшие сметные программы, как составить смету">
+        <meta name="description" content="ГК АДЕПТ - ведущий разработчик сметных программ и другого программного обеспечения для строительной области">
+        <meta name="viewport" content="width=device-width">
+		<meta name='yandex-verification' content='73e26846c56113a6' />
+
+        <link rel="stylesheet" href="/tpls/css/normalize.min.css">
+        <link rel="stylesheet" href="/tpls/css/main.css">
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link rel="icon" href="http://gk-adept.ru/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="http://gk-adept.ru/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/tpls/bxslider/jquery.bxslider.css">
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+        <link rel="stylesheet" href="/tpls/js/kladrapi/jquery.kladr.min.css">
+
+        <script src="/tpls/js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="/tpls/js/kladrapi/jquery.kladr.min.js"></script>
+        <script src="/tpls/js/raphael-min.js"></script>
+        <script src="/tpls/js/paths.js"></script>
+        <script src="/tpls/js/init.js"></script>
+    </head>
+    <body>
+        <!--[if lte IE 8]>
+            <p class=chromeframe>Ваш браузер <em>устарел!</em> <a href="http://browsehappy.com/">Поставьте другой браузер</a> или <a href="http://www.google.com/chromeframe/?redirect=true">установите Google Chrome Frame</a> для корректного отображения сайта.</p>
+        <![endif]-->
+		<header>
+			<div class="top">
+				<div class="inner">
+					<div class="logo"><a href="/"><img src="/tpls/images/logo.jpg" /></a></div>
+					<div class="phone">8 800 333 27 17</div>
+					<div class="top-links">
+						<a href="#" class="js-callback">Заказать звонок</a>
+						<a href="#" class="js-demo" rel="0">Заказать демонстрацию</a>
+						<a href="#" class="js-feedback">Обратная связь</a>
+					</div>
+					<div class="top-icons">
+						<a href="/"><img src="/tpls/images/home-icon1.png" /></a>
+						<a href="#" class="js-search"><img src="/tpls/images/poisk2.png" /></a>
+						<a href="/sitemap/"><img src="/tpls/images/map3.png" /></a>
+					</div>
+					<div class ="socials">
+						<a href="http://vk.com/gkadept" target="_blank" onclick="yaCounter13207072.reachGoal('Vk'); return true;"><img src="/tpls/images/vk.png" alt="Вконтакте" title="Вконтакте"></a>
+						<a href="http://www.facebook.com/gkAdept" target="_blank" onclick="yaCounter13207072.reachGoal('Facebook'); return true;"><img src="/tpls/images/face.png" alt="Facebook"  title="Facebook"/></a>
+						<a href="http://www.youtube.com/gkAdept" target="_blank" onclick="yaCounter13207072.reachGoal('YouTube'); return true;"><img src="/tpls/images/tube.png" alt="Youtube" title="Youtube" /></a>
+						<a href="http://ok.ru/group/53647922757870" target="_blank" onclick="yaCounter13207072.reachGoal('Ok'); return true;"><img src="/tpls/images/odnoklassniki.png" alt="Одноклассники" title="Одноклассники" /></a>
+						<a href="https://plus.google.com/+gk-adeptru/posts" target="_blank" onclick="yaCounter13207072.reachGoal('Google'); return true;"><img src="/tpls/images/google1.png" alt="Google+" title="Google+" /></a>
+						<!--<a href="https://twitter.com/gkAdept" target="_blank"><img src="/tpls/images/twitter.png" alt="" /></a>
+					<a href="http://gk-adept.livejournal.com/" target="_blank"><img src="/tpls/images/karandah.png" alt="" /></a>-->
+					</div>
+				</div>
+			</div>
+			<div class="fat">
+				<div class="fat-bg">
+					<div class="inner">
+						<div class="blog">				
+							<div class="blogi5">Профессиональные блоги</div>
+							<a href="/blog_po_sostavleniyu_smet_na_pir/">Блог по составлению смет на ПИР</a><br />
+							<a href="/blog_po_sostavleniyu_smet_na_smr/">Блог по составлению смет на СМР</a>
+						</div>
+						<div class="link">
+							<a href="/study_video/" ><span></span> обучающее видео</a>
+							<a href="/normativnye_dokumenty/" ><span></span> нормативные документы</a>
+							<a href="/voprosy-otvety/" ><span></span> вопросы-ответы</a>
+							<a href="/skachat_versii_i_bd/" ><span></span> скачать версии и б.д.</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu">
+				<ul class="clearfix">
+					<li>
+						<a href="/" >Программы <span></span></a>
+						<div class="submenu" style="width: 235px;">
+							<div class="item"><a href="/programmy/adept_proekt/">Адепт: Проект</a></div>
+							<div class="item"><a href="/programmy/adept_upravlenie_proektirovaniem/">Адепт: Управление проектированием</a></div>
+							<div class="item"><a href="/programmy/adept_inform/">Адепт: Информ</a></div>
+							<div class="item"><a href="/programmy/adept_smeta/">Адепт: Управление строительством</a></div>
+							<div class="item"><a href="/programmy/adept_kalendarnoe_planirovanie/">Адепт: Календарное планирование</a></div>
+							<div class="item"><a href="/programmy/adept_podschet_obemov/">Адепт: Подсчет объемов</a></div>
+							<div class="item"><a href="/programmy/adept_ncsnckr/">Адепт: НЦС-НЦКР</a></div>
+							<div class="item"><a href="/programmy/adept_perebazirovka/">Адепт: Перебазировка</a></div>
+							<div class="item"><a href="/programmy/adept_enir/">Адепт: ЕНиР</a></div>
+						</div>
+					</li>
+					<li><a href="/otzyvy/" >Отзывы</a></li>
+					<li>
+						<a href="/kontakty/" >Контакты <span></span></a>
+						<div class="submenu" style="width: 215px;">
+							<div class="item"><a href="/kontakty/nashi_sotrudniki/">Руководство</a></div>
+							<!-- <div class="item"><a href="/kontakty/">Представительство в регионах</a></div> -->
+							<div class="item"><a href="/kontakty/moskva/">Москва</a></div>
+							<div class="item"><a href="/kontakty/sankt-peterburg/">Санкт-Петербург</a></div>
+							<div class="item"><a href="/respublika_krym/">Симферополь</a></div>
+							<div class="item"><a href="/respublika_tatarstan/">Казань</a></div>
+							<div class="item"><a href="/svedlovskaya_oblast/">Екатеринбург</a></div>
+							<div class="item"><a href="/krasnoyarskij_kraj/">Красноярск</a></div>
+							
+							<div class="item"><a href="/kontakty/samarskyay_oblast/">Самара</a></div>
+							<div class="item"><a href="/kontakty/respublika_bashkortastan/">Уфа</a></div>
+						</div>
+					</li>
+					<li>
+						<a href="/distancionnyj_sbyt/" >Дистанционный сбыт <span></span></a>
+						<div class="submenu" style="width: 245px;">
+							<div class="item"><a href="/distancionnyj_sbyt/adept_proekt_i_adept_upravlenie_proektirovaniem/">«Адепт: Проект и «Адепт: Управление проектированием»</a></div>
+							<div class="item"><a href="/distancionnyj_sbyt/adept_upravlenie_stroitelstvom/">«Адепт: Управление строительством»</a></div>
+							<div class="item"><a href="/distancionnyj_sbyt/adept_inform/">«Адепт: Информ»</a>
+						</div>
+					</li>
+					<li>
+						<a href="/obsluzhivanie/adept_proekt_i_adept_upravlenie_proektirovaniem/" >Обслуживание <span></span></a>
+						<div class="submenu" style="width: 245px;">
+							<div class="item"><a href="/obsluzhivanie/adept_proekt_i_adept_upravlenie_proektirovaniem/">«Адепт: Проект и «Адепт: Управление проектированием»</a></div>
+							<div class="item"><a href="/obsluzhivanie/adept_upravlenie_stroitel_stvom/">«Адепт: Управление строительством»</a></div>
+						</div>
+					</li>
+					<li>
+						<a href="/ceny/" >Цены </a>
+						<!--<div class="submenu" style="width: 285px;">
+							<!--<div class="item"><a href="/ceny/adept_proekt_i_adept_upravlenie_proektirovaniem/">«Адепт:Проект и «Адепт:Управление проектированием»</a></div>
+							 <div class="item"><a href="/ceny/adept_upravlenie_stroitel_stvom/">«Адепт:Управление строительством»</a></div>
+							<div class="item"><a href="/ceny/adept_inform/">«Адепт:Информ»</a></div>
+						</div>-->
+					</li>
+					<li><a href="/novosti/" >Новости</a></li>
+					<li><a href="/uchebnyj_centr/" >Учебный центр</a></li>
+					<li>
+						<a href="/o_kompanii/" >О компании <span></span></a>
+						<div class="submenu last" style="width: 165px; left: -64px;">
+							<div class="item"><a href="/o_kompanii/">О компании</a></div>
+							<div class="item"><a href="/o_kompanii/missiya_cennosti/">Миссия, ценности</a></div>
+							<div class="item"><a href="/o_kompanii/istoriya_razvitiya/">История развития</a></div>
+							<div class="item"><a href="/o_kompanii/nashi_klienty/">Наши клиенты</a></div>
+							<div class="item"><a href="/o_kompanii/nashi_partnery/">Наши партнеры</a></div>
+							<div class="item"><a href="/o_kompanii/vakansii/">Вакансии</a></div>
+						</div>
+					</li>
+					<li><a href="/dileram/" >Дилерам</a></li>
+				</ul>
+			</div>
+		</header>
+		<style type="text/css">
+			.content .homepage .cols {
+				padding: 30px 0 0;
+			}
+
+			.content .homepage .cols .col {
+				float: left;
+				width: 270px;
+				margin: 0 0 0 55px;
+			}
+
+			.content .homepage .cols .col:first-child {
+				width: 320px;
+				margin: 0;
+			}
+
+			.content .homepage .cols .col .title {
+				display: block;
+				margin: 0;
+				padding: 0;
+				line-height: 1;
+				font-family: "PT Sans";
+				font-weight: 700;
+				font-size: 18px;
+				color: #333333;
+				text-transform: uppercase;
+				height: 26px;
+			}
+
+			.content .homepage .cols .col:first-child .title {
+				font-size: 26px;
+			}
+
+			.content .homepage .cols .col p {
+				display: block;
+				margin: 0;
+				padding: 15px 0 0;
+				line-height: 1.1;
+				font-family: "PT Sans";
+				font-weight: 400;
+				font-size: 14px;
+				color: #333333;
+				text-align: justify;
+			}
+
+			.content .homepage .cols .col p b {
+				color: #666666;
+				padding: 0 0 10px;
+				display: inline-block;
+			}
+
+			.content .homepage .line {
+				width: 100%;
+				height: 9px;
+				line-height: 1;
+				background: #efefef;
+				margin: 30px 0 20px;
+			}
+
+			.content .homepage .cols2 .col {
+				width: 331px;
+				height: 206px;
+				background: url('/tpls/images/hbg.png') no-repeat;
+				float: left;
+				position: relative;
+			}
+
+			.content .homepage .cols2 .col a:active, .content .homepage .cols2 .col a:visited, .content .homepage .cols2 .col a:link {
+				font-family: "PT Sans";
+				font-weight: 700;
+				font-size: 16px;
+				color: #0f7087;
+				text-decoration: underline;
+				outline: none;
+				line-height: 1.1;
+				display: inline-block;
+				text-transform: uppercase;
+				position: absolute;
+				top: 35px;
+				left: 35px;
+			}
+
+			.content .homepage .cols2 .col a:hover {
+				text-decoration: none;
+			}
+
+			.content .homepage .cols2 .col p {
+				display: block;
+				line-height: 1.3;
+				font-family: "PT Sans";
+				font-weight: 400;
+				font-size: 13px;
+				color: #333333;
+				width: 261px;
+				position: absolute;
+				bottom: 95px;
+				left: 35px;
+			}
+
+			.content .homepage .cols2 .col .btn {
+				position: absolute;
+				left: 0;
+				text-align: center;
+				bottom: 35px;
+				margin: 0;
+				padding: 0;
+				width: 331px;
+			}
+
+			.content .homepage .cols2 .col .btn a {
+				position: relative;
+				left: auto;
+				top: auto;
+			}
+
+			.content .homepage .hblock {
+				width: 1003px;
+				height: 419px;
+				background: url('/tpls/images/hbg2.png') no-repeat top center;
+				margin-left: -17.5px;
+			}
+
+			.content .homepage .hblock .columns {
+				width: 955px;
+				margin: 0 auto;
+				padding: 25px 0 35px;
+			}
+
+			.content .homepage .hblock .columns .column {
+				width: 285px;
+				float: left;
+				margin: 0 0 0 50px;
+			}
+
+			.content .homepage .hblock .columns .column:first-child {
+				margin: 0;
+			}
+
+			.content .homepage .hblock .columns .column a:active, .content .homepage .hblock .columns .column a:visited, .content .homepage .hblock .columns .column a:link {
+				font-family: "PT Sans";
+				font-weight: 700;
+				font-size: 16px;
+				color: #0f7087;
+				text-decoration: underline;
+				outline: none;
+				line-height: 1.1;
+				display: block;
+				height: 40px;
+				text-transform: uppercase;
+			}
+
+			.content .homepage .hblock .columns .column a:hover {
+				text-decoration: none;
+			}
+
+			.content .homepage .hblock .columns .column p {
+				display: block;
+				margin: 0;
+				padding: 0;
+				line-height: 1.3;
+				font-family: "PT Sans";
+				font-weight: 400;
+				font-size: 14px;
+				color: #333333;
+				height: 65px;
+			}
+
+			.content .homepage .hblock .columns .column .btn {
+				text-align: center;
+			}
+
+			.content .homepage .btitle {
+				display: block;
+				margin: 0;
+				padding: 30px 0 0;
+				line-height: 1;
+				font-family: "PT Sans";
+				font-weight: 700;
+				font-size: 18px;
+				color: #333333;
+				text-transform: uppercase;
+			}
+
+			.content .homepage .mtitle {
+				display: block;
+				margin: 0;
+				padding: 5px 0;
+				line-height: 1;
+				font-family: "PT Sans";
+				font-weight: 400;
+				font-size: 14px;
+				color: #333333;
+			}
+
+			.rassilkainput {
+				display: block;
+				width: 209px;
+				height: 42px;
+				background: url('/tpls/images/rassilkabg.png') no-repeat;
+				margin: 10px 0 0;
+				padding: 0 35px 0 15px;
+				border: 0;
+				font-family: "PT Sans";
+				font-weight: bold;
+				font-size: 16px;
+				color: #000000;
+				line-height: 42px;
+				outline: none;
+				float: left;
+			}
+
+			.rassilkabtn:active, .rassilkabtn:visited, .rassilkabtn:link {
+				display: block;
+				width: 16px;
+				height: 15px;
+				background: url('/tpls/images/rassilkabtn.png') no-repeat;
+				margin: 25px 0 0 -30px;
+				padding: 0;
+				border: 0;
+				overflow: hidden;
+				text-indent: -10000px;
+				text-align: left;
+				float: left;
+				cursor: default;
+			}
+
+			.homepoint {
+				display: inline-block;
+				width: 8px;
+				height: 8px;
+				background: url('/tpls/images/newsbg.png') no-repeat 0 0;
+				overflow: hidden;
+				text-align: left;
+				text-indent: -10000px;
+			}
+
+			.homepoint:nth-child(1) {
+				margin: 0 0 0 10px;
+			}
+
+			.homepoint:hover, .homepoint.active {
+				background-position: 0 -8px;
+				cursor: pointer;
+			}
+			
+			.skolkovonews{background:#29435d;}
+			.content .homepage .col .skolkovonews p{color:#ffffff; text-align: left;}
+			
+		</style>
+		<div class="content">
+			<div class="inner homepage">
+				<div class="cols clearfix">
+					<div class="col">
+						<div class="title">ГК «Адепт»</div>
+						<p>Группа компаний &laquo;Адепт&raquo; - ведущий российский разработчик и поставщик программного обеспечения для строительной отрасли - осуществляет полный цикл действий, связанных с программным обеспечением: разработка, внедрение, обучение, консультирование, сопровождение и поставка новых версий.
+Удобные и простые в использовании п...</p>
+						<div style="text-align: center; padding: 60px 0 0;"><a href="/o_kompanii/"><img src="/tpls/images/btn1.png" alt="" /></a></div>
+					</div>
+					<div class="col">
+						<div class="title">Приглашаем на вебинар</div>
+						<div style="position: absolute; margin-top: 152px; margin-left: 30px;"><a href="/uchebnyj_centr/#rasp2"><img src="/tpls/images/btn2.png" alt="" /></a></div>
+<p><b>27 октября 2016 г.
+</b><br />Вебинар: "Учет выполненных работ в программе «Адепт: Управление строительством»"&nbsp;&nbsp;<a href="/uchebnyj_centr/distancionnye_meropriyatiya/uchet_vypolnennyh_rabot_v_programme_adept_upravlenie_stroitelstvom_27_09_16/">Подробнее...</a></p>
+					</div>
+					<div class="col">
+						
+						<div class="title">Новости</div>
+						
+
+
+	
+		<div class="skolkovo-date" style="font-size:13px; text-transform: lowercase;  margin: 14px 0px 4px; color: #666666; font-weight: bold;">23 СЕНТЯБРЯ 2016 Г</div>
+	<div class=" skolkovonews"><p style="color: #ffffff; padding: 5px;"><span style="font-weight: bold; font-size: 16px; text-transform: uppercase;">Construction project 2016</span><br /> <br /><span style="text-align: left; padding-top: 5px;">Московский бизнес-форум по управлению проектами в строительстве <br /> <br /><strong>кампус Московской школы Управления <br /> Сколково + ONLINE трансляция по всему миру </strong><br /><br /> <span style="font-size: 12px;">организатор форума: ГК &laquo; Адепт &raquo;</span></span></p></div>
+    
+
+
+
+						<div style="text-align: center; margin: 0; background: #ed7334; padding: 3px;"><a href="/skolkovo_upravlenie_stroitelstvom/" style="color: #ffffff; text-decoration:none; font-size: 12px;  text-transform: uppercase; font-weight:bold;" target="_blank">перейти на страницу форума</a></div>
+						<!--<div class="title">Новости <i rel="1" class="homepoint active">&nbsp;</i>
+<i rel="2" class="homepoint">&nbsp;</i>
+<i rel="3" class="homepoint">&nbsp;</i>
+<i rel="4" class="homepoint">&nbsp;</i></div>
+						<p id="tab_1" style="width: 270px; position: absolute;"><b>24 октября 2016 г</b><br />Формирование комфортной городской среды станет приоритетом при выборе проектов жилищно...&nbsp;&nbsp;<a href="/novosti/news12151/formirovanie_gorodskoj_sredy_stanet_prioritetom_pri_finansovoj_podderzhke_stroitelstva_zhilyh_mikrorajonov/">Подробнее...</a></p>
+<p id="tab_2" style="width: 270px; position: absolute; display: none;"><b>20 октября 2016 г</b><br />Итоги деятельности Рабочей группы Минстроя России по актуализации законодательной и но...&nbsp;&nbsp;<a href="/novosti/news12151/predlozheno_sozdat_professionalnyj_standart_ekspertov_proektnoizyskatelskoj_dokumentacii/">Подробнее...</a></p>
+<p id="tab_3" style="width: 270px; position: absolute; display: none;"><b>3 октября 2016 г</b><br />Разработка комплексной стратегии развития территории обсуждалось на Международном инве...&nbsp;&nbsp;<a href="/novosti/news12151/kompleksnaya_strategiya_razvitiya_imeretinskoj_nizmennosti_budet_utverzhdena_do_konca_2017_goda/">Подробнее...</a></p>
+<p id="tab_4" style="width: 270px; position: absolute; display: none;"><b>29 сентября 2016 г</b><br />Новые рекомендуемые индексы по регионам за третий квартал 2016 г.&nbsp;&nbsp;<a href="/novosti/news12151/indeksy_iii_kvartal_2016/">Подробнее...</a></p>
+						<div style="text-align: center; padding: 160px 0 0;"><a href="/novosti/"><img src="/tpls/images/btn3.png" alt="" /></a></div>-->
+					</div>
+				</div>
+
+				<div class="line" style="position: relative;">&nbsp;</div>
+
+				<div class="cols2 clearfix">
+					<div class="col" style="margin-left: -11.5px;">
+						<a href="/programmy/adept_proekt/opisanie/">Адепт: Проект</a>
+						<p>Программа составления смет на проектно-изыскательские работы (ПИР)</p>
+						<div class="btn"><a href="#" class="js-demo" rel="161"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+					</div>
+					<div class="col">
+						<a href="/programmy/adept_upravlenie_proektirovaniem/opisanie1/">Адепт: Управление<br />проектированием</a>
+						<p>Программа управления проектами в<br />проектировании</p>
+						<div class="btn"><a href="#" class="js-demo" rel="162"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+					</div>
+					<div class="col custom_opera" style="margin-right: -11.5px;">
+						<a href="/programmy/adept_inform/opisanie2/">Адепт: Информ</a>
+						<p>Нормативно-коммуникативная веб-система для строителей и проектировщиков «Адепт-Информ»</p>
+						<div class="btn"><a href="#" class="js-demo" rel="163"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+					</div>
+				</div>
+
+				<div class="cols2 clearfix">
+					<div class="col" style="margin-left: -11.5px;">
+						<a href="/programmy/adept_smeta/opisanie2/">Адепт: Управление<br />строительством</a>
+						<p>Сметная программа с расширенными возможностями</p>
+						<div class="btn"><a href="#" class="js-demo" rel="164"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+					</div>
+					<div class="col">
+						<a href="/programmy/adept_kalendarnoe_planirovanie/opisanie3/">Адепт: Календарное<br />планирование</a>
+						<p style="top: 50px;">Позволяет составить график производства работ и поставки ресурсов, график финансирования</p>
+						<div class="btn"><a href="#" class="js-demo" rel="165"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+					</div>
+					<div class="col custom_opera" style="margin-right: -11.5px;">
+						<a href="/programmy/adept_podschet_obemov/opisanie4/">Адепт: Подсчет объемов</a>
+						<p>Позволяет рассчитать объемы будущих работ и материалов, используя справочник формул по видам работ</p>
+						<div class="btn"><a href="#" class="js-demo" rel="166"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+					</div>
+				</div>
+
+				<div class="cols2 clearfix">
+					<div class="col" style="margin-left: -11.5px;">
+						<a href="/programmy/adept_ncsnckr/opisanie5/">Адепт: НЦС-НЦКР</a>
+						<p>Позволяет подготовить расчет начальной цены контракта по сборникам НЦС или НЦКР</p>
+						<div class="btn"><a href="#" class="js-demo" rel="167"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+					</div>
+					<div class="col">
+						<a href="/programmy/adept_perebazirovka/opisanie6/">Адепт: Перебазировка</a>
+						<p style="top: 38px;">Позволяет подготовить расчет стоимости перебазировки строительных машин</p>
+						<div class="btn"><a href="#" class="js-demo" rel="168"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+					</div>
+					<div class="col custom_opera" style="margin-right: -11.5px;">
+						<a href="/programmy/adept_enir/opisanie7/">Адепт: ЕНиР</a>
+						<p style="top: 38px;">Программа для создания калькуляций по ЕНиР</p>
+						<div class="btn"><a href="#" class="js-demo" rel="169"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+					</div>
+				</div>
+
+				<!--
+
+				<div class="btitle">Комплекс программ Адепт: Управление строительством</div>
+				<div class="mtitle">Для расчета смет на СМР и управления проектами в строительстве</div>
+
+				<div class="hblock">
+					<div class="columns clearfix">
+						<div class="column">
+							<a href="/programmy/adept_smeta/opisanie2/">Адепт: Смета</a>
+							<p>Сметная программа с расширенными возможностями</p>
+							<div class="btn"><a href="#" class="js-demo" rel="164"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+						</div>
+						<div class="column">
+							<a href="/programmy/adept_kalendarnoe_planirovanie/opisanie3/">Адепт: Календарное<br />планирование</a>
+							<p>Позволяет составить график производства работ и поставки ресурсов, график финансирования</p>
+							<div class="btn"><a href="#" class="js-demo" rel="165"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+						</div>
+						<div class="column">
+							<a href="/programmy/adept_podschet_obemov/opisanie4/">Адепт: Подсчет объемов</a>
+							<p>Позволяет рассчитать объемы будущих работ и материалов, используя справочник формул по видам работ</p>
+							<div class="btn"><a href="#" class="js-demo" rel="166"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+						</div>
+					</div>
+					<div class="columns clearfix">
+						<div class="column">
+							<a href="/programmy/adept_ncsnckr/opisanie5/">Адепт: НЦС-НЦКР</a>
+							<p>Позволяет подготовить расчет начальной цены контракта по сборникам НЦС или НЦКР</p>
+							<div class="btn"><a href="#" class="js-demo" rel="167"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+						</div>
+						<div class="column">
+							<a href="/programmy/adept_perebazirovka/opisanie6/">Адепт: Перебазировка</a>
+							<p>Позволяет подготовить расчет начальной цены контракта по сборникам НЦС или НЦКР</p>
+							<div class="btn"><a href="#" class="js-demo" rel="168"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+						</div>
+						<div class="column">
+							<a href="/programmy/adept_enir/opisanie7/">Адепт: ЕНиР</a>
+							<p>Программа для создания калькуляций по ЕНиР</p>
+							<div class="btn"><a href="#" class="js-demo" rel="169"><img src="/tpls/images/btn7.png" alt="" /></a></div>
+						</div>
+					</div>
+				</div>
+
+				-->
+
+				<div class="cols clearfix">
+					<div class="col" style="width: 300px;">
+						<div class="title" style="font-size: 18px;">Отзывы о программах «Адепт»</div>
+						<p>Наталья, Казань, начальник ФЭО ОАО "ГипроВТИ", Программа Адепт является для нас главным помощником при расчете смет на ПИР. Удо...</p>
+						<div style="text-align: center; padding: 60px 0 0;"><a href="/otzyvy/"><img src="/tpls/images/btn4.png" alt="" /></a></div>
+					</div>
+					<div class="col" style="width: 300px; margin-left: 35px;">
+						<div class="title">Приглашаем на очное обучение</div>
+						<div style="position: absolute; margin-top: 122px; margin-left: 30px;"><a href="/uchebnyj_centr/#rasp1"><img src="/tpls/images/btn5.png" alt="" /></a></div>
+<p><b>23 ноября 2016 г.
+</b><br />Construction project 2016&nbsp;&nbsp;<a href="/uchebnyj_centr/ochnye_meropriyatiya/construction_project_2016/">Подробнее...</a></p>
+					</div>
+					<div class="col" style="width: 300px; margin-left: 35px;">
+						<div class="title">Рассылка</div>
+						<p>Новые статьи по ценообразованию в проектировании и СМР, по управлению проектами  Вам на почту каждую неделю</p>
+						<div class="clearfix">
+							<input type="text" id="rassilka_email" value="Ваша почта" class="rassilkainput" onfocus="if (this.value == 'Ваша почта') this.value = '';" onblur="if (this.value == '') this.value = 'Ваша почта';" />
+							<a href="#" class="rassilkabtn" onclick="return false; onclick="yaCounter13207072.reachGoal('rassylka'); return true;" ">Отправить</a>
+						</div>
+						<div style="padding: 20px 0 0;"><a href="#" id="rassilka_btn" ><img src="/tpls/images/btn6.png" alt="" /></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var newstimer = false;
+
+				$('#rassilka_btn').on('click', function() {
+					var email = $('#rassilka_email').val();
+					if (email == 'Ваша почта') email = '';
+
+					if (email == '' || email.indexOf('@') <= 0) {
+						alert('E-mail введен некорректно!');
+						return false;
+					}
+
+					$.post('/ajax.php?action=broadcast', {
+						email: email
+					}, function() {
+						alert('Вы успешно подписаны на рассылку!');
+						$('#rassilka_email').val('Ваша почта');
+					});
+
+					return false;
+				});
+
+				newstimer = setInterval(function() {
+					fadenews();
+				}, 5000);
+
+				$('.homepoint').on('click', function() {
+					if (!$(this).hasClass('active')) {
+						$('#tab_'+$('.homepoint.active').attr('rel')).hide();
+						$('#tab_'+$(this).attr('rel')).fadeIn();
+						$('.homepoint.active').removeClass('active');
+						$(this).addClass('active');
+
+						clearInterval(newstimer);
+						newstimer = setInterval(function() {
+							fadenews();
+						}, 5000);
+					}
+
+					return false;
+				});
+
+				if (window.opera && navigator.appVersion) { 
+				    var operaVersion = parseInt(navigator.appVersion);
+				    if (isNaN(operaVersion)) operaVersion = 0;
+				    if (operaVersion == 9) {
+				    	$('.custom_opera').css({
+				    		'float': 'right',
+				    		'margin-top': '-206px'
+				    	});
+				    }
+				}
+			});
+
+			function fadenews() {
+				var cur = $('.homepoint.active');
+				var next = cur.next();
+				if (next.length < 1) {
+					next = $('.homepoint:eq(0)');
+				}
+
+				var curtab = $('#tab_'+cur.attr('rel'));
+				var nexttab = $('#tab_'+next.attr('rel'));
+				cur.removeClass('active');
+				next.addClass('active');
+				curtab.hide();
+				nexttab.fadeIn();
+			}
+		</script>
+		<footer>
+		   <div class="inner">
+				<div class="title">Компания</div>
+				<div class="title title2">Дополнительно</div>
+				<div class="footer-menu">
+					<a href="/">Главная</a><br />
+					<a href="/otzyvy/">Отзывы</a><br />
+					<a href="/kontakty/">Контакты</a><br />
+					<a href="/distancionnyj_sbyt/">Дистанционный сбыт</a><br />
+					<a href="/obsluzhivanie/adept_proekt_i_adept_upravlenie_proektirovaniem/">Обслуживание</a>
+				</div>
+				<div class="footer-menu footer-menu2">
+					<a href="/novosti/">Новости</a><br />
+					<a href="/uchebnyj_centr/">Учебный центр</a><br />
+					<a href="/o_kompanii/">О Компании</a><br />
+					<a href="/dileram/">Дилерам</a><br />
+					<a href="/ceny/adept_proekt_i_adept_upravlenie_proektirovaniem/">Цены</a>
+				</div>
+				<div class="footer-menu footer-menu3">
+					<a href="/blog_po_sostavleniyu_smet_na_pir/">Блог по составлению смет на ПИР</a><br />
+					<a href="/blog_po_sostavleniyu_smet_na_smr/">Блог по составлению смет на СМР</a><br />
+					<a href="/normativnye_dokumenty/">Документы</a><br />
+					<a href="/voprosy-otvety/">Вопросы-ответы</a>
+				</div>
+				<div class="phone">8 800 333 27 17</div>
+				<div class="bottom-links">
+					<a href="#" class="js-callback">Заказать звонок</a>
+					<a href="#" class="js-demo">Заказать демонстрацию</a>
+					<a href="#" class="js-feedback">Обратная связь</a>
+				</div>
+				<div class ="icons">
+				<!--	<a href="http://www.youtube.com/gkAdept" target="_blank"><img src="/tpls/images/tube.png" /></a>
+					<a href="http://vk.com/gkadept" target="_blank"><img src="/tpls/images/vk.png" /></a>
+					<a href="https://plus.google.com/+gk-adeptru/posts" target="_blank"><img src="/tpls/images/google1.png" /></a>
+					<a href="http://www.facebook.com/gkAdept" target="_blank"><img src="/tpls/images/face.png" /></a>
+					<a href="https://twitter.com/gkAdept" target="_blank"><img src="/tpls/images/twitter.png" /></a>
+					<a href="http://gk-adept.livejournal.com/" target="_blank"><img src="/tpls/images/karandah.png" /></a> -->
+					<!-- Yandex.Metrika informer
+					<a href="http://metrika.yandex.ru/stat/?id=13207072&amp;from=informer"
+					target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/13207072/3_0_FFFFFFFF_FFFFFFFF_0_pageviews"
+					style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:13207072,type:0,lang:'ru'});return false}catch(e){}"/></a>
+					 /Yandex.Metrika informer -->
+				</div>
+				<div class="search">
+	<form method="get" action="/search_results/">
+	<input type="text" name="search_string" value="Поиск" class="textinput" onfocus="if (this.value == 'Поиск') this.value = '';" onblur="if (this.value == '') this.value = 'Поиск';" />
+	<input type="submit" value="Поиск" class="submit" />
+	<input type="hidden" name="search-or-mode" value="1" />
+	</form>
+</div>
+
+				<div class="copyright">© 2002-2016 Группа компаний «Адепт»</div>
+			</div>
+		</footer>			
+
+		<div id="overlay"></div>
+		<div id="dilerauth">
+			<a href="#" class="js-cancel-auth close">закрыть</a>
+			<div class="title">Требуется аутентификация</div>
+			<form action="/users/login_do/" method="post">
+			<input type="text" name="login" value="Логин" onfocus="if (this.value == 'Логин') this.value = '';" onblur="if (this.value == '') this.value = 'Логин';" />
+			<input type="password" name="password" value="Пароль" onfocus="if (this.value == 'Пароль') this.value = '';" onblur="if (this.value == '') this.value = 'Пароль';" />
+			<input style="display:none;" type="hidden" name="from_page" value="/dileram/" />
+			</form>
+			<a href="#" class="btn left js-diler-auth">Ok</a>
+			<a href="#" class="js-cancel-auth btn right">Отмена</a>
+		</div>
+		<div id="callbackwindow">
+			<a href="#" class="js-callback-close close">закрыть</a>
+			<div class="title">Заказать звонок</div>
+			<input type="text" value="ФИО" id="call_name" onfocus="if (this.value == 'ФИО') this.value = '';" onblur="if (this.value == '') this.value = 'ФИО';" />
+			<input type="text" value="Телефон" id="call_phone" onfocus="if (this.value == 'Телефон') this.value = '';" onblur="if (this.value == '') this.value = 'Телефон';" />
+			</form>
+			<a href="#" class="btn" onclick="yaCounter13207072.reachGoal('zakaz_zvonka'); return true;">Отправить</a>
+		</div>
+		<div id="feedbackwindow">
+			<a href="#" class="js-feedback-close close">закрыть</a>
+			<div class="title">Обратная связь</div>
+			<input type="text" value="ФИО *" id="feed_name" onfocus="if (this.value == 'ФИО *') this.value = '';" onblur="if (this.value == '') this.value = 'ФИО *';" />
+			<input type="text" value="Телефон" id="feed_phone" onfocus="if (this.value == 'Телефон') this.value = '';" onblur="if (this.value == '') this.value = 'Телефон';" />
+			<input type="text" value="E-mail *" id="feed_email" onfocus="if (this.value == 'E-mail *') this.value = '';" onblur="if (this.value == '') this.value = 'E-mail *';" />
+			<div class="custom-select">
+				<select id="feed_program">
+					<option value="">Программа</option>
+					<option value="Адепт: Хранилище" rel="2611">Адепт: Хранилище</option>
+<option value="Адепт: Управление строительством" rel="2550">Адепт: Управление строительством</option>
+<option value="Индивидуальные решения" rel="2536">Индивидуальные решения</option>
+<option value="Адепт: Проект" rel="161">Адепт: Проект</option>
+<option value="Адепт: Управление проектированием" rel="162">Адепт: Управление проектированием</option>
+<option value="Адепт: Информ" rel="163">Адепт: Информ</option>
+<option value="Адепт: Управление строительством" rel="164">Адепт: Управление строительством</option>
+<option value="Адепт: Календарное планирование" rel="165">Адепт: Календарное планирование</option>
+<option value="Адепт: Подсчет объемов" rel="166">Адепт: Подсчет объемов</option>
+<option value="Адепт: НЦС-НЦКР" rel="167">Адепт: НЦС-НЦКР</option>
+<option value="Адепт: Перебазировка" rel="168">Адепт: Перебазировка</option>
+<option value="Адепт: ЕНиР" rel="169">Адепт: ЕНиР</option>
+					<!--
+					<option value="Адепт: Проект" rel="161">Адепт: Проект</option>
+					<option value="Адепт: Управление проектированием" rel="162">Адепт: Управление проектированием</option>
+					<option value="Адепт: Смета" rel="164">Адепт: Смета</option>
+					<option value="Адепт: Календарное планирование" rel="165">Адепт: Календарное планирование</option>
+					<option value="Адепт: Подсчет объемов" rel="166">Адепт: Подсчет объемов</option>
+					<option value="Адепт: НЦС-НЦКР" rel="167">Адепт: НЦС-НЦКР</option>
+					<option value="Адепт: Перебазировка" rel="168">Адепт: Перебазировка</option>
+					<option value="Адепт: ЕНиР" rel="169">Адепт: ЕНиР</option>
+					<option value="Адепт: Информ" rel="163">Адепт: Информ</option>
+					-->
+				</select>
+			</div>
+			<textarea id="feed_comment" onfocus="if (this.value == 'Комментарий *') this.value = '';" onblur="if (this.value == '') this.value = 'Комментарий *';">Комментарий *</textarea>
+			</form>
+			<a href="#" class="btn" onclick="yaCounter13207072.reachGoal('obratnaya_svyaz'); return true;">Отправить</a>
+		</div>
+		<div id="demowindow">
+			<a href="#" class="js-demo-close close">закрыть</a>
+			<div class="title">Заказать демонстрацию</div>
+			<input type="text" value="ФИО *" id="demo_name" onfocus="if (this.value == 'ФИО *') this.value = '';" onblur="if (this.value == '') this.value = 'ФИО *';" />
+			<input type="text" value="Город *" id="demo_city" onfocus="if (this.value == 'Город *') this.value = '';" onblur="if (this.value == '') this.value = 'Город *';" />
+			<input type="text" value="E-mail *" id="demo_email" onfocus="if (this.value == 'E-mail *') this.value = '';" onblur="if (this.value == '') this.value = 'E-mail *';" />
+			<input type="text" value="Компания" id="demo_company" onfocus="if (this.value == 'Компания') this.value = '';" onblur="if (this.value == '') this.value = 'Компания';" />
+			<input type="text" value="Телефон" id="demo_phone" onfocus="if (this.value == 'Телефон') this.value = '';" onblur="if (this.value == '') this.value = 'Телефон';" />
+			<div class="custom-select">
+				<select id="demo_program">
+					<option value="">Программа *</option>
+					<option value="Адепт: Хранилище" rel="2611">Адепт: Хранилище</option>
+<option value="Адепт: Управление строительством" rel="2550">Адепт: Управление строительством</option>
+<option value="Индивидуальные решения" rel="2536">Индивидуальные решения</option>
+<option value="Адепт: Проект" rel="161">Адепт: Проект</option>
+<option value="Адепт: Управление проектированием" rel="162">Адепт: Управление проектированием</option>
+<option value="Адепт: Информ" rel="163">Адепт: Информ</option>
+<option value="Адепт: Управление строительством" rel="164">Адепт: Управление строительством</option>
+<option value="Адепт: Календарное планирование" rel="165">Адепт: Календарное планирование</option>
+<option value="Адепт: Подсчет объемов" rel="166">Адепт: Подсчет объемов</option>
+<option value="Адепт: НЦС-НЦКР" rel="167">Адепт: НЦС-НЦКР</option>
+<option value="Адепт: Перебазировка" rel="168">Адепт: Перебазировка</option>
+<option value="Адепт: ЕНиР" rel="169">Адепт: ЕНиР</option>
+					<!--
+					<option value="Адепт: Проект" rel="161">Адепт: Проект</option>
+					<option value="Адепт: Управление проектированием" rel="162">Адепт: Управление проектированием</option>
+					<option value="Адепт: Смета" rel="164">Адепт: Смета</option>
+					<option value="Адепт: Календарное планирование" rel="165">Адепт: Календарное планирование</option>
+					<option value="Адепт: Подсчет объемов" rel="166">Адепт: Подсчет объемов</option>
+					<option value="Адепт: НЦС-НЦКР" rel="167">Адепт: НЦС-НЦКР</option>
+					<option value="Адепт: Перебазировка" rel="168">Адепт: Перебазировка</option>
+					<option value="Адепт: ЕНиР" rel="169">Адепт: ЕНиР</option>
+					<option value="Адепт: Информ" rel="163">Адепт: Информ</option>
+					-->
+				</select>
+			</div>
+			</form>
+			<a href="#" class="btn" onclick="yaCounter13207072.reachGoal('zakaz_demonstracii'); return true;">Отправить</a>
+		</div>
+
+		<div id="demowindow2">
+			<a href="#" class="js-demo2-close close">закрыть</a>
+			<div class="title">Заказать демонстрацию</div>
+			<input type="text" value="ФИО *" id="demo2_name" onfocus="if (this.value == 'ФИО *') this.value = '';" onblur="if (this.value == '') this.value = 'ФИО *';" />
+			<input type="text" value="Город *" id="demo2_city" onfocus="if (this.value == 'Город *') this.value = '';" onblur="if (this.value == '') this.value = 'Город *';" />
+			<input type="text" value="Компания" id="demo2_company" onfocus="if (this.value == 'Компания') this.value = '';" onblur="if (this.value == '') this.value = 'Компания';" />
+			<input type="text" value="Телефон" id="demo2_phone" onfocus="if (this.value == 'Телефон') this.value = '';" onblur="if (this.value == '') this.value = 'Телефон';" />
+			<input type="text" value="E-mail *" id="demo2_email" onfocus="if (this.value == 'E-mail *') this.value = '';" onblur="if (this.value == '') this.value = 'E-mail *';" />
+			</form>
+			<a href="#" class="btn">Отправить</a>
+		</div>
+        <div id="clubwindow3">
+			<a href="#" class="js-demo3-close close">закрыть</a>
+			<div class="title">Вступить в клуб</div>
+			<input type="text" value="ФИО *" id="demo3_name" onfocus="if (this.value == 'ФИО *') this.value = '';" onblur="if (this.value == '') this.value = 'ФИО *';" />
+			<input type="text" value="Компания" id="demo3_company" onfocus="if (this.value == 'Компания') this.value = '';" onblur="if (this.value == '') this.value = 'Компания';" />
+			<input type="text" value="Телефон" id="demo3_phone" onfocus="if (this.value == 'Телефон') this.value = '';" onblur="if (this.value == '') this.value = 'Телефон';" />
+			<input type="text" value="E-mail *" id="demo3_email" onfocus="if (this.value == 'E-mail *') this.value = '';" onblur="if (this.value == '') this.value = 'E-mail *';" />
+			<input type="text" value="Мероприятие *" id="demo3_event" onfocus="if (this.value == 'Мероприятие *') this.value = '';" onblur="if (this.value == '') this.value = 'Мероприятие *';" />
+			</form>
+			<a href="#" class="btn">Отправить</a>
+		</div>
+		<div id="searchwindow">
+			<div class="inner">
+				<form method="get" action="/search_results/">
+<label>Поиск по сайту</label>
+<input name="search_string" type="text" value="" />
+<input type="submit" value="Поиск" class="submit" />
+<input type="hidden" name="search-or-mode" value="1" />
+</form>
+
+			</div>
+		</div>
+<!-- LiveTex {literal} -->
+<!--<script type='text/javascript'>
+   
+	
+	
+	var liveTex = true,
+    liveTexID = 88020,
+    liveTex_object = true;
+	window.LiveTex = {
+	onLiveTexReady: function(){
+	LiveTex.showVKButton();
+	}};
+    (function() {
+    var lt = document.createElement('script');
+    lt.type ='text/javascript';
+    lt.async = true;
+    lt.src = '//cs15.livetex.ru/js/client.js';
+    var sc = document.getElementsByTagName('script')[0];
+    if ( sc ) sc.parentNode.insertBefore(lt, sc);
+    else document.documentElement.firstChild.appendChild(lt);
+    })();
+</script>
+<!-- LiveTex {/literal} -->
+
+
+<script type='text/javascript'>
+     window['li' + 'veT' + 'ex'] = true,
+     window['liv' + 'eT' + 'exID'] = 88020,
+     window['liv' + 'eTex_o' + 'b' + 'ject'] = true;
+       window.LiveTex = {
+       onLiveTexReady: function() {
+       LiveTex.showVKButton();
+       }};
+                 (function() {
+                 var t = document['cre' + 'ateEle' + 'm' + 'ent']('script');
+                 t.type = 'text/javascript';
+                 t.async = true;
+                 t.src = '//cs15.livete' + 'x' + '.ru/js/cli' + 'ent.j' + 's';
+                 var c = document['getEleme' + 'nts' + 'B' + 'yTagName']('script')[0];
+                 if (c) c['pare' + 'n' + 'tNod' + 'e']['i' + 'nse' + 'rt' + 'Bef' + 'or' + 'e'](t, c);
+                 else document['docum' + 'entEl' + 'ement']['first' + 'Ch' + 'ild']['appe' + 'n' + 'dC' + 'hil' + 'd'](t);
+                 })();
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+(w[c] = w[c] || []).push(function() {
+try {
+w.yaCounter13207072 = new Ya.Metrika({id:13207072,
+webvisor:true,
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true});
+} catch(e) { }
+});
+
+var n = d.getElementsByTagName("script")[0],
+s = d.createElement("script"),
+f = function () { n.parentNode.insertBefore(s, n); };
+s.type = "text/javascript";
+s.async = true;
+s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+if (w.opera == "[object Opera]") {
+d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/32858747" style="position:absolute; left:-9999px" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+
+<!--one more-->
+<script src="//load.sumome.com/" data-sumo-site-id="820375c19f49b4d9f68bff6e6a4381ed06fe6a4bdca736289f78b25e2a9ca71a" async="async"></script>
+<!--one more-->
+
+		<script src="/tpls/bxslider/jquery.bxslider.min.js"></script>
+		<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var slider1 = $('#slider1').bxSlider({
+					pager: false,
+					controls: false,
+					minSlides: 1,
+					maxSlides: 3,
+					moveSlides: 1,
+					slideWidth: 305,
+					useCSS: false
+				});
+
+				var slider2 = $('#slider2').bxSlider({
+					pager: false,
+					controls: false,
+					minSlides: 1,
+					maxSlides: 3,
+					moveSlides: 1,
+					slideWidth: 305,
+					useCSS: false
+				});
+
+				$('#sl1l').on('click', function() {
+					slider1.goToPrevSlide();
+
+					return false;
+				});
+
+				$('#sl1r').on('click', function() {
+					slider1.goToNextSlide();
+
+					return false;
+				});
+
+				$('#sl2l').on('click', function() {
+					slider2.goToPrevSlide();
+					
+					return false;
+				});
+
+				$('#sl2r').on('click', function() {
+					slider2.goToNextSlide();
+
+					return false;
+				});
+
+				$(".various").fancybox({
+					maxWidth	: 800,
+					maxHeight	: 600,
+					fitToView	: false,
+					width		: '70%',
+					height		: '70%',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none'
+				});
+			});
+		</script>
+        <script src="/tpls/js/main.js"></script>
+    </body>
+</html><!-- This page generated in 3.78769 secs by TPL, SITE MODE -->

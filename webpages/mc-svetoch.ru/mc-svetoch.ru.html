@@ -1,0 +1,201 @@
+<!-- DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"--> 
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Ìåäèöèíñêèé öåíòð &quot;ÑÂÅÒÎ×&quot;</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="lightbox/lightbox.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="lightbox/lightbox.js"></script>
+<style>
+  #slide-container {
+	  float:right;
+     text-align:center;
+     margin:0px 0px;
+  }
+  #slide-container #slideshow {
+     width:300px;
+     height:200px;
+     margin:none;
+     position:relative;
+  }
+  #slide-container #slideshow IMG {
+     position:absolute;
+     top:0;
+     left:0;
+  }
+</style>
+<script>
+function animate(tagId,alfa,step){
+ div = document.getElementById(tagId);
+ var items = new Array();
+ //Âûáèðàåì âñå ðèñóíêè ñëàéäøîó
+ for(c=i=0;i<div.childNodes.length;i++){
+  if (div.childNodes[i].tagName=="IMG"){
+   items[c] = div.childNodes[i];
+   c++;
+  }
+ }
+ last = items[items.length-1];
+ next = items[items.length-2];
+ //äåëàåì âåðõíèé â ñòîïêå(òåêóùèé) ðèñóíîê áîëåå ïðîçðà÷íûì
+ last.style.opacity= alfa/100;
+ last.style.filter= "progid:DXImageTransform.Microsoft.Alpha(opacity="+alfa+")";
+ last.style.filter= "alpha(opacity="+alfa+")";
+
+ if ((alfa-step)>0){
+  //åñëè åùå íå äîñòèãëè ïîëíîé ïðîçðà÷íîñòè âåðõíåãî ðèñóíêà - ïðîäîëæàåì àíèìàöèþ
+   setTimeout("animate('"+tagId+"',"+(alfa-step)+","+step+");",50);
+ }else{
+  //åñëè äîñòèãëè ïîëíîé ïðîçðà÷íîñòè âåðõíåãî ðèñóíêà
+  //äåëàåì àáñîëþòíî íåïðîçðà÷íûì ñëåäóþùèé ðèñóíîê
+  next.style.opacity= 1;
+  next.style.filter= "progid:DXImageTransform.Microsoft.Alpha(opacity=100)";
+  next.style.filter= "alpha(opacity=100)";
+  // à âåðõíèé ðèñóíîê ïåðåìåùàåì â íèç ñòîïêè
+  tmp = last;
+  div.removeChild(last);
+  div.insertBefore(tmp,items[0]);
+  tmp.style.opacity= 1;
+  tmp.style.filter= "progid:DXImageTransform.Microsoft.Alpha(opacity=100)";
+  tmp.style.filter= "alpha(opacity=100)";
+
+  setTimeout( "slideSwitch('"+tagId+"',500)", 4000 );
+ }
+}
+//ýòà ôóíêöèÿ äåëàåò âèäèìûì áëîê ñ ðèñóíêàìè äëÿ ñëàéäøîó (èçíà÷àëüíî îí íåâèäèì, ÷òîáû èçáåæàòü ìåðöàíèÿ âî âðåìÿ çàãðóçêè êàðòèíîê) è çàïóñêàåò àíèìàöèþ
+function slideSwitch(tagId,speed){
+ div = document.getElementById('slideshow');
+ if (div.style.visibility!="visible"){
+      div.style.visibility = "visible";
+ }
+ items = div.getElementsByTagName('img');
+ if (items.length>0){
+  animate(tagId,100,10);
+ }
+}
+//âûæèäàåì ïàðó ñåêóíä, ÷òîáû êàðòèíêè óñïåëè çàãðóçèòüñÿ... ìîæíî ïðîñòî ïîñòàâèòü íà onload-ñîáûòèå ïîñëåäíåãî èç ðèñóíêîâ
+setTimeout( "slideSwitch('slideshow',500);",1000 );
+</script>
+</head>
+<body>
+<table width=100% height=100% align="center" cellpadding="0" cellspacing="0">
+ <tr>
+  <td width="160" height="100" align="center" class="header"><img class="bann_img" src="images/logo.gif" width="150" height="78" alt="logo"></td>
+  <td height="100" align="left" valign="middle" class="header" colspan="7">
+  <div class="right_div"><p class="rdt"><strong>Çàïèñü íà ïðèåì<br>ïî òåëåôîíàì:</strong><br>(496) 539-24-39<br>(496) 539-25-39<br>(496) 539-26-39<br>(985) 145-65-39<br>&nbsp;<br>
+      <strong>Ïî÷òîâûé àäðåñ:</strong><br>
+141200, Ì.Î., ã.Ïóøêèíî,<br>
+óë.Áîãîëþáñêàÿ, ä. 4à
+  </div>
+<img src="images/header.gif" width="600" height="180" alt="Ìåäèöèíñêèé öåíòð &quot;Ñâåòî÷&quot;">
+
+<!-- news_box 
+<div id="info_box" style="position:fixed; left:650px; top:120px; display:block; z-index:1;">
+<a href="http://www.keratoconus-international.com/index.php/ru/" target="_blank"><img src="images/dikc.png" width="300" height="40" border="0" alt="Ìåæäóíàðîäíûé öåíòð ëå÷åíèÿ êåðàòîêîíóñà ïðîôåññîðà Äàêñåðà" title="Íàøè ïàðòíåðû: Ìåæäóíàðîäíûé öåíòð ëå÷åíèÿ êåðàòîêîíóñà ïðîôåññîðà Äàêñåðà"></a><img src="lightbox/close.gif" width="20" height="20" alt="Close" title="Çàêðûòü" style="cursor:pointer; vertical-align:top" onClick="info_box.style.display='none'" >
+</div> 
+news_box end-->   
+
+</td>
+ </tr>
+ <tr>
+  <td  align="center" nowrap bgcolor="#336699" style="height: 40px; padding: 0px; margin: 0px; color:#CCC; font-size:11px">Ëèöåíçèÿ: ËÎ-50-01-000595</td>
+  <td class="main_menu_active" nowrap width="100"><a href="index.html" class="main_menu_lnk_active">Ãëàâíàÿ</a></td>
+  <td class="main_menu" nowrap width="100"><a href="about.html" class="main_menu_lnk">Î&nbsp;öåíòðå</a></td>
+  <td class="main_menu" nowrap width="100"><a href="ophtalmology.html" class="main_menu_lnk">Îôòàëüìîëîãèÿ</a></td>
+  <td class="main_menu" nowrap width="100"><a href="stomatology.html" class="main_menu_lnk">Ñòîìàòîëîãèÿ</a></td>
+  <td class="main_menu" nowrap width="100"><a href="price.html" class="main_menu_lnk">Óñëóãè&nbsp;è&nbsp;öåíû</a></td>
+  <td class="main_menu" nowrap width="100"><a href="contacts.html" class="main_menu_lnk">Êîíòàêòû</a></td>
+  <td width="100%" nowrap bgcolor="#336699">&nbsp;</td>
+ <tr>
+  <td width="160" height=100% align="center" style="border-right-color: #336699; border-right-style:solid; border-right-width:2px">
+  <a href="call_me.html"><img class="bann_img" src="images/write.gif" width="150" height="75" alt="Çàïèñü íà ïðèåì"></a><br>&nbsp;<br>
+    <!--<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <g:plusone></g:plusone>
+    <a href="https://plus.google.com/109728740772087682820" rel="publisher">Google+</a> 
+    <img src="images/browsers.gif" class="bann_img" width="138" height="137" style="margin-bottom:30px" alt="brousers">-->
+    
+    <!--
+    <div class="yandexform" style="width:155px" onClick="return {type: 3, logo: 'rb', arrow: true, webopt: false, websearch: false, bg: '#0066CC', fg: '#000000', fontsize: 12, suggest: true, site_suggest: true, encoding: ''}"><form action="http://www.mc-svetoch.ru/search_res.html" method="get"><input type="hidden" name="searchid" value="723089"/><input name="text"/><input type="submit" value="Íàéòè"/></form></div>
+	<script type="text/javascript" src="http://site.yandex.net/load/form/1/form.js" charset="utf-8"></script>
+    -->
+    
+  <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'http://www.mc-svetoch.ru/search_res.html','arrow':false,'bg':'#0000cc','fontsize':14,'fg':'#000000','language':'ru','logo':'rb','publicname':'Yandex Site Search #2125819','suggest':true,'target':'_self','tld':'ru','type':3,'searchid':2125819,'webopt':false,'websearch':false,'input_fg':'#000000','input_bg':'#ffffff','input_fontStyle':'normal','input_fontWeight':'normal','input_placeholder':'Ïîèñê ïî ñàéòó...','input_placeholderColor':'#000000','input_borderColor':'#99ccff'}"><form action="http://yandex.ru/sitesearch" method="get" target="_self"><input type="hidden" name="searchid" value="2125819"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="text" name="text" value=""/><input type="submit" value="Íàéòè"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+    
+   <a href="http://www.snamiyarko.ru"><img class="bann_img" src="images/yarmir.gif" width="150" height="75" alt="Ñåòü ñàëîíîâ îïòèêè"></a><br>&nbsp;<br>
+<!-- Yandex.Metrika informer  -->
+<a href="http://metrika.yandex.ru/stat/?id=23962273&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/23962273/3_1_FFFFFFFF_FFFFFFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="ßíäåêñ.Ìåòðèêà" title="ßíäåêñ.Ìåòðèêà: äàííûå çà ñåãîäíÿ (ïðîñìîòðû, âèçèòû è óíèêàëüíûå ïîñåòèòåëè)" onclick="try{Ya.Metrika.informer({i:this,id:23962273,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+    </td>
+    <td valign="top" style="padding: 10px;" colspan="7">
+<!-- Page body -->
+<h1>Ïðèâåòñòâóåì Âàñ íà ñàéòå Ìåäèöèíñêîãî öåíòðà "ÑÂÅÒÎ×"</h1>
+<div class="right_div"> <a href="http://www.milova.ru" target="_blank"><img src="images/milova_photo_05.jpg" alt="Ìèëîâà Ñ.Â." width="267" height="400" border="0"></a>
+<p class="pict_name">Ãëàâíûé âðà÷ Ìèëîâà Ñ.Â.</p>
+</div>
+<p class="main_text">&nbsp;</p>
+<p class="main_text">Ìåäèöèíñêèé öåíòð «Ñâåòî÷» ïðèíÿë ïåðâûõ ïàöèåíòîâ â îêòÿáðå 2008 ãîäà. Îñíîâíûå íàïðàâëåíèÿ äåÿòåëüíîñòè - ìèêðîõèðóðãèÿ ãëàçà è ñòîìàòîëîãèÿ.  Ãëàâíûé âðà÷ - Ìèëîâà Ñâåòëàíà Âèêòîðîâíà, îôòàëüìîõèðóðã, êàíäèäàò ìåäèöèíñêèõ íàóê, âðà÷-îôòàëüìîëîã âûñøåé êâàëèôèêàöèîííîé êàòåãîðèè, ÷ëåí åâðîïåéñêîãî îáùåñòâà êàòàðàêòàëüíûõ è ðåôðàêöèîííûõ õèðóðãîâ.</p>
+<div class="left_div" style="width:310px; height:210px;">
+<div id="slide-container">
+ <div id="slideshow">
+  <img src="images/show/photo_01.jpg"/>
+  <img src="images/show/photo_02.jpg"/> 
+  <img src="images/show/photo_03.jpg"/>
+  <img src="images/show/photo_04.jpg"/>
+  <img src="images/show/photo_05.jpg"/>
+  <img src="images/show/photo_06.jpg"/>
+ </div>
+</div>
+</div>
+<p class="main_text">Ó íàñ ïàöèåíò ìîæåò ïðîéòè ïîëíóþ êîìïüþòåðíóþ äèàãíîñòèêó çðåíèÿ, ïîëó÷èòü êîíñóëüòàöèþ îïûòíîãî âðà÷à-îôòàëüìîëîãà, ïîäîáðàòü è ïðèîáðåñòè  î÷êè èëè êîíòàêòíûå ëèíçû. Îäíàêî íà ýòîì ïåðå÷åíü óñëóã íå çàêàí÷èâàåòñÿ. Ìåäèöèíñêèé öåíòð «Ñâåòî÷» - ýòî ñîâðåìåííàÿ êëèíèêà ìèêðîõèðóðãèè ãëàçà, ïðîäîëæàþùàÿ äåëî àêàäåìèêà Ñâÿòîñëàâà Ôåäîðîâà, îñíàùåííàÿ ïåðåäîâûì îáîðóäîâàíèåì ìèðîâîãî óðîâíÿ. Íàø ìåäïåðñîíàë ïðîøåë ïîäãîòîâêó â ëó÷øèõ ðîññèéñêèõ êëèíèêàõ. Äëÿ ëå÷åíèÿ ïðèìåíÿþòñÿ ñàìûå ñîâðåìåííûå ìåòîäèêè è ðàñõîäíûå ìàòåðèàëû. Â îïåðàöèîííîì áëîêå ìåäöåíòðà «Ñâåòî÷» óñïåøíî ïðîâîäÿòñÿ òàêèå ìèêðîõèðóðãè÷åñêèå îïåðàöèè êàê: Ôàêîýìóëüñèôèêàöèÿ êàòàðàêòû ñ èìïëàíòàöèåé èñêóññòâåííîãî õðóñòàëèêà ãëàçà, Ëàçåðíàÿ êîððåêöèÿ çðåíèÿ (LASIK, ÔÐÊ), Ñêëåðîýêòîìèÿ ñ èìïëàíòàöèåé äðåíàæíîé ñèñòåìû (ëå÷åíèå ãëàóêîìû), Ëàçåðêîàãóëÿöèÿ (ëå÷åíèå çàáîëåâàíèé ñåò÷àòêè), Îïåðàöèè íà âåêàõ è ìíîãèå äðóãèå. Íà ëè÷íîì ñ÷åòó ãëàâíîãî âðà÷à öåíòðà, îôòàëüìîõèðóðãà âûñøåé êàòåãîðèè, Ñâåòëàíû Âèêòîðîâíû Ìèëîâîé áîëåå âîñüìè òûñÿ÷ îïåðàöèé.</p>
+<p class="main_text">Ñòîìàòîëîãè íàøåãî ìåäèöèíñêîãî öåíòðà ïðèäóò íà ïîìîùü â ðåøåíèè ïðîáëåì, äîñòàâëÿþùèõ ìàññó íåïðèÿòíûõ îùóùåíèé  çóáíàÿ áîëü, ïîâûøåííàÿ ÷óâñòâèòåëüíîñòü, æåëòûé íàëåò íà ýìàëè. Ïðè ëå÷åíèè êàðèåñà èñïîëüçóåòñÿ èìïîðòíàÿ àïïàðàòóðà, àíåñòåçèÿ ïÿòîãî ïîêîëåíèÿ è êîìïîçèòíûå ìàòåðèàëû, ïðîèçâîäèìûå â ÑØÀ. Ñîâðåìåííûå ìåòîäû,  ïîçâîëÿþò ðåêîíñòðóèðîâàòü äîñòàòî÷íî ñèëüíî ðàçðóøåííûé çóá, óáðàòü êàðèåñ ñ ìèíèìàëüíûì èñïîëüçîâàíèåì áîðìàøèíû, ïîäîáðàòü îòòåíîê, ìàêñèìàëüíî áëèçêèé ê åñòåñòâåííîìó öâåòó çóáà.</p> 
+<p class="main_text">Ïîëèòèêà ìåäèöèíñêîãî öåíòðà ñòðîèòñÿ â ïåðâóþ î÷åðåäü íà èíòåðåñàõ ïàöèåíòà. Ëå÷åíèå ïîäáèðàåòñÿ èíäèâèäóàëüíî â êàæäîì ñëó÷àå. Êàæäîìó ïàöèåíòó ãàðàíòèðóåòñÿ âíèìàòåëüíîå, äðóæåëþáíîå îòíîøåíèå è êîìôîðòíàÿ îáñòàíîâêà.</p>
+<!-- End of page body-->
+    </td>
+ </tr>
+ <tr>
+  <td height="50" class="footer">Designed by<br>A.Evsyukov</td>
+  <td height="50" class="footer" colspan="7">
+  <a href="index.html" class="foot_menu">Ãëàâíàÿ</a> | <a href="about.html" class="foot_menu">Î öåíòðå</a> | <a href="ophtalmology.html" class="foot_menu">Îôòàëüìîëîãèÿ</a> | <a href="stomatology.html" class="foot_menu">Ñòîìàòîëîãèÿ</a> | <a href="price.html" class="foot_menu">Óñëóãè è öåíû</a> | <a href="contacts.html" class="foot_menu">Êîíòàêòû</a>
+  </td>
+ </tr>
+</table>
+<p class="last_line"> Ìåäèöèíñêèé öåíòð &laquo;Ñâåòî÷&raquo; - ñîâðåìåííûé îôòàëüìîëîãè÷åñêèé ëå÷åáíî-äèàãíîñòè÷åñêèé öåíòð, îñíàùåííûé ïåðåäîâûì îáîðóäîâàíèåì ìèðîâîãî óðîâíÿ. Ãëàâíûé âðà÷ è âåäóùèé îôòàëüìîõèðóðã &ndash; Ìèëîâà Ñâåòëàíà Âèêòîðîâíà, õèðóðã-îôòàëüìîëîã âûñøåé êâàëèôèêàöèè, êàíäèäàò ìåäèöèíñêèõ íàóê. Ìåäïåðñîíàë öåíòðà ïðîøåë ïîäãîòîâêó â ëó÷øèõ ðîññèéñêèõ êëèíèêàõ. Ìû ïðèìåíÿåì â êëèíè÷åñêîé ïðàêòèêå ñàìûå ñîâðåìåííûå âûñîêîòåõíîëîãè÷åñêèå ìåòîäèêè è ðàñõîäíûå ìàòåðèàëû. Êëèíèêà ìèêðîõèðóðãèè ãëàçà &laquo;Ñâåòî÷&raquo; ïðåäëàãàåò ñâîèì ïàöèåíòàì óñëóãè: Ïîëíàÿ êîìïüþòåðíàÿ äèàãíîñòèêà çðåíèÿ; Áåñøîâíàÿ õèðóðãèÿ êàòàðàêòû (&laquo;Ôàêîýìóëüñèôèêàöèÿ&raquo; ñ èìïëàíòàöèåé èñêóññòâåííîãî õðóñòàëèêà ãëàçà); Ëàçåðíàÿ êîððåêöèÿ çðåíèÿ (Ëàçèê, ÔÐÊ); Ëàçåðíîå ëå÷åíèå ïàòîëîãèé ñåò÷àòêè (Ëàçåðêîàãóëÿöèÿ); Õèðóðãèÿ ãëàóêîìû (Íîâåéøèå ìåòîäèêè ñ èìïëàíòàöèåé äðåíàæíûõ ñèñòåì); Îïåðàöèè íà âåêàõ; Òåðàïåâòè÷åñêîå ëå÷åíèå ãëàçíûõ áîëåçíåé; Êîíòàêòíàÿ êîððåêöèÿ; Ñàëîí îïòèêè.</p>
+
+<!--
+<script type="text/javascript"
+src="http://consultsystems.ru/script/4496/" charset="utf-8">
+</script> 
+-->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter23962273 = new Ya.Metrika({id:23962273,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/23962273" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>

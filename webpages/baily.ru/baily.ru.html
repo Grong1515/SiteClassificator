@@ -1,0 +1,1208 @@
+
+<html>
+<head id="Head1"><title>
+	Бейли - поиск туров
+</title><link href="styles.css?v=2" rel="stylesheet" type="text/css" /><link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+    <script type="text/javascript" src="scripts.js?v2"></script>
+	<script type="text/javascript" src="m_dialog.js?v2"></script>
+    <script type="text/javascript" src="./Jquery/jquery.js?v2"></script>
+<style type="text/css">
+.b
+{
+    padding-top: 1px;
+}
+
+.hotels
+{   
+	table-layout: fixed;
+	text-decoration: none;
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	line-height: 16px;
+	}
+
+.hotels input
+ {
+ 	padding:1px;
+ 	margin:1px;
+ 	width:12px;
+ 	height:12px;
+ }
+.hotels td
+{
+	vertical-align: top;	
+	text-align: left;
+}
+.n
+{
+	width:0px;
+	display:none;
+}	
+.add-table td
+{
+    padding: 2px;
+    vertical-align: top;
+   	font-family: Verdana, Arial;
+	font-size: 10px;
+
+}
+.p-table td
+{
+    padding: 6px;
+    vertical-align: top;
+   	font-family: Verdana, Arial;
+	font-size: 12px;
+    line-height:16px;
+}
+.ct
+{
+   	text-decoration : none;
+	font-family : verdana, arial;
+	font-size : 11px;
+	color : #FFFFFF;
+	font-weight :bold;
+	cursor:pointer;
+	text-align:left;
+	height:12px; 
+}
+.sct
+{
+	text-decoration : none;
+	font-family : verdana, arial;
+	font-size : 11px;
+	color : Orange;
+	font-weight :bold;
+	cursor:auto;
+	text-align:left; 
+	height:12px;
+}     
+</style>
+<!--<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  //var pageTracker = _gat._getTracker("UA-10228260-1");
+  //pageTracker._trackPageview();
+
+  try 
+  {
+    var pageTracker = _gat._getTracker("UA-10228260-1");
+    pageTracker._trackPageview();
+  }
+  catch(err) {}
+</script>-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63740162-1', 'auto');
+  ga('send', 'pageview');
+
+</script><link href="/WebResource.axd?d=exjER6_H7WqWOYGtNL563cq-_1bipbwlN2vzVYkSOwdjM-haH_CCPvueyz2tmFfV-MGQDx7vzGWPv4RftKj38zdEcNExSMRdlDrAJkL2mu-eD_W3M8YHa8Ogqev0-gHv7wpqN_X-q8sJ_Mx6OsuQe3giDVk1&amp;t=633398816440000000" type="text/css" rel="stylesheet" /></head>
+<!--<body style="margin-top:0px; margin-bottom:0px; background-image:url('Images/new_year_baily_fon.jpg'); background-repeat: repeat-x; overflow-y:scroll;" onload="setBr();" onunload="cancelCountryInfo();cancelHotels();">-->
+<body style="margin-top: 0px; margin-bottom: 0px; background-image: url('Images/new_year_baily_fon.jpg'); background-repeat: repeat-x; overflow-y: scroll;" onload="setBr();" onunload="cancelCountryInfo();cancelHotels();">
+<center>
+	<form name="form1" method="post" action="./" id="form1" target="rslt">
+<div>
+<input type="hidden" name="ToolkitScriptManager1_HiddenField" id="ToolkitScriptManager1_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTMzMDU5MDAyMg9kFgICAw9kFhoCCQ8PFgIeBFRleHRlZGQCDw8PFgIfAAUW0KDQtdCz0LjRgdGC0YDQsNGG0LjRj2RkAh0PFgIeCWlubmVyaHRtbGVkAjMPDxYCHwBlZGQCNQ8QZBAVAQzQnNC+0YHQutCy0LAVAQExFCsDAWdkZAI3DxYCHwFlZAI9DxBkEBUbATIBMwE0ATUBNgE3ATgBOQIxMAIxMQIxMgIxMwIxNAIxNQIxNgIxNwIxOAIxOQIyMAIyMQIyMgIyMwIyNAIyNQIyNgIyNwIyOBUbATIBMwE0ATUBNgE3ATgBOQIxMAIxMQIxMgIxMwIxNAIxNQIxNgIxNwIxOAIxOQIyMAIyMQIyMgIyMwIyNAIyNQIyNgIyNwIyOBQrAxtnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZAI/DxBkEBUbATIBMwE0ATUBNgE3ATgBOQIxMAIxMQIxMgIxMwIxNAIxNQIxNgIxNwIxOAIxOQIyMAIyMQIyMgIyMwIyNAIyNQIyNgIyNwIyOBUbATIBMwE0ATUBNgE3ATgBOQIxMAIxMQIxMgIxMwIxNAIxNQIxNgIxNwIxOAIxOQIyMAIyMQIyMgIyMwIyNAIyNQIyNgIyNwIyOBQrAxtnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZAJBDxBkEBUFATEBMgEzATQBNRUFATEBMgEzATQBNRQrAwVnZ2dnZ2RkAkMPEGQQFRECLS0BMgEzATQBNQE2ATcBOAE5AjEwAjExAjEyAjEzAjE0AjE1AjE2AjE3FRECLS0BMgEzATQBNQE2ATcBOAE5AjEwAjExAjEyAjEzAjE0AjE1AjE2AjE3FCsDEWdnZ2dnZ2dnZ2dnZ2dnZ2dnZGQCRQ8QZBAVEQItLQEyATMBNAE1ATYBNwE4ATkCMTACMTECMTICMTMCMTQCMTUCMTYCMTcVEQItLQEyATMBNAE1ATYBNwE4ATkCMTACMTECMTICMTMCMTQCMTUCMTYCMTcUKwMRZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZAJPDxYEHgVzdHlsZQVacG9zaXRpb246cmVsYXRpdmU7d2lkdGg6MTc4cHg7aGVpZ2h0OjIwNnB4O292ZXJmbG93OmF1dG87dGV4dC1hbGlnbjpsZWZ0O3BhZGRpbmctbGVmdDoycHg7HwFlZAJRDxYEHwIFWXBvc2l0aW9uOnJlbGF0aXZlO3dpZHRoOjE3OHB4O2hlaWdodDo2NHB4O292ZXJmbG93OmF1dG87dGV4dC1hbGlnbjpsZWZ0O3BhZGRpbmctbGVmdDoycHg7HwFlZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAwURTG9naW5TdGF0dXMkY3RsMDEFEUxvZ2luU3RhdHVzJGN0bDAzBQpmaW5kQnV0dG9upsDg0NjKEfMVbRrHnTlXRjx24YY=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=TQmU67J2vViNJzKw6WgDQn8QdufIJA_RUnbEAXZBvpk2Md3PW4QQU7L2CrtMBQXYp2UWGEhM5gzguwdJEkCuXPURl4g1&amp;t=635823524460000000" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"ru-RU","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":" ","CurrencySymbol":"р.","NaNSymbol":"NaN","CurrencyNegativePattern":5,"NumberNegativePattern":1,"PercentPositivePattern":1,"PercentNegativePattern":1,"NegativeInfinitySymbol":"-бесконечность","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":" ","CurrencyPositivePattern":1,"PositiveInfinitySymbol":"бесконечность","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":" ","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402289999999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":true},"DateSeparator":".","FirstDayOfWeek":1,"CalendarWeekRule":0,"FullDateTimePattern":"d MMMM yyyy \u0027г.\u0027 H:mm:ss","LongDatePattern":"d MMMM yyyy \u0027г.\u0027","LongTimePattern":"H:mm:ss","MonthDayPattern":"MMMM dd","PMDesignator":"","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd.MM.yyyy","ShortTimePattern":"H:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],"ShortestDayNames":["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],"DayNames":["воскресенье","понедельник","вторник","среда","четверг","пятница","суббота"],"AbbreviatedMonthNames":["янв","фев","мар","апр","май","июн","июл","авг","сен","окт","ноя","дек",""],"MonthNames":["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь",""],"IsReadOnly":true,"NativeCalendarName":"григорианский календарь","AbbreviatedMonthGenitiveNames":["янв","фев","мар","апр","май","июн","июл","авг","сен","окт","ноя","дек",""],"MonthGenitiveNames":["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря",""]},"eras":[1,"A.D.",null,0]};//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=U0zQ9vJ_Y5WTy9L7convmPoMgClsZayvEX7jFPGLOURUD7Tf5amPg8qlqWtrBxOApolAIUw2wvYdyRJCwI1aDCuB522vXvyEuR5bW38JM2URXv60G9m2LJEHUhiQM5eqKttFiPoD-Mc5O8wMeFqgXSOVQT9cDHLz0_h8I_fain6H7vl20&amp;t=ffffffffcc58dd65" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=HjicZ13jY8gYBinz-KQ0nKvyD6SjJZEY76J05XAdx4flMMTTspSWW5mZGjFMEzD3Zci66cgAN96ObCRsfBHL72L6AU6xIajBbA7Oc14LMa35cSDAno-agKJvgh3AvuoXFOpud6KmHj-Tv8TmqAQuricrkIfaYTnpAuPP0U-ObTHWgsyxx6KFAB9IkiSC8r8501UjmQ2&amp;t=ffffffffcc58dd65" type="text/javascript"></script>
+<script src="/SearchForm.aspx?_TSM_HiddenField_=ToolkitScriptManager1_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d1.0.20229.20821%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aru-RU%3ac5c982cc-4942-4683-9b48-c2c58277700f%3a865923e8%3a9b7907bc%3a411fea1c%3ae7c87f07%3a91bd373d%3abbfda34c%3a30a78ec5%3a9349f837%3ad4245214%3a77c58d20%3a14b56adc" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var PageMethods = function() {
+PageMethods.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+PageMethods.prototype = {
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return PageMethods._staticInstance.get_path();},
+getOnline:function(request,succeededCallback, failedCallback, userContext) {
+/// <param name="request" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'getOnline',false,{request:request},succeededCallback,failedCallback,userContext); },
+useOnline:function(params,succeededCallback, failedCallback, userContext) {
+/// <param name="params" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'useOnline',false,{params:params},succeededCallback,failedCallback,userContext); },
+onlineAbort:function(tempTableName,succeededCallback, failedCallback, userContext) {
+/// <param name="tempTableName" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'onlineAbort',false,{tempTableName:tempTableName},succeededCallback,failedCallback,userContext); },
+closeResults:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'closeResults',false,{},succeededCallback,failedCallback,userContext); },
+checkPrice:function(params,succeededCallback, failedCallback, userContext) {
+/// <param name="params" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'checkPrice',false,{params:params},succeededCallback,failedCallback,userContext); },
+getStatic:function(request,succeededCallback, failedCallback, userContext) {
+/// <param name="request" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'getStatic',false,{request:request},succeededCallback,failedCallback,userContext); },
+getCountries:function(countryCode,succeededCallback, failedCallback, userContext) {
+/// <param name="countryCode" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'getCountries',false,{countryCode:countryCode},succeededCallback,failedCallback,userContext); },
+getHotels:function(countryCode,hotelString,succeededCallback, failedCallback, userContext) {
+/// <param name="countryCode" type="String">System.String</param>
+/// <param name="hotelString" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'getHotels',false,{countryCode:countryCode,hotelString:hotelString},succeededCallback,failedCallback,userContext); },
+getCountryInfo:function(countryCode,destString,mealString,catString,succeededCallback, failedCallback, userContext) {
+/// <param name="countryCode" type="String">System.String</param>
+/// <param name="destString" type="String">System.String</param>
+/// <param name="mealString" type="String">System.String</param>
+/// <param name="catString" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'getCountryInfo',false,{countryCode:countryCode,destString:destString,mealString:mealString,catString:catString},succeededCallback,failedCallback,userContext); }}
+PageMethods.registerClass('PageMethods',Sys.Net.WebServiceProxy);
+PageMethods._staticInstance = new PageMethods();
+PageMethods.set_path = function(value) {
+PageMethods._staticInstance.set_path(value); }
+PageMethods.get_path = function() { 
+/// <value type="String" mayBeNull="true">The service url.</value>
+return PageMethods._staticInstance.get_path();}
+PageMethods.set_timeout = function(value) {
+PageMethods._staticInstance.set_timeout(value); }
+PageMethods.get_timeout = function() { 
+/// <value type="Number">The service timeout.</value>
+return PageMethods._staticInstance.get_timeout(); }
+PageMethods.set_defaultUserContext = function(value) { 
+PageMethods._staticInstance.set_defaultUserContext(value); }
+PageMethods.get_defaultUserContext = function() { 
+/// <value mayBeNull="true">The service default user context.</value>
+return PageMethods._staticInstance.get_defaultUserContext(); }
+PageMethods.set_defaultSucceededCallback = function(value) { 
+ PageMethods._staticInstance.set_defaultSucceededCallback(value); }
+PageMethods.get_defaultSucceededCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default succeeded callback.</value>
+return PageMethods._staticInstance.get_defaultSucceededCallback(); }
+PageMethods.set_defaultFailedCallback = function(value) { 
+PageMethods._staticInstance.set_defaultFailedCallback(value); }
+PageMethods.get_defaultFailedCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default failed callback.</value>
+return PageMethods._staticInstance.get_defaultFailedCallback(); }
+PageMethods.set_enableJsonp = function(value) { PageMethods._staticInstance.set_enableJsonp(value); }
+PageMethods.get_enableJsonp = function() { 
+/// <value type="Boolean">Specifies whether the service supports JSONP for cross domain calling.</value>
+return PageMethods._staticInstance.get_enableJsonp(); }
+PageMethods.set_jsonpCallbackParameter = function(value) { PageMethods._staticInstance.set_jsonpCallbackParameter(value); }
+PageMethods.get_jsonpCallbackParameter = function() { 
+/// <value type="String">Specifies the parameter name that contains the callback function name for a JSONP request.</value>
+return PageMethods._staticInstance.get_jsonpCallbackParameter(); }
+PageMethods.set_path("SearchForm.aspx");
+PageMethods.getOnline= function(request,onSuccess,onFailed,userContext) {
+/// <param name="request" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.getOnline(request,onSuccess,onFailed,userContext); }
+PageMethods.useOnline= function(params,onSuccess,onFailed,userContext) {
+/// <param name="params" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.useOnline(params,onSuccess,onFailed,userContext); }
+PageMethods.onlineAbort= function(tempTableName,onSuccess,onFailed,userContext) {
+/// <param name="tempTableName" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.onlineAbort(tempTableName,onSuccess,onFailed,userContext); }
+PageMethods.closeResults= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.closeResults(onSuccess,onFailed,userContext); }
+PageMethods.checkPrice= function(params,onSuccess,onFailed,userContext) {
+/// <param name="params" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.checkPrice(params,onSuccess,onFailed,userContext); }
+PageMethods.getStatic= function(request,onSuccess,onFailed,userContext) {
+/// <param name="request" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.getStatic(request,onSuccess,onFailed,userContext); }
+PageMethods.getCountries= function(countryCode,onSuccess,onFailed,userContext) {
+/// <param name="countryCode" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.getCountries(countryCode,onSuccess,onFailed,userContext); }
+PageMethods.getHotels= function(countryCode,hotelString,onSuccess,onFailed,userContext) {
+/// <param name="countryCode" type="String">System.String</param>
+/// <param name="hotelString" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.getHotels(countryCode,hotelString,onSuccess,onFailed,userContext); }
+PageMethods.getCountryInfo= function(countryCode,destString,mealString,catString,onSuccess,onFailed,userContext) {
+/// <param name="countryCode" type="String">System.String</param>
+/// <param name="destString" type="String">System.String</param>
+/// <param name="mealString" type="String">System.String</param>
+/// <param name="catString" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.getCountryInfo(countryCode,destString,mealString,catString,onSuccess,onFailed,userContext); }
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="714D7FC4" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAG2lOR5y7x8sn/Tu9BApKABnISckGekkoqjiw1JySbM1LRYCVk67QdzdzGld1e1s+IZ59Gj0G14htg/yVtHCAlC8FguPWLLOEIniMaxgRbRZXqIJ0/8vr8kGcJIUJp/+YbH6NwVFrCjuONmQsy0N1enzwYpUH2p2p6b5cPSgfu7byM/Le8nJVJ2wrzgIun33x6JDMQ49gHwc3UO0T1sVDBKoJQBkRC4dMJ8+trlYSjpBvAwAdg5aZTCK7CLFvOJjR55VuWQkaw/0+iqTj4za2ghLSmmMy+zDQiEIBDM4un0NGTJ+af50L8f+OvDM1A1M4Nzphk+vdijGKXW3wsVlJF+tj+CITCPBnI8nXQOCZEMcArBrt9AJ48dSM7N4M9FiNzLDjKuozTDfWI74I7O171wtz5te6clcY5WF2YZJEkieO1McSsXajEQYaiCNfWqAoKqPoSQEGaifJHJma3MokAmfCs+CB9MCGKY6H3Bl8YF1MKIpcQbVdFCTMVWlZXeySvHxZwOs+QtHwDUwDWGNsfyn6ttCSZJ+wucVzPBZm3MwSLleBT2B9qxiIdPDuRYYC7gBbI4TVl4ky6t2Ci0ngTMrMp2PpqCQeOnH2nUGEcy4FT9xAWkEPXK11Wo1+wMNOTu6ksHYEWlz9mdFdHeXOXv7/YNBAQ3u4ZAuQGLJX3TLYIJXjqzZs85t15ZzJo9po40E4ebdxTGV7r8WcvcioqhFzM6LuqqZmsrmGcuRiebIfyfj4kdftRnsEfiDKHY1bv3t6sPYhwt1O0QGBq78KiLU4UkxQroVo88CvkfNin6JzN2T9d600yGTpugfr98He8mWcj/pMurpP6oHW+YgPT7oVdf4v0Ffyy+OsGyi2YqRfmdDZFNxodffmcmPjA1R5OKwGf3DEDWLGkfkHicDjraEyw13MAwKCr8EuNIvmIGGcJXGV4+MeJJu681ygT+9vH1BoVLztuwUI3sioZDEXp0bNeFdQ0GUUJqWi8kQRijZnX2lq30lYmbsHGRhCuApVqNpWnziA6NpDnk3fN4HGb29eB45yf+MB2YU4JSrC5YS2P8welkHaqqBI241KkTfCoVCdhZqskj3NddvD/evfpLPmMFYe4t7mapRI0cL6e5Shg2WOFJxlQij9L4VVIx+kk2CG801U4hkv8Cica3/HWdGeI/DbnVFmW0tc80ay4ZlJYW6fDGz1xKF2+h6+shVZ8KejJP9IGoZCr5RepU/Ifk1nMuE3U7PwMt5XWHVa94PVsfkqypfgqUeInNrS8BjJXt/8LKilfYR1CEd9lbJTKkPIWgblBuFK3VVGuYWeoapyc4etUMMJQb8ev3SxE/osihFfBg3BvVhcwQzRvKvnPjWgY+/HXn5efH4Lxa4o0t+ilOVkwBMoZop7OxTz1/0EzTBsa6/uaxf6KDrimFnMC5sUaJ67ChYAI9h/F2kIqE9bJAMjqKZnbv4FmsTQ9tyUa+TMNfFfpyiuo71cuYqVX6Fush/rSKVrjTlqyHWwnJqMxh8TkHeLgwB7nv+AAvR3TYYWnCOm0yx0pBgi0Km9QmD45pZNMJEuqHYVMGawwErINm3wO8+51Wjkskq8xtYYVD+eziX0kHxIvRByDPDN0+N7yRnNYpvayXy1ytmB3QfV4x+kVSKMiNKfx1FxlNIwjsRf6VPaLggGLGi/2yQwU16SylRqcPIpoXsfWhGRxgGn58vsAesFY2GKoYiSU+aSQaN8/I6mAAVVfDpwV/h8fP8V0YdinC17dEbx4ejUITRgBFc1jhZ4uEBFB/vHTdrNTkUc/eQUYFvlWDEWpkNaIwDvsrMLzR/fEMlE5VdkKBunh9b8St3R7t0QzmfrW7OcFUentARzbfJmbbI+e7Vtrkgee9wkFJXnhJvhaBiuOiAbGhjOL2SKri3O4skgk9FRmE0rlhyqnbyjIHyZL+6o7yX+9K1dtkRftHV0JD7im46V9MBcwjXfma96vCbUBQQf78uuoo6qWvhV7nmoXZz0x/d2PyL+8r3I9Pp6uZdxklhKb48JBzuah6Hj0sehwd7ZSTrdBBp7kSyI3ITHMyAyJFu0bJwFhbW7GLWG/VhUur+kG6BcgvAUqawhbtoXi7oL1I+cq9bSD99hG9YI9dSfewrTQo573jT1psKmL4GNtsgQV+WSs5AQTNTmuD6YqoxLKYQtRtlEsa1AUM/htFa9zaiaGG1CHWsXil2beUz6VlCi7T8l4QG5FqNyUY/CwoOjoEWXaNQerRjJHipDE3/z/nYZM4byWqyfRplaFspuNVOc7lsw35se5/MzI7XLSKm/Me8taGsxaqu+PcQE9vO3xwPH3Ec20Ma5PDW+8iqoB13+Pqq26o=" />
+</div>
+			<!--Таблица задающая общую структуру сайта по вертикали-->
+			<table border="0" cellpadding="0" cellspacing="0" style="background-image: url(Images/~~main_background.jpg); background-repeat: no-repeat; background-color: #FDFAD2; table-layout:fixed;">
+				<tr>
+					<td style="height: 158px; width: 950px;" align="left" valign="top">
+						<div style="position:relative;z-index:900;">
+							<!--Пальма-->
+							<div style="position: absolute;left:1px;top:1px;" id="layer2">
+								<img border="0" src="Images/palm.gif" width="177" height="172" alt="Palm" />
+                                <!--<span id="regName">ZOPO</span>-->
+                                &nbsp;</div>
+							<!--Конец Пальма-->
+							<!--Beilyssimo-->
+							<div style="position: absolute;left:164px; top:45px;" id="layer1">
+								<img border="0" src="Images/belissimoEND.gif" width="261" height="78" alt="Bellisimo" />
+							</div>
+							<!--Конец Beilyssimo-->
+							<!--Меню погода-->
+							<div style="position : absolute;left:214px; top:134px;  height:20px; font-size: 10px; color: white; font-family: Verdana; z-index: 900;">
+								<table cellpadding="0" border="0" style="table-layout:fixed;">
+									<tr>
+				                        <td valign="middle" width="16" align="left" style="height: 18px"><img alt="Ball" src="Images/ball.gif" /></td>
+				                        <td width="70"><a id="forecast" target="_blank" class="hlink" style="text-decoration: underline">Погода</a></td>
+										<td valign="middle" width="16" align="left"><img alt="Ball" src="Images/ball.gif" /></td>
+										<td width="80"><a ID="B4" class="hlink" href="Airports.aspx" style="text-decoration: underline">Аэропорты</a></td>
+										<td valign="middle" width="16" align="left"><img alt="Ball" src="Images/ball.gif" /></td>
+                                        <td width="150"><a href="javascript:showWin('Message.aspx');" id="A1" class="hlink" style="text-decoration: underline">Отправить сообщение</a></td>
+										<td valign="middle" width="16" align="left"><img alt="Ball" src="Images/ball.gif" /></td>
+										<td width="100"><a href="javascript:showWin('AgrTracking.aspx');" id="A2" class="hlink" style="text-decoration: underline">Статус заказа</a></td>
+										<td width="240" align="right" >
+                                            <span id="lblLogin" class="text" style="color:White;"></span>
+                                            <a href="Member/Cabinet.aspx"></a>&nbsp;
+                                            <a id="LoginStatus" onclick="$get(&quot;form1&quot;).target=&quot;_self&quot;;" class="text" href="javascript:__doPostBack(&#39;LoginStatus$ctl02&#39;,&#39;&#39;)" style="color:White; text-decoration:underline;">Войти</a>
+                                            <a href="Member/Register.aspx"><span id="lblRegister" class="text" style="color:White; text-decoration:underline;">Регистрация</span></a>
+                                        </td>
+									</tr>
+								</table>
+							</div>
+							<!--Конец Меню погода-->
+							<!--Меню о нас-->
+							<div style="position: absolute;left:166px; top:10px; width:200px; height:20px; font-size: 10px; color: white; font-family: Verdana;">
+								<table width="100%" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+                                    	<td style="height: 16px;width:60px;" align="center" class="hlink">Главная</td>
+										<td style="width:50px;border-right: white 1px solid; border-left: white 1px solid;" align="center"><a href="About.aspx" id="B2" class="hlink" style="text-decoration:none;">О нас</a></td>
+										<td style="width:70px;border-right: white 1px solid; border-left: white 1px solid;" align="center"><a href="Contacts.aspx" id="B3" class="hlink" style="text-decoration:none;">Контакты</a></td>
+                                        <td style="width:50px;" align="center"><a href="Forum" class="hlink" style="text-decoration:none;">Форум</a></td>
+                                     </tr>
+								</table>
+							</div>
+							<!--Конец Меню о нас-->
+							<!--Турагенство-->
+							<div style="position: absolute;left:470px; top:15px; text-align: right;">
+								<span style="font-size: 11pt; color: white; font-family: Verdana">ТУРИСТИЧЕСКОЕ АГЕНТСТВО "БЕЙЛИ"</span>
+							</div>
+							<!--Конец Турагенство-->
+							<!--Панель невизуальных контролов-->
+							<div style="position:absolute; left:792px; top:0px; vertical-align:top ; width: 136px; height: 112px;cursor: pointer;"  onclick="return location.href = 'SearchForm.aspx'">
+								<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ToolkitScriptManager1', 'form1', [], [], [], 90, '');
+//]]>
+</script>
+
+								
+								
+							</div>
+                            <!--Панель пользователя-->
+                            <div id="userName" class="text" style="position: absolute; top: 108px; left: 446px; color: White; font-size:16px; width: 412px; text-align: center;">
+                            </div>
+                            <!--Панель пользователя-->
+							<!--Конец Панель невизуальных контролов-->
+							<!--Панель расшифровки цены-->				
+							<div id="tt" style="display:none;position:absolute;left:328;top:420px;width:576px;height:95px;padding-right:5px;padding-left:10px;padding-top:5px;background-color:transparent;text-align:left;background-image:url(Images/bubble.gif);color:black;background-repeat:no-repeat;z-index:9999;" class="text">
+								Цены приведены в рублях (с учетом внутреннего курса туроператора) на ВСЕХ туристов,<br />
+								указанных в запросе, и включают: авиаперелет; проживание в отеле с выбранным типом<br />
+								питания; трансферы аэропорт - отель - аэропорт; медицинскую страховку.<br />
+								Цены не являются публичной офертой и носят исключительно информационный характер.
+							</div>		
+							<!--Конец Панель расшифровки цены-->
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td height="407" align="center" valign="top" style="">
+						<!--Основная таблица формы-->
+						<table width="900" cellpadding="0">
+													<tr>
+														<td width="25" height="25"></td>
+														<td width="140"></td>
+														<td width="25" ></td>
+														<td>&nbsp;</td>
+														<td width="20"></td>
+														<td width="180"></td>
+														<td width="25"></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td style="padding:0px;" align="left" valign="top">
+															<!--Панель Страны -->
+															<div id="pCountries" style="position:relative; width:140px; height:100%; top:-12px; overflow:auto;"></div>					
+															<!--Конец Панель Страны -->
+															<!--Панель Параметры -->
+															<div id="pParameters" style="position:relative;width:140px;height:360px;display:none;top:-4px;">
+																<table id="Table1" cellpadding='0' class="text">
+																	<tr><td class="text" style="height:28px; width: 140px; font-family:Verdana; font-size:13pt; color:White; font-weight:bold;" id="plCountry" valign="top">ГОРНЫЕ ЛЫЖИ</td></tr>
+																	<tr><td class="text" style="font-weight:bold; height: 12px; color:White;">Параметры запроса:</td></tr>
+																	<tr><td class="text" style="height:8px;"></td></tr>
+																	<tr><td style="padding-top:2px;">
+																		<span style="font-weight:bold;">Город вылета:</span><br />
+																		<span id="lCityFrom">Label</span></td></tr>
+																	<tr id="trDest"><td style="padding-top:2px;">
+																		<span style="font-weight:bold;">Курорты:</span><br />
+																		<span id="lDestinations"></span></td></tr>
+																	<tr><td style="padding-top:2px;">
+																		<span style="font-weight:bold;">Даты вылета:</span><br />
+																		<span id="lDates"></span></td></tr>
+																	<tr><td style="padding-top:2px;">
+																		<span style="font-weight:bold;">Продолжительность:</span><br />
+																		<span id="lDurations"></span></td></tr>
+																	<tr><td style="padding-top:2px;">
+																		<span style="font-weight:bold;">Размещение:</span><br />
+																		<span id="lAccomodation"></span></td></tr>
+																	<tr id="trMeal"><td style="padding-top:2px;">
+																		<span style="font-weight:bold;">Питание:</span><br />
+																		<span id="lMeals"></span></td></tr>
+																	<tr id="trCat"><td style="padding-top:2px;">
+																		<span style="font-weight:bold;">Категории отелей:</span><br />
+																		<span id="lCategories"></span></td></tr>
+																	<tr id="trPrice"><td style="padding-top:2px;">
+																		<span style="font-weight:bold;">Стоимость на всех:</span><br />
+																		<span id="lPrices"></span></td></tr>
+																	<tr><td style="padding-top:2px;">
+																		<span style="font-weight:bold;">Сортировка:</span><br />
+																		<span id="lSort"></span></td></tr>
+																	<tr><td style="height: 24px; padding-left:1px; width: 149px;"><a id="sHlink" href="javascript:selHotels();" class="hlink">Выбраны все отели</a></td></tr>
+																</table>
+																<!--Оранжевый Маркер-->
+																<div id="orangeMarker" style="position: absolute; left:-24px;top:2px;">
+																	<img alt="Orange block" src="Images/orange_block.gif"/>
+																</div>
+																<!--Конец Оранжевый Маркер-->
+																<!--Кнопка возврата-->
+																<div style="position: absolute;left:8px;bottom:16px;">
+                                                                   <img src="Images/returnButton_up.gif" id="returnButton" alt="Return" onclick="ret();" onmousedown="f_down(this);" onmouseup="f_up(this);" onmouseover="style.cursor=&#39;pointer&#39;;" />
+																</div>
+																<!--Конец Кнопка возврата-->
+															</div>
+															<!--Конец Панель Параметры -->
+														</td>
+														<td></td>
+														<td align="left" valign="top">
+															<div style="position:relative;">
+															    <!--Панель результатов -->
+																    <div id="pResult" style="position:absolute;top:0;display:none;z-index:100;">
+                                                                            <div id="iSearch" style="position:absolute;top:0;width:100%;"><center><span class='text'><br />Выполняется поиск (не более 90 секунд)</span><br /><br /><p style='margin-top:8px;margin-bottom:0px; width:150px;height:20px;'><img src='Images/loading_1.gif' alt='' /></p></center></div>
+																		    <table width="682" id="headsTable" cellpadding="0" cellspacing="0" class="bt" style="display:none;table-layout:fixed;text-align:left;">
+																			    <tr style="height:18px; color:White; background-color: #ff8c00;">
+																				    <td width="353" style="font-weight:bold " valign="middle">&nbsp;Отель, категория, тип номера</td>
+																				    <td width="75" align="left" style="vertical-align:middle ; font-weight:bold ">Цена руб.</td> 
+																				    <td width="50" align="left" style="vertical-align:middle ; font-weight:bold ">Дата</td> 
+																				    <td width="48" align="left" style="vertical-align:middle ; font-weight:bold;">Ночей</td>
+																				    <td width="62" align="left" style="vertical-align:middle ; font-weight:bold ">Пит.</td>  
+																				    <td width="94" align="left" style="vertical-align:middle ; font-weight:bold ">Курорт</td>
+																				    <td ></td>
+																			    </tr>
+																			    <tr style="height:4px; background-color:#f3f5f3"><td colspan="7"></td></tr>
+																		    </table>
+																		    <iframe id="rslt" name="rslt" frameborder="0" style="width:682px;height:296px;z-index:3;" marginheight="0" marginwidth="0" src="blank.aspx">
+                                                                            </iframe>
+																		    <table id="bottomTable" cellpadding="0" style="width:682px;background-color:#f3f5f3;display:none;" class="text">
+																			    <tr style="height:28px; color: #ff8c00;">
+																				    <td valign="bottom" style="width:100px; text-align:left;"><a class="clink" style="font-weight:bold; font-family:Arial Black, Verdana ; font-size:14px;text-decoration:underline; color: #ff8c00;" href="javascript:showDiscount();">СКИДКА 3%</a></td>
+                                                                                    <td valign="bottom" align="center" style="width:440px;" class="text">
+                                                                                        <!--<img src="Images/qm.jpg" alt="" /> - Проверка цены &nbsp;&nbsp;&nbsp;
+                                                                                        <img src="Images/ok.gif" alt="" /> - Цена актуальна &nbsp;&nbsp;&nbsp;
+                                                                                        <img src="Images/no_ok.gif" alt="" /> - Цена устарела-->
+                                                                                        <div id="acn" style="font-size:12px;font-weight:bold; color:red"></div>
+                                                                                    </td>                
+																				    <td valign="bottom" style="width:142px; font-weight:bold; text-align:right ; font-size:12px;"><u style=" cursor:default;" onmouseover="showToolTip();" onmouseout="hideToolTip();">Что входит в цену?</u>
+																				    </td>
+																			    </tr>
+																		    </table>																												
+																    </div>
+																    <!--Конец Панель результатов -->															
+																	<!--Панель запроса -->
+																	<div id="pForm" style="position:absolute;top:0px;z-index:900;">
+																		<!--Панель индикатор прогресса -->
+																		<div id="iLoading" style="position:absolute; top:6px; left:163px; width:72px; height:7px; display:block; vertical-align:top;">
+																			<img alt="Loading" src="Images/loading_1.gif" width="72" height="7" style="vertical-align:top;" />
+																		</div>
+																		<!--Конец Панель индикатор прогресса -->
+																		<table width="505" cellpadding="0">
+																			<tr class="text" style="background-color:#f3f5f4;">
+																				<td width="217" height="42" valign="top" style="padding-top:-20px;">
+																					<!--Панель индикации страны-->
+																					<span id="lCountry" style="color:DarkOrange;font-family:Verdana;font-size:13pt;font-weight:bold;position:relative;top:-4px;"></span>
+																					<!--Конец Панель индикации страны-->
+																				</td>
+																				<td width="120" style="padding-top: 3px; font-weight:bold;" align="right" valign="top">Город вылета:</td>
+																				<td width="148" align="right" valign="top">
+																								<select name="ddlCityFrom" id="ddlCityFrom" class="text" style="width:120px;">
+	<option value="1">Москва</option>
+
+</select>
+																				</td>
+																				<td width="20"></td>
+																			</tr>
+																		</table>
+																		<table id="queryTable" width="505" cellpadding="0">
+																			<!--Курорты-->
+																			<tr style="background-color: #e0ecef;" class="text">
+																				<td width="116"  align="left" valign="top" style="padding-top:2px; font-weight: bold; width: 136px;">
+																					&nbsp;Курорты:</td>
+																				<td width="1"></td>
+																				<td  valign="top">
+																					<div id="pDestinations"></div>
+																				</td>
+																				<td width="20" style="background-color: #f3f5f4"></td>
+																			</tr>
+																			<!--Конец Курорты-->
+																			<!--Дата начала-->
+																			<tr class="text" style="height:30px;">
+																				<td align="left" style="font-weight:bold;">
+																					&nbsp;Начало поездки:</td>
+																				<td></td>
+																				<td align="left">
+																					<table width="100%" cellpadding="0">
+																						<tr>
+																							<td style="width: 20px" align="left" class="text">с</td>
+																							<td style="width: 138px">
+																								<input name="tbDateFrom" type="text" value="27 октября 2016" id="tbDateFrom" class="text" oncopy=" return false;" onkeydown="return false;" onkeyup=" return false;" onpaste="return false;" style="background-color:White;border-style:Inset;width:110px;border-width:1px;" />
+																								<img alt="Calendar" id="imgFrom" src="Images/calendarbutton.png" style="vertical-align: text-bottom" />	
+																							</td>
+																							<td style="width:20px" align="left" class="text">по</td>
+																							<td style="width: 138px">
+																								<input name="tbDateTo" type="text" value="29 октября 2016" id="tbDateTo" class="text" oncopy=" return false;" onkeydown="return false;" onkeyup=" return false;" onpaste="return false;" style="background-color:White;border-style:Inset;width:110px;border-width:1px;" />
+																								<img alt="Calendar" id="imgTo" src="Images/calendarbutton.png" style="vertical-align: text-bottom" />	
+																							</td>
+																							<td></td>
+																						</tr>
+																					</table>
+																				</td>
+																				<td style="background-color: #f3f5f4"></td>
+																			</tr>
+																			<!--Конец Дата начала-->
+																			<!--Продолжительность-->
+																			<tr class="text" style=" background-color: #e0ecef; height:30px;">
+																				<td align="left" style="font-weight:bold;">
+																					&nbsp;Кол-во ночей:</td>
+																				<td></td>
+																				<td align="left">от&nbsp;
+																					<select name="ddlDurationFrom" id="ddlDurationFrom" class="text" onchange="setDurationTo();" style="background-color:White;width:46px;">
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option selected="selected" value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option>
+	<option value="17">17</option>
+	<option value="18">18</option>
+	<option value="19">19</option>
+	<option value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+	<option value="23">23</option>
+	<option value="24">24</option>
+	<option value="25">25</option>
+	<option value="26">26</option>
+	<option value="27">27</option>
+	<option value="28">28</option>
+
+</select>
+																					&nbsp;												
+																					&nbsp; &nbsp;до &nbsp;
+																					<select name="ddlDurationTo" id="ddlDurationTo" class="text" onchange="setDurationFrom();" style="background-color:White;width:46px;">
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option selected="selected" value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option>
+	<option value="17">17</option>
+	<option value="18">18</option>
+	<option value="19">19</option>
+	<option value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+	<option value="23">23</option>
+	<option value="24">24</option>
+	<option value="25">25</option>
+	<option value="26">26</option>
+	<option value="27">27</option>
+	<option value="28">28</option>
+
+</select></td>
+																				<td style="background-color: #f3f5f4"></td>
+																			</tr>
+																			<!--Конец продолжительность-->
+																			<!--В номере проживают-->
+																			<tr class="text" style="height:30px;">
+																				<td align="left" style="font-weight:bold;">
+																					&nbsp;В номере:</td>
+																				<td></td>
+																				<td>
+																					&nbsp; &nbsp;&nbsp;
+																				<select name="ddlAdQty" id="ddlAdQty" class="text" style="background-color:White;width:46px;">
+	<option value="1">1</option>
+	<option selected="selected" value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+
+</select>
+																				&nbsp;взрослых,&nbsp; &nbsp;дети &nbsp;&nbsp;&nbsp;
+																				<select name="ddlCh1Age" id="ddlCh1Age" class="text" style="background-color:White;width:46px;">
+	<option value="--">--</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option>
+	<option value="17">17</option>
+
+</select>&nbsp; лет и
+																				<select name="ddlCh2Age" id="ddlCh2Age" class="text" style="background-color:White;width:46px;">
+	<option value="--">--</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option>
+	<option value="17">17</option>
+
+</select> лет
+																			</td>
+																			<td style="background-color: #f3f5f4"></td>
+																		</tr>
+																		<!--Конец В номере проживают-->
+																		<!--Питание-->
+																		<tr class="text" style="background-color: #e0ecef;">
+																			<td align="left"  valign="top" style="font-weight: bold; padding-top: 2px;">&nbsp;Питание:</td>
+																			<td></td>
+																			<td valign="top">
+																				<div id="pMeals">
+																					<table width='96%' border="0" cellpadding="0" cellspacing="0" class="text">
+																						<tr>
+																							<td style="height: 10px;" width="16"><input type="checkbox" class="dcb" /></td>
+																							<td>Без питания</td>
+																							<td width="16"><input type="checkbox" class="dcb" /></td>
+																							<td>Завтрак</td>
+																							<td width="16"><input type="checkbox" class="dcb" /></td>
+																							<td>Полупансион</td>
+																						</tr>
+																						<tr>
+																							<td width="16"><input type="checkbox" class="dcb" /></td>
+																							<td>Полный пансион</td>
+																							<td width="16"><input type="checkbox" class="dcb" /></td>
+																							<td>Все включено</td>
+																						</tr>
+																					</table>
+																				</div>
+																			</td>
+																			<td style="background-color: #f3f5f4"></td>
+																		</tr>
+																		<!--Конец Питание-->
+																		<!--Категория отеля-->
+																		<tr class="text" style="height:30px;">
+																			<td align="left" style="font-weight:bold;">&nbsp;Категория:</td>
+																			<td></td>
+																			<td>
+																				<div id="pCategories">
+																					<table width='96%' cellpadding="0" class="text">
+																						<tr style="height: 10px;"  onclick="filterHotels();">
+																							<td width="16" style="height: 10px"><input type="checkbox" id="cat0" value="2" class="dcb" /></td>
+																							<td style="height: 10px">2*</td>
+																							<td width="16" style="height: 10px"><input type="checkbox" id="cat1" value="3" class="dcb" /></td>
+																							<td style="height: 10px">3*</td>
+																							<td width="16" style="height: 10px"><input type="checkbox" id="cat2" value="4" class="dcb" /></td>
+																							<td style="height: 10px">4*</td>
+																							<td width="16" style="height: 10px"><input type="checkbox" id="cat3" value="5" class="dcb" /></td>
+																							<td style="height: 10px">5*</td>
+																							<td width="16" style="height: 10px"><input type="checkbox" id="cat4" value="6" class="dcb" /></td>
+																							<td style="height: 10px">Клубы</td>																		
+																						</tr>
+																					</table>
+																				</div>														
+																			</td>
+																			<td style="background-color: #f3f5f4"></td>
+																		</tr>
+																		<!--Конец Категория отеля-->
+																		<!--Стоимость на всех-->
+																		<tr class="text" style="height:30px; background-color: #e0ecef;">
+																			<td align="left" style="font-weight:bold;">&nbsp;Стоимость:</td>
+																			<td></td>
+																			<td>
+																				от&nbsp;
+																				<input name="tbPriceFrom" type="text" id="tbPriceFrom" class="text" style="background-color:White;border-style:Inset;width:60px;border-width:1px;" />
+																				&nbsp; до &nbsp;
+																				<input name="tbPriceTo" type="text" id="tbPriceTo" class="text" style="background-color:White;border-style:Inset;width:60px;border-width:1px;" />
+																				&nbsp;&nbsp;<span id="lCurrency">???????</span>&nbsp;&nbsp;на всех
+																			</td>
+																			<td style="background-color: #f3f5f4"></td>
+																		</tr>
+																		<!--Конец Стоимость на всех-->
+																	</table>
+																	<div style="position:absolute; top:304px;z-index:-1;">
+																		<table width="505" cellpadding="0">	
+																			<!--Сортировка и кнопка -->
+																			<tr class="text" style="height:40px; background-color: #f3f5f4;">
+																				<td width="127" align="left" style="font-weight:bold;"><!--&nbsp;Сортировка:--></td>
+																				<td width="40" align="left" style="">&nbsp;&nbsp;<input type="checkbox" id="acb" name="acb" value="1" class="dcb" 
+                                                                                        style="height:16px; width:12px;"/>
+																				</td>
+                                                                                <td width="200" align="left" >Учитывать топливный сбор</td>
+																				<td align="left" valign="middle">																			
+																					<input type="image" name="findButton" id="findButton" onmouseup="f_up(this);" onmousedown="f_down(this);" src="Images/findButton_up.gif" onclick="find();" style="border-width:0px;text-decoration:none;" />
+																				</td>
+																				<td width="20" style="background-color: #f3f5f4;"></td>
+																			</tr>
+                                                                         </table>
+																	</div>														
+																</div>
+																<!--Конец Панель запроса -->
+																<!-- Панель заголовков -->			
+																<!--<div id="headsTable" style="position:absolute; left:2px; top:0px; width:682px; display: none;" >
+																</div>-->
+																<!--Конец Панель заголовков -->													
+																<!--Панель результатов -->
+																
+																<!--<div id="bottomTable" style="position:absolute; left:4px; top:327px; width:678px; display:none; cursor: pointer;">
+
+																</div>-->
+																<!--Конец Панель результатов -->
+															</div>
+														</td>
+														<td width="12" valign="top" align="left"></td>
+														<td  id="tblHot" style="width: 180px; padding: 0;" valign="top" align="left">
+
+
+			<!--Панель отелей-->
+			<div id="hotelsPanel" style="position:relative; width:100%;height:348px; background-color:#e0ecef; z-index: 777;">
+				<!--Заголовок Отели-->
+				<table width="100%"><tr><td class="head" height="24" valign="middle" align="center">Отели</td></tr></table>
+				<!--<span class="head" style="display:block; text-align:center; height:24px; padding-top:4px;">Отели</span>-->
+				<!--Конец Заголовок Отели-->				
+				<!--Индикатор загрузки отелей-->				
+				<div id="hIndicator" class="text" style="position:absolute; top: 30px; width: 100%; text-align: center; z-index:999;">
+					<img alt="Loading" src="images/loading_1.gif" /><br/><br/>загрузка отелей
+				</div>
+				<!--Конец Индикатор загрузки отелей-->				
+				<!--Отели-->
+				<div id="pHotels" style="position:relative;width:178px;height:206px;overflow:auto;text-align:left;padding-left:2px;"></div>
+					<input id="tmplBox" onkeyup="filterHotels();" class="text" type="text" style="height: 16px; width: 110px; border-width:1px; margin-top: 6px; margin-left: 18px"/><font class="text"> - поиск</font>
+				<!--Конец Отели-->
+				<!--Заголовок Выбранные отели-->
+				<table width="100%"><tr><td class="head" height="24" valign="middle" align="center">Выбранные отели</td></tr></table>
+				<!--<span class="head" style="display:block; text-align:center; height:24px; padding-top:4px;">Выбранные отели</span>				-->
+				<!--<span class="head" style="display:block; text-align:center; padding-top:10px; padding-bottom:10px;">Выбранные отели</span>-->
+				<!--Конец Заголовок Выбранные отели-->				
+				<!--Индикатор Выбраны все отели-->
+				<div  id="son"  class="text" style="position: absolute; width:180px; color:Green; padding-top:10px; text-align:center;">выбраны все отели</div>
+				<!--Индикатор Выбраны все отели-->
+				<!--Выбранные отели-->
+				<div id="pShotels" style="position:relative;width:178px;height:64px;overflow:auto;text-align:left;padding-left:2px;"></div>
+				<!--Конец Выбранные отели-->
+			</div>
+			<!--Конец Панель отелей-->
+
+
+															
+														</td>
+														<td></td>
+													</tr>	
+												</table>												 
+						<!--Конец Основная таблица формы-->					
+					</td>
+				</tr>
+					<tr>
+						<td height="27" align="left" valign="top">
+                            <div style="position:relative; top:0; height: 27px;">
+                                  <div style="position:absolute; height:27px; width:950px;">
+                                         <img src="Images/marquee_background.jpg" style="height: 27px; width: 950px;" border="0" alt="Marquee" />
+                                  </div> 
+				                  <div id="mar" style="position:absolute; height:27px; width:884px; left:33px; text-align: center; color: White;">
+                                        <!--<marquee loop="5" scrollamount="4" style="font-family:Verdana; font-size:12px; font-weight:bold; color:White; ">-->
+			                            <marquee scrollamount="4" style="font-family:Verdana; font-size:12px; font-weight:bold; color:White; ">
+                                            <!--Внимание! График работы в праздники: 1, 2, 3 мая а также 8 и 9 мая - выходные дни. Телефон для экстренной связи: +7 (909) 997-77-77.-->
+                                            <!--Внимание! Возможны туры в Египет с вылетом из Минска!--></marquee>
+
+             			          </div>
+                           </div>
+						</td>
+					</tr>
+					<tr>
+						<td height="258" align="left" valign="top" style="color: #ff8040; background-image: url('images/bottom_background.jpg');" class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					    	<div style="position:relative;">
+
+                                    <div style="position: relative; left: 80px; top: 20px; width: 600px;  font-size: 12px; color: White;">
+                                        <div style="position: absolute; left: 130px; top: 14px; height: 100px; color: White; border-width: 2px; padding: 4px;">
+                                            <a href="Europe.aspx" style="text-decoration: none; color: White;" target="_blank">
+                                                <img src="Images/europa_1.jpg" alt="Европа" />
+                                            </a> 
+                                        </div>
+                                        <div style="position: absolute; left: 180px; top: 4px; height: 100px; color: White; border-width: 2px; padding: 4px;">
+                                            <a href="Europe.aspx" style="text-decoration: none; color: White;" target="_blank">
+                                                <font style="margin-left:46px;">Европа:</font><br />
+                                                Горные лыжи, Отдых на море<br />
+                                                Сити-туры, Термы & SPA<br />
+                                                Экскурсионные туры
+                                            </a>
+                                        </div>
+                                        <div style="position: absolute;left:50px;top:-60px; width:700px; height:40px; text-align: center;">
+                                                <!--Внимание! По техническим причинам работает только телефон (495) 272-12-14.<br />-->
+                                                Внимание! Наш офис переехал с 3-го на 5-ый этаж, комната 501.<br/>
+                                                <!--График работы в праздники: 1, 2, 3 мая а также 8 и 9 мая - выходные дни. Телефон для экстренной связи: +7 (909) 997-77-77-->
+                                        </div>
+                                        <div style="position: absolute; left: 400px; top: 14px; height: 100px; color: White; padding: 4px;">
+                                            <a href="Cruises.aspx" style="text-decoration: none; color: White;" target="_blank">
+                                                <img src="Images/cruise.jpg" alt="Европа" />
+                                            </a> 
+                                        </div>
+                                        <div style="position: absolute; left: 450px; top: 20px; height: 100px; color: White; padding: 4px;">
+                                            <a href="Cruises.aspx" style="text-decoration: none; color: White;" target="_blank">
+                                                <font>Круизы</font>
+                                            </a>
+                                        </div>
+                                    </div> 
+
+                                <div style="position: absolute; left: 20px; top: 224px; height: 20px;">
+                                    <table border="0" cellpadding="0" cellspacing="0" class="text" style="table-layout:fixed;">
+                                        <tr>
+                                            <td style="width:120px; height: 16px; color:#a52a2a;" align="left">
+                                                2001-2015 © Baily
+                                            </td>
+                                            <td style="width:60px;" align="center">
+                                                <a id="A3" class="hlink" style="text-decoration:none; color:#a52a2a;">Главная</a>
+                                            </td>
+                                            <td style="width:50px; border-left: brown 1px solid;" align="center">
+                                                <a href="About.aspx" id="A4" class="hlink" style="text-decoration: none; color: #a52a2a;">О нас</a>
+                                            </td>
+                                            <td style="width:70px; border-left: brown 1px solid;" align="center">
+                                                <a href="Contacts.aspx" id="C3" class="hlink" style="color: #a52a2a; text-decoration: none;">Контакты</a>
+                                            </td>
+                                            <td style="width: 50px; border-left: brown 1px solid;" align="center">
+                                                <a href="Forum" class="hlink" style="color: #a52a2a; text-decoration: none;">Форум</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+								<!--<div style="position: absolute;left:20px;top:224px;width:400px;height:20px;">
+									<table width="100%" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td style="height:16px;color:#a52a2a;" class="text">2001-2014 © Baily</td>
+											<td style="width:60px;color:#a52a2a;" align="center" class="text"><a href="SearchForm.aspx" class="hlink" style="text-decoration:none;color:#a52a2a;">Главная</a></td>
+											<td style="width: 60px; border-right: brown 1px solid; border-left: brown 1px solid;" align="center"><a href="About.aspx" class="hlink" style="text-decoration:none;color:#a52a2a;">О нас</a></td>
+											<td align="left"><a href="Contacts.aspx" class="hlink" style="color:#a52a2a;text-decoration:none;">&nbsp;&nbsp;&nbsp;Контакты</a></td></tr>
+									</table>
+								</div>-->
+								<!-- Турреестр -->
+                                <div style="position: absolute;left:160px;top:84px; width:200px; height:20px">
+                                    <!-- banner turreestr.ru 
+                                        <a href="http://turreestr.ru/ta/346" title="Рейтинг турфирм и туроператоров" target="_blank"><img src="http://turreestr.ru/img.php?type=1&id=346" width="88" border="0" height="31" alt=" Отзывы о турфирмах и туроператорах " /></a>
+                                     banner turreestr.ru -->
+								</div>			
+								<!--Конец Турреестр -->
+								<!--<div style="position: absolute;left:200px;top:24px; width:200px; height:20px">
+									<img src="Images/cards.gif" />
+								</div>-->			
+							</div>
+						</td>
+					</tr>
+			</table>
+			<!-- Плавающая панель выбранных отелей-->
+			<div id="floatPanel" style="position: absolute; top: 209px; left: 306px; width:186px; text-align:left; display:none;background-color:#f3f5f3; filter: alpha(opacity=90, style=0); opacity:0.9;z-index:999; border-style: solid; border-width: 2px; border-color: #0080b0;">
+	
+				<table style="cursor:move; width: 186px; background-image: url(Images/float_panel_1.gif); background-repeat:no-repeat; " cellpadding="0" cellspacing="0" border="0">
+					<tr  style="">
+						<td id="sp1" align="right" valign="middle" style="height:20px;"><!--background-color:#6ec7e7;-->
+						</td>
+						<td style="width:20px; padding-right:3px; height: 20px;" align="right" ><img alt="Close" src="Images/close.gif" style="cursor:default;"  onclick="$get('floatPanel').style.display='none';"/></td>
+					</tr>
+					<tr>
+						<td height="8" colspan="2">
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="0" cellspacing="0" border="0">
+            		<tr>
+			            <td width="5"></td>
+			            <td>
+                            <div id="ssHotels" style="overflow:auto ; position:relative ; height:112px;  width:176px;">
+	    		                <table id="еshotels" border="0" cellpadding="0" cellspacing="0" class="hotels" width="158" style="">
+    				                <colgroup>
+						                <col width="18" /><col width="118" /><col width="22" />
+						                <col width="0" /><col width="0" /><col width="0" />
+					                </colgroup>
+					                <tr>
+						                <td>
+						                <input type="checkbox" id="Checkbox19" checked="checked" onclick="dr(this);" /></td>
+						                <td>Abou Sofiene</td>
+						                <td>&nbsp;4*</td>
+						                <td class="n">29</td>
+						                <td class="n">4</td>
+						                <td class="n">1</td>
+					                </tr>
+                                </table>                             
+			                </div> 
+				        </td> 
+				    </tr>     
+				</table> 
+				<table style="height: 8px;" cellpadding="0"><tr><td></td></tr></table>
+			
+</div>
+			<!-- Конец Плавающая панель выбранных отелей-->
+			
+
+
+<!--Невидимые поля-->
+<input type="hidden" name="countryCode" id="countryCode" value="TAI" />
+<input type="hidden" name="destString" id="destString" />
+<input type="hidden" name="mealString" id="mealString" />
+<input type="hidden" name="catString" id="catString" />
+<input type="hidden" name="hotelString" id="hotelString" />
+<input type="hidden" name="wWidth" id="wWidth" />
+<input type="hidden" name="wHeight" id="wHeight" />
+<input type="hidden" name="tempTableName" id="tempTableName" />
+
+<!--Конец Невидимые поля-->
+<!--Скрипты выполняемые в конце загрузки страницы-->
+		<script type="text/javascript">
+            $get("iLoading").style.display="block";
+			getCountries($get("countryCode").value);
+			getCountryInfo($get("countryCode").value, $get("destString").value, $get("mealString").value, $get("catString").value);
+			getHotels($get("countryCode").value,$get("hotelString").value);
+			if ($get("hotelString").value!=""){$get("son").style.display="none"};
+			setForecast($get("countryCode").value);
+			//getDimensions();
+			//setDimensions();
+
+//			function setDimensions() {
+//			    //alert($get("wWidth").value + "    " + $get("wHeight").value);
+//            if ($get("wWidth") && $get("wWidth").value!=0)
+//            {
+//			    try {
+//                    if (typeof (window.innerWidth) == 'number') {
+//			            //Non-IE
+//			            window.innerWidth = $get("wWidth").value;
+//			            window.innerHeight = $get("wHeight").value;
+//			        } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+//			            //IE 6+ in 'standards compliant mode'
+//			           document.documentElement.clientWidth = $get("wWidth").value ;
+//			           document.documentElement.clientHeight = $get("wHeight").value ;
+//			        } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+//			            //IE 4 compatible
+//			           document.body.clientWidth = $get("wWidth").value;
+//			           document.body.clientHeight = $get("wHeight").value;
+//			       }
+//			        //alert($get("wWidth").value);
+//			        //alert($get("wHeight").value);
+//			    }
+//			    catch (e) { };
+//			} 
+//}
+
+//			function getDimensions() {
+//            try
+//            {
+
+//			    if (typeof (window.innerWidth) == 'number') {
+//			        //Non-IE
+//			        $get("wWidth").value = window.innerWidth;
+//			        $get("wHeight").value = window.innerHeight;
+//			    } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+//			        //IE 6+ in 'standards compliant mode'
+//			        $get("wWidth").value = document.documentElement.clientWidth;
+//			        $get("wHeight").value = document.documentElement.clientHeight;
+//			    } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+//			        //IE 4 compatible
+//			        $get("wWidth").value = document.body.clientWidth;
+//			        $get("wHeight").value = document.body.clientHeight;
+//			    }
+//			    alert($get("wWidth").value);
+//			    alert($get("wHeight").value);
+//                }
+//                catch(e) {};
+//            }
+
+		</script>
+<!--Конец Скрипты выполняемые в конце загрузки страницы-->		
+	
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.CalendarBehavior, {"button":$get("imgFrom"),"id":"CalendarExtender1"}, {"hiding":getCalFrom,"showing":setCalFrom}, null, $get("tbDateFrom"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.CalendarBehavior, {"button":$get("imgTo"),"id":"CalendarExtender2"}, {"hiding":getCalTo,"showing":setCalTo}, null, $get("tbDateTo"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.FloatingBehavior, {"handle":$get("sp1"),"id":"DragPanelExtender1"}, null, null, $get("floatPanel"));
+});
+//]]>
+</script>
+</form> 
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+    <!-- Полупрозрачная прокладка -->
+    <div id="pad" style="position:absolute;background-color:black;filter:alpha(opacity=80,style=0);opacity:0.8;z-index:998;display:none;">
+	</div>
+    <!-- Конец Полупрозрачная прокладка -->
+
+   <!-- Активное окно --> 
+   <div id="wnd" style="position: absolute; z-index: 999; display: none;
+					 background-color:#0198cf; font-family: Verdana, Arial; font-size:12px; font-weight:normal;">
+
+	    <!-- Крестик для закрытия -->
+	    <div style="position: absolute; top: 4px; right: 4px;"><img src="Images/close.gif" alt="Close" onclick="hidePad();" style="cursor:pointer;" />
+	    </div>
+	    <!-- Конец Крестик для закрытия -->
+	    
+	    <!-- Невидимая панель для ANSWER -->
+	    <div id="answerPanel" style="display: none;">
+	    </div>
+	    <!-- Конец Невидимая панель для ANSWER -->
+	
+	    <center>
+        <table id="main" border="0" cellpadding="0" cellspacing="0" style="background-color:#0198cf;table-layout:fixed;">
+            <tr>
+                <td width="25" height="20"></td><td style="width:580px;"></td><td style="width:25px;"></td> 
+            </tr>
+            <tr>
+                <td height="25" style="background-image:url('Images/New/left_top.gif');"></td>
+                <td style="background-image:url('Images/New/top.gif');"></td>
+                <td style="background-image:url('Images/New/right_top.gif');"></td>
+            </tr>
+            <tr>
+                <td style="background-image:url('Images/New/left.gif');"></td>
+                <td align="center" valign="top">
+                    <div id="waitPanel" style="width: 580px; height: 140px; background-color: #f3f5f2; padding-top: 10px; padding-bottom: 10px; display: block;">
+                        <font style="font-family: Verdana, Arial; font-size:12px; font-weight:normal;">Выполняется ON-LINE запрос к базам туроператоров.ется ON-LINE запрос к базам туроператоров.ется ON-LINE запрос к базам туроператоров.</font>
+                        <br />
+                        <br />
+                        <img alt="Loading" src="Images/loading_1.gif" />
+                    </div>
+                    <div id="parametersPanel" style="width:580px;background-color:#e0ecef;padding-top:0;padding-bottom:10px;padding-left:0; display: none; font-family: Verdana, Arial; font-size:12px; font-weight:normal;">
+                        asdasdasda</div>
+                    <div id="resultPanel" style="width:580px; background-color: #f3f5f3; padding-top: 8px; padding-bottom: 10px; display: none;font-family: Verdana, Arial; font-size:12px; font-weight:normal;">
+                    </div>
+                    <div id="additionalPanel" style="width:580px;background-color:#f3f5f3;padding-bottom:10px;display: none;font-family: Verdana, Arial; font-size:12px; font-weight:normal;">
+                        <table class="add-table">
+                            <tr>
+                                <td>werwerwerwer</td>
+                                <td>gfgdfgdfgdfgdf</td>
+                                <td>dfgdfgdfgdfgdfgdfgdf</td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <td style="background-image:url('Images/New/right.gif');"></td>
+           </tr>
+           <tr>
+                <td height="25" style="background-image:url('Images/New/left_bottom.gif');"></td>
+                <td style="background-image:url('Images/New/bottom.gif');"></td>
+                <td style="background-image:url('Images/New/right_bottom.gif');"></td>           
+           </tr>
+        </table>
+       </center>
+   </div> 
+   <!-- Конец Активное окно -->    
+
+<script type="text/javascript">
+    window.onscroll = scrollFix;
+    window.onresize = sizeFix;
+   function sendMessage()
+   {
+            var t;
+            t = $get("pCell").innerText;
+            if (navigator.userAgent.indexOf("Firefox")>-1)
+                {
+                    t = $get("pCell").innerHTML;
+                    while (t.indexOf("<br>")>-1)
+                      {
+                         t = t.replace("<br>","\n");
+                      }
+                } 
+            t="Пожалуйста, сообщите о возможности организации тура со следующими параметрами:\n"+t;
+            t=t + "\nПитание: "+$get("meal").value;
+            t=t + "\nЦена: "+$get("priceRub").value+" руб.";
+            showWin("Message.aspx?text="+_encode(t)+"&title=Для менеджера");
+   }
+
+   function _encode(string)
+   {
+		    //string = string.replace(/\r\n/g,"%0D");
+		    //return string;
+		    
+		    string=encodeURIComponent(string);
+		    return string;
+   }
+</script>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!--<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+			var pageTracker = _gat._getTracker("UA-10228260-1");
+			pageTracker._trackPageview();
+		}
+	catch(err) {}
+</script>-->
+<!-- Yandex.Metrika -->
+<script src="//mc.yandex.ru/resource/watch.js" type="text/javascript"></script>
+<script type="text/javascript">
+    try { var yaCounter233128 = new Ya.Metrika(233128); } catch (e) { }
+</script>
+<noscript><div style="position: absolute;"><img src="//mc.yandex.ru/watch/233128" alt="Yandex" /></div></noscript>
+<!-- /Yandex.Metrika -->
+</center> 
+<!-- BEGIN JIVOSITE CODE {literal} -->
+
+<script type='text/javascript'>
+
+(
+	function(){ var widget_id = 'X9RG8O4ueS';
+
+		var s = document.createElement('script'); 
+		s.type = 'text/javascript';
+		s.async = true;
+		s.src = '//code.jivosite.com/script/widget/'+widget_id;
+		var ss = document.getElementsByTagName('script')[0];
+		ss.parentNode.insertBefore(s, ss);
+}
+)();
+</script>
+<!-- {/literal} END JIVOSITE CODE -->
+</body>
+</html>

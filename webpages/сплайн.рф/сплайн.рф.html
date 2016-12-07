@@ -1,0 +1,1230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head>
+<!--Copyright (c) Pro-is – I n f o @ p r o – i s  . r u - http://www.pro-is.ru/-->
+<title>Компания "Сплайн" – поставка и сопровождение КонсультантПлюс, подписка на журнал «Главная книга», семинары для бухгалтера</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="keywords" content="консультант плюс, консультант, КонсультантПлюс, главная книга, законодательство, кодекс, формы документов, судебная практика, календарь бухгалтера, обзоры законодательства, бухгалтерский учет, налогообложение, семинары, путеводитель, консультант плюс онлайн, финансовые консультации, кадровые документы, скачать Консультант Плюс демо, купить Консультант Плюс, бухгалтерская пресса, комментарии законодательства, демо консультант плюс бесплатно, бюджет, кодексы РФ, документы, налоги, нк РФ, налоговый кодекс, тк РФ, трудовой кодекс, бухгалтерский баланс, налоговая инспекция, фсс" http-equiv="keywords"/>
+<meta name="description" content="Компания «Сплайн» - региональный информационный центр КонсультантПлюс. Законодательство, финансовые и кадровые консультации, судебная практика, формы документов, законопроекты." http-equiv="description"/>
+<link rel="shortcut icon" href="/favicon.ico">
+
+<link rel="stylesheet" href="/css/styles00.css" type=text/css>
+<link rel="stylesheet" href="/css/breadcrumbs00.css" type=text/css>
+<link rel="stylesheet" href="/css/sps00.css" type=text/css>
+
+<link rel="stylesheet" href="/css/staff_carousel.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="/js/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="/js/staff_carousel.js"></script>
+
+<script type="text/javascript" charset="windows-1251">
+var stuffs;
+var nmax;
+var prev;
+var next;
+
+function gogo(id) {
+
+    $('#text_hold').fadeOut('slow', function() {$(this).html('' + stuffs[id]['status'] + ''  )}).fadeIn('slow');
+    $('#img_i'    ).fadeOut('slow', function() {  this.src = '' + stuffs[id]['img'] + ''     ;}).fadeIn('slow');
+    $('#img_c'    ).fadeOut('slow', function() {  this.src = '' + stuffs[id]['citation'] + '';}).fadeIn('slow');
+
+    if (id < 1)     { prev = nmax;} else { prev = 1 - 1 + id - 1 ; }
+    if (id >= nmax ) { next = 0;  } else { next = 1 - 1 + id + 1 ; }
+}
+
+$(document).ready( function(){
+stuffs =  [ 
+{
+    'img'      : 'uploads/staff/PetrovMU_big02.png',
+    'simg'     : 'uploads/staff/petrov_small_02.png',
+    'status'   : '<span style="font-family: arial,helvetica,sans-serif; font-weight:bold;">Петров Михаил</span><br />' + 
+                 '<span style="font-family: arial,helvetica,sans-serif; font-style:italic;">Руководитель департамента информационного обеспечения</span>',
+    'citation' : 'uploads/staff/slogan02.png'
+},{
+    'img'      : 'uploads/staff/moroz_ss_big.png',
+    'simg'     : 'uploads/staff/smoroz_small_02_1.png',
+    'status'   : '<span style="font-family: arial,helvetica,sans-serif; font-weight:bold;">Мороз Сергей</span><br />' + 
+                 '<span style="font-family: arial,helvetica,sans-serif; font-style:italic;">Генеральный директор</span>',
+    'citation' : 'uploads/staff/slogan04.png'
+},{
+    'img'      : 'uploads/staff/BudnikovS01.png',
+    'simg'     : 'uploads/staff/budnikov_small_01_2.png',
+    'status'   : '<span style="font-family: arial,helvetica,sans-serif; font-weight:bold;">Будников Сергей</span><br />' + 
+                 '<span style="font-family: arial,helvetica,sans-serif; font-style:italic;">Руководитель Департамента продаж</span>',
+    'citation' : 'uploads/staff/slogan00.png'
+} ];
+
+nmax= stuffs.length - 1;
+var s = '';
+for (i = 0; i < stuffs.length; i++) {
+     s = s + '<a class="theme" data-simg="'+ i + '" ><img src="' + stuffs[i]['simg'] + '" alt="' + 
+                                stuffs[i]['status'].replace(/<.*?>/g, ' ').replace(/  /g, ' ') +
+                                '" height=180 width=160   data-imgs="'+ i + '"/></a>' ;
+}
+$('#slider-list').html(s);
+$('#slider-stage').carousel('#previous', '#next');
+
+gogo(nmax);
+}) // End of  $(document).ready( function() ...
+
+$(function(){ $('#goprev').bind('click',function(event) {
+                                      $('#previous').click(); 
+                                      gogo(prev);})});
+
+$(function(){ $('#gonext').bind('click',function(event) {
+                                      $('#next').click();
+                                      gogo(next);})});
+
+$(function(){$("a[data-simg]").bind('click',function(event) {
+    var position3 = prev;
+    var positionX = $(this).attr("data-simg");
+
+    if (positionX == position3) {
+          $('#previous').click();
+
+    } else {
+          if (positionX < position3) {
+              for (i = 0; i < (position3 - positionX +1); i++) { $('#previous').click(); }                      
+          };
+    };
+    gogo(eval($(this).attr("data-simg")));
+  })
+}); 
+</script>
+
+
+</head>
+<body>
+<div style="margin: 0 auto; width:95%;">
+<table width="95%" cellpadding="0" cellspacing="0" 
+       border=0 style="height:5px; font-size:5px; line-height:5px;">
+    <tr>
+        <td width="26"  style="background:url(/images/topline_l.png); background-repeat:no-repeat;">&nbsp;</td>
+        <td style="background:url(/images/topline.png);">&nbsp;</td>
+        <td width="31"  style="background:url(/images/topline_r.png); background-repeat:no-repeat;">&nbsp;</td>
+    </tr>
+</table>
+<table width="95%" cellpadding="0" cellspacing="0" border="0">
+    <tr><td valign="top" width="150" style="padding-top:10px;"><a href="/"><img src="/images/logo.png" /></a></td>
+        <td valign="top" style="text-align:left; padding-top:30px;" width="220"><span 
+            style="color:#bebebe; font-style:italic; font-size:12px;">Горячая линия КонсультантПлюс:</span>
+                    <br /><span style="font-size:18px;"><span style="color:#aeaeae;">+7 (495)</span> 755-88-97</span><br /><br /><a 
+            href="/zao/contacts/#phones" style="text-decoration:none; 
+                                                font-style:italic; 
+                                                border-bottom:1px dashed #f1890e;
+                                                font-size:12px;">Телефоны всех служб</a></td>
+        <td><img src="/images/top_arr.png" align="right" /></td>
+        <td valign="top" style="text-align:left; padding-top:30px;">
+            <span style="color:#bebebe; font-style:italic; font-size:12px;">Наш адрес:</span>
+            <br /><span style="font-size:12px;">105005, г. Москва, ул. Бауманская, д. 5, стр. 1</span>
+            <br /><br /><a href="/zao/contacts/#address" style="text-decoration:none; font-style:italic; 
+                                                                border-bottom:1px dashed #f1890e;
+                                                                font-size:12px;">Как к нам проехать</a></td>
+        <td><img src="/images/top_arr.png" align="right" /></td>
+        <td width="250" valign="top"><a href="/private_room/"><img src="/images/lk.png" style="margin-left:76px;" /></a><br />
+            <br /><img src="/images/hotline.png" align="left" style="padding-right:10px; margin-top:-4px;" />
+            <a href="/feedback/" style="text-decoration:none; font-style:italic; 
+                                 border-bottom:1px dashed #f1890e;
+                                 font-size:12px;">Задать вопрос специалисту</a><br /><span 
+                                 style="color:#bebebe; 
+                                        font-style:italic; 
+                                        font-size:12px;">Наши специалисты всегда рады вам помочь!</span></td></tr>
+</table>
+
+<script type="text/javascript">
+function show(id) {
+    if (document.getElementById('sub_'+id+'')) { document.getElementById('sub_'+id+'').style.display='block'; }
+}
+function show2(id) {
+   if (document.getElementById('sub_sub_'+id+'')) {document.getElementById('sub_sub_'+id+'').style.display='block';}
+}
+function hide() {
+        if (document.getElementById('sub_69'))
+            document.getElementById('sub_69').style.display='none';            
+        if (document.getElementById('sub_70'))
+            document.getElementById('sub_70').style.display='none';            
+        if (document.getElementById('sub_72'))
+            document.getElementById('sub_72').style.display='none';            
+        if (document.getElementById('sub_73'))
+            document.getElementById('sub_73').style.display='none';            
+} // End of function hide()
+
+function hide2() {
+        if (document.getElementById('sub_sub_75'))
+            document.getElementById('sub_sub_75').style.display='none';                
+        if (document.getElementById('sub_sub_81'))
+            document.getElementById('sub_sub_81').style.display='none';                
+        if (document.getElementById('sub_sub_85'))
+            document.getElementById('sub_sub_85').style.display='none';                
+        if (document.getElementById('sub_sub_89'))
+            document.getElementById('sub_sub_89').style.display='none';                
+        if (document.getElementById('sub_sub_95'))
+            document.getElementById('sub_sub_95').style.display='none';                
+        if (document.getElementById('sub_sub_119'))
+            document.getElementById('sub_sub_119').style.display='none';                
+        if (document.getElementById('sub_sub_126'))
+            document.getElementById('sub_sub_126').style.display='none';                
+        if (document.getElementById('sub_sub_128'))
+            document.getElementById('sub_sub_128').style.display='none';                
+        if (document.getElementById('sub_sub_76'))
+            document.getElementById('sub_sub_76').style.display='none';                
+        if (document.getElementById('sub_sub_90'))
+            document.getElementById('sub_sub_90').style.display='none';                
+        if (document.getElementById('sub_sub_96'))
+            document.getElementById('sub_sub_96').style.display='none';                
+        if (document.getElementById('sub_sub_110'))
+            document.getElementById('sub_sub_110').style.display='none';                
+        if (document.getElementById('sub_sub_120'))
+            document.getElementById('sub_sub_120').style.display='none';                
+        if (document.getElementById('sub_sub_129'))
+            document.getElementById('sub_sub_129').style.display='none';                
+        if (document.getElementById('sub_sub_141'))
+            document.getElementById('sub_sub_141').style.display='none';                
+        if (document.getElementById('sub_sub_80'))
+            document.getElementById('sub_sub_80').style.display='none';                
+        if (document.getElementById('sub_sub_91'))
+            document.getElementById('sub_sub_91').style.display='none';                
+        if (document.getElementById('sub_sub_97'))
+            document.getElementById('sub_sub_97').style.display='none';                
+        if (document.getElementById('sub_sub_121'))
+            document.getElementById('sub_sub_121').style.display='none';                
+        if (document.getElementById('sub_sub_130'))
+            document.getElementById('sub_sub_130').style.display='none';                
+        if (document.getElementById('sub_sub_78'))
+            document.getElementById('sub_sub_78').style.display='none';                
+        if (document.getElementById('sub_sub_82'))
+            document.getElementById('sub_sub_82').style.display='none';                
+        if (document.getElementById('sub_sub_98'))
+            document.getElementById('sub_sub_98').style.display='none';                
+        if (document.getElementById('sub_sub_112'))
+            document.getElementById('sub_sub_112').style.display='none';                
+        if (document.getElementById('sub_sub_131'))
+            document.getElementById('sub_sub_131').style.display='none';                
+        if (document.getElementById('sub_sub_79'))
+            document.getElementById('sub_sub_79').style.display='none';                
+        if (document.getElementById('sub_sub_83'))
+            document.getElementById('sub_sub_83').style.display='none';                
+        if (document.getElementById('sub_sub_113'))
+            document.getElementById('sub_sub_113').style.display='none';                
+        if (document.getElementById('sub_sub_123'))
+            document.getElementById('sub_sub_123').style.display='none';                
+        if (document.getElementById('sub_sub_132'))
+            document.getElementById('sub_sub_132').style.display='none';                
+        if (document.getElementById('sub_sub_249'))
+            document.getElementById('sub_sub_249').style.display='none';                
+        if (document.getElementById('sub_sub_84'))
+            document.getElementById('sub_sub_84').style.display='none';                
+        if (document.getElementById('sub_sub_99'))
+            document.getElementById('sub_sub_99').style.display='none';                
+        if (document.getElementById('sub_sub_133'))
+            document.getElementById('sub_sub_133').style.display='none';                
+} // End of function hide2()
+</script>
+
+<table  cellpadding="0" cellspacing="0" style="margin-top:8px;">
+<tr>
+ 
+<td style="padding-top:8px; width:200px; cursor:pointer; 
+    " align="center" onMouseOver="hide(); show(69); 
+     this.style.background='url(/images/menu_bg_200.png)'; 
+      document.getElementById('l69').style.color='#fff';" 
+    onMouseOut="hide();  this.style.background=''; document.getElementById('l69').style.color='#000';" 
+    valign="top"><div style="height:16px;" 
+                      onclick="location.href='/consultant/';" 
+                 >&nbsp;<a href="/consultant/" 
+                           id="l69" 
+                           style="font-size:12px;   color:#000;                                    letter-spacing:-1px;">КонсультантПлюс </a>&nbsp;</div>
+                 <div style="position:absolute; width:700px; 
+                             margin-top:0px; display:none; 
+                             text-align:left;  z-index:99999;" id="sub_69">
+                      <table cellpadding="0" cellspacing="0" border="0">
+                             <tr><td><img src="/images/menu_top_or_220.png" /></td></tr>
+<tr onmouseout="hide2(); document.getElementById('lvl275').style.background='#f4b009';" 
+    onmouseover="hide2(); show2(75); ">
+    <td width="220" 
+        onMouseOver="this.style.background='#f18402';" 
+        onMouseOut="" 
+        valign="top" 
+        id="lvl275" 
+        style="cursor:pointer; background-color:#f4b009" align="left"><div  
+          onclick="location.href='/consultant/about_system/';" 
+          style="width:220px;" >&nbsp;&nbsp;<a style="font-size:12px; 
+                                                      color:#fff; 
+                                                      letter-spacing:-1px; 
+                                                      line-height:28px;" 
+                                                      href="/consultant/about_system/" 
+                                            >О системе КонсультантПлюс</a>&nbsp;&nbsp;</div></td>
+    <td  valign="top" width="200">
+<div style="position:absolute;
+            display:none; 
+            text-align:left;
+            width:200px;
+            z-index:999;" 
+     id="sub_sub_75"><img src="/images/menu_top_red_230.png" /><div onclick="location.href='/consultant/about_system/technologiya/';" 
+     onmouseover="document.getElementById('l_81').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_81').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_81" 
+            href="/consultant/about_system/technologiya/">Технология ТОП</a>&nbsp;<span 
+            id="sub_sub_81" ></span></div>
+<div onclick="location.href='/consultant/about_system/systems_definition/';" 
+     onmouseover="document.getElementById('l_141').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_141').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_141" 
+            href="/consultant/about_system/systems_definition/">Описание систем</a>&nbsp;<span 
+            id="sub_sub_141" ></span></div>
+<div onclick="location.href='/consultant/about_system/kplus_news/';" 
+     onmouseover="document.getElementById('l_80').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_80').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_80" 
+            href="/consultant/about_system/kplus_news/">Новости</a>&nbsp;<span 
+            id="sub_sub_80" ></span></div>
+<div onclick="location.href='/consultant/about_system/materials/';" 
+     onmouseover="document.getElementById('l_82').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_82').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_82" 
+            href="/consultant/about_system/materials/">Материалы для пользователя</a>&nbsp;<span 
+            id="sub_sub_82" ></span></div>
+<div onclick="location.href='/consultant/about_system/press_about/';" 
+     onmouseover="document.getElementById('l_83').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_83').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_83" 
+            href="/consultant/about_system/press_about/">Пресса о KонсультантПлюс</a>&nbsp;<span 
+            id="sub_sub_83" ></span></div>
+<div onclick="location.href='/consultant/about_system/contacts/';" 
+     onmouseover="document.getElementById('l_84').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_84').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_84" 
+            href="/consultant/about_system/contacts/">Контакты</a>&nbsp;<span 
+            id="sub_sub_84" ></span></div>
+
+<img src="/images/menu_bot_red_230.png" style="margin-top:0px; position:absolute;" />
+</div>
+</td></tr>
+<tr onmouseout="hide2(); document.getElementById('lvl276').style.background='#f4b009';" 
+    onmouseover="hide2(); show2(76); ">
+    <td width="220" 
+        onMouseOver="this.style.background='#f18402';" 
+        onMouseOut="" 
+        valign="top" 
+        id="lvl276" 
+        style="cursor:pointer; background-color:#f4b009" align="left"><div  
+          onclick="location.href='/consultant/service/';" 
+          style="width:220px;" >&nbsp;&nbsp;<a style="font-size:12px; 
+                                                      color:#fff; 
+                                                      letter-spacing:-1px; 
+                                                      line-height:28px;" 
+                                                      href="/consultant/service/" 
+                                            >Сервис для клиентов</a>&nbsp;&nbsp;</div></td>
+    <td  valign="top" width="200">
+<div style="position:absolute;
+            display:none; 
+            text-align:left;
+            width:200px;
+            z-index:999;" 
+     id="sub_sub_76"><img src="/images/menu_top_red_230.png" /><div onclick="location.href='/consultant/service/prim_otziv/';" 
+     onmouseover="document.getElementById('l_95').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_95').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_95" 
+            href="/consultant/service/prim_otziv/">Преимущества, отзывы</a>&nbsp;<span 
+            id="sub_sub_95" ></span></div>
+<div onclick="location.href='/consultant/service/standart_kachestva/';" 
+     onmouseover="document.getElementById('l_96').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_96').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_96" 
+            href="/consultant/service/standart_kachestva/">Стандарты качества</a>&nbsp;<span 
+            id="sub_sub_96" ></span></div>
+<div onclick="location.href='/consultant/service/obuchenie/';" 
+     onmouseover="document.getElementById('l_97').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_97').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_97" 
+            href="/consultant/service/obuchenie/">Обучение</a>&nbsp;<span 
+            id="sub_sub_97" ></span></div>
+<div onclick="location.href='/consultant/service/zakaz_documentov/';" 
+     onmouseover="document.getElementById('l_98').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_98').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_98" 
+            href="/consultant/service/zakaz_documentov/">Заказ документов</a>&nbsp;<span 
+            id="sub_sub_98" ></span></div>
+<div onclick="location.href='/consultant/service/gorjachaja_linija/';" 
+     onmouseover="document.getElementById('l_249').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_249').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_249" 
+            href="/consultant/service/gorjachaja_linija/">«Горячая линия»</a>&nbsp;<span 
+            id="sub_sub_249" ></span></div>
+<div onclick="location.href='/consultant/service/kontacti/';" 
+     onmouseover="document.getElementById('l_99').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_99').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_99" 
+            href="/consultant/service/kontacti/">Контакты</a>&nbsp;<span 
+            id="sub_sub_99" ></span></div>
+
+<img src="/images/menu_bot_red_230.png" style="margin-top:0px; position:absolute;" />
+</div>
+</td></tr>
+<tr onmouseout="hide2(); document.getElementById('lvl278').style.background='#f4b009';" 
+    onmouseover="hide2(); show2(78); ">
+    <td width="220" 
+        onMouseOver="this.style.background='#f18402';" 
+        onMouseOut="" 
+        valign="top" 
+        id="lvl278" 
+        style="cursor:pointer; background-color:#f4b009" align="left"><div  
+          onclick="location.href='/consultant/private_room/';" 
+          style="width:220px;" >&nbsp;&nbsp;<a style="font-size:12px; 
+                                                      color:#fff; 
+                                                      letter-spacing:-1px; 
+                                                      line-height:28px;" 
+                                                      href="/consultant/private_room/" 
+                                            >Личный кабинет</a>&nbsp;&nbsp;</div></td>
+    <td  valign="top" width="200">
+<div style="position:absolute;
+            display:none; 
+            text-align:left;
+            width:200px;
+            z-index:999;" 
+     id="sub_sub_78">
+</div>
+</td></tr>
+<tr onmouseout="hide2(); document.getElementById('lvl279').style.background='#f4b009';" 
+    onmouseover="hide2(); show2(79); ">
+    <td width="220" 
+        onMouseOver="this.style.background='#f18402';" 
+        onMouseOut="" 
+        valign="top" 
+        id="lvl279" 
+        style="cursor:pointer; background-color:#f4b009" align="left"><div  
+          onclick="location.href='/consultant/zao_spline/';" 
+          style="width:220px;" >&nbsp;&nbsp;<a style="font-size:12px; 
+                                                      color:#fff; 
+                                                      letter-spacing:-1px; 
+                                                      line-height:28px;" 
+                                                      href="/consultant/zao_spline/" 
+                                            >ЗАО «Сплайн-Центр»</a>&nbsp;&nbsp;</div></td>
+    <td  valign="top" width="200">
+<div style="position:absolute;
+            display:none; 
+            text-align:left;
+            width:200px;
+            z-index:999;" 
+     id="sub_sub_79">
+</div>
+</td></tr>
+<tr><td><img src="/images/menu_bot_or_220.png" /></td></tr>
+</table>
+</div>&nbsp;</td>
+ 
+<td style="padding-top:8px; width:200px; cursor:pointer; 
+    " align="center" onMouseOver="hide(); show(70); 
+     this.style.background='url(/images/menu_bg_200.png)'; 
+      document.getElementById('l70').style.color='#fff';" 
+    onMouseOut="hide();  this.style.background=''; document.getElementById('l70').style.color='#000';" 
+    valign="top"><div style="height:16px;" 
+                      onclick="location.href='/qualification/';" 
+                 >&nbsp;<a href="/qualification/" 
+                           id="l70" 
+                           style="font-size:12px;   color:#000;                                    letter-spacing:-1px;">Повышение квалификации</a>&nbsp;</div>
+                 <div style="position:absolute; width:700px; 
+                             margin-top:0px; display:none; 
+                             text-align:left;  z-index:99999;" id="sub_70">
+                      <table cellpadding="0" cellspacing="0" border="0">
+                             <tr><td><img src="/images/menu_top_or_220.png" /></td></tr>
+<tr onmouseout="hide2(); document.getElementById('lvl285').style.background='#f4b009';" 
+    onmouseover="hide2(); show2(85); ">
+    <td width="220" 
+        onMouseOver="this.style.background='#f18402';" 
+        onMouseOut="" 
+        valign="top" 
+        id="lvl285" 
+        style="cursor:pointer; background-color:#f4b009" align="left"><div  
+          onclick="location.href='/qualification/obrazovanie/';" 
+          style="width:220px;" >&nbsp;&nbsp;<a style="font-size:12px; 
+                                                      color:#fff; 
+                                                      letter-spacing:-1px; 
+                                                      line-height:28px;" 
+                                                      href="/qualification/obrazovanie/" 
+                                            >Образовательные программы</a>&nbsp;&nbsp;</div></td>
+    <td  valign="top" width="200">
+<div style="position:absolute;
+            display:none; 
+            text-align:left;
+            width:200px;
+            z-index:999;" 
+     id="sub_sub_85"><img src="/images/menu_top_red_230.png" /><div onclick="location.href='/qualification/obrazovanie/vidi_obucheniya/';" 
+     onmouseover="document.getElementById('l_89').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_89').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_89" 
+            href="/qualification/obrazovanie/vidi_obucheniya/">Виды обучения</a>&nbsp;<span 
+            id="sub_sub_89" ></span></div>
+<div onclick="location.href='/qualification/obrazovanie/uchebnaya_baza/';" 
+     onmouseover="document.getElementById('l_90').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_90').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_90" 
+            href="/qualification/obrazovanie/uchebnaya_baza/">Учебная база</a>&nbsp;<span 
+            id="sub_sub_90" ></span></div>
+<div onclick="location.href='/qualification/obrazovanie/prepodavateli/';" 
+     onmouseover="document.getElementById('l_91').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_91').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_91" 
+            href="/qualification/obrazovanie/prepodavateli/">Преподаватели</a>&nbsp;<span 
+            id="sub_sub_91" ></span></div>
+
+<img src="/images/menu_bot_red_230.png" style="margin-top:0px; position:absolute;" />
+</div>
+</td></tr>
+<tr><td><img src="/images/menu_bot_or_220.png" /></td></tr>
+</table>
+</div>&nbsp;</td>
+ 
+<td style="padding-top:8px; width:200px; cursor:pointer; 
+    " align="center" onMouseOver="hide(); show(72); 
+     this.style.background='url(/images/menu_bg_200.png)'; 
+      document.getElementById('l72').style.color='#fff';" 
+    onMouseOut="hide();  this.style.background=''; document.getElementById('l72').style.color='#000';" 
+    valign="top"><div style="height:16px;" 
+                      onclick="location.href='/info/';" 
+                 >&nbsp;<a href="/info/" 
+                           id="l72" 
+                           style="font-size:12px;   color:#000;                                    letter-spacing:-1px;">Информация для бухгалтера</a>&nbsp;</div>
+                 <div style="position:absolute; width:700px; 
+                             margin-top:0px; display:none; 
+                             text-align:left;  z-index:99999;" id="sub_72">
+                      <table cellpadding="0" cellspacing="0" border="0">
+                             <tr><td><img src="/images/menu_top_or_220.png" /></td></tr>
+<tr onmouseout="hide2(); document.getElementById('lvl2110').style.background='#f4b009';" 
+    onmouseover="hide2(); show2(110); ">
+    <td width="220" 
+        onMouseOver="this.style.background='#f18402';" 
+        onMouseOut="" 
+        valign="top" 
+        id="lvl2110" 
+        style="cursor:pointer; background-color:#f4b009" align="left"><div  
+          onclick="location.href='/info/nk_pbu_otveti/';" 
+          style="width:220px;" >&nbsp;&nbsp;<a style="font-size:12px; 
+                                                      color:#fff; 
+                                                      letter-spacing:-1px; 
+                                                      line-height:28px;" 
+                                                      href="/info/nk_pbu_otveti/" 
+                                            >НК, ПБУ, ответы на вопросы</a>&nbsp;&nbsp;</div></td>
+    <td  valign="top" width="200">
+<div style="position:absolute;
+            display:none; 
+            text-align:left;
+            width:200px;
+            z-index:999;" 
+     id="sub_sub_110"><img src="/images/menu_top_red_230.png" /><div onclick="location.href='/info/nk_pbu_otveti/nk_pbu/';" 
+     onmouseover="document.getElementById('l_126').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_126').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_126" 
+            href="/info/nk_pbu_otveti/nk_pbu/">НК и ПБУ</a>&nbsp;<span 
+            id="sub_sub_126" ></span></div>
+
+<img src="/images/menu_bot_red_230.png" style="margin-top:0px; position:absolute;" />
+</div>
+</td></tr>
+<tr onmouseout="hide2(); document.getElementById('lvl2112').style.background='#f4b009';" 
+    onmouseover="hide2(); show2(112); ">
+    <td width="220" 
+        onMouseOver="this.style.background='#f18402';" 
+        onMouseOut="" 
+        valign="top" 
+        id="lvl2112" 
+        style="cursor:pointer; background-color:#f4b009" align="left"><div  
+          onclick="location.href='/info/poleznie_ssilki/';" 
+          style="width:220px;" >&nbsp;&nbsp;<a style="font-size:12px; 
+                                                      color:#fff; 
+                                                      letter-spacing:-1px; 
+                                                      line-height:28px;" 
+                                                      href="/info/poleznie_ssilki/" 
+                                            >Полезные ссылки</a>&nbsp;&nbsp;</div></td>
+    <td  valign="top" width="200">
+<div style="position:absolute;
+            display:none; 
+            text-align:left;
+            width:200px;
+            z-index:999;" 
+     id="sub_sub_112"><img src="/images/menu_top_red_230.png" /><div onclick="location.href='/info/poleznie_ssilki/official_russia/';" 
+     onmouseover="document.getElementById('l_128').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_128').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_128" 
+            href="/info/poleznie_ssilki/official_russia/">ОФИЦИАЛЬНАЯ РОССИЯ </a>&nbsp;<span 
+            id="sub_sub_128" ></span></div>
+<div onclick="location.href='/info/poleznie_ssilki/official_moscow/';" 
+     onmouseover="document.getElementById('l_129').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_129').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_129" 
+            href="/info/poleznie_ssilki/official_moscow/">ОФИЦИАЛЬНАЯ МОСКВА</a>&nbsp;<span 
+            id="sub_sub_129" ></span></div>
+<div onclick="location.href='/info/poleznie_ssilki/audit_service/';" 
+     onmouseover="document.getElementById('l_130').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_130').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_130" 
+            href="/info/poleznie_ssilki/audit_service/">АУДИТОРСКИЕ УСЛУГИ</a>&nbsp;<span 
+            id="sub_sub_130" ></span></div>
+<div onclick="location.href='/info/poleznie_ssilki/usefull_info/';" 
+     onmouseover="document.getElementById('l_131').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_131').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_131" 
+            href="/info/poleznie_ssilki/usefull_info/">ИНТЕРНЕТ ДЛЯ БУХГАЛТЕРОВ</a>&nbsp;<span 
+            id="sub_sub_131" ></span></div>
+<div onclick="location.href='/info/poleznie_ssilki/banks/';" 
+     onmouseover="document.getElementById('l_132').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_132').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_132" 
+            href="/info/poleznie_ssilki/banks/">БАНКИ</a>&nbsp;<span 
+            id="sub_sub_132" ></span></div>
+<div onclick="location.href='/info/poleznie_ssilki/ric/';" 
+     onmouseover="document.getElementById('l_133').style.textDecorationNone;" 
+     onmouseout="document.getElementById('l_133').style.textDecorationUnderline;"  
+     style="cursor:pointer; width:230px;  background:#f18402; z-index:999;">&nbsp;&nbsp;<a 
+     style="font-size:12px; 
+            color:#fff; 
+            letter-spacing:-1px; 
+            line-height:28px;"id="l_133" 
+            href="/info/poleznie_ssilki/ric/">СЕТЬ КОНСУЛЬТАНТПЛЮС</a>&nbsp;<span 
+            id="sub_sub_133" ></span></div>
+
+<img src="/images/menu_bot_red_230.png" style="margin-top:0px; position:absolute;" />
+</div>
+</td></tr>
+<tr onmouseout="hide2(); document.getElementById('lvl2113').style.background='#f4b009';" 
+    onmouseover="hide2(); show2(113); ">
+    <td width="220" 
+        onMouseOver="this.style.background='#f18402';" 
+        onMouseOut="" 
+        valign="top" 
+        id="lvl2113" 
+        style="cursor:pointer; background-color:#f4b009" align="left"><div  
+          onclick="location.href='/info/zao_center_splain/';" 
+          style="width:220px;" >&nbsp;&nbsp;<a style="font-size:12px; 
+                                                      color:#fff; 
+                                                      letter-spacing:-1px; 
+                                                      line-height:28px;" 
+                                                      href="/info/zao_center_splain/" 
+                                            >ЗАО «Сплайн-Центр»</a>&nbsp;&nbsp;</div></td>
+    <td  valign="top" width="200">
+<div style="position:absolute;
+            display:none; 
+            text-align:left;
+            width:200px;
+            z-index:999;" 
+     id="sub_sub_113">
+</div>
+</td></tr>
+<tr><td><img src="/images/menu_bot_or_220.png" /></td></tr>
+</table>
+</div>&nbsp;</td>
+ 
+<td style="padding-top:8px; width:200px; cursor:pointer; 
+    " align="center" onMouseOver="hide(); show(73); 
+     this.style.background='url(/images/menu_bg_200.png)'; 
+      document.getElementById('l73').style.color='#fff';" 
+    onMouseOut="hide();  this.style.background=''; document.getElementById('l73').style.color='#000';" 
+    valign="top"><div style="height:16px;" 
+                      onclick="location.href='/zao/';" 
+                 >&nbsp;<a href="/zao/" 
+                           id="l73" 
+                           style="font-size:12px;   color:#000;                                    letter-spacing:-1px;">ЗАО «Сплайн-Центр»</a>&nbsp;</div>
+                 <div style="position:absolute; width:700px; 
+                             margin-top:0px; display:none; 
+                             text-align:left;  z-index:99999;" id="sub_73">
+                      <table cellpadding="0" cellspacing="0" border="0">
+                             <tr><td><img src="/images/menu_top_or_220.png" /></td></tr>
+<tr onmouseout="hide2(); document.getElementById('lvl2119').style.background='#f4b009';" 
+    onmouseover="hide2(); show2(119); ">
+    <td width="220" 
+        onMouseOver="this.style.background='#f18402';" 
+        onMouseOut="" 
+        valign="top" 
+        id="lvl2119" 
+        style="cursor:pointer; background-color:#f4b009" align="left"><div  
+          onclick="location.href='/zao/mission/';" 
+          style="width:220px;" >&nbsp;&nbsp;<a style="font-size:12px; 
+                                                      color:#fff; 
+                                                      letter-spacing:-1px; 
+                                                      line-height:28px;" 
+                                                      href="/zao/mission/" 
+                                            >Миссия</a>&nbsp;&nbsp;</div></td>
+    <td  valign="top" width="200">
+<div style="position:absolute;
+            display:none; 
+            text-align:left;
+            width:200px;
+            z-index:999;" 
+     id="sub_sub_119">
+</div>
+</td></tr>
+<tr onmouseout="hide2(); document.getElementById('lvl2120').style.background='#f4b009';" 
+    onmouseover="hide2(); show2(120); ">
+    <td width="220" 
+        onMouseOver="this.style.background='#f18402';" 
+        onMouseOut="" 
+        valign="top" 
+        id="lvl2120" 
+        style="cursor:pointer; background-color:#f4b009" align="left"><div  
+          onclick="location.href='/zao/istoria/';" 
+          style="width:220px;" >&nbsp;&nbsp;<a style="font-size:12px; 
+                                                      color:#fff; 
+                                                      letter-spacing:-1px; 
+                                                      line-height:28px;" 
+                                                      href="/zao/istoria/" 
+                                            >История</a>&nbsp;&nbsp;</div></td>
+    <td  valign="top" width="200">
+<div style="position:absolute;
+            display:none; 
+            text-align:left;
+            width:200px;
+            z-index:999;" 
+     id="sub_sub_120">
+</div>
+</td></tr>
+<tr onmouseout="hide2(); document.getElementById('lvl2121').style.background='#f4b009';" 
+    onmouseover="hide2(); show2(121); ">
+    <td width="220" 
+        onMouseOver="this.style.background='#f18402';" 
+        onMouseOut="" 
+        valign="top" 
+        id="lvl2121" 
+        style="cursor:pointer; background-color:#f4b009" align="left"><div  
+          onclick="location.href='/zao/klienti/';" 
+          style="width:220px;" >&nbsp;&nbsp;<a style="font-size:12px; 
+                                                      color:#fff; 
+                                                      letter-spacing:-1px; 
+                                                      line-height:28px;" 
+                                                      href="/zao/klienti/" 
+                                            >Клиенты</a>&nbsp;&nbsp;</div></td>
+    <td  valign="top" width="200">
+<div style="position:absolute;
+            display:none; 
+            text-align:left;
+            width:200px;
+            z-index:999;" 
+     id="sub_sub_121">
+</div>
+</td></tr>
+<tr onmouseout="hide2(); document.getElementById('lvl2123').style.background='#f4b009';" 
+    onmouseover="hide2(); show2(123); ">
+    <td width="220" 
+        onMouseOver="this.style.background='#f18402';" 
+        onMouseOut="" 
+        valign="top" 
+        id="lvl2123" 
+        style="cursor:pointer; background-color:#f4b009" align="left"><div  
+          onclick="location.href='/zao/contacts/';" 
+          style="width:220px;" >&nbsp;&nbsp;<a style="font-size:12px; 
+                                                      color:#fff; 
+                                                      letter-spacing:-1px; 
+                                                      line-height:28px;" 
+                                                      href="/zao/contacts/" 
+                                            >Контакты</a>&nbsp;&nbsp;</div></td>
+    <td  valign="top" width="200">
+<div style="position:absolute;
+            display:none; 
+            text-align:left;
+            width:200px;
+            z-index:999;" 
+     id="sub_sub_123">
+</div>
+</td></tr>
+<tr><td><img src="/images/menu_bot_or_220.png" /></td></tr>
+</table>
+</div>&nbsp;</td>
+<td style="">&nbsp;</td></tr>
+</table>
+
+
+<table width="95%" cellpadding="0" cellspacing="0" style="margin-top:0px;">
+<tr><td valign="top" style="background-image:url(/images/bl.png);" align="center">
+        <img style="margin-top:30px;" src="images/slogan00.png" id="img_c">
+        <div style="height:40px;">&nbsp;</div>
+        <div id="sliderBlock">
+             <a id="previous">Previous</a>
+             <div id="slider-stage">
+                 <div style="width: 540px;" id="slider-list"></div>
+             </div>
+             <a id="next">Next</a>
+        </div></td>
+    <td valign="top"><table cellpadding="0" cellspacing="0" 
+                          style="margin-top:20px; 
+                                 width:541px; 
+                                 height:332px; 
+                                 background:url(/images/blob.png); 
+                                 background-repeat:no-repeat">
+                          <tr><td valign="top"><a href="#" 
+                                                  id="goprev" ><img style="position: absolute; 
+                                                                           margin-left: 28px; 
+                                                                           margin-top: 144px;
+                                                                           border:0px;" 
+                                                                    src="images/aleft.png"></a>
+                                               <a href="#" 
+                                                  id="gonext" ><img style="position: absolute; 
+                                                                           margin-left: 422px; 
+                                                                           margin-top: 144px;border:0px;" 
+                                                                    src="images/aright.png"></a>
+                                               <img id="img_i" style="margin-left: 150px; 
+                                                                      margin-top: -30px;
+                                                                      height:360px;"
+                                                    src="/uploads/staff/BudnikovS01.png">
+                                               <div class="divv" style="color: white;      
+                                                                        position: absolute;
+                                                                        padding-left: 10px;
+                                                                        padding-top: 6px;  
+                                                                        margin-top: -270px;
+                                                                        margin-left: 90px; 
+                                                                        width: 140px;      
+                                                                        z-index: 999;"     
+                                                                 id="text_hold"></div>     
+                          </td></tr>
+                     </table>
+    </td></tr>
+</table>
+<table width="95%" cellpadding="0" cellspacing="0" style="margin-top:20px;" border=0>
+<tr><td valign="top"><h1>О компании</h1><br><br>
+        <p>"Сплайн" - это большая и дружная команда профессионалов, способная быстро и качественно выполнять сложнейшие задачи. <br /> <br /> В 1994 году в компании было всего 3 сотрудника, а сегодня нас более 500! <br /> <br /> Все наши специалисты имеют высшее образование, а пятеро - ученую степень кандидата наук.</p>
+<p>&nbsp;</p>        <br /><p>&nbsp;</p>
+<p><a name="buy_kplus"></a></p>
+<p><a href="/consultant/buy/"><img title="Купить КонсультантПлюс" 
+                                     src="/uploads/buyKplus.gif" 
+                                     alt="Купить КонсультантПлюс" 
+                                     width="251" height="81" /></a></p>
+
+<p>&nbsp;</p>
+<style type="text/css">
+#cons_widget{width:250px;font-family:Arial,Tahoma,Verdana;color:#666699;font-size:8pt;}
+#cons_widget a{text-decoration:none;color:#666699;}
+#cons_widget a:hover{text-decoration:underline;}
+#cons_widget form{margin:0;}
+#cons_widget .title{color:#669;font-size:15pt;background:#666699;padding:5px 15px 5px 15px;}
+#cons_widget .title div{color:#ff9d09;font-size:14pt;}
+#cons_widget .title:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+#cons_widget .title img{border:0;width:174px;height:40px;margin:0 5px;}
+#cons_widget .search{
+    padding:15px 0px;
+    background:#ddd;
+    border-left:1px solid #666699;
+    border-right:1px solid #666699;
+    }
+#cons_widget  input{ background-color: white;
+    border: 1px inset #996633;
+    height:19px;}
+#cons_widget .search_txt{margin:2px 15px;font-size:7pt;}
+#cons_widget .search_q{border-right:75px #ddd solid;margin-left:15px;}
+#cons_widget .search_q input{font-size:8pt;width:100%;}
+#cons_widget .search_btn input{
+    float:right;
+    margin:-21px 15px 0 0;
+    font-size:8pt;
+    width:50px;
+    height:21px;
+    padding-bottom:2px;
+    border: 1px outset #996633;
+    background-color: #ffcc66;}
+#cons_widget .rss{padding:0 15px 0 15px;background:#ffffff;border-left:1px solid #666699;border-right:1px solid #666699;}
+#cons_widget .rss_item{display:inline-block;border-bottom:1px solid #ddd;padding:5px 0 3px 0;}
+#cons_widget .rss_date{color:#ff9d09;float:left;padding-right:2pt;}
+#cons_widget .bottom{
+      padding:5px 15px 15px 15px;
+      background:#ffffff;
+      border-left:1px solid #666699;
+      border-right:1px solid #666699;
+      }
+#cons_widget .all{text-align:right;margin-bottom:5px;font-weight:bold;}
+</style>
+<div id="cons_widget_wrapper">
+<div id="cons_widget_top"><img border=0 src="/images/cons_widget_top_250.png"  /></div>
+<div id="cons_widget"></div>
+<div id="cons_widget_bottom"><img border=0 src="/images/cons_widget_bottom_250.png"  /></div>
+</div>
+<script type="text/javascript" 
+        charset="UTF-8"
+        src="http://www.consultant.ru/adds/news_widget.js?r=hotdocs&f=date&sk=1&m=1"></script>    </td>
+    <td style="padding-left:30px;" valign="top">    <h1>Новости</h1>
+     <br /><br /><span style="color:#777; 
+                                 font-style:italic; 
+                                 font-size:11px;">25 октября 2016</span><br />
+    <a href="/news/?id=641" style="font-style:italic"><span  class=imptext>Верховный Суд РФ подготовил третий обзор судебной практики в 2016 году</span></a> 
+        <br />
+     <br /><br /><span style="color:#777; 
+                                 font-style:italic; 
+                                 font-size:11px;">21 октября 2016</span><br />
+    <a href="/news/?id=640" style="font-style:italic"><span >Налоговую декларацию 3-НДФЛ за налоговый период 2016 года необходимо представлять с учетом внесенных в нее изменений</span></a> 
+        <br />
+     <br /><br /><span style="color:#777; 
+                                 font-style:italic; 
+                                 font-size:11px;">11 октября 2016</span><br />
+    <a href="/news/?id=639" style="font-style:italic"><span >ФНС России рекомендована форма заявления о подтверждении права налогоплательщика на получение имущественных налоговых вычетов по НДФЛ у работодателей</span></a> 
+        <br />
+     <br /><br /><span style="color:#777; 
+                                 font-style:italic; 
+                                 font-size:11px;">06 октября 2016</span><br />
+    <a href="/news/?id=638" style="font-style:italic"><span >ФСС РФ принимает расчеты по форме 4-ФСС только за отчетные периоды до 1 января 2017 года</span></a> 
+        <br />
+     <br /><br /><span style="color:#777; 
+                                 font-style:italic; 
+                                 font-size:11px;">29 сентября 2016</span><br />
+    <a href="/news/?id=635" style="font-style:italic"><span  class=imptext>Обновлены формы документов индивидуального (персонифицированного) учета в системе обязательного пенсионного страхования</span></a> 
+        <br />
+    <br /><a href="/news/" 
+             style="text-decoration:none; 
+             font-style:italic; border-bottom:1px dashed #f1890e;font-size:12px;">Архив новостей</a><br />
+    </td>                             
+    <td width="463" style="padding-left:30px;" valign="top"><h1>Видеоновости для бухгалтера</h1><br /><br />
+        <table cellspacing=0 cellpadding=0 border=0 style="width:344px; height:257px; margin-top:20px;
+                                                           background-image:url(images/vn_344.png);
+                                                           background-repeat: no-repeat;
+                                                           text-align:left;
+                                                           vertical-align:top;">
+            <tr style="height:11px;font-size:5px;"><td colspan=3>&nbsp;
+            <tr style="height:190px;font-size:5px;"><td style="width:12px;"><br>
+                <td valign=top style="padding:0px;outline:0;vertical-align:top;margin:0px;"><!-- старт внедрения плеера -->
+<div id="video_news" style="text-align:center;vertical-align:top;width:100%;border:1px red solid;outline:0;
+        margin-left:0px; margin-top:0px;"><a href="http://www.adobe.com/go/getflashplayer"><img 
+     src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" 
+     alt="Get Adobe Flash player" /></a>
+</div>
+
+<script type="text/javascript" src="/js/jwplayer.js"></script>
+<script type="text/javascript">
+    jwplayer("video_news").setup({
+        flashplayer: "player58.swf",
+        file: "http://xn--80asekgl.xn--p1ai/uploads/videonews/vnews_2016_10.mp4",
+        image       : "http://xn--80asekgl.xn--p1ai/uploads/videonews_preview/preview201610s.jpg",
+        controlbar :'bottom',
+        autostart   : 'false',
+        start       : '1',
+        bufferlength: '0',
+        width       : '320',
+        height      : '190',
+        mute        : 'false',
+        stretching  : 'fill'
+    });
+</script>
+<!-- конец внедрения плеера  -->
+
+<td style="width:12px;"><br>
+            <tr><td colspan=3><br>
+        </table>
+        <br />    </td>
+</tr>
+</table>
+<table width="95%" cellpadding="0" cellspacing="0" style="margin-top:20px;">
+<tr><td  valign="top" 
+         style="text-align:left; 
+         padding-top:10px;" 
+         width="220"><img src="/images/yellow_c.png" /><br />
+                     <span style="color:#bebebe; font-style:italic; font-size:12px; line-height:20px;">Мы в соц сетях:</span><br />
+         <script type="text/javascript">
+         var addthis_share =
+         { url: 'http://xn--80asekgl.xn--p1ai',
+           title: ''
+         }
+         </script>
+         <div class="addthis_toolbox addthis_32x32_style addthis_default_style">
+                <a class="addthis_button_vk" 
+                   style="cursor:pointer"><img src="/vk.png" 
+                                               onmouseover="this.src='/vk_1.png';" 
+                                               onmouseout="this.src='/vk.png';" /></a>
+                <a class="addthis_button_twitter" 
+                   style="cursor:pointer"><img src="/tw.png" 
+                                               onmouseover="this.src='/tw_1.png';" 
+                                               onmouseout="this.src='/tw.png';" /></a>
+                <a class="addthis_button_facebook" 
+                   style="cursor:pointer"><img src="/fb.png" 
+                                               onmouseover="this.src='/fb_1.png';" 
+                                               onmouseout="this.src='/fb.png';" /></a>
+                <a target="_blank" 
+                   href="http://www.livejournal.com/update.bml?subject=xn--80asekgl.xn--p1ai&event=<a+href=xn--80asekgl.xn--p1ai+>xn--80asekgl.xn--p1ai</a>">
+                   <img src="/lj.png"  
+                        onmouseover="this.src='/lj_1.png';" 
+                        onmouseout="this.src='/lj.png';"   
+                        border="0" /></a>
+                <a href="javascript:(function(){location.href='http://zakladki.yandex.ru/newlink.xml?url=' +
+                                                              encodeURIComponent(location.href)+'&amp;name='+
+                                                              encodeURIComponent(document.title);})();"><img 
+                                                              src="/ya.png"  onmouseover="this.src='/ya_1.png';" 
+                                                              border="0"     onmouseout="this.src='/ya.png';" /></a>
+                <a target="_blank" 
+                   href="http://connect.mail.ru/share?share_url=http://www.fresh-sushi.ru"><img src="/ma.png" 
+                                                                                                onmouseover="this.src='/ma_1.png';" 
+                                                                                                onmouseout="this.src='/ma.png';"  
+                                                                                                border="0" /></a>
+                <script type="text/javascript" 
+                        src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4c73c4512d17ba6a"></script>
+         </div></td>
+    <td><img src="/images/bot_arr.png" align="right" /></td>
+    <td style="text-align:left; 
+               padding-top:10px; 
+               padding-left:10px;"valign="top"><img src="/images/blue_c.png" /><br />
+        <span style="color:#bebebe; 
+                     font-style:italic; 
+                     font-size:12px; 
+                     line-height:20px;">Наш адрес:</span><br />
+        <span style="font-size:11px;">105005, г. Москва, ул. Бауманская, д. 5, стр. 1</span><br />
+        <br /><a href="/zao/contacts/#address" style="text-decoration:none; 
+                                                      font-style:italic; 
+                                                      border-bottom:1px dashed #f1890e;
+                                                      font-size:12px;">Как к нам проехать</a></td>
+    <td><img src="/images/bot_arr.png" align="right" /></td>
+    <td style="text-align:left; 
+               padding-top:10px; 
+               padding-left:10px;" 
+        width="250" valign="top"><img src="/images/blue_c.png" /><br />
+        <span style="color:#bebebe; font-style:italic; font-size:12px; line-height:20px;">Горячая линия КонсультантПлюс:</span>
+        <br /><span style="font-size:18px;"><span style="color:#aeaeae;">+7 (495)</span> 755-88-97</span>        <br /><br /><a href="/zao/contacts/#phones" style="text-decoration:none; 
+                                                           font-style:italic; 
+                                                           border-bottom:1px dashed #f1890e;
+                                                           font-size:12px;">Телефоны всех служб</a></td>
+</tr>
+</table>
+
+<table width="95%" cellpadding="0" cellspacing="0" style="margin-top:20px;">
+<tr><td style="height:235px; padding-top:8px; background:url(/images/botbg_l.png); background-repeat:no-repeat;" valign="top">&nbsp;</td>
+    <td style="height:235px; padding-top:8px; background:url(/images/botbg.png); background-repeat:repeat-x;" valign="top">
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin-left:20px;margin-top:6px;">
+            <tr>                       <td><a style="color:#814900;  line-height:22px; 
+                                                 font-size:12px; 
+                                                 font-weight:bold; 
+                                                 text-decoration:none;" 
+                              href="/consultant/" >КонсультантПлюс </a></td>
+                                   <td><a style="color:#814900;  line-height:22px; 
+                                                 font-size:12px; 
+                                                 font-weight:bold; 
+                                                 text-decoration:none;" 
+                              href="/qualification/" >Повышение квалификации</a></td>
+                                   <td><a style="color:#814900;  line-height:22px; 
+                                                 font-size:12px; 
+                                                 font-weight:bold; 
+                                                 text-decoration:none;" 
+                              href="/info/" >Информация для бухгалтера</a></td>
+                                   <td><a style="color:#814900;  line-height:22px; 
+                                                 font-size:12px; 
+                                                 font-weight:bold; 
+                                                 text-decoration:none;" 
+                              href="/zao/" >ЗАО «Сплайн-Центр»</a></td>
+                        </tr>
+            <tr>                <td valign="top">
+                     <br /><a style="color:#fff; 
+                                            line-height:28px; 
+                                            font-size:12px; 
+                                            text-decoration:underline; 
+                                            font-style:italic;" 
+                                     onmouseover="this.style.color='#fff';" 
+                                     onmouseout="this.style.color='#fff';" 
+                                     href="/consultant/about_system/">О системе КонсультантПлюс</a>
+                 <br /><a style="color:#fff; 
+                                            line-height:28px; 
+                                            font-size:12px; 
+                                            text-decoration:underline; 
+                                            font-style:italic;" 
+                                     onmouseover="this.style.color='#fff';" 
+                                     onmouseout="this.style.color='#fff';" 
+                                     href="/consultant/service/">Сервис для клиентов</a>
+                 <br /><a style="color:#fff; 
+                                            line-height:28px; 
+                                            font-size:12px; 
+                                            text-decoration:underline; 
+                                            font-style:italic;" 
+                                     onmouseover="this.style.color='#fff';" 
+                                     onmouseout="this.style.color='#fff';" 
+                                     href="/consultant/private_room/">Личный кабинет</a>
+                 <br /><a style="color:#fff; 
+                                            line-height:28px; 
+                                            font-size:12px; 
+                                            text-decoration:underline; 
+                                            font-style:italic;" 
+                                     onmouseover="this.style.color='#fff';" 
+                                     onmouseout="this.style.color='#fff';" 
+                                     href="/consultant/zao_spline/">ЗАО «Сплайн-Центр»</a>
+                                 </td>
+                             <td valign="top">
+                     <br /><a style="color:#fff; 
+                                            line-height:28px; 
+                                            font-size:12px; 
+                                            text-decoration:underline; 
+                                            font-style:italic;" 
+                                     onmouseover="this.style.color='#fff';" 
+                                     onmouseout="this.style.color='#fff';" 
+                                     href="/qualification/obrazovanie/">Образовательные программы</a>
+                                 </td>
+                             <td valign="top">
+                     <br /><a style="color:#fff; 
+                                            line-height:28px; 
+                                            font-size:12px; 
+                                            text-decoration:underline; 
+                                            font-style:italic;" 
+                                     onmouseover="this.style.color='#fff';" 
+                                     onmouseout="this.style.color='#fff';" 
+                                     href="/info/nk_pbu_otveti/">НК, ПБУ, ответы на вопросы</a>
+                 <br /><a style="color:#fff; 
+                                            line-height:28px; 
+                                            font-size:12px; 
+                                            text-decoration:underline; 
+                                            font-style:italic;" 
+                                     onmouseover="this.style.color='#fff';" 
+                                     onmouseout="this.style.color='#fff';" 
+                                     href="/info/poleznie_ssilki/">Полезные ссылки</a>
+                 <br /><a style="color:#fff; 
+                                            line-height:28px; 
+                                            font-size:12px; 
+                                            text-decoration:underline; 
+                                            font-style:italic;" 
+                                     onmouseover="this.style.color='#fff';" 
+                                     onmouseout="this.style.color='#fff';" 
+                                     href="/info/zao_center_splain/">ЗАО «Сплайн-Центр»</a>
+                                 </td>
+                             <td valign="top">
+                     <br /><a style="color:#fff; 
+                                            line-height:28px; 
+                                            font-size:12px; 
+                                            text-decoration:underline; 
+                                            font-style:italic;" 
+                                     onmouseover="this.style.color='#fff';" 
+                                     onmouseout="this.style.color='#fff';" 
+                                     href="/zao/mission/">Миссия</a>
+                 <br /><a style="color:#fff; 
+                                            line-height:28px; 
+                                            font-size:12px; 
+                                            text-decoration:underline; 
+                                            font-style:italic;" 
+                                     onmouseover="this.style.color='#fff';" 
+                                     onmouseout="this.style.color='#fff';" 
+                                     href="/zao/istoria/">История</a>
+                 <br /><a style="color:#fff; 
+                                            line-height:28px; 
+                                            font-size:12px; 
+                                            text-decoration:underline; 
+                                            font-style:italic;" 
+                                     onmouseover="this.style.color='#fff';" 
+                                     onmouseout="this.style.color='#fff';" 
+                                     href="/zao/klienti/">Клиенты</a>
+                 <br /><a style="color:#fff; 
+                                            line-height:28px; 
+                                            font-size:12px; 
+                                            text-decoration:underline; 
+                                            font-style:italic;" 
+                                     onmouseover="this.style.color='#fff';" 
+                                     onmouseout="this.style.color='#fff';" 
+                                     href="/zao/contacts/">Контакты</a>
+                                 </td>
+                         </tr>
+        </table>
+    </td>
+    <td style="height:235px;padding-top:8px;
+               background:url(/images/botbg_r.png); 
+               background-repeat:no-repeat;" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<table width="95%" cellpadding="0" cellspacing="0" style="margin-top:20px;">
+    <tr><td width="740"  
+            style="font-size:11px; color:#acacac; letter-spacing:-1px;"><pre></pre><br>                <a style="font-size:11px; 
+                          color:#acacac" 
+                   href="/consultant/" >КонсультантПлюс </a><span style="color:#777">&bull;</span>  
+                                <a style="font-size:11px; 
+                          color:#acacac" 
+                   href="/qualification/" >Повышение квалификации</a><span style="color:#777">&bull;</span>  
+                                <a style="font-size:11px; 
+                          color:#acacac" 
+                   href="/info/" >Информация для бухгалтера</a><span style="color:#777">&bull;</span>  
+                                <a style="font-size:11px; 
+                          color:#acacac" 
+                   href="/zao/" >ЗАО «Сплайн-Центр»</a><br /><br />Все права защищены © 2011 ЗАО Сплайн-Центр, Свидетельство МПТР России Эл N ФС77-4470.
+
+        </td>
+        <td style="font-size:11px; 
+                   color:#acacac; 
+                   letter-spacing:-1px;">Наш телефон: +7(495) 755 88 97  почта: cons@debet.ru<br /><br />
+           <a href="http://pro-is.ru" style="text-decoration:none"><img align="absmiddle" src="/images/pro.png" /></a> 
+           <a href="http://pro-is.ru" style="font-size:11px; color:#acacac">создание сайта</a> 
+        </td>
+    </tr>
+</table>
+<br /><br />
+</div>
+</body></html>

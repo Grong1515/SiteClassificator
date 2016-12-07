@@ -1,0 +1,248 @@
+<!doctype html>
+<html class="no-js" lang="en" data-ng-app="Main" ng-controller="MainCtrl">
+<head>
+    <base href="/"/>
+    <title ng-bind="title">Найти хорошего юриста легко!</title>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="http://48prav.ru/favicon.png" type="image/png" />
+    <meta name="fragment" content="!" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="keywords" content="{{keywords}}"/>
+    <meta name="description" content="{{description}}"/>
+</head>
+<body>
+<!-- START header block -->
+<div class="full-row top-header-row" id="fixed--top-header--block">
+    <div class="row row--top-header--block">
+	<div class="column large-12">
+	    <a ui-sref="lawyers({search: '', specialization: '', metro: ''})" class="header--link">
+                <img class="header--logo" src="assets/images/header-logo.png">
+            </a>
+	    <div control-search="" field="search" control="search-icon" redirect-state="lawyers" redirect-query="search" class="header--search">
+		<form>
+		    <label class="label-search">
+			<input type="text" class="search">
+			<button type="action" class="search-icon" onclick="yaCounter31897816.reachGoal('nayti')"><i class="material-icons">search</i></button>
+		    </label>
+		</form>
+	    </div>
+	    <div class="header-contact">
+		<span>+7 (499)</span><span class="big-red">322-32-48</span><br><span>запись на консультацию</span>
+	    </div>
+	</div>
+    </div>
+</div>
+
+<div class="row hide" ng-class="{hide:!isAuthorize}">
+    <div class="column large-12">
+	<div class="content">
+	    <a ui-sref="resources">RESOURCES</a>
+	</div>
+    </div>
+</div>
+
+
+<img src="assets/images/line.jpg" style="width: 100%; height: 17px;">
+
+<div class="row">
+    <div class="column large-12 seo-block-content">
+        <p ng-bind-html="snippet" style="margin-top:0"></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="column large-12">
+        <div class="baner">
+            <!--<span ng-bind-html="baner" style="margin-top:0" class="first-frase"></span>-->
+            <span style="margin-top:0" class="first-frase">Разрешим сложные проблемы!</span>
+            <br>
+            <span class="second-frase">Звоните прямо сейчас +7(499)</span>
+            <span class="big-red-frase">322-32-48</span>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="column large-12">
+        <span class="head-ul">Юридические услуги частным лицам</span>
+    </div>
+    <div class="column large-12">
+        <div class="content content--flex--offices-block">
+            <ul class="choice-spec">
+                <li data-value="administrativnye_dela"><a ui-sref="lawyers({search: '', specialization: 'administrativnye_dela', metro: ''})" scroll-top>Административные дела</a></li>
+                <li data-value="alimenty_i_otcovstvo"><a ui-sref="lawyers({search: '', specialization: 'alimenty_i_otcovstvo', metro: ''})" scroll-top>Алименты и Отцовство</a></li>
+                <li data-value="brachnyj_dogovor"><a ui-sref="lawyers({search: '', specialization: 'brachnyj_dogovor', metro: ''})" scroll-top>Брачный договор</a></li>
+                <li data-value="voprosy_po_nedvizhimosti"><a ui-sref="lawyers({search: '', specialization: 'voprosy_po_nedvizhimosti', metro: ''})" scroll-top>Вопросы по недвижимости</a></li>
+                <li data-value="vred_zdorovyu_i_medicinskie_oshibki"><a ui-sref="lawyers({search: '', specialization: 'vred_zdorovyu_i_medicinskie_oshibki', metro: ''})" scroll-top>Вред здоровью и Медицинские ошибки</a></li>
+                <li data-value="grazhdanskie_dela"><a ui-sref="lawyers({search: '', specialization: 'grazhdanskie_dela', metro: ''})" scroll-top>Гражданские дела</a></li>
+                <li data-value="dolgi"><a ui-sref="lawyers({search: '', specialization: 'dolgi', metro: ''})" scroll-top>Долги</a></li>
+            </ul>
+            <ul class="choice-spec">
+                <li data-value="zhilishnye_voprosy"><a ui-sref="lawyers({search: '', specialization: 'zhilishnye_voprosy', metro: ''})" scroll-top>Жилищные вопросы</a></li>
+                <li data-value="zemelnye_voprosy"><a ui-sref="lawyers({search: '', specialization: 'zemelnye_voprosy', metro: ''})" scroll-top>Земельные вопросы</a></li>
+                <li data-value="kreditnye_spory"><a ui-sref="lawyers({search: '', specialization: 'kreditnye_spory', metro: ''})" scroll-top>Кредитные споры</a></li>
+                <li data-value="migracionnye_spory"><a ui-sref="lawyers({search: '', specialization: 'migracionnye_spory', metro: ''})" scroll-top>Миграционные споры</a></li>
+                <li data-value="nalogi"><a ui-sref="lawyers({search: '', specialization: 'nalogi', metro: ''})" scroll-top>Налоги</a></li>
+                <li data-value="nasledstvo"><a ui-sref="lawyers({search: '', specialization: 'nasledstvo', metro: ''})" scroll-top>Наследство</a></li>
+                <li data-value="razvod_i_rastorzhenie_braka"><a ui-sref="lawyers({search: '', specialization: 'razvod_i_rastorzhenie_braka', metro: ''})" scroll-top>Развод и Расторжение брака</a></li>
+            </ul>
+            <ul class="choice-spec">
+                <li data-value="razdel_imushestva"><a ui-sref="lawyers({search: '', specialization: 'razdel_imushestva', metro: ''})" scroll-top>Раздел имущества</a></li>
+                <li data-value="semejnye_spory"><a ui-sref="lawyers({search: '', specialization: 'semejnye_spory', metro: ''})" scroll-top>Семейные споры</a></li>
+                <li data-value="strahovanie"><a ui-sref="lawyers({search: '', specialization: 'strahovanie', metro: ''})" scroll-top>Страхование</a></li>
+                <li data-value="sudebnaya_zashita"><a ui-sref="lawyers({search: '', specialization: 'sudebnaya_zashita', metro: ''})" scroll-top>Судебная защита</a></li>
+                <li data-value="trudovye_voprosy"><a ui-sref="lawyers({search: '', specialization: 'trudovye_voprosy', metro: ''})" scroll-top>Трудовые вопросы</a></li>
+                <li data-value="uslugi_yuristov_i_pomosh_advokatov"><a ui-sref="lawyers({search: '', specialization: 'uslugi_yuristov_i_pomosh_advokatov', metro: ''})" scroll-top>Услуги юристов и Помощь адвокатов</a></li>
+                <li data-value="yuridicheskie_konsultacii"><a ui-sref="lawyers({search: '', specialization: 'yuridicheskie_konsultacii', metro: ''})" scroll-top>Юридические консультации</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="column large-12">
+        <span class="head-ul">Юридические услуги для бизнеса</span>
+    </div>
+    <div class="column large-12">
+        <div class="content content--flex--offices-block">
+            <ul class="choice-spec">
+                <li data-value="avtorskie_i_smezhnye_prava"><a ui-sref="lawyers({search: '', specialization : 'avtorskie_i_smezhnye_prava', metro: ''})" scroll-top>Авторские и Смежные права</a></li>
+                <li data-value="antimonopolnye_dela"><a ui-sref="lawyers({search: '', specialization : 'antimonopolnye_dela', metro: ''})" scroll-top>Антимонопольные дела</a></li>
+                <li data-value="arbitrazhnye_spory"><a ui-sref="lawyers({search: '', specialization : 'arbitrazhnye_spory', metro: ''})" scroll-top>Арбитражные споры</a></li>
+                <li data-value="bankovskie_spory"><a ui-sref="lawyers({search: '', specialization : 'bankovskie_spory', metro: ''})" scroll-top>Банковские споры</a></li>
+                <li data-value="bankrotstvo"><a ui-sref="lawyers({search: '', specialization : 'bankrotstvo', metro: ''})" scroll-top>Банкротство</a></li>
+                <li data-value="vzyskanie_zadolzhennosti"><a ui-sref="lawyers({search: '', specialization : 'vzyskanie_zadolzhennosti', metro: ''})" scroll-top>Взыскание задолженности</a></li>
+                <li data-value="delovaya_reputaciya"><a ui-sref="lawyers({search: '', specialization : 'delovaya_reputaciya', metro: ''})" scroll-top>Деловая репутация</a></li>
+                <li data-value="zashita_intellektualnoj_sobstvennosti"><a ui-sref="lawyers({search: '', specialization : 'zashita_intellektualnoj_sobstvennosti', metro: ''})" scroll-top>Защита интеллектуальной собственности</a></li>
+            </ul>
+            <ul class="choice-spec">
+                <li data-value="zemelnye_uchastki"><a ui-sref="lawyers({search: '', specialization : 'zemelnye_uchastki', metro: ''})" scroll-top>Земельные участки</a></li>
+                <li data-value="investicii_i_gchp"><a ui-sref="lawyers({search: '', specialization : 'investicii_i_gchp', metro: ''})" scroll-top>Инвестиции и ГЧП</a></li>
+                <li data-value="kommercheskij_arbitrazh"><a ui-sref="lawyers({search: '', specialization : 'kommercheskij_arbitrazh', metro: ''})" scroll-top>Коммерческий арбитраж</a></li>
+                <li data-value="korporativnye_spory"><a ui-sref="lawyers({search: '', specialization : 'korporativnye_spory', metro: ''})" scroll-top>Корпоративные споры</a></li>
+                <li data-value="morskaya_praktika"><a ui-sref="lawyers({search: '', specialization : 'morskaya_praktika', metro: ''})" scroll-top>Морская практика</a></li>
+                <li data-value="nalogovye_spory"><a ui-sref="lawyers({search: '', specialization : 'nalogovye_spory', metro: ''})" scroll-top>Налоговые споры</a></li>
+            </ul>
+            <ul class="choice-spec">
+                <li data-value="nedvizhimost"><a ui-sref="lawyers({search: '', specialization : 'nedvizhimost', metro: ''})" scroll-top>Недвижимость</a></li>
+                <li data-value="patenty"><a ui-sref="lawyers({search: '', specialization : 'patenty', metro: ''})" scroll-top>Патенты</a></li>
+                <li data-value="strahovye_spory"><a ui-sref="lawyers({search: '', specialization : 'strahovye_spory', metro: ''})" scroll-top>Страховые споры</a></li>
+                <li data-value="tamozhnya_i_ved"><a ui-sref="lawyers({search: '', specialization : 'tamozhnya_i_ved', metro: ''})" scroll-top>Таможня и ВЭД</a></li>
+                <li data-value="tovarnye_znaki"><a ui-sref="lawyers({search: '', specialization : 'tovarnye_znaki', metro: ''})" scroll-top>Товарные знаки</a></li>
+                <li data-value="trudovye_spory"><a ui-sref="lawyers({search: '', specialization : 'trudovye_spory', metro: ''})" scroll-top>Трудовые споры</a></li>
+                <li data-value="yuridicheskoe_obsluzhivanie_biznesa"><a ui-sref="lawyers({specialization : 'yuridicheskoe_obsluzhivanie_biznesa', metro: ''})" scroll-top>Юридическое обслуживание бизнеса</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<img src="assets/images/line.jpg" style="width: 100%; height: 17px;">
+<div class="row">
+    <div class="column large-12 mem">
+	<img src="assets/images/mem.jpg">
+    </div>
+</div>
+
+
+<div class="application-block" id="application-block" name="application-block-name" data-ui-view="resources"></div>
+
+<div class="row">
+
+    <div class="column large-12 seo-block-content">
+	<span ng-bind-html="content"></span>
+    </div>
+
+    <div class="column large-12" data-ui-view="offices"></div>
+
+    <div class="column large-12" data-ui-view="reviews"></div>
+
+    <div class="column large-12" data-ui-view="mediaus"></div>
+
+</div>
+
+<div id="fixed-bottom-plank-wrap">
+    <div class="full-row footer-row" id="fixed-bottom-plank">
+	<div class="row">
+	    <div class="column large-12 bottom-navigation" id="fixed--bottom-navigation">
+		<div class="bottom-nav">
+                    <a ui-sref="lawyers({search: '', specialization: '', metro: ''})" scroll-top>Юристы</a>
+		    <a ui-sref="about" scroll-top>О проекте</a>
+		    <a ui-sref="reviews" scroll-top>Отзывы</a>
+		    <a ui-sref="mediaus" scroll-top>О нас пишут</a>
+                    <a ui-sref="offices" scroll-top>Наши офисы</a>
+                    <a href="http://blog.48prav.ru/" target="_blank">Блог</a>
+		</div>
+	    </div>
+	</div>
+    </div>
+</div>
+
+<div class="full-row footer-row">
+    <div class="row">
+	<div class="column large-12 footer-content">
+	    <a href="#!/" class="footer--link"><img src="assets/images/footer-logo.png" class="footer-logo"></a>
+	    <p>@ 2010 - 2015. Правовой сервис 48prav.ru - Адвокаты и юристы по рекомендациям и отзывам клиентов.</p>
+	    <p>E-mail: 48prav@48prav.ru, +7 (499) 322-32-48 — запишись на юридическую консультацию по телефону.</p>
+	</div>
+    </div>
+</div>
+
+<!-- Font style: Open Sans -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+<!-- Lib styles -->
+<link rel="stylesheet" type="text/css" href="lib/foundation/css/foundation.min.css"/>
+<link rel='stylesheet' type="text/css" href="lib/materialize/css/materialize.min.css" media="screen,projection"/>
+<link rel="stylesheet" type="text/css" href="lib/bower_components/loaders.css/loaders.css" media="screen,projection"/>
+
+<!-- DD styles -->
+<link rel="stylesheet" href="lib/DD/ui/modal/modal.css"/>
+
+<!-- Users styles -->
+<link rel="stylesheet" href="assets/css/style.css"/>
+<link rel="stylesheet" href="assets/css/list-item.css"/>
+
+<script src="lib/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/loaders.css/loaders.css.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular-seo/angular-seo.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular-ui-mask/dist/mask.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+
+<!-- angular application -->
+<script type="text/javascript" src="application/config.js"></script>
+
+<script src="lib/waves/waves.min.js"></script>
+<script src="lib/foundation/js/foundation.min.js"></script>
+<script src="lib/prism/prism.js"></script>
+<script src="lib/materialize/js/materialize.min.js"></script>
+
+<script src='lib/hammer.js/hammer.min.js'></script>
+<script src="lib/jquery/jquery-scrolltofixed.min.js"></script>
+
+<!-- local storage font -->
+<script src="assets/js/localstoragefontloader.min.js"></script>
+
+<!-- ckeditor-->
+<script src="lib/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular-ckeditor/angular-ckeditor.min.js"></script>
+
+<script type="text/javascript">
+    var url = DDApplicationConfig.api.protocol + '://' + DDApplicationConfig.api.host + ':' + DDApplicationConfig.api.port + '/socket.io/socket.io.js';
+    document.write('<script src="' + url + '"></scr' + 'ipt>');
+</script>
+<script src="application.js"></script>
+
+<div data-ng-include="'assets/includes/counters.html'"></div>
+
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+    (function(){ var widget_id = '7L1qNYqfYV';
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!-- {/literal} END JIVOSITE CODE -->
+
+</body>
+</html>

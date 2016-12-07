@@ -1,0 +1,1875 @@
+<html>
+
+<head>
+
+<link rel=STYLESHEET href="style1.css" type="text/css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Ìÿãêàÿ ìåáåëü: äèâàíû îò ïðîèçâîäèòåëÿ, êðåñëà, óãëîâûå äèâàíû ñ äîñòàâêîé ïî Ìîñêâå. Ôàáðèêà ìÿãêîé ìåáåëè ÑòðîéÄåêîð</title>
+
+<meta name="Description" content="Ôàáðèêà äèâàíîâ «ÑòðîéÄåêîð» - ýòî ïðîèçâîäñòâî ìÿãêîé ìåáåëè äëÿ äîìà, îôèñà, ðåñòîðàíîâ è ãîñòèíèö. Äèâàíû îò ïðîèçâîäèòåëÿ: äèâàíû êðîâàòè, äåòñêèå äèâàíû, óãëîâûå äèâàíû. Èíòåðíåò ìàãàçèí äèâàíîâ. Äîñòàâêà ïî Ìîñêâå è ÌÎ.">
+<meta name="KeyWords" content="ìÿãêàÿ ìåáåëü, äèâàíû, äèâàí, äèâàíû îò ïðîèçâîäèòåëÿ, êðåñëà, óãëîâûå äèâàíû, äåòñêèå äèâàíû, êðåñëà - êðîâàòè, ÷åõëîâàÿ ìåáåëü, èíäèâèäóàëüíûå, ÑòðîéÄåêîð">
+<meta name="verify-v1" content="Atclvopk439NNVjUUuUxnIU8TiaMpZwgxrIeFlQDZuw=" >
+<meta name='268836c0cbdcf7dc4972c19e5ec1654f' content=''>
+<meta name="google-site-verification" content="fHwlRH1B8AkRj9Itsq0gHyOSFuDmdfJD4PBh1aAQ8V4" />
+<link rel="icon" href="sdekor.ico" type="image/x-icon"> 
+<link rel="shortcut icon" href="sdekor.ico" type="image/x-icon"> 
+
+
+<script>
+<!--
+
+	function open_window(link,w,h) //opens new window
+	{
+		var win = "width="+w+",height="+h+",menubar=no,location=no,resizable=no,scrollbars=yes";
+		newWin = window.open(link,'newWin',win);
+		newWin.focus();
+	}
+
+	function confirmDelete() //unsubscription confirmation
+	{
+		temp = window.confirm('');
+		if (temp) //delete
+		{
+			window.location="index.php?killuser=yes";
+		}
+	}
+
+	function validate_custinfo() //validate customer information
+	{
+		if (document.custinfo_form.first_name.value=="" || document.custinfo_form.last_name.value=="")
+		{
+			alert("Ïîæàëóéñòà, ââåäèòå Âàøè ÔÈÎ");
+			return false;
+		}
+		if (document.custinfo_form.email.value=="")
+		{
+			alert("Ïîæàëóéñòà, ââåäèòå email");
+			return false;
+		}
+		if (document.custinfo_form.phone.value=="")
+		{
+			alert("Ïîæàëóéñòà, ââåäèòå íîìåð êîíòàêíîãî òåëåôîíà");
+			return false;
+		}
+
+
+		return true;
+	}
+	
+	function validate_dealerinfo() //validate dealer information
+	{
+		if (document.dealerreg_form.input_orgname.value=="")
+		{alert("Ââåäèòå, ïîæàëóéñòà, Íàçâàíèå îðãàíèçàöèè!"); return false;}
+		
+		if(!document.dealerreg_form.input_email.value.match(/^[A-Za-z0-9\.\_]{1,32}\@[A-Za-z0-9\.\_]{1,32}\.[a-zA-Z]{2,6}$/)) 
+		{
+			alert("Ââåäèòå, ïîæàëóéñòà, êîððåêòíûé E-mail!"); 
+			return false;
+		}
+		else
+		{
+			if (document.dealerreg_form.input_telephone.value=="")
+			{alert("Ââåäèòå, ïîæàëóéñòà, Òåëåôîí(û)!"); return false;}
+			if (document.dealerreg_form.input_address.value=="")
+			{alert("Ââåäèòå, ïîæàëóéñòà, Àäðåñ!"); return false;}
+			if (document.dealerreg_form.input_login.value=="")
+			{alert("Ââåäèòå, ïîæàëóéñòà, Ëîãèí!"); return false;}
+			if (document.dealerreg_form.input_password.value=="")
+			{alert("Ââåäèòå, ïîæàëóéñòà, Ïàðîëü!"); return false;}
+			if (document.dealerreg_form.input_confirm_password.value=="")
+			{alert("Ââåäèòå, ïîæàëóéñòà, ïîäòâåðæäåíèå ïàðîëÿ!"); return false;}
+			return true;	
+		}			
+	}
+
+	function MM_findObj(n, d)
+	{
+		var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length)
+		{
+		    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);
+		}
+		if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+		for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+		if(!x && d.getElementById) x=d.getElementById(n); return x;
+	}
+	function MM_showHideLayers(mylayer) 
+	{ 
+		var i,j,v,obj; 
+		layers = new Array ('about','info', 'stock');
+
+		//îïðåäåëÿåì ðàçìåðû ìåíþ
+		layerW = new Array (190,270,150);
+
+		//îòñòóïû äëÿ ñëîåâ (àáñîëþòíûå îòíîñèòåëüíî leftMargin)
+		layersMargin = new Array (-305,97,203);//îòñòóïû äëÿ ñëîåâ (îòíîñèòåëüíûå)
+
+  //îïðåäåëÿåì ðàçìåðû îêíà
+
+  var layerMargin = ((document.body.clientWidth)/2);
+  for (i=0; i<(layers.length); i++)
+  {
+    if ((obj=MM_findObj(layers[i]))!=null)
+    {
+      if (obj.style)
+      {
+          obj=obj.style;
+          if (layers[i] == mylayer)
+          {
+            v='visible';
+            for (j = 0; j <= i; j++)
+              layerMargin += layersMargin[j];
+            obj.width = layerW[i];
+          }
+          else
+            v='hidden';
+      }
+      obj.visibility=v;
+      obj.left = layerMargin;
+    }
+  }
+}
+
+-->
+</script>
+
+<script src="scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+
+</head>
+<body marginwidth="10" marginheight="0" leftmargin="10" topmargin="0">
+<noindex>
+						<!--<div id="Caution"
+                        style="position:absolute; width:100%; height:30px; z-index:55; left: 0px; top: 0px; visibility: visible"
+                            <span style="float:center; filter:alpha(opacity=85);-moz-opacity:.85;opacity:.85;">
+						  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+							<tr height="18"> 
+								<td width="20"><IMG SRC="images/r_v_l_18.gif" BORDER="0"></td>
+								<td align="center" bgcolor="white" colspan="6">
+									<strong><FONT COLOR="red" size="3">Ó íàñ àâàðèÿ íà òåëåôîííîé ëèíèè! Ïðîñèì çâîíèòü ïî òåëåôîíàì: ÐÎÇÍÈÖÀ (495)&nbsp;785-68-23 ÎÏÒ (495)&nbsp;593-04-56</font></strong>
+								</td>
+								<td width="20"><IMG SRC="images/r_v_p_18.gif" BORDER="0"></td>
+							</tr>				
+							
+                          </table></span>
+                        </div> -->
+
+<!-- íà÷àëî îïèñàíèÿ ñëîåâ ìåíþ -->
+                        <div id="about"
+                        style="position:absolute; width:190px; height:162px; z-index:51; left: 31px; top: 380px; visibility: hidden"
+                        onmouseover="MM_showHideLayers('about')"
+                        onmouseout="MM_showHideLayers()">
+                          <span style="float:left; filter:alpha(opacity=65);-moz-opacity:.65;opacity:.65;">
+						  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+							<tr bgcolor="#404040">
+								<td></td>
+								<td colspan="2">&nbsp;</td>
+								<td></td>
+							</tr>
+							<tr bgcolor="#404040" onMouseOver='this.style.backgroundColor="black";' onMouseOut='this.style.backgroundColor="#404040";'>
+                              <td width="1%"></td>
+                              <td width="20"><IMG SRC="images/cavytshka_w.gif" width="6" height="5" BORDER="0"></td>
+                              <td class="drop_menu" valign="top" ><a href="index.php?about=goods" class="drop_menu"  >
+                              <nobr>Î íàøåé ïðîäóêöèè</nobr>
+                              </a></td>
+                              <td width="1%"></td>
+                            </tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040">
+								<td></td>
+								<td colspan="2" background="images/razdelitel_w.png"><img src="images/non.gif" border="0" width="1" height="1" /></td>
+								<td></td>
+							</tr>
+							<tr height="7"  bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040" onMouseOver='this.style.backgroundColor="black";' onMouseOut='this.style.backgroundColor="#404040";'>
+                              <td width="1%"></td>
+                              <td width="20"><IMG SRC="images/cavytshka_w.gif" width="6" height="5" BORDER="0"></td>
+                              <td  class="drop_menu" valign="top" ><a href="index.php?about=partners" class="drop_menu"  >
+                              <nobr>Íàøè ïàðòí¸ðû</nobr>
+                              </a></td>
+                              <td width="1%"></td>
+                            </tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040">
+								<td></td>
+								<td colspan="2" background="images/razdelitel_w.png"><img src="images/non.gif" border="0" width="1" height="1" /></td>
+								<td></td>
+							</tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040" onMouseOver='this.style.backgroundColor="black";' onMouseOut='this.style.backgroundColor="#404040";'>
+                              <td width="1%"></td>
+                              <td width="20"><IMG SRC="images/cavytshka_w.gif" width="6" height="5" BORDER="0"></td>
+                              <td  class="drop_menu" valign="top"><a href="index.php?about=news" class="drop_menu"  >
+                              <nobr>Íîâîñòè</nobr>
+                              </a></td>
+                              <td width="1%"></td>
+                            </tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040">
+								<td></td>
+								<td colspan="2" background="images/razdelitel_w.png"><img src="images/non.gif" border="0" width="1" height="1" /></td>
+								<td></td>
+							</tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040" onMouseOver='this.style.backgroundColor="black";' onMouseOut='this.style.backgroundColor="#404040";'>
+                              <td width="1%"></td>
+                              <td width="20"><IMG SRC="images/cavytshka_w.gif" width="6" height="5" BORDER="0"></td>
+                              <td  class="drop_menu" valign="top"><a href="index.php?about=vacancy" class="drop_menu"  >
+                              <nobr>Âàêàíñèè</nobr>
+                              </a></td>
+                              <td width="1%"></td>
+                            </tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+                            <tr>
+                              <td><IMG SRC="images/ugol_bl_l.png" WIDTH="14" HEIGHT="14" BORDER="0" ></td>
+                              <td colspan="2" bgcolor="#404040"></td>
+                              <td width="1%"><IMG SRC="images/ugol_bl_p.png" WIDTH="14" HEIGHT="14" BORDER="0" ></td>
+                            </tr>
+                          </table></span>
+                        </div>
+                        <div id="info"
+                        style="position:absolute; width:270px; height:162px; z-index:51; left: 31px; top: 380px; visibility: hidden"
+                        onmouseover="MM_showHideLayers('info')"
+                        onmouseout="MM_showHideLayers()">
+                          <span style="float:left; filter:alpha(opacity=65);-moz-opacity:.65;opacity:.65;">
+						  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+							<tr bgcolor="#404040">
+								<td></td>
+								<td colspan="2">&nbsp;</td>
+								<td></td>
+							</tr>
+							<tr bgcolor="#404040" onMouseOver='this.style.backgroundColor="black";' onMouseOut='this.style.backgroundColor="#404040";'>
+                              <td width="1%"></td>
+                              <td width="20"><IMG SRC="images/cavytshka_w.gif" width="6" height="5" BORDER="0"></td>
+                              <td class="drop_menu" valign="top" ><a href="index.php?gde_kupit=yes" class="drop_menu"  >
+                              <nobr>Ãäå êóïèòü</nobr>
+                              </a></td>
+                              <td width="1%"></td>
+                            </tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040">
+								<td></td>
+								<td colspan="2" background="images/razdelitel_w.png"><img src="images/non.gif" border="0" width="1" height="1" /></td>
+								<td></td>
+							</tr>
+							<!--<tr height="7"  bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040" onMouseOver='this.style.backgroundColor="black";' onMouseOut='this.style.backgroundColor="#404040";'>
+                              <td width="1%"></td>
+                              <td width="20"><IMG SRC="images/cavytshka_w.gif" width="6" height="5" BORDER="0"></td>
+                              <td class="drop_menu" valign="top" ><a href="index.php?show_price=yes" class="drop_menu"  >
+                              <nobr>Ïðàéñ-ëèñò</nobr>
+                              </a></td>
+                              <td width="1%"></td>
+                            </tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040">
+								<td></td>
+								<td colspan="2" background="images/razdelitel_w.png"><img src="images/non.gif" border="0" width="1" height="1" /></td>
+								<td></td>
+							</tr>-->
+							<tr height="7"  bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040" onMouseOver='this.style.backgroundColor="black";' onMouseOut='this.style.backgroundColor="#404040";'>
+                              <td width="1%"></td>
+                              <td width="20"><IMG SRC="images/cavytshka_w.gif" width="6" height="5" BORDER="0"></td>
+                              <td  class="drop_menu" valign="top"><a href="index.php?info=stock" class="drop_menu"  >
+                              <nobr>Àêöèè è ðàñïðîäàæè</nobr>
+                              </a></td>
+                              <td width="1%"></td>
+                            </tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040">
+								<td></td>
+								<td colspan="2" background="images/razdelitel_w.png"><img src="images/non.gif" border="0" width="1" height="1" /></td>
+								<td></td>
+							</tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040" onMouseOver='this.style.backgroundColor="black";' onMouseOut='this.style.backgroundColor="#404040";'>
+                              <td width="1%"></td>
+                              <td width="20"><IMG SRC="images/cavytshka_w.gif" width="6" height="5" BORDER="0"></td>
+                              <td  class="drop_menu" valign="top" ><a href="index.php?info=warranty" class="drop_menu"  >
+                              <nobr>Ãàðàíòèéíûå îáÿçàòåëüñòâà</nobr>
+                              </a></td>
+                              <td width="1%"></td>
+                            </tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040">
+								<td></td>
+								<td colspan="2" background="images/razdelitel_w.png"><img src="images/non.gif" border="0" width="1" height="1" /></td>
+								<td></td>
+							</tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040" onMouseOver='this.style.backgroundColor="black";' onMouseOut='this.style.backgroundColor="#404040";'>
+                              <td width="1%"></td>
+                              <td width="20"><IMG SRC="images/cavytshka_w.gif" width="6" height="5" BORDER="0"></td>
+                              <td  class="drop_menu" valign="top"><a href="index.php?info=faq" class="drop_menu"  >
+                              <nobr>×ÀÂÎ</nobr>
+                              </a></td>
+                              <td width="1%"></td>
+                            </tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040">
+								<td></td>
+								<td colspan="2" background="images/razdelitel_w.png"><img src="images/non.gif" border="0" width="1" height="1" /></td>
+								<td></td>
+							</tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+							<tr bgcolor="#404040" onMouseOver='this.style.backgroundColor="black";' onMouseOut='this.style.backgroundColor="#404040";'>
+                              <td width="1%"></td>
+                              <td width="20"><IMG SRC="images/cavytshka_w.gif" width="6" height="5" BORDER="0"></td>
+                              <td  class="drop_menu" valign="top"><a href="index.php?info=articles" class="drop_menu"  >
+                              <nobr>Ñòàòüè</nobr>
+                              </a></td>
+                              <td width="1%"></td>
+                            </tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+                            <tr>
+                              <td><IMG SRC="images/ugol_bl_l.png" WIDTH="14" HEIGHT="14" BORDER="0" ></td>
+                              <td colspan="2" bgcolor="#404040"></td>
+                              <td width="1%"><IMG SRC="images/ugol_bl_p.png" WIDTH="14" HEIGHT="14" BORDER="0" ></td>
+                            </tr>
+                          </table></span>
+                        </div>
+                        <!--<div id="stock"
+                        style="position:absolute; width:150px; height:30px; z-index:51; left: 31px; top: 380px; visibility: hidden"
+                        onmouseover="MM_showHideLayers('stock')"
+                        onmouseout="MM_showHideLayers()">
+                          <span style="float:left; filter:alpha(opacity=65);-moz-opacity:.65;opacity:.65;">
+						  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+							<tr bgcolor="#404040">
+								<td></td>
+								<td colspan="2">&nbsp;</td>
+								<td></td>
+							</tr>
+							<tr bgcolor="#404040" onMouseOver='this.style.backgroundColor="black";' onMouseOut='this.style.backgroundColor="#404040";'>
+                              <td width="1%"></td>
+                              <td width="20"><IMG SRC="images/cavytshka_w.gif" width="6" height="5" BORDER="0"></td>
+                              <td  class="drop_menu" valign="top"><a href="index.php?show_stock=yes" class="drop_menu"  >
+                              <nobr>Ðàñïðîäàæà!</nobr>
+                              </a></td>
+                              <td width="1%"></td>
+                            </tr>
+							<tr height="7" bgcolor="#404040"><td colspan="4"></td></tr>
+                            <tr>
+                              <td><IMG SRC="images/ugol_bl_l.png" WIDTH="14" HEIGHT="14" BORDER="0" ></td>
+                              <td colspan="2" bgcolor="#404040"></td>
+                              <td width="1%"><IMG SRC="images/ugol_bl_p.png" WIDTH="14" HEIGHT="14" BORDER="0" ></td>
+                            </tr>
+                          </table></span>
+                        </div>-->
+                        
+<!-- êîíåö îïèñàíèÿ ñëîåâ ìåíþ -->
+
+</noindex>
+			  
+			  
+			  
+			  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr height="18"> 
+							<td width="20"><IMG SRC="images/r_v_l_18.gif" width="20" height="18" BORDER="0"></td>
+							<td align="center" bgcolor="white" colspan="4">
+								<strong><FONT COLOR="white">Ìÿãêàÿ ìåáåëü: äèâàíû è êðåñëà, óãëîâûå äèâàíû, êðåñëà-êðîâàòè, äåòñêèå äèâàíû, èíäèâèäóàëüíûå ïðîåêòû îò ôàáðèêè ìÿãêîé ìåáåëè ÑòðîéÄåêîð.</font></strong>
+							</td>
+							<td width="20"><IMG SRC="images/r_v_p_18.gif" width="20" height="18" BORDER="0"></td>
+						</tr>				
+						<tr> 
+							<td width="20"><IMG SRC="images/r_v_l.gif" width="20" height="292" BORDER="0"></td>
+							<td width="100" bgcolor="white">&nbsp;</td>
+							<td align="center" bgcolor="white">
+								<table width="100%" border="0" cellpadding="0" cellspacing="0">
+									<tr height="130" valign="bottom">
+										<td><a href="/" title="Ìÿãêàÿ ìåáåëü: äèâàíû îò ïðîèçâîäèòåëÿ, êðåñëà, óãëîâûå äèâàíû ñ äîñòàâêîé ïî Ìîñêâå. Ôàáðèêà ìÿãêîé ìåáåëè ÑòðîéÄåêîð"><IMG SRC="images/logo.gif" BORDER="0" alt="ÑòðîéÄåêîð - ïðîèçâîäñòâî ìÿãêîé ìåáåëè"></a></td>
+									</tr>
+									<tr height="142" valign="bottom">
+										<td><div style="width:350px; height:112px; position:block;"><a href="index.php?info=contacts" style="font-size:35px; color:#FF5A00; font-family:arial; font-style:bold; margin-top:40px; text-decoration:none;" ALT="+7 (495) 593-04-56 èëè +7 (926) 154-41-55" title="+7 (495) 593-04-56 èëè +7 (926) 154-41-55"><div id="ya-phone-2">
+										
+										<span style="margin-left:10px;">
+										+7 (495) 593-04-56</span><br/>
+										<span style="margin-left:10px;">+7 (926) 154-41-55
+										</span>
+										
+										<!---IMG SRC="images/shapka_left_bottom.gif" width="254" height="114" BORDER="0" ALT="+7 (495) 593-04-56 èëè +7 (926) 154-41-55" title="+7 (495) 593-04-56 èëè +7 (926) 154-41-55" /--->
+										
+										</div>
+										</a>
+										</div>
+										</td>
+									</tr>
+									<tr height="20"><td>&nbsp;</td></tr>
+								</table>
+							</td>
+							<td bgcolor="white">&nbsp;</td>
+							<td align="center" bgcolor="white">
+							
+							
+							
+							<script type="text/javascript" src="/js/jquery.min.js"></script>
+							
+							
+							<link type="text/css"  rel="stylesheet" href="/slider/smslider.css" />
+							<script type="text/javascript" src="/slider/jquery.smslider.min.js" > </script>
+							
+							
+							<div id="sm_slider" style="width:530px; height:292px;">
+								<ul>
+									<li><a href="/"><img src="slider/img/1.jpg" title="" /></a></li>
+									<li><a href="/"><img src="slider/img/2.jpg" title="" /></a></li>
+									<li><a href="/"><img src="slider/img/3.jpg" title="" /></a></li>
+									<li><a href="/"><img src="slider/img/4.jpg" title="" /></a></li>
+									<li><a href="/"><img src="slider/img/5.jpg" title="" /></a></li>
+									<li><a href="/"><img src="slider/img/6.jpg" title="" /></a></li>
+								</ul>
+							</div>
+							
+							
+							<script type="text/javascript">
+							//ïèó ïèó àíèìàöèÿ!áëîêîâ
+							$(document).ready(function(){
+								$('#sm_slider').smSlider({
+									autoPlay   : true,
+									duration : 500,           //cêîðîñòü àíèìàöèè
+									delay : 3000, 		      //çàäåðæêà, ïàóçà
+									transition : 'animate',     //çàòóõàíèå fader ili animate
+									pagination : true,			//òî÷êè âíèçó
+									typeCtrl : 'dots',
+									autoArr    : false,        //ñòðåëêè
+									hoverPause : false
+								});
+							});
+							</script>
+							
+							
+							
+							<!-- img src="images/shapka_right.jpg"  border="0" 	alt="Ìÿãêàÿ ìåáåëü: äèâàíû îò ïðîèçâîäèòåëÿ, êðåñëà, óãëîâûå äèâàíû ñ äîñòàâêîé ïî Ìîñêâå. Ôàáðèêà ìÿãêîé ìåáåëè ÑòðîéÄåêîð" title="Ìÿãêàÿ ìåáåëü: äèâàíû îò ïðîèçâîäèòåëÿ, êðåñëà, óãëîâûå äèâàíû ñ äîñòàâêîé ïî Ìîñêâå. Ôàáðèêà ìÿãêîé ìåáåëè ÑòðîéÄåêîð" -->
+							<!--
+								<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="530" height="292" align="middle">
+									<param name="allowScriptAccess" value="sameDomain" />
+									<param name="movie" value="images/mainbanner.swf" />
+									<param name="quality" value="high" />
+									<param name="menu" value="false">
+									<param name="allowFullScreen" value="false" />
+									<param name="bgcolor" value="#ffffff" />	
+									<param name="flashvars" value="link=http://www.stroydekor.ru/index.php?info=stock" />
+									<embed src="images/mainbanner.swf" quality="high" menu="false" flashvars="link=http://www.stroydekor.ru/index.php?info=stock" name="mainbanner" bgcolor="#ffffff" width="530" height="292" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" />
+								</object>
+							-->
+							</td>
+							<td width="20"><IMG SRC="images/r_v_p.gif" width="20" height="292" BORDER="0"></td>
+						</tr>
+			  </table>
+<center>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f9f8fe"><tr><td bgcolor="#f9f8fe">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	  
+ 	  <tr> 
+	    <td valign="top" >
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td><table width="100%" border="0" cellpadding="0" cellspacing="0" ><tr>
+					<td width="50%">
+						<table border="0" cellpadding="0" cellspacing="0" >
+							<tr valign="top">
+								<td><img src="images/sos1.png" width="21" height="70"></td>
+								<td width="100%" background="images/polosotshka.png">&nbsp;</td>					
+								<td><IMG SRC="images/sos_razdelitel.png" width="2" height="70"></td>
+								<td><a href="/"><IMG SRC="images/sos2.jpg" width="139" height="70" onmouseover="this.src='images/sos2-1.jpg'" onmouseout="this.src='images/sos2.jpg'" onmousedown="this.src='images/sos2-2.jpg'" BORDER="0" alt="Ãëàâíàÿ" title="Ïåðåéòè íà ãëàâíóþ ñòðàíèöó ñàéòà ôàáðèêè ÑòðîéÄåêîð"></a></td>
+								<td><IMG SRC="images/sos_razdelitel.png" width="2" height="70"></td>
+								<td><a href="index.php?about=company"  onMouseOut="MM_showHideLayers()" onMouseOver="MM_showHideLayers('about')"><IMG SRC="images/sos3.jpg" width="135" height="70" onmouseover="this.src='images/sos3-1.jpg'" onmouseout="this.src='images/sos3.jpg'" onmousedown="this.src='images/sos3-2.jpg'"  BORDER="0" alt="Î êîìïàíèè" title="Ïî÷èòàòü î ôàáðèêå ÑòðîéÄåêîð è å¸ ïðîäóêöèè"></a></td>
+								<td><IMG SRC="images/sos_razdelitel.png" width="2" height="70"></td>
+								<td><a href="index.php?info=useful"  onMouseOut="MM_showHideLayers()" onMouseOver="MM_showHideLayers('info')"><IMG SRC="images/sos4.jpg" width="136" height="70" onmouseover="this.src='images/sos4-1.jpg'" onmouseout="this.src='images/sos4.jpg'" onmousedown="this.src='images/sos4-2.jpg'" BORDER="0" alt="Ïîëåçíàÿ èíôîðìàöèÿ" title="Ïåðåéòè â ðàçäåë ÏÎËÅÇÍÀß ÈÍÔÎÐÌÀÖÈß"></a></td>
+								<td><IMG SRC="images/sos_razdelitel.png" width="2" height="70"></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0" >
+							<tr>
+								<td><a href="index.php?info=delivery" onMouseOut="MM_showHideLayers()" onMouseOver="MM_showHideLayers('stock')"><IMG SRC="images/sos12.jpg" width="136" height="70" onmouseover="this.src='images/sos12-1.jpg'" onmouseout="this.src='images/sos12.jpg'" onmousedown="this.src='images/sos12-2.jpg'" BORDER="0" alt="Äîñòàâêà è îïëàòà" title="Èíôîðìàöèÿ î ñòîèìîñòè äîñòàâêè è ïîðÿäêå îïëàòû"></a></td>
+								<td><IMG SRC="images/sos_razdelitel.png" width="2" height="70"></td>
+								<td><a href="index.php?dealer=show"><IMG SRC="images/sos6.jpg" width="136" height="70" onmouseover="this.src='images/sos6-1.jpg'" onmouseout="this.src='images/sos6.jpg'" onmousedown="this.src='images/sos6-2.jpg'" BORDER="0" alt="Îïòîâèêàì" title="Ïåðåéòè â ðàçäåë äëÿ îïòîâûõ ïîêóïàòåëåé"></a></td>
+								<td><IMG SRC="images/sos_razdelitel.png" width="2" height="70"></td>
+								<td><a href="index.php?info=contacts"><IMG SRC="images/sos7.jpg" width="142" height="70" onmouseover="this.src='images/sos7-1.jpg'" onmouseout="this.src='images/sos7.jpg'" onmousedown="this.src='images/sos7-2.jpg'" border="0" alt="Êîíòàêòû" title="Óçíàòü î òîì, êàê ìîæíî ñâÿçàòüñÿ ñ íàìè"></a></td>
+								<td><IMG SRC="images/sos_razdelitel.png" width="2" height="70"></td>
+								<td width="100%" background="images/polosotshka.png">&nbsp;</td>
+								<td><img src="images/sos8.png" width="22" height="70"></td>
+							</tr>
+						</table>
+					</td>
+					</tr></table></td>
+				</tr>
+			</table>
+		</td>
+	  </tr> 
+
+	  <tr height="5"><td></td></tr>
+
+	  <tr> 
+	  <td>
+	  <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+    <td valign="top"><div align="center"> 
+        <table border="0" align="right" cellpadding="0" cellspacing="0">
+		<tr height="25">
+			<td align="center" valign="middle" class="search">
+				ÑòðîéÄåêîð - ýòî ÌßÃÊÀß ìåáåëü!
+			</td>
+		</tr>
+		  <tr><td><img src="images/non.gif" width="10" height="10" border="0"></td></tr>
+		  <tr> 
+            <td align="right" valign="top"><table border="0" align="left" cellpadding="0" cellspacing="0" bgcolor="white">
+                
+                <tr> 
+					<td valign="top"><p><IMG SRC="images/sig_catalog.png" BORDER="0" alt="Êàòàëîã" width="232" height="51"></td>
+                </tr>
+				<tr>					
+					<td><table width="100%" cellspacing="0" cellpadding="0" style="border-left: 1px solid #c8b5b9; border-right: 1px solid #c8b5b9;">
+						<tr>
+							<td>&nbsp;</td>
+						</tr>
+					</table></td>
+				</tr>
+                <tr> 
+                    <td align="left" valign="top"> <table width="100%" cellspacing="0" cellpadding="0" style="border-left: 1px solid #c8b5b9; border-right: 1px solid #c8b5b9;" >
+                      <tr> 
+                        <td> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="22">&nbsp;</td>
+		<td width="20" valign="top"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+		<td>
+
+  
+  		<a href="index.php?categoryID=1" class=light>Äèâàíû - êðîâàòè</a><br>
+
+  		</td>
+	</tr>
+	<tr>
+				<td width="20">&nbsp;</td>
+		<td colspan="2"><IMG SRC="images/razdelitel.png" width="187" height="1" BORDER="0"></td>
+	</tr>
+	<tr>
+		<td width="22">&nbsp;</td>
+		<td width="20" valign="top"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+		<td>
+
+  
+  		<a href="index.php?categoryID=2" class=light>Óãëîâûå äèâàíû</a><br>
+
+  		</td>
+	</tr>
+	<tr>
+				<td width="20">&nbsp;</td>
+		<td colspan="2"><IMG SRC="images/razdelitel.png" width="187" height="1" BORDER="0"></td>
+	</tr>
+	<tr>
+		<td width="22">&nbsp;</td>
+		<td width="20" valign="top"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+		<td>
+
+  
+  		<a href="index.php?categoryID=3" class=light>Êðåñëà</a><br>
+
+  		</td>
+	</tr>
+	<tr>
+				<td width="20">&nbsp;</td>
+		<td colspan="2"><IMG SRC="images/razdelitel.png" width="187" height="1" BORDER="0"></td>
+	</tr>
+	<tr>
+		<td width="22">&nbsp;</td>
+		<td width="20" valign="top"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+		<td>
+
+  
+  		<a href="index.php?categoryID=4" class=light>Êðåñëà - êðîâàòè</a><br>
+
+  		</td>
+	</tr>
+	<tr>
+				<td width="20">&nbsp;</td>
+		<td colspan="2"><IMG SRC="images/razdelitel.png" width="187" height="1" BORDER="0"></td>
+	</tr>
+	<tr>
+		<td width="22">&nbsp;</td>
+		<td width="20" valign="top"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+		<td>
+
+  
+  		<a href="index.php?categoryID=5" class=light>Äåòñêèå äèâàíû</a><br>
+
+  		</td>
+	</tr>
+	<tr>
+				<td width="20">&nbsp;</td>
+		<td colspan="2"><IMG SRC="images/razdelitel.png" width="187" height="1" BORDER="0"></td>
+	</tr>
+	<tr>
+		<td width="22">&nbsp;</td>
+		<td width="20" valign="top"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+		<td>
+
+  
+  		<a href="index.php?categoryID=6" class=light>Äèâàíû äëÿ êóõíè</a><br>
+
+  		</td>
+	</tr>
+	<tr>
+				<td width="20">&nbsp;</td>
+		<td colspan="2"><IMG SRC="images/razdelitel.png" width="187" height="1" BORDER="0"></td>
+	</tr>
+	<tr>
+		<td width="22">&nbsp;</td>
+		<td width="20" valign="top"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+		<td>
+
+  
+  		<a href="index.php?categoryID=7" class=light>Äèâàíû  äëÿ ãîñòèíèö</a><br>
+
+  		</td>
+	</tr>
+	<tr>
+				<td width="20">&nbsp;</td>
+		<td colspan="2"><IMG SRC="images/razdelitel.png" width="187" height="1" BORDER="0"></td>
+	</tr>
+	<tr>
+		<td width="22">&nbsp;</td>
+		<td width="20" valign="top"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+		<td>
+
+  
+  		<a href="index.php?categoryID=8" class=light>Äèâàíû äëÿ ðåñòîðàíîâ</a><br>
+
+  		</td>
+	</tr>
+	<tr>
+				<td width="20">&nbsp;</td>
+		<td colspan="2"><IMG SRC="images/razdelitel.png" width="187" height="1" BORDER="0"></td>
+	</tr>
+	<tr>
+		<td width="22">&nbsp;</td>
+		<td width="20" valign="top"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+		<td>
+
+  
+  		<a href="index.php?categoryID=9" class=light>Èíäèâèäóàëüíûå ïðîåêòû</a><br>
+
+  		</td>
+	</tr>
+	<tr>
+				<td width="20">&nbsp;</td>
+		<td colspan="2"><IMG SRC="images/razdelitel.png" width="187" height="1" BORDER="0"></td>
+	</tr>
+	<tr>
+		<td width="22">&nbsp;</td>
+		<td width="20" valign="top"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+		<td>
+
+  
+  		<a href="index.php?categoryID=10" class=light>Ïóôû, ïîäóøêè</a><br>
+
+  		</td>
+	</tr>
+	<tr>
+				<td width="20">&nbsp;</td>
+		<td colspan="2"><IMG SRC="images/razdelitel.png" width="187" height="1" BORDER="0"></td>
+	</tr>
+	<tr>
+		<td width="22">&nbsp;</td>
+		<td width="20" valign="top"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+		<td>
+
+  
+  		<a href="index.php?categoryID=96" class=light>Ðàñïðîäàæà</a><br>
+
+  		</td>
+	</tr>
+	<tr>
+				<td width="20">&nbsp;</td>
+		<td colspan="2"><IMG SRC="images/razdelitel.png" width="187" height="1" BORDER="0"></td>
+	</tr>
+</table>                        </td>
+                      </tr>
+                    </table></td>
+				</tr>
+                <tr>
+					<td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td><IMG SRC="images/ramka_y4.png" BORDER="0" width="14" height="14"></td>
+							<td background="images/ramka_p3.png" width="100%"></td>
+							<td><IMG SRC="images/ramka_y3.png" BORDER="0" width="14" height="14"></td>
+						</tr>
+					</table></td>
+				</tr>
+              </table></td>
+          </tr>
+		  <tr><td><img src="images/non.gif" width="10" height="10" border="0"></td></tr>
+		  <tr>
+			<td><table border="0" align="left" cellpadding="0" cellspacing="0" bgcolor="white">
+				<tr>
+					<td><IMG SRC="images/sig_spets_predl.png" BORDER="0" alt="Ñïåöèàëüíûå ïðåäëîæåíèÿ" width="232" height="51"></td>
+				</tr>
+				<tr>					
+					<td><table width="232" cellspacing="0" cellpadding="0" style="border-left: 1px solid #c8b5b9; border-right: 1px solid #c8b5b9;">
+						<tr height="5">
+							<td></td>
+						</tr>
+						<tr height="224">
+							<td valign="top">
+								<noindex>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="white">
+						<tr>				<td valign=top width="50%">
+					<table border="0" width="100%" cellpadding="0" cellspacing="0" style="border-right: 1px solid #c8b5b9;">
+					<tr height="130px"><td valign="top">
+
+						<table border="0" width="100%" cellpadding="0" cellspacing="0" >
+						<tr height="26">
+							<td align="center" valign="center"><a href="index.php?productID=538" class="name_spec">Äèâàí "Âèòà-2"</a></td>
+						</tr>
+						<tr>
+							<td align="center"><a href="index.php?productID=538"><img src="products_pictures/zxc7_500_100.jpg" border="0" width="100" height="66" alt='Äèâàí "Âèòà-2"' title='Ïîäðîáíåå î òîâàðå Äèâàí "Âèòà-2"'></a></td>
+						</tr>
+						<tr>
+							<td align="center">
+								<table border="0" bgcolor="white" width="80%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td rowspan="2" align="center" valign="center"><IMG SRC="images/rub.png" width="11" height="22" BORDER="0"></td>
+										<td class="specials_listprice" >&nbsp;&nbsp;<strike>28960</strike></td>
+									</tr>
+																		<tr>
+										<td align="right" class="specials_price">29250</td>
+									</tr>
+																	</table>
+							</td>
+						</tr>
+						</table>
+					</td>
+					</tr>
+					<tr height="1px">
+						<td>
+							  								<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+									<TR>
+										<td width="5%"></td>
+										<TD width="95%" bgcolor="#c8b5b9"><img src="images/non.gif" width="1" height="1" border="0"></TD>
+									</TR>
+								</TABLE>
+							  							  						</td>
+					</tr>
+					<tr height="4">
+						<td></td>
+					</tr>
+					</table>
+				</td>
+													<td valign=top width="50%">
+					<table border="0" width="100%" cellpadding="0" cellspacing="0" >
+					<tr height="130px"><td valign="top">
+
+						<table border="0" width="100%" cellpadding="0" cellspacing="0" >
+						<tr height="26">
+							<td align="center" valign="center"><a href="index.php?productID=470" class="name_spec">Äèâàí "Ñîëî" NEW</a></td>
+						</tr>
+						<tr>
+							<td align="center"><a href="index.php?productID=470"><img src="products_pictures/133_500_100.jpg" border="0" width="100" height="66" alt='Äèâàí "Ñîëî" NEW' title='Ïîäðîáíåå î òîâàðå Äèâàí "Ñîëî" NEW'></a></td>
+						</tr>
+						<tr>
+							<td align="center">
+								<table border="0" bgcolor="white" width="80%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td rowspan="2" align="center" valign="center"><IMG SRC="images/rub.png" width="11" height="22" BORDER="0"></td>
+										<td class="specials_listprice" >&nbsp;&nbsp;<strike>23980</strike></td>
+									</tr>
+																		<tr>
+										<td align="right" class="specials_price">26180</td>
+									</tr>
+																	</table>
+							</td>
+						</tr>
+						</table>
+					</td>
+					</tr>
+					<tr height="1px">
+						<td>
+							  							  								<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+									<TR>
+										<TD width="95%" bgcolor="#c8b5b9"><img src="images/non.gif" width="1" height="1" border="0"></TD>
+										<td width="5%"></td>
+									</TR>
+								</TABLE>
+							  						</td>
+					</tr>
+					<tr height="4">
+						<td></td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+									<tr>				<td valign=top width="50%">
+					<table border="0" width="100%" cellpadding="0" cellspacing="0" style="border-right: 1px solid #c8b5b9;">
+					<tr height="130px"><td valign="top">
+
+						<table border="0" width="100%" cellpadding="0" cellspacing="0" >
+						<tr height="26">
+							<td align="center" valign="center"><a href="index.php?productID=228" class="name_spec">Äèâàí "Áðèäæ-óãîë"</a></td>
+						</tr>
+						<tr>
+							<td align="center"><a href="index.php?productID=228"><img src="products_pictures/bridj-ugol_500_100.jpg" border="0" width="100" height="66" alt='Äèâàí "Áðèäæ-óãîë"' title='Ïîäðîáíåå î òîâàðå Äèâàí "Áðèäæ-óãîë"'></a></td>
+						</tr>
+						<tr>
+							<td align="center">
+								<table border="0" bgcolor="white" width="80%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td rowspan="2" align="center" valign="center"><IMG SRC="images/rub.png" width="11" height="22" BORDER="0"></td>
+										<td class="specials_listprice" >&nbsp;&nbsp;<strike>49870</strike></td>
+									</tr>
+																		<tr>
+										<td align="right" class="specials_price">49280</td>
+									</tr>
+																	</table>
+							</td>
+						</tr>
+						</table>
+					</td>
+					</tr>
+					<tr height="1px">
+						<td>
+							  								<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+									<TR>
+										<td width="5%"></td>
+										<TD width="95%" bgcolor="#c8b5b9"><img src="images/non.gif" width="1" height="1" border="0"></TD>
+									</TR>
+								</TABLE>
+							  							  						</td>
+					</tr>
+					<tr height="4">
+						<td></td>
+					</tr>
+					</table>
+				</td>
+													<td valign=top width="50%">
+					<table border="0" width="100%" cellpadding="0" cellspacing="0" >
+					<tr height="130px"><td valign="top">
+
+						<table border="0" width="100%" cellpadding="0" cellspacing="0" >
+						<tr height="26">
+							<td align="center" valign="center"><a href="index.php?productID=537" class="name_spec">Äèâàí "Âèòà-7"</a></td>
+						</tr>
+						<tr>
+							<td align="center"><a href="index.php?productID=537"><img src="products_pictures/zxc3_500_100.jpg" border="0" width="100" height="66" alt='Äèâàí "Âèòà-7"' title='Ïîäðîáíåå î òîâàðå Äèâàí "Âèòà-7"'></a></td>
+						</tr>
+						<tr>
+							<td align="center">
+								<table border="0" bgcolor="white" width="80%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td rowspan="2" align="center" valign="center"><IMG SRC="images/rub.png" width="11" height="22" BORDER="0"></td>
+										<td class="specials_listprice" >&nbsp;&nbsp;<strike>25810</strike></td>
+									</tr>
+																		<tr>
+										<td align="right" class="specials_price">26600</td>
+									</tr>
+																	</table>
+							</td>
+						</tr>
+						</table>
+					</td>
+					</tr>
+					<tr height="1px">
+						<td>
+							  							  								<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+									<TR>
+										<TD width="95%" bgcolor="#c8b5b9"><img src="images/non.gif" width="1" height="1" border="0"></TD>
+										<td width="5%"></td>
+									</TR>
+								</TABLE>
+							  						</td>
+					</tr>
+					<tr height="4">
+						<td></td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+						</table>
+</noindex>
+							</td>
+						</tr>
+					</table></td>
+				</tr>
+                <tr>
+					<td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td><IMG SRC="images/ramka_y4.png" BORDER="0" width="14" height="14"></td>
+							<td background="images/ramka_p3.png" width="100%"></td>
+							<td><IMG SRC="images/ramka_y3.png" BORDER="0" width="14" height="14"></td>
+						</tr>
+					</table></td>
+				</tr>
+
+			</table></td>
+		  </tr>
+		  <tr><td><img src="images/non.gif" width="10" height="10" border="0"></td></tr>
+		  <tr>
+			<td><table border="0" align="left" cellpadding="0" cellspacing="0" bgcolor="white">
+				<tr>
+					<td><IMG SRC="images/sig_obr_vnimanie.png" BORDER="0" alt="Îáðàòèòå âíèìàíèå" width="232" height="51"></td>
+				</tr>
+				<tr>					
+					<td><table width="232" cellspacing="0" cellpadding="0" style="border-left: 1px solid #c8b5b9; border-right: 1px solid #c8b5b9;">
+						<tr height="5">
+							<td></td>
+						</tr>
+						<tr height="774"> <!-- âûñîòà èçìåíåíà ñ 435 íà 805 -->
+							<td valign="top" style="padding-left: 10px; padding-right: 10px; text-align: justify; color: RGB(244, 101, 5); font-size: 12px;">
+								Â çàâèñèìîñòè îò êà÷åñòâà öâåòîïåðåäà÷è Âàøåãî ìîíèòîðà<img src="images/computer.png" border="0" align="left" hspace="11" width="40" height="40" /> äèâàíû íà ôîòîãðàôèÿõ ìîãóò ïðèíèìàòü îòòåíîê, îòëè÷íûé îò ðåàëüíîãî!<hr>
+								<!--<a href="index.php?info=stock" class="briefDescr"><center>Ñ ïðàçäíèêîì Ïîáåäû!</center><br />
+								<center>Â ÷åñòü 9 ìàÿ 9% äèâàíà<br />Â ÏÎÄÀÐÎÊ!</center></a><hr>-->
+								<div class="briefDescr">Âíèìàíèå! Ñàéò îòîáðàæàåòñÿ êîððåêòíî òîëüêî íà ýêðàíàõ ñ ðàçðåøåíèåì 1024õ768 è âûøå ïðè îêíå áðàóçåðà Èíòåðíåò, ðàçâ¸ðíóòîì íà âåñü ýêðàí.</div>
+								<br /><br /><br /><br /><br />
+								<noindex>
+								<div align="center"><a rel="nofollow" href="http://clck.yandex.ru/redir/dtype=stred/pid=47/cid=1248/*http://market.yandex.ru/grade-shop.xml?shop_id=24878"><img src="http://clck.yandex.ru/redir/dtype=stred/pid=47/cid=1248/*http://img.yandex.ru/market/informer7.png" border="0" alt="Îöåíèòå êà÷åñòâî ìàãàçèíà stroydekor.ru íà ßíäåêñ.Ìàðêåòå." /></a></div></noindex>
+							</td>
+						</tr>
+					</table></td>
+				</tr>
+                <tr>
+					<td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td><IMG SRC="images/ramka_y4.png" BORDER="0" width="14" height="14"></td>
+							<td background="images/ramka_p3.png" width="100%"></td>
+							<td><IMG SRC="images/ramka_y3.png" BORDER="0" width="14" height="14"></td>
+						</tr>
+					</table></td>
+				</tr>
+
+			</table></td>
+		  </tr>
+		</table>
+      </div></td>
+
+    <td width="100%" align="left" valign="top">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td colspan="3"><img src="images/non.gif" width="10" height="10" border="0"></td>
+        </tr>
+        <tr> 
+          <td><img src="images/non.gif" width="10" height="10" border="0"></td>
+          <td width="100%">
+			  <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="white">
+				<tr> 
+					<td><IMG SRC="images/ramka_y1.png" BORDER="0" width="14" height="14"></td>
+					<td background="images/ramka_p1.png"></td>
+			        <td><img src="images/ramka_y2.png" border="0" width="14" height="14"></td>
+				</tr>
+				<tr>
+					<td style="BACKGROUND-IMAGE: url(images/ramka_p4.png); BACKGROUND-REPEAT: repeat-y;"></td>
+					<td width="100%">
+			            
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr height="80">
+					<td>
+						<div align="center"><h1><font color="#b1b3b4">Ìÿãêàÿ ìåáåëü îò ïðîèçâîäèòåëÿ: </font><font color="#f46505"><a href="index.php?categoryID=1"  style="color: RGB(244, 101, 5); text-decoration: none; ">äèâàíû</a> è <a href="index.php?categoryID=3" style="color:	RGB(244, 101, 5); text-decoration: none;">êðåñëà</a>, <a href="index.php?categoryID=2" style="color:	RGB(244, 101, 5); text-decoration: none;">óãëîâûå äèâàíû</a>, <a href="index.php?categoryID=5" style="color:	RGB(244, 101, 5); text-decoration: none;">äåòñêèå äèâàíû</a></font></h1></div>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>				<td valign=top width="50%">
+					<table border="0" width="100%" cellpadding="0" cellspacing="0" style="border-right: 1px solid #c8b5b9;">
+					<tr><td>
+
+						<table border="0" width="100%" cellpadding="0" cellspacing="0" >
+						<tr>
+							<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php?productID=506" class=name>Äèâàí "Ëàõòè"</a></td>
+						</tr>
+						<tr>
+							<td align="center"><a href="index.php?productID=506"><img src="products_pictures/zxx54_256.jpg" width="256" height="170" border=0 alt='Äèâàí "Ëàõòè"' title='Ïîäðîáíåå î òîâàðå Äèâàí "Ëàõòè"'></a></td>
+						</tr>
+						<tr valign="top">
+							<td height="80">
+								<TABLE border="0" width="100%" cellpadding="7" cellspacing="0">
+									<TR>
+										<TD class="briefDescr">&nbsp;&nbsp; Äèâàí «Ëàõòè» - óäà÷íîå ñî÷åòàíèå êëàññè÷åñêîãî äèâàíà è ïîëíîöåííîé äâóñïàëüíîé êðîâàòè. Îêðóãëûå ôîðìû äèâàíà ïðèäàäóò ãîñòèíîé...</TD>
+									</TR>
+								</TABLE>
+							</td>
+						</tr>
+						<tr height="1">
+							<td>
+							  								<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+									<TR>
+										<TD width="97%" background="images/razdelitel_gor.png"><img src="images/non.gif" width="1" height="1" border="0"></TD>
+										<td width="3%"></td>
+									</TR>
+								</TABLE>
+							  							  							</td>
+						</tr>
+						<tr>
+							<td height="6"></td>
+						</tr>
+						<tr>
+							<td align="center"><table border="0" bgcolor="white" width="99%" cellpadding="0" cellspacing="0">
+							<tr>
+								<td align="center" valign="center"  class="totalPrice"><FONT SIZE="2"><b>Îò</b>&nbsp;&nbsp;</FONT><IMG SRC="images/rub.png" width="11" height="22" BORDER="0">&nbsp;42000</td>
+								<td><IMG SRC="images/razdelitel_ver.png" width="1" height="51" BORDER="0"></td>
+								<td valign="center" align="center" width="107">
+									<table border="0" width="100%" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="100%" align="center">
+												<a href="index.php?productID=506"><img src="images/kn_podrobnee.png" width="87" height="21" onmouseover="this.src='images/kn_podrobnee_moused.png'" border="0" onmouseout="this.src='images/kn_podrobnee.png'" onmousedown="this.src='images/kn_podrobnee_pressed.png'" alt="Ïîäðîáíåå" title='Ïîäðîáíåå î òîâàðå Äèâàí "Ëàõòè"'></a>
+											</td>
+										</tr>
+										<tr height="3"><td></td></tr>
+										<tr>
+											<td align="center">
+														
+																 
+									<a href="index.php?shopping_cart=yes&add2cart=506"><img src="images/kn_v_korzinu.png" width="87" height="21" onmouseover="this.src='images/kn_v_korzinu_moused.png'" border="0" onmouseout="this.src='images/kn_v_korzinu.png'" onmousedown="this.src='images/kn_v_korzinu_pressed.png'" alt="äîáàâèòü â êîðçèíó" title='Íàæìèòå, ÷òîáû êóïèòü Äèâàí "Ëàõòè" ÷åðåç Èíòåðíåò'></a>
+								 																			</td>
+										</tr>
+									</table>
+								</td>   
+							</tr></table>
+							</td>
+						</tr>
+						<tr><td height="8"></td></tr>
+						</table>
+					</td>
+					</tr>
+					<tr height="1px">
+						<td bgcolor="#c8b5b9"></td>
+					</tr>
+					<tr><td>&nbsp;</td></tr>
+					</table>
+				</td>
+													<td valign=top width="50%">
+					<table border="0" width="100%" cellpadding="0" cellspacing="0" >
+					<tr><td>
+
+						<table border="0" width="100%" cellpadding="0" cellspacing="0" >
+						<tr>
+							<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php?productID=497" class=name>Äèâàí "Ìàéàìè Ñëàéä"</a></td>
+						</tr>
+						<tr>
+							<td align="center"><a href="index.php?productID=497"><img src="products_pictures/zxx25_256.jpg" width="256" height="170" border=0 alt='Äèâàí "Ìàéàìè Ñëàéä"' title='Ïîäðîáíåå î òîâàðå Äèâàí "Ìàéàìè Ñëàéä"'></a></td>
+						</tr>
+						<tr valign="top">
+							<td height="80">
+								<TABLE border="0" width="100%" cellpadding="7" cellspacing="0">
+									<TR>
+										<TD class="briefDescr">&nbsp;&nbsp;Îðèãèíàëüíûé äèçàéí äèâàíà Ìàéàìè Ñëàéä ïîêîðèò ëþáèòåëåé âñåãî íîâîãî. Ïðîñòûì ïåðåäâèæåíèåì îäíîé ÷àñòè äèâàíà íà 90 ãðàäóñîâ Âû ïîëó÷àåòå êîìôîðòàáåëüíóþ äâóñïàëüíóþ êðîâàòü...</TD>
+									</TR>
+								</TABLE>
+							</td>
+						</tr>
+						<tr height="1">
+							<td>
+							  							  								<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+									<TR>
+										<td width="3%"></td>
+										<TD width="97%" background="images/razdelitel_gor.png"><img src="images/non.gif" width="1" height="1" border="0"></TD>
+									</TR>
+								</TABLE>
+							  							</td>
+						</tr>
+						<tr>
+							<td height="6"></td>
+						</tr>
+						<tr>
+							<td align="center"><table border="0" bgcolor="white" width="99%" cellpadding="0" cellspacing="0">
+							<tr>
+								<td align="center" valign="center"  class="totalPrice"><FONT SIZE="2"><b>Îò</b>&nbsp;&nbsp;</FONT><IMG SRC="images/rub.png" width="11" height="22" BORDER="0">&nbsp;50960</td>
+								<td><IMG SRC="images/razdelitel_ver.png" width="1" height="51" BORDER="0"></td>
+								<td valign="center" align="center" width="107">
+									<table border="0" width="100%" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="100%" align="center">
+												<a href="index.php?productID=497"><img src="images/kn_podrobnee.png" width="87" height="21" onmouseover="this.src='images/kn_podrobnee_moused.png'" border="0" onmouseout="this.src='images/kn_podrobnee.png'" onmousedown="this.src='images/kn_podrobnee_pressed.png'" alt="Ïîäðîáíåå" title='Ïîäðîáíåå î òîâàðå Äèâàí "Ìàéàìè Ñëàéä"'></a>
+											</td>
+										</tr>
+										<tr height="3"><td></td></tr>
+										<tr>
+											<td align="center">
+														
+																 &nbsp;
+								 																			</td>
+										</tr>
+									</table>
+								</td>   
+							</tr></table>
+							</td>
+						</tr>
+						<tr><td height="8"></td></tr>
+						</table>
+					</td>
+					</tr>
+					<tr height="1px">
+						<td bgcolor="#c8b5b9"></td>
+					</tr>
+					<tr><td>&nbsp;</td></tr>
+					</table>
+				</td>
+			</tr>
+									<tr>				<td valign=top width="50%">
+					<table border="0" width="100%" cellpadding="0" cellspacing="0" style="border-right: 1px solid #c8b5b9;">
+					<tr><td>
+
+						<table border="0" width="100%" cellpadding="0" cellspacing="0" >
+						<tr>
+							<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php?productID=519" class=name>Äèâàí "Äåðáè"</a></td>
+						</tr>
+						<tr>
+							<td align="center"><a href="index.php?productID=519"><img src="products_pictures/zvb49_256.jpg" width="256" height="170" border=0 alt='Äèâàí "Äåðáè"' title='Ïîäðîáíåå î òîâàðå Äèâàí "Äåðáè"'></a></td>
+						</tr>
+						<tr valign="top">
+							<td height="80">
+								<TABLE border="0" width="100%" cellpadding="7" cellspacing="0">
+									<TR>
+										<TD class="briefDescr">&nbsp;&nbsp;Íàäîåëî óáèðàòü ïîäóøêè ñ äèâàíîâ - åâðîêíèæåê? Äèâàí "Äåðáè"! Ñòèëüíûé, êîìôîðòíûé è íèêàêèõ ïîäóøåê!</TD>
+									</TR>
+								</TABLE>
+							</td>
+						</tr>
+						<tr height="1">
+							<td>
+							  								<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+									<TR>
+										<TD width="97%" background="images/razdelitel_gor.png"><img src="images/non.gif" width="1" height="1" border="0"></TD>
+										<td width="3%"></td>
+									</TR>
+								</TABLE>
+							  							  							</td>
+						</tr>
+						<tr>
+							<td height="6"></td>
+						</tr>
+						<tr>
+							<td align="center"><table border="0" bgcolor="white" width="99%" cellpadding="0" cellspacing="0">
+							<tr>
+								<td align="center" valign="center"  class="totalPrice"><FONT SIZE="2"><b>Îò</b>&nbsp;&nbsp;</FONT><IMG SRC="images/rub.png" width="11" height="22" BORDER="0">&nbsp;45000</td>
+								<td><IMG SRC="images/razdelitel_ver.png" width="1" height="51" BORDER="0"></td>
+								<td valign="center" align="center" width="107">
+									<table border="0" width="100%" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="100%" align="center">
+												<a href="index.php?productID=519"><img src="images/kn_podrobnee.png" width="87" height="21" onmouseover="this.src='images/kn_podrobnee_moused.png'" border="0" onmouseout="this.src='images/kn_podrobnee.png'" onmousedown="this.src='images/kn_podrobnee_pressed.png'" alt="Ïîäðîáíåå" title='Ïîäðîáíåå î òîâàðå Äèâàí "Äåðáè"'></a>
+											</td>
+										</tr>
+										<tr height="3"><td></td></tr>
+										<tr>
+											<td align="center">
+														
+																 
+									<a href="index.php?shopping_cart=yes&add2cart=519"><img src="images/kn_v_korzinu.png" width="87" height="21" onmouseover="this.src='images/kn_v_korzinu_moused.png'" border="0" onmouseout="this.src='images/kn_v_korzinu.png'" onmousedown="this.src='images/kn_v_korzinu_pressed.png'" alt="äîáàâèòü â êîðçèíó" title='Íàæìèòå, ÷òîáû êóïèòü Äèâàí "Äåðáè" ÷åðåç Èíòåðíåò'></a>
+								 																			</td>
+										</tr>
+									</table>
+								</td>   
+							</tr></table>
+							</td>
+						</tr>
+						<tr><td height="8"></td></tr>
+						</table>
+					</td>
+					</tr>
+					<tr height="1px">
+						<td bgcolor="#c8b5b9"></td>
+					</tr>
+					<tr><td>&nbsp;</td></tr>
+					</table>
+				</td>
+													<td valign=top width="50%">
+					<table border="0" width="100%" cellpadding="0" cellspacing="0" >
+					<tr><td>
+
+						<table border="0" width="100%" cellpadding="0" cellspacing="0" >
+						<tr>
+							<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php?productID=465" class=name>Äåòñêèé äèâàí "Ôà-äèåç Ïðèíò"</a></td>
+						</tr>
+						<tr>
+							<td align="center"><a href="index.php?productID=465"><img src="products_pictures/zvv10_256.jpg" width="256" height="170" border=0 alt='Äåòñêèé äèâàí "Ôà-äèåç Ïðèíò"' title='Ïîäðîáíåå î òîâàðå Äåòñêèé äèâàí "Ôà-äèåç Ïðèíò"'></a></td>
+						</tr>
+						<tr valign="top">
+							<td height="80">
+								<TABLE border="0" width="100%" cellpadding="7" cellspacing="0">
+									<TR>
+										<TD class="briefDescr">&nbsp;&nbsp;"Ôà-äèåç ïðèíò"- äåòñêèé äèâàí èç ïðèíòîâàííîé òêàíè ñ ëþáèìûìè ãåðîÿìè ïîïóëÿðíåéøèõ ìóëüòôèëüìîâ.</TD>
+									</TR>
+								</TABLE>
+							</td>
+						</tr>
+						<tr height="1">
+							<td>
+							  							  								<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+									<TR>
+										<td width="3%"></td>
+										<TD width="97%" background="images/razdelitel_gor.png"><img src="images/non.gif" width="1" height="1" border="0"></TD>
+									</TR>
+								</TABLE>
+							  							</td>
+						</tr>
+						<tr>
+							<td height="6"></td>
+						</tr>
+						<tr>
+							<td align="center"><table border="0" bgcolor="white" width="99%" cellpadding="0" cellspacing="0">
+							<tr>
+								<td align="center" valign="center"  class="totalPrice"><FONT SIZE="2"><b>Îò</b>&nbsp;&nbsp;</FONT><IMG SRC="images/rub.png" width="11" height="22" BORDER="0">&nbsp;14980</td>
+								<td><IMG SRC="images/razdelitel_ver.png" width="1" height="51" BORDER="0"></td>
+								<td valign="center" align="center" width="107">
+									<table border="0" width="100%" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="100%" align="center">
+												<a href="index.php?productID=465"><img src="images/kn_podrobnee.png" width="87" height="21" onmouseover="this.src='images/kn_podrobnee_moused.png'" border="0" onmouseout="this.src='images/kn_podrobnee.png'" onmousedown="this.src='images/kn_podrobnee_pressed.png'" alt="Ïîäðîáíåå" title='Ïîäðîáíåå î òîâàðå Äåòñêèé äèâàí "Ôà-äèåç Ïðèíò"'></a>
+											</td>
+										</tr>
+										<tr height="3"><td></td></tr>
+										<tr>
+											<td align="center">
+														
+																 &nbsp;
+								 																			</td>
+										</tr>
+									</table>
+								</td>   
+							</tr></table>
+							</td>
+						</tr>
+						<tr><td height="8"></td></tr>
+						</table>
+					</td>
+					</tr>
+					<tr height="1px">
+						<td bgcolor="#c8b5b9"></td>
+					</tr>
+					<tr><td>&nbsp;</td></tr>
+					</table>
+				</td>
+			</tr>
+									</table>
+		</td>
+	</tr>
+	<tr>
+		<td><img src="images/non.gif" height="31" border="0"></td>
+	</tr>
+	<tr height="476">
+		<td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr height="55">
+					<td>
+						<div align="center"><h2><font color="#f46505">Äèâàíû îò ïðîèçâîäèòåëÿ - ÊÀ×ÅÑÒÂÅÍÍÛÉ âûáîð!</font></h2></div>
+					</td>
+				</tr>
+				<tr height="135">
+					<td  class="text">
+						ÑòðîéÄåêîð <strong>ïðîèçâîäèò ìÿãêóþ ìåáåëü</strong> ñ 1992 ãîäà. Çà âðåìÿ ñâîåãî ñóùåñòâîâàíèÿ ôàáðèêà íåîäíîêðàòíî îáíîâèëà ìîäåëüíûé ðÿä âûïóñêàåìîé ïðîäóêöèè, íî ÷òî âñåãäà îñòà¸òñÿ ïðèñóùå äèâàíàì ÑòðîéÄåêîð - ýòî íåïðåâçîéä¸ííîå ÊÀ×ÅÑÒÂÎ, äîñòèãàåìîå çà ñ÷¸ò òùàòåëüíåéøåãî îòáîðà ìàòåðèàëîâ ïåðåä çàïóñêîì â ïðîèçâîäñòâî è ñàìûõ ñîâðåìåííûõ òåõíîëîãèé. Ñðîê ñëóæáû <strong>äèâàíîâ ôàáðèêè</strong> ñîñòàâëÿåò íå ìåíåå 10 ëåò! 
+					</td>
+				</tr>
+				<tr height="380">
+				<td class="text">
+				Ñðåäè íàøèõ óâàæàåìûõ çàêàç÷èêîâ:<br />
+- ÎÎÎ «Ðîñèíòåð Ðåñòîðàíòñ» (IL Patio, Ïëàíåòà Ñóøè, Ðîñòèêñ);<br />
+- Óïðàâëåíèå äåëàìè ïðåçèäåíòà ÐÔ (ÔÃÁÓ «Êëèíè÷åñêèé ñàíàòîðèé Áàðâèõà», ä/î «Ëåñíûå äàëè», «Íàçàðüåâî», «Ñîñíû», «Ïîäìîñêîâüå»);<br />
+- Ñîâåò Ôåäåðàöèé ÐÔ (æ/ê «Green House»);<br />
+- Ñàíàòîðèè ÌÎ ÐÔ («Ìîæàéñêèé», «Çâåíèãîðîäñêèé», Ãîñïèòàëü ÐÂÑÍ èì.Áóðäåíêî);<br />
+- Äåòñêèå ìåäèöèíñêèå è îáðàçîâàòåëüíûå ó÷ðåæäåíèÿ (Óâàðîâñêèé äåòñêèé äîì,  Ñòàðãîðîäñêàÿ ñïåöèàëèçèðîâàííàÿ øêîëà  «Ãàðìîíèÿ»);<br />
+- Ä/î Öåíòðîáàíêà ÐÔ («Çâåíèãîðîäêà», «Çåëåíûé áîð»);<br />
+- Ñàíàòîðèè Àêàäåìèè Íàóê ÐÔ («×àéêîâñêèé», «Ïîðå÷üå»);<br />
+- Ñòðîèòåëüíàÿ êîìïàíèÿ «Äîíñòðîé»;<br />
+- Ìåäèöèíñêèå öåíòðû Ì×Ñ ÐÔ Ãðàæäàíñêîé Àâèàöèè ÐÔ;<br />
+- Êîìïàíèÿ «Àïòðåíä» (ìåáåëü äëÿ ãîñòèíèö è ðåñòîðàíîâ â ãîñòèíèöàõ Atlas Park Hotel, MarriotÃðàíä Îòåëü, ÑÂÖ Ðåêîðä);<br />
+- Êîìïàíèÿ «Êðåàòèâ-Ìåáåëü» (îñíàùåíèå áðåíäîâîãî òîðãîâîãî îáîðóäîâàíèÿ è ìåáåëè ïîä çàêàç);<br />
+- Êîìïàíèÿ «Àíäðåîíè» (ãîñòèíèöà «SK ROYAL» ã.ßðîñëàâëü)
+
+				</td>
+				</tr>
+				<tr height="160">
+					<td  class="text">
+						Çàêàç <strong>äèâàíîâ ó ïðîèçâîäèòåëÿ ìÿãêîé ìåáåëè</strong> äà¸ò Âàì ðÿä ïðåèìóùåñòâ ïåðåä ïîêóïàòåëÿìè îáû÷íûõ ðîçíè÷íûõ ìàãàçèíîâ. Ñàìîå ïðèÿòíîå èç íèõ - Âû èçáàâëåíû îò òîðãîâîé íàöåíêè ïîñðåäíèêîâ (îò 40% è âûøå)! Êðîìå òîãî, Âàì ïðåäîñòàâëÿåòñÿ âîçìîæíîñòü ñàìîñòîÿòåëüíî ïîäîáðàòü îáèâêó äëÿ Âàøåãî íîâîãî äèâàíà ïî öâåòó è ôàêòóðå èç áîëåå 1000 âàðèàíòîâ òêàíåé è êîæ! È åñëè óæ ñ Âàøèì äèâàíîì ÷òî-òî ñëó÷èòñÿ â ïðîöåññå ýêñïëóàòàöèè, òî Âû âñåãäà çíàåòå êóäà îáðàòèòüñÿ çà ïîìîùüþ!
+					</td>
+				</tr>
+				<tr height="116">
+					<td  class="text">
+						×òîáû íå òðàòèòü Âàøå äðàãîöåííîå âðåìÿ íà ïîñåùåíèå íàøåãî ñàëîíà-ìàãàçèíà <a href="index.php?gde_kupit=salony_fabriki_v_odintsovo" class="lightstandard">äèâàíîâ â Îäèíöîâî</a>, ÑòðîéÄåêîð ïðåäëàãàåò Âàì îôîðìèòü çàêàç íà ïîíðàâèâøèéñÿ äèâàí ÷åðåç <strong>Èíòåðíåò-ìàãàçèí</strong> èëè ïî òåëåôîíó. Ñîáñòâåííàÿ ñëóæáà äîñòàâêè ðàáîòàåò ïî ã. Ìîñêâà è áëèæàéøåìó Ïîäìîñêîâüþ.
+					</td>
+				</tr>				
+			</table>
+		</td>
+	</tr>
+</table>
+					 </td>
+					<td style="BACKGROUND-IMAGE: url(images/ramka_p2.png); BACKGROUND-REPEAT: repeat-y;"></td>
+				</tr>
+				<tr> 
+					<td><IMG SRC="images/ramka_y4.png" BORDER="0" width="14" height="14"></td>
+					<td background="images/ramka_p3.png"></td>
+					<td><IMG SRC="images/ramka_y3.png" BORDER="0" width="14" height="14"></td>
+				</tr>
+			  </table>
+		  </td>
+          <td><img src="images/non.gif" width="10" height="10" border="0"></td>
+        </tr>
+        
+      </table>
+	</td>
+	
+	<td valign="top">
+  	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr height="25">
+			<td align="center" valign="middle">
+			<noindex>
+<table cellspacing=0 cellpadding=0 border=0>
+
+<form action="index.php" method=get>
+
+<tr>
+<td><font class="search">Ïîèñê:&nbsp;</font></td>
+<td><input type="text" name="searchstring" size='12' style="border: 1px dotted #bfb1b1; " value=""></td>
+<td><nobr>&nbsp;<input type="image" border=0 src="images/search.gif">&nbsp;&nbsp;&nbsp;</nobr></td>
+</tr>
+
+</form>
+</table>
+</noindex>
+			</td>
+		</tr>
+		<tr> 
+			<td><img src="images/non.gif" width="10" height="10" border="0"></td>
+        </tr>
+        <tr > 
+          <td width="100%"> 
+			  <table width="175" border="0" cellpadding="0" cellspacing="0" bgcolor="white">
+				<tr> 
+					<td><IMG SRC="images/ramka_y1.png" width="14" height="14" BORDER="0"></td>
+					<td background="images/ramka_p1.png"></td>
+			        <td><img src="images/ramka_y2.png" width="14" height="14" border="0"></td>
+				</tr>
+				<tr height="162" >
+					<td style="BACKGROUND-IMAGE: url(images/ramka_p4.png); BACKGROUND-REPEAT: repeat-y;"></td>
+					<td width="100%" class="smalltext">
+			            <a href="index.php?gde_kupit=yes" ><IMG SRC="images/gde_kupit.png" width="150" height="21" BORDER="0" alt="Ãäå êóïèòü" title="Ïîñìîòðåòü àäðåñà ñàëîíîâ-ìàãàçèíîâ, â êîòîðûõ ïðåäñòàâëåíà ìÿãêàÿ ìåáåëü ôàáðèêè ÑòðîéÄåêîð"></a><br />
+
+						
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr >
+								<td></td>
+								<td colspan="2">&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="12">&nbsp;</td>
+								<td width="20"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+								<td>
+									<a href="index.php?gde_kupit=salony_fabriki" class="lightstandard"><font color="#f46505">Íàøè ñàëîíû</font></a>
+								</td>
+							</tr>
+							<tr>
+								<td width="10">&nbsp;</td>
+								<td colspan="2" style="BACKGROUND-IMAGE: url(images/razdelitel_gor8.png); BACKGROUND-REPEAT: repeat-x;"><img src="images/non.gif" border="0" width="1" height="1" /></td>
+							</tr>
+							<tr>
+								<td width="12">&nbsp;</td>
+								<td width="20"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+								<td>
+									<a href="index.php?gde_kupit=moskva" class="lightstandard"><font color="#f46505">Ìîñêâà</font></a>
+								</td>
+							</tr>
+							<tr >
+								<td width="10">&nbsp;</td>
+								<td colspan="2" style="BACKGROUND-IMAGE: url(images/razdelitel_gor8.png); BACKGROUND-REPEAT: repeat-x;"><img src="images/non.gif" border="0" width="1" height="1" /></td>
+							</tr>
+							<tr>
+								<td width="12">&nbsp;</td>
+								<td width="20"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+								<td>
+									<a href="index.php?gde_kupit=mo" class="lightstandard"><font color="#f46505">Ìîñêîâñêàÿ îáëàñòü</font></a>
+								</td>
+							</tr>
+							<tr >
+								<td width="10">&nbsp;</td>
+								<td colspan="2" style="BACKGROUND-IMAGE: url(images/razdelitel_gor8.png); BACKGROUND-REPEAT: repeat-x;"><img src="images/non.gif" border="0" width="1" height="1" /></td>
+							</tr>
+							<tr>
+								<td width="12">&nbsp;</td>
+								<td width="20"><IMG SRC="images/cavytshka.png" width="6" height="5" BORDER="0">&nbsp;</td>
+								<td>
+									<a href="index.php?gde_kupit=regiony" class="lightstandard"><font color="#f46505">Ðåãèîíû ÐÔ</font></a>
+								</td>
+							</tr>
+						</table>
+						
+						
+						
+					 </td>
+					<td style="BACKGROUND-IMAGE: url(images/ramka_p2.png); BACKGROUND-REPEAT: repeat-y;"></td>
+				</tr>
+				<tr> 
+					<td><IMG SRC="images/ramka_y4.png" width="14" height="14" BORDER="0"></td>
+					<td background="images/ramka_p3.png"></td>
+					<td><IMG SRC="images/ramka_y3.png" width="14" height="14" BORDER="0"></td>
+				</tr>
+			  </table>
+          </td>
+		</tr>
+		<tr height="10"><td><img src="images/non.gif" width="1" height="10" border="0" alt=""></td></tr>
+		<tr> 
+          <td width="100%"> 
+			  <table width="175" border="0" cellpadding="0" cellspacing="0" >
+				<tr>
+				  <td>
+										<TABLE width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="white">
+					<TR>
+						<TD colspan="2"><IMG SRC="images/ramka_home_1g.png" BORDER="0" width="14" height="5"></TD>
+						<TD background="images/ramka_home_1l.png" width="100%"></TD>
+						<TD colspan="2"><IMG SRC="images/ramka_home_2g.png" BORDER="0" width="14" height="5"></TD>
+					</TR>
+					<TR>
+						<TD><IMG SRC="images/ramka_home_1v.png" BORDER="0" width="5" height="9"></TD>
+						<TD colspan="3" width="100%"></TD>
+						<TD align="right"><IMG SRC="images/ramka_home_2v.png" BORDER="0" width="5" height="9"></TD>
+					</TR>
+					<TR height="104">
+						<TD colspan="2" style="BACKGROUND-IMAGE: url(images/ramka_p4.png); BACKGROUND-REPEAT: repeat-y;"></TD>
+						<td style="background-image: url(images/korzina.png); background-repeat: no-repeat;" width="100%" valign="top">
+							<noindex><a href="index.php?shopping_cart=yes" rel="nofollow"><IMG SRC="images/Kn_korzina.png" width="150" height="21" BORDER="0" alt="Êîðçèíà" title="Ïåðåéòè â êîðçèíó ïîêóïîê"></a><BR>
+							
+<table>
+ <form name="shopping_cart_form">
+ <tr><td>
+
+ 	<input class=cart type=text name=gc value="(íåò òîâàðîâ)" readonly><br>
+	<input type=text class=cart name=ca value="" readonly>
+ 
+<!-- <nobr><a class=lightsmall href="index.php?shopping_cart=yes"><IMG SRC="images/kn_oform_zak.jpg" WIDTH="116" HEIGHT="20" BORDER="0"></a></nobr> -->
+
+ </td></tr>
+ </form>
+</table><BR>
+							<a href="index.php?shopping_cart=yes" rel="nofollow"><img src="images/of_zakaz.png" width="116" height="21" border="0" onmouseover="this.src='images/of_zakaz_moused.png'" border="0" onmouseout="this.src='images/of_zakaz.png'" onmousedown="this.src='images/of_zakaz_pressed.png'" alt="Îôîðìèòü çàêàç" title="Îôîðìèòü çàêàç"></a></noindex>
+						</td>
+						<TD colspan="2" style="BACKGROUND-IMAGE: url(images/ramka_p2.png); BACKGROUND-REPEAT: repeat-y;"></TD>
+					</TR>
+					<TR>
+						<TD><IMG SRC="images/ramka_home_4v.png" BORDER="0" width="5" height="9"></TD>
+						<TD colspan="3" width="100%"></TD>
+						<TD align="right"><IMG SRC="images/ramka_home_3v.png" BORDER="0" width="5" height="9"></TD>
+					</TR>
+					<TR>
+						<TD colspan="2"><IMG SRC="images/ramka_home_4g.png" width="14" height="5" BORDER="0"></TD>
+						<TD background="images/ramka_home_3l.png" width="100%"></TD>
+						<TD colspan="2"><IMG SRC="images/ramka_home_3g.png" width="14" height="5" BORDER="0"></TD>
+					</TR>
+					</TABLE>
+									  </td>
+				</tr>
+			  </table>
+          </td>
+		</tr>
+		<tr height="10"><td><img src="images/non.gif" width="1" height="10" border="0" alt=""></td></tr>
+		<tr>
+			<td width="100%">
+			  <table width="175" border="0" cellpadding="0" cellspacing="0" >
+				<tr>
+				  <td>
+					<TABLE width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="white">
+					<TR>
+						<TD colspan="2"><IMG SRC="images/ramka_home_1g.png" width="14" height="5" BORDER="0"></TD>
+						<TD background="images/ramka_home_1l.png" width="100%"></TD>
+						<TD colspan="2"><IMG SRC="images/ramka_home_2g.png" width="14" height="5" BORDER="0"></TD>
+					</TR>
+					<TR>
+						<TD><IMG SRC="images/ramka_home_1v.png" width="5" height="9" BORDER="0"></TD>
+						<TD colspan="3" width="100%"></TD>
+						<TD align="right"><IMG SRC="images/ramka_home_2v.png" width="5" height="9" BORDER="0"></TD>
+					</TR>
+					<TR>
+						<TD colspan="2" style="BACKGROUND-IMAGE: url(images/ramka_p4.png); BACKGROUND-REPEAT: repeat-y;"></TD>
+						<td width="100%" height="1286" valign="top"> <!-- âûñîòà èçìåíåíà ñ 916 äî 1286 -->
+							
+<!--<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="150" height="240" id="ofis_mebel" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="images/ofis_mebel.swf" />
+	<param name="menu" value="false">
+	<param name="quality" value="high" />
+	<param name="bgcolor" value="#ffffff" />
+	<embed src="images/ofis_mebel.swf" quality="high" bgcolor="#ffffff" width="150" height="240" name="ofis_mebel" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	</object>
+							
+							<img src="images/non.gif" border="0" alt="" height="15" width="150">
+							
+							<!--							<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="150" height="115" id="shtory" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="images/shtory.swf" />
+	<param name="menu" value="false">
+	<param name="quality" value="high" />
+	<param name="bgcolor" value="#ffffff" />
+	<embed src="images/shtory.swf" quality="high" menu="false" bgcolor="#ffffff" width="150" height="115" name="shtory" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+							</object>
+							
+							<img src="images/non.gif" border="0" alt="" height="15" width="150"> -->
+							
+							<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="150" height="115" id="fa_lbtzyi" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="images/fa_lbtzyi.swf" />
+	<param name="menu" value="false">
+	<param name="quality" value="high" />
+	<param name="bgcolor" value="#ffffff" />
+	<embed src="images/fa_lbtzyi.swf" quality="high" menu="false" bgcolor="#ffffff" width="150" height="115" name="fa_lbtzyi" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+							</object>
+							
+							<img src="images/non.gif" border="0" alt="" height="15" width="150">
+							
+							<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="150" height="115" id="4restoran" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="images/4restoran.swf" />
+	<param name="menu" value="false">
+	<param name="quality" value="high" />
+	<param name="bgcolor" value="#ffffff" />
+	<embed src="images/4restoran.swf" quality="high" menu="false" bgcolor="#ffffff" width="150" height="115" name="4restoran" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+							</object>
+							
+							<img src="images/non.gif" border="0" alt="" height="15" width="150">
+							
+							<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="150" height="115" id="new" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="images/new.swf" />
+	<param name="menu" value="false">
+	<param name="quality" value="high" />
+	<param name="bgcolor" value="#ffffff" />
+	<embed src="images/new.swf" quality="high" menu="false" bgcolor="#ffffff" width="150" height="115" name="new" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+							</object>
+							
+							<img src="images/non.gif" border="0" alt="" height="15" width="150">
+
+<!--							<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="150" height="115" id="kovri" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="images/kovri.swf" />
+	<param name="menu" value="false">
+	<param name="quality" value="high" />
+	<param name="bgcolor" value="#ffffff" />
+	<embed src="images/kovri.swf" quality="high" menu="false" bgcolor="#ffffff" width="150" height="115" name="kovri" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+							</object>
+							
+							<img src="images/non.gif" border="0" alt="" height="15" width="150">-->
+
+							<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="150" height="115" id="lotosv" align="middle">
+								<param name="allowScriptAccess" value="sameDomain" />
+								<param name="allowFullScreen" value="false" />
+								<param name="movie" value="images/lotosv.swf" />
+								<param name="menu" value="false">
+								<param name="quality" value="high" />
+								<param name="bgcolor" value="#ffffff" />
+								<embed src="images/lotosv.swf" quality="high" menu="false" bgcolor="#ffffff" width="150" height="115" name="lotosv" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" />
+							</object>
+
+							<img src="images/non.gif" border="0" alt="" height="15" width="150">
+
+							<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="150" height="115" id="ind_proekty" align="middle">
+								<param name="allowScriptAccess" value="sameDomain" />
+								<param name="allowFullScreen" value="false" />
+								<param name="movie" value="images/ind_proekty.swf" />
+								<param name="menu" value="false">
+								<param name="quality" value="high" />
+								<param name="flashvars" value="link=http://www.stroydekor.ru/index.php?categoryID=9" />
+								<param name="bgcolor" value="#f9f8fe" />
+								<embed src="images/ind_proekty.swf" quality="high" menu="false" flashvars="link=http://www.stroydekor.ru/index.php?categoryID=9" bgcolor="#f9f8fe" width="150" height="115" name="ind_proekty" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" />
+							</object>
+							
+							<img src="images/non.gif" border="0" alt="" height="15" width="150">
+
+							
+							<img src="images/non.gif" border="0" alt="" height="15" width="150">
+							<!--<img src="images/reklama.png" border="0" />-->
+							<img src="images/non.gif" border="0" alt="" height="15" width="150">
+							<img src="images/non.gif" border="0" alt="" height="15" width="150">
+						</td>
+						<TD colspan="2" style="BACKGROUND-IMAGE: url(images/ramka_p2.png); BACKGROUND-REPEAT: repeat-y;"></TD>
+					</TR>
+					<TR>
+						<TD><IMG SRC="images/ramka_home_4v.png" width="5" height="9" BORDER="0"></TD>
+						<TD colspan="3" width="100%"></TD>
+						<TD align="right"><IMG SRC="images/ramka_home_3v.png" width="5" height="9" BORDER="0"></TD>
+					</TR>
+					<TR>
+						<TD colspan="2"><IMG SRC="images/ramka_home_4g.png" width="14" height="5 BORDER="0"></TD>
+						<TD background="images/ramka_home_3l.png" width="100%"></TD>
+						<TD colspan="2"><IMG SRC="images/ramka_home_3g.png" width="14" height="5" BORDER="0"></TD>
+					</TR>
+					</TABLE>
+				  </td>
+				</tr>
+			  </table>			
+			</td>
+		</tr>
+      </table>
+	</td>
+	  </tr>
+	  </table>
+	</td>
+
+  </tr>
+</table></td>
+  </tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td><img src="images/non.gif" width="10" height="10" border="0"></td></tr>
+<tr> 
+    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="white">
+						<tr> 
+					<td><IMG SRC="images/ramka_y1.png" width="14" height="14" BORDER="0"></td>
+					<td background="images/ramka_p1.png"></td>
+			        <td><img src="images/ramka_y2.png" width="14" height="14" border="0"></td>
+				</tr>
+				<tr>
+					<td style="BACKGROUND-IMAGE: url(images/ramka_p4.png); BACKGROUND-REPEAT: repeat-y;"></td>
+					<td width="100%">
+			            <table width="100%" cellpadding="5" cellspacing="10" border="0" >
+	<tr valign="top">
+		<td width="25%"><h3>Ïðîèçâîäñòâî ìÿãêîé ìåáåëè</h3>
+		<p class="seotext">Îñíîâíîå íàïðàâëåíèå äåÿòåëüíîñòè ôàáðèêè äèâàíîâ "ÑòðîéÄåêîð" - <strong>ïðîèçâîäñòâî ìÿãêîé ìåáåëè</strong> äëÿ äîìà è îôèñà. Ðåàëèçàöèÿ ïðîäóêöèè ïðîèçâîäèòñÿ êàê <a href="index.php?dealer=show" title="ìÿãêàÿ ìåáåëü îïòîì">îïòîì</a>, òàê è â ðîçíèöó. Äëÿ íàøèõ îïòîâûõ êëèåíòîâ ðàçðàáîòàíà ñèñòåìà ñêèäîê è îòñðî÷åê ïëàòåæà, ÷òî âàæíî â íàøå íåë¸ãêîå âðåìÿ, à ÷àñòíûå ïîêóïàòåëè ïîëó÷àþò äèâàíû è êðåñëà ïî ôàáðè÷íîé öåíå áåç íàöåíîê ïîñðåäíèêîâ, ÷òî ïîçâîëÿåò ñýêîíîìèòü îò 20 äî 60%.</p>
+		</td>
+		<td width="25%"><h3>Ìÿãêàÿ ìåáåëü - èäåè, âîïëîù¸ííûå â æèçíü</h3>
+		<p class="seotext">Äèçàéíåðû ôàáðèêè ìÿãêîé ìåáåëè "ÑòðîéÄåêîð" íå ñèäÿò íà ìåñòå, à êðîïîòëèâî ñëåäÿò çà íîâûìè òåíäåíöèÿìè â ìîäå è ñîâðåìåííîé æèçíè, ïîýòîìó ìîäåëüíûé ðÿä ïðîèçâîäèìûõ äèâàíîâ è êðåñåë ïîñòîÿííî ïîïîëíÿåòñÿ íîâûìè èíòåðåñíûìè ïðåäëîæåíèÿìè. Íàïðèìåð, ïîñëåäíåå âðåìÿ áåçóïðå÷íóþ ðåïóòàöèþ çàñëóæèë <a href="index.php?productID=228" title="äèâàí ïóìà">äèâàí ñ ìåõàíèçìîì òðàíñôîðìàöèè "ïóìà"</a>, êîòîðûé è âûãëÿäèò äîñòàòî÷íî ïðåçåíòàáåëüíî, è èìååò áîëüøîå ñïàëüíîå ìåñòî. Âñåì ðåêîìåíäóåì!</p>
+		</td>
+		<td width="25%"><h3>Ôàáðèêà äèâàíîâ è íå òîëüêî...</h3>
+		<p class="seotext">Êàê â æèçíè åñòü ñòàíäàðòíûå ñèòóàöèè è íåñòàíäàðòíûå, òàê è â íàøåì äåëå. Åñëè êëèåíòà íå óñòðîèëà íè îäíà èç ïðåäëîæåííûõ íàìè ìîäåëåé äèâàíîâ è êðåñåë, âûïóñêàåìûõ ñåðèéíî, ìû ãîòîâû <strong>èçãîòîâèòü ìÿãêóþ ìåáåëü ïî èíäèâèäóàëüíîìó ïðîåêòó</strong> ïî òðåáîâàíèÿì è ýñêèçàì çàêàç÷èêà. Íàøè äèçàéíåðû ãîòîâû ïîìî÷ü â ïðîåêòèðîâàíèè äèâàíà èëè êîìïëåêòà ìÿãêîé ìåáåëè ïî æåëàíèÿì è âîçìîæíîñòÿì êëèåíòà, ÷òîáû â èòîãå ïîëó÷èëñÿ èäåàëüíûé âàðèàíò, ëåãêî âïèñûâàåìûé â èìåþùèéñÿ èëè ñîçäàâàåìûé èíòåðüåð è ðåøàþùèé âñå ïîñòàâëåííûå ïåðåä íèì çàäà÷è.</p>
+		</td>
+		<td width="25%"><h3>Äèâàíû è öåíû</h3>
+		<p class="seotext">Êîíå÷íî äåø¸âûé ñûð òîëüêî â ìûøåëîâêå, ñ ýòèì íå ïîñïîðèøü. ÍÎ: âñ¸ æå ìû - <strong>ïðîèçâîäèòåëè ìÿãêîé ìåáåëè</strong>, à íå ìàãàçèí, çàêóïàþùèé äèâàíû è êðåñëà íà ôàáðèêàõ è äîáàâëÿþùèé ñâîþ íàöåíêó íà ñòîèìîñòü ìÿãêîé ìåáåëè, ìû ñàìè ñîçäà¸ì ñâîè äèâàíû è ñàìè îòâå÷àåì çà èõ êà÷åñòâî. Íàøà öåíà ðàññ÷èòûâàåòñÿ ÷¸òêî èñõîäÿ èç ñòîèìîñòè ìàòåðèàëîâ è ðàáîò, òðåáóåìûõ äëÿ èçãîòîâëåíèÿ äèâàíà. Åñëè Âû âäðóã íàøëè ïîõîæèé äèâàí, íî äåøåâëå, ÷åì íà íàøåé ôàáðèêå, çíàéòå: â í¸ì èñïîëüçîâàíû áîëåå äåø¸âûå ìàòåðèàëû, êîòîðûå ìîãóò ïàãóáíî ñêàçàòüñÿ íà äîëãîâå÷íîñòè äèâàíà è íà Âàøåì çäîðîâüå!</p>
+		</td>
+	</tr>
+	
+	<tr valign="top">
+		<td width="25%"><h3>Äèâàíû îò ïðîèçâîäèòåëÿ</h3>
+		<p class="seotext">Íå òîëüêî äåøåâëå, íî è êà÷åñòâåííåå! Âàø äèâàí íå ñòîÿë äâà ãîäà â ìàãàçèíå â êà÷åñòâå îáðàçöà, íå ñîáèðàë ïûëü íà ñêëàäå, à áûë èçãîòîâëåí è äîñòàâëåí Âàì â "ñâåæàéøåì" âèäå! <strong>Äèâàíû îò ïðîèçâîäèòåëÿ</strong> èìåþò åù¸ îäíî ïðåèìóùåñòâî - Âû òî÷íî çíàåòå êóäà îáðàùàòüñÿ â ñëó÷àå îáíàðóæåíèÿ áðàêà. Ãàðàíòèÿ íà ìÿãêóþ ìåáåëü - 18 ìåñÿöåâ ñî äíÿ ïðîäàæè.</p>
+		</td>
+		<td width="25%"><h3>Ïðîèçâîäñòâî äèâàíîâ</h3>
+		<p class="seotext"><strong>Ïðîèçâîäñòâî äèâàíîâ</strong> - äåëî òîíêîå, çäåñü î÷åíü âàæíà ñëàæåííàÿ ðàáîòà âñåé êîìàíäû: äèçàéíåðà, êîíñòðóêòîðà, ïëîòíèêà, øâåè, îáòÿæ÷èêà è äðóãèõ. Ôàáðèêè äèâàíîâ, ñôîðìèðîâàâøèå ñâîé êîëëåêòèâ çà ìíîãèå ãîäû, âëàäåþò ýòèì äåëîì â ñîâåðøåíñòâå. Èìåííî ïîýòîìó áåçóïðå÷íîå êà÷åñòâî ïðîäóêöèè ôàáðèêè "ÑòðîéÄåêîð" íå ïåðåñòà¸ò ðàäîâàòü íàøèõ ïîêóïàòåëåé.</p>
+		</td>
+		<td width="25%"><h3>Êóïèòü äèâàí</h3>
+		<p class="seotext">Èëè âñ¸-òàêè êðîâàòü? Âñ¸ çàâèñèò îò äîñòóïíîé ïëîùàäè. Êîíå÷íî, íà êðîâàòü ìîæíî ïîëîæèòü õîðîøèé îðòîïåäè÷åñêèé ìàòðàö è íàñëàæäàòüñÿ êðåïêèì è çäîðîâûì ñíîì, íî êòî Âàì ìåøàåò ýòî äåëàòü íà äèâàíå? Ìîæíî <strong>êóïèòü äèâàí</strong> ñ îðòîïåäè÷åñêîé ëàòîâîé ðåø¸òêîé â îñíîâàíèè, çàíèìàþùèé ãîðàçäî ìåíüøå ìåñòà â êîìíàòå, íî ïðè íåîáõîäèìîñòè áåç òðóäà ïðåâðàùàåìûé â óäîáíîå ñïàëüíîå ìåñòî.</p>
+		</td>
+		<td width="25%"><h3>Èíòåðíåò - ìàãàçèí äèâàíîâ</h3>
+		<p class="seotext">Ôàáðèêà äèâàíîâ "ÑòðîéÄåêîð", ïîìèìî ñàëîíà-ìàãàçèíà â Îäèíöîâî, ðåàëèçóåò ñâîþ ïðîäóêöèþ êîíå÷íûì ïîòðåáèòåëÿì ÷åðåç <strong>èíòåðíåò ìàãàçèí äèâàíîâ</strong>, ðàñïîëîæåííûé íà ñàéòå ôàáðèêè. Ïîñåòèòåëü ñàéòà ìîæåò âûáðàòü ïîíðàâèâøèéñÿ äèâàí, ïîìåñòèòü åãî â êîðçèíó â íàèáîëåå ïîäõîäÿùåé îáèâêå è îòïðàâèòü çàêàç ÷åðåç Èíòåðíåò â ëþáîå âðåìÿ ñóòîê!</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="25%"><h3>Äèñòðèáóöèÿ</h3>
+		<p class="seotext">Ðàçâèòàÿ äèëåðñêàÿ ñåòü ïî âñåé Ðîññèè ïîçâîëÿåò ïðåäîñòàâèòü êà÷åñòâåííóþ è <strong>íåäîðîãóþ ìÿãêóþ ìåáåëü îò ïðîèçâîäèòåëÿ</strong> ÑòðîéÄåêîð ïîêóïàòåëÿì äàæå â ñàìûõ óäàë¸ííûõ óãîëêàõ íàøåé ñòðàíû. Ôàáðèêà ïðåäîñòàâëÿåò ñàìûå ãèáêèå óñëîâèÿ ïîêóïêè ìÿãêîé ìåáåëè îðãàíèçàöèÿì è ïðåäïðèíèìàòåëÿì, èìåþùèì ñâîè ìàãàçèíû â ðåãèîíàõ Ðîññèè.</p>
+		</td>
+		<td width="25%"><h3>Ìÿãêàÿ ìåáåëü îïòîì</h3>
+		<p class="seotext">Ïðè ïîêóïêå ìÿãêîé ìåáåëè îïòîì êëèåíò ïîëó÷àåò çíà÷èòåëüíûå ñêèäêè! Êðîìå òîãî, ïî ïðîãðàììå "VIP êëèåíò" ïðè ðàçìåùåíèè êðóïíîãî çàêàçà ìîæåò áûòü ïðåäîñòàâëåíà îòñðî÷êà ïëàòåæà. Ïîëó÷èòü ïîäðîáíóþ èíôîðìàöèþ î ïîðÿäêå ðàáîòû ñ çàêàç÷èêàìè, à òàêæå ñêà÷àòü îïòîâûé ïðàéñ-ëèñò ìîæíî íà ñòðàíèöå ñàéòà, ïîñâÿù¸ííîé <a href="index.php?dealer=show" title="ìÿãêàÿ ìåáåëü îïòîì">ïðîäàæå ìÿãêîé ìåáåëè îïòîì</a>.</p>
+		</td>
+		<td width="25%"><h3>Êàòàëîã äèâàíîâ</h3>
+		<p class="seotext">Åñëè Âàñ èëè ïîêóïàòåëåé Âàøåãî ìàãàçèíà ìÿãêîé ìåáåëè èíòåðåñóþò ìîäåëè äèâàíîâ, ïðåäñòàâëåííûå íà ñàéòå, íî ó Âàñ ìåäëåííîå ñîåäèíåíèå ñ Èíòåðíåò, ïîçâîíèòå íàì, è ìû âûøëåì Âàì ïî ïî÷òå <strong>êàòàëîã äèâàíîâ</strong>, ïðîèçâîäèìûõ ôàáðèêîé ÑòðîéÄåêîð, â êîòîðîì ïðåäñòàâëåíà âñÿ íåîáõîäèìàÿ ïîêóïàòåëÿì èíôîðìàöèÿ î íàøèõ ìîäåëÿõ.</p>
+		</td>
+		<td width="25%"><h3>Ñïàëüíûå äèâàíû</h3>
+		<p class="seotext">Êîãäà-íèáóäü ñëûøàëè î òàêîì? Äà, íà ìíîãèõ íàøèõ äèâàíàõ ìîæíî ñïàòü êàæäûé äåíü! Ýòî óäîáíî è î÷åíü ïðàêòè÷íî ñ òî÷êè çðåíèÿ ýêîíîìèè æèçíåííîãî ïðîñòðàíñòâà â êîìíàòå! Íàïðèìåð, ìîäåëè <a href="index.php?productID=376">Ãæåëü</a> èëè <a href="index.php?productID=228">Áðèäæ</a> ïîèñòèíå çàñëóæèâàþò çâàíèÿ <strong>"ñïàëüíûå äèâàíû"</strong>. </p>
+		</td>
+	</tr>
+</table>
+
+
+<center>
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td>&nbsp;</td>
+			<td align="center" width="35">
+				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="35" height="30" id="phone" align="middle">
+								<param name="allowScriptAccess" value="sameDomain" />
+								<param name="menu" value="false">
+								<param name="allowFullScreen" value="false" />
+								<param name="movie" value="images/phone.swf" />
+								<param name="quality" value="high" />
+								<embed src="images/phone.swf" quality="high" bgcolor="#7ca8f5" width="35" height="30" menu="false"  name="phone" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" />
+							</object>
+			</td>
+			<td align="center" width="255"><font color="#f46505">Åäèíûé òåëåôîí â Ìîñêâå <div id="ya-phone-1">+7 (495) 593-04-56<br/>+7 (926) 154-41-55</div></font></td>
+			<td align="center" width="35">
+				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="35" height="30" id="mail" align="middle">
+								<param name="allowScriptAccess" value="sameDomain" />
+								<param name="menu" value="false">
+								<param name="allowFullScreen" value="false" />
+								<param name="movie" value="images/mail.swf" />
+								<param name="quality" value="high" />
+								<embed src="images/mail.swf" quality="high" bgcolor="#7ca8f5" width="35" height="30" menu="false"  name="phone" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" />
+							</object>
+			</td>
+			<td align="center" width="140"><noindex><a href="mailto:shop@stroydekor.ru" class="lightstandard"><font color="#f46505">shop@stroydekor.ru</font></a></noindex></td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+</center>					 </td>
+					<td style="BACKGROUND-IMAGE: url(images/ramka_p2.png); BACKGROUND-REPEAT: repeat-y;"></td>
+				</tr>
+				<tr> 
+					<td><IMG SRC="images/ramka_y4.png" width="14" height="14" BORDER="0"></td>
+					<td background="images/ramka_p3.png"></td>
+					<td><IMG SRC="images/ramka_y3.png" width="14" height="14" BORDER="0"></td>
+				</tr>
+</table>
+	</td>
+</tr>
+</table>
+<img src="images/non.gif" width="10" height="10" border="0">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr> 
+    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">		
+		<tr valign="top"> 
+		  <td><IMG SRC="images/sosis_seraya1.gif" width="14" height="110" BORDER="0"></td>
+          <td background="images/sos_razd_seriy.png"><IMG SRC="images/non.gif" WIDTH="10" height="1"></td>
+          <td background="images/sos_razd_seriy.png" width="100%">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tr height="25">
+					<td colspan="2">
+						<!-- begin of Top100 code --><noindex>
+						<script type="text/javascript" src="http://counter.rambler.ru/top100.jcn?1458553"></script><noscript><img src="http://counter.rambler.ru/top100.cnt?1458553" alt="" width="1" height="1" border="0"></noscript>
+						</noindex><!-- end of Top100 code -->
+					</td>
+				</tr>
+				<tr height="50" valign="top">
+					<td width="300" align="left">
+					
+						
+						<!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=26443980&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/26443980/3_0_FFBA00FF_FFBA00FF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="ßíäåêñ.Ìåòðèêà" title="ßíäåêñ.Ìåòðèêà: äàííûå çà ñåãîäíÿ (ïðîñìîòðû, âèçèòû è óíèêàëüíûå ïîñåòèòåëè)" onclick="try{Ya.Metrika.informer({i:this,id:26443980,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter26443980 = new Ya.Metrika({id:26443980,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/26443980" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+						
+						
+						
+						<!-- Odintsovo.biz begin --><noindex>
+						<a href="http://odintsovo.biz/" target=_blank title="Òåëåôîíû, àäðåñà ôèðì, îðãàíèçàöèé è ïðåäïðèÿòèé Îäèíöîâñêîãî ðàéîíà è ãîðîäà Îäèíöîâî"><img src="http://odintsovo.biz/images/bn/88x31-2.gif" alt="Òåëåôîíû, àäðåñà ôèðì, îðãàíèçàöèé è ïðåäïðèÿòèé Îäèíöîâñêîãî ðàéîíà è ãîðîäà Îäèíöîâà" width="88" height="31" border="0"></a>
+						</noindex><!-- Odintsovo.biz end -->
+
+						<!-- begin of Top100 logo --><noindex>
+						<a href="http://top100.rambler.ru/top100/"><img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-blue3.gif" alt="Rambler's Top100" width="88" height="31" border="0" /></a>
+						</noindex><!-- end of Top100 logo -->
+						
+						<!-- Yandex CY begin --><noindex>
+						<a href="http://yandex.ru/cy?base=0&amp;host=www.stroydekor.ru"><img src="http://www.yandex.ru/cycounter?www.stroydekor.ru" width="88" height="31" alt="Èíäåêñ öèòèðîâàíèÿ" title="Èíäåêñ öèòèðîâàíèÿ" border="0" /></a>
+						</noindex><!-- Yandex CY end -->
+
+						<!-- SpyLOG --><noindex>
+						<script src="http://tools.spylog.ru/counter_cv.js" id="spylog_code" type="text/javascript" counter="1094794" part="" track_links="ext" page_level="1"></script><noscript>
+						<a href="http://u10947.94.spylog.com/cnt?cid=1094794&f=3&p=1" target="_blank"><img src="http://u10947.94.spylog.com/cnt?cid=1094794&p=1" alt="SpyLOG" border="0" width="88" height="31"></a></noscript>
+						</noindex><!--/ SpyLOG -->
+
+						<!-- Yandex.Metrika -->
+						
+<script src="//mc.yandex.ru/metrika/watch_visor.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter155579 = new Ya.Metrika({id:155579,
+          clickmap:true,
+          trackLinks:true});}
+catch(e) { }
+</script></div>
+<noscript><div><img src="//mc.yandex.ru/watch/155579" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+						
+						<!-- /Yandex.Metrika -->
+						
+						<!-- Yandex.Metrika Marked Phone -->
+							<script type="text/javascript" src="//mc.yandex.ru/metrika/phone.js?counter=155579" defer="defer"></script>
+						<!-- /Yandex.Metrika Marked Phone -->
+						
+						<!--LiveInternet counter--><noindex>
+						<script type="text/javascript">
+							<!--
+							document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t22.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: ïîêàçàíî ÷èñëî ïðîñìîòðîâ çà 24"+
+" ÷àñà, ïîñåòèòåëåé çà 24 ÷àñà è çà ñåãîäíÿ' "+
+"border='0' width='88' height='31'><\/a>")
+							//-->
+						</script>
+						</noindex><!--/LiveInternet-->
+						
+						
+
+						
+						<IMG SRC="images/viza.gif" width="51" height="31" BORDER="0" ALT="Ìû ïðèíèìàåì êàðòû VISA!" title="Ìû ïðèíèìàåì êàðòû VISA!">&nbsp;<IMG SRC="images/m_card.gif" width="52" height="31" BORDER="0" ALT="Ìû ïðèíèìàåì êàðòû MasterCard!" title="Ìû ïðèíèìàåì êàðòû MasterCard!">
+						
+						
+		  
+					</td>
+					<td align="right">
+						<a href="/" class="bottom_menu">Ãëàâíàÿ</a>&nbsp;|&nbsp;
+						<a href="index.php?about=company" class="bottom_menu">Î êîìïàíèè</a>&nbsp;|&nbsp;
+						<a href="index.php?info=useful" class="bottom_menu">Ïîëåçíàÿ èíôîðìàöèÿ</a>&nbsp;|&nbsp;
+						<a href="index.php?info=delivery" class="bottom_menu">Äîñòàâêà è îïëàòà</a>&nbsp;|&nbsp;
+						<a href="index.php?dealer=show" class="bottom_menu">Îïòîâèêàì</a>&nbsp;|&nbsp;
+						<a href="index.php?info=contacts" class="bottom_menu">Êîíòàêòû</a><BR><BR><BR><BR>
+						&copy; <a href="http://www.stroydekor.ru" class="bottom_menu">Ôàáðèêà ìÿãêîé ìåáåëè ÑòðîéÄåêîð</a>&nbsp;1998-2014
+					</td>
+				</tr>
+			</table>
+		  
+		  </td>
+          <td background="images/sos_razd_seriy.png" width="10"><IMG SRC="images/non.gif" WIDTH="10" height="1"></td>
+          <td align="right"><IMG SRC="images/sosis_seraya2.gif" width="14" height="110" BORDER="0"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</center>
+<img src="images/non.gif" width="1" height="10" border="0" alt="">
+
+<!-- BEGIN JIVOSITE CODE  -->
+<script type='text/javascript'>
+(function(){ var widget_id = '3XXx2NdsAp';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!--  END JIVOSITE CODE -->
+
+<!-- BEGIN JIVOSITE CODE  >
+<script type='text/javascript'>
+
+(function(){ var widget_id = '91425';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();
+
+</script>
+
+<!  END JIVOSITE CODE -->
+
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="keywords" content="Хорошая стоматология, Лучшая стоматология, Единая стоматология" />
+	<meta name="description" content="Хорошая или лучшая стоматология" />
+<base href="/">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Хорошая или лучшая стоматология</title>
+ <meta name="description" content="">
+    <meta name="keywords" content="">
+
+<link href="css/index_css1.css" type="text/css" rel="stylesheet" />
+<style>
+pre{
+	display:block;
+	font:12px "Courier New", Courier, monospace;
+	padding:10px;
+	border:1px solid #bae2f0;
+	background:#e3f4f9;	
+	margin:.5em 0;
+	width:500px;
+	}		
+.clear{
+	clear:both;
+	}	
+img{border:none;}
+
+/* */
+
+/* all form DIVs have position property set to relative so we can easily position newly created SPAN */
+form div{position:relative;} 
+
+/* setting the width and height of the SELECT element to match the replacing graphics */
+select.select{
+		position:relative;
+		z-index:10;
+		width:296px !important;
+		height:26px !important;
+		line-height:26px;
+                float: right;
+}
+
+/* dynamically created SPAN, placed below the SELECT */
+span.select{
+	position:absolute;
+	/*bottom:0;*/
+	
+	right:0;
+	width:296px;
+	height:31px;
+	line-height:26px;
+	text-indent:10px;
+	background:url(/images/sel-296.png) no-repeat 0 0;
+	cursor:default;
+	z-index:1;
+	}
+	
+select.select1{
+		position:relative;
+		z-index:10;
+		width:121px !important;
+		height:26px !important;
+		line-height:26px;
+                float: right;
+}
+
+/* dynamically created SPAN, placed below the SELECT */
+span.select1{
+	position:absolute;
+	/*bottom:0;*/
+	
+	right:0;
+	width:121px;
+	height:31px;
+	line-height:26px;
+	text-indent:10px;
+	background:url(/images/sel-121.png) no-repeat 0 0;
+	cursor:default;
+	z-index:1;
+	}
+	
+
+/* first variation (LABEL is above the SELECT) */	
+form div.variation1 label{display:block;line-height:26px;}
+
+/* second variation (LABEL is placed on the left of the SELECT) */	
+form div.variation2 label{float:left;width:100px;line-height:26px;}
+form div.variation2 span.select{left:100px;}
+
+</style>
+
+
+   <script src='http://code.jquery.com/jquery-1.9.1.js' type='text/javascript'></script>
+   <!---script src='/forms/tablesorter/jquery-latest.js' type='text/javascript'></script--->
+
+ 
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <!---link rel="stylesheet" href="css/jquery-ui.css" / --->
+    
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="/forma/ajax.js"></script>
+    <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css" />
+
+
+
+
+<!--[if IE 6]>
+<link href="css/stylesheet_ie6.css" type="text/css" rel="stylesheet" media="all"/>
+<script type="text/javascript" src="js/pngfix-min.js"></script> 
+<script type="text/javascript">
+  DD_belatedPNG.fix('.logo img, .header .phn, .left-bar h3');
+</script>
+<![endif]--> 
+
+
+   <script type="text/javascript" src="jquery.js"></script>
+
+
+  <script type="text/javascript">
+	$.noConflict();
+  jQuery(document).ready(function($){	
+
+		/*if (!$.browser.opera) {*/
+    
+			// select element styling
+			$('select.select').each(function(){
+				var title = $(this).attr('title');
+				if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+				$(this)
+					.css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+					.after('<span class="select">' + title + '</span>')
+					.change(function(){
+						val = $('option:selected',this).text();
+						$(this).next().text(val);
+						})
+			});
+
+		/*};*/
+		/* if (!$.browser.opera) {*/
+    
+			// select element styling
+			$('select.select1').each(function(){
+				var title = $(this).attr('title');
+				if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+				$(this)
+					.css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+					.after('<span class="select1">' + title + '</span>')
+					.change(function(){
+						val = $('option:selected',this).text();
+						$(this).next().text(val);
+						})
+			});
+
+		/*};*/
+	});
+</script>
+</head>
+<body>
+<div id="full">  
+  <div class="wrapper">
+    <div class="header">
+      <a href="#" class="logo"><img src="images/logo.png" alt="" /></a>
+      <p class="phn">8 (499) <span>394 58 54</span></p>
+      <ul class="top-menu">
+        <ul><li class="active"><a href="http://1-stomatolog.ru/"  >Главная</a></li>
+<li><a href="/единая-стоматология-россия.html"  >О Единой Стоматологии</a></li>
+<li><a href="/цены-на-услуги-стоматологии.html"  >Цены</a></li>
+<li><a href="/хорошие-лучшие-врачи-стоматологи.html"  >Врачи</a></li>
+<li><a href="/единая-запись-на-прием-онлайн-стоматологии.html"  >Запись на прием онлайн </a></li>
+<li><a href="/скидки-акции-стоматологии-россии.html"  >Скидки и Акции</a></li>
+<li><a href="/новости-стоматлогий-россии.html"  >Пациентам</a></li>
+<li><a href="/новости-стоматологии-россии.html"  >Стоматологам</a></li>
+<li class="last"><a href="/телефон-адрес-стоматологии.html"  >Контакты</a></li>
+</ul>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="top-bnr"></div>
+
+
+
+
+     <div class="left-bar">
+        <a href="стоматологии-москвы.html"><h3>Стоматологии Москвы</h3></a>
+        <ul class="lft-menu">
+         <ul><li><a href="/стоматология-москва-метро-лубянка.html"  >Метро Лубянка</a></li>
+<li><a href="/стоматология-москва-метро-нагатинская.html"  >Метро  Нагатинская</a></li>
+<li><a href="/стоматология-москва-метро-павелецкая.html"  >Метро Павелецкая</a></li>
+<li><a href="/стоматология-москва-метро-проспект-мира.html"  >Метро Проспект Мира</a></li>
+<li><a href="/стоматология-москва-метро-улица-горчакова.html"  >Метро Улица Горчакова</a></li>
+<li class="last"><a href="/стоматология-москва-метро-университет.html"  >Метро Университет</a></li>
+</ul>
+        </ul>
+         <a href="стоматологии-сургута.html"><h3>Стоматологии Сургута</h3></a>
+        <ul class="lft-menu">
+          <ul><li class="last"><a href="/стоматологии-сургут-поселк-белый-яр.html"  >Поселок Белый Яр</a></li>
+</ul>
+        </ul>
+         <a href="стоматологии-химки.html"><h3>Стоматологии Химки</h3></a>
+        <ul class="lft-menu">
+          
+        </ul>
+        <a href="стоматологии-щелково.html"><h3>Стоматологии Щелково</h3></a>
+        <ul class="lft-menu">
+         <ul><li class="last"><a href="/стоматологии-щелково-на-улице-свирская.html"  >На улице Свирская</a></li>
+</ul>
+        </ul>
+        <div class="bnr-297"> </div>
+      </div>
+     
+     <div class="center">
+       
+        <h1>Хорошая или лучшая стоматология!</h1>
+<h2>Единая Стоматология</h2>
+<p><strong>Единая стоматология - ассоциация хороших, лучших и профессиональных стоматологий&nbsp;России, которая гарантирует пациентам качество лечения.&nbsp;</strong></p>
+<p><strong>Каким образом ассоциация достигает качественного лечения?&nbsp;<br></strong></p>
+<ul class="bullet">
+<li><span style="color: #1e90ff;"><strong>Включает проверенные стоматологии</strong></span> в свой состав</li>
+<li><span style="color: #1e90ff;"><strong>Исключает клиники с плохой репутацией</strong></span> из своего состава, на которые поступают серьезные и аргументированные жалобы.</li>
+<li><span style="color: #1e90ff;"><strong>Оказывает юридическую поддержку</strong></span> пострадавшим пациентам.</li>
+</ul>
+<p>На текущий момент исключено несколько клиник из-за непрофессионального подхода к лечению пациентов. Клиника, которая делает свою работу на "отлично", как правило, заинтересованая в ассоциации.&nbsp;Пациенты могут доверять рекомендациям Единой Стоматологии как советам знакомых, родственников!<br><strong style="line-height: 1.5;"><strong style="line-height: 1.5;">Гарантии качества лечения только пациентам Единой Стоматологии!&nbsp;</strong></strong></p>
+<p><strong><a href="единая-запись-на-прием-онлайн-стоматологии.html">ЗАПИСЬ ОНЛАЙН</a></strong></p>
+<hr>
+<p style="font-style: italic;"><strong style="font-style: italic;"><br></strong><strong>Справочно о Единой Стоматологии</strong><strong style="font-style: italic;"><br></strong><br><strong>География:</strong> на сегодняшний день 10 клиник работают в <a href="стоматологии-москвы.html" style="line-height: 1.5;">Москве</a>, <a href="стоматологии-щелково.html">Щелково</a>,&nbsp;<a href="стоматологии-химки.html" target="_blank">Химках</a> и <a href="стоматологии-сургута.html" style="line-height: 1.5;">Сургуте</a>, 4 клиники исключены.<br><strong>Опыт:</strong> некоторые стоматологии имеют опыт работы более 20 лет.<br><strong>Специалисты: </strong>свыше 70<strong>&nbsp;</strong><a href="хорошие-лучшие-врачи-стоматологи.html" style="line-height: 1.5;">врачей</a>&nbsp;клиник в курсе современных тенденций стоматологии и умеют применять новейшие методы, материалы на практике; они регулярно повышают свою квалификацию.<br><strong>Специализации:</strong> <a href="протезирование-зубов.html">протезирование зубов</a>, <a href="имплантация-зубов.html">имплантация зубов</a>, <a href="терапевтическая-стоматология.html">лечение зубов</a>, <a href="исправление-прикуса.html">исправление прикуса</a>, <a href="стоматологии-для-беременных.html">для беременных</a>, <a href="срочная-стоматология.html">срочная</a>, <a href="детская-стоматология.html">детская</a>, <a href="терапевтическая-стоматология.html">терапевтическая</a>, <a href="хирургическая-стомтаология.html">хирургическая</a>, <a href="эстетическая-стоматология.html">эстетическая</a> стоматология, <a href="обследование-стоматологии.html">обследование</a>, <a href="анестезия-для-зубов.html">анестезия</a>. <br><strong>Цены</strong>: <a href="цены-на-услуги-стоматологии.html">цены</a> в клиниках разные и зависят от опыта стоматолога и материалов, но наши <a href="хорошие-лучшие-врачи-стоматологи.html" style="line-height: 1.5;">врачи</a>&nbsp;смогут подобрать оптимальный вариант для каждого пациента.<br><strong style="line-height: 1.5;">Скидки:</strong>&nbsp;клиники проводят&nbsp;<a href="скидки-акции-стоматологии-россии.html" style="line-height: 1.5;">акции</a>, предоставляют&nbsp;<a href="скидки-акции-стоматологии-россии.html" style="line-height: 1.5;">скидки</a>&nbsp;пациентам.</p>
+<p>&nbsp; 
+<script type="text/javascript">(function() {
+  if (window.pluso)if (typeof window.pluso.start == "function") return;
+  if (window.ifpluso==undefined) { window.ifpluso = 1;
+    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+    var h=d[g]('body')[0];
+    h.appendChild(s);
+  }})();</script>
+<div class="pluso" data-background="transparent" data-options="medium,square,line,horizontal,nocounter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print"></div>
+
+<br>
+<br>
+
+<hr>
+<br>
+<br>
+<h2>Новости клиник</h2>
+       
+		
+ <div class="news">
+          <img src="assets/images/akciya-opr-stomat.jpg" alt="" />
+          <div class="news-rht">
+            <span class="date">08.04.2016</span>
+            <a href="/акция-удаление-зубов-стоматология-щелково-свирская.html">Акция на удаление зубов</a>
+            <p>Стоматология на улице Свирской в городе Щелково - стоимость удаления зуба 800 рублей... </p>
+          </div>
+        </div> 
+
+
+ <div class="news">
+          <img src="assets/images/zapis-online-opr-stomat.jpg" alt="" />
+          <div class="news-rht">
+            <span class="date">08.04.2016</span>
+            <a href="/запись-стоматология-щелково-свирская.html">Запись на Свирской</a>
+            <p>Запись в стоматологию Щелково, находящуюся на улице Свирская, открыта...  </p>
+          </div>
+        </div> 
+
+
+ <div class="news">
+          <img src="assets/images/zapis-online-opr-stomat.jpg" alt="" />
+          <div class="news-rht">
+            <span class="date">06.04.2016</span>
+            <a href="/электронная-запись-стоматология-москва-метро-улица-горчакова.html">Запись на метро Улица Горчакова</a>
+            <p>Электронная запись для стоматологии на метро Улица Горчакова открыта...  </p>
+          </div>
+        </div> 
+
+
+ <div class="news">
+          <img src="assets/images/small_image/edin-stomat.jpg" alt="" />
+          <div class="news-rht">
+            <span class="date">27.02.2016</span>
+            <a href="/телефон-стоматологии-москва.html">Телефон Единой Стоматологии</a>
+            <p>Номер телефона Единой Стоматологии некоторое время будет выключен... </p>
+          </div>
+        </div> 
+
+
+ <div class="news">
+          <img src="assets/images/zapis-online-opr-stomat.jpg" alt="" />
+          <div class="news-rht">
+            <span class="date">08.07.2014</span>
+            <a href="/электронная-запись-стоматология-москва-метро-варшавская.html">Запись на метро Варшавская</a>
+            <p>Электронная запись для стоматологии на метро Варшавская открыта...  </p>
+          </div>
+        </div> 
+
+
+      </div>
+
+
+      <div class="right-bar">
+        <div class="rht-menu">
+          <li class="tw-ln kn"><a href="обследование-стоматологии.html">Стоматологическое обследование</a></li>
+          <ul>
+           <ul><li><a href="/консультация-стоматологии.html"  >Консультация</a></li>
+<li><a href="/консультация-специалиста-стоматологии.html"  >Консультация специалиста</a></li>
+<li class="last"><a href="/анализы-рентген-стоматологии.html"  >Анализы и рентген</a></li>
+</ul>
+          </ul>
+          <li class="tw-ln kn"><a href="стоматологии-для-беременных.html">Стоматология для беременных</a></li>
+          <ul>
+           <ul><li><a href="/беременным-разрешено-стоматологии.html"  >Беременным разрешено</a></li>
+<li><a href="/беременным-запрещено-стоматологии.html"  >Беременным запрещено</a></li>
+<li class="last"><a href="/советы-беременным-стоматолог.html"  >Советы беременным</a></li>
+</ul>
+          </ul>
+          <li class="tw-ln kn"><a href="детская-стоматология.html">Детская стоматология</a></li>
+          <ul>
+           
+          </ul>
+          <li class="tw-ln kn"><a href="срочная-стоматология.html">Неотложная стоматология</a></li>
+          <ul>
+           <ul><li><a href="/срочная-стоматология-на-дому.html"  >На дому</a></li>
+<li class="last"><a href="/срочная-стоматология-клиники.html"  >В клинике</a></li>
+</ul>
+          </ul>
+          <li class="tw-ln kn"><a href="анестезия-для-зубов.html">Анестезия для зубов</a></li>
+          <ul>
+           
+          </ul>
+          <li class="kn tw-ln"><a href="терапевтическая-стоматология.html">Терапевтическая стоматология</a></li>
+          <ul>
+            <ul><li><a href="/лечение-кариеса-зубов.html"  >Лечение кариеса</a></li>
+<li class="last"><a href="/лечение-профилактика-пульпита.html"  >Лечение пульпита</a></li>
+</ul>
+          </ul>
+          <li class="kn tw-ln"><a href="эстетическая-стоматология.html">Эстетическая стоматология</a></li>
+          <ul>
+            <ul><li><a href="/отбеливание-зубов.html"  >Отбеливание зубов</a></li>
+<li class="last"><a href="/реставрация-зубов.html"  >Реставрация зубов</a></li>
+</ul>
+          </ul>
+          <li class="tw-ln kn"><a href="хирургическая-стомтаология.html">Хирургическая стоматология</a></li>
+          <ul>
+            <ul><li class="last"><a href="/удаление-зубов.html"  >Удаление зубов</a></li>
+</ul>
+          </ul>
+          <li class="kn tw-ln"><a href="исправление-прикуса.html">Исправление прикуса</a></li>
+            <ul>
+              <ul><li><a href="/съемные-каппы-пластинки.html"  >Съемные каппы, пластинки</a></li>
+<li class="last"><a href="/установка-брекетов.html"  >Установка брекетов</a></li>
+</ul>
+            </ul>
+          <li class="kn tw-ln"><a href="протезирование-зубов.html">Протезирование зубов</a></li>
+            <ul>
+              <ul><li><a href="/съемные-протезы.html"  >Съемные протезы</a></li>
+<li class="last"><a href="/несъемные-протезы.html"  >Несъемные протезы</a></li>
+</ul>
+            </ul>
+          <li class="tw-ln kn"><a href="имплантация-зубов.html">Имплантация зубов</a></li>
+          <ul>
+           
+          </ul>
+        </div>
+ 
+        <div class="bnr-200"></div>
+</div>      
+    </div>  
+  </div>
+</div>    
+<div id="footer">
+  <div class="ftr-wrap">
+<div class="ftr-m1">
+    <ul class="ftr-menu">
+<li><a href="/запись-онлайн-стоматологии-москвы.html" class="hdr1" style = "color: #0080fc ;">Запись онлайн в стоматологии Москвы</a> | </li> <li><a href="/запись-онлайн-стоматологии-сургут.html" class="hdr1" style = "color: #0080fc ;">Запись онлайн в стоматологии Сургута</a> | </li> <li><a href="/запись-онлайн-стоматологии-щелково.html" class="hdr1" style = "color: #0080fc ;">Запись онлайн в стоматологии Щелково</a> | </li> 
+      <!-- read_cities2 --->
+    </ul>
+</div><div class="ftr-m2">
+    <p class="copy"><a href="#">1-stomatolog.ru</a><br />&copy; 2013-2017  Все права защищены</p>
+    <p class="phn">8 (499) <span>394 58 54</span></p>
+</div>  
+</div>
+</div>
+
+<!-- Yandex.Metrika informer -->
+<a href="http://metrika.yandex.ru/stat/?id=22194553&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/22194553/1_0_3580DDFF_1560BDFF_1_pageviews"
+style="width:80px; height:15px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" onclick="try{Ya.Metrika.informer({i:this,id:22194553,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter22194553 = new Ya.Metrika({id:22194553,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/22194553" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-43663304-1', '1-stomatolog.ru');
+  ga('send', 'pageview');
+</script>
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t44.11;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+			
+</body>
+</html>

@@ -1,0 +1,518 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Консалтинговая группа ЕРМАК предлагает широкий выбор электронных программ. Всем клиентам от нас подарки!" />
+	<meta name="keywords" content="консалтинговая группа ермак, продажа установка электронных систем" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name='yandex-verification' content='4b0a7a8f4d9e906f' />
+	
+	<script src="/includes/jquery-1.4.2/jquery.min.js" type="text/javascript"></script>
+
+	<meta name="google-site-verification" content="tB9UXZGnilR9DPcta9m6tAESn2XTfyd-qApEJ1tVWDA" />
+	<meta name="google-site-verification" content="NHIAnxAFUZaL6-H2Rjex0tBIo7rFjsiikPqYP8Nzp6w" />
+	<link rel="stylesheet" href="../includes/jquery-plugins/jQuery.mmenu-master/dist/css/jquery.mmenu.all.css">
+	<link href="/templates/css/global.css" type="text/css" rel="stylesheet" />
+	<script src="../includes/jquery-plugins/jQuery.mmenu-master/dist/js/jquery.mmenu.all.min.js"></script>
+	<script type="text/javascript" src="/templates/js/functions.js"></script>
+	<!-- <script type="text/javascript" src="/templates/js/snow.js"></script> -->
+	<script type="text/javascript">
+		
+		$(document).ready(function () {
+			if (jQuery.browser.msie) {
+				$('#menu li.sub').mouseover(function(){
+					$(this).addClass('hover');
+					setWidth(this);
+				});
+				$('#menu li.sub').mouseout(function(){
+					$(this).removeClass('hover');
+				});
+			}
+			if (!jQuery.browser.msie) {
+				$('#menu li.sub').each(function(){
+					setWidth(this);
+				});
+			}
+		});
+		function setWidth(listObj)
+		{
+			listObj = $(listObj);
+			var newWidth = 0;
+			var subLiList = listObj.find('li');
+			var subListObj = listObj.find('ul');
+			subListObj.attr('id', 'building');
+			if (jQuery.browser.msie && (jQuery.browser.version == '6.0')) {
+				subListObj.css('visibility', 'visible');
+			}
+			subLiList.each(function(){
+				if (($(this).attr('className')!= 'first') || ($(this).attr('className')!= 'last'))
+					newWidth += $(this).outerWidth();
+			});
+			subListObj.width(newWidth);
+			subListObj.css('marginLeft', '-' + (newWidth/2) + 'px');
+			subListObj.attr('id', '');
+		}
+		
+	</script>
+	<title>Продажа и установка электронных систем Главбух, Кадры, Юрист, Финансовый директор, СБиС++, 1С</title>
+
+	<script type="text/javascript" src="highslide.js"></script>
+	<link rel="stylesheet" type="text/css" href="highslide.css" />
+
+	<script type="text/javascript">
+		hs.graphicsDir = '../highslide/graphics/';
+		hs.outlineType = null;
+		hs.wrapperClassName = 'colored-border';
+	</script>
+</head>
+<body onload="">
+<div>
+		<div id="header-out">
+			<!-- mobileMenu -->
+			<div class="mobile-mnu">
+				<a href="#" class="toggle-mnu"><span></span></a><b>Меню</b>
+			</div>
+			<!-- mobileMenu -->
+			<div id="header">
+				<div class="width-delimiter">
+					<a class="link-logo" href="/" title="перейти на главную"><img src="/templates/img/logo.png" id="logo" alt="" /></a>
+					<div id="telobshii"><p>8 (800) 333-20-84<br />(495) 363-20-84</p>		
+						<div id="zvonok">Единый Сервисный Центр</div>
+						<div id="zvonok_free">звонок бесплатный<br><span>Москва</span></div>
+					</div>
+					<input type="checkbox" id="hd" class="hide"/>
+    				<label for="hd">Другие контакты</label>
+					<div class="tels">
+					<div id="tel" class="first"><p>
+						(812) 385-77-09 <a href="/page.php?page=91#piter">Санкт-Петербург</a><br/>
+						(831) 261-34-01 <a href="/page.php?page=91#n.novgorod">Нижний Новгород</a><br/>
+						(343) 342-25-35 <a href="/page.php?page=91#ekaterinburg">Екатеринбург</a><br />
+						(383) 209-59-69 <a href="/page.php?page=91#novosibirsk">Новосибирск</a></p>
+					</div>
+					<div id="tel"><p>
+							(846) 229-54-58 <a href="/page.php?page=91#samara">Самара</a><br/>
+							(843) 200-98-78 <a href="/page.php?page=91#kazan">Казань</a><br/>  
+							(8452) 74-69-79 <a href="/page.php?page=91#saratov">Саратов</a><br/>  
+							(347) 226-98-38 <a href="/page.php?page=91#ufa">Уфа</a></p>
+					</div>
+					</div>
+			</div>
+			<div class="" id="menu-box">
+						<ul id="menu">
+							<li class="sub"><a href="page.php?page=7"><b><i>О Группе</i></b></a>
+								<ul>
+									<li>
+										<a href="page.php?page=7">О Компании</a><br />
+										<a href="page.php?page=164">Отзывы</a><br />
+										<a href="page.php?page=179">Сертификаты</a><br />
+										<a href="/page.php?page=91">Контакты</a><br />
+										<a href="page.php?page=2">Партнеры</a><br />
+										<a href="articles.php">Статьи</a><br />
+										<a href="news.php">Новости</a><br />
+										<a href="actions.php">Акции</a><br />
+										<a href="page.php?page=8">Партнерская программа</a><br />
+										<a href="page.php?page=9">Вакансии</a>
+									</li>
+								</ul>
+							</li>
+							<li class="seporator">&nbsp;</li>
+							<li class="sub"><a href="/page.php?page=3" title="Система Главбух"><b><i>Система Главбух</i></b></a>
+								<ul>
+								<li><a href="page.php?page=11" title="БСС «Система Главбух» для коммерческих организаций">Для коммерческих организаций</a><br />
+									<a href="page.php?page=12" title="БСС «Система Главбух» для коммерческих организаций VIP версия">Для коммерческих организаций VIP</a><br />
+									<a href="page.php?page=13" title="БСС «Система Главбух» для бюджетных организаций">Для бюджетных организаций</a><br />
+									<a href="page.php?page=14" title="БСС «Система Главбух» для Упрощенки">Для организаций с УСНО</a></li>
+								</ul>
+							</li>
+							<li class="seporator">&nbsp;</li>
+							<li class="sub"><a href="page.php?page=59" title="Система Кадры"><b><i>Система Кадры</i></b></a>
+								<ul>
+									<li><a href="/page.php?page=141" title="«Система Кадры» для коммерческих организаций">Для коммерческих организаций</a><br />
+										<a href="/page.php?page=140" title="«Система Кадры» для бюджетных учреждений">Для бюджетных учреждений</a></li>
+									</ul>
+								</li>
+
+								<li class="seporator">&nbsp;</li>
+								<li class="sub"><a href="/page.php?page=147" title="Система Юрист"><b><i>Система Юрист</i></b></a></li>
+
+								<li class="seporator">&nbsp;</li>
+								<li class="sub"><a href="/page.php?page=148" title="Система Финансовый директор"><b><i>Система Финансовый директор</i></b></a></li>
+
+								<li class="seporator">&nbsp;</li>
+								<li class="sub"><a href="#" ><b><i>Сопутствующие программы</i></b></a>
+									<ul>
+										<li><a href="/page.php?page=61" title="1С:Предприятие">1С:Предприятие</a><br />
+											<a href="page.php?page=132" title="СБиС++">СБиС++ Электронная отчетность</a><br />
+											<a href="page.php?page=93" title="Электронные журналы">Электронные журналы</a></li>
+										</ul>
+									</li>
+
+									<li class="seporator">&nbsp;</li>
+									<li class="sub"><a href="page.php?page=4" ><b><i>Сервисы клиентам</i></b></a>
+										<ul style="width:167px;">
+											<li><a href="page.php?page=16" title="Учебный центр">Учебный центр</a><br />
+												<a href="page.php?page=60" title="Юридические услуги">Юридические услуги</a><br />
+												<a href="page.php?page=75" title="Линия консультации">Линия консультации</a><br />
+												<a href="page.php?page=167" title="Вопросы и ответы">Вопросы и ответы</a></li>	
+											</ul>
+										</li>
+										<li class="seporator">&nbsp;</li>
+										<li><a href="/page.php?page=139"><b><i>Цены</i></b></a></li>
+									</ul>
+								</div>
+							</div>
+							<div id="intro-in">
+								<div id="intro">
+									<div class="width-delimiter">
+										<div id="package"><div>&nbsp;</div></div>
+										<ul id="speed-links">
+											<li><a id="link-corporate" onclick="ChangeBanner('corporate','click'); return false;" style="text-decoration: underline;" class="underlined" href="#" title="Для коммерческих организаций">Для коммерческих организаций</a></li>
+											<li><a id="link-vip" onclick="ChangeBanner('vip','click'); return false;" href="#" title="Для коммерческих организаций VIP версия">Для коммерческих организаций VIP версия</a></li>
+											<li><a id="link-budget" onclick="ChangeBanner('budget','click'); return false;" href="#" title="Для бюджетных учреждений">Для бюджетных учреждений</a></li>
+											<li><a id="link-ip" onclick="ChangeBanner('ip','click'); return false;" href="#" title="Для "Упрощенки"">Для "Упрощенки"</a></li>
+										</ul>
+										<div id="intro-text" class="corporate"><!-- class: vip, budget, ip, corporate -->
+											<div id="text-corporate">
+	<span class="title">БСС «Система Главбух» для коммерческих организаций</span>
+	<p>– Это электронная база эксклюзивных рекомендаций по оптимизации бухучета, налоговому планированию и кадровому делопроизводству.<br /><br />Также в Систему входят нормативно-правовые документы, справочная информация и электронные версии журнала «Главбух» и отраслевых изданий</p>
+	<a href="/page.php?page=11" class="more">Подробнее</a>
+	</div>
+											<div id="text-vip" style="display: none;">
+	<span class="title">БСС «Система Главбух» VIP для коммерческих организаций</span>
+	<p>– БСС «Система Главбух» VIP для коммерческих организаций – это электронная база эксклюзивных рекомендаций по оптимизации бухучета, налоговому планированию и кадровому делопроизводству. В Систему входят специальные VIP сервисы и нормативно-правовые документы, справочная информация, и электронные версии множества журналов.</p>
+	<a href="/page.php?page=12" class="more">Подробнее</a>
+	</div>
+											<div id="text-budget" style="display: none;">
+	<span class="title">БСС «Система Главбух» для бюджетных организаций</span>
+	<p>– Это электронная база эксклюзивных рекомендаций по учету, налогообложению и кадровому делопроизводству в бюджетной сфере.<br /><br />Система для бюджетных учреждений разработана специально для бухгалтеров бюджетной сферы и содержит только необходимую в работе информацию.</p>
+	<a href="/page.php?page=13" class="more">Подробнее</a>
+	</div>
+											<div id="text-ip" style="display: none;">
+	<span class="title">БСС «Система Главбух» для "Упрощенки"</span>
+	<p>– Это электронная база эксклюзивных рекомендаций по оптимизации бухучета и налоговому планированию, сформированная специально для малого бизнеса.<br /><br />Авторы - ведущие специалисты государственных ведомств России. В Систему входят нормативно-правовые документы, справочная информация и электронные версии журнала «Бухгалтерия ИП» и других изданий.</p>
+	<a href="/page.php?page=14" class="more">Подробнее</a>
+	</div>
+										</div>
+									</div>
+								</div>
+							</div>	<div id="body">
+		<div class="width-delimiter">
+			<div class="column-model without-dashed">
+
+<div class="clamur-box">
+<div class="clamur-box-inner">
+<div class="img-box">&nbsp;
+<div class="img-box"><a href="/actions.php?id=29"><img width="260" height="84" alt="ПЛАНШЕТ в подарок  при подписке на БСС &laquo;Система Главбух&raquo;" src="files/images/planshet-gift.jpg" title="ПЛАНШЕТ в подарок  при подписке на БСС &laquo;Система Главбух&raquo;" /></a></div>
+</div>
+<p style="font-size: 1.7em;"><a href="/actions.php?id=29">ПЛАНШЕТ в подарок</a></p>
+<p style="padding-bottom: 5px;">При подписке на БСС &laquo;Система Главбух&raquo;</p>
+</div>
+</div>
+<div class="clamur-box">
+<div class="clamur-box-inner">
+<div class="img-box">&nbsp;
+<div class="img-box"><a href="/page.php?page=75"><img src="files/images/lk-ermak.jpg" width="260" height="84" alt="" /></a></div>
+</div>
+<p style="font-size: 1.2em; padding:12px 0 8px; font-weight:550;"><a href="/page.php?page=75">ЛИНИЯ КОНСУЛЬТАЦИИ КГ ЕРМАК</a></p>
+<p style="font-size: 1.5em; color:#99231b; padding:0;">8 (495) 135-49-49</p>
+</div>
+</div>
+<div class="clamur-box">
+<div class="clamur-box-inner">
+<div class="img-box">&nbsp;
+<div class="img-box"><a href="/page.php?page=93"> 															<img width="260" height="84" src="files/images/e-izdania.jpg" alt="" /> 														</a></div>
+</div>
+<p style="font-size: 1.7em;"><a href="/page.php?page=93">Электронные журналы</a></p>
+<p>Будьте в курсе развития вашей отрасли!</p>
+</div>
+</div>
+<!--td width="33%" class="right-column">
+            <div class="clamur-box">
+            <div class="clamur-box-inner">
+            <div class="img-box">&nbsp;
+            <div class="img-box"><a href="/actions.php"><img width="260" height="91" alt="" src="/files/images/year ok.jpg" /></a></div>
+            </div>
+            <p style="font-size: 1.8em;"><a href="/actions.php">АКЦИИ</a></p>
+            <p>Приятные и полезные <strong>подарки</strong><br />
+            при покупке БСС &laquo;Система Главбух&raquo;!</p>
+            </div>
+            </div>
+        </td--></div>
+<div align="center">&nbsp;</div>
+<div class="column-model">
+<div class="left-column">
+<h2 class="main" style="padding-bottom:0;"><a href="/sistema-glavbuh">Система &laquo;Главбух&raquo;</a></h2>
+<p style="padding-bottom:15px; line-height:14px;"><em>Идеальный выбор для продуктивной работы вашего бухгалтера!</em></p>
+<ul class="links-list">
+    <li><a href="/page.php?page=11">Для коммерческих организаций </a></li>
+    <li>
+    <div><a href="/page.php?page=12">VIP для коммерческих организаций</a></div>
+    </li>
+    <li><a href="/page.php?page=13">Для бюджетных организаций </a></li>
+    <li><a href="/page.php?page=14">Для &laquo;Упрощенки&raquo; </a></li>
+</ul>
+<h2 class="main"><a href="/sistema-kadry">Система &laquo;Кадры&raquo;</a></h2>
+<ul class="links-list">
+    <li><a href="/page.php?page=141">Для коммерческих организаций</a></li>
+    <li><a href="/page.php?page=140">Для бюджетных учреждений</a></li>
+</ul>
+<h2 class="main"><a href="/sistema-urist">Система &laquo;Юрист&raquo;</a></h2>
+<h2 class="main" style="white-space:nowrap"><a href="/sistema-finansovyi-director">Система &laquo;Финансовый директор&raquo;</a></h2>
+<h2 class="main">Сопутствующие программы</h2>
+<ul class="links-list">
+    <li><a href="/page.php?page=61">1С:Предприятие</a></li>
+    <li><a href="/page.php?page=132">СБиС++ Электронная отчётность</a></li>
+</ul>
+</div>
+<div class="center-column">
+<h2>О КОМПАНИИ</h2>
+<p>Консалтинговая группа (КГ) &laquo;ЕРМАК&raquo; &ndash; дистрибьюторская группа, сфокусированная на развитии партнерских отношений, росте бизнеса и высоком качестве обслуживания клиентов.</p>
+<p><strong>НАПРАВЛЕНИЕ&nbsp;ДЕЯТЕЛЬНОСТИ</strong></p>
+<p>Продвижение и обслуживание электронных систем &laquo;Главбух&raquo;, &laquo;Кадры&raquo;, &laquo;Юрист&raquo;, &laquo;Финансовый директор&raquo;, &laquo;СБиС++&raquo; и&nbsp;&laquo;1С&raquo;<strong>, </strong>распространение электронных изданий в ведущих регионах России.</p>
+<p><strong>НАШИ ПАРТНЕРЫ</strong></p>
+<p>К числу партнеров группы относятся такие компании, как ООО &laquo;Актион-Диджитал&raquo; (разработчик справочных систем для бухгалтеров, юристов, кадровиков, руководителей, е-изданий),  фирма &laquo;1С&raquo;, Тензор (разработчик СБиС++) и др.</p>
+<p><a href="/page.php?page=164">Отзывы о КГ &laquo;ЕРМАК&raquo;</a></p>
+</div>
+<div class="right-labelglavbuh" style="padding-top:30px;"><a target="_self" href="/order.php"><img width="260" height="455" alt="" src="files/images/logo-na-sait3.png" /><br />
+</a></div>
+</div>
+			<div class="column-model">
+					<div class="left-column">
+						<div class="dashed-separator-1">&nbsp;</div>
+													<h2>АКЦИИ</h2>
+							<dl class="news-list">
+																<dt>17.10.2016</dt>								<dd><a href="/actions.php?id=29">Участвуйте в акции «Получи ПЛАНШЕТ в подарок!»</a></dd>
+																<dt>14.10.2016</dt>								<dd><a href="/actions.php?id=28">Торопитесь подписаться на Е-издания — получите 3 семинара в подарок!</a></dd>
+																<dt>11.10.2016</dt>								<dd><a href="/actions.php?id=19">Дисконтная карта ЕРМАК</a></dd>
+															</dl>
+																			<h2>МЕРОПРИЯТИЯ</h2>
+							<dl class="news-list">
+																<dt>31.10.2016</dt>								<dd><a href="/events.php?id=306">Вебинар «Эффективное использование справочной системы «Экономика ЛПУ» для всех, кто работает в системе ОМС</a></dd>
+																<dt>28.10.2016</dt>								<dd><a href="/events.php?id=305">Вебинар «Эффективное использование юридической справочной системы «Юрист» для коммерческих организаций</a></dd>
+																<dt>27.10.2016</dt>								<dd><a href="/events.php?id=304">Вебинар «Эффективное использование финансовой справочной системы «Финансовый Директор»</a></dd>
+															</dl>
+											</div>
+					<div class="center-column">
+						<div class="dashed-separator-1">&nbsp;</div>
+													<h2>НОВОСТИ</h2>
+							<dl class="news-list">
+																<dt>24.10.2016</dt>								<dd><a href="/news.php?id=356">Налоговая служба разъяснила порядок перевыставления счетов-фактур, полученных от ФГУП «Гознак», при выдаче специальных марок для маркировки табачной продукции</a></dd>
+																<dt>21.10.2016</dt>								<dd><a href="/news.php?id=355">Новый отчет в Росстат о численности работников по профессиональным группам</a></dd>
+																<dt>17.10.2016</dt>								<dd><a href="/news.php?id=354">Как законно снизить налоги путем дробления бизнеса на несколько юридических лиц</a></dd>
+																<dt>14.10.2016</dt>								<dd><a href="/news.php?id=353">Судебная практика для бухгалтера (малый бизнес)</a></dd>
+																<dt>10.10.2016</dt>								<dd><a href="/news.php?id=351">Налоговый орган вправе направить документы по выездной проверке в электронной форме</a></dd>
+																<dt>07.10.2016</dt>								<dd><a href="/news.php?id=350">Как использовать новые коды по НДС</a></dd>
+																<dt>03.10.2016</dt>								<dd><a href="/news.php?id=349">Судебная практика для кадровика</a></dd>
+															</dl>
+											</div>
+					<div class="right-column">
+						<div class="dashed-separator-1">&nbsp;</div>
+						<!--<h2>ПОЛЕЗНО&nbsp;ЗНАТЬ&nbsp;</h2>
+<div><a href="http://www.1sgb.ru/page.php?page=31">Контроль загрузки больших документов</a></div>
+<div style="text-align: justify;"><span style="font-size: small;">Система предупредит Вас о&nbsp;том, что загружается документ большого объема и&nbsp;позволит выбрать&nbsp;&ndash; продолжить загрузку всего документа, или ограничиться только необходимой Вам частью.</span></div>
+<div>&nbsp;</div>
+<div><a href="http://www.1sgb.ru/page.php?page=33">NewsReader от&nbsp;БСС &laquo;Система Главбух&raquo;</a></div>
+<div style="text-align: justify;"><span style="font-size: small;">Программа NewsReader от БСС <span class="nobr">&laquo;Система Главбух&raquo;</span> ежедневно получает обновления Системы в&nbsp;формате RSS и&nbsp;отображает их&nbsp;на&nbsp;Вашем экране.</span></div>
+<div>&nbsp;</div>
+<div><a href="http://www.1sgb.ru/page.php?page=43">Машина времени</a></div>
+<div style="text-align: justify;"><span style="font-size: small;">Система&nbsp;контролирует степень актуальности экспертных материалов и нормативно-правовых актов на заданный Вами момент времени. По умолчанию поисковая система выдает материалы и документы в редакции, действующей на текущую дату.</span></div>
+<div><span style="font-size: small;">&nbsp;</span></div>
+<div><a href="http://www.1sgb.ru/page.php?page=32">Конфигурация &laquo;Система Главбух в 1С&raquo;</a></div>
+<div style="text-align: justify;"><span style="font-size: small;">С помощью данного модуля Вы сможете искать и просматривать материалы Системы&nbsp;не запуская браузер, а прямо в программе &laquo;1С&raquo;.</span></div>
+<div>&nbsp;</div>
+<div><a href="http://www.1sgb.ru/page.php?page=34">Профессиональная взаимовыручка</a></div>
+<div style="text-align: justify;"><span style="font-size: small;">Коллеги, имеющие оплаченный доступ к Системе, могут оказать Вам помощь и прислать ссылку на любой материал. </span></div>-->
+<h2>ПОЛЕЗНО&nbsp;ЗНАТЬ&nbsp;</h2>
+<p><a href="/page.php?page=31">Контроль загрузки больших документов</a><br />Система предупредит Вас о&nbsp;том, что загружается документ большого объема и&nbsp;позволит выбрать&nbsp;– продолжить загрузку всего документа, или ограничиться только необходимой Вам частью.</p>
+<p><a href="/page.php?page=33">NewsReader от&nbsp;БСС «Система Главбух»</a><br />Программа NewsReader от БСС <span class="nobr">«Система Главбух»</span> ежедневно получает обновления Системы в&nbsp;формате RSS и&nbsp;отображает их&nbsp;на&nbsp;Вашем экране.</p>
+<p><a href="/page.php?page=43">Машина времени</a><br />Система&nbsp;контролирует степень актуальности экспертных материалов и нормативно-правовых актов на заданный Вами момент времени. По умолчанию поисковая система выдает материалы и документы в редакции, действующей на текущую дату.</p>
+<p><a href="/page.php?page=32">Конфигурация «Система Главбух в 1С»</a><br />С помощью данного модуля Вы сможете искать и просматривать материалы Системы&nbsp;не запуская браузер, а прямо в программе «1С».</p>
+<p><a href="/page.php?page=34">Профессиональная взаимовыручка</a><br />Коллеги, имеющие оплаченный доступ к Системе, могут оказать Вам помощь и прислать ссылку на любой материал. </p>
+                      <p style="text-align:center;"><a href="/news.php?id=96"><img src="http://img.super-job.ru/img/best_employer2013_small.ru.jpg" border="0" alt="Привлекательный работодатель-2013 по исследованиям Superjob.ru" title="Привлекательный работодатель-2013 по исследованиям Superjob.ru" width="100" height="111"></a></p>
+					</div>
+			</div>
+			<div class="column-model">
+					<div class="left-column">
+						<div class="dashed-separator-1">&nbsp;</div>
+					</div>
+					<div class="center-column">
+						<div class="dashed-separator-1">&nbsp;</div>
+					</div>
+					<div class="right-column">
+						<div class="dashed-separator-1">&nbsp;</div>
+					</div>
+			</div>
+		</div>
+		<div class="clear">&nbsp;</div>
+	</div>
+</div>
+<div id="footer">
+    <div class="width-delimiter">
+        <div class="column-model without-dashed">
+                	<ul id="dublicate-menu">
+                    	<li><a href="sistema-glavbuh">Система Главбух</a></li>
+                    	<li><a href="page.php?page=59">Система Кадры</a></li>
+                        <li><a href="page.php?page=147">Система Юрист</a></li>
+                        <li><a href="page.php?page=148">Система Финансовый директор</a></li>
+                        <li><a href="page.php?page=61">1С:Предприятие</a></li>
+                        <li><a href="page.php?page=48">СБиС++</a></li>
+						<li><a href="page.php?page=4">Сервисы клиентам</a></li>
+                    </ul>
+                <div class="left-column foot-contact">&copy; 2008-2016, ООО КГ «ЕРМАК»<br>Все права защищены</br></br>
+                <script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 977236323;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/977236323/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<div style="text-align: left;">
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t14.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+<!-- Rating@Mail.ru counter -->
+<script language="javascript"><!--
+var a='';a+=';r='+escape(document.referrer);js=10;//--></script>
+<script language="javascript1.1"><!--
+a+=';j='+navigator.javaEnabled();js=11;//--></script>
+<script language="javascript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height;
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
+<script language="javascript1.3"><!--
+js=13;//--></script><script language="javascript" type="text/javascript"><!--
+document.write('<a href="http://top.mail.ru/jump?from=2170828" target="_top">'+
+'<img src="http://df.c1.b1.a2.top.mail.ru/counter?id=2170828;t=104;js='+js+
+a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" border="0" '+
+'height="18" width="88"><\/a>');if(11<js)document.write('<'+'!-- ');//--></script>
+<noscript><a target="_top" href="http://top.mail.ru/jump?from=2170828">
+<img src="http://df.c1.b1.a2.top.mail.ru/counter?js=na;id=2170828;t=104" 
+height="18" width="88" border="0" alt="Рейтинг@Mail.ru"></a></noscript>
+<script language="javascript" type="text/javascript"><!--
+if(11<js)document.write('--'+'>');//--></script>
+<!-- //Rating@Mail.ru counter -->
+<!-- begin of Top100 code -->
+
+<script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?2668306"></script>
+<noscript>
+<a href="http://top100.rambler.ru/navi/2668306/">
+<img src="http://counter.rambler.ru/top100.cnt?2668306" alt="Rambler's Top100" border="0" />
+</a>
+
+</noscript>
+<!-- end of Top100 code -->
+
+
+
+
+									<!--<a href="page.php?page=6" style="font-size: 7pt;">Контактная информация</a>-->
+								</div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+  {lang: 'ru'}
+</script>
+
+<!-- begin of Top100 code -->
+<script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?2213254"></script>
+<noscript>
+<img src="http://counter.rambler.ru/top100.cnt?2213254" alt="" width="1" height="1" border="0" />
+</noscript>
+<!-- end of Top100 code -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter12936127 = new Ya.Metrika({id:12936127,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/12936127" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- begin of Google Analitycs kgermak-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-29467826-2', 'kgermak.ru');
+  ga('send', 'pageview');
+</script>
+<!-- end of Google Analitycs -->
+
+<script async="async" src="https://w.uptolike.com/widgets/v1/zp.js?pid=43990"></script>
+
+<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=fr*dJsM9LmpmEb3FLaB*0YLgoc9Q5xgVHGJdC53q/oQcK7Zo2bCRUlN9e527ZRpZ2bLcivuQrMRKmK6EB51EmdNB/4qqn0tbJ/12nh*VeXNL48HN/KC/dYAm2ioN9buRXA5SfQ6ZDU4khb1KaOKFXp3REmc8h19iZWXYrm9MD5I-';</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/56f911ad092e9b571c695244/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<script type="text/javascript">(function(w,doc) {
+if (!w.__utlWdgt ) {
+    w.__utlWdgt = true;
+    var d = doc, s = d.createElement('script'), g = 'getElementsByTagName';
+    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+    s.src = ('https:' == w.location.protocol ? 'https' : 'http')  + '://w.uptolike.com/widgets/v1/uptolike.js';
+    var h=d[g]('body')[0];
+    h.appendChild(s);
+}})(window,document);
+</script>
+<div data-background-alpha="0.0" data-buttons-color="#ffffff" data-counter-background-color="#ffffff" data-share-counter-size="12" data-top-button="false" data-share-counter-type="disable" data-share-style="9" data-mode="share" data-like-text-enable="false" data-mobile-view="true" data-icon-color="#ffffff" data-orientation="fixed-left" data-text-color="#000000" data-share-shape="round-rectangle" data-sn-ids="fb.vk.tw.ok.em." data-share-size="30" data-background-color="#ffffff" data-preview-mobile="false" data-mobile-sn-ids="fb.vk.tw.wh.ok.vb." data-pid="1521886" data-counter-background-alpha="1.0" data-following-enable="false" data-exclude-show-more="false" data-selection-enable="true" class="uptolike-buttons" ></div>
+
+
+</body>
+</html>

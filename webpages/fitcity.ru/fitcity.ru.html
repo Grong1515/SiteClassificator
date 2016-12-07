@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="windows-1251">
+	<title>Тренажерный зал Fitness City - Москва, Перово</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+						
+	<link href="http://www.fitcity.ru/favicon.ico" rel="icon" type="image/x-icon">
+	<link href="http://www.fitcity.ru/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="http://www.fitcity.ru/css/all.css">
+	<link rel="stylesheet" type="text/css" href="http://www.fitcity.ru/css/carousel.css">
+	<link rel="stylesheet" type="text/css" href="http://www.fitcity.ru/css/flexslider.css">
+	
+	<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="http://www.fitcity.ru/css/ie.css">
+	<![endif]-->
+	<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" href="http://www.fitcity.ru/css/ltie7.css">
+	<![endif]-->
+
+	<script type="text/javascript" src="http://www.fitcity.ru/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="http://www.fitcity.ru/js/parallax.min.js"></script>
+	
+	<script type="text/javascript" src="http://www.fitcity.ru/js/jquery.jcarousel.min.js"></script>
+	<script type="text/javascript" src="http://www.fitcity.ru/js/jcarousel-init.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.fitcity.ru/css/cslidestyle.css">
+	<script type="text/javascript" src="http://www.fitcity.ru/js/modernizr.custom.28468.js"></script>
+	<script type="text/javascript" src="http://www.fitcity.ru/js/jquery.cslider.js"></script>
+	
+	<script type="text/javascript" src="http://www.fitcity.ru/js/jquery.flexslider.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="http://www.fitcity.ru/js/fancybox/jquery.fancybox.css" />
+	<script type="text/javascript" src="http://www.fitcity.ru/js/fancybox/jquery.fancybox.pack.js"></script>	
+<style type="text/css">
+.da-slide {
+    text-align: justify;
+}
+.da-slide h2 {
+    text-align: center;
+}
+.lbtn {
+    text-shadow: 1px 1px 1px black;
+}
+.info-it-txt { /*текст внизу главной страницы */
+    text-align: justify;
+}
+.info-it-tit {
+    padding-right: 0;
+    padding-bottom: 4%;
+    text-align: center;
+}
+.dplan-it-pad p { /*цвет времени в блоках расписания*/
+    color: #FFF7F7;
+    text-shadow: 1px 1px 1px black;
+}
+.dplan-it-pad span span { /*цвет залов в блоках расписания*/
+    color: #FFF7F7;
+    text-shadow: 1px 1px 1px black;
+}
+.dplan-it-pad div { /*окантовка в названии занятия*/
+    text-shadow: 0px 0px 1px rgba(96, 99, 88, 0.53);
+}
+.dplan-h60 { /* блоки расписания: округлость и окантовка */ 
+    border-radius: 5px; 
+    border: 1px solid #BCBCBC;
+}
+.wplan-all table tr td.even { /*цвет верт. полос расписания*/ 
+    background: #F4F4F4;
+}
+p.section-style {
+    text-align: justify;
+    max-width: 70%; 
+    height: 5.6em; 
+    margin: 0 auto; 
+    box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+    font-size:28px;
+    display: table-row;
+}
+#section-text{
+      display: table-cell;
+      vertical-align: middle;
+      font: 300 32px/36px 'Exo 2', 'Open Sans', Arial;
+}
+img.section-img{
+    width: 136px; 
+    height: 136px; 
+    border-width: 1px; 
+    border-style: solid; 
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    display: table-cell;
+}
+
+@media screen and (max-width: 600px){
+/*@media screen and (max-width: 400px){*/
+      
+    p.section-style {
+        height: auto;
+        text-align: center;
+        display: block;
+    }
+    img.section-img {
+        float: none;
+        display: initial;
+    }
+    #section-text{
+        display: block;
+        word-wrap: break-word;
+    }      
+}
+
+/*выравнивание блоков расписания по вертикали*/
+.wplan-all table {
+line-height: 16px;
+}
+.dplan-h60 {
+    height: 58px;
+}
+/*Чиним верт. полосы в расписании */
+@media only screen and (max-width: 800px){
+#content2 {
+  /*  background: white;*/
+  /*  width: 1200px;*/
+    overflow-x: scroll;
+}
+}
+@media only screen and (max-width: 1199px) and (min-width: 1000px){
+#content2 {
+    overflow-x: scroll;
+}
+.wplan-title {
+    text-indent: 6%;
+    text-align: left;
+}
+}
+@media only screen and (max-width: 1000px)
+{
+#content2 {
+    overflow-x: scroll;
+}
+.wplan-title {
+    text-indent: 6%;
+    text-align: left;
+}
+}
+ul.pagelist { /* убираем дурацкие точки после таблиц */
+display:none
+}
+#top-menu nav a { /*выравниваем разделы меню*/
+    padding: 0px 10px;
+}</style>
+	<script type="text/javascript">
+	var reqajxhost = 'http://www.fitcity.ru/';
+function GetWndSizeDiap()
+{
+	if( $(window).width() < 800 )
+		wndsize = 0;
+	else if( $(window).width() < 1000 )
+		wndsize = 1;
+	else if( $(window).width() < 1200 )
+		wndsize = 2;
+	else 
+		wndsize = 3;
+		
+	return wndsize;
+}
+
+	$(document).ready(function()
+	{
+		$("#lnk-toggle-menu").bind("click", function(){
+			//alert("!!");
+			$(this).parent().toggleClass("mpan-mob-open");
+			$(".mpan-norm").toggleClass("mpan-norm-open");			
+			return false
+		});
+				
+		$("#subscrfrm").submit(function(){
+			return checkSubscrFrm("subscrfrm")
+		});
+
+				$(".ind-gal").parallax({imageSrc: 'img/bg-girl.jpg'});
+		
+		//$('#da-slider').cslider({autoplay: true, bgincrement: 150});
+		prev_wndsize = wndsize = GetWndSizeDiap();
+		
+		if( wndsize > 0 )
+		{
+			$('.flexslider').hide();
+			$('#da-slider').cslider({autoplay: true, bgincrement: 150});
+		}
+		else
+		{
+			$('#da-slider').hide();
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function(slider){
+					$('body').removeClass('loading');
+				}
+			});
+		}
+
+		$("#ind-gallist").jcarousel({ scroll:1 });
+		$('#ind-gallist').jcarousel('scroll', $('#ind-gallist li:eq(3)'));
+		
+		initJCarouselControls();
+		
+		$("a[rel=galgroup]").fancybox({
+			overlayOpacity: 0.8,
+			overlayColor: '#000',
+			transitionIn: 'none',
+			transitionOut: 'none',
+			titlePosition: 'over',
+			titleFormat: function(title, currentArray, currentIndex, currentOpts){
+				return '<div id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</div>';
+			}
+		});
+		
+		$(window).resize(function(){
+			wndsize = GetWndSizeDiap();
+			
+			if( wndsize != prev_wndsize )
+			{
+				prev_wndsize = wndsize;
+				
+				if( wndsize > 0 )
+				{
+					$('.flexslider').hide();
+					$('#da-slider').show();
+					$('#da-slider').cslider({autoplay: true, bgincrement: 150});
+				}
+				else
+				{
+					$('#da-slider').hide();
+					$('.flexslider').show();
+					$('.flexslider').flexslider({
+						animation: "slide",
+						start: function(slider){
+							$('body').removeClass('loading');
+						}
+					});
+				}
+				//$("#best-list").jcarousel({ scroll:1 });				
+			}
+		});
+		
+				
+	});
+	</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59841499-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+<div id="searchdrop" style="visibility: hidden; display: none;">
+	<div class="searchdropcont">
+		<div id="searchdrop_btn"><a href="javascript:hideTooltip('searchdrop')" class="closebut">X</a></div>
+		<div id="searchdrop_body"></div>
+</div><!--[if lte IE 6.5]><iframe></iframe><![endif]--></div>
+<div id="popuptooltip" style="visibility: hidden; display: none;">
+	<div class="tooltipwndcont">
+		<div id="popuptooltip_btn"><a href="javascript:hideTooltip('popuptooltip')" class="closebut">X</a></div>
+		<div id="popuptooltip_body"></div>
+</div><!--[if lte IE 6.5]><iframe></iframe><![endif]--></div>
+<body>
+	<div id="top-menu">
+		<div class="wrapper">
+			<div class="mpan-mob"><a id="lnk-toggle-menu" href="#"><span class="mmbtn-bar"></span><span class="mmbtn-bar"></span><span class="mmbtn-bar"></span></a></div>
+			<div class="mpan-norm">
+				<nav>
+		<a  class="imp active" href="http://www.fitcity.ru/">Главная</a><a  href="http://www.fitcity.ru/info/about.html">О нас</a><a  href="http://www.fitcity.ru/info/akcii.html">Акции</a><a  href="http://www.fitcity.ru/trenery.html">Тренеры</a><a  href="http://www.fitcity.ru/info/section.html">Секции</a><a  href="http://www.fitcity.ru/wplan.html">Расписание</a><a  href="http://www.fitcity.ru/info/gallery2.html">Галерея</a><a  href="http://www.fitcity.ru/info/life.html">Жизнь Фитнеса</a><a  href="http://www.fitcity.ru/info/ourclients.html">Наши клиенты</a><a  href="http://www.fitcity.ru/otzivy.html">Отзывы клиентов</a><a  href="http://www.fitcity.ru/info/contacts.html">Контакты</a><a  href="/feedback.html">Написать нам</a>				</nav>
+			</div>
+		</div>
+	</div>	
+	<header><div class="header-light">
+		<div class="wrapper">
+			<div id="logo">
+				<a href="http://www.fitcity.ru/"><img src="http://www.fitcity.ru/img/fitcity-logo.png" alt="FitCity - тренажерный зал в Москве" /></a>
+			</div>
+			<div class="slogan"><span>Спортивный стиль жизни</span></div>
+			<div class="tcontact">
+				<div class="tphones"><div><span>8</span> (495) 231-35-41</div></div>
+				<div class="taddr"><div>Россия, Москва,<br>ул. Кусковская 20а (м. Перово)</div></div>
+			</div>
+			<div class="both"></div>
+		</div>
+		<section class="slider">
+			<div class="flexslider">
+				<ul class="slides">
+		<li><a href="feedback.html"><img src="http://www.fitcity.ru/files/fc1.jpg" alt="Год - 14 000 рублей ! ! !" /></a></li><li><a href="http://www.fitcity.ru/"><img src="http://www.fitcity.ru/files/park.png" alt="Фитнес в парке" /></a></li>				</ul>
+			</div>
+		</section>
+		<div id="da-slider" class="da-slider">
+			<div class="da-slider-in">
+		<div class="da-slide">
+					<h2>Год - 14 000 рублей ! ! !</h2>
+					<p>Ограниченная серия золотых карт по супер цене&#8252;&#128170; Успей приобрести&#8252;&#128077;</p>
+					<span class="da-link"><a href="feedback.html" class="btn btn-light btn-light-more">Подробнее</a></span>
+					<div class="da-img"><img src="http://www.fitcity.ru/files/fc1.jpg" alt="Год - 14 000 рублей ! ! !" /></div>
+				</div><div class="da-slide">
+					<h2>Фитнес в парке</h2>
+					<p></p>
+					<span class="da-link"><a href="http://www.fitcity.ru/" class="btn btn-light btn-light-more"></a></span>
+					<div class="da-img"><img src="http://www.fitcity.ru/files/park.png" alt="Фитнес в парке" /></div>
+				</div><div class="da-slide">
+					<h2>Кратко о нас</h2>
+					<p>Под управлением опытных инструкторов Вы можете позаниматьсяаэробикой в трёх удобных аэробных залах и в зале персонального тренинга или поработать над рельефом ваших мышц в суперсовременном тренажёрном зале, оборудованном силовыми тренажёрами PARAMOUNT и кардио-линией LIFE FITNESS.
+</p>
+					<span class="da-link"><a href="http://fitcity.ru/info/about.html" class="btn btn-light btn-light-more">Подробнее о спорткоплексе</a></span>
+					<div class="da-img"><img src="http://www.fitcity.ru/files/slides/slide-1.png" alt="Кратко о нас" /></div>
+				</div><div class="da-slide">
+					<h2>Занимайся с нами!</h2>
+					<p>Под управлением опытных инструкторов вы можете позаниматьсяаэробикой в трёх удобных аэробных залах и в зале персонального тренинга или поработать над рельефом ваших мышц в суперсовременном тренажёрном зале, оборудованном силовыми тренажёрами PARAMOUNT и кардио-линией LIFE FITNESS.</p>
+					<span class="da-link"><a href="feedback.html" class="btn btn-light btn-light-more">Записаться на тренировку</a></span>
+					<div class="da-img"><img src="http://www.fitcity.ru/files/slides/slide-2.png" alt="Занимайся с нами!" /></div>
+				</div>			</div>
+			
+			<nav class="da-arrows">
+				<span class="da-arrows-prev"></span>
+				<span class="da-arrows-next"></span>
+			</nav>
+		</div>
+	</div></header>	
+	
+		
+	<main>
+<div class="wrapper">
+	<section class="ind-iblk">
+		<div class="lbl-hdr">Расписание</div>
+		<div class="wplan">
+			<table>
+	<tr>
+				<td class="dt"><div><span>26</span>окт</div>среда</td><td><p>09:00 - 10:00</p><div>Pilates<span class="clr1">Юля</span></div></td><td><p>10:00 - 11:00</p><div>Power Step<span class="clr1">Юля</span></div></td><td><p>11:00 - 12:00</p><div>Stretch<span class="clr1">Юля</span></div></td><td><p>18:30 - 19:30</p><div>TABS + Stretch<span class="clr2">Наталья</span></div></td><td><p>19:30 - 20:30</p><div>Hot Iron<span class="clr2">Наталья</span></div></td><td><p>19:30 - 20:30</p><div>Тай-Бо (по записи)<span class="clr3">Юля</span></div></td><td><p>20:30 - 21:30</p><div>Zumba<span class="clr4">Юля</span></div></td></tr><tr>
+				<td class="dt"><div><span>27</span>окт</div>четверг</td><td><p>10:00 - 11:00</p><div>TNT<span class="clr5">Люда</span></div></td><td><p>11:00 - 12:00</p><div>Upper Body<span class="clr5">Люда</span></div></td><td><p>12:00 - 13:00</p><div>TABS + Stretch<span class="clr5">Люда</span></div></td><td><p>18:30 - 19:30</p><div>Здоровая спина<span class="clr6">Аня</span></div></td><td><p>19:30 - 20:30</p><div>Йога<span class="clr6">Аня</span></div></td><td><p>19:30 - 20:30</p><div>Body Condition<span class="clr2">Наталья</span></div></td><td><p>20:30 - 21:30</p><div>Fitball<span class="clr2">Наталья</span></div></td></tr>			</table>
+		</div>
+		<div class="btn-row">
+			<a href="http://www.fitcity.ru/feedback.html" class="btn btn-dark btn-more float_r" style="margin-left: 8px; margin-bottom: 6px;">Записаться на тренировку</a> 
+			<a href="http://www.fitcity.ru/wplan.html" class="btn btn-light btn-light-more float_r">Полное расписание</a>
+		</div>
+		<div class="both"></div>		
+		
+			
+	</section>
+</div>
+
+<section class="ind-promo">
+	<div class="wrapper">
+		<div class="promo-it promo-1"><div></div><span>Удобное расположение</span></div>
+		<div class="promo-it promo-2"><div></div><span>Удобное время работы</span></div>
+		<div class="promo-it promo-3"><div></div><span>Опытные тренеры</span></div>
+		<div class="promo-it promo-4"><div></div><span>Большая площадь для занятий</span></div>
+		<div class="both"></div>
+	</div>
+</section>
+
+
+<div class="wrapper">
+	<section class="ind-iblk">
+		<div class="lbl-hdr">Наши тренеры</div>
+		<div class="trainers">
+<div class="trainer-row"><div class="trainer-it">
+			<div class="trainer-pic"><span><img src="http://www.fitcity.ru/pics/trainers/19_sm.jpg" alt="Тренер Финогеева Юля"></span></div>
+			<div class="trainer-inf">
+				Инструктор групповых программ
+				<span>Финогеева Юля</span>
+			</div>
+		</div><div class="trainer-it">
+			<div class="trainer-pic"><span><img src="http://www.fitcity.ru/pics/trainers/22_sm.jpg" alt="Тренер Иванов Сергей"></span></div>
+			<div class="trainer-inf">
+				Тренер тренажерного зала
+				<span>Иванов Сергей</span>
+			</div>
+		</div><div class="both"></div>
+			</div><div class="trainer-row trainer-row-even"><div class="trainer-it">
+			<div class="trainer-pic"><span><img src="http://www.fitcity.ru/pics/trainers/23_sm.jpg" alt="Тренер Шаманская Юля"></span></div>
+			<div class="trainer-inf">
+				Инструктор групповых программ
+				<span>Шаманская Юля</span>
+			</div>
+		</div><div class="trainer-it">
+			<div class="trainer-pic"><span><img src="http://www.fitcity.ru/pics/trainers/14_sm.jpg" alt="Тренер Ларина Анна"></span></div>
+			<div class="trainer-inf">
+				Инструктор групповых программ
+				<span>Ларина Анна</span>
+			</div>
+		</div><div class="both"></div>
+			</div><div class="trainer-row"><div class="trainer-it">
+			<div class="trainer-pic"><span><img src="http://www.fitcity.ru/pics/trainers/15_sm.jpg" alt="Тренер Селимова Наталья"></span></div>
+			<div class="trainer-inf">
+				Тренер тренажерного зала
+				<span>Селимова Наталья</span>
+			</div>
+		</div><div class="trainer-it">
+			<div class="trainer-pic"><span><img src="http://www.fitcity.ru/pics/trainers/2_sm.jpg" alt="Тренер Мартынов Владимир"></span></div>
+			<div class="trainer-inf">
+				Тренер тренажерного зала
+				<span>Мартынов Владимир</span>
+			</div>
+		</div><div class="both"></div>
+			</div><div class="trainer-row trainer-row-even"><div class="trainer-it">
+			<div class="trainer-pic"><span><img src="http://www.fitcity.ru/pics/trainers/3_sm.jpg" alt="Тренер Саморокин Евгений"></span></div>
+			<div class="trainer-inf">
+				Тренер тренажерного зала 
+				<span>Саморокин Евгений</span>
+			</div>
+		</div><div class="trainer-it">
+			<div class="trainer-pic"><span><img src="http://www.fitcity.ru/pics/trainers/4_sm.jpg" alt="Тренер Гайворонский Андрей"></span></div>
+			<div class="trainer-inf">
+				Тренер тренажерного зала
+				<span>Гайворонский Андрей</span>
+			</div>
+		</div><div class="both"></div>
+			</div><div class="trainer-row"><div class="trainer-it">
+			<div class="trainer-pic"><span><img src="http://www.fitcity.ru/pics/trainers/7_sm.jpg" alt="Тренер Кияненко Роман"></span></div>
+			<div class="trainer-inf">
+				Инструктора групповых программ
+				<span>Кияненко Роман</span>
+			</div>
+		</div><div class="trainer-it">
+			<div class="trainer-pic"><span><img src="http://www.fitcity.ru/pics/trainers/8_sm.jpg" alt="Тренер Махнева Анна"></span></div>
+			<div class="trainer-inf">
+				Инструктор танцевальных направлений и Йоги
+				<span>Махнева Анна</span>
+			</div>
+		</div><div class="both"></div>
+			</div><div class="trainer-row trainer-row-even"><div class="trainer-it">
+			<div class="trainer-pic"><span><img src="http://www.fitcity.ru/pics/trainers/10_sm.jpg" alt="Тренер Тимонина Наталья"></span></div>
+			<div class="trainer-inf">
+				Инструктор групповых программ
+				<span>Тимонина Наталья</span>
+			</div>
+		</div><div class="trainer-it">
+			<div class="trainer-pic"><span><img src="http://www.fitcity.ru/pics/trainers/13_sm.jpg" alt="Тренер Смирнова Юлия"></span></div>
+			<div class="trainer-inf">
+				Инструктор групповых программ
+				<span>Смирнова Юлия</span>
+			</div>
+		</div><div class="both"></div>
+			</div><div class="trainer-row"><div class="trainer-it">
+			<div class="trainer-pic"><span><img src="http://www.fitcity.ru/pics/trainers/11_sm.jpg" alt="Тренер Пирогова Людмила"></span></div>
+			<div class="trainer-inf">
+				Инструктор групповых программ
+				<span>Пирогова Людмила</span>
+			</div>
+		</div><div class="trainer-it">
+			<div class="trainer-pic"><span><img src="http://www.fitcity.ru/pics/trainers/16_sm.jpg" alt="Тренер Виноградова Екатерина"></span></div>
+			<div class="trainer-inf">
+				Инструктор по танцу живота
+				<span>Виноградова Екатерина</span>
+			</div>
+		</div><div class="both"></div>
+			</div><div class="btn-row"><a href="http://www.fitcity.ru/trenery.html" class="btn btn-contur-dark float_r">Подробнее</a></div><br><br>		</div>
+	</section>
+</div>
+
+<section class="ind-cross">
+	<div class="wrapper">
+		<div class="lbl-hdr">Отзывы</div>
+		<div class="ind-resp-list">
+<div class="resp-it">
+			<div class="resp-pic"><img src="img/resp-1.jpg" alt=""></div>
+			<div class="resp-txt">
+				Хочу выразить благодарность тренеру- массажисту ИВАНОВУ СЕРГЕЮ. 
+Провели с Сергеем курс массажа. Тело обновилось, подтянулось, постройнело ) У Сергея прекрасное знание Анатомии тела , сильные руки, НЕ поверхностное мышление,  и желание достигать хороших результатов вместе с пациентом. И его Доброе,...
+			</div>
+		</div><div class="resp-it">
+			<div class="resp-pic"><img src="img/resp-2.jpg" alt=""></div>
+			<div class="resp-txt">
+				Здравствуйте! Обычно не пишу отзывы, но все же) Говоря о достоинствах фитнес клуба можно отметить разнообразие оборудования в тренажерном зале, причем, высокопрофессиональное и в рабочем состоянии. Что не маловажно, отсутствие очередей к тренажеру! Разнообразные групповые программы для любого уровня...
+			</div>
+		</div><div class="resp-it">
+			<div class="resp-pic"><img src="img/resp-3.jpg" alt=""></div>
+			<div class="resp-txt">
+				В зале рабочая атмосфера, есть все необходимое для хорошей тренировки. Приветливый персонал и доброжелательные посетители. Большие раздевалки и просторные душевые, светло и чисто! Все в FITNESS CITY!
+			</div>
+		</div>			<div class="both"></div>
+		</div>
+		<div class="btn-row"><a href="http://www.fitcity.ru/otzivy.html" class="btn btn-contur-dark float_r">Подробнее</a></div>
+		<div class="both"></div>
+	</div>
+</section>
+
+<section class="ind-gal parallax-window" data-parallax="scroll">
+	<div class="wrapper">
+		<div class="lbl-hdr">Галерея</div>
+	</div>
+	<div class="igal-clip">
+		<div class="jcarousel-skin-igal">
+
+		<!-- Carousel -->
+		<div id="ind-gallist" class="jcarousel">
+			<ul>
+<li><a href="http://www.fitcity.ru/pics/galery/2/photo/15.jpg" rel="galgroup"><img src="http://www.fitcity.ru/pics/galery/2/thumb/15.jpg" width="484" height="323" alt="Тренажерный Зал"></a></li><li><a href="http://www.fitcity.ru/pics/galery/2/photo/16.jpg" rel="galgroup"><img src="http://www.fitcity.ru/pics/galery/2/thumb/16.jpg" width="484" height="323" alt="Тренажерный Зал"></a></li><li><a href="http://www.fitcity.ru/pics/galery/2/photo/17.jpg" rel="galgroup"><img src="http://www.fitcity.ru/pics/galery/2/thumb/17.jpg" width="484" height="323" alt="Тренажерный Зал"></a></li><li><a href="http://www.fitcity.ru/pics/galery/2/photo/18.jpg" rel="galgroup"><img src="http://www.fitcity.ru/pics/galery/2/thumb/18.jpg" width="484" height="323" alt="Тренажерный Зал"></a></li><li><a href="http://www.fitcity.ru/pics/galery/2/photo/19.jpg" rel="galgroup"><img src="http://www.fitcity.ru/pics/galery/2/thumb/19.jpg" width="484" height="323" alt="Тренажерный Зал"></a></li><li><a href="http://www.fitcity.ru/pics/galery/2/photo/24.jpg" rel="galgroup"><img src="http://www.fitcity.ru/pics/galery/2/thumb/24.jpg" width="484" height="323" alt="Тренажерный Зал"></a></li><li><a href="http://www.fitcity.ru/pics/galery/2/photo/21.jpg" rel="galgroup"><img src="http://www.fitcity.ru/pics/galery/2/thumb/21.jpg" width="484" height="323" alt="Холл"></a></li><li><a href="http://www.fitcity.ru/pics/galery/2/photo/22.jpg" rel="galgroup"><img src="http://www.fitcity.ru/pics/galery/2/thumb/22.jpg" width="484" height="323" alt="Холл"></a></li><li><a href="http://www.fitcity.ru/pics/galery/2/photo/14.jpg" rel="galgroup"><img src="http://www.fitcity.ru/pics/galery/2/thumb/14.jpg" width="484" height="323" alt="Холл"></a></li><li><a href="http://www.fitcity.ru/pics/galery/2/photo/20.jpg" rel="galgroup"><img src="http://www.fitcity.ru/pics/galery/2/thumb/20.jpg" width="484" height="323" alt="Зал Бокса"></a></li><li><a href="http://www.fitcity.ru/pics/galery/2/photo/25.jpg" rel="galgroup"><img src="http://www.fitcity.ru/pics/galery/2/thumb/25.jpg" width="484" height="323" alt="Настольный теннис"></a></li><li><a href="http://www.fitcity.ru/pics/galery/2/photo/26.jpg" rel="galgroup"><img src="http://www.fitcity.ru/pics/galery/2/thumb/26.jpg" width="431" height="323" alt="Зал"></a></li>			</ul>
+		</div>
+
+		<!-- Prev/next controls -->
+		<a href="#" class="jcarousel-control-prev"></a>
+		<a href="#" class="jcarousel-control-next"></a>
+
+		<!-- Pagination -->
+		<!-- <p class="jcarousel-pagination">
+			
+		</p>-->
+
+	</div>
+	
+	<div class="both"></div>
+	</div>
+</section>
+
+<section class="ind-cross">
+	<div class="wrapper">
+		<div class="ind-info">
+			<div class="ind-info-it">
+				<div class="info-it-tit">Персональные тренировки</div>
+				<div class="info-it-txt">
+					Персональные тренировки практически всегда гарантируют самый эффективный и  результативный индивидуальный подход. Хотя в целом общий принцип такой программы сводится к тому, что каждый человек по мере возможностей и собственной подготовленности адаптирует ее под себя, делая процесс более понятным, достижимым и приемлемым.				</div>
+			</div>
+			<div class="ind-info-it">
+				<div class="info-it-tit">Индивидуальные тренировки</div>
+				<div class="info-it-txt">
+					Наличие индивидуальной программы тренировок, за которой будет следить опытный специалист, позволяет постоянно быть в безопасности, на оптимальном пределе собственных возможностей и допустимых нагрузок. Также тренер регулярно тестирует готовность к физической активности, контролирует давление и пульс. Знание разнообразных методик тренировок позволяет тренеру разработать для каждого человека идеальную схему занятий, основанную на реальных показателях физической подготовленности, состояния здоровья и целей занимающегося.				</div>
+			</div>
+			<div class="ind-info-it">
+				<div class="info-it-tit">Групповые тренировки</div>
+				<div class="info-it-txt">
+					В трёх уютных аэробных залах спортивного клуба "Фитнес Сити" проходят самые разнообразные групповые занятия по различным аэробным программам - всего таких программ более двадцати, и они постоянно дополняются самыми актуальными на данный момент новинками фитнес-индустрии.
+<br><br>
+Профессиональные  тренеры нашего клуба помогут  в выборе приемлемой для Вас программы занятий согласно Вашим предпочтениям и пожеланиям, а актуальное расписание занятий поможет сориентироваться в проходящих классах.				</div>
+			</div>
+			<div class="both"></div>
+		</div>
+		<div class="btn-row"><a href="http://www.fitcity.ru/info/about.html" class="btn btn-contur-dark float_r">Узнать больше</a></div>
+		<div class="both"></div>
+	</div>
+</section>
+		
+	
+
+
+	</main>
+	<footer>		
+		<div class="wrapper">		
+			<div class="fcopy">© 2014 Спортивный клуб «Fit city. Перово».</div>
+			<div class="fsc">		
+				<div class="fsc-lnk">
+					<a href="http://instagram.com/fitcitymoscow" class="fsc-inst" target="_blank"></a>
+					<a href="https://vk.com/fitcityclub" class="fsc-vk" target="_blank"></a>
+					<a href="https://www.facebook.com/groups/455035237873492/" class="fsc-fb" target="_blank"></a>
+					<a href="https://twitter.com/fitcity_info" class="fsc-tw" target="_blank"></a>
+				</div>
+			</div>
+			<div class="footcont">
+				<div class="f-col1">
+					<p>
+						<a href="http://www.fitcity.ru/info/contacts.html">Контакты и адреса</a><br />
+						<a href="http://www.fitcity.ru/trenery.html">Наши тренера</a><br />
+						<a href="http://www.fitcity.ru/wplan.html">Расписание</a><br />
+						<a href="http://www.fitcity.ru/feedback.html">Записаться на тренировку</a><br />
+					</p>					
+				</div>
+				<div class="f-col2">
+					<div class="fwr">
+						<div class="hdrft">Пишите:</div>
+                        <p><a href="mailto:newfitcity@yandex.ru">newfitcity@yandex.ru</a></p>
+					</div>
+					<div class="ftel">
+						<div class="hdrft">Звоните:</div>
+						<p><span>8 (495)</span> 231-35-41</p>					</div>					
+				</div>
+				<div class="f-col3">					
+					<div class="faddr">
+						<div class="hdrft">Наш адрес:</div>
+						<p>Россия, Москва,<br>ул. Кусковская 20а (м. Перово)												</p>
+					</div>
+                </div>
+				<div class="f-col4">
+					<div class="faddr">
+						<div class="hdrft">График работы:</div>
+						<p>
+						Пн-пт 		— c 07:00 до 23:00<br>
+Сб-вс 		— с 10:00 до 21:00						</p>
+					</div>
+                </div>
+				
+				<div class="both"></div>
+				<div class="footbot">							
+					<p>Created by <a href="http://uhdesign.com.ua/">UHDesign</a></p>
+					 <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter27997278 = new Ya.Metrika({ id:27997278, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/27997278" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+				</div>	
+			</div>			
+		</div>	
+	</footer>
+</body>
+</html>

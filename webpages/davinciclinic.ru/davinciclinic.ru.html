@@ -1,0 +1,760 @@
+﻿<!doctype html>
+<html>
+<head>
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<meta charset="UTF-8">
+<title>Стоматология на Жукова, проспект маршала Жукова 51</title>
+<meta name="keywords" content="стоматология на жукова, стоматология на маршала жукова, стоматология проспект жукова, стоматология проспект жукова 51, стоматология проспект маршала жукова, стоматология проспект маршала жукова 51" />
+<meta name="description" content="Davinci Clinic - Стоматология на Маршала Жукова предлагает Вам пройти обследование у дальнейшее лечение без боли в СЗАО Москвы" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if IE]><script src="http://davinci.clinic/templates/js/html5.js"></script><![endif]-->
+<link href="http://davinci.clinic/templates/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://davinci.clinic/templates/css/all.css" rel="stylesheet" type="text/css">
+<link href="http://davinci.clinic/templates/css/widgets.css" rel="stylesheet" type="text/css">
+<link href="http://davinci.clinic/templates/css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+        <!-- favicon -->
+                <link rel="shortcut icon" type="image/x-icon" href="http://davinci.clinic/files/favicon.ico" >
+        <script src="http://davinci.clinic/templates/js/jquery-1.11.2.min.js"></script>
+<!--[if lte IE 8]>
+<script src="http://davinci.clinic/templates/js/selectivizr-min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    var site_url = "http://davinci.clinic/";
+    var dir_css = 'http://davinci.clinic/templates/css/';
+    var dir_images = 'http://davinci.clinic/templates/images/';
+    var slide_delay = 7*1000;
+</script>
+
+<script src="http://davinci.clinic/templates/js/widgets.js"></script>
+<script src="http://davinci.clinic/templates/js/functions.js"></script>
+<script src="http://davinci.clinic/templates/js/jquery.bxslider.js"></script>
+
+        
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $("input#submitButtonForm").click(function() {
+     $('#boxContactFormMessage').empty();
+      $.ajax({
+        type: "POST",
+        url: "/mailSenderScript.php",
+        data: { 
+        "name": $("input[name='name']").val(), 
+        "phone": $("input[name='phone']").val(),
+        "fromPage": "true"         
+      },
+        traditional: true,
+        success: function(resp) {
+          $('#boxContactFormMessage').append(resp);
+        },
+        error: function(resp) {
+          alert("error");
+        }
+      });
+    });
+
+$(".questionAnsver").children(".question").children("span").append('<i class="fa fa-chevron-down" aria-hidden="true"></i>');
+
+    $(".questionAnsver").click(function(){
+
+if ("none" == ($(this).children(".answer").css("display"))) {
+$(this).children(".question").children("span").empty();
+$(this).children(".question").children("span").append('<i class="fa fa-chevron-up" aria-hidden="true"></i>');
+}
+else {
+$(this).children(".question").children("span").empty();
+$(this).children(".question").children("span").append('<i class="fa fa-chevron-down" aria-hidden="true"></i>');
+}
+
+        $(this).children(".answer").toggle(300);
+    });
+
+
+});
+</script>
+
+
+<script>
+
+$(document).ready(function(){
+  $('.specialistsOnMainPage').bxSlider({
+    auto: true,
+    autoHover: true,
+    slideWidth: 250,
+    minSlides: 1,
+    maxSlides: 4,
+    moveSlides: 1,
+    slideMargin: 40,
+pause: 3000,
+  });
+
+  $('.ourWorksOnMainPage').bxSlider({
+    auto: false,
+    autoHover: true,
+    slideWidth: 250,
+    minSlides: 1,
+    maxSlides: 4,
+    moveSlides: 1,
+    slideMargin: 40,
+pause: 3000,
+  });
+
+});
+
+</script>
+
+
+</head>
+
+<body >
+<div class="wrapper">
+	<header class="header">
+    	<div class="wrap-header">
+<div class="max-wrap"><p class="headerPhoneNumbers"><span>| 8 495 150 33 50 |</span></p></div>
+            <div class="max-wrap">
+                <nav class="main-nav">
+                    <div class="left-nav">
+                        <div class="pad-wrap">
+                        <ul>
+                        	<li><a href="http://davinci.clinic/o-klinike/" >О КЛИНИКЕ</a></li><li><a href="http://davinci.clinic/uslugi/" >Услуги</a></li><li><a href="http://davinci.clinic/o-klinike/doktora/" title="Доктора">Доктора</a></li>                        </ul>
+                        </div>
+                    </div>
+                    <div class="right-nav">
+                        <div class="pad-wrap">
+                            <ul>
+                            	<li><a href="http://davinci.clinic/tehnologii/" >ТЕХНОЛОГИИ</a></li><li><a href="http://davinci.clinic/tseny/" >ЦЕНЫ</a></li><li><a href="http://davinci.clinic/kontakty/" >Контакты</a></li>                            </ul>
+                            <div class="wrap-search-form">
+                                <form method="get" action="http://davinci.clinic/search/">
+                                    <a href="#" class="icon icon-search"></a>
+                                    <input type="text" name="q" placeholder="поиск по сайту" value="">
+                                    <div class="btn btn-default"><span>НАЙТИ</span><input type="submit" value="1"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-logo">
+                        <div class="img-logo"><img src="http://davinci.clinic/templates/images/logo_img.png" alt="Da Vinci Clinic"></div>
+                        <div class="text-logo"><img src="http://davinci.clinic/templates/images/logo_text.png" alt="DaVinchi Clinic Стоматология"></div>
+                    </div>
+                </nav>
+               
+                <div class="mobile-nav">
+                        <div class="wrap-logo">
+                            <div class="img-logo"><img src="http://davinci.clinic/templates/images/logo_img.png" alt="Da Vinci Clinic"></div>
+                            <div class="text-logo"><img src="http://davinci.clinic/templates/images/logo_text.png" alt="DaVinchi Clinic Стоматология"></div>
+                        </div>
+                        <a href="#" class="open-nav-mobile"><i class="icon icon-nav"></i></a>
+                        <a href="#" class="icon icon-search open-search"></a>
+                        <div class="wrap-search-form">
+                            <form method="get" action="http://davinci.clinic/search/">
+                                <a href="#" class="icon icon-search"></a>
+                                <input type="text" name="q" placeholder="поиск по сайту" value="" >
+                                <div class="btn btn-default"><span>НАЙТИ</span><input type="submit" value="1"></div>
+                            </form>
+                       </div>
+                       <ul class="mobile-nav-list">
+                       		<li><a href="http://davinci.clinic/o-klinike/" >О КЛИНИКЕ</a></li><li><a href="http://davinci.clinic/uslugi/" >Услуги</a></li><li><a href="http://davinci.clinic/o-klinike/doktora/" title="Доктора">Доктора</a></li>                            <li><a href="http://davinci.clinic/tehnologii/" >ТЕХНОЛОГИИ</a></li><li><a href="http://davinci.clinic/tseny/" >ЦЕНЫ</a></li><li><a href="http://davinci.clinic/kontakty/" >Контакты</a></li>                       </ul>
+                </div>
+             </div>
+        </div>
+    </header>
+    <div class="main">
+    	<img src="http://davinci.clinic/templates/images/ramka.png" id="bg-ramka">
+    	<div class="max-wrap">
+        	<div class="wrap-main-slider">
+            	<div class="main-animation">
+                	<img src="http://davinci.clinic/templates/images/anim1.jpg"  alt="">
+                	<img src="http://davinci.clinic/templates/images/anim2.jpg"  alt="">
+                	<img src="http://davinci.clinic/templates/images/anim3.jpg"  alt="">
+                	<img src="http://davinci.clinic/templates/images/anim4.jpg"  alt="">
+                	<img src="http://davinci.clinic/templates/images/anim5.jpg"  alt="">
+                	<img src="http://davinci.clinic/templates/images/anim6.jpg"  alt="">
+                	<img src="http://davinci.clinic/templates/images/anim7.jpg"  alt="">
+                	<img src="http://davinci.clinic/templates/images/anim8.jpg"  alt="">
+                	<img src="http://davinci.clinic/templates/images/anim9.jpg"  alt="">
+                	<img src="http://davinci.clinic/templates/images/anim10.jpg"  alt="">
+                	<img src="http://davinci.clinic/templates/images/anim11.jpg"  alt="">
+                </div>
+                          	<ul class="main-slider">
+                	<li><img src="http://davinci.clinic/templates/images/anim11.jpg"  alt=""></li>
+                	                     <li> <img src="http://davinci.clinic/img/img/normal/slide2-2.png"alt="Стоматология как искусство"></li>
+               		                     <li> <img src="http://davinci.clinic/img/img/normal/slide3-2.jpg"alt=""></li>
+               		                     <li> <img src="http://davinci.clinic/img/img/normal/facetune-11.jpg"alt=""></li>
+               		               </ul>
+               
+            </div>
+            <div class="content-wrap">
+            	<ul class="contact-line">
+                	<li class="wrap-order"><a href="http://davinci.clinic/ordercall/" data-width="370" data-height="225" class="popup"><i class="icon icon-phone"></i><span>запись на прием</span></a></li>
+                	<li class="wrap-phone">СВЯЗАТЬСЯ С АДМИНИСТРАТОРОМ: <span class="phone">8 495 150 33 50</span></li>                	<li class="wrap-fb">
+						<a href="https://www.facebook.com/davinciclinic" target="_blank"><i class="icon icon-fb"></i></a>                        <a href="http://instagram.com/davinci_clinic_moscow" target="_blank"><i class="icon icon-instagram"></i></a>                    </li>
+                </ul>
+                <div class="border-text">Наша стоматология на жукова &mdash; это произведение искусства, собравшее в себе технологические возможности современного мира и талант людей, которые здесь работают</div>
+
+<div class="services_list_wrap">
+<div class="service_item">
+<div class="service_item_head"><img src="/img/images/lechenie.jpg" /> <a class="service_item_name" href="http://davinci.clinic/lechenie-zubov">ТЕРАПИЯ</a></div>
+
+<ul class="service_item_list">
+	<li><a href="http://davinci.clinic/lechenie-zubov/lechenie-kariesa">Лечение кариеса</a></li>
+	<li><a href="http://davinci.clinic/lechenie-zubov/lechenie-pod-mikroskopom/">Лечение под микроскопом</a></li>
+	<li><a href="http://davinci.clinic/lechenie-zubov/lechenie-desen">Лечение десен</a></li>
+	<li><a href="http://davinci.clinic/parodontologiya/lechenie-kornevyh-kanalov">Лечение каналов</a></li>
+</ul>
+</div>
+
+<div class="service_item">
+<div class="service_item_head"><img src="/img/images/Teeth-implant.jpg" /> <a class="service_item_name" href="/implantatsiya-zubov">ИМПЛАНТАЦИЯ</a></div>
+
+<ul class="service_item_list">
+	<li><a href="http://davinci.clinic/implantatsiya-zubov/podgotovka-k-implantatsii">Подготовка к имплантации</a></li>
+	<li><a href="http://davinci.clinic/implantatsiya-zubov/cinus-lifting/">Синус-лифтинг</a></li>
+	<li><a href="http://davinci.clinic/implantatsiya-zubov/odnomomentnaya-implantatsiya/">Экспресс-имплантация</a></li>
+</ul>
+</div>
+
+<div class="service_item">
+<div class="service_item_head"><img src="/img/images/ortopediya-.jpg" /> <a class="service_item_name" href="/protezirovanie-zubov">ПРОТЕЗИРОВАНИЕ</a></div>
+
+<ul class="service_item_list">
+	<li><a href="http://davinci.clinic/protezirovanie-zubov/protezirovanie-na-implantah/">На имплантах</a></li>
+	<li><a href="http://davinci.clinic/protezirovanie-zubov/semnoe-protezirovanie-/">Съемное</a></li>
+	<li><a href="http://davinci.clinic/protezirovanie-zubov/nesemnoe-protezirovanie/">Несъемное</a></li>
+</ul>
+</div>
+
+<div class="service_item">
+<div class="service_item_head"><img src="/img/images/gigiena.jpg" /> <a class="service_item_name" href="http://davinci.clinic/gigiena-zubov-i-polosti-rta">ГИГИЕНА</a></div>
+
+<ul class="service_item_list">
+	<li><a href="http://davinci.clinic/gigiena-zubov-i-polosti-rta/air-flow-chistka-zubov">AIR FLOW</a></li>
+	<li><a href="http://davinci.clinic/gigiena-zubov-i-polosti-rta/snyatie-zubnyh-otlozhenij">Снятие отложений</a></li>
+	<li><a href="http://davinci.clinic/gigiena-zubov-i-polosti-rta/ftorirovanie-zubov">Фторирование</a></li>
+</ul>
+</div>
+
+<div class="service_item">
+<div class="service_item_head"><img src="/img/images/ortodontiya.jpg" /> <a class="service_item_name" href="http://davinci.clinic/ispravlenie-prikusa-u-vzroslyh/">ОРТОДОНТИЯ</a></div>
+
+<ul class="service_item_list">
+	<li><a href="http://davinci.clinic/ispravlenie-prikusa-u-vzroslyh/ortodonticheskaya-konsultatsiya/">Консультация</a></li>
+	<li><a href="http://davinci.clinic/ispravlenie-prikusa-u-vzroslyh/ustanovka-breketov/">Брекеты</a></li>
+	<li><a href="http://davinci.clinic/ispravlenie-prikusa-u-vzroslyh/vyravnivanie-zubov-kapoj/">Элайнеры</a></li>
+</ul>
+</div>
+
+<div class="service_item">
+<div class="service_item_head"><img src="/img/images/parodontologiya-.jpg" /> <a class="service_item_name" href="/parodontologiya">ПАРОДОНТОЛОГИЯ</a></div>
+
+<ul class="service_item_list">
+	<li><a href="http://davinci.clinic/parodontologiya/kyuretazh-kanalov">Кюретаж каналов</a></li>
+	<li><a href="http://davinci.clinic/parodontologiya/lechenie-parodontita">Лечение пародонтита</a></li>
+	<li><a href="http://davinci.clinic/parodontologiya/lechenie-parodontoza">Лечение пародонтоза</a></li>
+</ul>
+</div>
+
+<div class="service_item">
+<div class="service_item_head"><img src="/img/images/hirurgiya.jpg" /> <a class="service_item_name" href="/hirurgicheskaya-stomatologiya">ХИРУРГИЯ</a></div>
+
+<ul class="service_item_list">
+	<li><a href="http://davinci.clinic/hirurgicheskaya-stomatologiya/prostoe-udalenie-zubov">Простое удаление</a></li>
+	<li><a href="http://davinci.clinic/hirurgicheskaya-stomatologiya/slozhnoe-udalenie-zubov">Сложное удаление</a></li>
+	<li><a href="http://davinci.clinic/hirurgicheskaya-stomatologiya/kostnaya-plastika">Костная пластика</a></li>
+</ul>
+</div>
+
+<div class="service_item">
+<div class="service_item_head"><img src="/img/images/Teeth-diagnost.jpg" /> <a class="service_item_name" href="http://davinci.clinic/diagnostika">ДИАГНОСТИКА</a></div>
+
+<ul class="service_item_list">
+	<li><a href="http://davinci.clinic/diagnostika/rentgen">Рентген</a></li>
+	<li><a href="http://davinci.clinic/diagnostika/panoramnyj-snimok">Панорамный снимок</a></li>
+	<li><a href="http://davinci.clinic/diagnostika/3d-modelirovanie-zubov">3D моделирование</a></li>
+</ul>
+</div>
+
+<div class="service_item">
+<div class="service_item_head"><img src="/img/images/Teeth-estetika.jpg" /> <a class="service_item_name" href="http://davinci.clinic/esteticheskaya-stomatologiya">ЭСТЕТИКА</a></div>
+
+<ul class="service_item_list">
+	<li><a href="http://davinci.clinic/esteticheskaya-stomatologiya/otbelivanie-zubov-stomat">Отбеливание</a></li>
+	<li><a href="http://davinci.clinic/esteticheskaya-stomatologiya/ustanovka-skajsov">Скайсы</a></li>
+	<li><a href="http://davinci.clinic/esteticheskaya-stomatologiya/restavratsiya-zubov">Реставрация</a></li>
+</ul>
+</div>
+
+<div style="clear:both;"></div>
+</div>
+
+<p></p>
+
+<p style="border-bottom: solid 8px #e6ddd3;"></p>
+
+<p></p>
+
+<div id="specialistsOnMainPage">
+<h2 style="text-align: center;"><span style="color:#eeccaa;"><strong>Особенности стоматологии Da Vinci на Жукова</strong></span></h2>
+
+<ul>
+	<li>Предоставляем пациентам стоматологические услуги мирового уровня</li><p></p>
+	<p></p><li>Врачи-стоматологи регулярно повышают свой профессиональный уровень за рубежом</li>
+	<p></p><li>Клиника располагает собственной зуботехнической лабораторией, а значит пациенты получают качественное ортопедическое лечение без наценок</li>
+	<p></p><li>В своей повседневной практике врачи используют стоматологические микроскопы Carl Zeiss, что значительно повышает качество диагностики и лечения</li>
+	<p></p><li>Врачи клиники активно применяют технологии 3D моделирования, что позволяет продемонстрировать пациенту итоговый результат протезирования или ортодонтического лечения еще до его начала</li>
+	<p></p><li>Шаговая доступность от станции метро Полежаевская.</li>
+	<p></p><li>Мы рады предложить пациентам высокий уровень сервиса и комфортные условия лечения.</li>
+</ul>
+
+<h2 style="text-align: center;"><span style="color:#eeccaa;"><strong>Работы наших специалистов</strong></span></h2>
+
+<ul class="ourWorksOnMainPage" id="specialistOnDirections">
+	<li><a class="specialistOnDirections" href="/" target="_blank"><img alt="" src="/img/ourWork/imgpsh_fullsize.jpeg" /> </a></li>
+	<li><a class="specialistOnDirections" href="/" target="_blank"><img alt="" src="/img/ourWork/imgpsh_fullsize1.jpeg" /> </a></li>
+	<li><a class="specialistOnDirections" href="/" target="_blank"><img alt="" src="/img/ourWork/imgpsh_fullsize2.jpeg" /> </a></li>
+	<li><a class="specialistOnDirections" href="/" target="_blank"><img alt="" src="/img/ourWork/imgpsh_fullsize3.jpeg" /> </a></li>
+	<li><a class="specialistOnDirections" href="/" target="_blank"><img alt="" src="/img/ourWork/imgpsh_fullsize4.jpeg" /> </a></li>
+	<li><a class="specialistOnDirections" href="/" target="_blank"><img alt="" src="/img/ourWork/imgpsh_fullsize5.jpeg" /> </a></li>
+	<li><a class="specialistOnDirections" href="/" target="_blank"><img alt="" src="/img/ourWork/imgpsh_fullsize6.jpeg" /> </a></li>
+</ul>
+</div>
+
+<p></p>
+
+<p></p>
+
+<p style="border-bottom: solid 8px #e6ddd3;"></p>
+
+<p></p>
+
+<div class="border-columns">
+<div class="column column-2">
+<div class="border-column">
+<div class="wrap-img"><img 0px="" alt="" font-size:="" font-style:="" font-variant:="" line-height:="" open="" outline:="" src="/img/images/Facetune-%283%29.jpg" style="font-family: " /><br />
+<br />
+<span style="font-size: 18px; font-weight: 600; text-transform: uppercase;">Эстетическая&nbsp;стоматология&nbsp;</span>&mdash;&nbsp;<span style="font-size: 18px; font-weight: 600; text-transform: uppercase;">наш&nbsp;</span><span style="font-size: 18px; font-weight: 600; text-transform: uppercase;">профиль.&nbsp;мы воссоздаем природную гармонию&nbsp;улыбки&nbsp;с&nbsp;помощью&nbsp;</span><span style="font-size: 18px; font-weight: 600; text-transform: uppercase;">Новейших технологий</span></div>
+
+<div class="wrap-img"><strong><img alt="" src="/img/images/1800168_655016177878859_581625595_o%281%29.jpg" /></strong></div>
+
+<div class="wrap-img"><span style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 21.6000003814697px; outline: 0px;">ОСНОВНЫЕ НАПРАВЛЕНИЯ НАШЕЙ ДЕЯТЕЛЬНОСТИ - ВОССТАНОВЛЕНИЕ ЖЕВАТЕЛЬНОЙ ФУНКЦИИ, РАБОТА СО СЛОЖНЫМИ СЛУЧАЯМИ, СОВМЕСТНОЕ ВЕДЕНИЕ ПАЦИЕНТОВ С ЗАРУБЕЖНЫМИ СПЕЦИАЛИСТАМИ</span><br />
+&nbsp;</div>
+
+<div class="wrap-img"></div>
+
+<div class="text">
+<p></p>
+</div>
+</div>
+</div>
+
+<div class="column column-2">
+<div class="border-column even">
+<div class="wrap-img"><img src="/img/images/Facetune-%281%29.jpg" /><br />
+<br />
+<span style="font-size: 18px; font-weight: 600; text-transform: uppercase;">Мы вкладываем душу в свое дело.</span><br />
+<span style="font-size: 18px; font-weight: 600; text-transform: uppercase;">Наш подход &mdash; это спокойствие и уверенность.</span><span style="font-size: 18px; font-weight: 600; text-transform: uppercase;"> Для нас нет&nbsp;</span><span style="font-size: 18px; font-weight: 600; text-transform: uppercase;">нерешаемых задач.</span></div>
+
+<div class="wrap-img"><span style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 21.6000003814697px; outline: 0px;"><img alt="" src="/img/images/DSCF5198%281%29.JPG" style="outline: 0px none;" /></span><br />
+<br />
+<br />
+<br />
+<span style="font-size: 18px; font-weight: 600; text-transform: uppercase;">Оказавшись в стоматологии у метро полежаевская, можно сразу проникнуться атмосферой этого места.&nbsp;</span><span style="font-size: 18px; font-weight: 600; text-transform: uppercase;">Здесь все до мелочей наполнено заботой о </span><span style="font-size: 18px; font-weight: 600; text-transform: uppercase;">пациенТах.</span></div>
+
+<div class="text">
+<h3></h3>
+</div>
+</div>
+</div>
+</div>
+
+<p></p>
+
+<p></p>
+
+<!-- FOTO OF SPECIALISTS -->
+<div id="specialistsOnMainPage">
+<p id="specialistOnDirectionsHeader"><strong></strong></p>
+<ul id="specialistOnDirections" class="specialistsOnMainPage">
+
+
+
+            <li><a class="specialistOnDirections" href="http://davinci.clinic/o-klinike/doktora/galbatsov.htm" target="_blank"><img alt="Галбацов Джалал Микаилович" src="http://davinci.clinic/img/img/small/facetune-5.jpg" /> <span>Галбацов <br>Джалал Микаилович</span> </a></li>
+
+
+
+
+
+            <li><a class="specialistOnDirections" href="http://davinci.clinic/o-klinike/doktora/dazhaev-.htm" target="_blank"><img alt="Дажаев Гаджи Пастаминович" src="http://davinci.clinic/img/img/small/facetune-4.jpg" /> <span>Дажаев <br>Гаджи Пастаминович</span> </a></li>
+
+
+
+
+
+            <li><a class="specialistOnDirections" href="http://davinci.clinic/o-klinike/doktora/zedgenidze.htm" target="_blank"><img alt="Зедгенидзе Алена Михайловна" src="http://davinci.clinic/img/img/small/image-5.jpg" /> <span>Зедгенидзе <br>Алена Михайловна</span> </a></li>
+
+
+
+
+
+            <li><a class="specialistOnDirections" href="http://davinci.clinic/o-klinike/doktora/amirov-.htm" target="_blank"><img alt="Амиров Арслан Русланович" src="http://davinci.clinic/img/img/small/facetune-7.jpg" /> <span>Амиров <br>Арслан Русланович</span> </a></li>
+
+
+
+
+
+            <li><a class="specialistOnDirections" href="http://davinci.clinic/o-klinike/doktora/nasuev.htm" target="_blank"><img alt="Насуев Гамид Саидович" src="http://davinci.clinic/img/img/small/facetune-8.jpg" /> <span>Насуев <br>Гамид Саидович</span> </a></li>
+
+
+
+
+
+            <li><a class="specialistOnDirections" href="http://davinci.clinic/o-klinike/doktora/kizarisova.htm" target="_blank"><img alt="Кизарисова Маргарита Александровна" src="http://davinci.clinic/img/img/small/facetune-9.jpg" /> <span>Кизарисова <br>Маргарита Александровна</span> </a></li>
+
+
+
+
+
+            <li><a class="specialistOnDirections" href="http://davinci.clinic/o-klinike/doktora/paremuzyan.htm" target="_blank"><img alt="Паремузян Рафаэл Эдуардович" src="http://davinci.clinic/img/img/small/facetune-10.jpg" /> <span>Паремузян <br>Рафаэл Эдуардович</span> </a></li>
+
+
+
+
+
+            <li><a class="specialistOnDirections" href="http://davinci.clinic/o-klinike/doktora/kotova-madina-habilovna.htm" target="_blank"><img alt="КОТОВА МАДИНА ХАБИЛОВНА" src="http://davinci.clinic/img/img/small/image-6.jpg" /> <span>КОТОВА <br>МАДИНА ХАБИЛОВНА</span> </a></li>
+
+
+
+
+
+            <li><a class="specialistOnDirections" href="http://davinci.clinic/o-klinike/doktora/al-hamid.htm" target="_blank"><img alt="АЛЬ-ХАМИД КАТРИН Джамалевна" src="http://davinci.clinic/img/img/small/image-7.jpg" /> <span>АЛЬ-ХАМИД <br>КАТРИН Джамалевна</span> </a></li>
+
+
+
+
+</ul>
+</div>
+<!-- END FOTO OF SPECIALISTS -->
+
+
+
+                    <!--                    <div class="doctors-column">
+                        <div class="column column-3">
+                            <div class="doctor" id="doctor-1">
+                                                                <a href="http://davinci.clinic/o-klinike/doktora/galbatsov.htm" class="wrap-img js-link-profile"><img src="http://davinci.clinic/img/img/normal/facetune-5.jpg" alt="Галбацов Джалал Микаилович"><img src="http://davinci.clinic/img/img/small/facetune-5.jpg" class="hover-img" alt="Галбацов Джалал Микаилович"></a>
+                                                                <div class="text">
+                                    <h3>Галбацов <br>Джалал Микаилович</h3>
+                                    <p>Директор клиники, врач стоматолог-ортопед</p>
+                                    <a href="http://davinci.clinic/o-klinike/doktora/galbatsov.htm" class="link-profile js-link-profile">Посмотреть ПРОФИЛЬ</a>
+                                </div>
+                            </div>
+                        </div><div class="column column-3">
+                            <div class="doctor" id="doctor-3">
+                                                                <a href="http://davinci.clinic/o-klinike/doktora/dazhaev-.htm" class="wrap-img js-link-profile"><img src="http://davinci.clinic/img/img/normal/facetune-4.jpg" alt="Дажаев Гаджи Пастаминович"><img src="http://davinci.clinic/img/img/small/facetune-4.jpg" class="hover-img" alt="Дажаев Гаджи Пастаминович"></a>
+                                                                <div class="text">
+                                    <h3>Дажаев <br>Гаджи Пастаминович</h3>
+                                    <p>Главный врач клиники, врач стоматолог-ортопед</p>
+                                    <a href="http://davinci.clinic/o-klinike/doktora/dazhaev-.htm" class="link-profile js-link-profile">Посмотреть ПРОФИЛЬ</a>
+                                </div>
+                            </div>
+                        </div><div class="column column-3">
+                            <div class="doctor" id="doctor-4">
+                                                                <a href="http://davinci.clinic/o-klinike/doktora/zedgenidze.htm" class="wrap-img js-link-profile"><img src="http://davinci.clinic/img/img/normal/image-5.jpg" alt="Зедгенидзе Алена Михайловна"><img src="http://davinci.clinic/img/img/small/image-5.jpg" class="hover-img" alt="Зедгенидзе Алена Михайловна"></a>
+                                                                <div class="text">
+                                    <h3>Зедгенидзе <br>Алена Михайловна</h3>
+                                    <p>Врач стоматолог-терапевт</p>
+                                    <a href="http://davinci.clinic/o-klinike/doktora/zedgenidze.htm" class="link-profile js-link-profile">Посмотреть ПРОФИЛЬ</a>
+                                </div>
+                            </div>
+                        </div><div class="column column-3">
+                            <div class="doctor" id="doctor-5">
+                                                                <a href="http://davinci.clinic/o-klinike/doktora/amirov-.htm" class="wrap-img js-link-profile"><img src="http://davinci.clinic/img/img/normal/facetune-7.jpg" alt="Амиров Арслан Русланович"><img src="http://davinci.clinic/img/img/small/facetune-7.jpg" class="hover-img" alt="Амиров Арслан Русланович"></a>
+                                                                <div class="text">
+                                    <h3>Амиров <br>Арслан Русланович</h3>
+                                    <p>Врач стоматолог-хирург</p>
+                                    <a href="http://davinci.clinic/o-klinike/doktora/amirov-.htm" class="link-profile js-link-profile">Посмотреть ПРОФИЛЬ</a>
+                                </div>
+                            </div>
+                        </div><div class="column column-3">
+                            <div class="doctor" id="doctor-6">
+                                                                <a href="http://davinci.clinic/o-klinike/doktora/nasuev.htm" class="wrap-img js-link-profile"><img src="http://davinci.clinic/img/img/normal/facetune-8.jpg" alt="Насуев Гамид Саидович"><img src="http://davinci.clinic/img/img/small/facetune-8.jpg" class="hover-img" alt="Насуев Гамид Саидович"></a>
+                                                                <div class="text">
+                                    <h3>Насуев <br>Гамид Саидович</h3>
+                                    <p>Врач стоматолог-ортопед</p>
+                                    <a href="http://davinci.clinic/o-klinike/doktora/nasuev.htm" class="link-profile js-link-profile">Посмотреть ПРОФИЛЬ</a>
+                                </div>
+                            </div>
+                        </div><div class="column column-3">
+                            <div class="doctor" id="doctor-7">
+                                                                <a href="http://davinci.clinic/o-klinike/doktora/kizarisova.htm" class="wrap-img js-link-profile"><img src="http://davinci.clinic/img/img/normal/facetune-9.jpg" alt="Кизарисова Маргарита Александровна"><img src="http://davinci.clinic/img/img/small/facetune-9.jpg" class="hover-img" alt="Кизарисова Маргарита Александровна"></a>
+                                                                <div class="text">
+                                    <h3>Кизарисова <br>Маргарита Александровна</h3>
+                                    <p>Врач стоматолог-пародонтолог</p>
+                                    <a href="http://davinci.clinic/o-klinike/doktora/kizarisova.htm" class="link-profile js-link-profile">Посмотреть ПРОФИЛЬ</a>
+                                </div>
+                            </div>
+                        </div><div class="column column-3">
+                            <div class="doctor" id="doctor-9">
+                                                                <a href="http://davinci.clinic/o-klinike/doktora/paremuzyan.htm" class="wrap-img js-link-profile"><img src="http://davinci.clinic/img/img/normal/facetune-10.jpg" alt="Паремузян Рафаэл Эдуардович"><img src="http://davinci.clinic/img/img/small/facetune-10.jpg" class="hover-img" alt="Паремузян Рафаэл Эдуардович"></a>
+                                                                <div class="text">
+                                    <h3>Паремузян <br>Рафаэл Эдуардович</h3>
+                                    <p>Врач стоматолог-ортопед</p>
+                                    <a href="http://davinci.clinic/o-klinike/doktora/paremuzyan.htm" class="link-profile js-link-profile">Посмотреть ПРОФИЛЬ</a>
+                                </div>
+                            </div>
+                        </div><div class="column column-3">
+                            <div class="doctor" id="doctor-10">
+                                                                <a href="http://davinci.clinic/o-klinike/doktora/kotova-madina-habilovna.htm" class="wrap-img js-link-profile"><img src="http://davinci.clinic/img/img/normal/image-6.jpg" alt="КОТОВА МАДИНА ХАБИЛОВНА"><img src="http://davinci.clinic/img/img/small/image-6.jpg" class="hover-img" alt="КОТОВА МАДИНА ХАБИЛОВНА"></a>
+                                                                <div class="text">
+                                    <h3>КОТОВА <br>МАДИНА ХАБИЛОВНА</h3>
+                                    <p>Врач стоматолог терапевт-хирург</p>
+                                    <a href="http://davinci.clinic/o-klinike/doktora/kotova-madina-habilovna.htm" class="link-profile js-link-profile">Посмотреть ПРОФИЛЬ</a>
+                                </div>
+                            </div>
+                        </div><div class="column column-3">
+                            <div class="doctor" id="doctor-11">
+                                                                <a href="http://davinci.clinic/o-klinike/doktora/al-hamid.htm" class="wrap-img js-link-profile"><img src="http://davinci.clinic/img/img/normal/image-7.jpg" alt="АЛЬ-ХАМИД КАТРИН Джамалевна"><img src="http://davinci.clinic/img/img/small/image-7.jpg" class="hover-img" alt="АЛЬ-ХАМИД КАТРИН Джамалевна"></a>
+                                                                <div class="text">
+                                    <h3>АЛЬ-ХАМИД <br>КАТРИН Джамалевна</h3>
+                                    <p>Врач-ортодонт</p>
+                                    <a href="http://davinci.clinic/o-klinike/doktora/al-hamid.htm" class="link-profile js-link-profile">Посмотреть ПРОФИЛЬ</a>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    -->
+
+
+
+
+                <div class="main-map">
+                	<h3>ЖДЕМ ВАС ПО АДРЕСУ проспект Маршала Жукова 51, корп. 1</h3>
+                    <div class="map-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<div class="spacer"></div>
+</div>
+<div class="footer">
+	<div class="max-wrap">
+    	<div class="copyight">&copy; Da Vinci Clinic. Все права защищены.</div>
+        <div class="developer"><a href="http://pixelplant.ru" target="_blank">Разработано в Pixelplant</a></div>
+    </div>
+</div>
+<div class="totop-wrap">
+	<div class="max-wrap">
+    <div class="content-wrap">
+	<span class="totop"><i class="icon icon-scroll-up"></i></span>
+    </div>
+    </div>
+</div>
+<script></script><!-- Yandex.Metrika informer -->
+<a style="display: none;" href="https://metrika.yandex.ua/stat/?id=38429885&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/38429885/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:38429885,lang:'ru'});return false}catch(e){}" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script src="https://mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+    var yaCounter38429885 = new Ya.Metrika({
+        id:38429885,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+} catch(e) { }
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/38429885" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- ##################### -->
+<!-- ### HackerConsole ### -->
+<!-- ##################### -->
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+/**
+ * Debug_HackerConsole_Js: JavaScript frontend for hacker console.
+ * (C) 2005 Dmitry Koterov, http://forum.dklab.ru/users/DmitryKoterov/
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ * See http://www.gnu.org/copyleft/lesser.html
+ *
+ * @version 1.x $Id: Js.js 235 2008-03-17 20:53:05Z dk $
+ */
+ 
+function Debug_HackerConsole_Js(top) { this.construct(window) }
+Debug_HackerConsole_Js.prototype = {
+	top: null,
+	div: null,
+	height: parseInt('400'),  // JS syntax OK
+	curHeight: 0,
+	step: 0,
+	speedOn: 0.3,
+	speedOff: 10,
+	dt: 50,
+	fontsize: 15,
+	groups: null,
+	scrollTimeout: null,
+
+	construct: function(t) { with (this) {
+		top = t || window;
+		groups = {};
+		if (!top.document.body) {
+		    top.document.writeln("<" + "body style='padding:0; margin:0'><" + "/body>");
+		}
+		with (top.document) {
+			if (body.childNodes[0]) {
+				div = body.insertBefore(createElement('div'), body.childNodes[0]);
+			} else {
+				div = body.appendChild(createElement('div'));
+			}
+			div.className = 'hackerConsole';
+			with (div.style) {
+				display = 'none';
+				background = 'black';
+				zIndex = 999999999;
+				position = 'relative';
+				textAlign = 'left';
+				padding = '4px';
+				margin = '0px';
+				width = '100%';
+				maxWidth = (screen.width-30) + 'px';
+				height = this.height + 'px';
+				overflow = 'auto';
+				border = '1px solid black';
+				color = '#00EE00';
+				font = 'normal ' + this.fontsize + 'px "Courier new", Courier';
+			}
+			var th = this;
+			var owner = window.HTMLElement? window : body;
+			var prevKeydown = owner.onkeydown;
+			owner.onkeydown = function(e) {
+				if (!e) e = window.event;
+				if ((e.ctrlKey || e.metaKey) && (e.keyCode == 192 || e.keyCode == 96 || e.keyCode == 191)) {
+					th.toggle(-1);
+					return false;
+				}
+				if (prevKeydown) {
+					this.__prev = prevKeydown;
+					return this.__prev(e);
+				}
+			}
+			toggle(null);
+		}
+	}},
+  
+	toggle: function(on, onstart) {
+		var cookName = 'hackerConsole';
+		if (on == null) on = Math.round(this.getCookie(cookName));
+		if (on < 0) on = !Math.round(this.getCookie(cookName));
+		if (on) {
+			this.curHeight = 0;
+			this.step = this.speedOn;
+		} else {
+			this.curHeight = this.div.style.display!='none'? this.height : 0;
+			this.step = -this.speedOff;
+		}
+		var th = this;
+		var fResizer = function() {
+			th.div.style.display = on? '' : 'none';
+			th.curHeight = th.curHeight + th.height*th.step;
+			if (th.curHeight < 0) th.curHeight = 0;
+			if (th.curHeight > th.height) th.curHeight = th.height;
+			th.div.style.height = (Math.round(th.curHeight)+1) + "px";
+			th.div.style.display = '';
+			if (th.curHeight <= 1) {
+				th.div.style.display = 'none';
+				return;
+			} else if (th.curHeight >= th.height) {
+				return;
+			}
+			setTimeout(fResizer, th.dt);
+		}
+		fResizer();
+		this.setCookie(cookName, on? 1 : 0, '/', new Date(new Date().getTime()+3600*24*365*1000));
+	},
+  
+ 	out: function(msg, title, group) { with (this) {
+		if (!msg) return;
+		var span = top.document.createElement('div');
+		span.innerHTML = msg;
+		var container = div;
+		if (group) {
+			container = groups[group];
+			if (!container) {
+				var groupDiv = top.document.createElement('div');
+				div.appendChild(groupDiv);
+				groupDiv.style.marginBottom = "7px";
+				var headDiv = top.document.createElement('div');
+				groupDiv.appendChild(headDiv);
+				headDiv.innerHTML = group + ":";
+				headDiv.style.fontWeight = "bold";
+				headDiv.style.fontSize = (fontsize+5)+"px";
+				container = top.document.createElement('div');
+				groupDiv.appendChild(container);
+				container.style.marginLeft = "1em";
+				container.style.paddingLeft = "4px";
+				container.style.borderLeft = "3px double";
+				groups[group] = container;
+			}
+		}
+		container.appendChild(span);
+		if (scrollTimeout) clearTimeout(scrollTimeout);
+		var d = this.div;
+		scrollTimeout = setTimeout(function() { d.scrollTop = 10000000 }, 100);
+		if (title != null) {
+			span.title = title;
+			try { span.style.cursor = "pointer"; } catch (e) {}
+		}
+	}},
+
+	// ������� ��������� �������� cookie.
+	setCookie: function(name, value, path, expires, domain, secure) {
+	  var curCookie = name + "=" + escape(value) +
+	    ((expires) ? "; expires=" + expires.toGMTString() : "") +
+	    ((path) ? "; path=" + path : "; path=/") +
+	    ((domain) ? "; domain=" + domain : "") +
+	    ((secure) ? "; secure" : "");
+	  document.cookie = curCookie;
+	},
+	
+	// ������� ������ �������� cookie.
+	getCookie: function(name) {
+	  var prefix = name + "=";
+	  var cookieStartIndex = document.cookie.indexOf(prefix);
+	  if (cookieStartIndex == -1) return null;
+	  var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length);
+	  if (cookieEndIndex == -1) cookieEndIndex = document.cookie.length;
+	  return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+	}
+}
+window.hackerConsole = window.hackerConsole || window.Debug_HackerConsole_Js && new window.Debug_HackerConsole_Js();
+if (window.hackerConsole) setTimeout(function() { with (window.hackerConsole) {
+  out('classes/Template.php<'+'br /'+'>\n', 'at ~/classes/System.php line 207, out', 'Hidden includes');
+  out('classes/View.php<'+'br /'+'>\n', 'at ~/classes/System.php line 207, out', 'Hidden includes');
+  out('classes/IElement.php<'+'br /'+'>\n', 'at ~/classes/System.php line 207, out', 'Hidden includes');
+  out('modules/pages/Pages.php<'+'br /'+'>\n', 'at ~/classes/System.php line 144, out', 'Hidden includes');
+  out('modules/menus/Menus.php<'+'br /'+'>\n', 'at ~/classes/System.php line 144, out', 'Hidden includes');
+  out('modules/catalog/Catalog.php<'+'br /'+'>\n', 'at ~/classes/System.php line 144, out', 'Hidden includes');
+  out('modules/leaders/Leaders.php<'+'br /'+'>\n', 'at ~/classes/System.php line 144, out', 'Hidden includes');
+  out('modules/slides/Slides.php<'+'br /'+'>\n', 'at ~/classes/System.php line 144, out', 'Hidden includes');
+  out('modules/admins/Admins.php<'+'br /'+'>\n', 'at ~/classes/System.php line 144, out', 'Hidden includes');
+  out('classes/DB.php<'+'br /'+'>\n', 'at ~/classes/System.php line 207, out', 'Hidden includes');
+  out('tree_pages<'+'br /'+'>\n', 'at ~/classes/Cache.php line 114, out', 'Cache read');
+  out('tree_menus<'+'br /'+'>\n', 'at ~/classes/Cache.php line 114, out', 'Cache read');
+  out('tree_categories<'+'br /'+'>\n', 'at ~/classes/Cache.php line 114, out', 'Cache read');
+  out('full_links_array<'+'br /'+'>\n', 'at ~/classes/Cache.php line 114, out', 'Cache read');
+  out('list_slides<'+'br /'+'>\n', 'at ~/classes/Cache.php line 114, out', 'Cache read');
+  out('page_index<'+'br /'+'>\n', 'at ~/classes/Cache.php line 114, out', 'Cache read');
+  out('list_leaders<'+'br /'+'>\n', 'at ~/classes/Cache.php line 114, out', 'Cache read');
+  out('время:&nbsp;0.10415&nbsp;seconds<'+'br /'+'>\r\nобращений&nbsp;к&nbsp;кешу:&nbsp;8<'+'br /'+'>\r\nчтений&nbsp;из&nbsp;кеша:&nbsp;8<'+'br /'+'>\r\nзаписей&nbsp;в&nbsp;кеш:&nbsp;0<'+'br /'+'>\n', 'at ~/index.php line 35, out', 'Cache');
+  out('время&nbsp;генерации:&nbsp;0.31415&nbsp;seconds<'+'br /'+'>\r\nmemory&nbsp;peak&nbsp;usage:&nbsp;2,490,712&nbsp;bytes<'+'br /'+'>\r\nшаблонов:&nbsp;2<'+'br /'+'>\r\nзапросов&nbsp;к&nbsp;базе:&nbsp;0<'+'br /'+'>\r\nскрытых&nbsp;инклудов:&nbsp;15<'+'br /'+'>\n', 'at ~/index.php line 37, out', 'Summary');
+}}, 200);
+//]]></script>
+</body>
+</html>

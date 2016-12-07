@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+
+<title>Контакты компании Атлант ИТ</title>
+
+<base href="http://www.atlantit.ru/" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<meta name="description" content="Предлагаем Вам ознакомиться с нашими контактными данными в Москве" />
+<link rel="stylesheet" type="text/css" href="http://www.atlantit.ru/tmp/cache/stylesheet_combined_3913623786b42b866a57535ff5ebf10a.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://www.atlantit.ru/tmp/cache/stylesheet_combined_0f1e6cc7cf111d593980666126ff6f62.css" />
+
+
+<script src="http://www.atlantit.ru/uploads/atlant/jquery-1.10.2.min.js"></script>
+<script src="http://www.atlantit.ru/uploads/atlant/jquery.fancybox.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.atlantit.ru/uploads/atlant/jquery.fancybox.css" media="screen" /> 
+<script src="http://www.atlantit.ru/uploads/atlant/jquery.colorbox.js"></script>
+<link rel="stylesheet" href="http://www.atlantit.ru/uploads/atlant/colorbox.css" />
+<link rel="canonical" href="http://www.atlantit.ru/kontakty/" />
+</head><body>
+<div id="main">
+  <script type="text/javascript" src="/callme/js/callme.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  var n_img=1; 
+  $('#bt'+n_img).css('background-image', 'url("http://www.atlantit.ru/uploads/atlant/NavON.png")');
+
+  var rot_img=setInterval('$("#sc_right_bt").click()',10000);
+
+  $("#sc_right_bt").click(function () { 
+    n_img=n_img+1;
+    if(n_img>4)n_img=1;
+    $('#bt1').css('background-image', 'url("http://www.atlantit.ru/uploads/atlant/NavOFF.png")');
+    $('#bt2').css('background-image', 'url("http://www.atlantit.ru/uploads/atlant/NavOFF.png")');
+    $('#bt3').css('background-image', 'url("http://www.atlantit.ru/uploads/atlant/NavOFF.png")');
+    $('#bt4').css('background-image', 'url("http://www.atlantit.ru/uploads/atlant/NavOFF.png")');
+    $('#bt'+n_img).css('background-image', 'url("http://www.atlantit.ru/uploads/atlant/NavON.png")');
+    $('#banner').fadeTo(500,0.05, function()
+    {
+    $(this).css('background-image', 'url("http://www.atlantit.ru/uploads/atlant/'+n_img+'.png")');
+    }).fadeTo(500,1);
+  }); 
+
+  $("#sc_left_bt").click(function () { 
+    n_img=n_img-1;
+    if(n_img<1)n_img=4;
+    $('#bt1').css('background-image', 'url("http://www.atlantit.ru/uploads/atlant/NavOFF.png")');
+    $('#bt2').css('background-image', 'url("http://www.atlantit.ru/uploads/atlant/NavOFF.png")');
+    $('#bt3').css('background-image', 'url("http://www.atlantit.ru/uploads/atlant/NavOFF.png")');
+    $('#bt4').css('background-image', 'url("http://www.atlantit.ru/uploads/atlant/NavOFF.png")');
+    $('#bt'+n_img).css('background-image', 'url("http://www.atlantit.ru/uploads/atlant/NavON.png")');
+    $('#banner').fadeTo(500,0.05, function()
+    {
+    $(this).css('background-image', 'url("http://www.atlantit.ru/uploads/atlant/'+n_img+'.png")');
+    }).fadeTo(500,1);
+  }); 
+
+  $("#bt1").click(function () { 
+    n_img=0;
+    $("#sc_right_bt").click();
+    clearInterval(rot_img);
+    rot_img=setInterval('$("#sc_right_bt").click()',10000);
+  });
+  $("#bt2").click(function () { 
+    n_img=1;
+    $("#sc_right_bt").click();
+    clearInterval(rot_img);
+    rot_img=setInterval('$("#sc_right_bt").click()',10000);
+  });
+  $("#bt3").click(function () { 
+    n_img=2;
+    $("#sc_right_bt").click();
+    clearInterval(rot_img);
+    rot_img=setInterval('$("#sc_right_bt").click()',10000);
+  });
+  $("#bt4").click(function () { 
+    n_img=3;
+    $("#sc_right_bt").click();
+    clearInterval(rot_img);
+    rot_img=setInterval('$("#sc_right_bt").click()',10000);
+  });
+
+  $('#banner_link').click(function() {
+    //alert('Your book is overdue');
+    if(n_img==1){
+    location.href = '/aktsii/1s-zup-bazovaya-za-990-rub';
+    window.status = '/aktsii/1s-zup-bazovaya-za-990-rub';
+}
+    if(n_img==4){
+    location.href = '/aktsii/besplatnye-chasy-pri-pokupke-programm-1s';
+    window.status = '/aktsii/besplatnye-chasy-pri-pokupke-programm-1s';
+}
+    if(n_img==2){
+    location.href = '/aktsii/besplatnoe-podklyuchenie-i-nastrojka-1s-otchetnost';
+    window.status = '/aktsii/besplatnoe-podklyuchenie-i-nastrojka-1s-otchetnost';
+}
+    if(n_img==3){
+    location.href = '/aktsii/perehod-na-1s-buhgalteriya-3-0-spetsialnoe-predlozhenie';
+    window.status = '/aktsii/perehod-na-1s-buhgalteriya-3-0-spetsialnoe-predlozhenie';
+}
+  });
+
+
+  $(".iframe").colorbox({iframe:true, width:"680px", height:"550px",onClosed:function() { location.reload(true); } });
+  $(".iframe2").colorbox({iframe:true, width:"450px", height:"220px",onClosed:function() { location.reload(true); } });
+  $(".iframe3").colorbox({iframe:true, width:"700px", height:"570px",onClosed:function() { location.reload(true); } });
+  $(".iframe4").colorbox({iframe:true, width:"770px", height:"93%",onClosed:function() { location.reload(true); } });
+
+
+  $(".bread_div a").first().attr('href','/produkty/');
+});
+</script>
+  <div id="top_line">
+  <div class="inf_block">
+    <div style="float:left;"><noindex><a href="http://www.atlantit.ru/uploads/Progi/TeamViewerQS_ru.exe" id="rsuppport" rel="nofollow">Удаленная поддержка</a></noindex></div> 
+
+    <div style="float:right;"><noindex>  
+  <input id="cart_bt" type="submit" name="" value="Корзина (0)"/>
+  
+</noindex></div> 
+
+
+
+         
+    <div style="float:right;"><noindex><a id="reg_bt" class="iframe" href="http://www.atlantit.ru/registratsiya/" rel="nofollow">Регистрация</a></noindex></div> 
+         
+    <div style="float:right;width:122px;"><noindex><a class="iframe2" href="http://www.atlantit.ru/vhod/" id="lk_bt" rel="nofollow"><span style="margin-left:10px;">Авторизация</span></a></noindex></div> 
+        <noindex><div id="search"><form id="cntnt01moduleform_1" method="get" action="http://www.atlantit.ru/kontakty/" class="cms_form">
+<div class="hidden">
+<input type="hidden" name="mact" value="Search,cntnt01,dosearch,0" />
+<input type="hidden" name="cntnt01returnid" value="100" />
+</div>
+
+<label for="cntnt01searchinput">Поиск :&nbsp;</label><input type="text" class="search-input" id="cntnt01searchinput" name="cntnt01searchinput" size="20" maxlength="50" value="Поиск..." onfocus="if(this.value==this.defaultValue) this.value='';" onblur="if(this.value=='') this.value=this.defaultValue;"/>
+
+<input class="search-button" name="submit" value="Искать" type="submit" />
+</form>
+</div></noindex>
+  </div>
+  </div>
+  <div id="hi_menu_center" class="inf_block">
+    <div id="hi_menu_logo">
+      <a href="http://www.atlantit.ru"><img alt="Атлант IT – программы 1С" src="http://www.atlantit.ru/uploads/atlant/hi_menu_logo.png" style="border:none;"></a>
+    </div>
+    <div id="hi_menu_info">
+      <div class="atl_div" style="margin-top:18px;">горячая линия (с 9:00 до 19:00, Пн-Пт.)</div>
+      <div>
+        <div class="atl_div" style="float:left;"><img src="http://www.atlantit.ru/uploads/atlant/skype.png" alt="Skype"></div>
+        <div class="atl_div" style="float:left;"><a href="skype:Atlant-IT" class="atl_black">Atlant-IT</a></div>
+        <div class="atl_div" style="float:left;width:20px;"> </div>
+        <div class="atl_div" style="float:left;"><img border="0" alt="*" src="http://www.atlantit.ru/uploads/atlant/icq.png" /></div>
+        <div class="atl_div" style="float:left;">446-948-701</div>
+
+        <div class="atl_div" style="float:left;clear:left;"><img style="padding-top:2px;" src="http://www.atlantit.ru/uploads/atlant/email.png" alt="Email"></div>
+        <div class="atl_div" style="float:left;margin-top:6px;"><a href="mailto:info@atlantit.ru" class="atl_black">info@atlantit.ru</a></div>
+
+        <div style="float:left;margin:3px 0 0 10px;"><noindex><a href="http://vk.com/atlantit" target="_blank" rel="nofollow"><img style="border:none;" src="http://www.atlantit.ru/uploads/atlant/vk.png"></a></noindex></div>
+        <div style="float:left;margin:3px 0 0 10px;"><noindex><a href="https://twitter.com/atlant_it" target="_blank" rel="nofollow"><img style="border:none;" src="http://www.atlantit.ru/uploads/atlant/twit.png"></a></noindex></div>
+      </div>
+    </div>
+    <div id="hi_menu_phone"><b><a class="_link_telephone" rel="nofollow" href="tel:+74957643792" title="Телефон +7(495)764-37-92">+7(495)764-37-92</a></b></div>
+  </div>
+  <div id="hi_menu2_center" class="inf_block">
+    <div id="hi_menu2_left"> </div>
+    <div id="hi_menu2_menu">
+
+<div id="menuwrapper">
+<ul id="primary-nav">
+
+  <li id="mn15">
+  <a 
+
+ href="http://www.atlantit.ru/">
+              
+       Главная
+            </a>
+</li>
+
+  <li id="mn76" class="menuparent"><a class="menuparent" 
+
+ href="http://www.atlantit.ru/produkty/">
+              
+       Продукты
+            </a>
+<ul class="unli">
+
+  <li id="mn77">
+  <a 
+
+ href="http://www.atlantit.ru/produkty/programmnye-produkty-1s/">
+        
+    <span class="sectionheader">Программные  продукты 1С</span>
+     </a>
+</li>
+
+  <li id="mn78">
+  <a 
+
+ href="http://www.atlantit.ru/produkty/otraslevye-resheniya-1s/">
+        
+    <span class="sectionheader">Отраслевые решения 1С</span>
+     </a>
+</li>
+
+  <li id="mn79">
+  <a 
+
+ href="http://www.atlantit.ru/produkty/litsenzii-1s/">
+        
+    <span class="sectionheader">Лицензии 1С</span>
+     </a>
+</li>
+
+  <li id="mn80">
+  <a 
+
+ href="http://www.atlantit.ru/produkty/sovmestnye-produkty-1s-i-microsoft/">
+        
+    <span class="sectionheader">Совместные  продукты 1С  и Microsoft</span>
+     </a>
+</li>
+
+  <li id="mn166">
+  <a 
+
+ href="http://www.atlantit.ru/produkty/1s-bitriks/">
+        
+    <span class="sectionheader">1С-Битрикс</span>
+     </a>
+</li>
+
+  <li id="mn81">
+  <a 
+
+ href="http://www.atlantit.ru/produkty/literatura-1s/">
+        
+    <span class="sectionheader">Литература 1С</span>
+     </a>
+</li>
+
+  <li id="mn162">
+  <a 
+
+ href="http://www.atlantit.ru/produkty/its-1s/">
+        
+    <span class="sectionheader">ИТС 1С</span>
+     </a>
+</li>
+
+  <li id="mn82">
+  <a 
+
+ href="http://www.atlantit.ru/produkty/vse-produkty-1s/">
+        
+    <span class="sectionheader">Все продукты   1С</span>
+     </a>
+</li></ul>
+</li>
+
+  <li id="mn83" class="menuparent"><a class="menuparent" 
+
+ href="http://www.atlantit.ru/uslugi/">
+              
+       Услуги
+            </a>
+<ul class="unli">
+
+  <li id="mn84">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/stoimost-uslug-1s/">
+        
+    <span class="sectionheader">Стоимость  услуг 1С</span>
+     </a>
+</li>
+
+  <li id="mn85">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/soprovogdenie-its-1s/">
+        
+    <span class="sectionheader">Сопровождение 1С (ИТС)</span>
+     </a>
+</li>
+
+  <li id="mn86" class="menuparent"><a class="menuparent" 
+
+ href="http://www.atlantit.ru/uslugi/obsluzhivanie-1s/">
+        
+    <span class="sectionheader">Обслуживание 1С</span>
+     </a>
+<ul class="unli">
+
+  <li id="mn110">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/obsluzhivanie-1s/ustanovka-1s/">
+        
+    <span class="sectionheader">Установка</span>
+     </a>
+</li>
+
+  <li id="mn109">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/obsluzhivanie-1s/nastrojka-1s/">
+        
+    <span class="sectionheader">Настройка 1С</span>
+     </a>
+</li>
+
+  <li id="mn130">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/obsluzhivanie-1s/obuchenie-1s/">
+        
+    <span class="sectionheader">Обучение программам 1С</span>
+     </a>
+</li>
+
+  <li id="mn108">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/obsluzhivanie-1s/obnovlenie-1s/">
+        
+    <span class="sectionheader">Обновление</span>
+     </a>
+</li>
+
+  <li id="mn106">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/obsluzhivanie-1s/soprovozhdenie-1s/">
+        
+    <span class="sectionheader">Сопровождение</span>
+     </a>
+</li>
+
+  <li id="mn129">
+  <a 
+
+ href="http://www.atlantit.ru/podderzhka/liniya-konsultatsii/">
+        
+    <span class="sectionheader">Консультации</span>
+     </a>
+</li>
+
+  <li id="mn107">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/obsluzhivanie-1s/dorabotka-1s/">
+        
+    <span class="sectionheader">Доработка</span>
+     </a>
+</li></ul>
+</li>
+
+  <li id="mn87">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/vnedrenie-programm-1s/">
+        
+    <span class="sectionheader">Внедрение  программ 1С</span>
+     </a>
+</li>
+
+  <li id="mn89">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/1s-otchetnost/">
+        
+    <span class="sectionheader">1С-Отчетность</span>
+     </a>
+</li>
+
+  <li id="mn90">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/1s-takskom/">
+        
+    <span class="sectionheader">1С-Такском</span>
+     </a>
+</li>
+
+  <li id="mn167">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/arenda-1s/">
+        
+    <span class="sectionheader">Аренда 1С</span>
+     </a>
+</li>
+
+  <li id="mn179">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/1s-link/">
+        
+    <span class="sectionheader">1С:Линк</span>
+     </a>
+</li>
+
+  <li id="mn182">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/1s-kontragent/">
+        
+    <span class="sectionheader">1С:Контрагент</span>
+     </a>
+</li>
+
+  <li id="mn178">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/mobi-s/">
+        
+    <span class="sectionheader">МОБИ-С</span>
+     </a>
+</li></ul>
+</li>
+
+  <li id="mn68" class="menuparent"><a class="menuparent" 
+
+ href="http://www.atlantit.ru/spetsializatsii/">
+              
+       Специализации
+            </a>
+<ul class="unli">
+
+  <li id="mn69">
+  <a 
+
+ href="http://www.atlantit.ru/spetsializatsii/avtomatizatsiya-buhgalterskogo-i-nalogovogo-ucheta/">
+        
+    <span class="sectionheader">Автоматизация  бухгалтерского и   налогового учета</span>
+     </a>
+</li>
+
+  <li id="mn70">
+  <a 
+
+ href="http://www.atlantit.ru/spetsializatsii/avtomatizatsiya-roznichnoj-i-optovoj-torgovli/">
+        
+    <span class="sectionheader">Автоматизация  розничной и  оптовой торговли</span>
+     </a>
+</li>
+
+  <li id="mn71">
+  <a 
+
+ href="http://www.atlantit.ru/spetsializatsii/avtomatizatsiya-kadrovogo-ucheta-i-rascheta-zarplaty/">
+        
+    <span class="sectionheader">Автоматизация  кадрового учета и расчета зарплаты</span>
+     </a>
+</li>
+
+  <li id="mn72">
+  <a 
+
+ href="http://www.atlantit.ru/spetsializatsii/avtomatizatsiya-proizvodstvennogo-predpriyatiya/">
+        
+    <span class="sectionheader">Автоматизация  производственного   предприятия</span>
+     </a>
+</li>
+
+  <li id="mn73">
+  <a 
+
+ href="http://www.atlantit.ru/spetsializatsii/avtomatizatsiya-dokumentooborota/">
+        
+    <span class="sectionheader">Автоматизация  документооборота</span>
+     </a>
+</li>
+
+  <li id="mn74">
+  <a 
+
+ href="http://www.atlantit.ru/spetsializatsii/avtomatizatsiya-byudzhetnyh-uchrezhdenij/">
+        
+    <span class="sectionheader">Автоматизация  бюджетных  учреждений</span>
+     </a>
+</li>
+
+  <li id="mn75">
+  <a 
+
+ href="http://www.atlantit.ru/spetsializatsii/avtomatizatsiya-byudzhetirovaniya-i-upravleniya-finansami/">
+        
+    <span class="sectionheader">Автоматизация  бюджетирования  и управления  финансами</span>
+     </a>
+</li>
+
+  <li id="mn120">
+  <a 
+
+ href="http://www.atlantit.ru/uslugi/1s-otchetnost/">
+        
+    <span class="sectionheader">1С-Отчетность</span>
+     </a>
+</li></ul>
+</li>
+
+  <li id="mn64" class="menuparent"><a class="menuparent" 
+
+ href="http://www.atlantit.ru/aktsii/">
+              
+       Акции
+            </a>
+<ul class="unli">
+
+  <li id="mn57">
+  <a 
+
+ href="http://www.atlantit.ru/aktsii/besplatnye-chasy-pri-pokupke-programm-1s/">
+        
+    <span class="sectionheader">Бесплатные часы при покупке программ 1С:Предприятие</span>
+     </a>
+</li>
+
+  <li id="mn58">
+  <a 
+
+ href="http://www.atlantit.ru/aktsii/besplatnoe-podklyuchenie-i-nastrojka-1s-otchetnost/">
+        
+    <span class="sectionheader">Бесплатное подключение и настройка «1С-Отчетность»</span>
+     </a>
+</li>
+
+  <li id="mn59">
+  <a 
+
+ href="http://www.atlantit.ru/aktsii/perehod-na-1s-buhgalteriya-3-0-spetsialnoe-predlozhenie/">
+        
+    <span class="sectionheader">Время переходить на 1С: Бухгалтерия 3.0. Специальное предложение</span>
+     </a>
+</li>
+
+  <li id="mn177">
+  <a 
+
+ href="http://www.atlantit.ru/aktsii/aktsiya-na-bazovuyu-versiyu-1s-buhgalteriya/">
+        
+    <span class="sectionheader">Акция на базовую версию 1С:Бухгалтерия (завершена 31.07.16г.)</span>
+     </a>
+</li>
+
+  <li id="mn183">
+  <a 
+
+ href="http://www.atlantit.ru/aktsii/1s-zup-bazovaya-za-990-rub/">
+        
+    <span class="sectionheader">1С:ЗУП. Базовая за 990 р.</span>
+     </a>
+</li></ul>
+</li>
+
+  <li id="mn95" class="menuparent"><a class="menuparent" 
+
+ href="http://www.atlantit.ru/podderzhka/">
+              
+       Поддержка
+            </a>
+<ul class="unli">
+
+  <li id="mn96">
+  <a 
+
+ href="http://www.atlantit.ru/podderzhka/skachat/">
+        
+    <span class="sectionheader">Скачать</span>
+     </a>
+</li>
+
+  <li id="mn65">
+  <a 
+
+ href="http://www.atlantit.ru/stati/">
+        
+    <span class="sectionheader">Статьи</span>
+     </a>
+</li>
+
+  <li id="mn180">
+  <a 
+
+ href="http://www.atlantit.ru/podderzhka/instruktsii/">
+        
+    <span class="sectionheader">Инструкции</span>
+     </a>
+</li>
+
+  <li id="mn98">
+  <a 
+
+ href="http://www.atlantit.ru/podderzhka/udalennoe-obsluzhivanie/">
+        
+    <span class="sectionheader">Удаленное  обслуживание</span>
+     </a>
+</li>
+
+  <li id="mn99">
+  <a 
+
+ href="http://www.atlantit.ru/podderzhka/tekuschie-relizy-programm-1s/">
+        
+    <span class="sectionheader">Текущие релизы программ 1С</span>
+     </a>
+</li>
+
+  <li id="mn184">
+  <a 
+
+ href="http://www.atlantit.ru/obnovleniya-v-programmah-1s/">
+        
+    <span class="sectionheader">Обновления в программах 1С</span>
+     </a>
+</li>
+
+  <li id="mn131">
+  <a 
+
+ href="http://www.atlantit.ru/podderzhka/liniya-konsultatsii/">
+        
+    <span class="sectionheader">Линия консультаций</span>
+     </a>
+</li></ul>
+</li>
+
+  <li id="mn61" class="menuparent"><a class="menuparent" 
+
+ href="http://www.atlantit.ru/about/">
+              
+       О компании
+            </a>
+<ul class="unli">
+
+  <li id="mn62">
+  <a 
+
+ href="http://www.atlantit.ru/about/1c_news/">
+        
+    <span class="sectionheader">Новости 1С</span>
+     </a>
+</li>
+
+  <li id="mn63">
+  <a 
+
+ href="http://www.atlantit.ru/about/vakansii/">
+        
+    <span class="sectionheader">Вакансии</span>
+     </a>
+</li>
+
+  <li id="mn94">
+  <a 
+
+ href="http://www.atlantit.ru/about/otzyvy-klientov/">
+        
+    <span class="sectionheader">Отзывы клиентов</span>
+     </a>
+</li></ul>
+</li>
+
+        <li  id="mn100" class="menuactive"><a class="menuactive" 
+
+ href="http://www.atlantit.ru/kontakty/">
+                Контакты
+            </a>
+
+</li>
+</ul>
+<div class="clearb"></div>
+</div>
+
+</div>
+    <div id="hi_menu2_call"><a class="callme_viewform" id="backcall" href=""> </a></div>
+    <div id="hi_menu2_right"> </div>
+  </div>
+    <div id="banner" class="inf_block">
+    <div id="sc_left_bt"><img src="http://www.atlantit.ru/uploads/atlant/scroll_l.png"></div>
+    <div id="sc_right_bt"><img src="http://www.atlantit.ru/uploads/atlant/scroll_r.png"></div> 
+    <div id="banner_link"></div>
+    <div id="bt1" class="nav_bt"></div>
+    <div id="bt2" class="nav_bt"></div>
+    <div id="bt3" class="nav_bt"></div>
+    <div id="bt4" class="nav_bt"></div>
+  </div>
+
+  <div class="inf_block" style="height:10px;"></div>
+
+  <div id="content" style="padding-top:0;">
+    <div id="content_white">
+    <div id="content_center" class="inf_block">
+      <div id="pg_title"><h1>Контакты</h1></div>      <table width="100%" style="margin:10px 0 10px 0;background-color:#FFF;"> 
+      <tr>    
+      <td id="artile_cont_news" style="background-color:#FFF;"><table style="margin: 10px 0px; width: 100%; background-color: #ffffff;">
+<tbody>
+<tr>
+<td id="artile_cont_news" style="background-color: #fff;">
+<table style="margin-top: -15px;" border="0">
+<tbody>
+<tr>
+<td style="vertical-align: top; padding-top: 5px; padding-right: 20px;">
+<h2 style="margin-top: 0;"><strong>Схема проезда</strong></h2>
+<script charset="utf-8" type="text/javascript" src="http://api-maps.yandex.ru/services/constructor/1.0/js/?sid=wmOfqwn2KOGA5DzFyipe4BY0XzrJlHUF&amp;width=500&amp;height=600"></script>
+ </td>
+<td style="vertical-align: top;"><span style="font-family: arial, helvetica, sans-serif; font-size: small;">Если у Вас есть вопросы или Вам нужна дополнительная информация о программах и услугах компании "Атлант ИТ", пожалуйста, обращайтесь по указанному адресу и телефону:</span>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: small;"><span style="font-size: large;"><strong>117105, г. Москва,<br /></strong></span><strong><span style="font-size: large;">Варшавское шоссе, д. 17, стр.1, офис 345</span><br /></strong>(Ближайшие станции метро "Тульская" или "Нагатинская")</span><br /><strong><span style="font-family: arial, helvetica, sans-serif; font-size: large;">Тел.: <span style="color: #ff9900;">+7 (495) 764-37-92</span><br /></span></strong></p>
+<p><font face="%value"><img src="uploads/images/about/atlant_it_office.jpg" alt="" width="500" height="332" /></font></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: small;">Как добраться на общественном транспорте:</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: small;">► От ст. метро "Тульская" 3 остановки на трамвае 3, 35, 47 или троллейбусе 40, 44, 8 или автобусах: 275, 25, 700. до остановки "Стадион "Труд".</span><br /><span style="font-family: arial, helvetica, sans-serif; font-size: small;">► От станции метро "Нагатинская" 2 остановки в сторону центра на любом троллейбусе или трамвае до остановки "Стадион "Труд".</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: small;">Почтовый адрес: 107076, г. Москва, ул. Стромынка, д. 19, корп. 2</span><br /><span style="font-family: arial, helvetica, sans-serif; font-size: small;">E-mail: <span style="color: #ff9900;"><a style="color: #ff9900;" href="mailto:info@atlantit.ru"><span style="color: #ff9900;">info@atlantit.ru</span></a></span></span><br /><span style="font-family: arial, helvetica, sans-serif; font-size: small;">ICQ: 446-948-701</span></p>
+<h2><strong>Наши реквизиты</strong></h2>
+<p>ООО «Атлант ИТ»,</p>
+<p>ОГРН 1087746508080, ИНН 7718699910, КПП 771801001</p>
+<p>ОКТМО 45315000</p>
+<p>ОКАТО 45263591000</p>
+<p>ОКПО 85774080</p>
+<p>ИФНС 7718, Инспекция Федеральной налоговой службы №18 по г. Москве</p>
+<p>ПФР 087-408-052038, ГУ - Главное управление ПФР №7 по г. Москве и Московской области</p>
+<p>ФСС 7738024345, Инспекция ФНС России №18</p>
+<p>Юридический адрес: 107076, г. Москва, ул. Стромынка, д.19, корп.2</p>
+<p>Адрес для корреспонденции: 107076, г. Москва, ул. Стромынка, д.19, корп.2.</p>
+<p>р/с 40702810900000030015 в ВТБ 24 (ПАО)</p>
+<p>к/с 30101810100000000716, БИК 044525716</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table></td>
+      </tr>    
+      </table>
+    </div>
+    </div>
+  <div id="top_menu2">
+    <div id="top_menu2_center" class="inf_block" style="height:59px;">
+      <div class="top_menu2_menu"><a href="/produkty/">Продажа 1С</a></div><div class="div_yel"></div>
+      <div class="top_menu2_menu"><a href="/ustanovka-1s/">Установка 1С</a></div><div class="div_yel"></div>
+      <div class="top_menu2_menu"><a href="/vnedrenie-programm-1s/">Внедрение 1С</a></div><div class="div_yel"></div>
+      <div class="top_menu2_menu"><a href="/nastrojka-1s/">Настройка 1С</a></div><div class="div_yel"></div>
+      <div class="top_menu2_menu"><a href="/obuchenie-1s/">Обучение 1С</a></div><div class="div_yel"></div>
+      <div class="top_menu2_menu" style="width:11%;"><a href="/podderzhka/liniya-konsultatsii/">Консультации 1С</a></div><div class="div_yel"></div>
+      <div class="top_menu2_menu"><a href="/obnovlenie-1s/">Обновление 1С</a></div><div class="div_yel"></div>
+      <div class="top_menu2_menu"><a href="/dorabotka-1s/">Доработка 1С</a></div><div class="div_yel"></div>
+      <div class="top_menu2_menu" style="width:12%;"><a href="/soprovozhdenie-1s/">Сопровождение 1С</a></div>
+    </div>
+  <div id="pod" class="inf_block">
+      <div id="pod_l"></div>
+      <div id="pod_r"></div>      
+      <div style="height: 37px;width: 100%;">
+      <div><img style="margin-top:10px" src="http://www.atlantit.ru/uploads/atlant/sale_1c.png"></div>
+      </div>
+      <noindex>
+<table style="width: 96%;">
+<tbody>
+<tr>
+<td class="pod_bt" style="width: 210px;"><a href="/produkty/2/1s-buhgalteriya-8-prof/">1С:Бухгалтерия 8</a></td>
+<td> </td>
+<td class="pod_bt" style="width: 290px;"><a href="/produkty/43/1s-kompleksnaya-avtomatizatsiya-8/">1С:Комплексная автоматизация 8</a></td>
+<td> </td>
+<td class="pod_bt" style="width: 120px;"><a href="/produkty/206/1s-predpriyatie-8-CRM-prof-redaktsiya-2-0/">1С:CRM 8</a></td>
+<td> </td>
+<td class="pod_bt" style="width: 170px;"><a href="/produkty/207/1s-predpriyatie-8-upp/">1С:УПП 8</a> / <a style="margin-left: 0px;" href="/produkty/234/1s-predpriyatie-8-ERP-upravlenie-predpriyatiem-2-0/">1С:ERP 2</a></td>
+<td> </td>
+<td class="pod_bt" style="width: 125px;"><a href="/its-1s/">1С:ИТС</a></td>
+</tr>
+<tr>
+<td class="pod_bt" style="width: 210px;"><a href="/produkty/32/1s-predpriyatie-8-upravlenie-torgovlej/">1С:Управление торговлей 8</a></td>
+<td> </td>
+<td class="pod_bt" style="width: 290px;"><a href="/produkty/4/1s-zarplata-i-upravlenie-personalom-8/">1С:Зарплата и управление персоналом 8</a></td>
+<td> </td>
+<td class="pod_bt" style="width: 120px;"><a href="/produkty/35/1s-roznitsa-8-prof/">1С:Розница 8</a></td>
+<td> </td>
+<td class="pod_bt" style="width: 160px;"><a href="/produkty/50/1s-dokumentooborot-8-prof/">1С:Документооборот 8</a></td>
+<td> </td>
+<td class="pod_bt" style="width: 125px;"><a href="/1s-otchetnost/">1С-Отчетность</a></td>
+</tr>
+</tbody>
+</table>
+<div style="width: 98%;" class="_hor_lineU"> </div>
+<table style="width: 96%;">
+<tbody>
+<tr>
+<td class="pod_bt" style="width: 290px;"><a href="/produkty/byhierarchy/3/77/">Для бухгалтерского и налогового учета</a></td>
+<td> </td>
+<td class="pod_bt" style="width: 330px;"><a href="/produkty/byhierarchy/4/77/">Для расчета зарплаты и управления персоналом</a></td>
+<td> </td>
+<td class="pod_bt" style="width: 290px;"><a href="/produkty/byhierarchy/5/77/">Для торгового и складского учета</a></td>
+</tr>
+</tbody>
+</table>
+</noindex>
+  </div>
+  <div id="pod2">
+    <div id="pod2_center" class="inf_block" style="display:table;"> 
+       <div class="pod2_col" style="margin-left: 18px;">
+        <div class="pod2_head"><a href="/produkty/">Продукты</a></div>
+        <noindex>
+        <div class="pod2_link"><a href="/produkty/programmnye-produkty-1s/">Программные продукты 1С</a></div>
+        <div class="pod2_link"><a href="/produkty/otraslevye-resheniya-1s/">Отраслевые решения 1С</a></div>
+        <div class="pod2_link"><a href="/produkty/litsenzii-1s/">Лицензии 1С</a></div>
+        <div class="pod2_link"><a href="/produkty/sovmestnye-produkty-1s-i-microsoft/">Совместные продукты 1С и Microsoft</a></div>
+        <div class="pod2_link"><a href="/produkty/1s-bitriks/">1С-Битрикс</a></div>
+        <div class="pod2_link"><a href="/produkty/literatura-1s/">Литература 1С</a></div>
+        <div class="pod2_link"><a href="/produkty/its-1s/">ИТС 1С</a></div>
+        <div class="pod2_link"><a href="/produkty/vse-produkty-1s/">Все продукты 1С</a></div>
+        </noindex>
+      </div>
+      <div class="pod2_col">
+        <div class="pod2_head"><a href="/uslugi/">Услуги</a></div>
+        <noindex>
+        <div class="pod2_link"><a href="/uslugi/stoimost-uslug-1s/">Стоимость услуг 1С</a></div>
+        <div class="pod2_link"><a href="/uslugi/soprovogdenie-its-1s/">Сопровождение 1С (ИТС)</a></div>
+        <div class="pod2_link"><a href="/uslugi/obsluzhivanie-1s/">Обслуживание 1С</a></div>
+        <div class="pod2_link"><a href="/uslugi/vnedrenie-programm-1s/">Внедрение программ 1С</a></div>
+        
+        <div class="pod2_link"><a href="/uslugi/1s-otchetnost/">1С-Отчетность</a></div>
+        <div class="pod2_link"><a href="/uslugi/1s-takskom/">1С-Такском</a></div>
+        <div class="pod2_link"><a href="/uslugi/arenda-1s/">Аренда 1С</a></div>
+        </noindex>
+      </div>
+      <div class="pod2_col" style="width:27%;">
+        <div class="pod2_head"><a href="/spetsializatsii/">Специализации</a></div>
+        <noindex>
+        <div class="pod2_link"><a href="/spetsializatsii/avtomatizatsiya-buhgalterskogo-i-nalogovogo-ucheta/">Автоматизация бухгалтерского и налогового учета</a></div>
+        <div class="pod2_link"><a href="/spetsializatsii/avtomatizatsiya-roznichnoj-i-optovoj-torgovli/">Автоматизация розничной и оптовой торговли</a></div>
+        <div class="pod2_link"><a href="/spetsializatsii/avtomatizatsiya-kadrovogo-ucheta-i-rascheta-zarplaty/">Автоматизация кадрового учета и расчета зарплаты</a></div>
+        <div class="pod2_link"><a href="/spetsializatsii/avtomatizatsiya-proizvodstvennogo-predpriyatiya/ ">Автоматизация производственного предприятия</a></div>
+        <div class="pod2_link"><a href="/spetsializatsii/avtomatizatsiya-dokumentooborota/">Автоматизация документооборота</a></div>
+        <div class="pod2_link"><a href="/spetsializatsii/avtomatizatsiya-byudzhetnyh-uchrezhdenij/">Автоматизация бюджетных учреждений</a></div>
+        <div class="pod2_link"><a href="/spetsializatsii/avtomatizatsiya-byudzhetirovaniya-i-upravleniya-finansami/">Автоматизация бюджетирования и управления финансами</a></div>
+        </noindex>
+      </div>
+      <div class="pod2_col">
+        <div class="pod2_head"><a href="/podderzhka/">Поддержка</a></div>
+        <noindex>
+        <div class="pod2_link"><a href="/podderzhka/skachat/">Скачать</a></div>
+        <div class="pod2_link"><a href="/podderzhka/udalennoe-obsluzhivanie/">Удаленное обслуживание</a></div>
+        <div class="pod2_link"><a href="/podderzhka/tekuschie-relizy-programm-1s/">Текущие релизы программ 1С</a></div>
+        <div class="pod2_link"><a href="/podderzhka/liniya-konsultatsii/">Линия консультации</a></div>
+        </noindex>
+      </div>
+      <div class="pod2_col" style="width:10%; margin-right: 0px;">
+        <div class="pod2_head"><a href="/about/">О компании</a></div>    
+        <noindex>    
+        <div class="pod2_link"><a href="/aktsii/">Акции</a></div>
+        <div class="pod2_link"><a href="/kontakty/">Контакты</a></div>        
+        <div class="pod2_link"><a href="/about/vakansii/">Вакансии</a></div>
+        <div class="pod2_link"><a href="/about/1c_news/">Новости 1С</a></div>
+        </noindex>
+      </div>
+      
+
+      
+      
+    </div>
+  </div>
+  <div id="pod3">
+    <div id="pod3_center" class="inf_block"> 
+      <div class="pod3_col" style="margin-left: 18px;width:31%">
+        <div style="font-size:16px;font-weight:bold;color:#FFF;margin-bottom:10px;">© 2008-2016, ООО «Атлант ИТ»</div>
+        <div  style="font-size:13px;font-weight:bold;color:#FFF;margin-bottom:10px;">Автоматизация предприятий на базе 1С</div>
+
+<div class="brs-color"><div style="margin-bottom:10px;">Полезное: <!-- trilan brs --><!-- rip 78.110.50.124 trilan brs time=2016-10-26 02:57:56 --></div><div style="margin-bottom:10px;"><!--  cpr time=2016-10-26 02:57:56 --><!--  cpr end --></div></div>
+
+        <div><a style="color:#F5851F;font-size:13px;font-weight:bold;" href="/about/otzyvy-klientov/">Отзывы о компании</a></div>
+      </div>
+
+      <div class="pod3_col" style="width: 33%;">
+        <div style="font-size:16px;font-weight:bold;color:#FFF;">Контактная информация:</div>
+        
+        <div style="font-size:12px;color:#FFF;margin-top:10px;">
+        <img style="float:left;margin:0  10px 40px 0;" src="http://www.atlantit.ru/uploads/atlant/pin.png">
+        <b>117105, г. Москва,<br>
+        Варшавское шоссе, д. 17, стр.1, офис 345<br> </b>
+        (Ближайшие станции метро "Тульская" или "Нагатинская")</div>
+        <div><a style="color:#F5851F;font-size:13px;font-weight:bold;" href="http://www.atlantit.ru/kontakty/">Смотреть на карте</a></div>
+      </div>
+      <div class="pod3_col" style="width:20%">
+        <img style="float:left;margin:0  12px 0 3px;" src="http://www.atlantit.ru/uploads/atlant/phone.png">
+        <div style="font-size:19px;font-weight:bold;color:#FFF;">+7 (495) 764-37-92</div>
+        <img style="float:left;margin:14px 10px 0 0;" src="http://www.atlantit.ru/uploads/atlant/email.png">
+        <div style="font-size:14px;margin:10px 0 0 0"><a style="color:#FFF;" href="mailto:info@atlantit.ru">info@atlantit.ru</a></div>
+<div style="margin:14px 0 0 30px;">
+<noindex>
+<!--LiveInternet counter--><script type="text/javascript">document.write("<a href='http://www.liveinternet.ru/click' target=_blank><img src='//counter.yadro.ru/hit?t23.6;r" + escape(document.referrer) + ((typeof(screen)=="undefined")?"":";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u" + escape(document.URL) + ";" + Math.random() + "' border=0 width=88 height=15 alt='' title='LiveInternet: показано число посетителей за сегодня'><\/a>")</script><!--/LiveInternet-->
+</noindex>
+</div>
+      </div>
+      <div style="float:right;margin:10px 10px 0 0;"><img src="http://www.atlantit.ru/uploads/atlant/qr.png"></div>
+    </div>
+  </div>
+
+
+<noindex>
+<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter24256234 = new Ya.Metrika({id:24256234, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><!-- /Yandex.Metrika counter -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48881935-1', 'atlantit.ru');
+  ga('send', 'pageview');
+
+</script>
+</noindex>
+
+
+<noindex><!-- BEGIN JIVOSITE CODE  -->
+<script type='text/javascript'>
+(function(){ var widget_id = '129494';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!--  END JIVOSITE CODE -->
+</noindex> 
+</div>
+</body>
+</html>

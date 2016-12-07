@@ -1,0 +1,778 @@
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+        <title>АО "ИНФОПРО" - О компании</title>
+        <style>
+		.imag {
+	display: block;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;	
+}
+		a {
+                color:#342b6a;
+                font-family:Tahoma;
+                font-size:12px;
+                text-decoration: underline;
+                margin-top : 5px;
+        }
+
+
+        a.td,a:hover {
+                color: Red;
+                text-decoration: underline;
+        }
+        .menuleft {
+                color:#707070;
+                font-family:Tahoma;
+                font-size:11px;
+                text-decoration:none;
+                margin-top : 5px;
+               text-align: left;
+        }
+		
+
+        p { text-indent: 20px;
+                margin-top:2px;
+                margin-bottom:10px;
+                margin-right:10px;				
+                text-align: justify;				
+       }
+		
+        div.navgor { color:#284459;
+                font-weight:600;
+                font-size:10px;
+                margin-right:20px;
+                margin-top:5px;
+                margin-bottom:20px; }
+
+        td {color:#0f1c37; font-family:Tahoma; font-size:12px;}
+		h1,h2,h3,h4 {
+                color:#707070;
+                font-family:Tahoma;
+                margin-left:25px;
+        }
+        .h1{font-size:20px;}
+        .h2{font-size:16px;}
+        .h3{font-size:13px;}
+        .h4{font-size:11px;}
+		
+
+
+        body { margin-top: 0px;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                margin-right: 0px; }
+
+		table { font-family: Tahoma;
+                font-size:70%;
+                color:#636363;}
+
+        select { font-family: Tahoma;
+                font-size:11px;
+                color:#636363;
+                margin-top: 0px;
+                margin-bottom: 0px; }
+
+        .copyright { color: white;
+                font-size:11px;
+                margin-left:10px;
+                margin-right:10px;
+                text-align:right; }
+
+        .but {  font-family: Tahoma;
+                font-size:11px;
+                color:white;
+                background-color: #870030;
+                border-bottom: white 1px solid;
+                border-left: white 1px solid;
+                border-right: white 1px solid;
+                border-top: white 1px solid; }
+        .newsdate { background-image: url(img/news1.gif);
+                background-repeat:no-repeat;
+                padding-top:5px;
+                padding-bottom:5px;
+                padding-left:10px;
+                font-weight:bold; }
+
+        .news { margin-bottom: 25px; }
+
+        .block { margin-bottom: 25px; }
+
+
+        div.submenu { position:absolute;
+                top:60;
+                padding-top:3px;
+                visibility: hidden; }
+
+        a.submenu { color:#636363;
+                text-decoration: none; }
+
+        a.submenu:hover {
+                color: Red;
+                text-decoration: underline;
+        }
+
+        table.cellmenu { background-color: black;
+                margin-bottom:2px; }
+        td.cellmenu { background-color: #f1f1f1;
+                text-align:left; }
+
+        table.tab { background-color: black;
+                margin-bottom:2px; }
+        th.tab { background-color:#840031;
+                color:white }
+        td.tab1 { background-color: white;
+                color:black;
+                background-image: url(img/formsfon.gif);
+                background-repeat:repeat-y; }
+
+        td.tab  { background-color: white;
+                color:black; }
+
+        li { text-indent: 0px;
+                margin-top:0px;
+                margin-bottom:0px;
+                margin-right:10px;
+                text-align: justify;}		
+        
+	ul  {margin-top: 1px;
+	    margin-bottom:13px;}
+				    		
+
+</style>
+
+  <script language="JavaScript">
+<!--
+
+if (document.images) {
+Button1MouseOff = new Image(); Button1MouseOff.src = "btn_01.gif"
+Button1MouseOver = new Image(); Button1MouseOver.src = "btn_a_01.gif"
+Button2MouseOff = new Image(); Button2MouseOff.src = "btn_02.gif"
+Button2MouseOver = new Image(); Button2MouseOver.src = "btn_a_02.gif"
+Button3MouseOff = new Image(); Button3MouseOff.src = "btn_03.gif"
+Button3MouseOver = new Image(); Button3MouseOver.src = "btn_a_03.gif"
+Button4MouseOff = new Image(); Button4MouseOff.src = "btn_04.gif"
+Button4MouseOver = new Image(); Button4MouseOver.src = "btn_a_04.gif"
+Button5MouseOff = new Image(); Button5MouseOff.src = "btn_05.gif"
+Button5MouseOver = new Image(); Button5MouseOver.src = "btn_a_05.gif"
+}
+
+function turnMouseOff(ImageName) {
+        if (document.images != null) {
+                document[ImageName].src = eval(ImageName + "MouseOff.src");
+        }
+}
+
+function turnMouseOver(ImageName) {
+        if (document.images != null) {
+                document[ImageName].src = eval(ImageName + "MouseOver.src");
+        }
+}
+
+var in_menu=false;
+var timerID=null;
+var memo_menu="None";
+
+function startSubMenu(a) {
+  s=getObj(a)
+  s.style.visibility="visible"
+}
+
+function stopSubMenu(a) {
+  s=getObj(a)
+  s.style.visibility="hidden"
+}
+
+function menuOver(a,b) {
+  in_menu=true;
+  turnMouseOver(a)
+  if (memo_menu!=b) {
+      s=getObj(b)
+      s.style.visibility="visible";
+      if (memo_menu!="None") {
+                 s=getObj(memo_menu)
+          s.style.visibility="hidden";
+      }
+  }
+  startSubMenu(b)
+  memo_menu=b
+  StartTimer()
+}
+
+function menuOut(a,b) {
+  in_menu=false;
+  turnMouseOff(a)
+}
+
+function SubMenuOver() {
+  in_menu=true ;
+}
+
+function SubMenuOut() {
+  in_menu=false;
+}
+
+function StartTimer() {
+  timerID=setTimeout("CheckMenu()",500);
+}
+
+function CheckMenu(){
+  if ( (memo_menu!="None") && (in_menu==false) ){
+       stopSubMenu(memo_menu)
+       memo_menu="None"
+  }
+  else StartTimer() ;
+}
+
+function getObj(name)
+{
+  if (document.getElementById)
+  {
+          return document.getElementById(name);
+  }
+  else if (document.all)
+  {
+        return document.all[name];
+  }
+}
+
+function wopen(url, w, h)
+{
+  var wnd=document.open(url, "img", "top=0,left=10,width="+parseInt(w+28)+",height=0,channelmode=0,directories=0,fullscreen=0,location=0,menubar=0,resizable=1,scrollbars=1,status=0,titlebar=0,toolbar=0" );
+  var wnd_h = wnd.screen.height - 30;
+  h = (h < wnd_h) ? h+31 : wnd_h ;
+  if(h < wnd_h)
+  wnd.resizeTo(w+28, h);
+  wnd.focus();
+}
+
+// -->
+</script>
+
+</head>
+<body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0">
+<div class=submenu style="left:10" id=submenu1 onmouseover="SubMenuOver()" onmouseout="SubMenuOut()">
+<table class=cellmenu cellpadding=3 cellspacing=1 border=0 width=200>
+<tr>
+       <td class=cellmenu>
+         <a class=submenu href="index.php?id=1">О компании</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="index.php?id=2">История</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="index.php?id=14">Лицензии и сертификаты</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="index.php?id=52">Партнёры</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="index.php?id=38">Публикации</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="index.php?id=19">Координаты</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="index.php?id=20">Данные государственных органов регистрации и банковские реквизиты</a>
+       </td>
+    </tr>    </table>
+</div><div class=submenu style="left:140" id=submenu2 onmouseover="SubMenuOver()" onmouseout="SubMenuOut()">
+<table class=cellmenu cellpadding=3 cellspacing=1 border=0 width=200>
+<tr>
+       <td class=cellmenu>
+         <a class=submenu href="vt.php?id=6">Вычислительная техника</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="vt.php?id=48">Защищенные мобильные решения</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="vt.php?id=56">        • Исполнение 1</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="vt.php?id=57">        • Исполнение 2</a>
+       </td>
+    </tr>    </table>
+</div><div class=submenu style="left:260" id=submenu3 onmouseover="SubMenuOver()" onmouseout="SubMenuOut()">
+<table class=cellmenu cellpadding=3 cellspacing=1 border=0 width=200>
+<tr>
+       <td class=cellmenu>
+         <a class=submenu href="system.php?id=3">Системная интеграция</a>
+       </td>
+    </tr>    </table>
+</div><div class=submenu style="left:400" id=submenu4 onmouseover="SubMenuOver()" onmouseout="SubMenuOut()">
+<table class=cellmenu cellpadding=3 cellspacing=1 border=0 width=200>
+<tr>
+       <td class=cellmenu>
+         <a class=submenu href="guard.php?id=54">Защита информации, составляющей государственную тайну</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="guard.php?id=55">Защита конфиденциальной информации</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="guard.php?id=61">Средства защиты информации</a>
+       </td>
+    </tr>    </table>
+</div><div class=submenu style="left:570" id=submenu5 onmouseover="SubMenuOver()" onmouseout="SubMenuOut()">
+<table class=cellmenu cellpadding=3 cellspacing=1 border=0 width=200>
+<tr>
+       <td class=cellmenu>
+         <a class=submenu href="compleks.php?id=11">Комплексные системы безопасности</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="compleks.php?id=28">Системы контроля и управления доступом</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="compleks.php?id=49">Элитные домофонные системы BPT</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="compleks.php?id=12">Аналитические работы</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="compleks.php?id=26">Системы противодействия техническому шпионажу</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="compleks.php?id=36">Системы охранной и пожарной сигнализации</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="compleks.php?id=50">Ауди-видео оборудование конференц залов, домашних кинотеатров.</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="compleks.php?id=35">Системы видеонаблюдения, аудиовидеоконтроля</a>
+       </td>
+    </tr><tr>
+       <td class=cellmenu>
+         <a class=submenu href="compleks.php?id=37">Защита сведений, составляющих государственную тайну</a>
+       </td>
+    </tr>    </table>
+</div>
+
+<!-- Dynamic Menu END -->
+
+
+<table width="100%" height="232" cellspacing="0" cellpadding="0" bgcolor="#28527A">
+<!-- menu -->
+<tr valign="top">
+
+          <td width="100%" height="61" colspan="2" background="btn_06.gif" bgcolor="#E6E9EB">
+          <a href = "index.php"    onmouseover="menuOver('Button1','submenu1')"
+          onmouseout="menuOut('Button1','submenu1')">
+
+        <img   src="img/btn_01.gif" name="Button1"
+ alt="О компании" width="108" height="61" hspace="0" vspace="0" border="0" align="left"></a>
+
+          <a href="vt.php"  onmouseover="menuOver('Button2','submenu2')"
+          onmouseout="menuOut('Button2','submenu2')"><img src="btn_02.gif"
+name="Button2" alt="Вычислительная техника"  width="161" height="61" hspace="0" vspace="0" border="0" align="left">
+          </a>
+
+
+         <a href="system.php"  onmouseover="menuOver('Button3','submenu3')"
+         onmouseout="menuOut('Button3','submenu3')">
+         <img src="btn_03.gif"
+name="Button3" alt="Системная интеграция" width="153" height="61" hspace="0" vspace="0" border="0" align="left"></a>
+
+         <a href="guard.php"  onmouseover="menuOver('Button4','submenu4')"
+         onmouseout="menuOut('Button4','submenu4')"><img src="btn_04.gif"
+name="Button4" alt="Защита информации" width="142" height="61" hspace="0" vspace="0" border="0" align="left"></a>
+
+
+         <a href="compleks.php"  onmouseover="menuOver('Button5','submenu5')"
+         onmouseout="menuOut('Button5','submenu5')"><img src="btn_05.gif"
+name="Button5" alt="Комплексные системы информации" width="206" height="61" hspace="0" vspace="0" border="0" align="left"></a>
+         </td>
+
+
+</tr>
+<!-- End menu-->
+<tr>
+        <td width="500" height="169" bgcolor="#28527A"><img src="img/ab2_colladge.jpg" alt="О компании" width="561" height="169" hspace="0" vspace="0" border="0" align="left"></td>
+        <td width="100%" bgcolor="#28527A" align="center"><a href="http://www.infopro.ru"><img src="img/logo.gif" alt="ЗАО ''ИНФОПРО''" width="200" height="63" hspace="5" border="0" align="middle"></a></td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top">
+<!-- Left Menu -->
+                <td height="12" bgcolor="#EAECEE">
+                <table border="0" cellspacing="0" cellpadding="0">
+
+                <tr valign="top">
+
+                          <td height="9" class="h2" valign="middle" align="center"><img src="img/ml_bg.gif" alt="" width="11" height="9" hspace="0" vspace="0" border="0"></td>
+
+                </tr>
+
+                <tr valign="top">
+
+                          <td height="9" class="h2" valign="middle" align="center">&nbsp;</td>
+
+                </tr>
+
+              </table>
+
+              <table width="210" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td bgcolor="#FFFFFF"><img src="/img/x.gif" alt="" width="1" height="1" border="0"></td>
+
+                </tr>
+
+              </table>
+
+
+
+              <table width="100%" height="25" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td width="8" style="background-color:#D7E0EA;"><img src="img/s.gif" alt="" width="8" height="1" border="0"></td>
+
+                          <td width="6" height="6" style="background-color:#D7E0EA;"><img src="img/bullet.gif" alt="" width="9" height="9" border="0"></td>
+
+                          <td width="8" style="background-color:#D7E0EA;"><img src="img/s.gif" alt="" width="8" height="1" border="0"></td>
+
+                          <td width="144" class="menuleft" style="background-color:#D7E0EA;"><a href="index.php?id=1" class="menuleft">О компании</a>&nbsp;</td>
+
+                </tr>
+
+              </table>
+
+      <table width="210" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td bgcolor="#FFFFFF"><img src="/img/x.gif" alt="" width="1" height="1" border="0"></td>
+
+                </tr>
+
+              </table>
+
+        
+
+              <table width="100%" height="25" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td width="8"><img src="img/s.gif" alt="" width="8" height="1" border="0"></td>
+
+                          <td width="6" height="6"><img src="img/bullet.gif" alt="" width="9" height="9" border="0"></td>
+
+                          <td width="8"><img src="img/s.gif" alt="" width="8" height="1" border="0"></td>
+
+                          <td width="144" class="menuleft"><a href="index.php?id=2" class="menuleft">История</a>&nbsp;</td>
+
+                </tr>
+
+              </table>
+
+      <table width="210" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td bgcolor="#FFFFFF"><img src="/img/x.gif" alt="" width="1" height="1" border="0"></td>
+
+                </tr>
+
+              </table>
+
+        
+
+              <table width="100%" height="25" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td width="8"><img src="img/s.gif" alt="" width="8" height="1" border="0"></td>
+
+                          <td width="6" height="6"><img src="img/bullet.gif" alt="" width="9" height="9" border="0"></td>
+
+                          <td width="8"><img src="img/s.gif" alt="" width="8" height="1" border="0"></td>
+
+                          <td width="144" class="menuleft"><a href="index.php?id=14" class="menuleft">Лицензии и сертификаты</a>&nbsp;</td>
+
+                </tr>
+
+              </table>
+
+      <table width="210" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td bgcolor="#FFFFFF"><img src="/img/x.gif" alt="" width="1" height="1" border="0"></td>
+
+                </tr>
+
+              </table>
+
+        
+
+              <table width="100%" height="25" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td width="8"><img src="img/s.gif" alt="" width="8" height="1" border="0"></td>
+
+                          <td width="6" height="6"><img src="img/bullet.gif" alt="" width="9" height="9" border="0"></td>
+
+                          <td width="8"><img src="img/s.gif" alt="" width="8" height="1" border="0"></td>
+
+                          <td width="144" class="menuleft"><a href="index.php?id=52" class="menuleft">Партнёры</a>&nbsp;</td>
+
+                </tr>
+
+              </table>
+
+      <table width="210" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td bgcolor="#FFFFFF"><img src="/img/x.gif" alt="" width="1" height="1" border="0"></td>
+
+                </tr>
+
+              </table>
+
+        
+
+              <table width="100%" height="25" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td width="8"><img src="img/s.gif" alt="" width="8" height="1" border="0"></td>
+
+                          <td width="6" height="6"><img src="img/bullet.gif" alt="" width="9" height="9" border="0"></td>
+
+                          <td width="8"><img src="img/s.gif" alt="" width="8" height="1" border="0"></td>
+
+                          <td width="144" class="menuleft"><a href="index.php?id=38" class="menuleft">Публикации</a>&nbsp;</td>
+
+                </tr>
+
+              </table>
+
+      <table width="210" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td bgcolor="#FFFFFF"><img src="/img/x.gif" alt="" width="1" height="1" border="0"></td>
+
+                </tr>
+
+              </table>
+
+        
+
+              <table width="100%" height="25" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td width="8"><img src="img/s.gif" alt="" width="8" height="1" border="0"></td>
+
+                          <td width="6" height="6"><img src="img/bullet.gif" alt="" width="9" height="9" border="0"></td>
+
+                          <td width="8"><img src="img/s.gif" alt="" width="8" height="1" border="0"></td>
+
+                          <td width="144" class="menuleft"><a href="index.php?id=19" class="menuleft">Координаты</a>&nbsp;</td>
+
+                </tr>
+
+              </table>
+
+      <table width="210" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td bgcolor="#FFFFFF"><img src="/img/x.gif" alt="" width="1" height="1" border="0"></td>
+
+                </tr>
+
+              </table>
+
+        
+
+              <table width="100%" height="25" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td width="8"><img src="img/s.gif" alt="" width="8" height="1" border="0"></td>
+
+                          <td width="6" height="6"><img src="img/bullet.gif" alt="" width="9" height="9" border="0"></td>
+
+                          <td width="8"><img src="img/s.gif" alt="" width="8" height="1" border="0"></td>
+
+                          <td width="144" class="menuleft"><a href="index.php?id=20" class="menuleft">Данные государственных органов регистрации и банковские реквизиты</a>&nbsp;</td>
+
+                </tr>
+
+              </table>
+
+      <table width="210" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td bgcolor="#FFFFFF"><img src="/img/x.gif" alt="" width="1" height="1" border="0"></td>
+
+                </tr>
+
+              </table>
+
+             <table width="210" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+
+                          <td bgcolor="#CBCDCF"><img src="/img/x.gif" alt="" width="1" height="5" border="0"></td>
+
+                </tr>
+
+              </table>
+
+        <br><!-- Left informer -->
+<table width="100%">
+<tr>
+<td width="10"><img src="img/s.gif" alt="" width="10" height="1" border="0"></td>
+        <td>
+<p><a href="http://www.rambler.ru"></a></p>        </td>
+<td width="10"><img src="img/s.gif" alt="" width="10" height="1" border="0"></td>
+</tr>
+</table>
+                </td>
+<!-- End Left Menu -->
+<!-- Center Page-->
+                <td width="100%">
+<!-- Title razdel -->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" background="img/title_bg.gif" bgcolor="#E6E9EB">
+                                <tr align="left">
+                                        <td height="66" width="29"><img src="img/arrow_title.gif" alt="" width="29" height="66" hspace="0" vspace="0" border="0"></td>
+                                        <td height="66" valign="middle" class="h1">О компании</td>
+                                </tr>
+                        </table>
+<!-- End title razdel -->
+<!-- Data page-->
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="20"><img src="img/s.gif" alt="" width="20" height="1" border="0"></td>
+
+        <td valign="top">
+
+
+<br>
+<div align="justify">
+	<font face="Tahoma" size="2"><span data-scayt_word="АО" data-scaytid="1">АО</span> &quot;<span data-scayt_word="ИНФОПРО" data-scaytid="2">ИНФОПРО</span>&quot; <span data-scayt_word="работает" data-scaytid="3">работает</span> в <span data-scayt_word="сфере" data-scaytid="4">сфере</span> <span data-scayt_word="информационных" data-scaytid="5">информационных</span> <span data-scayt_word="технологий" data-scaytid="6">технологий</span> с 1993 <span data-scayt_word="года" data-scaytid="7">года</span>.</font></div>
+<div align="justify">
+	&nbsp;</div>
+<div align="justify">
+	<font face="Tahoma" size="2"><span data-scayt_word="Осно" data-scaytid="8">Осно</span>вные виды <span data-scayt_word="деятельности" data-scaytid="9">деятельности</span> <span data-scayt_word="предприятия" data-scaytid="10">предприятия</span> <span data-scayt_word="предста" data-scaytid="11">предста</span>в<span data-scayt_word="лены" data-scaytid="12">лены</span> <span data-scayt_word="следующими" data-scaytid="13">следующими</span> <span data-scayt_word="напра" data-scaytid="14">напра</span>в<span data-scayt_word="лениями" data-scaytid="15">лениями</span>: </font></div>
+<ul>
+	<li>
+		<div align="justify">
+			<a href="http://www.infopro.ru/vt.php"><font face="Tahoma" size="2">производство и поставка средств вычислительной техники;</font></a></div>
+	</li>
+	<li>
+		<div align="justify">
+			<a href="http://www.infopro.ru/system.php"><font face="Tahoma" size="2">системная</font></a><font face="Tahoma" size="2"> интеграция;</font><font face="Tahoma" size="2"> </font></div>
+	</li>
+	<li>
+		<div align="justify">
+			<a href="http://www.infopro.ru/guard.php"><font face="Tahoma" size="2">обеспечение</font></a><font face="Tahoma" size="2"> защиты информации;</font></div>
+	</li>
+	<li>
+		<div align="justify">
+			<a href="http://www.infopro.ru/compleks.php"><font face="Tahoma" size="2">создание</font></a><font face="Tahoma" size="2"> комплексных систем безопасности.</font></div>
+	</li>
+</ul>
+<div align="justify">
+	<font face="Tahoma" size="2">Стратегическая задача, которую сформулировало для себя предприятие, заключается в создании и сопровождении систем, составляющих техническую инфраструктуру бизнеса корпоративных клиентов, путем разработки и внедрения индивидуальных решений, использующих возможности современных информационных технологий и обеспечивающих безопасность успеха наших клиентов.</font></div>
+<div align="justify">
+	&nbsp;</div>
+<div align="justify">
+	<font face="Tahoma" size="2">При реализации этой стратегии мы руководствуемся следующими основными принципами:</font></div>
+<ul>
+	<li>
+		<div align="justify">
+			<font face="Tahoma" size="2">индивидуальный подход к каждому клиенту;</font></div>
+	</li>
+	<li>
+		<div align="justify">
+			<font face="Tahoma" size="2">оперативность разработки технических решений, отвечающих задачам клиента;</font></div>
+	</li>
+	<li>
+		<div align="justify">
+			<font face="Tahoma" size="2">точность соблюдения договорных обязательств;</font></div>
+	</li>
+	<li>
+		<div align="justify">
+			<font face="Tahoma" size="2">полное соответствие продукции и услуг действующим стандартам и руководящим документам;</font></div>
+	</li>
+	<li>
+		<div align="justify">
+			<font face="Tahoma" size="2">высокий профессиональный уровень реализации проектов.</font></div>
+	</li>
+</ul>
+<div align="justify">
+	<font face="Tahoma" size="2">Производственные возможности предприятия и компетенция специалистов позволяют реализовать полный цикл мероприятий по созданию объектов информатизации - от проектирования до ввода в эксплуатацию. Комплексный подход к вопросам безопасности и защиты информации, реализуемый специалистами предприятия, позволяет нашим клиентам быть уверенными в обеспечении необходимого уровня конфиденциальности.</font></div>
+<br><br><br>
+        </td>
+<td width="20"><img src="img/s.gif" alt="" width="20" height="1" border="0"></td>
+<td width="200" valign="top">
+<br><br><img src="img/s.gif" width="200" height="1" border="0"><br><a href="http://www.getac.infopro.ru" target="_blank"></a><br/>
+<p>&nbsp;</p>        </td>
+</tr>
+</table>
+<!-- End data page-->
+        </td>
+</tr>
+</table>
+<!-- End Center Page-->
+<!-- Footer -->
+<table width="100%" height="100" border="0" cellspacing="0" cellpadding="0" background="img/bg_footer.gif" bgcolor="#28527A">
+                <tr>
+                          <td colspan="2" height="4" bgcolor="#FFFFFF" background="img/bg_bot_footer.gif"><img src="/img/x.gif" alt="" width="1" height="4" border="0"></td>
+                </tr>
+  <tr valign="middle">
+  <td width="70"><img src="/img/x.gif" alt="" width="70" height="1" border="0"></td>
+    <td width="100%" class="copyright" align="right">
+    <table  width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr><td>
+    <div align="left"><font color=white>2005, АО "ИНФОПРО"<br>
+117587, Москва, Варшавское шоссе, 125<br>
+(800) 555-8505</font><br>
+<a href="mailto:info@infopro.ru" style="color:white; text-decoration: underline;">info@infopro.ru</a><br>
+</div></td><td><noindex>
+  <div class="copyright" align="right"><br><b> Global Media Group:  <a style="color:white;"  href="http://www.globalmg.ru/">разработка веб сайта </a></b></div>
+ </noindex></td></tr>
+</table>
+  </td>
+</table>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2621941-1";
+urchinTracker();
+</script>
+<!-- End Footer -->
+
+</body>
+</html>

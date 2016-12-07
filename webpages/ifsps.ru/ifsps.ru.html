@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>IFS Payment Services</title>
+<meta name="title" content="Ð¾ ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸">
+<meta name="author" content="Administrator">
+<meta name="description" content="IFS Payment Services - ÑÐ¸ÑÑÐµÐ¼Ð½ÑÐ¹ Ð¸Ð½ÑÐµÐ³ÑÐ°ÑÐ¾Ñ Ð¿Ð»Ð°ÑÐµÐ¶Ð½ÑÑ ÑÐ¸ÑÑÐµÐ¼">
+<meta name="keywords" content="Ð¿Ð»Ð°ÑÑÐ¸ÐºÐ¾Ð²ÑÑ ÐºÐ°ÑÑÑ, ÐºÑÐµÐ´Ð¸ÑÐ½Ð°Ñ ÐºÐ°ÑÑÐ°, Ð¿ÑÐ¾Ð¸Ð·Ð²Ð¾Ð´ÑÑÐ²Ð¾ ÐºÐ°ÑÑ, ÑÐ»ÐµÐºÑÑÐ¾Ð½Ð½ÑÐµ Ð¿Ð»Ð°ÑÐµÐ¶Ð¸,">
+<meta name="Generator" content="Mambo - Copyright 2000 - 2005 Miro International Pty Ltd.  All rights reserved.">
+<meta name="robots" content="index, follow">
+<!--<link rel="shortcut icon" href="/favicon.ico">-->
+<link rel="stylesheet" type="text/css" href="/index_files/template_css.css">
+</head>
+<body class="body">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+ 
+<script type="text/javascript" src="/index_files/disclaim-element.js"></script>
+<script type="text/javascript" src="/index_files/graph-calc.js"></script>
+<script type="text/javascript" src="/index_files/jquery.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.ifsps.ru\/";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "24";
+var displayMonth = "Ð¸ÑÐ»";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">
+body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}
+#wm-ipp a:hover{text-decoration:underline!important;}
+h1 {color:#3280bc; font-size:14pt; border-bottom:1px solid #3280bc; text-transform:lowercase; margin:0;}
+</style>
+
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<a name="top"></a>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr valign="top">
+    <td width="20"><img src="/index_files/555_01.jpg" alt="Ð±Ð°Ð½ÐºÐ¾Ð²ÑÐºÐ¸Ðµ ÐºÐ°ÑÑÐ¾ÑÐºÐ¸" width="20" height="81" border="0"></td>
+    <td width="200" class="navigation">&nbsp;</td>
+    <td width="20"><img src="/index_files/555_03.jpg" alt="ÐºÑÐµÐ´Ð¸ÑÐ½ÑÐµ ÐºÐ°ÑÑÐ¾ÑÐºÐ¸" width="20" height="81" border="0"></td>
+    <td width="300" align="center" valign="bottom"><a href="/"><img src="/index_files/555_04.gif" alt="ÐÐ° Ð³Ð»Ð°Ð²Ð½ÑÑ www.ifsps.ru " width="300" height="81" border="0"></a></td>
+    <td width="19" align="center" valign="bottom"><img src="/index_files/555_05.jpg" alt="Ð±Ð°Ð½ÐºÐ¾Ð²ÑÐºÐ¸Ðµ ÐºÐ°ÑÑÑ" width="19" height="81" border="0"></td>
+    <td width="100%" class="cards_top">&nbsp;</td>
+  </tr>
+  <tr valign="top">
+    <td width="20"><img src="/index_files/555_08.jpg" alt="" width="20" height="79" border="0"></td>
+    <td width="200" class="slogan">                        <table cellpadding="0" cellspacing="0" class="moduletable_slogan">
+                                                <tbody><tr>
+                                <td class="moduletd_slogan">
+                <table class="contentpaneopen">
+                                <tbody><tr>
+                        <td valign="top" colspan="2" class="content_td_slogan">
+                        <span class="slogan_txt">ÐÑÐ¾Ð´ÑÐºÑÑ ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸ IFS ÑÐ¾Ð·Ð´Ð°Ð»Ð¸ ÑÐ¾ÑÑÐ¸Ð¹ÑÐºÐ¸Ð¹ ÑÑÐ½Ð¾Ðº Ð¿Ð»Ð°ÑÑÐ¸ÐºÐ¾Ð²ÑÑ ÐºÐ°ÑÑ!</span>                         </td>
+                </tr>
+                                </tbody></table>
+
+                </td>
+                        </tr>
+                        </tbody></table>
+                        </td>
+    <td width="20"><img src="/index_files/555_10.jpg" alt="Ð¼Ð¾Ð½ÐµÑÐ° Ð¾Ð´Ð½Ð° ÑÑÑÑÑÐ° ÑÑÐ±Ð»ÐµÐ¹" width="20" height="79" border="0"></td>
+    <td width="300" align="center" valign="top" class="address">                        <table cellpadding="0" cellspacing="0" class="moduletable_adress">
+                                                <tbody><tr>
+                                <td class="moduletd_adress">
+                <table class="contentpaneopen">
+                                <tbody><tr>
+                        <td valign="top" colspan="2" class="content_td_adress">
+                        <div align="center">107045 Ð Ð¾ÑÑÐ¸Ñ ÐÐ¾ÑÐºÐ²Ð°<br>ÐÐ°ÐµÐ² Ð¿ÐµÑ., 20 "ÐÐ°ÐµÐ² ÐÐ»Ð°Ð·Ð°", Ð¾ÑÐ¸Ñ 202<br>ÑÐµÐ».: +(495) 604 84 72 <br>ÑÐ°ÐºÑ: +(495) 604 84 62 </div><div align="center">
+<script language="JavaScript" type="text/javascript"> 
+<!-- 
+var prefix = '&#109;a' + 'i&#108;' + '&#116;o'; 
+var path = 'hr' + 'ef' + '='; 
+var addy6136 = 's&#117;pp&#111;rt' + '&#64;' + '&#105;fsps' + '&#46;' + 'r&#117;'; 
+document.write( '<a class="email_link" ' + path + '\'' + prefix + ':' + addy6136 + '\'>' ); 
+document.write( addy6136 ); 
+document.write( '<\/a>' ); 
+//--> 
+</script>
+<noscript> 
+Ð­ÑÐ¾ ÑÐ¾Ð¾Ð±ÑÐµÐ½Ð¸Ðµ Ð·Ð°ÑÐ¸ÑÐµÐ½Ð¾ Ð¾Ñ ÑÐ¿Ð°Ð¼-Ð±Ð¾ÑÐ¾Ð². ÐÐ»Ñ ÐµÐ³Ð¾ Ð¿ÑÐ¾ÑÐ¼Ð¾ÑÑÐ° Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±ÑÑÑ Ð°ÐºÑÐ¸Ð²Ð¸ÑÐ¾Ð²Ð°Ð½ Javascript
+</noscript> 
+</div>                        </td>
+                </tr>
+                                </tbody></table>
+
+                </td>
+                        </tr>
+                        </tbody></table>
+                        </td>
+    <td width="20"><img src="/index_files/555_12.jpg" alt="Ð±Ð°Ð½ÐºÐ¾Ð²ÑÐºÐ¸Ðµ ÐºÐ°ÑÑÐ¾ÑÐºÐ¸" width="19" height="79" border="0"></td>
+    <td width="100%" class="rezina">&nbsp;</td>
+  </tr>
+  <tr valign="top">
+    <td width="20"><img src="/index_files/555_01.jpg" alt="Ð±Ð°Ð½ÐºÐ¾Ð²ÑÐºÐ¸Ðµ ÐºÐ°ÑÑÐ¾ÑÐºÐ¸" width="20" height="20" border="0"></td>
+    <td width="200" class="news">&nbsp;</td>
+    <td width="20" class="menu_left">&nbsp;</td>
+    <td width="300" class="menu">&nbsp;</td>
+    <td width="20" class="menu_right" valign="top">&nbsp;</td>
+    <td width="100%" align="center"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td align="center" class="main" valign="top">&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          </td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+  <tr valign="top">
+    <td width="20">&nbsp;</td>
+    <td width="200" class="news">
+
+<h1>ÐÐ¾Ð²Ð¾ÑÑÐ¸:</h1>
+
+<p><a href="news">ÐÐ¾ÑÐ±ÑÑ 2014</a></p>
+
+<p><strong>ÐÐ¾Ð´Ð³Ð¾ÑÐ¾Ð²Ð¸ÑÐµÐ»ÑÐ½ÑÐµ ÑÐ°Ð±Ð¾ÑÑ Ð´Ð»Ñ Ð½Ð¾Ð²Ð¾Ð³Ð¾ ÑÐµÑÐ²ÐµÑÐ° ÑÐ°Ð¹Ð»Ð¾Ð²Ð¾Ð³Ð¾ Ð¾Ð±Ð¼ÐµÐ½Ð° ÐÐ Comfort-II</strong></p>
+
+<p><a href="news">ÐÐºÑÑÐ±ÑÑ 2014</a></p>
+
+<p><strong>ÐÑÐ¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¾ Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ Ð²ÐµÑÑÐ¸Ð¸ ÐÐ Comfort-II</strong></p>
+
+<p><a href="news">Ð¡ÐµÐ½ÑÑÐ±ÑÑ 2014</a></p>
+
+<p><strong>ÐÐ TP-II Ð£Ð²ÐµÐ»Ð¸ÑÐµÐ½Ð¸Ðµ ÑÑÐµÐ¿ÐµÐ½Ð¸ Ð·Ð°ÑÐ¸ÑÑ Ð¾Ñ Ð½ÐµÐ¿ÑÐ°Ð²Ð¾Ð¼ÐµÑÐ½ÑÑ Ð²Ð¾Ð·Ð²ÑÐ°ÑÐ¾Ð² Ð´ÐµÐ½ÐµÐ¶Ð½ÑÑ ÑÑÐµÐ´ÑÑÐ².</strong></p>
+
+<p><a href="news">ÐÐ²Ð³ÑÑÑ 2014</a><br />
+<strong>Ð¡Ð¿ÐµÑÐ¸Ð°Ð»Ð¸ÑÑÐ°Ð¼Ð¸ Ð½Ð°ÑÐµÐ¹ ÐÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸ Ð¿ÑÐ¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð° ÑÐ°Ð±Ð¾ÑÐ° Ð¿Ð¾ ÑÐ¾ÑÐ¼Ð¸ÑÐ¾Ð²Ð°Ð½Ð¸Ñ Ð´Ð°Ð½Ð½ÑÑ Ð¸Ð· ÐÐ Comfort-II Ð´Ð»Ñ Ð±ÑÑÐ¾ ÐºÑÐµÐ´Ð¸ÑÐ½ÑÑ Ð¸ÑÑÐ¾ÑÐ¸Ð¹.</strong></p>
+
+<p><a href="news">ÐÑÐ»Ñ 2014</a><br />
+<strong>ÐÑÐ¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¾ Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ Ð²ÐµÑÑÐ¸Ð¸ ÐÐ Comfort-II</strong></p>
+
+<p><a href="news">ÐÑÐ½Ñ 2014</a><br />
+<strong>ÐÑÐ¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¾ Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ Ð²ÐµÑÑÐ¸Ð¸ ÐÐ Comfort-II</strong></p>
+
+<p><a href="news">ÐÐ°Ð¹ 2014</a><br />
+<strong>ÐÑÐ¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¾ Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ Ð²ÐµÑÑÐ¸Ð¸ ÐÐ Comfort-II</strong></p>
+
+<p><a href="news">ÐÐ¿ÑÐµÐ»Ñ 2014</a><br />
+<strong>ÐÐ TP-II Ð¿Ð¾Ð»ÑÑÐ¸Ð» ÑÐµÑÑÐ¸ÑÐ¸ÐºÐ°Ñ Ð½Ð° Ð¾ÑÑÑÐµÑÑÐ²Ð»ÐµÐ½Ð¸Ðµ Ð¾Ð¿ÐµÑÐ°ÑÐ¸Ð¹ Ð½Ð° Ð´ÐµÐ½ÐµÐ¶Ð½ÑÐµ Ð¿ÐµÑÐµÐ²Ð¾Ð´Ñ Ð¿Ð¾ ÑÑÐ°Ð½Ð´Ð°ÑÑÑ Visa Money Transfer.</strong></p>
+
+                        </td>
+    <td width="20" class="menu_left">&nbsp;</td>
+    <td width="300" class="menu">                        
+<table cellpadding="0" cellspacing="0" class="moduletable">
+<tbody><tr>
+<td class="moduletd">
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody>
+<tr align="left"><td><a href="/./" class="mainlevel" id="active_menu"><img src="/index_files/menu_bullet.gif" border="0" alt="Ð ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸"> Ð ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸</a>
+<a href="/contacts" class="sublevel1"><img src="/index_files/submenu_bullet.gif" border="0" alt="ÐÐ¾Ð½ÑÐ°ÐºÑÑ"> ÐÐ¾Ð½ÑÐ°ÐºÑÑ</a>
+<a href="/partners" class="sublevel1"><img src="/index_files/submenu_bullet.gif" border="0" alt="ÐÐ°ÑÑÐ½ÐµÑÑ"> ÐÐ°ÑÑÐ½ÐµÑÑ</a>
+<a href="/news" class="sublevel1"><img src="/index_files/submenu_bullet.gif" border="0" alt="ÐÐ¾Ð²Ð¾ÑÑÐ¸"> ÐÐ¾Ð²Ð¾ÑÑÐ¸</a>
+</td></tr>
+<tr align="left"><td><span class="mainlevel">&nbsp;</span></td></tr>
+<tr align="left"><td><a href="/solutions" class="mainlevel" id="active_menu"><img src="/index_files/menu_bullet.gif" border="0" alt="Ð ÐµÑÐµÐ½Ð¸Ñ"> Ð ÐµÑÐµÐ½Ð¸Ñ</a>
+<a href="/finance" class="sublevel1"><img src="/index_files/submenu_bullet.gif" border="0" alt="Ð¤Ð¸Ð½Ð°Ð½ÑÐ¾Ð²ÑÐ¼ Ð¾ÑÐ³Ð°Ð½Ð¸Ð·Ð°ÑÐ¸ÑÐ¼"> Ð¤Ð¸Ð½Ð°Ð½ÑÐ¾Ð²ÑÐ¼ Ð¾ÑÐ³Ð°Ð½Ð¸Ð·Ð°ÑÐ¸ÑÐ¼</a>
+<a href="/paymentsystem" class="sublevel1"><img src="/index_files/submenu_bullet.gif" border="0" alt="ÐÐ»Ð°ÑÐµÐ¶Ð½ÑÐ¼ ÑÐ¸ÑÑÐµÐ¼Ð°Ð¼"> ÐÐ»Ð°ÑÐµÐ¶Ð½ÑÐ¼ ÑÐ¸ÑÑÐµÐ¼Ð°Ð¼</a>
+<a href="/service" class="sublevel1"><img src="/index_files/submenu_bullet.gif" border="0" alt="Ð¢Ð¾ÑÐ³Ð¾Ð²Ð¾-ÑÐµÑÐ²Ð¸ÑÐ½ÑÐ¼ Ð¿ÑÐµÐ´Ð¿ÑÐ¸ÑÑÐ¸ÑÐ¼"> Ð¢Ð¾ÑÐ³Ð¾Ð²Ð¾-ÑÐµÑÐ²Ð¸ÑÐ½ÑÐ¼ Ð¿ÑÐµÐ´Ð¿ÑÐ¸ÑÑÐ¸ÑÐ¼</a>
+</td></tr>
+<tr align="left"><td><span class="mainlevel">&nbsp;</span></td></tr>
+<tr align="left"><td><a href="/projects" class="mainlevel" id="active_menu"><img src="/index_files/menu_bullet.gif" border="0" alt="ÐÑÐ¾ÐµÐºÑÑ"> ÐÑÐ¾ÐµÐºÑÑ</a>
+</td></tr>
+<tr align="left"><td><span class="mainlevel">&nbsp;</span></td></tr>
+<tr align="left"><td><a href="/consulting" class="mainlevel" id="active_menu"><img src="/index_files/menu_bullet.gif" border="0" alt="Ð£ÑÐ»ÑÐ³Ð¸"> Ð£ÑÐ»ÑÐ³Ð¸</a>
+<a href="/consulting" class="sublevel1"><img src="/index_files/submenu_bullet.gif" border="0" alt="ÐÐ¾Ð½ÑÐ°Ð»ÑÐ¸Ð½Ð³"> ÐÐ¾Ð½ÑÐ°Ð»ÑÐ¸Ð½Ð³</a>
+<a href="/education" class="sublevel1"><img src="/index_files/submenu_bullet.gif" border="0" alt="ÐÐ±ÑÑÐµÐ½Ð¸Ðµ"> ÐÐ±ÑÑÐµÐ½Ð¸Ðµ</a>
+<a href="/integration" class="sublevel1"><img src="/index_files/submenu_bullet.gif" border="0" alt="Ð¡Ð¸ÑÑÐµÐ¼Ð½Ð°Ñ Ð¸Ð½ÑÐµÐ³ÑÐ°ÑÐ¸Ñ"> Ð¡Ð¸ÑÑÐµÐ¼Ð½Ð°Ñ Ð¸Ð½ÑÐµÐ³ÑÐ°ÑÐ¸Ñ</a>
+</td></tr>
+<tr align="left"><td><span class="mainlevel">&nbsp;</span></td></tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+</td>
+    <td width="20" class="menu_right" valign="top">&nbsp;</td>
+    <td width="100%" align="center"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td align="center" class="main" valign="top">
+
+<h1>Ð ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸</h1>
+
+<p>ÐÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ñ IFS Payment Services <strong>Ð²ÐµÐ´ÑÑÐ¸Ð¹ ÑÐ¾ÑÑÐ¸Ð¹ÑÐºÐ¸Ð¹ ÑÐ¸ÑÑÐµÐ¼Ð½ÑÐ¹ Ð¸Ð½ÑÐµÐ³ÑÐ°ÑÐ¾Ñ</strong> Ð² Ð¾Ð±Ð»Ð°ÑÑÐ¸ ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ñ Ð¸ Ð²Ð½ÐµÐ´ÑÐµÐ½Ð¸Ñ ÑÐ¸ÑÑÐµÐ¼ ÑÐ»ÐµÐºÑÑÐ¾Ð½Ð½ÑÑ Ð±ÐµÐ·Ð½Ð°Ð»Ð¸ÑÐ½ÑÑ Ð¿Ð»Ð°ÑÐµÐ¶ÐµÐ¹ Ð¸ Ð¿ÑÐ¾ÐµÐºÑÐ¸ÑÐ¾Ð²Ð°Ð½Ð¸Ñ Ð¿Ð»Ð°ÑÐµÐ¶Ð½ÑÑ ÑÐ¸ÑÑÐµÐ¼ Ð½Ð° Ð±Ð°Ð·Ðµ Ð¿Ð»Ð°ÑÑÐ¸ÐºÐ¾Ð²ÑÑ ÐºÐ°ÑÑ Ð»ÑÐ±Ð¾Ð³Ð¾ ÑÑÐ¾Ð²Ð½Ñ ÑÐ»Ð¾Ð¶Ð½Ð¾ÑÑÐ¸. ÐÐ»ÑÑÐµÐ²ÑÐµ Ð·Ð°ÐºÐ°Ð·ÑÐ¸ÐºÐ¸ ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸ â ÑÐ¸Ð½Ð°Ð½ÑÐ¾Ð²ÑÐµ Ð¾ÑÐ³Ð°Ð½Ð¸Ð·Ð°ÑÐ¸Ð¸, Ð±Ð°Ð½ÐºÐ¸ Ð¸ Ð¿ÑÐ¾ÑÐµÑÑÐ¸Ð½Ð³Ð¾Ð²ÑÐµ ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸</p>
+
+<p>Ð¡ 2003 Ð³Ð¾Ð´Ð° ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ñ Ð¿Ð¾ÑÑÐ°Ð²Ð»ÑÐµÑ Ð½Ð° ÑÐ¾ÑÑÐ¸Ð¹ÑÐºÐ¸Ð¹ ÑÑÐ½Ð¾Ðº Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ð½Ð¾Ðµ Ð¾Ð±ÐµÑÐ¿ÐµÑÐµÐ½Ð¸Ðµ Ð´Ð»Ñ ÑÐ¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ñ ÑÐµÑÑÐ¼Ð¸ ÑÐµÑÐ¼Ð¸Ð½Ð°Ð»ÑÐ½Ð¾Ð³Ð¾ Ð¾Ð±Ð¾ÑÑÐ´Ð¾Ð²Ð°Ð½Ð¸Ñ, ÑÐ¸ÑÑÐµÐ¼Ñ Ð°Ð²ÑÐ¾ÑÐ¸Ð·Ð°ÑÐ¸Ð¸, ÑÐ»ÐµÐºÑÑÐ¾Ð½Ð½ÑÑ Ð´ÐµÐ½ÐµÐ¶Ð½ÑÑ Ð¿ÐµÑÐµÐ²Ð¾Ð´Ð¾Ð² Ð¸ ÑÐ¸ÑÑÐµÐ¼Ñ ÑÐ¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ñ Ð¿Ð»Ð°ÑÑÐ¸ÐºÐ¾Ð²ÑÐ¼Ð¸ ÐºÐ°ÑÑÐ°Ð¼Ð¸.</p>
+
+<p>IFS Payment Services Ð·Ð°Ð½Ð¸Ð¼Ð°ÐµÑÑÑ ÑÐµÐ°Ð»Ð¸Ð·Ð°ÑÐ¸ÐµÐ¹ Ð¸ Ð¸Ð¼ÐµÐµÑ ÑÐºÑÐºÐ»ÑÐ·Ð¸Ð²Ð½ÑÐµ Ð¿ÑÐ°Ð²Ð° Ð½Ð° ÑÑÑÐ°Ð½Ð¾Ð²ÐºÑ, Ð¼Ð¾Ð´ÐµÑÐ½Ð¸Ð·Ð°ÑÐ¸Ñ Ð¸ ÑÐ¾Ð¿ÑÐ¾Ð²Ð¾Ð¶Ð´ÐµÐ½Ð¸Ðµ Ð² Ð Ð¾ÑÑÐ¸Ð¸ ÑÐµÑÑÐ¸ÑÐ¸ÑÐ¸ÑÐ¾Ð²Ð°Ð½Ð½ÑÑ Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ð½ÑÑ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ¾Ð² Ð½Ð° Ð±Ð°Ð·Ðµ <strong>Techique Plus II</strong>.</p>
+
+<p>Ð¡ 2006 Ð³Ð¾Ð´Ð° ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ñ Ð·Ð½Ð°ÑÐ¸ÑÐµÐ»ÑÐ½Ð¾ ÑÐ°ÑÑÐ¸ÑÐ¸Ð»Ð° ÑÐ¿ÐµÐºÑÑ Ð¿Ð¾ÑÑÐ°Ð²Ð»ÑÐµÐ¼ÑÑ ÑÐµÑÐµÐ½Ð¸Ð¹ Ð¸ ÑÑÐ»ÑÐ³. ÐÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ñ Ð¿Ð¾Ð´Ð¿Ð¸ÑÐ°Ð»Ð° Ð´Ð¸ÑÑÑÐ¸Ð±ÑÑÑÐ¾ÑÑÐºÐ¾Ðµ ÑÐ¾Ð³Ð»Ð°ÑÐµÐ½Ð¸Ðµ Ð½Ð° Ð¿ÑÐ¾Ð´Ð°Ð¶Ñ Ð¸ ÑÐ°ÑÐ¿ÑÐ¾ÑÑÑÐ°Ð½ÐµÐ½Ð¸Ðµ Ð² Ð Ð¾ÑÑÐ¸Ð¸ Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ð½ÑÑ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ¾Ð² Ð´Ð»Ñ Ð¿Ð¾Ð´Ð³Ð¾ÑÐ¾Ð²ÐºÐ¸ Ð´Ð°Ð½Ð½ÑÑ EMV Ð¸ Ð´Ð²ÑÑÑÐ°ÐºÑÐ¾ÑÐ½Ð¾Ð¹ Ð°ÑÑÐµÐ½ÑÐ¸ÑÐ¸ÐºÐ°ÑÐ¸Ð¸, ÑÐ°Ð·ÑÐ°Ð±Ð¾ÑÐ°Ð½Ð½ÑÑ Ð²ÐµÐ´ÑÑÐ¸Ð¼ Ð¼Ð¸ÑÐ¾Ð²ÑÐ¼ Ð¿ÑÐ¾Ð¸Ð·Ð²Ð¾Ð´Ð¸ÑÐµÐ»ÐµÐ¼ ÑÐ¸ÑÑÐµÐ¼ Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÐ¸ â ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸ÐµÐ¹ <strong>Cryptomathic</strong>. Ð¡Ð¾Ð²Ð¼ÐµÑÑÐ½Ð¾ Ñ ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸ÐµÐ¹ <strong>Trueb Switzerland</strong> Ð¿ÑÐµÐ´ÑÑÐ°Ð²Ð¸Ð»Ð° Ð½Ð° ÑÐ¾ÑÑÐ¸Ð¹ÑÐºÐ¾Ð¼ ÑÑÐ½ÐºÐµ ÑÐµÑÐµÐ½Ð¸Ñ Ð´Ð»Ñ Ð¾ÑÐ³Ð°Ð½Ð¸Ð·Ð°ÑÐ¸Ð¸ Ð¿Ð¾Ð»Ð½Ð¾Ð³Ð¾ ÑÐ¸ÐºÐ»Ð° ÑÐ¸ÑÐºÑÐ»ÑÑÐ¸Ð¸ EMV ÐºÐ°ÑÑ Ð¸ ÑÐµÑÐµÐ½Ð¸Ðµ Ð¿Ð¾ Instant EMV issuance. Ð¢Ð°Ðº Ð¶Ðµ, ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ñ ÑÐ°Ð·ÑÐ°Ð±Ð¾ÑÐ°Ð»Ð° Ð±ÑÐ´Ð¶ÐµÑÐ½ÑÐµ ÑÐµÑÐµÐ½Ð¸Ñ Ð´Ð»Ñ Ð½ÐµÐ±Ð¾Ð»ÑÑÐ¸Ñ ÑÐ¸Ð½Ð°Ð½ÑÐ¾Ð²ÑÑ Ð¾ÑÐ³Ð°Ð½Ð¸Ð·Ð°ÑÐ¸Ð¹ â ÑÐ¸ÑÑÐµÐ¼Ñ ÑÐ¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ñ Ð¿Ð»Ð°ÑÑÐ¸ÐºÐ¾Ð²ÑÐ¼Ð¸ ÐºÐ°ÑÑÐ°Ð¼Ð¸ <strong>Comfort II</strong> Ð¸ ÑÐ¸ÑÑÐµÐ¼Ñ Ð¿Ð¾Ð´Ð³Ð¾ÑÐ¾Ð²ÐºÐ¸ Ð´Ð°Ð½Ð½ÑÑ Ð¸ Ð¿ÐµÑÑÐ¾Ð½Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ð¸ <strong>ArtSmart 2000</strong>. ÐÑÐ½Ð¾Ð²Ð¾Ð¿Ð¾Ð»Ð°Ð³Ð°ÑÑÐµÐµ Ð¿ÑÐµÐ¸Ð¼ÑÑÐµÑÑÐ²Ð¾ ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸ <strong>IFS Payment Services</strong> Ð½Ð° ÑÐ¾ÑÑÐ¸Ð¹ÑÐºÐ¾Ð¼ ÑÑÐ½ÐºÐµ â Ð³Ð¸Ð±ÐºÐ°Ñ Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ð° ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½Ð¾Ð³Ð¾ ÑÐ¾Ð´ÐµÐ¹ÑÑÐ²Ð¸Ñ Ð±Ð°Ð½ÐºÐ°Ð¼, Ð¾ÑÐ²Ð°ÑÑÐ²Ð°ÑÑÐ°Ñ Ð²ÑÐµ ÐºÐ»ÑÑÐµÐ²ÑÐµ ÑÑÐ°Ð¿Ñ Ð²Ð½ÐµÐ´ÑÐµÐ½Ð¸Ñ Ð¿ÑÐ¾ÐµÐºÑÐ¾Ð² Ð¿Ð»Ð°ÑÑÐ¸ÐºÐ¾Ð²ÑÑ ÐºÐ°ÑÑ:</p>
+
+<ul>
+<li>Ð¿Ð¾Ð´Ð³Ð¾ÑÐ¾Ð²ÐºÐ° Ð±Ð¸Ð·Ð½ÐµÑ Ð¿Ð»Ð°Ð½Ð¾Ð² Ð½Ð° ÑÑÐ¾Ð²Ð½Ðµ ÑÑÐµÐ±Ð¾Ð²Ð°Ð½Ð¸Ð¹ Ð¼ÐµÐ¶Ð´ÑÐ½Ð°ÑÐ¾Ð´Ð½ÑÑ ÑÐ¸ÑÑÐµÐ¼ </li>
+<li>ÑÐ¾ÑÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¾Ð±Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ñ Ð²ÑÐ±Ð¾ÑÐ° ÑÐµÑÐ½Ð¾Ð»Ð¾Ð³Ð¸ÑÐµÑÐºÐ¾Ð³Ð¾ ÑÐµÑÐµÐ½Ð¸Ñ</li>
+<li>Ð¿ÑÐ°ÐºÑÐ¸ÑÐµÑÐºÐ°Ñ Ð¿Ð¾Ð¼Ð¾ÑÑ Ð² Ð²ÑÐ±Ð¾ÑÐµ Ð±Ð°Ð½ÐºÐ°-ÑÐ¿Ð¾Ð½ÑÐ¾ÑÐ°</li>
+<li>ÑÑÐ°ÑÑÐ¸Ðµ Ð² Ð¿ÐµÑÐµÐ³Ð¾Ð²Ð¾ÑÐ°Ñ Ñ Ð¿Ð»Ð°ÑÐµÐ¶Ð½ÑÐ¼Ð¸ ÑÐ¸ÑÑÐµÐ¼Ð°Ð¼Ð¸ Ð¸ Ð¾ÑÑÐ°Ð»ÑÐ½ÑÐ¼Ð¸ Ð¿Ð°ÑÑÐ½ÐµÑÐ°Ð¼Ð¸</li>
+<li>Ð¾ÑÐ²ÐµÑÑÑÐ²ÐµÐ½Ð½Ð¾ÑÑÑ Ð·Ð° ÑÐµÐ·ÑÐ»ÑÑÐ°ÑÑ ÑÐµÑÑÐ¸ÑÐ¸ÐºÐ°ÑÐ¸Ð¸ Ð² Ð¿Ð»Ð°ÑÐµÐ¶Ð½ÑÑ ÑÐ¸ÑÑÐµÐ¼Ð°Ñ</li>
+</ul>
+
+
+                <div class="back_button"><br><a href="#back" onclick="history.back(); return false;"><img src="/index_files/back.gif" width="16" height="16" border="0" alt="ÐÐ°Ð·Ð°Ð´"></a>&nbsp;<a href="#top" onclick="scrollTo(0, 0); return false;"><img src="/index_files/top.gif" width="16" height="16" border="0" alt="ÐÐ°Ð²ÐµÑÑ"></a></div>
+                                </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          </td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+  <tr valign="top">
+    <td width="20"><img src="/index_files/555_22.jpg" alt="ÑÑÐ½Ð¾Ðº ÐºÑÐµÐ´Ð¸ÑÐ½ÑÑ ÐºÐ°ÑÑ" width="20" height="36" border="0"></td>
+    <td width="200" class="footer_left">
+
+   
+   <!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=583695"'+
+' target=_top><img src="http://d8.ce.b8.a0.top.list.ru/counter'+
+'?id=583695;t=211;js='+js+a+';rand='+Math.random()+
+'" alt="Ð ÐµÐ¹ÑÐ¸Ð½Ð³@Mail.ru"'+' border=0 height=31 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="/web/20120724005911/http://top.mail.ru/jump?from=583695"><img
+src="/web/20120724005911im_/http://d8.ce.b8.a0.top.list.ru/counter?js=na;id=583695;t=211"
+border=0 height=31 width=88
+alt="Ð ÐµÐ¹ÑÐ¸Ð½Ð³@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+   
+   
+    </td>
+    <td width="20"><img src="/index_files/555_24.jpg" alt="ÑÐ¸ÑÑÐµÐ¼Ð° ÐºÑÐµÐ´Ð¸ÑÐ¾Ð²Ð°Ð½Ð¸Ñ" width="20" height="36" border="0"></td>
+    <td width="300" class="footer_copyright">                        <table cellpadding="0" cellspacing="0" class="moduletable_footer">
+                                                <tbody><tr>
+                                <td class="moduletd_footer">
+                <table class="contentpaneopen">
+                                <tbody><tr>
+                        <td valign="top" colspan="2" class="content_td_footer">
+                                                </td>
+                </tr>
+                                </tbody></table>
+
+                </td>
+                        </tr>
+                        </tbody></table>
+                        </td>
+    <td width="20"><img src="/index_files/555_26.jpg" alt="ÑÐ¾ÑÑÐ¸Ð¹ÑÐºÐ¸Ð¹ ÑÑÐ½Ð¾Ðº Ð¿Ð»Ð°ÑÑÐ¸ÐºÐ¾Ð²ÑÑ ÐºÐ°ÑÑ" width="19" height="36" border="0"></td>
+    <td width="100%" align="center" valign="middle" class="footer_counter">107045, Ð Ð¾ÑÑÐ¸Ñ, ÐÐ¾ÑÐºÐ²Ð°, ÐÐ°ÐµÐ² Ð¿ÐµÑ., 20,&nbsp;Â«ÐÐ°ÐµÐ² ÐÐ»Ð°Ð·Ð°Â», Ð¾ÑÐ¸Ñ 202</td>
+  </tr>
+  <tr valign="top">
+    <td width="20"><img src="/index_files/555_29.jpg" alt="Ð¿Ð»Ð°ÑÑÐ¸ÐºÐ¾Ð²ÑÐµ ÐºÐ°ÑÑÐ¾ÑÐºÐ¸" width="20" height="19" border="0"></td>
+    <td width="200"><img src="/index_files/555_30.jpg" alt="Ð¿Ð»Ð°ÑÑÐ¸ÐºÐ¾Ð²ÑÐµ ÐºÐ°ÑÑÐ¾ÑÐºÐ¸" width="200" height="19" border="0"></td>
+    <td width="20"><img src="/index_files/555_31.jpg" alt="Ð¿Ð»Ð°ÑÑÐ¸ÐºÐ¾Ð²ÑÐµ ÐºÐ°ÑÑÐ¾ÑÐºÐ¸" width="20" height="19" border="0"></td>
+    <td width="300">&nbsp;</td>
+    <td width="20"><img src="/index_files/555_33.jpg" alt="Ð¿Ð»Ð°ÑÑÐ¸ÐºÐ¾Ð²ÑÐµ ÐºÐ°ÑÑÐ¾ÑÐºÐ¸" width="19" height="19" border="0"></td>
+    <td width="100%">&nbsp;</td>
+  </tr>
+</tbody></table>
+</body></html> 

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Контакты</title>
+
+  <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Салон красоты "Люир" оказывает парикмахерские услуги, маникюр, педикюр, массаж и другие косметологические услуги." />
+  <meta name="keywords" content="салон красоты, парикмахерские услуги, маникюр, педикюр, массаж, татуаж, наращивание ресниц, ламинирование волос, биогель, дарсонваль, эпиляция, визаж, спа, spa" />
+  <meta name="author" content="Author Name" />
+
+  <link rel="favourites icon" href="http://www.luir-salon.ru/favicon.ico" />
+	<link rel="stylesheet" href="luir/style.css" type="text/css" media="screen" title="default" charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="luir/jquery.lightbox-0.5.css" media="screen" />
+
+    <link rel="stylesheet" href="http://www.luir-salon.ru/luir/print.css" media="print" type="text/css" />
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://www.luir-salon.ru//?rss.xml" />
+	
+	<!-- JQUERY FILES -->
+	<script type="text/javascript" src="luir/js/jquery.js"></script>
+	<script type="text/javascript" src="luir/js/jquery.form.js"></script>  
+ 		
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$('.submit').click(function() {
+				$('.success').hide();
+				$('.badserver').hide();
+				$('.bademail').hide();
+			});
+				
+			
+			// Contact Form
+			$('#contactform').ajaxForm(function(data) {
+				
+				
+				if (data==1){
+					$('.success').fadeIn("slow");
+					$('#contactform').resetForm();
+				}
+					else if (data==2){
+					$('.badserver').fadeIn("slow");
+				}
+					else if (data==3)
+				{
+					$('.bademail').fadeIn("slow");
+				}
+			});
+
+
+
+	});
+  
+  
+		</script>
+	
+
+
+	<!--[if IE 6]>
+		
+		<link rel="stylesheet" href="luir/ie6.css" type="text/css" media="screen" title="default" charset="utf-8" />
+		
+		<script type='text/javascript' src="src="luir/js/ie6_pngfix.js"></script>
+	
+		<script>  
+	  		DD_belatedPNG.fix('*');
+		</script>
+	
+	<![endif]-->
+	
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="luir/ie7.css" type="text/css" media="screen" title="default" charset="utf-8" />
+	<![endif]-->
+
+<meta charset="UTF-8">
+</head>
+<body>
+<div id='wrapper'>
+<div id="header">
+ <div id='logo'>
+			<a href='http://www.luir-salon.ru/'><img src='luir/images/site/logo.gif' alt='Салон красоты Люир в Отрадном' /></a> <a href='http://www.luir-salon.ru/'><img src='luir/images/site/tel.png' alt='(967) 196-50-47' / align='right'></a>
+		</div>
+
+  <div id="nav">
+    <ul>
+      <li><a href="http://www.luir-salon.ru/">Главная</a></li>
+      <li><a href="http://www.luir-salon.ru/?uslugi.html" >Услуги и цены</a></li>
+      <li><a href="http://www.luir-salon.ru/?news.html" >Новости</a></li>
+      <li><a href="http://www.luir-salon.ru/?gallery.html" >Галерея</a></li>
+      <li><a href="http://www.luir-salon.ru/?contacts.html"  class="current">Контакты</a></li>
+      <li><a href="http://www.luir-salon.ru/?-.html" >Запись ОНЛАЙН</a></li>
+ 
+    </ul>
+  </div> <!-- end #navigation -->
+</div> <!-- end #header -->
+  	<div id='col_large'>
+		<div class='sidebar_section'>
+			<h2>Контактная информация</h2>
+			<p>Мы ждем вас по адресу:</p>
+			<p><span class='address'>Москва, м. Отрадное, Юрловский проезд, дом 14, корпус 1<br/>
+			<strong>Ежедневно</strong> с 10-00 до 22-00 (без праздников и выходных!)<br/>
+			<strong>Запись по телефону:</strong> (967) 196-50-47<br/></span></p>
+<!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту  (начало) -->
+<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ITKRJMcLVwm9Nbh9OCWrhMv_HV3DD_vR&width=600&height=327&lang=ru_RU&sourceType=constructor"></script>
+<!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (конец) -->
+		</div>
+
+	</div> 
+	<div id='col_small'>
+		<div class='text_div'>
+			<h1 class='blue'>Напишите нам</h1>
+				<p>Вы можете отправить нам свои вопросы, пожелания и замечания, заполнив форму  внизу. Ни одно сообщение не останется без внимания!</p>
+			
+<form action="http://www.luir-salon.ru/?contacts.html?jm_contact_form=contacts1" method="post" class="jmc-form jmc-form-contacts1" id="jmc_form_contacts1"><p class="jmc-p jmc-p-name  jmc-p-required"><label class="jmc-label" for="gmc_text_name">Имя<i>*</i></label><span><input type="text" name="jmc_form[822]" value="" class="jmc-text jmc-name" id="gmc_text_name" /></span></p><p class="jmc-p jmc-p-mail  jmc-p-required"><label class="jmc-label" for="gmc_text_mail">Эл. почта<i>*</i></label><span><input type="text" name="jmc_form[823]" value="" class="jmc-text jmc-mail" id="gmc_text_mail" /></span></p><p class="jmc-p jmc-p-message  jmc-p-required"><label class="jmc-label" for="gmc_textarea_message">Сообщение<i>*</i></label><span><textarea name="jmc_form[824]" class="jmc-textarea jmc-message" id="gmc_textarea_message"></textarea></span></p><p class="jmc-send"><input type="submit" value="Отправить" class="submit"/></p></form>
+		</div>
+	</div> 
+	 
+   
+
+
+<div class='clear'></div>
+	<div id='footer'>
+		<p>Copyright 2011 www.luir-salon.ru  Все права защищены.  <a href='#top' class='hide'>Back to top</a></p> 
+<!-- Yandex.Metrika informer -->
+<a href="http://metrika.yandex.ru/stat/?id=2448760&amp;from=informer"
+target="_blank"><img src="//bs.yandex.ru/informer/2448760/1_0_3D243DFF_1D041DFF_1_pageviews"
+width="80" height="15" alt="Яндекс.Метрика" border="0" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter2448760 = new Ya.Metrika(2448760);
+             yaCounter2448760.clickmap(true);
+             yaCounter2448760.trackLinks(true);
+        
+        } catch(e) {}
+    });
+})(window, 'yandex_metrika_callbacks');
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/2448760" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+	</div></div> <!-- end #page -->
+</body>
+</html>

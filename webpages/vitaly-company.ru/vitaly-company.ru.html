@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=WINDOWS-1251" />
+<title>Òóðû ïî Åâðîïå, ëó÷øèå öåíû íà îòäûõ â Åâðîïå, ãîðÿùèå òóðû â Åâðîïó èç Ìîñêâû | Vitaly 2016 - òóðû èç Ìîñêâû</title>
+
+<script type="text/javascript" src="http://www.vitaly-company.ru/js/jquery-1.3.2.min.js"></script>
+
+<link rel="stylesheet" href="http://www.vitaly-company.ru/articles/_styles.css" type="text/css" />
+
+<script type="text/javascript" src="http://www.vitaly-company.ru/js/jquery-easing-1.3.pack.js"></script>
+<script type="text/javascript" src="http://www.vitaly-company.ru/js/jquery-easing-compatibility.1.2.pack.js"></script>
+<script type="text/javascript">
+function getBrowserInfo() {
+ var t,v = undefined;
+ if (window.opera) t = 'Opera';
+ else if (document.all) {
+  t = 'IE';
+  var nv = navigator.appVersion;
+  var s = nv.indexOf('MSIE')+5;
+  v = nv.substring(s,s+1);
+ }
+ else if (navigator.appName) t = 'Netscape';
+ return {type:t,version:v};
+}
+
+function bookmark(a){
+ var url = window.document.location;
+ var title = window.document.title;
+ var b = getBrowserInfo();
+ if (b.type == 'IE' && 7 > b.version && b.version >= 4) window.external.AddFavorite(url,title);
+ else if (b.type == 'Opera') {
+  a.href = url;
+  a.rel = "sidebar";
+  a.title = url+','+title;
+  return true;
+ }
+ else if (b.type == "Netscape") window.sidebar.addPanel(title,url,"");
+ else alert("Íàæìèòå CTRL-D, ÷òîáû äîáàâèòü ñòðàíèöó â çàêëàäêè.");
+ return false;
+}
+</script>
+<link href="/TMPL/style.css?ver=3.3" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://www.vitaly-company.ru/style_slider.css" />
+<script type="text/javascript" src="http://www.vitaly-company.ru/js/coda-slider.1.1.1.pack.js"></script>
+<script type="text/javascript"> var ROOT = 'http://www.vitaly-company.ru/';</script>
+<script type="text/javascript" src="http://www.vitaly-company.ru/js/js.js"></script>
+
+<script type="text/javascript" src="/mit/js/site.js"></script>
+
+<script type="text/javascript">
+	//slider
+var theInt = null;
+	var $crosslink, $navthumb;
+	var curclicked = 0;
+
+	theInterval = function(cur){
+		clearInterval(theInt);
+
+		if( typeof cur != 'undefined' )
+			curclicked = cur;
+
+		$crosslink.removeClass("active-thumb");
+		$navthumb.eq(curclicked).parent().addClass("active-thumb");
+		$(".stripNav ul li a").eq(curclicked).trigger('click');
+
+		theInt = setInterval(function(){
+			$crosslink.removeClass("active-thumb");
+			$navthumb.eq(curclicked).parent().addClass("active-thumb");
+			$(".stripNav ul li a").eq(curclicked).trigger('click');
+			curclicked++;
+			if( 6 == curclicked )
+				curclicked = 0;
+        	}, 3000);
+	};
+
+	$(function(){
+        $("#main-photo-slider").codaSlider();
+
+		$navthumb = $(".nav-thumb");
+		$crosslink = $(".cross-link");
+
+		$navthumb
+		.click(function() {
+			var $this = $(this);
+			theInterval($this.parent().attr('href').slice(1) - 1);
+			return false;
+		});
+
+		theInterval();
+	});
+</script>
+
+<script type="text/javascript">
+var Comagic = Comagic || [];
+Comagic.push(["setAccount", "gFUmx8T_imKkQ3rE638mobiQEXBZLor1"]);
+Comagic.push(["setHost", "http://server.comagic.ru/comagic"]);
+</script>
+<script type="text/javascript" async="true" src="http://app.comagic.ru/static/comagic/comagic.min.js"></script>
+
+<link rel="stylesheet" href="/TMPL/tour-card.css">
+<script type="text/javascript" src="/js/tour-spoiler.js"></script>
+<script type="text/javascript" src="/mit/js/swfobject.js"></script>
+
+
+
+</head>
+
+<body><a name="ontop" id="ontop"></a>
+<div id="bookmark"><a href="javascript:void(0);" onclick="return bookmark(this);">Â èçáðàííîå &raquo;</a></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<!-- HEADER -->
+<tr>
+		<td align="center" valign="middle">
+<a href="/"><img src="/TMPL/images/vitaly_logo.gif" border="0" name="Vitaly" hspace="10" vspace="10" alt="Vitaly" /></a>
+	</td>
+	<td align="center" valign="bottom">
+<div class="menu_main">
+<a href="/tours">Òóðû</a> <a href="/countries">Ñòðàíû</a> <a href="/hotels">Îòåëè</a> <a href="/page/4">Âèçû</a> <a href="/special">Ñïåöïðåäëîæåíèÿ</a> <a href="/about">Î êîìïàíèè</a> <a href="/agency">Àãåíòñòâàì</a>       </div>
+		</td>
+	<td align="left" valign="middle">
+ <div class="phones">(495) 234-39-36<br/>(495) 650-99-96<br/>(495) 694-36-42<br />
+<span style="font-size:13px"><a href="mailto:zakaz@vitaly-company.ru">zakaz@vitaly-company.ru</a></span></div>
+	</td>
+  </tr>
+<!-- EO HEADER -->
+
+	<tr>
+		<td width="200" align="left" valign="top">
+    <div id="leftbar">
+    	<!--<div class="poisk_bronirovanie">
+            <a href="/search">Online Áðîíèðîâàíèå &raquo;</a>
+        </div>-->
+
+		<div style="margin: 5px 0; -webkit-box-shadow: 0 0 3px white inset,0 1px 1px rgba(0,0,0,0.1); -moz-box-shadow: 0 0 3px white inset,0 1px 1px rgba(0,0,0,0.1); box-shadow: 0 0 3px white inset,0 1px 1px rgba(0,0,0,0.1); width: 179px; padding: 0;">
+			<!---->
+			<div id="online-btn">
+				<a href="/tours-online/">
+					<img src="/mit/img/online.jpg">
+				</a>
+			</div>
+			
+			<script type="text/javascript">swfobject.embedSWF("/mit/img/online.swf?v=1.0", "online-btn", "179", "42", "9.0.0", "", {}, {wmode:"transparent"}, {});</script>
+		</div>
+
+		<div style="margin: 5px 0; -webkit-box-shadow: 0 0 3px white inset,0 1px 1px rgba(0,0,0,0.1); -moz-box-shadow: 0 0 3px white inset,0 1px 1px rgba(0,0,0,0.1); box-shadow: 0 0 3px white inset,0 1px 1px rgba(0,0,0,0.1); width: 179px; padding: 0;">
+			<div id="lk-btn">
+				<a href="/mit/wo/">
+					<img src="/mit/img/lk.jpg">
+				</a>
+			</div>
+			<script type="text/javascript">swfobject.embedSWF("/mit/img/lk.swf?v=1.0", "lk-btn", "179", "42", "9.0.0", "", {}, {wmode:"transparent"}, {});</script>
+		</div>
+
+
+		 <!--<div class="poisk_bronirovanie">
+            <a href="/mit/vitrina/">Ïîèñê òóðîâ &raquo;</a>
+        </div>-->
+
+
+
+<div class="tours"><div class="h2"><span class="blue">Òóðû</span></div><span class="tour_selected"><a href="/tours/171">Íîÿáðüñêèå ïðàçäíèêè</a></span><br/><span class="tour_selected"><a href="/tours/218">Ïåðåëåò äî Õåâèçà/Áàëàòîíà</a></span><br/><span class="tour_selected"><a href="/tours/219">Íà ïîåçäå â Åâðîïó</a></span><br/><span class="tour_selected"><a href="/tours/222">Íîâûé ãîä è Ðîæäåñòâî</a></span><br/><a href="/tours/1">Ýêñêóðñèîííûå</a><br/><a href="/tours/5">Òóðû ñ ëå÷åíèåì</a><br/><a href="/tours/12">Êîìáèíèðîâàííûå</a><br/><a href="/tours/17">Week-end</a><br/><a href="/tours/161"></a><br/><a href="/tours/179">Ïåðåëåò äî Áóäàïåøòà</a><br/><a href="/tours/181">Ïåðåëåò äî Âåíû</a><br/><a href="/tours/182">Ïîåçä äî Áóäàïåøòà</a><br/><a href="/tours/184">Îòäûõ íà ìîðå</a><br/><a href="/tours/188">Ïåðåëåò à/ê Wizz Air</a><br/><a href="/tours/195"></a><br/><a href="/tours/201">Îòäûõ íà ìîðå ñ ëå÷åíèåì</a><br/><a href="/tours/200">Îòäûõ íà ìîðå</a><br/><a href="/tours/205">Òóðû áåç ïåðåëåòà</a><br/></div><div class="countries"><div class="h2"><span class="blue">Còðàíû</span></div><a href="/country/11202"></a> <br/><a href="/country/16">Àâñòðèÿ</a> <br/><a href="/country/10546">Àíäîððà</a> <br/><a href="/country/9017">Àðãåíòèíà</a> <br/><a href="/country/38">Áåëüãèÿ</a> <br/><a href="/country/18">Áîëãàðèÿ</a> <br/><a href="/country/11077">Áîòñâàíà</a> <br/><a href="/country/8232">Áðàçèëèÿ</a> <br/><a href="/country/7443">Âåëèêîáðèòàíèÿ</a> <br/><a href="/country/19">Âåíãðèÿ</a> <br/><a href="/country/11165">Âåíåñóýëà</a> <br/><a href="/country/39">Ãåðìàíèÿ</a> <br/><a href="/country/4311">Ãðåöèÿ</a> <br/><a href="/country/40">Äàíèÿ</a> <br/><a href="/country/10823">Äîìèíèêàíñêàÿ Ðåñïóáëèêà </a> <br/><a href="/country/11029">Çàìáèÿ</a> <br/><a href="/country/11048">Çèìáàáâå</a> <br/><a href="/country/41">Èçðàèëü</a> <br/><a href="/country/11846">Èíäîíåçèÿ</a> <br/><a href="/country/42">Èîðäàíèÿ</a> <br/><a href="/country/43">Èñïàíèÿ</a> <br/><a href="/country/20">Èòàëèÿ</a> <br/><a href="/country/9231">Êèïð</a> <br/><a href="/country/44">Ëàòâèÿ</a> <br/><a href="/country/45">Ëèòâà</a> <br/><a href="/country/46">Ëþêñåìáóðã</a> <br/><a href="/country/10462">Ìàëüäèâû</a> <br/><a href="/country/11866">Ìåêñèêà</a> <br/><a href="/country/47">Ìîíàêî</a> <br/><a href="/country/11072">Íàìèáèÿ</a> <br/><a href="/country/21">Íèäåðëàíäû</a> <br/><a href="/country/48">Íîðâåãèÿ</a> <br/><a href="/country/11137">Ïåðó</a> <br/><a href="/country/49">Ïîëüøà</a> <br/><a href="/country/50">Ïîðòóãàëèÿ</a> <br/><a href="/country/7231">Ðîññèÿ</a> <br/><a href="/country/51">Ñëîâàêèÿ</a> <br/><a href="/country/9442">Ñëîâåíèÿ</a> <br/><a href="/country/7911">Òàèëàíä</a> <br/><a href="/country/9937">Ôèëèïïèíû</a> <br/><a href="/country/52">Ôèíëÿíäèÿ</a> <br/><a href="/country/7">Ôðàíöèÿ</a> <br/><a href="/country/53">Õîðâàòèÿ</a> <br/><a href="/country/6969">×åðíîãîðèÿ</a> <br/><a href="/country/1">×åõèÿ</a> <br/><a href="/country/11136">×èëè</a> <br/><a href="/country/55">Øâåéöàðèÿ</a> <br/><a href="/country/54">Øâåöèÿ</a> <br/><a href="/country/11031">Øîòëàíäèÿ</a> <br/><a href="/country/56">Ýñòîíèÿ</a> <br/><a href="/country/11032">ÞÀÐ</a> <br/></div><div class="tours"><div class="h2"><span class="blue">Ïîëåçíî!</span></div><a href="/page/42">èíòåðåñíîå</a> <br/></div><div class="delivery"><div class="h2"><span class="blue">Ðàññûëêà</span></div>Ââåäèòå Âàø email:<form name="form1" method="post" action="/delivery">
+<input name="text" type="text" size="15" /><br>
+<input type="submit" name="button" id="button" value="Ïîäïèñàòüñÿ">
+<input type="hidden" name="delivery"  id="delivery" value="1">
+</form></div><br/>
+
+    </div>
+        </td>
+		<td valign="top">
+
+<div id="center_content"><p>&nbsp;</p>
+<table style="width: 577px; height: 50px;" border="0" cellspacing="6">
+<tbody>
+<tr>
+<td style="width: 85%;">
+<p><strong><span id="_mce_tmp">&nbsp;</span>Òóðèñòè÷åñêàÿ ôèðìà "VITALY"</strong> -<strong> íàäåæíûé òóðîïåðàòîð ñ 1989 ãîäà</strong></p>
+</td>
+<td><br /></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p style="text-align: left;">&nbsp;</p><table width="100%"><tr><td valign="top" width="570"><div class="h2"><span class="green">Ñïåöïðåäëîæåíèÿ</span></div>
+	<div id="page-wrap">
+	<div class="slider-wrap">
+		<div id="main-photo-slider" class="csw">
+			<div class="panelContainer">
+				<div class="panel" title="Õåâèç 8 äíåé / 7 íî÷åé (à/ê UTAIR äî Õåâèçà ñ 10.07.2016 ïî 06.11.2016)">
+					<div class="wrapper">
+						<img src="/uploads/x_9385551425_medium.jpg" alt="temp" />
+						<div class="photo-meta-data">
+							<div class="special_price">îò 19735 ÐÓÁ.</div>
+							<span><a href="http://www.vitaly-company.ru/tours/218/item/19/">×àðòåð äî Õåâèçà íà Íîâîãîäíèå êàíèêóëû</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="panel" title="Íîâûé Ãîä Âåíãåðñêàÿ ðàïñîäèÿ 8 äíåé / 7 íî÷åé (à/ê Àýðîôëîò à/ï Áóäàïåøò)">
+					<div class="wrapper">
+						<img src="/uploads/x_4569948984_medium.jpg" alt="temp" />
+						<div class="photo-meta-data">
+							<div class="special_price">îò 16399 ÐÓÁ.</div>
+							<span><a href="http://www.vitaly-company.ru/tours/222/item/19/">Íîâûé ãîä è Ðîæäåñòâî â Âåíãðèè</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="panel" title="Íîâîãîäíåå ðàíäåâó: Âàðøàâà-Êðàêîâ (æ/ä)">
+					<div class="wrapper">
+						<img src="/uploads/x_7429157576_medium.jpg" alt="temp" />
+						<div class="photo-meta-data">
+							<div class="special_price">îò 18553 ÐÓÁ.</div>
+							<span><a href="http://www.vitaly-company.ru/tours/222/item/49/">Íîâîãîäíèå è Ðîæäñòâåíñêèå òóðû ïî Ïîëüøå</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="panel" title="Òàëëèíí. Âîëøåáñòâî â Ðîæäåñòâî!">
+					<div class="wrapper">
+						<img src="/uploads/x_7477457694_medium.jpg" alt="temp" />
+						<div class="photo-meta-data">
+							<div class="special_price">îò 5906 ÐÓÁ.</div>
+							<span><a href="http://www.vitaly-company.ru/tours/222/item/56/">Íîâûé ãîä è Ðîæäåñòâî â Ýñòîíèè</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="panel" title="Êàðëîâû Âàðû  (à/ê Czech Airlines à/ï Êàðëîâû Âàðû 01.12.2016-31.01.2017)">
+					<div class="wrapper">
+						<img src="/uploads/x_9553173127_medium.jpg" alt="temp" />
+						<div class="photo-meta-data">
+							<div class="special_price">îò 20916 ÐÓÁ.</div>
+							<span><a href="http://www.vitaly-company.ru/country/1/">Íîâûé ãîä è Ðîæäåñòâî â ×åõèè</a></span>
+						</div>
+					</div>
+				</div>
+	</div>
+	</div>
+	<div id="movers-row">
+			<div><a href="#1" class="cross-link"><img src="/uploads/x_9385551425_small.jpg" class="nav-thumb" alt="temp-thumb" /></a></div>
+			<div><a href="#2" class="cross-link"><img src="/uploads/x_4569948984_small.jpg" class="nav-thumb" alt="temp-thumb" /></a></div>
+			<div><a href="#3" class="cross-link"><img src="/uploads/x_7429157576_small.jpg" class="nav-thumb" alt="temp-thumb" /></a></div>
+			<div><a href="#4" class="cross-link"><img src="/uploads/x_7477457694_small.jpg" class="nav-thumb" alt="temp-thumb" /></a></div>
+			<div><a href="#5" class="cross-link"><img src="/uploads/x_9553173127_small.jpg" class="nav-thumb" alt="temp-thumb" /></a></div>
+	</div>
+	</div>
+	</div></td><td align="left" valign="top"></td></tr></table><h2><span class="green">Ëó÷øèå òóðû</span></h2>
+		<div class="new_tours">
+	          <table width="100%" border="0" cellspacing="10" cellpadding="0"><tr>
+	    	<td width="50%"><img src="/uploads/x_2845999918_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/222/item/39/">Íîâûé ãîä è Ðîæäåñòâî â Ãåðìàíèè</a></span><p>îò 21680 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_7578521586_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/222/item/45/">Íîâûé ãîä â Ëèòâå</a></span><p>îò 9033 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_2241863831_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/222/item/41/">Íîâûé ãîä â Èçðàèëå</a></span><p>îò 41555 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_1927822483_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/222/item/8232/">Íîâûé ãîä â Ðèî-äå-Æàíåéðî</a></span><p>îò 105972 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_3574944638_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/5/item/1/">Ëå÷åíèå â ×åõèè</a></span><p>îò 7574 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_4539878551_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/5/item/9442/">Ëå÷åíèå â Ñëîâåíèè</a></span><p>îò 17997 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_7616145539_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/country/51/">ÑÏÎ íà ïðîæèâàíèå ñ ëå÷åíèåì â Ñëîâàêèè</a></span><p>îò 9659 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_8431533483_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/171/item/19/">Íîÿáðüñêèé Weekend â Áóäàïåøòå</a></span><p>îò 14940 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_5588674855_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/5/item/19/">Âñå êóðîðòû Âåíãðèè</a></span><p>îò 12994 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_4299642312_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/5/item/49/">Ëå÷åíèå â Ïîëüøå</a></span><p>îò 14245 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_9484634267_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/5/item/39/">Ëå÷åíèå â Ãåðìàíèè</a></span><p>îò 55105 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_7977615754_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tour/4691/">Ëå÷åíèå â Áîëãàðèè</a></span><p>îò 14453 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_4724257441_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/5/item/56/">Ëå÷åíèå â Ýñòîíèè</a></span><p>îò 7365 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_1954358995_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/5/item/16/">Âñå êóðîðòû Àâñòðèè</a></span><p>îò 13689 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_2664544713_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/5/item/45/">Ëå÷åíèå â Ëèòâå</a></span><p>îò 7574 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_8124315324_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/city/160/">Òåðìàëüíûé êóðîðò Õåâèç</a></span><p>îò 8964 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_6259574617_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/5/item/41/">Ëå÷åíèå â Èçðàèëå</a></span><p>îò 56564 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_2361614272_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/5/item/16/">Âñå êóðîðòû Àâñòðèè</a></span><p>îò 13064 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_5498379726_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/200/item/9442/">Îòäûõ íà Àäðèàòè÷åñêîì ïîáåðåæüå Ñëîâåíèè</a></span><p>îò 18901 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_6423229189_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/country/51/">Ñëîâàêèÿ. Ëå÷åíèå íà êóðîðòàõ</a></span><p>îò 26406 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_2726255235_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/city/158/">Âñå òóðû â Õàéäóñîáîñëî</a></span><p>îò 11743 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_9653911166_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/country/55/">Ýêñêóðñèîííûå òóðû â Øâåéöàðèþ</a></span><p>îò 27934 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_1276848371_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/country/43/">Ïëåíèòåëüíàÿ Èñïàíèÿ</a></span><p>îò 8894 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_3583449428_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/city/31/">Àâñòðèÿ Ýêñêóðñèîííàÿ</a></span><p>îò 27170 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_9454624173_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/182/item/19/">Â Âåíãðèþ íà ïîåçäå</a></span><p>îò 37316 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_2779739152_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/1/item/19/">Áóäàïåøò Ýêñêóðñèîííûé</a></span><p>îò 12021 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_1646832743_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/1/item/1/">Ìèñòè÷åñêàÿ Ïðàãà</a></span><p>îò 3891 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_3856134299_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/country/41/ ">Ýêñêóðñèîííûé Èçðàèëü</a></span><p>îò 38636 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_3723554742_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/country/7911/">Îòäûõ â Òàéëàíäå</a></span><p>îò 7643 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_4933863723_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/1/item/8232/">Ýêñêóðñèîííûå òóðû â Ëàòèíñêóþ Àìåðèêó</a></span><p>îò 61429 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_1557623598_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/12/item/45/">Êîìáèíèðîâàííûå òóðû ïî Ïðèáàëòèêå</a></span><p>îò 13481 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_3577173422_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/1/item/20/">Âñå öâåòà Èòàëèè (ýêñêóðñèîííûå òóðû)</a></span><p>îò 18067 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_3685145748_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/country/56/">Êðóèçíàÿ êîëëåêöèÿ èç Òàëëèííà</a></span><p>îò 10076 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_4124148224_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/1/item/49/">Ýêñêóðñèîííûå òóðû â Ïîëüøó</a></span><p>îò 12091 ðóá.</p></td></tr><tr>
+	    	<td width="50%"><img src="/uploads/x_1159188239_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/country/18/">Îòäûõ â Áîëãàðèè! </a></span><p>îò 3127 ðóá.</p></td>
+	    	<td width="50%"><img src="/uploads/x_2366897555_small.jpg"  border="0" align="left" /><span><a href="http://www.vitaly-company.ru/tours/1/item/7/">Ýêñêóðñèîííûå òóðû âî Ôðàíöèþ</a></span><p>îò 8060 ðóá.</p></td></tr></table></div><h2><span class="green">ÑÏÎ ïî îòåëÿì</span></h2>
+		<div class="new_tours">
+          <table width="100%" border="0" cellspacing="10" cellpadding="0"><tr>
+    	<td width="50%"><img src="/uploads/x_4524272551_small.jpg"  border="0" align="left" /><a href="/hotel/1786">ASTORIA</a> - Ñíèæåíû öåíû</td>
+    	<td width="50%"><img src="/uploads/x_7476511486_small.jpg"  border="0" align="left" /><a href="/hotel/687">EUROPA FIT</a> - Ïðàçäíè÷íàÿ ïðîãðàììà íà Íîâûé ãîä è Ðîæäåñòâî 2016-2017 ãã</td></tr><tr>
+    	<td width="50%"><img src="/uploads/x_3636528271_small.jpg"  border="0" align="left" /><a href="/hotel/1430">GOLEBIEWSKI</a> - Îòäûõ íà Ìàçóðñêîì ïîîçåðüå â Ïîëüøå</td>
+    	<td width="50%"><img src="/uploads/x_4498556583_small.jpg"  border="0" align="left" /><a href="/hotel/2938">VARSKA</a> - Ïàêåòû ñàíàòîðèÿ Âÿðñêà </td></tr></table></div><h1>Òóðû ïî Åâðîïå èç Ìîñêâû âìåñòå ñ Vitaly Company</h1><p><p>Êîìïàíèÿ &ldquo;Vitaly&rdquo; &ndash; ýòî òóðèñòè÷åñêàÿ ôèðìà âûñîêîãî êëàññà. Íàø áîãàòûé îïûò è øèðîêèé âûáîð òóðîâ â ðàçëè÷íûå ñòðàíû Åâðîïû ïîçâîëÿåò ïðåäëîæèòü âàì íàèáîëåå ïîäõîäÿùèå âàðèàíòû äëÿ îòäûõà. Ïðàêòè÷åñêèé â ëþáîé ñåçîí è ïðàçäíèê ìû ñìîæåì ïðåäîñòàâèòü îòëè÷íûå <strong>òóðû â Åâðîïó</strong> è äðóãèå ñòðàíû, ãèáêóþ ñèñòåìó áðîíèðîâàíèÿ îòåëåé ëþáîãî êëàññà è êîìôîðòà. Íàøó êîìïàíèþ îòëè÷àåò íå òîëüêî èíäèâèäóàëüíîñòü ïîäáîðà <strong>òóðîâ ïî Åâðîïå</strong>,&nbsp; íî è èõ óíèêàëüíîñòü. <span class="fatty">Ïðîãðàììû òóðîâ è ýêñêóðñèé òùàòåëüíî ïðîðàáàòûâàëèñü íàìè â òå÷åíèå áîëåå ÷åì äåñÿòè ëåò</span>. Ìû çíàåì ïîäâîäíûå êàìíè êàæäîé ñòðàíû Åâðîïû, îðèåíòèðóåìñÿ â âîïðîñàõ ïîëó÷åíèÿ âèç, àâèà ïåðåëåòàõ, æåëåçíîäîðîæíûõ ïåðååçäàõ íà ïîåçäå è âî ìíîãîì äðóãîì.</p><h2>Òóð â Åâðîïó èç Ìîñêâû - ñ íàìè ýòî ëåãêî!</h2><p><strong>Çàêàçûâàÿ òóðû ïî Åâðîïå</strong> ó íàñ âû âñåãäà áóäåòå äîâîëüíû ðåçóëüòàòîì, à ïðîâåäåííûé îòäûõ è âïå÷àòëåíèÿ îò íåãî, áóäåòå âñïîìèíàòü åùå äîëãèå ãîäû! Ïðåêðàñíûå îòçûâû áëàãîäàðíûõ òóðèñòîâ ãîâîðÿò î íàøåì ïðîôåññèîíàëèçìå.</p><p>Íàø îôèñ ðàñïîëîæåí â ñàìîì öåíòðå Ìîñêâû (íåäàëåêî îò ìåòðî Ïóøêèíñêàÿ/Òâåðñêàÿ), à ðàáîòàåì ìû 6 äíåé â íåäåëþ (ñ ïîíåäåëüíèêà ïî ñóááîòó). Âû ìîæåòå çàáðîíèðîâàòü íóæíûé òóð îíëàéí, à âñå íåîáõîäèìûå äîêóìåíòû ïðåäîñòàâèòü ÷óòü ïîçäíåå!</p><h3>Ïî÷åìó Âàì íóæíî êóïèòü òóð â èìåííî â Âèòàëè</h3><ol><li>Âèòàëè - òóðîïåðàòîð, ñïåöèàëèçèðóþùèéñÿ íà åâðîïåéñêèõ òóðàõ</li><li>Ìû íà ðûíêå ñ 1989 ãîäà</li><li>Ìíîæåñòâî áëàãîäàðíûõ îòçûâîâ êëèåíòîâ</li></ol><p>Íå íóæíî ãîâîðèòü î òîì, ïî÷åìó ñòîèò ïîåõàòü â Åâðîïó. Ýòî óäèâèòåëüíàÿ ÷àñòü Ñâåòà ñîáðàëà â ñåáå ÷óäåñíûå ãîðîäà, êîòîðûå ìàíÿò è ñïîñîáíû ìîìåíòàëüíî âëþáèòü â ñåáÿ. Ýêñêóðñèîííûå òóð â Åâðîïó &ndash; ýòî îäíà èç ëó÷øèõ âîçìîæíîñòåé óâèäåòü &laquo;Ñòàðûé ñâåò&raquo;, ïîñåòèòü óíèêàëüíûå èñòîðè÷åñêèå ñòðàíû, ãîðîäà, ïîñìîòðåòü íà ëó÷øèå ïàìÿòíèêè àðõèòåêòóðû. Áóäü òî òóð âî Ôðàíöèþ, òóð â Èòàëèþ èëè Ãåðìàíèþ &ndash; âåçäå ñâîè óíèêàëüíûå îñîáåííîñòè è èíòåðåñíûå ìåñòà!</p><h4>Ìû ãîòîâû îòêðûòü äëÿ Âàñ áîëåå 30 åâðîïåéñêèõ ñòðàí!</h4><p>Â íàøåé áàçå òóðîâ ïî Åâðîïå áîëåå òðèäöàòè ñòðàí, äâóõñîò ãîðîäîâ è òðåõ òûñÿ÷ îòåëåé.&nbsp; Ìû ïðåäëàãàåì òóðû â Åâðîïó óæå ñ 1989 ãîäà è âïîëíå ìîæåì ñ÷èòàòü ñåáÿ ïðîôåññèîíàëàìè. Ðàçíîîáðàçíàÿ ñèñòåìà ñêèäîê íà öåíû òóðîâ âàñ ïðèÿòíî óäèâèò.</p><p class="centrkyr">Íà ñàéòå åñòü îòäåëüíûé ðàçäåë "Ñïåöïðåäëîæåíèÿ", êîòîðûé ïîìîæåò Âàì ñýêîíîìèòü â äåíüãàõ, íå ïîòåðÿâ íè êàïëè â óäîâîëüñòâèÿõ!</p><p>Íàø îïûò ïîçâîëÿåò ïðåäëîæèòü Âàì ñàìûå âûãîäíûå âàðèàíòû! Âûáîð ïîäõîäÿùåãî "ïðîâåðåííîãî" îòåëÿ, íàáîðà ýêñêóðñèé, ñîñòàâëåíèå êóëüòóðíîé ïðîãðàììû, äðóãèå ðåêîìåíäàöèè - âñå ýòî ìû îáåñïå÷èì íà âûñî÷àéøåì óðîâíå.</p><h3>Âñå âèäû òóðîâ â Åâðîïó äëÿ Âàñ!</h3><p>Íî ýòèì Âàøè âûãîäû îò ñîòðóäíè÷åñòâà ñ íàìè íå îãðàíè÷èâàþòñÿ! Ìû ïðåäëàãàåì Âàì è ÑÏÎ ïî îòåëÿì (ñïåöèàëüíûå öåíû íà ðàçìåùåíèÿ) è èíäèâèäóàëüíûå òóðû (Âû óâèäèòå èìåííî òå ãîðîäà, êîòîðûå èíòåðåñíû Âàì, è ïîãîñòèòå ñòîëüêî, ñêîëüêî çàõîòèòå!).</p><p>Åæåäíåâíî ó íàñ ïîÿâëÿþòñÿ ñàìûå ðàçíîîáðàçíûå ãîðÿùèå ïðåäëîæåíèÿ! Ëå÷åáíûå òóðû â Åâðîïó èëè îòäûõ íà îçåðàõ, ñðåäíåâåêîâûå Åâðîïåéñêèå çàìêè, ñïà-îòåëè - âîò äàëåêî íå ïîëíûé ñïèñîê íàøèõ ïðåäëîæåíèé. Ìû ïîñòîÿííî ðàçðàáàòûâàåì íîâûå ïðîãðàììû è ïîïóëÿðíûå íàïðàâëåíèÿ. Ñëåäèòå çà íîâîñòÿìè è èíòåðåñíûìè ñòàòüÿìè íà íàøåì ñàéòå.</p><h2>Çèìíèå òóðû â Åâðîïó</h2><p>Îòäåëüíî õîòåëîñü áû ñêàçàòü î çèìíèõ òóðàõ â Åâðîïó. Ýòî òàê æå îäíî èç ïðèîðèòåòíûõ íàïðàâëåíèé êîìïàíèè. Çèìîé Åâðîïà ñêàçî÷íî õîðîøà, à óâèäåòü êàê ïðàçäíóþò êàòîëè÷åñêîå Ðîæäåñòâî - çíà÷èò ïîäàðèòü ñåáå íåáîëüøîå, íî î÷åíü ïðèÿòíîå ïóòåøåñòâèå â äåòñòâî! Êðîìå òîãî, çèìà ýòî ïîðà áåñïðåöåäåíòíûõ ðàñïðîäàæ! Ïîýòîìó âñåì ìîäíèöàì, êîòîðûå îòïðàâëÿþòñÿ â çèìíèé åâðîïåéñêèé òóð  ðåêîìåíäóåì íå çàáûòü ïîñåòèòü òîðãîâûå öåíòðû, êîòîðûõ â ñòîëè÷íûõ ãîðîäàõ âåëèêîå ìíîæåñòâî,è êóïèòü âåùè ëþáèìûõ ìàðîê ïî íèçêèì, à ïîòîìó ñòîëü ïðèÿòíûì, öåíàì!</p><p>Íå èíòåðåñóþò ïðàçäíèêè è ðàñïðîäàæè? Ëþáèòåëåé àêòèâíîãî îòäûõà çèìíÿÿ Åâðîïà òàê æå æäåò, âåäü ãîðíîëûæíûå êóðîðòû Àâñòðèè è Øâåéöàðèè ïðîñëàâëåíû íà âåñü ìèð, è ñ÷èòàþòñÿ ëó÷øèìè!</p><p class="fatty">Èòàê, åñëè âû õîòèòå ïðîâåñòè íåçàáûâàåìûé îòäûõ â Åâðîïå, çàêàçûâàéòå òóð ïðÿìî ñåé÷àñ è âû íå ïîæàëååòå! Óçíàòü î ñòîèìîñòè Âû ìîæåòå íà ñòðàíèöå êîíêðåòíîãî ïðåäëîæåíèÿ èëè æå ïîçâîíèâ ïî òåëåôîíó +7(495) 650-99-96 èëè (495) 694-36-42!</p><p class="centrkyr">Ïðèÿòíûõ ïóòåøåñòâèé!</p></p>
+
+
+
+
+
+
+</div>
+
+      </td>
+	  <td width="200" align="left" valign="top">
+    <div id="rightbar">
+
+<div class="news_n_articles"><div class="h2"><span class="blue">Äðóæèòü</span></div><noindex><div class="fb-like" data-href="https://www.facebook.com/VitalyCompany" data-send="false" data-width="190" data-show-faces="true" data-font="verdana"></div></noindex><div><br/></div><script type="text/javascript" src="//vk.com/js/api/openapi.js?96"></script><!-- VK Widget --><div id="vk_groups"></div><script type="text/javascript">VK.Widgets.Group("vk_groups", {mode: 1, width: "200", height: "100"}, 51340241);</script><script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script><div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="button" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki"></div> <div class="h2"><span class="blue">Âàëþòà</span></div><span class="bold">USD</span> 26/10 <span class="bold">63.8 ðóá.</span><br/><span class="bold">EUR</span> 26/10 <span class="bold">69.49 ðóá.</span><br/><div class="cards-container">
+					<img src="/TMPL/images/visa_card.png" style="width: 50px;">
+					<img src="/TMPL/images/master_card.png" style="width: 50px;">
+				</div><div class="h2"><a href="/news"><span class="blue">Íîâîñòè</span></a></div><div class="h3"><a href="/news/95">Ïðÿìîé ïåðåëåò Ìîñêâà - Õåâèç/Áàëàòîí - Ìîñêâà</a></div><p><strong>Óâàæàåìûå Êîëëåãè!</strong></p>
+<p>Ðàäû âàì ñîîáùèòü, ÷òî ñíîâà ïîÿâèëñÿ ïðÿìîé ïåðåëåò Ìîñêâà - Õåâèç/Áàëàòîí - ...<br/><br/><div class="h3"><a href="/news/94">Ñâåäåãèÿ î ôèíàíñîâîì îáåñïå÷åíèè</a></div><ol>
+<li>
+<h1><span style="font-size: xx-small;"><strong>ÑÂÅÄÅÍÈß Î      ÔÈÍÀÍÑÎÂÎÌ ÎÁÅÑÏÅ×ÅÍÈÈ:</strong></span></h1>
+</li>
+</ol> 
+<table ...<br/><br/><div class="h3"><a href="/news/93">Ïðîñèì îáðàòèòü âíèìàíèå íà íîâûé áóòèê-îòåëü â Ïðàãå</a></div><p><span style="font-size:24px;"><span style="color: #000000;"><span style="font-family: arial,sans-serif-light,sans-serif; line-height: 37px; ...<br/><br/><div class="h3"><a href="/news/92">Îçäîðîâèòåëüíûé öåíòð îòåëÿ Hunguest Hotel Pelion áóäåò çàêðûò èç-çà òåêóùèõ ðåìîíòíûõ ðàáîò â ïåðèîä 16.10.2016 -19.10.2016.</a></div><p style="text-align: justify; line-height: 150%;"><span style="line-height: 150%; font-family: Roboto, Arial, sans-serif; font-size: ...<br/><br/><div class="h3"><a href="/news/91">Îôîðìëåíèå øåíãåíñêèõ âèç ñ 14.09.2015</a></div><p><strong>Âíèìàíèå! Ñ&nbsp;14.09.2015 ã. </strong>äëÿ ïîëó÷åíèÿ Øåíãåíñêîé âèçû âñå çàÿâèòåëè îáÿçàíû <strong><span style="text-decoration: ...<br/><br/><div class="h2"><a href="/article"><span class="blue">Ñòàòüè</span></a></div><div class="h3"><a href="/article/59">Âûáèðàåì îòåëü ïî «çâåçäàì»</a></div>Íè äëÿ êîãî íå ñåêðåò, ÷òî âñå ãîñòèíèöû îòëè÷àþòñÿ ïî óðîâíþ èëè äðóãèìè ñëîâàìè ïî çâåçäíîñòè. Ñóùåñòâóþò ïÿòè-, ÷åòûðåõ-, òðåõ- è äâóõ ...<br/><br/><div class="h3"><a href="/article/58">Âûáîð îòåëÿ äëÿ îòäûõà ñ ðåáåíêîì</a></div>Ëþäè, èìåþùèå äåòåé, âñåãäà ñòîÿò ïåðåä áîëåå ñåðüåçíûì âûáîðîì ìåñòà îòäûõà. Äåéñòâèòåëüíî, âåäü õî÷åòñÿ îçäîðîâèòü ðåáåíêà, íî òàê, ÷òîáû íå ...<br/><br/><div class="h3"><a href="/article/51">Ëå÷åáíûå òóðû â ×åõèþ</a></div>Íà ñåãîäíÿøíèé äåíü ìíîæåñòâî òóðèñòè÷åñêèõ îïåðàòîðîâ ïðåäëàãàþò ðàçëè÷íûå ëå÷åáíî-îçäîðîâèòåëüíûå òóðû ïî âñåì ñòðàíàì Åâðîïû. Îäíàêî äàëåêî íå ...<br/><br/><div class="h3"><a href="/article/50">Êóðîðòû äëÿ çèìíåãî îòäûõà</a></div>Íå êàæäîìó ÷åëîâåêó óäàåòñÿ îòäîõíóòü íà þãå ëåòîì, íî íå ñòîèò îò÷àèâàòüñÿ: ñóùåñòâóåò ìíîæåñòâî êóðîðòîâ, íà êîòîðûõ ìîæíî êîìôîðòàáåëüíî ...<br/><br/><div class="h3"><a href="/article/49">Êàê íå ëèøèòüñÿ äîêóìåíòîâ è äåíåã â çàðóáåæíîé ïîåçäêå: ïàìÿòêà òóðèñòó</a></div>
+Êàæäûé ÷åëîâåê åæåäíåâíî ðèñêóåò ëèøèòüñÿ ïîðòìîíå &ndash; â îáùåñòâåííîì òðàíñïîðòå, î÷åðåäè, ìàãàçèíå è ò.ä. Ìîæåòå ...<br/><br/><br/></div>
+  </div>
+      </td>
+  </tr>
+    <tr>
+    	<td colspan="3" valign="top">
+<div id="ontop"><a href="#ontop">Ââåðõ ñòðàíèöû &uarr;</a></div>
+    <div id="footer"><div class="foot_text">
+<div style="float:right">
+
+
+<!-- SpyLOG -->
+<noindex>
+<script src="http://tools.spylog.ru/counter_cv.js" id="spylog_code" type="text/javascript" counter="83779" part="" track_links="all" page_level="0">
+</script>
+<noscript>
+<a href="http://u837.79.spylog.com/cnt?cid=83779&f=3&p=0" target="_blank">
+<img src="http://u837.79.spylog.com/cnt?cid=83779&p=0" alt="SpyLOG" border="0" width="88" align="right" height="31"></a>
+</noscript>
+</noindex>
+<!--/ SpyLOG -->
+<br />
+<noindex>
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t14.12;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: ïîêàçàíî ÷èñëî ïðîñìîòðîâ çà 24"+
+" ÷àñà, ïîñåòèòåëåé çà 24 ÷àñà è çà ñåãîäíÿ' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+</noindex>
+</div>
+    <a href="/">Ãëàâíàÿ</a> <a href="/tours">Òóðû</a> <a href="/countries">Ñòðàíû</a> <a href="/hotels">Îòåëè</a> <a href="/kurorts">Êóðîðòû</a> <a href="/special">Ñïåöïðåäëîæåíèÿ</a> <a href="/about">Î êîìïàíèè</a> <a href="/agency">Àãåíòñòâàì</a> <a href="/news">Íîâîñòè</a> <a href="/article">Ñòàòüè</a> <a href="/map">Êàðòà</a><br />
+<p>Èíôîðìàöèÿ è öåíû íà ñàéòå ïðåäîñòàâëåíû äëÿ îçíàêîìëåíèÿ. Òî÷íóþ èíôîðìàöèþ óçíàâàéòå ïî òåëåôîíàì èëè â íàøåì îôèñå.</p><span class="bold">2005 - 2016 &copy; Vitaly Company</span>. Âñå ïðàâà çàùèùåíû.<br />
+<!-- Ñ×ÅÒ×ÈÊÈ -->
+<noindex>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-590080-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</noindex>
+<noindex>
+<!-- begin of Top100 code -->
+<script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?189036"></script><noscript><img src="http://counter.rambler.ru/top100.cnt?189036" alt="" width="1" height="1" border="0"/></noscript>
+<!-- end of Top100 code -->
+</noindex>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter21998059 = new Ya.Metrika({id:21998059,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/21998059" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22285930 = new Ya.Metrika({id:22285930, webvisor:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22285930" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42993602-1', 'vitaly-company.ru');
+  ga('send', 'pageview');
+
+</script>
+
+</div></div>
+        </td>
+    </tr>
+</table>
+
+<div id="page-overlay"></div>
+<div id="excursion-descr-popup">
+	<iframe frameborder="0"
+	        width="700"
+	        height="400"
+	        hspace="0"
+	        vspace="0"
+	        src=""></iframe>
+	<img src="/mit/booking/tours/img/close.png">
+</div>
+
+</body>
+</html>

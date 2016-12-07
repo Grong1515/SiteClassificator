@@ -1,0 +1,104 @@
+
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>UMI</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/style.css" />
+</head>
+
+<body>
+
+<div id="content">
+	<div>
+		<h1>Внимание!</h1>
+			</div>
+</div>
+<div id="footer">Copyright . Все права защищены.</div>
+
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <base href=".">
+    <title>Сайт заблокирован</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.css" type="text/css">
+    <link rel="stylesheet" href="/css/alf.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+<div class="container-fluid gradient alf">
+    <div class="container" style=" height: 100%; ">
+        <div class="row">
+            <div class="col-xs-12 alftop">
+                <div class="lbl_do text-center">
+                    <a href="/"><img src="/img/logo.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row" style=" position: relative;">
+            <div class="col-xs-12 main_page">
+                <h1>Сайт заблокирован</h1>
+
+                <div class="moduletable">
+                    <div class="newsflash">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h2>Учреждение реорганизовано</h2>
+                            </div>
+                        </div>
+                        <div class="row">&nbsp;                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div style="font-weight: bold; font-size: 24px;">Осуществляется перенаправление на сайт организации - правопреемника.</div>
+                                <br>
+                                <div>Вопросы относительно блокировки сайта вы можете задать по адресу mskobr@temocenter.ru</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="container">
+        <div class="text-muted">
+            <div>2016 © Разработка и поддержка <a href="http://www.temocenter.ru/">ТемоЦентр</a></div>
+            <!--<div>2016 © Сайт работает на SaaS-платформе <a href="http://www.umi-cms.ru/editions/umi_cloud/">UMI.CLOUD</a></div>-->
+        </div>
+    </div>
+</div>
+<script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    jQuery(function ($) {
+
+        $.get('http://hastur.temocenter.ru/task/eo.eo2host/host/' + window.location.hostname).then(function (data) {
+            data = JSON.parse(data);
+            $.ajax({
+                type: "POST",
+                url: 'http://hastur.temocenter.ru/static/1/task/eo.nextHost/eoid/' + data,
+                dataType: 'json'
+            }).then(function (data) {
+
+                if (data.hostname) {
+                    window.location.href = 'http://' + data.hostname;
+                } else {
+                    window.location.href = 'http://mskobr.ru';
+                }
+
+            });
+
+        });
+
+
+    });
+</script>
+</body>
+</html>

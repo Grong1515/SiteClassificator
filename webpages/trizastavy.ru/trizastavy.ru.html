@@ -1,0 +1,219 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="Content-Language" content="ru">
+<title>Ñàëîí êðàñîòû "Òðè Çàñòàâû"</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link type="text/css" rel="stylesheet" href="modules/styles.css">
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript" src="modules/jquery.min.js"></script>
+<style>
+#mm_td_ind{background: #6B5890;}
+#a_ind {font-weight: bold;}
+.lb_rb {
+	width: 200px;
+	vertical-align: top;
+	text-align: center;
+	padding: 6px;
+	font-size: 12pt;
+}
+.lb_rb a {font-size: 12pt;}
+
+#photos img {
+  position: absolute;
+ 
+}
+
+#photos {
+	display: none;
+  width: 600px;
+  height: 398px;
+  overflow: hidden;
+  margin-left: -20px;
+  margin-right: 10px;
+ 
+}
+</style>
+<script>
+$(document).ready(function() {
+  //$('#photos img').hide();
+});
+
+$(window).load(function() {
+  $('#photos').show();
+  rotatePics(1);
+ 
+});
+
+function rotatePics(currentPhoto) {
+  var numberOfPhotos = $('#photos img').length;
+  currentPhoto = currentPhoto % numberOfPhotos;
+	
+  $('#photos img').eq(currentPhoto).fadeOut(function() {
+    // re-order the z-index
+    $('#photos img').each(function(i) {
+      $(this).css(
+        'zIndex', ((numberOfPhotos - i) + currentPhoto) % numberOfPhotos
+      );
+    });
+    $(this).show();
+    setTimeout(function() {rotatePics(++currentPhoto);}, 5000);
+  });
+}
+</script>
+</head>
+<body>
+<table class=head height=185 width=100%  onmouseover="hideLayer();">
+<tr>
+<td width=193>
+<!--<a href="prais.htm" title="Æåíñêèé çàë"><img src="images/logo-w2.gif"></a>-->
+</td>
+<!--<td align=left valign=top style="padding: 10px;">
+
+</td>
+<td align=centr></td>-->
+
+<td id=head_c2 align=center valign=bottom>
+	<div width=600 align=center>
+	<a href="index.htm"><img align=center src="images/head-centr4.gif"></a><br>
+	<font style="font-size: 13pt;"><b>óë. Íèæåãîðîäñêàÿ, ä.5</b></font><br>
+	<ul class=tel><li style="">&nbsp;(495) 678-85-49, +7(919) 991-09-70</li></ul>
+</td>
+<td width=174>
+<!--<a href="mzal.htm" title="Ìóæñêîé çàë"><img src="images/logo-m2.gif"></a>-->
+</td>
+</tr>
+</table>
+<table class=mm height=40 width=100%>
+<tr><td colspan=17 height=3 id=mm_bordb></td></tr>
+<tr>
+<td width=50%></td>
+<td id=mm_a onmouseover="hideLayer();"><a id=a_ind href="index.htm">Ãëàâíàÿ</a></td>
+<td width=16 id=mm_boll>&nbsp;&nbsp;</td>
+<td id=mm_a><a id=a_pra href="prais.htm" onmouseover="showLayer();" onmouseout="">Óñëóãè</a><br>
+	<div id=menu1 onmouseout="hideLayer();" onmouseover="showLayer();">
+	<table class=subm>
+	<tr><td><a href="parikmaher.htm">Ïàðèêìàõåðñêèé çàë</a></td></tr>
+	<tr><td><a href="kosmetologi.htm"><nobr>Êàáèíåò êîñìåòîëîãèè</nobr></a></td></tr>
+	<tr><td><a href="manikur_pedikur.htm"><nobr>Íîãòåâîé ñåðâèñ</nobr></a></td></tr>
+	<!--<tr><td><a href="solyari.htm">Ñîëÿðèé</a></td></tr>-->
+	<tr><td><a href="vizag.htm">Âèçàæ</a></td></tr>
+	<tr><td><a href="estetika.htm">Ýñòåòèêà òåëà</a></td></tr>
+	<tr><td><a href="massag.htm">Ìàññàæ</a></td></tr>
+	<tr><td><a href="mzal.htm">Ìóæñêîé çàë</a></td></tr>
+	</table>
+	</div>
+
+
+</td>
+<td width=16 id=mm_boll>&nbsp;&nbsp;</td>
+<td id=mm_a onmouseover="hideLayer();"><a id=a_sotr href="sotrudniki.htm">Ñïåöèàëèñòû</a></td>
+<td width=16 id=mm_boll>&nbsp;&nbsp;</td>
+<td id=mm_a onmouseover="hideLayer();"><a id=a_akc href="akcii.htm">Àêöèè</a></td>
+<td width=16 id=mm_boll>&nbsp;&nbsp;</td>
+<td id=mm_a onmouseover="hideLayer();"><a id=a_foto href="fotogalery.htm">Ôîòîãàëåðåÿ</a></td>
+<td width=16 id=mm_boll>&nbsp;&nbsp;</td>
+<td id=mm_a onmouseover="hideLayer();"><a id=a_ode href="odegda.htm"><nobr>Ñàëîí îäåæäû</nobr></a></td>
+<td width=16 id=mm_boll>&nbsp;&nbsp;</td>
+<td id=mm_a onmouseover="hideLayer();"><a id=a_otz href="gb/">Îòçûâû</a></td>
+<td width=16 id=mm_boll>&nbsp;&nbsp;</td>
+<td id=mm_a onmouseover="hideLayer();"><a id=a_cont href="contacts.htm">Êîíòàêòû</a></td>
+<td width=50%></td>
+</tr>
+<tr><td colspan=17 height=3 id=mm_bordt></td></tr>
+</table>
+<table class=main width=100%>
+<tr><td align=center>
+	<center>
+	<table class=content width=1000 height=398>
+	<tr>
+	<td id=cont_bl width=12></td>
+	<td class=lb_rb>
+		<!--<h4 style="color: #BE2020"><i>Àêöèè!</i></h4><br>
+		<a href="akcii.htm"><img src="images/akcii/akcUZNB.jpg" style="margin: 0px;" align=center></a>-->
+		<!--<a href="kupon.htm" target=_blank>
+		<img src="images/akcii/kupon1m.jpg" style="margin: 0px;" align=center><br>
+		Ðàñïå÷àòàé êóïîí 
+		ïîëó÷è ñêèäêó!</a><br>-->
+		<img src="images/akcii/logoKristi.jpg" style="margin: 8px;margin-top: 45px;"><br>
+		<img src="images/akcii/logoLoreal.jpg" style="margin: 8px;margin-top: 90px;"><br>
+		<img src="images/akcii/logoAless.jpg" style="margin: 15px;margin-top: 90px;margin-bottom: 0px;"><br>
+		<!--
+		<br>&bull;
+		<p style="margin: 8px; text-indent: 0px;color: #75262C"><i>Ïðè îêðàøèâàíèè âîëîñ êðàñèòåëåì INOA  èëè  Majirel òóøü äëÿ ðåñíèö Loreal Volumissime x 4 â ïîäàðîê</i></p>-->
+
+	</td>
+	<td valign=top align=left>
+		<!--Íàïîëíåíèå ñòðàíèöû-->
+		<!--<div id=testimage style="border: 1px solid #E4CE7C"></div>
+		<script type="text/javascript">RunFlash1();</script></a>-->
+		<div id="photos">
+			<img alt="" src="images/index_ss/f6.jpg" />
+			<img alt="" src="images/index_ss/f7.jpg" />
+			<img alt="" src="images/index_ss/f1.jpg" />
+			<img alt="" src="images/index_ss/f8.jpg" />
+			<img alt="" src="images/index_ss/f2.jpg" />
+			<img alt="" src="images/index_ss/f3.jpg" />
+			<img alt="" src="images/index_ss/f4.jpg" />
+			<img alt="" src="images/index_ss/f5.jpg" />
+			
+		</div>
+		<br><br>
+		<!--/Íàïîëíåíèå ñòðàíèöû-->
+	</td>
+	<td class=lb_rb>
+		<!--<a href="uslugi-change_lamp.htm"><img src="images/akcii/akcSun.jpg" width=110 style="margin: 0px;margin-top: 5px;"><br><small><b>çàìåíà ëàìï â ñîëÿðèè</b></small></a><br>-->
+		<a href="uslugi-incoco.htm"><img src="images/akcii/akc-incoco.jpg" width=110 style="margin: 0px;margin-top: 5px;"><br><small><b><font color=red>Íîâèíêà!!!</font><br>Íàêëåéêè INCOCO</b></small></a><br>
+		<a href="uslugi-shellac.htm"><img src="images/akcii/akcSHELLAC2.jpg" width=110 style="margin: 0px;margin-top: 10px;"><br><small><b>ãåëü ëàê Shellac</b></small></a><br>
+		<a href="uslugi-mascara.htm"><img src="images/akcii/akc-mascara.jpg" width=110 style="margin: 0px;margin-top: 10px;"><br><small><b>Àáñîëþòíàÿ íîâèíêà â èíäóñòðèè êðàñîòû!!!</b></small></a><br>
+		<!--<img src="images/akcii/akcZak.jpg" width=110 style="margin: 0px;margin-top: 15px;"><br><small><b>àêñåññóàðû äëÿ âîëîñ</b></small><br>-->
+		
+		
+		<!--<h4 style="color: #BE2020"><i>Àêöèè!</i></h4><br>
+		
+		<a href="uslugi-richesse.htm">Ýêñêëþçèâíàÿ óñëóãà áèî-óâëàæíåíèå Èçîáèëèå "Richesse" L`Oreal Professionnel</a><br><br>
+		<a href="uslugi-lacquerize.htm">Ïîêðûòèå Ãåëü-ëàê Lacquerize</a><br><br><br>
+		<a href="uslugi-stownmassage.htm">Ìîäåëèðóþùèé ñòîóíìàññàæ</a><br><br><br>
+		<a href="uslugi-parafango.htm">Îáåðòûâàíèå Ïàðàôàíãî</a><br>-->
+
+	</td>
+	<td id=cont_br width=12></td>
+	</tr>
+	</table>
+	</center>
+</td>
+</tr>
+</table>
+
+<table class=foot height=40 width=100%>
+<tr><td  height=3 id=mm_bordb></td></tr>
+<tr>
+<td align=center>
+	Ñàëîí êðàñîòû "Òðè Çàñòàâû" &copy; 2010-2015&nbsp;&nbsp;
+	<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t44.7;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='16' height='16'><\/a>")
+//--></script><!--/LiveInternet-->
+</td>
+
+</tr>
+<tr><td  height=3 id=mm_bordb></td></tr>
+
+</table>
+<div style="z-index:1000;position:fixed;top:50%;left:0px;">
+<a href="http://sonline.su/order/place_1669" target="_blank">
+<img border="0" src="images/vertical_golden4_2.png" alt="Çàïèñàòüñÿ îíëàéí" title="">
+</a>
+</div>
+
+	
+
+</body>
+</html>

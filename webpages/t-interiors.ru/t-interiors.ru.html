@@ -1,0 +1,1453 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/main2/styles/foundation.css"/>
+<!--[if lt IE 9]>
+		 <link rel="stylesheet" type="text/css" href="/bitrix/templates/main2/styles/foundationIE.css"/>
+    <![endif]-->
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/main2/styles/jcarousel.connected-carousels.css"/>
+<link href="/bitrix/templates/main2/styles/MyriadPro-Regular.otf" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/main2/styles/main.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" media="all" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/main/styles/animate.css"/>
+
+<!-- ДЛЯ печати товаров -->
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/main2/styles/print.css"  media="print"  />
+<link rel="shortcut icon" type="image/x-icon" href="/bitrix/templates/main2/images/favicon.ico" />
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="/bitrix/templates/main2/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/bitrix/templates/main2/js/lightbox-2.6.min.js"></script>
+<script type="text/javascript" src="/bitrix/templates/main2/js/foundation.min.js"></script>
+<script type="text/javascript" src="/bitrix/templates/main2/js/carousel/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="/bitrix/templates/main2/js/carousel/jcarousel.connected-carousels.js"></script>
+<script type="text/javascript" src="/bitrix/templates/main2/js/jcarousellite_1.0.1.min.js"></script>
+<script type="text/javascript" src="/bitrix/templates/main2/js/foundation.abide.js"></script>
+<script src="//yandex.st/jquery/cookie/1.0/jquery.cookie.min.js"></script>
+<script src="/bitrix/templates/main/js/device.min.js"></script>
+<script type="text/javascript" src="/bitrix/templates/main2/js/myForMain.js"></script>
+<script type="text/javascript">
+(function ct_load_script() {
+var ct = document.createElement('script'); ct.type = 'text/javascript';
+ct.src = document.location.protocol+'//cc.calltracking.ru/phone.9b5ac.4255.async.js?nc='+Math.floor(new Date().getTime()/300000);
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ct, s);
+})();
+</script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '225224721179454');
+fbq('track', "PageView");</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=225224721179454&ev=PageView&noscript=1"
+/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+<script>
+jQuery(document).ready(function(){
+
+jQuery('.about_tovar_big .btn-sale').on('click', function(){
+
+	jQuery('.form_popup-title').text('Товар Добавлен в корзину');
+});
+
+jQuery('.izbrannoe_go_pls_to_cart').on('click', function(){
+
+	jQuery('.form_popup-title').text('Товар Добавлен в избранное');
+});
+
+
+});
+	$(function() {
+		alignCenter($('#loginGO'));
+
+		$(window).resize(function() {
+			alignCenter($('#loginGO'));
+		})
+		
+		alignCenter($('#form_product_price'));
+
+		$(window).resize(function() {
+			alignCenter($('#form_product_price'));
+		})
+		
+		alignCenter($('#add_to_basket'));
+
+		$(window).resize(function() {
+			alignCenter($('#add_to_basket'));
+		})
+		
+		alignCenter($('#form_product_primerka'));
+
+		$(window).resize(function() {
+			alignCenter($('#form_product_primerka'));
+		})
+		
+		alignCenter($('#form_product_primerka'));
+
+		$(window).resize(function() {
+			alignCenter($('#form_product_primerka'));
+		})
+		
+		alignCenter($('#form_product_email'));
+
+		$(window).resize(function() {
+			alignCenter($('#form_product_email'));
+		})
+		
+		alignCenter($('#form_product_ask'));
+
+		$(window).resize(function() {
+			alignCenter($('#form_product_ask'));
+		})
+		
+		
+		
+		function alignCenter(elem) {
+			elem.css({
+				//left: ($(window).width() - elem.width()) / 2 + 'px',
+				top: ($(window).height() - elem.height()) / 2 + 'px'
+			})
+		}
+	})
+</script>
+
+<script type="text/javascript">
+	var isMobile = {
+		Android: function() {	return navigator.userAgent.match(/Android/i);		},
+		BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);		},
+		iOS: function() {			return navigator.userAgent.match(/iPhone|iPad|iPod/i);		},
+		Opera: function() {			return navigator.userAgent.match(/Opera Mini/i);		},
+		Windows: function() {			return navigator.userAgent.match(/IEMobile/i);		},
+		any: function() {			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());		}
+	};
+	
+	
+	$(document).ready(function(){
+		$(window).scroll(function () {if ($(this).scrollTop() > 0) {$('#scroller').fadeIn();} else {$('#scroller').fadeOut();}});
+		$('#scroller').click(function () {$('body,html').animate({scrollTop: 0}, 400); return false;});
+		
+		if(isMobile.iOS()){
+			$(".application_panel").css("display", "block");
+			$(".Android_mobilePanel").hide();
+		}
+		if(isMobile.Android()){
+			$(".application_panel").show();
+			$(".iSO_mobilePanel").hide();
+		}
+	});
+	
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Итальянская мебель в наличии, мебель Италии, итальянская мебель на заказ, эксклюзивная мебель, элитный салон мебели, итальянская мебель, швейцарская мебель, дорогая мебель, салон дорогой мебели, салон мебели, элитная мебель, элитная мебель из италии, элитная мебель в москве, салон элитной мебели, элитная итальянская мебель" />
+<meta name="description" content="Салон итальянской мебели Интерьеры-Т официальный дилер мебельных фабрик Италии и Швейцарии. Мебель в наличии и на заказ по  ценам дилера." />
+<link href="/bitrix/cache/css/s1/main2/page_ad0d624797ceee61c56954a78e81ed51/page_ad0d624797ceee61c56954a78e81ed51.css?1474361296304" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/main2/template_d5461893fd8e5b9cc923bcb923d57833/template_d5461893fd8e5b9cc923bcb923d57833.css?147436129614001" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script type="text/javascript" src="/bitrix/js/main/ajax.min.js?145044041722194"></script>
+
+<!-- BEGIN JIVOSITE CODE -->
+<script type='text/javascript'>
+(function(){ var widget_id = '158096';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!-- END JIVOSITE CODE -->
+
+<script type="text/javascript" src="/bitrix/components/kuznica/banner.popup/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="/bitrix/components/kuznica/banner.popup/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="/bitrix/components/kuznica/banner.popup/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<link rel="stylesheet" type="text/css" href="/bitrix/components/kuznica/banner.popup/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+<script type="text/javascript" src="/bitrix/components/kuznica/banner.popup/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<link rel="stylesheet" type="text/css" href="/bitrix/components/kuznica/banner.popup/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+<script type="text/javascript" src="/bitrix/components/kuznica/banner.popup/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/main2/template_900e94e243a08bef84b16406aa9887cc/template_900e94e243a08bef84b16406aa9887cc.js?14743612962427"></script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "d8ef73c401f1343a51abed3dc338436e"]); _ba.push(["host", "t-interiors.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+<script>new Image().src='http://т-интерьеры.рф/bitrix/spread.php?s=QklUUklYX1NNX1NBTEVfVUlEATQzMjczNzQBMTUwODU3NjAzNQEvAQEBAg%3D%3D&k=43f2804ac3b706d54caac56de5a730ee';
+</script>
+
+
+<title>
+Итальянская мебель в Москве. Салон итальянской мебели Интерьеры-Т</title>
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '561968333924969']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript>
+<img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=561968333924969&amp;ev=NoScript" />
+</noscript>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-51466231-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<script type="text/javascript">
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
+$(document).ready(function() {
+	if(isMobile.iOS()){
+		$(".application_panel").css("display", "block");
+		$(".Android_mobilePanel").hide();
+	}
+	if(isMobile.Android()){
+		$(".application_panel").show();
+		$(".iSO_mobilePanel").hide();
+	}
+});
+
+</script>
+<script type="text/javascript" src="http://static.flipcat.ru/vqqjmb57.js"></script>
+
+<!-- Responsive CSS -->
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/main2/responsive.css"/>
+<!-- Owl Stylesheets -->
+<link rel="stylesheet" href="/bitrix/templates/main2/owl.carousel.2.1.0/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="/bitrix/templates/main2/owl.carousel.2.1.0/assets/owl.theme.default.min.css">
+<script src="/bitrix/templates/main2/owl.carousel.2.1.0/jquery-latest.min.js"></script>
+<script src="/bitrix/templates/main2/owl.carousel.2.1.0/owl.carousel.js"></script>
+<!-- Mobile menu -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.menu-slide').click(function() {
+            $('.mobi').hide().toggleClass("active").toggle()
+            $(this).toggleClass("active").next().toggle()
+          })
+      })
+</script> 
+
+</head>
+<body>
+<!-- BEGIN JIVOSITE CODE {literal} --> 
+<script type='text/javascript'>
+(function(){ var widget_id = 'LTu460Poeb';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script> 
+<!-- {/literal} END JIVOSITE CODE -->
+
+
+<!--div class="application_panel">
+	<a class="iSO_mobilePanel" href="https://itunes.apple.com/ru/app/inter-ery-t/id944163040?l=en&mt=8" target="_blank">
+        <span class="description">Скачайте приложение для iOS</span>
+        <span class="title"><span style="font-size: 16px; display: block;">Перейти в</span> Apple Store</span>
+    </a>
+	<a class="Android_mobilePanel" href="https://play.google.com/store/apps/details?id=ru.t.interiors" target="_blank">
+        <span class="description">Скачайте приложение для Android</span>
+        <span class="title"><span style="font-size: 16px; display: block;">Перейти в</span> Google Play</span>
+    </a>
+</div-->
+<script type="text/javascript">
+ $(document).ready(function() {
+    var submitIcon = $('.searchbox-icon');
+    var inputBox = $('.searchbox-input');
+    var searchBox = $('.searchbox');
+    var isOpen = false;
+    submitIcon.click(function() {
+      if (isOpen == false) {
+        searchBox.addClass('searchbox-open');
+        inputBox.focus();
+        isOpen = true;
+      } else {
+        searchBox.removeClass('searchbox-open');
+        inputBox.focusout();
+        isOpen = false;
+      }
+    });
+    submitIcon.mouseup(function() {
+      return false;
+    });
+    searchBox.mouseup(function() {
+      return false;
+    });
+    $(document).mouseup(function() {
+      if (isOpen == true) {
+        $('.searchbox-icon').css('display', 'block');
+        submitIcon.click();
+      }
+    });
+  });
+
+  function buttonUp() {
+    var inputVal = $('.searchbox-input').val();
+    inputVal = $.trim(inputVal).length;
+    if (inputVal !== 0) {
+      $('.searchbox-icon').css('display', 'none');
+    } else {
+      $('.searchbox-input').val('');
+      $('.searchbox-icon').css('display', 'block');
+    }
+  }
+</script> 
+<script>
+    $(document).ready(function() {
+        count_bask = $('.basket_menu_korzina a[data-param="basket"] span.count')[0];
+        count_bask.innerHTML = '0';
+        $('#content').on('click', 'a.count_menu', function(){
+
+        });
+    });
+</script>
+<div id="panel">
+  </div>
+
+<!--Responsive wrapper-->
+<div class="responsive-wrapper">
+  <div class="responsive-center">
+    <div class="logo-wrap"><a href="/"><img src="/upload/logo.gif"/></a></div>
+    <div class="header-right-col">
+      <div class="telefon_header "><span class="ya-phone">+7(495) 204-87-44</span></div>
+      <div class="time_header"><span>с 10:00 до 20:00 </span></div>
+      <div class="login_enter"> <a href="" id="cabinetGoYES" ><img src="/bitrix/templates/main/images/auth.png" alt="">Вход в личный кабинет</a> </div>
+      <div class="container-search">
+        <form action="/search.php" class="searchbox">
+          <input type="text"  placeholder="Поиск..." name="q" class="searchbox-input" onkeyup="buttonUp();" required>
+          <input type="submit" class="searchbox-submit" value="Поиск">
+          <span class="searchbox-icon"><i class="fa fa-search"></i></span>
+        </form>
+      </div>
+      <div class="basket_menu_korzina">
+        <div class="basket_menu_go">
+          <div class="basket_cabinet_zakaz_go"> <a class="zakazGoClick" data-param="basket" href="/clients/izbrannoe/?basket"><img src="/images/shop.png" width="15px" style="margin: 0px 10px 2px 0px;">В корзине: <span class="count"></span> шт.</a>&nbsp; </div>
+        </div>
+      </div>
+    </div>
+    <div class="clr"></div>
+    <div class="top-menu">
+       
+
+<ul class="row">	
+			
+		<li class="menu_main_top  columns"    ><a href="/about/">О компании</a><img src="/bitrix/templates/main2/images/triangle.png" alt="" class="activeMenuImg" /><img src="/bitrix/templates/main2/images/triangleGrey.png" alt="" class="activeMenuImgHover" /></li>
+						
+		
+			
+		<li class="menu_main_top  columns"    ><a href="/katalog_tovarov/">Каталог товаров</a><img src="/bitrix/templates/main2/images/triangle.png" alt="" class="activeMenuImg" /><img src="/bitrix/templates/main2/images/triangleGrey.png" alt="" class="activeMenuImgHover" /></li>
+						
+		
+			
+		<li class="menu_main_top  columns"    ><a href="/clients/">Клиентам</a><img src="/bitrix/templates/main2/images/triangle.png" alt="" class="activeMenuImg" /><img src="/bitrix/templates/main2/images/triangleGrey.png" alt="" class="activeMenuImgHover" /></li>
+						
+		
+			
+		<li class="menu_main_top  columns"    ><a href="/proects/">Готовые проекты</a><img src="/bitrix/templates/main2/images/triangle.png" alt="" class="activeMenuImg" /><img src="/bitrix/templates/main2/images/triangleGrey.png" alt="" class="activeMenuImgHover" /></li>
+						
+		
+			
+		<li class="menu_main_top  columns"    ><a href="/exposition/">Экспозиция</a><img src="/bitrix/templates/main2/images/triangle.png" alt="" class="activeMenuImg" /><img src="/bitrix/templates/main2/images/triangleGrey.png" alt="" class="activeMenuImgHover" /></li>
+						
+		
+			
+		<li class="menu_main_top  columns"    ><a href="/news/">Новости</a><img src="/bitrix/templates/main2/images/triangle.png" alt="" class="activeMenuImg" /><img src="/bitrix/templates/main2/images/triangleGrey.png" alt="" class="activeMenuImgHover" /></li>
+						
+		
+			
+		<li class="menu_main_top  columns"    ><a href="/tur/">3D ТУР</a><img src="/bitrix/templates/main2/images/triangle.png" alt="" class="activeMenuImg" /><img src="/bitrix/templates/main2/images/triangleGrey.png" alt="" class="activeMenuImgHover" /></li>
+						
+		
+			
+		<li class="menu_main_top  columns"    ><a href="/contacts/">Контакты</a><img src="/bitrix/templates/main2/images/triangle.png" alt="" class="activeMenuImg" /><img src="/bitrix/templates/main2/images/triangleGrey.png" alt="" class="activeMenuImgHover" /></li>
+						
+		
+			
+		<li class="menu_main_top  columns red"    ><a href="/tovary_v_nalichii/">Товары в наличии</a><img src="/bitrix/templates/main2/images/triangle.png" alt="" class="activeMenuImg" /><img src="/bitrix/templates/main2/images/triangleGrey.png" alt="" class="activeMenuImgHover" /></li>
+						
+		
+			
+		<li class="menu_main_top  columns red"    ><a href="/akcii/">Акции</a><img src="/bitrix/templates/main2/images/triangle.png" alt="" class="activeMenuImg" /><img src="/bitrix/templates/main2/images/triangleGrey.png" alt="" class="activeMenuImgHover" /></li>
+						
+		
+</ul>
+    </div>
+    <div class="menu-slide hide-mobile"></div>
+    <div class = "mobi">
+      
+
+
+
+<div class="menu-sitemap-tree">
+<ul>
+
+	
+
+	
+
+		
+				<li>
+					<div class="page"></div>
+					<div class="item-text"><a href="/about/">О компании</a></div>
+				</li>
+		
+
+	
+
+	
+
+
+	
+
+	
+
+		
+				<li>
+					<div class="page"></div>
+					<div class="item-text"><a href="/katalog_tovarov/">Каталог товаров</a></div>
+				</li>
+		
+
+	
+
+	
+
+
+	
+
+	
+
+		
+				<li>
+					<div class="page"></div>
+					<div class="item-text"><a href="/clients/">Клиентам</a></div>
+				</li>
+		
+
+	
+
+	
+
+
+	
+
+	
+
+		
+				<li>
+					<div class="page"></div>
+					<div class="item-text"><a href="/proects/">Готовые проекты</a></div>
+				</li>
+		
+
+	
+
+	
+
+
+	
+
+	
+
+		
+				<li>
+					<div class="page"></div>
+					<div class="item-text"><a href="/exposition/">Экспозиция</a></div>
+				</li>
+		
+
+	
+
+	
+
+
+	
+
+	
+
+		
+				<li>
+					<div class="page"></div>
+					<div class="item-text"><a href="/news/">Новости</a></div>
+				</li>
+		
+
+	
+
+	
+
+
+	
+
+	
+
+		
+				<li>
+					<div class="page"></div>
+					<div class="item-text"><a href="/contacts/">Контакты</a></div>
+				</li>
+		
+
+	
+
+	
+
+
+	
+
+	
+
+		
+				<li>
+					<div class="page"></div>
+					<div class="item-text"><a href="/tovary_v_nalichii/">Товары в наличии</a></div>
+				</li>
+		
+
+	
+
+	
+
+
+	
+
+	
+
+		
+				<li>
+					<div class="page"></div>
+					<div class="item-text"><a href="/akcii/">Акции</a></div>
+				</li>
+		
+
+	
+
+	
+
+
+
+
+
+</ul>
+</div>
+    </div>
+
+  </div>
+</div>
+<div id="page">
+<div id="wrap">
+<!-- MENU-->
+
+<div class="row">
+   
+
+<div class="action_menu">
+			
+		<a href="/clients/professionalam/">Профессионалам</a>
+						
+		
+			
+		<a href="/factories/">Фабрики</a>
+						
+		
+			
+		<a href="/zayavka/">Подобрать мебель</a>
+						
+		
+</div>
+</div>
+<div id="content">
+<div class="row">
+  <div class="large-12 columns">
+    <div class="menu_hover_assort  	 "> <img src="/bitrix/templates/main2/images/exitGrey.png" alt=""  class="exit_menuGrey"/>
+      <div class="menu_assort_main ">
+	<div class="row">
+				
+			 <!-- отцы	-->
+						
+						<div class="groupByThreeGO">			
+			<div class="menu_hover_element menu_elem large-4 columns">
+				<span class="big_assort group_1576">
+										<a class="text_under_photo" href="/katalog-tovarov/gostinye/">
+						Гостиные					</a>
+				</span>
+				<ul>
+						
+									<li class="small_assort group_1576">
+										<a href="/katalog-tovarov/gostinye/aksessuary/">
+						Аксессуары					</a>
+				</li>
+				
+									<li class="small_assort group_1576">
+										<a href="/katalog-tovarov/gostinye/divani/">
+						Диваны					</a>
+				</li>
+				
+									<li class="small_assort group_1576">
+										<a href="/katalog-tovarov/gostinye/komody/">
+						Комоды					</a>
+				</li>
+				
+									<li class="small_assort group_1576">
+										<a href="/katalog-tovarov/gostinye/konsoli/">
+						Консоли					</a>
+				</li>
+				
+									<li class="small_assort group_1576">
+										<a href="/katalog-tovarov/gostinye/kresla-pufy/">
+						Кресла,пуфы					</a>
+				</li>
+				
+									<li class="small_assort group_1576">
+										<a href="/katalog-tovarov/gostinye/stenki-vitriny/">
+						Стенки, витрины					</a>
+				</li>
+				
+									<li class="small_assort group_1576">
+										<a href="/katalog-tovarov/gostinye/stoliki-zhurnalnye/">
+						Столики журнальные					</a>
+				</li>
+				
+									<li class="small_assort group_1576">
+										<a href="/katalog-tovarov/gostinye/stoly/">
+						Столы					</a>
+				</li>
+				
+									<li class="small_assort group_1576">
+										<a href="/katalog-tovarov/gostinye/stulya/">
+						Стулья					</a>
+				</li>
+				
+									<li class="small_assort group_1576">
+										<a href="/katalog-tovarov/gostinye/stulya-barnye/">
+						Стулья барные					</a>
+				</li>
+				
+									<li class="small_assort group_1576">
+										<a href="/katalog-tovarov/gostinye/shezlongi/">
+						Шезлонги					</a>
+				</li>
+				
+			 <!-- отцы	-->
+			</ul></div>			
+									
+			<div class="menu_hover_element menu_elem large-4 columns">
+				<span class="big_assort group_1585">
+										<a class="text_under_photo" href="/katalog-tovarov/spalni/">
+						Спальни					</a>
+				</span>
+				<ul>
+						
+									<li class="small_assort group_1585">
+										<a href="/katalog-tovarov/spalni/banketki/">
+						Банкетки					</a>
+				</li>
+				
+									<li class="small_assort group_1585">
+										<a href="/katalog-tovarov/spalni/garderobnye/">
+						Гардеробные					</a>
+				</li>
+				
+									<li class="small_assort group_1585">
+										<a href="/katalog-tovarov/spalni/zerkala/">
+						Зеркала					</a>
+				</li>
+				
+									<li class="small_assort group_1585">
+										<a href="/katalog-tovarov/spalni/kovry/">
+						Ковры					</a>
+				</li>
+				
+									<li class="small_assort group_1585">
+										<a href="/katalog-tovarov/spalni/krovati/">
+						Кровати					</a>
+				</li>
+				
+									<li class="small_assort group_1585">
+										<a href="/katalog-tovarov/spalni/stoliki-tualetnye/">
+						Столики туалетные					</a>
+				</li>
+				
+									<li class="small_assort group_1585">
+										<a href="/katalog-tovarov/spalni/tumbochki/">
+						Тумбочки					</a>
+				</li>
+				
+									<li class="small_assort group_1585">
+										<a href="/katalog-tovarov/spalni/shirmy/">
+						Ширмы					</a>
+				</li>
+				
+									<li class="small_assort group_1585">
+										<a href="/katalog-tovarov/spalni/shkafy/">
+						Шкафы					</a>
+				</li>
+				
+			 <!-- отцы	-->
+			</ul></div>			
+									
+			<div class="menu_hover_element menu_elem large-4 columns">
+				<span class="big_assort group_1607">
+										<a class="text_under_photo" href="/katalog-tovarov/ofisy/">
+						Офисы					</a>
+				</span>
+				<ul>
+						
+									<li class="small_assort group_1607">
+										<a href="/katalog-tovarov/ofisy/operativnye-sistemy/">
+						Оперативные системы					</a>
+				</li>
+				
+									<li class="small_assort group_1607">
+										<a href="/katalog-tovarov/ofisy/stoly-dlya-peregovorov/">
+						Столы для переговоров					</a>
+				</li>
+				
+			 <!-- отцы	-->
+			</ul></div>			
+									
+			<div class="menu_hover_element menu_elem large-4 columns">
+				<span class="big_assort group_1662">
+										<a class="text_under_photo" href="/katalog-tovarov/outdoor/">
+						Outdoor					</a>
+				</span>
+				<ul>
+						
+									<li class="small_assort group_1662">
+										<a href="/katalog-tovarov/outdoor/divany-outdoor/">
+						Диваны outdoor					</a>
+				</li>
+				
+									<li class="small_assort group_1662">
+										<a href="/katalog-tovarov/outdoor/kresla-outdoor/">
+						Кресла outdoor					</a>
+				</li>
+				
+									<li class="small_assort group_1662">
+										<a href="/katalog-tovarov/outdoor/stoly-outdoor/">
+						Столы outdoor					</a>
+				</li>
+				
+									<li class="small_assort group_1662">
+										<a href="/katalog-tovarov/outdoor/stulya-outdoor/">
+						Стулья outdoor					</a>
+				</li>
+				
+									<li class="small_assort group_1662">
+										<a href="/katalog-tovarov/outdoor/shezlongi-outdoor/">
+						Шезлонги outdoor					</a>
+				</li>
+				
+			 <!-- отцы	-->
+			</ul></div>			
+			</div>			<div class="groupByThreeGO">			
+			<div class="menu_hover_element menu_elem large-4 columns">
+				<span class="big_assort group_1588">
+										<a class="text_under_photo" href="/katalog-tovarov/osveshchenie/">
+						Освещение					</a>
+				</span>
+				<ul>
+						
+									<li class="small_assort group_1588">
+										<a href="/katalog-tovarov/osveshchenie/bra/">
+						Бра					</a>
+				</li>
+				
+									<li class="small_assort group_1588">
+										<a href="/katalog-tovarov/osveshchenie/lampy-nastolnye/">
+						Лампы настольные					</a>
+				</li>
+				
+									<li class="small_assort group_1588">
+										<a href="/katalog-tovarov/osveshchenie/potolochnye-svetilniki/">
+						Потолочные светильники					</a>
+				</li>
+				
+									<li class="small_assort group_1588">
+										<a href="/katalog-tovarov/osveshchenie/torshery/">
+						Торшеры					</a>
+				</li>
+				
+			 <!-- отцы	-->
+			</ul></div>			
+									
+			<div class="menu_hover_element menu_elem large-4 columns">
+				<span class="big_assort group_1582">
+										<a class="text_under_photo" href="/katalog-tovarov/kabinety/">
+						Кабинеты					</a>
+				</span>
+				<ul>
+						
+									<li class="small_assort group_1582">
+										<a href="/katalog-tovarov/kabinety/biblioteki/">
+						Библиотеки					</a>
+				</li>
+				
+									<li class="small_assort group_1582">
+										<a href="/katalog-tovarov/kabinety/kresla-rabochie/">
+						Кресла рабочие					</a>
+				</li>
+				
+									<li class="small_assort group_1582">
+										<a href="/katalog-tovarov/kabinety/pismennye-stoly/">
+						Письменные столы					</a>
+				</li>
+				
+			 <!-- отцы	-->
+			</ul></div>			
+									
+			<div class="menu_hover_element menu_elem large-4 columns">
+				<span class="big_assort group_1605">
+										<a class="text_under_photo" href="/katalog-tovarov/vanny/">
+						Ванны					</a>
+				</span>
+				<ul>
+						
+									<li class="small_assort group_1605">
+										<a href="/katalog-tovarov/vanny/mebel-dlya-vannoy/">
+						Мебель для ванной					</a>
+				</li>
+				
+			 <!-- отцы	-->
+			</ul></div>			
+									
+			<div class="menu_hover_element menu_elem large-4 columns">
+				<span class="big_assort group_1592">
+										<a class="text_under_photo" href="/katalog-tovarov/kukhni/">
+						Кухни					</a>
+				</span>
+				<ul>
+						
+									<li class="small_assort group_1592">
+										<a href="/katalog-tovarov/kukhni/kukhni/">
+						Кухни					</a>
+				</li>
+				
+			</div>
+	</div>
+</div>
+
+    </div>
+  </div>
+  <!-- menu hover 2 -->
+  <noindex>
+    <div class="row">
+      <div class="menu_hover_second_photo "> <img src="/bitrix/templates/main2/images/exit.png" class="exit_menuWhite" alt="закрыть"  />
+        <div class="menu_hover_second large-3 columns"> <a href="/factories/" > <img class="gray photo_menu_gray" src="/bitrix/templates/main2/images/bot_photo1.png" alt="" /> <span class="text_under_photo">ФАБРИКИ</span> </a> </div>
+        <div class="menu_hover_second large-3 columns"> <a href="/clients/services-of-designers-and-architects" > <img class="gray photo_menu_gray" src="/bitrix/templates/main2/images/bot_photo2.png" alt="" /> <span class="text_under_photo">УСЛУГИ ДИЗАЙНЕРОВ И АРХИТЕКТОРОВ</span> </a> </div>
+        <div class="menu_hover_second large-3 columns"> <a href="/clients/uslugi/"> <img class="gray photo_menu_gray" src="/bitrix/templates/main2/images/bot_photo8.png" alt="" /> <span class="text_under_photo">СПЕЦИАЛИСТЫ ПО ПОДБОРУ МЕБЕЛИ</span> </a> </div>
+        <div class="menu_hover_second large-3 columns"> <a href="/clients/professionalam/" > <img class="gray photo_menu_gray" src="/bitrix/templates/main2/images/bot_photo4.png" alt="" /> <span class="text_under_photo">СОТРУДНИЧЕСТВО С АРХИТЕКТОРАМИ</span> </a> </div>
+        <div class="menu_hover_second large-3 columns"> <a href="/zayavka/" > <img class="gray photo_menu_gray" src="/bitrix/templates/main2/images/bot_photo9.png" alt="" /> <span class="text_under_photo">ЗАЯВКА НА ПОДБОР МЕБЕЛИ</span> </a> </div>
+        <div class="menu_hover_second large-3 columns"> <a href="/clients/oplata/" > <img class="gray photo_menu_gray" src="/bitrix/templates/main2/images/bot_photo6.png" alt="" /> <span class="text_under_photo">ОПЛАТА</span> </a> </div>
+        <div class="menu_hover_second large-3 columns"> <a href="/clients/dostavka/"> <img class="gray photo_menu_gray" src="/bitrix/templates/main2/images/bot_photo5.png" alt="" /> <span class="text_under_photo">ДОСТАВКА И МОНТАЖ</span> </a> </div>
+        <div class="menu_hover_second large-3 columns"> <a href="/clients/vozvrat/"> <img class="gray photo_menu_gray" src="/bitrix/templates/main2/images/bot_photo7.png" alt="" /> <span class="text_under_photo">ВОЗВРАТ ТОВАРА</span> </a> </div>
+      </div>
+    </div>
+  </noindex>
+</div>
+
+<!-- если главная страница то не выводить тайтл и крошки -->
+<div class="row">
+<noindex> 
+  <!-- LOGIN -->
+  
+
+
+
+
+
+
+
+
+<form  class="loginFormSuper" style="margin:0px!important" name="system_auth_form6zOYVN" method="post" target="_top" action="http://t-interiors.ru/clients/izbrannoe/?login=yes">
+	<input type="hidden" name="backurl" value="/?SHOWALL_1=0" />
+	<input type="hidden" name="AUTH_FORM" value="Y" />
+	<input type="hidden" name="TYPE" value="AUTH" />
+	
+	<div id="loginGO">
+		<div class="login">
+			<div class="login_content">
+				<img src="/bitrix/templates/main2/images/exitGrey.png" alt=""  class="exit_loginGrey"/>
+				<div class="login_header">
+					<div style="color:#5a5a5a;font-size: 23px; margin: 3px 0 8px;">ЛИЧНЫЙ КАБИНЕТ</div>
+				</div>
+				<div  class="login_information">
+					Для входа в личный кабинет введите логин и пароль
+					или зарегистрируйтесь.
+				</div>
+				<p style="display:none;color: red;margin-top: 0px;margin-bottom: -15px;" class="error_go_yes">Вы ввели неправильный логин/пароль</p>
+				<div class="login_form">
+						
+					<div class="input_form_login">
+						<p>ЛОГИН:</p>
+						<input required name="USER_LOGIN" type="text"   />
+						<p style="margin-top: -5px;">ПАРОЛЬ:</p>
+						<input required name="USER_PASSWORD" maxlength="50" type="password"   />
+					</div>
+					<div class="linkers-left-form">
+						<div style="margin-bottom: 13px;margin-top: -5px;">
+							<a class="passwordHelpME" href="javascript: void(0);">НАПОМНИТЬ ПАРОЛЬ</a>
+						</div>
+						<div>
+							<a href="/clients/registration/"><strong>ЗАРЕГИСТРИРОВАТЬСЯ</strong></a>
+						</div>
+					</div>
+					<div class="form-btns-right">
+						<div>
+							<input style="position: relative;top: 2px;" id="USER_REMEMBER_frm" name="USER_REMEMBER"  type="checkbox" /><label for="USER_REMEMBER_frm">ЗАПОМНИТЬ</label>
+						</div>
+						<div>
+							<input class="button" type="submit" value="ВХОД" name="Login" />
+							
+						</div>
+					</div>
+
+						
+				</div>
+			</div>
+		</div>	
+	</div>
+	
+	
+</form>
+
+
+</noindex>
+<div class="all_news large-12 columns">
+<noindex> 
+  <!-- забыл пароль -->
+   <div id="passwordGO">
+	<!--<form name="bform" method="post" target="_top" action="">-->
+	<form name="bform" method="GET" target="_top" action="?pass_remember">
+	<input type="hidden" name="AUTH_FORM" value="Y">
+	<input type="hidden" name="TYPE" value="SEND_PWD">
+
+	<input type="hidden" name="backurl" value="/?SHOWALL_1=0" />
+
+	
+
+
+		<div class="login">
+			 <div class="login_content">
+				<img src="/bitrix/templates/main2/images/exitGrey.png" alt=""  class="exit_loginGrey"/>
+				 <div class="login_header">
+					 <div style="color:#5a5a5a;font-size: 23px; margin: 3px 0 8px">Напоминание пароля</div>
+				 </div>
+				 <div  class="login_information">
+					 Если вы забыли пароль, введите логин или E-Mail.
+				 </div>
+				 <div class="login_form">
+					
+						 <div class="input_form_login">
+							 <p>E-MAIL:</p>
+							 <input type="text" class="forget_pass_by_email" required name="USER_EMAIL" maxlength="255" type="text"   />
+						 </div>
+						 <div class="ili_go">или</div>
+						 <div class="input_form_login">
+							 <p>Логин:</p>
+							 <input class="forget_pass_by_login" required name="USER_LOGIN" maxlength="50" value="" type="text"   />
+						 </div>
+
+						 <div style="margin: 8px 0px 0 0;float: right;">
+
+							 <div style="">
+							
+								 <input  onclick="forgotPass();return false;"  class="button sendMePass"    name="send_account_info" value="ВЫСЛАТЬ ПАРОЛЬ" />
+							 </div>
+						 </div>
+
+				
+				 </div>
+			 </div>
+		 </div>
+	</form>
+ </div>
+
+
+
+<script type="text/javascript">
+document.bform.USER_LOGIN.focus();
+</script>
+  <!-- забыл пароль -->
+  <div id="passwordGOAlready">
+    <div class="login">
+      <div class="login_content"><img src="/bitrix/templates/main2/images/exitGrey.png" alt=""  class="exit_loginGrey"/>
+        <div class="login_header">
+          <div style="color:#5a5a5a;font-size: 23px;">Напоминание пароля</div>
+        </div>
+        <br>
+        <br>
+        <div  class="login_information"> Пароль отправлен вам на e-mail. </div>
+      </div>
+    </div>
+  </div>
+  <div id="myName" ></div>
+  <!-- Если ты не залогинен и неправильно ввел пароль то форма снова появляется -->
+    <!-- Если ты не залогинен и неправильно ввел пароль то форма снова появляется --> 
+</noindex>
+<!-- BIG SLIDER -->
+
+<div class="row">
+  <div class="main-linkus"> <a href="/katalog-tovarov/?nalichie=%D0%9D%D0%B0%20%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%D0%B5">Мебель в наличии</a> </div>
+  <div class="clr"></div>
+  <div class="container large-12 columns main-sliderus">
+    	<div class="slider_main">
+	
+		
+				<div id="motherLovesThisSlider" >
+										
+								<div class="product-list-item" id="mfslider_0" >
+						<div class="image" >
+						
+							<a href="http://t-interiors.ru/tovary_v_nalichii/page-all/"  >
+							      
+						 
+							<img style="width: 952px;height: 405px;"
+								class="gray"  border="0" src="/upload/iblock/4cf/isaloni_worldwide_skidki_na_mebel.jpg" width="952" height="405" alt="slider" title="slider" />
+							
+							</a>
+						</div>
+					</div>
+										<a class="item_next" action=""></a>
+			<a class="item_prev" action=""></a>						
+			<div class="silder_pagination">						 
+			  						  
+			  							
+						
+					<span class="control-slide nomer0" param="0">0</span>
+						
+							</div>						
+		</div>
+	
+	</div>		
+
+	
+<script>
+
+
+
+arr = jQuery.makeArray($('.product-list-item'));
+arr_length = arr.length;
+	for(var i=1;i<=arr_length;i++){
+		$('#mfslider_'+i).hide();
+	};
+
+current_slide = 0;
+mfslider_activ = 'on';
+imageNum = 0;
+maximum = (arr.length -1);
+$(".silder_pagination").find('.nomer0').addClass('activePAG');//для первого раза когда загрузится
+
+
+	
+	function mfslider_next(){
+	
+	$(".silder_pagination").find('.activePAG').removeClass('activePAG');
+		mfslider_activ = 'off';
+		$('#mfslider_'+current_slide).fadeOut( "slow", function() {
+			console.log('before_IF');
+			if((current_slide+1)<=(arr.length-1)){
+				current_slide=current_slide+1;
+				$('#mfslider_'+current_slide).fadeIn('slow');
+				mfslider_activ = 'on';
+				console.log(current_slide);
+			}
+			else
+			{
+				current_slide=0;
+				$('#mfslider_'+current_slide).fadeIn('slow');
+				mfslider_activ = 'on';
+				console.log(current_slide);
+			};
+		});		
+		
+		current_slideGO = current_slide+1;
+		if ( current_slide == maximum){
+			$(".silder_pagination").find('.nomer0').addClass('activePAG');
+		}else{
+			$(".silder_pagination").find('.nomer'+current_slideGO).addClass('activePAG');
+		}
+	};
+
+	function mfslider_prev(){
+	$(".silder_pagination").find('.activePAG').removeClass('activePAG');
+		
+		mfslider_activ = 'off';
+		
+		
+		$('#mfslider_'+current_slide).fadeOut( "slow", function() {
+			if((current_slide-1)>=(0)){
+				current_slide=current_slide-1;
+				$('#mfslider_'+current_slide).fadeIn('slow');
+				mfslider_activ = 'on';
+				console.log(current_slide);
+			}
+			else
+			{
+			
+				current_slide=arr_length-1;
+				$('#mfslider_'+current_slide).fadeIn('slow');
+				mfslider_activ = 'on';
+				console.log(current_slide);
+			};
+		});
+		
+		
+		current_slideGOPR = current_slide-1;
+		
+		if ( current_slide == 0){
+			$(".silder_pagination").find('.nomer'+maximum).addClass('activePAG');
+		}else{
+			$(".silder_pagination").find('.nomer'+current_slideGOPR).addClass('activePAG');
+		}
+	};
+
+	$(function(){
+		$('.item_next').click(function(){
+			if(mfslider_activ=='on'){
+				mfslider_next();
+			};
+		});
+		$('.item_prev').click(function(){
+			if(mfslider_activ=='on'){
+				mfslider_prev();
+			};
+		});
+		$('.control-slide').click(function(){
+			if(mfslider_activ=='on'){
+			mfslider_activ = 'off';
+			var id = $(this).attr('param');
+			var idActive = $(".silder_pagination").find('.activePAG').attr('param');
+			$(".silder_pagination").find('.activePAG').removeClass('activePAG');
+			$('#mfslider_'+idActive).fadeOut( "slow", function(){
+				$('#mfslider_'+id).fadeIn( "slow");
+				mfslider_activ = 'on';
+				$(".silder_pagination").find('.nomer'+id).addClass('activePAG');
+				current_slide =+ $(".silder_pagination").find('.activePAG').attr('param');
+				console.log(current_slide);
+			});
+			};
+		});
+	
+	
+	});
+
+setInterval(function() {
+    $('.item_next').click();
+}, 15000);
+
+</script>
+
+    <!-- menu hover 1 --> <!-- for slider only for main --> <!-- for slider only for main --> 
+  </div>
+</div>
+<div class="row">
+  <div class="menu_main_midlle large-12 columns" style="border-top-width: 1px; border-top-style: solid; border-top-color: #7a7a7a; border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #7a7a7a; margin-bottom: 13px; margin-top: 17px;"> <br>
+      </div>
+</div>
+<div class="responsive-blocks"> 
+  <!--Гостиные-->
+  <div class="responsive-blocks-wrap">
+    <div class="item">
+      <div class="title"><a href="/katalog-tovarov/gostinye/">Гостиные</a></div>
+      <a href="/katalog-tovarov/gostinye/"><img src="/bitrix/templates/main/images/menu_index/gostinnie.jpg"></a> </div>
+  </div>
+  <!--Спальни-->
+  <div class="responsive-blocks-wrap">
+    <div class="item">
+      <div class="title"><a href="/katalog-tovarov/spalni/">Спальни</a></div>
+      <a href="/katalog-tovarov/spalni/"><img src="/bitrix/templates/main/images/menu_index/spalni.jpg"></a> </div>
+  </div>
+  <!--Кабинеты-->
+  <div class="responsive-blocks-wrap">
+    <div class="item">
+      <div class="title"><a href="/katalog-tovarov/kabinety/">Кабинеты</a></div>
+      <a href="/katalog-tovarov/kabinety/"><img src="/bitrix/templates/main/images/menu_index/kabineti.jpg"></a> </div>
+  </div>
+  <!--Освещение-->
+  <div class="responsive-blocks-wrap">
+    <div class="item">
+      <div class="title"><a href="/katalog-tovarov/osveshchenie/">Освещение</a></div>
+      <a href="/katalog-tovarov/osveshchenie/"><img src="/bitrix/templates/main/images/menu_index/osveshenie.jpg"></a> </div>
+  </div>
+  <!--Офисы-->
+  <div class="responsive-blocks-wrap">
+    <div class="item">
+      <div class="title"><a href="/katalog-tovarov/ofisy/">Офисы</a></div>
+      <a href="/katalog-tovarov/ofisy/"><img src="/bitrix/templates/main/images/menu_index/ofisi.jpg"></a> </div>
+  </div>
+  <!--Кухни-->
+  <div class="responsive-blocks-wrap">
+    <div class="item">
+      <div class="title"><a href="/katalog-tovarov/kukhni/">Кухни</a></div>
+      <a href="/katalog-tovarov/kukhni/"><img src="/bitrix/templates/main/images/menu_index/kuhni.jpg"></a> </div>
+  </div>
+  <div class="clr"></div>
+</div>
+<style type="text/css">
+.div1{
+ display: inline-block;
+ width:33%;
+ padding: 10px;
+  }
+</style>
+<div class="div1" style="vertical-align: top;"> <a style="text-decoration: none;" href="/mebel-v-nalichii-i-pod-zakaz/">
+  <h1 style="text-transform:uppercase; font-size: 18px;">Итальянская и швейцарская мебель в наличии и под заказ</h1>
+  </a>
+  <p align="justify"> В нашем салоне большой выбор <a href="/tovary_v_nalichii/">мебели в наличии, в Москве</a>. Интерьеры-Т - официальный дилер ведущих итальянских фабрик (сертификаты смотрите в разделе "<a href="/factories/">мебельные фабрики</a>"). Мир кресел и пуфов, диванов, консолей и комодов, столов и стульев, стенок и витрин ждет Вас! </p>
+  <p> </p>
+  <p> <a href="/mebel-v-nalichii-i-pod-zakaz/"><em>Подробнее...</em></a> </p>
+</div>
+<div class="div1" style="vertical-align: top;"> <a style="text-decoration: none;" href="/exclusivnaya-mebel-izvestnih-dizainerov/">
+  <h2 style="text-transform:uppercase; font-size: 18px;">Эксклюзивные работы известных дизайнеров в Москве</h2>
+  </a>
+  <p align="justify"> Купить качественные изделия известных мастеров в Москве не просто. Мы поможем решить эту проблему - салон «Интерьеры-Т» на рынке уже 20 лет, является официальным дилером более 400 ведущих фабрик (Baxter, <a href="/factories/minotti/">Minotti</a>, <a href="/factories/cassina/">Cassina</a>, <a href="/factories/ceccotti/">Ceccotti</a> и др). Мы работаем с мировыми производителями напрямую и предлагаем честные цены. </p>
+  <p> <a href="/exclusivnaya-mebel-izvestnih-dizainerov/"><em>Подробнее...</em></a> </p>
+</div>
+<div class="div1" style="vertical-align:top;"> <a style="text-decoration: none;" href="/mebel-kak-stil-zhizni/">
+  <h3 style="text-transform:uppercase;font-size: 18px;">«Интерьеры-Т» –мебель, как стиль жизни!</h3>
+  </a>
+  <p align="justify"> Салон итальянской и швейцарской мебели предлагает обустроить интерьер не просто элитной мебелью, а предметами искусства известных фабрик. Интерьер в стиле барокко от <a href="/factories/angelo-cappellini/">Angelo Cappellini</a>, <a href="/factories/baxter/">мягкие и удобные диваны Baxter</a> и Flexform, стильная мебель Minotti, Cassina, Ceccotti, позволит отразить ваш характер и подчеркнуть неповторимый стиль.&nbsp; </p>
+  <p> <a href="/mebel-kak-stil-zhizni/"><em>Подробнее...</em></a> </p>
+</div>
+<div style="clear:both"> </div>
+<div>
+  <p align="justify"> Добро пожаловать в шоу рум «Интерьеры-Т» - мир утонченного дизайна и роскоши лучших предметов мировой мебельной моды. Мы предлагаем эксклюзивную оригинальную продукцию четырехсот мебельных фабрик Италии, Швейцарии, Голландии, Германии, а также полный спектр дизайнерских услуг, которые помогут Вам создать уникальный интерьер, полностью отражающий Ваш образ жизни. Нужна ли Вам полная меблировка помещений или текстильный дизайн, светильники или мебельные аксессуары, которые позволят визуально точно расставить акценты и оживить интерьер, - наши специалисты всегда готовы предложить свою профессиональную помощь по обновлению Вашего дома. </p>
+  <p align="justify"> Мебель является одним из самых гибких и разнообразных видов домашнего декора, которые только можно себе представить. Существует большое количество стилей, тем, конструкций, цветов и типов мебели, способных сделать любую комнату центром внимания. Выберите из множества мебельных категорий, таких как гостиная, спальня, детская, кухня и библиотека то, что будет эстетически коррелировать друг с другом и создаст идеальный интерьер. Наполните свой дом лучшими произведениями известных архитекторов: Le Corbusier, Rodolfo Dordoni, Carlo Colombo, Paola Navone, Massimo Formica, Michele De Lucchi, ведь эти изделия обладают не только благородными формами и элегантностью, но также высоким качеством и комфортом. </p>
+  <br>
+  <h2 style="font-size: 18px; text-align: center;">Гостиная </h2>
+  <p align="justify"> Гостиная дает полное представление о личности хозяина дома, так как в некоторой степени является воплощением его внутреннего «я». Современная гостиная должна быть удобной, качественной и элегантной, полностью удовлетворяющей практические потребности человека. Именно поэтому в нашем постоянном ассортименте лучшая мебель для гостиных фабрик Италии: журнальные столы и тумбы Ceccotti, изящные консоли Cassina, удобные кресла от Moroso и Vitra, диваны и кушетки Baxter и Flexform, уникальные светильники Artemida, созданные для тех, для кого роскошь является образом жизни. </p>
+  <p align="justify"> Остановите ли Вы выбор на классических линиях Angelo Cappellini или на благородном модерне от Minotti, или же Вам будет ближе экспрессивная эстетика модульных секций Molteni&amp;C, в любом случае пространство гостиной будет центром утонченного комфорта и высокого стиля. </p>
+  <br>
+  <h2 style="font-size: 18px; text-align: center;">Спальня</h2>
+  <p align="justify"> Эксклюзивная мебель для спальни от ведущих европейских производителей может превратить Вашу спальню в оазис спокойствия и отдыха, оградив от шума и суеты повседневной жизни. Кровати, комоды, туалетные столики и тумбочки класса люкс входят в категорию продукции, где высокое качество, изысканность и уникальность проявляются в каждой детали. Спальные наборы различного стиля и дизайна предлагают широкий диапазон возможностей для выбора вариантов, эстетически и функционально привлекательных для любого потребителя. С нашей помощью Вы сможете украсить спальню зеркалами и авторскими аксессуарами, которые добавят каплю утонченной чувственности в эту зону тотальной релаксации. Если же Вы видите в спальне не только идеальное место для сна, но и удобный уголок для частных разговоров, отдыха или чтения, то классический спальный комплект может быть дополнен небольшим диваном, столиком или креслами. </p>
+  <br>
+  <h2 style="font-size: 18px; text-align: center;">Мебель для детской </h2>
+  <p align="justify"> Мебель для детской зависит от возраста ребенка и требует дифференцированного подхода к организации такого интерьера. Но, к какой бы возрастной категории не относился ребенок, в своей комнате он должен чувствовать себя защищенным и любить окружающий его мир. Мы предлагаем изделия мировых брендов (преимущественно - мебель Италии), отличающиеся оригинальным дизайном и создающие красочный, веселый и функциональный интерьер, где ребенок может играть, спать и учиться. Некоторые элементы детского интерьера от крупных итальянских мебельных фабрик могут повторять образцы мебели для взрослых, как, например, стулья Panton от Vitra или Louis Ghost от Kartell, или модульная система хранения вещей от Lago, поэтому Вы можете легко поддержать единый стиль разных комнат Вашего дома. </p>
+  <br>
+  <h2 style="font-size: 18px; text-align: center;">Cтоловая</h2>
+  <p align="justify"> Мебель для столовой и кухни ведущих итальянских грандов – это идеально сбалансированное сочетание инновационного дизайна и полного понимания практических потребностей потребителя. В модельный ряд 2016 года входят классические и современные варианты столовых и кухонных гарнитуров, создающих комфортную и функциональную среду. Поклонники благородного шика наверняка обратят внимание на роскошь кухонь Brummell, сочетающих изысканность с ноу-хау современной техники, а любители кухонь с прямыми линиями и формами – на мебель Toncelli, позволяющую создать в кухне строгий стилистический континуум и высокотехнологичную среду, полностью скрытую за фасадами элегантных шкафов с отделкой из полированного мрамора, алюминия, жидкого металла, из шпона камня на стеклянной основе и благородных пород дерева. </p>
+</div>
+</div></div></div>
+			<div class="row">
+				<div class="footer_otstup">
+					<div class="row">
+						<div id="footer-wrap" class="large-12 columns">
+							<div class="row">
+								<div class="menu_footer_main large-7 columns">
+									<ul>
+										<li><a href="/">ГЛАВНАЯ	</a>	</li>
+										<li>
+ 											<a class="footer_kolvo_korzina" href="/clients/izbrannoe/">ИЗБРАННОЕ - ВЫ ОТЛОЖИЛИ 
+	
+																								
+												<span>
+												0	
+												</span>
+																								
+												</a>
+										
+
+	
+		
+	
+										</li>
+	<!--<li style="border: none;"><a class="poisk_footer" href="/search.php">ПОИСК</a></li>-->
+	<li><form class="poiskBottom" action="/search.php" ><input type="text" name="q" value="" placeholder="Поиск" /><button class="search-btn"><i class="fa fa-search"></i></button></form></li>	
+								</ul>
+								</div>
+								
+								<div class="about_footer_main large-5 columns">
+									<a class="adress-link" style="color:#fff;text-decoration:none;text-transform: uppercase;margin-left:-90px;" href="/contacts/">Комсомольский пр-т, 42, стр.1</a>
+								<!--noindex-->	<ul class="socialBottom simple_social">
+								        <li><a target="_blank" href="https://appsto.re/ru/GJSr4.i"><i class="fa fa-apple"></i></a><!--<a target="_blank" class="social_apple" href="https://appsto.re/ru/GJSr4.i"></a>--></li>
+										<li><a target="_blank" href="https://play.google.com/store/apps/details?id=ru.t.interiors"><i class="fa fa-android"></i></a><!--<a target="_blank" class="social_google_play" href="https://play.google.com/store/apps/details?id=ru.t.interiors"></a>--></li>
+										<li><a target="_blank" href="http://instagram.com/interiors_t"><i class="fa fa-instagram"></i></a><!--<a target="_blank" class="social_insta" href="http://instagram.com/interiors_t"></a>--></li>
+										<li><a target="_blank" href="https://www.facebook.com/interiors.t"><i class="fa fa-facebook"></i></a><!--<a target="_blank"  class="social_fb"  href="https://www.facebook.com/interiors.t"></a>--></li>
+										<li><a target="_blank" href="https://twitter.com/interiors_t"><i class="fa fa-twitter"></i></a><!--<a target="_blank" class="social_twitter"  href="https://twitter.com/interiors_t"> </a>--></li>
+										<li><a target="_blank" href="https://vk.com/interiors_t"><i class="fa fa-vk"></i></a><!--<a target="_blank" class="social_vk" href="https://vk.com/interiors_t"></a>--></li>
+										<li><a target="_blank" href="https://www.google.ru/maps/preview?q=%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%D1%8B-%D1%82&amp;ie=UTF8&amp;ll=55.720784,37.57351&amp;spn=0.00336,0.007006&amp;sll=55.721144,37.572871&amp;layer=c&amp;cid=12571986904006858275&amp;panoid=z49NcbKIyd8AAAAGO0KkAA&amp;cbp=13,171.26,,0,0&amp;hq=%3F%25"><i class="fa fa-google-plus"></i></a><!--<a target="_blank"  class="social_google" href="https://www.google.ru/maps/preview?q=%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%D1%8B-%D1%82&ie=UTF8&ll=55.720784,37.57351&spn=0.00336,0.007006&sll=55.721144,37.572871&layer=c&cid=12571986904006858275&panoid=z49NcbKIyd8AAAAGO0KkAA&cbp=13,171.26,,0,0&hq=%3F%25"></a>--></li>
+										<li><a target="_blank" href="http://www.pinterest.com/interiorsmoscow/pins/"><i class="fa fa-pinterest"></i></a><!--<a target="_blank" class="social_pinterest" href="http://www.pinterest.com/interiorsmoscow/pins/"></a>--></li>
+									</ul>
+								<!--/noindex-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="siteBy it_help247 large-12 columns ">
+
+				</div>
+			</div>
+		 </div>
+	</div>
+
+  <script>
+    document.addEventListener("scroll",function(){
+        var scrolled = window.pageYOffset;
+        var myBlock = document.getElementsByClassName("block-fixed")[0];
+        if(scrolled>=160){ myBlock.style.position = "fixed"; myBlock.style.top="150px";}
+        else{ myBlock.style.position = ""; myBlock.style.top="0px"; }
+    });
+ </script>
+  <script>
+    document.addEventListener("scroll",function(){
+        var scrolled = window.pageYOffset;
+        var myBlock = document.getElementsByClassName("block-fixed2")[0];
+        if(scrolled>=160){ myBlock.style.position = "fixed"; myBlock.style.top="193px";}
+        else{ myBlock.style.position = ""; myBlock.style.top="0px"; }
+    });
+ </script>
+ <script>/*
+    document.addEventListener("scroll",function(){
+        var scrolled = window.pageYOffset;
+        var myBlock = document.getElementsByClassName("sort_info")[0];
+        if(scrolled>=180){ myBlock.style.position = "fixed"; myBlock.style.top="150px";}
+        else{ myBlock.style.position = ""; myBlock.style.top="0px"; }
+    });*/
+ </script>
+ 
+   <script>/*
+    document.addEventListener("scroll",function(){
+        var scrolled = window.pageYOffset;
+        var myBlock = document.getElementsByClassName("pagination_bot_catalog_tovars")[0];
+        if(scrolled>=185){ myBlock.style.position = "fixed"; myBlock.style.top="193px";}
+        else{ myBlock.style.position = ""; myBlock.style.top="0px"; }
+    });*/
+ </script>
+ <script>/*
+    document.addEventListener("scroll",function(){
+        var scrolled = window.pageYOffset;
+        var myBlock = document.getElementsByClassName("pagination_bot_catalog_tovars_how_much")[0];
+        if(scrolled>=185){ myBlock.style.position = "fixed"; myBlock.style.top="193px"; myBlock.style.width="59.5rem";}
+        else{ myBlock.style.position = ""; myBlock.style.top="0px"; }
+    });*/
+ </script>
+ 
+	<script>
+//		$(document).foundation();
+	</script>
+	<!-- подложка для меню верхнего -->
+	<div id="facebox_overlay" class="facebox_hide facebox_overlayBG" style="opacity: 0.0;"></div>	
+	<div id="facebox_overlayGrey" class="facebox_hide facebox_overlayBGGrey" style="opacity: 0.5;"></div>
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+var yaParams = {/*Здесь параметры визита*/};
+</script>
+
+<meta name="p:domain_verify" content="2ef953e730624f130a1e3cc42b4aba9c"/>
+
+<script type="text/javascript">
+(function (d, w, c) {
+(w[c] = w[c] || []).push(function() {
+try {
+w.yaCounter21031144 = new Ya.Metrika({id:21031144,
+webvisor:true,
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true,params:window.yaParams||{ }});
+} catch(e) { }
+});
+
+var n = d.getElementsByTagName("script")[0],
+s = d.createElement("script"),
+f = function () { n.parentNode.insertBefore(s, n); };
+s.type = "text/javascript";
+s.async = true;
+s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+if (w.opera == "[object Opera]") {
+d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/21031144" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<script type="text/javascript" defer="defer">
+yaCounter21031144.reachGoal('KUPIT')
+</script>
+<script type="text/javascript" defer="defer">
+yaCounter21031144.reachGoal('PRIMERKA')
+</script>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Код тега ремаркетинга Google -->
+<script type="text/javascript">
+	var google_tag_params = {
+			ecomm_prodid: '',
+			ecomm_pagetype: 'other',
+			ecomm_totalvalue: '',
+	};
+</script>
+
+   <script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '561968333924969']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=561968333924969&amp;ev=NoScript" /></noscript>
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 967744959;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/967744959/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript> 
+<div id="scroller" class="b-top" style="display: none;"><span class="b-top-but">наверх</span></div>
+
+
+
+
+	
+    
+
+</body>
+</html>

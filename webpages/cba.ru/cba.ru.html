@@ -1,0 +1,1169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+		<title>ЦБА - центр бизнес-консалтинга и аудита - 21 год</title>
+		<meta name="keywords" content="консалтинговые услуги, международная отчетность, налоговый аудит, мфсо"/>
+		<meta name="description" content="В последнее время существенно вырос спрос на консалтинговые услуги, международная отчетность (МСФО), аудит систем внутреннего контроля, консолидированная отчетность, управленческий консалтинг. Кроме того, все более популярным становится инициативный налоговый аудит."/>
+		<link rel="stylesheet" type="text/css" href="/css/newmeta.css" />
+		<link rel="stylesheet" type="text/css" href="/css/newlayout.css" />
+                <!--[if IE 6]>
+		<link rel="stylesheet" type="text/css" href="/css/ie6fix.css" />
+                <![endif]-->
+		<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+		<script type="text/javascript" language="javascript" src="/js/jquery.js"></script>
+		<script type="text/javascript" language="javascript" src="/js/jquery.scrollTo.js"></script>
+		<script type="text/javascript" language="javascript" src="/js/jquery.localscroll.js"></script>
+		<script type="text/javascript" language="javascript" src="/js/jquery.form.js"></script>
+		<script type="text/javascript" language="javascript" src="/js/common.js"></script>
+                <script type="text/javascript" language="javascript" src="/js/jquery-1.4.2.js"></script>
+		<script type="text/javascript" language="javascript" src="/js/jquery.hoverIntent.minified.js"></script>
+
+<script type="text/javascript">
+<!--
+
+var ignoreFields = new Array("additional","middlename");
+var loginAccepted = false;
+
+function SendForm() {
+	var i,j,b,a;
+	a = true;
+	for (i=0; i<document.regForm.length; i++) {
+		b = true;
+		for(j=0; j<ignoreFields.length; j++)
+		{
+			if(ignoreFields[j] == document.regForm.elements[i].name)
+			{
+				b=false;
+			}
+			if(document.regForm.elements[i].type == "submit")
+			{
+                                b=false;
+			}
+		}
+		if(b)
+                {
+                     //alert(document.regForm.elements[i].type);
+                     var s = "" + document.regForm.elements[i].name + "feed";
+                     if (document.regForm.elements[i].value == "")
+		     {
+
+				//alert(document.getElementById(s).innerHTML);
+				document.getElementById(s).innerHTML = "<font color=\"#ED5C22\">Заполните поле!</font>";
+				a = false;
+                     }
+                     else
+                     {
+                         if((document.regForm.elements[i].name =="surname" &&
+                            !(/^[a-zа-яA-ZА-Я\-]*$/i).test(document.regForm.elements[i].value) ) ||
+                            (document.regForm.elements[i].name =="name" &&
+                            !(/^[a-zа-яA-ZА-Я\-]*$/i).test(document.regForm.elements[i].value) ) ||
+                            (document.regForm.elements[i].name =="middlename" &&
+                            !(/^[a-zа-яA-ZА-Я\-]*$/i).test(document.regForm.elements[i].value) ) ||
+                            (document.regForm.elements[i].name =="city" &&
+                            !(/^[a-zа-яA-ZА-Я0-9\-\s]*$/i).test(document.regForm.elements[i].value) ) ||
+                            (document.regForm.elements[i].name =="organization" &&
+                            !(/^[a-zа-яA-ZА-Я0-9.\-\"\s]*$/i).test(document.regForm.elements[i].value) ) ||
+                            (document.regForm.elements[i].name =="phone" &&
+                            !(/^[0-9()\-\+]*$/i).test(document.regForm.elements[i].value) ) ||
+                            (document.regForm.elements[i].name =="pass" &&
+                            !(/^[a-zа-яA-ZА-Я0-9_]*$/i).test(document.regForm.elements[i].value) ))
+                         {
+                            document.getElementById(s).innerHTML = "<font color=\"#ED5C22\">Неверные символы!</font>";
+                         }
+                         else if(document.regForm.elements[i].name != "login")
+                         {
+                          document.getElementById(s).innerHTML = "";
+                         }
+                     }
+		}
+	}
+	return a && loginAccepted;
+}
+
+function getOffset(elem) {
+    /*if (elem.getBoundingClientRect) {
+        // "правильный" вариант
+        return getOffsetRect(elem)
+    } else {
+        // пусть работает хоть как-то
+        return getOffsetSum(elem)
+    }*/
+	return getOffsetSum(elem)
+}
+
+function getOffsetSum(elem) {
+    var top=0, left=0
+    while(elem) {
+        top = top + parseInt(elem.offsetTop)
+        left = left + parseInt(elem.offsetLeft)
+        elem = elem.offsetParent
+    }
+
+    return {top: top, left: left}
+}
+
+function getOffsetRect(elem) {
+    // (1)
+    var box = elem.getBoundingClientRect()
+
+    // (2)
+    var body = document.body
+    var docElem = document.documentElement
+
+    // (3)
+    var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop
+    var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft
+
+    // (4)
+    var clientTop = docElem.clientTop || body.clientTop || 0
+    var clientLeft = docElem.clientLeft || body.clientLeft || 0
+
+    // (5)
+    var top  = box.top +  scrollTop - clientTop
+    var left = box.left + scrollLeft - clientLeft
+
+    return { top: Math.round(top), left: Math.round(left) }
+}
+
+$(function () {
+    $('.bubbleInfo').each(function () {
+        var distance = 10;
+        var time = 250;
+        var hideDelay = 500;
+
+        var hideDelayTimer = null;
+
+        var beingShown = false;
+        var shown = false;
+if($('.trigger').length > 0)
+{
+        var trigger = $('.trigger', this);
+        var info = $('.popup', this).css('opacity', 0);
+
+       $([trigger.get(0), info.get(0)]).mouseover(function () {
+            if (hideDelayTimer) clearTimeout(hideDelayTimer);
+            if (beingShown || shown) {
+                // don't trigger the animation again
+                return;
+            } else {
+                // reset position of info box
+                beingShown = true;
+
+		var curleft = curtop = 0;
+
+
+		curleft = getOffset(document.getElementById('loginImage')).left - 490;
+		curtop = document.getElementById('loginImage').offsetTop + 12;
+		if(jQuery.browser.msie && jQuery.browser.version.substr(0,1) == "6")
+		{
+			curleft -= 535;
+		}
+
+                info.css({
+                    top: curtop,
+                    left: curleft,
+                    display: 'block'
+                }).animate({
+                    top: '+=' + distance + 'px',
+                    opacity: 1
+                }, time, 'swing', function() {
+                    beingShown = false;
+                    shown = true;
+                });
+            }
+
+            return false;
+        }).mouseout(function () {
+            if (hideDelayTimer) clearTimeout(hideDelayTimer);
+            hideDelayTimer = setTimeout(function () {
+                hideDelayTimer = null;
+                info.animate({
+                    top: '+=' + distance + 'px',
+                    opacity: 0
+                }, time, 'swing', function () {
+                    shown = false;
+                    info.css('display', 'none');
+                });
+
+            }, hideDelay);
+
+            return false;
+        });
+  }
+    });
+
+	/*$('input').keydown(function(e){
+	        if (e.keyCode == 13) {
+        	    $(this).parents('form').submit();
+	            return false;
+        	}
+	    });*/
+
+});
+
+$(document).ready(function() {
+  //$('#feed').load('http://cba.ru/check.php');
+  $('#login_input').keyup(function() {
+    $.post('http://cba.ru/check.php', {username: document.getElementById('login_input').value },
+    function(result) {
+      $('#loginfeed').html(result).show();
+      if(result.indexOf("608F0F") >= 0)
+      {
+          loginAccepted = true;
+      }
+      else
+      {
+          loginAccepted = false;
+      }
+    });
+  });
+
+  $('#surname').keyup(function() {
+    if(document.getElementById('surname').value == "")
+     $('#surnamefeed').html("<font color=\"#ED5C22\">Заполните поле!</font>").show();
+    else if(!(/^[a-zа-яA-ZА-Я\-]*$/i).test(document.getElementById('surname').value))
+     $('#surnamefeed').html("<font color=\"#ED5C22\">Неверные символы!</font>").show();
+    else
+     $('#surnamefeed').html("").show();
+  });
+
+  $('#name').keyup(function() {
+    if(document.getElementById('name').value == "")
+     $('#namefeed').html("<font color=\"#ED5C22\">Заполните поле!</font>").show();
+    else if(!(/^[a-zа-яA-ZА-Я\-]*$/i).test(document.getElementById('name').value))
+     $('#namefeed').html("<font color=\"#ED5C22\">Неверные символы!</font>").show();
+    else
+     $('#namefeed').html("").show();
+  });
+
+  $('#middlename').keyup(function() {
+    if(!(/^[a-zа-яA-ZА-Я\-]*$/i).test(document.getElementById('middlename').value))
+     $('#middlenamefeed').html("<font color=\"#ED5C22\">Неверные символы!</font>").show();
+    else
+     $('#middlenamefeed').html("").show();
+  });
+
+
+  $('#city').keyup(function() {
+    if(document.getElementById('city').value == "")
+     $('#cityfeed').html("<font color=\"#ED5C22\">Заполните поле!</font>").show();
+    else if(!(/^[a-zа-яA-ZА-Я0-9\-\s]*$/i).test(document.getElementById('city').value))
+     $('#cityfeed').html("<font color=\"#ED5C22\">Неверные символы!</font>").show();
+    else
+     $('#cityfeed').html("").show();
+  });
+
+  $('#organization').keyup(function() {
+    if(document.getElementById('organization').value == "")
+     $('#organizationfeed').html("<font color=\"#ED5C22\">Заполните поле!</font>").show();
+    else if(!(/^[a-zа-яA-ZА-Я0-9.\-\"\s]*$/i).test(document.getElementById('organization').value))
+     $('#organizationfeed').html("<font color=\"#ED5C22\">Неверные символы!</font>").show();
+    else
+     $('#organizationfeed').html("").show();
+  });
+
+  $('#phone').keyup(function() {
+    if(document.getElementById('phone').value == "")
+     $('#phonefeed').html("<font color=\"#ED5C22\">Заполните поле!</font>").show();
+    else if(!(/^[0-9()\-\+]*$/i).test(document.getElementById('phone').value))
+     $('#phonefeed').html("<font color=\"#ED5C22\">Неверные символы!</font>").show();
+    else
+     $('#phonefeed').html("").show();
+  });
+
+  $('#pass').keyup(function() {
+    if(document.getElementById('pass').value == "")
+     $('#passfeed').html("<font color=\"#ED5C22\">Заполните поле!</font>").show();
+    else if(!(/^[a-zа-яA-ZА-Я0-9_]*$/i).test(document.getElementById('pass').value))
+     $('#passfeed').html("<font color=\"#ED5C22\">Неверные символы!</font>").show();
+    else if(document.getElementById('pass').value.length < 6)
+     $('#passfeed').html("<font color=\"#ED5C22\">Короткий пароль!</font>").show();
+    else
+     $('#passfeed').html("").show();
+  });
+
+
+});
+
+
+
+//-->
+</script>
+
+
+<script>
+$(document).ready(function(){
+$(".alphpopup a").hoverIntent(function() {selectLettertd(this.id)},
+function() {});
+});
+
+$(function () {
+
+
+	$('#searchInput').keydown(function(e){
+	        if (e.keyCode == 13) {
+        	    document.forms["myform"].submit();
+	            return false;
+        	}
+	    });
+
+        var distance = 10;
+        var time = 250;
+        var hideDelay = 500;
+
+        var hideDelayTimer = null;
+
+        var beingShown = false;
+        var shown = false;
+if($('.atoja').length > 0)
+{
+        var trigger = $('.atoja', this);
+        var info = $('.alphpopup', this).css('opacity', 0);
+
+       $([trigger.get(0), info.get(0)]).mouseover(function () {
+            if (hideDelayTimer) clearTimeout(hideDelayTimer);
+            if (beingShown || shown) {
+                // don't trigger the animation again
+                return;
+            } else {
+                // reset position of info box
+                beingShown = true;
+
+		var curleft = curtop = 0;
+
+
+		curleft = 20;
+		curtop = 32;
+                info.css({
+                    top: curtop,
+                    left: curleft,
+                    display: 'block'
+                }).animate({
+                    top: '+=' + distance + 'px',
+                    opacity: 1
+                }, time, 'swing', function() {
+                    beingShown = false;
+                    shown = true;
+                });
+            }
+
+            return false;
+        }).mouseout(function () {
+            if (hideDelayTimer) clearTimeout(hideDelayTimer);
+            hideDelayTimer = setTimeout(function () {
+                hideDelayTimer = null;
+                info.animate({
+                    top: '+=' + distance + 'px',
+                    opacity: 0
+                }, time, 'swing', function () {
+                    shown = false;
+                    info.css('display', 'none');
+                });
+
+            }, hideDelay);
+
+            return false;
+        });
+  }
+});
+</script>
+
+
+
+<script>
+
+function countdown(hours, minutes, seconds){
+seconds--;
+if(seconds == -1)
+{
+	seconds = 59;
+	minutes--;
+}
+if(minutes == -1)
+{
+	minutes = 59;
+	hours--;
+}
+thehours = hours;
+theminutes = minutes;
+theseconds = seconds;
+secString = seconds <= 9 ? "0" + seconds : seconds;
+minString = minutes <= 9 ? "0" + minutes : minutes;
+hoursString = hours <= 9 ? "0" + hours : hours;
+newValue = "" + hoursString + ":" + minString + ":" + secString;
+document.getElementById('count3').value=newValue;
+setTimeout("countdown(thehours,theminutes,theseconds)",1000);
+}
+
+function setLetter()
+{
+ alert('7');
+}
+function removeLetter()
+{
+}
+
+function selectLetter(sText)
+{
+ removeLetterText();
+ var tbody = document.getElementById('dpop').getElementsByTagName('TBODY')[0];
+ var r = document.createElement("TR");
+ r.setAttribute("id", "letterText");
+ tbody.appendChild(r);
+ var d = document.createElement("TD");
+ d.setAttribute("colspan", "33");
+ d.setAttribute("id", "letterText");
+ r.appendChild(d);
+ d.innerHTML = sText;
+ return false;
+}
+
+function selectLettertd(sText)
+{
+ var d = document.getElementById('letterText');
+ d.innerHTML = sText;
+ return false;
+}
+
+function removeLetterText()
+{
+ var tbody = document.getElementById('dpop').getElementsByTagName('TBODY')[0];
+ var r = document.getElementById('letterText');
+ if(r)
+ {
+  tbody.removeChild(r);
+ }
+ return false;
+}
+</script>
+
+
+		<style type="text/css">
+						</style>
+		        <script type="text/javascript" src="http://www.cba.ru/slide/swfobject.js"></script>
+                
+                        <script type="text/javascript">
+                            <!-- For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. -->
+                            var swfVersionStr = "10.0.0";
+                            <!-- To use express install, set to playerProductInstall.swf, otherwise the empty string. -->
+                            var xiSwfUrlStr = "playerProductInstall.swf";
+                            var flashvars = {};
+                            var params = {};
+                            params.quality = "high";
+                            params.bgcolor = "#ffffff";
+                            params.allowscriptaccess = "sameDomain";
+                            params.allowfullscreen = "true";
+                            params.wmode = "opaque";
+                            var attributes = {};
+                            attributes.id = "Slideshow";
+                            attributes.name = "Slideshow";
+                            attributes.align = "middle";
+                            swfobject.embedSWF(
+                                "http://www.cba.ru/slide/Slideshow.swf", "flashContent",
+                                "700", "277",
+                                swfVersionStr, xiSwfUrlStr,
+                                flashvars, params, attributes);
+                			<!-- JavaScript enabled so display the flashContent div in case it is not replaced with a swf object. -->
+                			swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+                        </script>
+                
+	
+</head>
+	<body>
+<table>
+<tr>
+<td id="leftborder">
+</td>
+<td>
+		<div id="MainLayout">
+                                        <div class="header">
+                                        <table style="margin-bottom:10px;">
+                                        <tr>
+                                          <td>
+                                              <table style="width:260px;">
+                                                  <tr>
+                                                      <form name="myform" action="http://www.cba.ru/search/" method="get">
+                                                      <td style="border:solid #999999;border-width:1px 0 1px 1px;background-color:#FFFFFF;">
+                                                          <input type="image" style="width:18px;height:18px;border:0;background-color:#FFFFFF;margin:1px;" src="http://www.cba.ru/i/lupa.jpg" alt="Поиск"/>
+                                                      </td>
+                                                      <td style="width:100%;vertical-align:middle;border:solid #999999;border-width:1px 1px 1px 0px;background-color:#FFFFFF;">
+                                                          <input id="searchInput" style="width:100%;height:18px;border:0;font-size:0.8em;vertical-align:middle;color:#CC0000;" type="text" name="SearchText" value="Поиск философии здравого смысла" onfocus="if(this.value=='Поиск философии здравого смысла')this.value='';"/>
+                                                      </td>
+                                                      </form>
+                                                      <td style="vertical-align:middle;white-space:nowrap;padding-left:5px;">
+                                                          <a class="atoja" href="" onclick="return false;"><strong>от А до Я</strong></a>
+    						          <table style="opacity: 0;text-align:right;" id="dpop" class="alphpopup">
+    		                                          <tbody>
+    		                                          <tr>
+              							<td><a href="" id="&lt;a href=&quot;/services/audit/&quot;&gt;Аудит&lt;/a&gt;&lt;br/&gt;  &lt;a href=&quot;/services/autsorsing/&quot;&gt;Аутсорсинг МСФО&lt;/a&gt;&lt;br/&gt;  &lt;a href=&quot;/services/autsorsing_buhuchet/&quot;&gt;Аутсорсинг бухгалтерского учета&lt;/a&gt;    " style="color:#CC0000;" onclick="return false;">А</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/services/management_consulting/&quot; &gt;Бизнес-консалтинг&lt;/a&gt;&lt;br/&gt;  &lt;a href=&quot;/services/systems_consulting/&quot; &gt;Бухгалтерский консалтинг&lt;/a&gt;" style="color:#CC0000;" onclick="return false;">Б</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/company/career/&quot; &gt;Вакансии&lt;/a&gt;  " style="color:#CC0000;" onclick="return false;">В</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/knowledge/dictionary/&quot; &gt;Глоссарий&lt;/a&gt;&lt;br/&gt;  &lt;a href=&quot;/services/education/calendar/&quot; &gt;График обучения&lt;/a&gt;" style="color:#CC0000;" onclick="return false;">Г</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/services/crisis_management/#budget&quot; &gt;Движение денежных средств&lt;/a&gt;" style="color:#CC0000;" onclick="return false;">Д</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/services/systems_consulting/project_consulting/unification&quot; &gt;Единая учетная система&lt;/a&gt;" style="color:#CC0000;" onclick="return false;">Е</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ё</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ж</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">З</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/results/success_stories/&quot; &gt;Истории успеха&lt;/a&gt;" style="color:#CC0000;" onclick="return false;">И</a></td>
+              							<td><a href="" style="color:#CCBBBB;" onclick="return false;">Й</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/results/clients/&quot; &gt;Клиенты&lt;/a&gt; &lt;br/&gt;  &lt;a href=&quot;/knowledge/books/&quot; &gt;Книги&lt;/a&gt; &lt;br/&gt;  &lt;a href=&quot;/contacts/&quot;&gt;Контакты&lt;/a&gt;" style="color:#CC0000;" onclick="return false;">К</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/company/official_data/&quot; &gt;Лицензии&lt;/a&gt;" style="color:#CC0000;" onclick="return false;">Л</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/services/systems_consulting/erp/&quot; &gt;Методология учета&lt;/a&gt; &lt;br/&gt;  &lt;a href=&quot;/services/msfo/&quot; &gt;МСФО&lt;/a&gt;  " style="color:#CC0000;" onclick="return false;">М</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/events/&quot; &gt;Новости&lt;/a&gt;&lt;br/&gt;  &lt;a href=&quot;/services/systems_consulting/law/&quot; &gt;Налоги&lt;/a&gt;&lt;br/&gt;  &lt;a href=&quot;/services/Tax%20disputes/&quot; &gt;Налоговые споры&lt;/a&gt;" style="color:#CC0000;" onclick="return false;">Н</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/results/responses/&quot; &gt;Отзывы&lt;/a&gt; &lt;br/&gt;  &lt;a href=&quot;/services/education/&quot; &gt;Обучение&lt;/a&gt;   " style="color:#CC0000;" onclick="return false;">О</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/knowledge/articles/&quot; &gt;Публикации&lt;/a&gt; &lt;br/&gt;  &lt;a href=&quot;/company/team/&quot; &gt;Персонал&lt;/a&gt; &lt;br/&gt;  &lt;a href=&quot;/company/partners/&quot; &gt;Партнеры&lt;/a&gt; &lt;br/&gt;  &lt;a href=&quot;/services/prav/&quot; &gt;Правовой и налоговый консалтинг&lt;/a&gt; &lt;br/&gt;  &lt;a href=&quot;/services/prav/arbitrazh/&quot; &gt;Представительство в судах&lt;/a&gt;" style="color:#CC0000;" onclick="return false;">П</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/company/official_data/&quot; &gt;Рейтинги&lt;/a&gt; &lt;br/&gt;  &lt;a href=&quot;/services/management_consulting/process/&quot; &gt;Реинжиниринг &lt;br&gt; бизнес-процессов&lt;/a&gt;" style="color:#CC0000;" onclick="return false;">Р</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/services/systems_consulting/project_consulting/standarts/&quot; &gt;Стандартизация&lt;/a&gt;&lt;br/&gt;  &lt;a href=&quot;/services/systems_consulting/law/&quot; &gt;Судебные споры&lt;/a&gt;&lt;br/&gt;  &lt;a href=&quot;/company/career/&quot; &gt;Студентам&lt;/a&gt;" style="color:#CC0000;" onclick="return false;">С</a></td>
+              							<td><a href="" id="&lt;a href=&quot;/services/msfo/&quot; &gt;Трансформация&lt;/a&gt; &lt;br/&gt;  &lt;a href=&quot;/services/management_consulting/technic/&quot; &gt;Технико-экономический аудит&lt;/a&gt;" style="color:#CC0000;" onclick="return false;">Т</a></td>
+              							<td><a href="" id="&lt;a href=&quot;http://upo.cba.ru/&quot; &gt;Учётная политика&lt;/a&gt;&lt;br/&gt;  &lt;a href=&quot;/services/systems_consulting/project_consulting/unification&quot; &gt;Унификация&lt;/a&gt;&lt;br/&gt;  &lt;a href=&quot;/services/management_consulting/management/&quot; &gt;Управленческий учет&lt;/a&gt;  " style="color:#CC0000;" onclick="return false;">У</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ф</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Х</a></td>
+        							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ц</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ч</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ш</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Щ</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ъ</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ы</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ь</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Э</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Ю</a></td>
+              							<td><a href="" id="" style="color:#CCBBBB;" onclick="return false;">Я</a></td>
+    		                                          </tr>
+    		                                          <tr><td colspan="33" id="lettertd" style="height:80px;padding-left:5px;"><span style="white-space:nowrap" id="letterText"></span></td></tr>
+                                                          </tbody>
+                                                          </table>
+   						           </div>
+                                                      </td>
+                                                  </tr>
+                                              </table>
+
+                                          </td>
+                                          <td style="width:100%;text-align:right;padding-bottom:5px;">
+                                              <table style="width:100%;text-align:right;color:#073763;font-size:1.1em;">
+                                                     <tr>
+                                                     <td style="width:100%;text-align:right;">
+                                                         <strong>+7 (495) 380-24-88</strong>
+                                                     </td>
+                                                     </tr>
+                                                     <tr>
+                                                     <td style="width:100%;text-align:right;">
+                                                         <strong>+7 (495) 783-37-35</strong>
+                                                     </td>
+                                                     </tr>
+                                              </table>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                        <td>
+                                        <a href="/"><img style="margin:0;" src="/i/LogotypeFull.gif" alt="ЦБА. Центр бизнес-консалтинга и аудита" id="Logotype" /></a>
+                                        </td>
+                                        <td style="width:100%;text-align:right;">
+                                                                                    <form name="loginform" action="./" METHOD="POST">
+                                            <div style="width:100%;" align="right">
+                                            <table>
+                                            <tr>
+                                            <td colspan=2 style="text-align:right;">
+                                            <input style="height:20px;margin-right:2px;font-size:0.9em;" type="text" name="sLogin" value="Логин" onfocus="if(this.value=='Логин')this.value='';" /><input style="height:20px;font-size:0.9em;" type="password" name="sPass" value="Пароль" onfocus="if(this.value=='Пароль')this.value='';" />
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                            <td style="text-align:left;padding-top:5px;">
+                                            <a href="http://www.cba.ru/registration" class="loginlink">Регистрация</a>&nbsp;&nbsp;&nbsp;<a href="http://www.cba.ru/recovery" class="loginlink">Забыли пароль?</a>
+                                            </td>
+                                            <td style="height:20px;width:40px;padding:5px 0 0 20px;vertical-align: middle;">
+                                            <a href="javascript: void(0);" onclick="document.loginform.submit();return false;" class="enterlogin">Вход</a>
+                                            </td>
+                                            </tr>
+                                            </table>
+                                            </div>
+                                            </form>
+                                                                                </td>
+                                        </tr>
+                                        </table>
+                                        </div>
+                                        <ul class="mainul">
+                                             <li><a class="current" href="http://cba.ru" accesskey="1">Главная</a></li>
+                                             <li><a href="http://www.cba.ru/services" accesskey="2">Услуги</a></li>
+                                             <li><a href="http://www.cba.ru/results" accesskey="3">Результаты</a></li>
+                                             <li><a href="http://www.cba.ru/events" accesskey="4">Новости</a></li>
+                                             <li><a href="http://www.cba.ru/knowledge" accesskey="5">Знания</a></li>
+                                             <li><a href="http://www.cba.ru/company/career" accesskey="6">Карьера</a></li>
+                                             <li><a href="http://www.cba.ru/company" accesskey="7">Компания</a></li>
+                                             <li class="lasthead"><a href="http://www.cba.ru/contacts" accesskey="8">Контакты</a></li>
+                                        </ul>
+                                        <br/><br/><br/>
+					<div class="maincontent">    <table class="maintable">
+           <tr>
+           <td>
+          <div id="flashContent">
+              	<p>
+      	        	To view this page ensure that Adobe Flash Player version
+      				10.0.0 or greater is installed.
+      			</p>
+      			<script type="text/javascript">
+      				var pageHost = ((document.location.protocol == "https:") ? "https://" :	"http://");
+      				document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='"
+      								+ pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" );
+      			</script>
+          </div>
+         <noscript>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="Slideshow">
+                <param name="movie" value="Slideshow.swf" />
+                <param name="quality" value="high" />
+                <param name="bgcolor" value="#ffffff" />
+                <param name="allowScriptAccess" value="sameDomain" />
+                <param name="allowFullScreen" value="true" />
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="Slideshow.swf" width="100%" height="100%">
+                    <param name="quality" value="high" />
+                    <param name="bgcolor" value="#ffffff" />
+                    <param name="allowScriptAccess" value="sameDomain" />
+                    <param name="allowFullScreen" value="true" />
+                <!--<![endif]-->
+                <!--[if gte IE 6]>-->
+                	<p>
+                		Either scripts and active content are not permitted to run or Adobe Flash Player version
+                		10.0.0 or greater is not installed.
+                	</p>
+                <!--<![endif]-->
+                    <a href="http://www.adobe.com/go/getflashplayer">
+                        <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash Player" />
+                    </a>
+                <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+            </object>
+	    </noscript>
+        </td>
+        <td style="height:100%;width:100%;border-width:0 0 0 2px;border-style:solid;border-color:#F3F3F3;background-color:#FFFFFF;">
+        <table class="projectstable" style="height:277px;">
+               <tr>
+               <th>
+                   Дневник проектов
+               </th>
+               </tr>
+                                                              <tr><td><a href="/results/fluend_projects/2016/05/20/20052016/"><div style="padding:5px 5px 5px 10px; margin:0 0 0 0; border-color:#F3F3F3; border-width:0 0 2px 0;border-style:solid;">Учебный центр ЦБА провел серию обучающих семинаров для Госкорпорации Ростех</div></a></td></tr>
+                                               <tr><td><a href="/results/fluend_projects/2016/05/19/19052016/"><div style="padding:5px 5px 5px 10px; margin:0 0 0 0; border-color:#F3F3F3; border-width:0 0 2px 0;border-style:solid;">Уважаемые партнеры, клиенты, коллеги! Приглашаем всех желающих принять учатие в проекте "Интеллектуальный туризм"</div></a></td></tr>
+                                               <tr><td><a href="/results/fluend_projects/2015/09/17/021005102015/"><div style="padding:5px 5px 5px 10px; margin:0 0 0 0; border-color:#F3F3F3; border-width:0 0 2px 0;border-style:solid;">Приглашаем всех желающих на выездной корпоративный семинар в Псков</div></a></td></tr>
+                                               <tr><td><a href="/results/fluend_projects/2015/09/16/project16092014/"><div style="padding:5px 5px 5px 10px; margin:0 0 0 0; border-color:#F3F3F3; border-width:0 0 2px 0;border-style:solid;">ЦБА информирует о начале аудиторских проверок в новом сезоне</div></a></td></tr>
+                                                 <tr><td style="vertical-align:bottom;text-align:right;"><b><a href="http://cba.ru/results/fluend_projects/" style="color:#073763;text-decoration:none;">Подробнее&nbsp;<img src="http://www.cba.ru/i/arrow_w.jpg"/></a></b></td></tr>
+        </table>
+        </td>
+        </tr>
+        <tr>
+        <td style="padding:20px 20px 0 0">
+        <div style="font-size: 0.85em;color:#333333;">
+        Добро пожаловать на сайт Акционерного общества "Центра бизнес-консалтинга и аудита" (АО "ЦБА"). Наша компания создана в феврале 1994 года и является одной из старейших на профильном рынке услуг. Все это время мы сохраняем наш главный принцип работы — независимость и публичность.<br/>
+ЦБА оказывает весь спектр аудиторских и консультационных услуг — от обязательного аудита до многоэтапных консалтинговых проектов, и обладает всем необходимым для того, чтобы управление предприятием стало для вас по-настоящему профессиональной и приносящей удовлетворение и прибыль деятельностью.
+        </div>
+        <div style="text-align:right;"><b><a href="http://cba.ru/company/" style="color:#073763;font-size: 0.85em;text-decoration:none;">Подробнее&nbsp;<img src="http://www.cba.ru/i/arrow_g.jpg"/></a></b></div>
+        </td>
+        <td rowspan=2 style="height:100%;width:100%;padding:20px 0 0 2px;">
+        <table class="clientstable" style="border:1px;">
+               <tr>
+               <th colspan="2">
+                   Наши клиенты
+               </th>
+               </tr>
+               <tr>
+               <td style="height:5px;"></td><td></td>
+               </tr>
+                                             <tr>
+                                    <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/447.jpg"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                                                                  <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/357.jpg"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                              </tr>
+                                                            <tr>
+                                    <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/111.gif"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                                                                  <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/130.gif"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                              </tr>
+                                                            <tr>
+                                    <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/154.gif"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                                                                  <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/232.jpg"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                              </tr>
+                                                            <tr>
+                                    <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/229.gif"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                                                                  <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/248.jpg"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                              </tr>
+                                                            <tr>
+                                    <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/253.jpg"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                                                                  <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/322.gif"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                              </tr>
+                                                            <tr>
+                                    <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/356.jpg"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                                                                  <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/449.jpg"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                              </tr>
+                                                            <tr>
+                                    <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/441.jpg"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                                                                  <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/451.jpg"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                              </tr>
+                                                            <tr>
+                                    <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/452.gif"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                                                                  <td style="padding:0 0 0 5px;width:100px;">
+                          <table>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_t1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_tr.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td style="width:8px;background-image: url(/i/ct_l1.jpg);"></td>
+                            <td><table style="height:40px; width:90px;"><tr><td style="text-align:center;vertical-align:middle;"><img onload="if(this.width/90 > this.height/40) this.style.width='90px'; else this.style.height='40px';" src="http://www.cba.ru/upload/i/453.jpg"/></td></tr></table></td>
+                            <td style="width:8px;background-image: url(/i/ct_r1.jpg);"></td>
+                          </tr>
+                          <tr>
+                            <td class="cltcorner" style="background-image: url(/i/ct_bl.jpg);"></td>
+                            <td style="height:8px;background-image: url(/i/ct_b1.jpg);"></td>
+                            <td class="cltcorner" style="background-image: url(/i/ct_br.jpg);"></td>
+                          </tr>
+                          </table>
+                     </td>
+                              </tr>
+                                                             <tr>
+                <td colspan="2" style="padding-top:10px;vertical-align:bottom;background-color:#FFFFFF;">
+                        <div style="height:100%;text-align:right;"><b><a href="http://www.cba.ru/results/clients/" style="color:#073763;text-decoration:none;">Подробнее&nbsp;<img src="http://www.cba.ru/i/arrow_w.jpg"/></a></b></div>
+                </td>
+                </tr>
+        </table>
+        </td>
+        </tr>
+        <tr>
+        <td style="padding-top:35px;">
+        <table class="contenttable">
+               <tr>
+               <td>
+               <hr class="redhr"/>
+               </td>
+               <td>
+               <hr class="redhr"/>
+               </td>
+               <td>
+               <hr class="redhr"/>
+               </td>
+               </tr>
+               <tr>
+               <td>
+               <div style="text-align:left;color:#CC0000;font-size: 1.0em;"><strong>Новости</strong></div>
+               </td>
+               <td>
+               <div style="text-align:left;color:#CC0000;font-size: 1.0em;"><strong>Учебный план</strong></div>
+               </td>
+               <td>
+               <div style="text-align:left;color:#CC0000;font-size: 1.0em;"><strong>Публикации</strong></div>
+               </td>
+               </tr>
+               <tr>
+               <td style="padding-top:5px;">
+                                               		            <a href="/events/2016/05/19/19052016/" style="font-size: 0.85em;"><div>Приглашаем клиентов, коллег, партнеров на корпоративные семинары Учебного Центра АО ЦБА</div></a>
+                                                                               <hr class="whitehr"/>
+                            		            <a href="/events/2015/06/12/120614062015/" style="font-size: 0.85em;"><div>ЦБА организовал корпоративный выездной семинар в Эстонию</div></a>
+                                                                               <hr class="whitehr"/>
+                            		            <a href="/events/2014/07/03/03072014/" style="font-size: 0.85em;"><div>ЦБА принял участие в ярмарке вакансий  МГЭИ</div></a>
+                                                                               <hr class="whitehr"/>
+                            		            <a href="/events/2014/04/22/22042014/" style="font-size: 0.85em;"><div>Группа компаний ЦБА традиционно приняла участие в конкурсах ведущих рейтинговых агенств</div></a>
+                                                                               <hr class="whitehr"/>
+                            		            <a href="/events/2014/02/04/04021014/" style="font-size: 0.85em;"><div>ЦБА - 20 ЛЕТ</div></a>
+                                      <div style="height:100%;text-align:left;padding-top:10px;"><b><a href="http://www.cba.ru/events/" style="color:#073763;font-size: 0.85em;text-decoration:none;">Все новости&nbsp;<img src="http://www.cba.ru/i/arrow_g.jpg"/></a></b></div>
+               </td>
+               <td>
+  	          <table>
+                                                  <tr>
+                         <td style="width:25px;padding:10px 10px 0 0;">
+                             <table>
+                             <tr>
+                             <td style="background-color:#073763;padding:0 8px 0 8px;font-size:0.75em;text-align:center;color:#FFFFFF;border:1px solid #073763;">
+                                 СЕН
+                             </td>
+                             </tr>
+                             <tr>
+                             <td style="background-color:#FFFFFF;width:25px;padding:0;font-size:0.85em;text-align:center;border:1px solid #073763;">
+                                 14
+                             </td>
+                             </tr>
+                             </table>
+                         </td>
+                         <td style="padding-top:5px;width:100%;font-size: 0.85em;color:#333333;">
+                         Спецкурс<br/><a href="/services/education/calendar/2015/09/14/sem140930092015/"><div>Учебный Центр ЗАО ЦБА готовится к новому учебному году! С нетерпением ждем Вас в октябре!</div></a>
+                         </td>
+                         </tr>
+                                                  <tr>
+                         <td style="width:25px;padding:10px 10px 0 0;">
+                             <table>
+                             <tr>
+                             <td style="background-color:#073763;padding:0 8px 0 8px;font-size:0.75em;text-align:center;color:#FFFFFF;border:1px solid #073763;">
+                                 ДЕК
+                             </td>
+                             </tr>
+                             <tr>
+                             <td style="background-color:#FFFFFF;width:25px;padding:0;font-size:0.85em;text-align:center;border:1px solid #073763;">
+                                 2
+                             </td>
+                             </tr>
+                             </table>
+                         </td>
+                         <td style="padding-top:5px;width:100%;font-size: 0.85em;color:#333333;">
+                         Мастер-класс<br/><a href="/services/education/calendar/2015/12/02/sem02122015/"><div>Трансформация российской отчетности в отчетность, составленной по МСФО/Подготовка консолидированной отчетности по МСФО</div></a>
+                         </td>
+                         </tr>
+                           	          </table>
+  	          <div style="height:100%;text-align:left;padding-top:10px;"><b><a href="http://www.cba.ru/services/education/calendar/" style="color:#073763;font-size: 0.85em;text-decoration:none;">Все программы&nbsp;<img src="http://www.cba.ru/i/arrow_g.jpg"/></a></b></div>
+               </td>
+               <td style="padding-top:5px;">
+       	              	              	                                                                        <a href="/knowledge/articles/2013/09/01/publ01092013/" style="font-size: 0.85em;"><div><strong>О дате инвентаризации имущества и обязательств</strong></div></a>
+                            <div style="text-align:left;color:#333333;font-size: 0.85em;">Васяков Игорь Владимирович, замдиректора департамента методологии, стандартизации и управления качеством ЦБА; Зыбин Константин Валерьевич - юрисконсульт ЦБА, журнал "актуальная бухгалтерия", 01.09.13</div>
+       	                       	              	                                                                        <br/>
+                                                        <a href="/knowledge/articles/2013/04/01/publ01042013/" style="font-size: 0.85em;"><div><strong>Оценочные обязательства в МСФО и РСБУ: признание и оценка</strong></div></a>
+                            <div style="text-align:left;color:#333333;font-size: 0.85em;">Луговская Светлана Сергеевна, руководитель отдела международной отчетности ЗАО "ЦБА", журнал "Корпоративная финансовая отчетность: международные стандарты", 01.04.13</div>
+       	                       	              	                       	              	       <div style="height:100%;text-align:left;padding-top:10px;"><b><a href="http://www.cba.ru/knowledge/articles/" style="color:#073763;font-size: 0.85em;text-decoration:none;">Все публикации&nbsp;<img src="http://www.cba.ru/i/arrow_g.jpg"/></a></b></div>
+       	                      </td>
+               </tr>
+        </table>
+        </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-top:30px;">
+          <hr class="redhr"/>
+          <div style="text-align:left;color:#CC0000;font-size: 1.0em;margin-bottom:20px;"><strong>Библиотека ЦБА</strong></div>
+          <table style="font-size:0.85em;">
+          <tr>
+                             <td>
+                     <table>
+                     <tr>
+                       <td rowspan="2" style="padding-right:10px;">
+                       <img onload="if(this.width/60 > this.height/100) this.style.width='60px'; else this.style.height='100px';" src="http://www.cba.ru/upload/i/400.jpg"/>
+                       </td>
+                       <td>
+                       <a href="/knowledge/books/2012/12/26/book_upruch_2013/"><strong>Управленческий учёт для студентов и менеджеров</strong></a>
+                       </td>
+                     </tr>
+                     <tr>
+                         <td>
+                         <h2>1500 руб.</h2>
+<p style="text-align: justify;">
+	В учебном пособии &quot;Управленческий учёт для студентов и менеджеров&quot; представлены основы организации управленческого учёта в компании, а&nbsp;также приведены наиболее актуальные в настоящее время подсистемы управленческого учета: нормирование, планирование и бюджетирование, учет затрат и результатов, калькулирование себестоимости, а&nbsp;также рассмотрены концепции и инструменты управленческого учета.</p>
+                         </td>
+                     </tr>
+                     </table>
+                   </td>
+                    </tr>
+          </table>
+          </td>
+        </tr>
+</table>
+<table>
+        <tr>
+        <td style="padding-top:30px;font-size:0.85em;">
+        <hr class="redhr"/>
+        <ul class="linkslist">
+         <li class="firstli"><a href="http://cba-online.livejournal.com/">ЦБА в livejournal</a></li>
+         <li><a href="">facebook</a></li>
+         <li><a href="http://twitter.com/cba_online">twitter</a></li>
+         <li><a href="http://www.cba.ru/contacts">Контакты</a></li>
+         <li><a href="http://www.cba.ru/sitemap">Карта сайта</a></li>
+         <li><a href="" onclick="return false;">Оставайтесь в курсе событий</a></li>
+         <li >&copy; ЦБА 2008-2016</li>
+         <li><!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t44.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+</li>
+         </ul>
+        </td>
+        </tr>
+    </table>
+    </div>
+</div>
+</td>
+<td id="rightborder">
+</td>
+</tr>
+</table>
+			</div>
+		</div>
+	</body>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5140444-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</html>

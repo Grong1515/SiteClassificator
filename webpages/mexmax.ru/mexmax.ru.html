@@ -1,0 +1,635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" href="/css/all.css?1450342471" type="text/css" />
+	 <link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	 <link rel="stylesheet" href="/css/jquery-ui.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+		 <script type="text/javascript" src="/jcart/js/jquery-1.7.2.min.js"></script>
+	  <script src="/js/jquery-ui.js"></script>	<script async type="text/javascript" src="/js/jquery.nivo.slider.js"></script><script type="text/javascript" src="http://mexmax.ru/jcart/js/jcart.js"></script>
+<script src="http://mexmax.ru/jcart/js/jquery.simplemodal.1.4.2.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/js/script.js?1454262557"></script>
+<script type="text/javascript" src="/js/array.js?1476629756"></script>
+    	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen"/><![endif]-->
+	<script type="text/javascript">
+		$(window).load(function() {
+			$('.promo-gallery').nivoSlider({
+				effect: 'random',
+slices: 3,
+animSpeed: 500,
+pauseTime: 5000,
+directionNav: true,
+directionNavHide: false,
+pauseOnHover: true,
+captionOpacity: 0.8 
+			});
+		});
+	</script>
+<script type="text/javascript">
+$(function() {
+$("#magnifier").click(function() {
+var searchString = $("#search-area").val();
+var data = 'search='+ searchString;
+if(searchString) {
+$.ajax({
+type: "POST",
+url: "/do_search.php",
+data: data,
+beforeSend: function(html) {
+$("#content").html('');
+$(".word").html(searchString);
+},
+success: function(html){
+$("#content").show();
+$("#content").append(html);
+}
+});
+}
+$(window).unbind("scroll");
+$(".side-form").remove();
+return false;
+});
+}); 
+</script>
+
+<title>MEXMAX интернет магазин женской и мужской одежды
+</title>
+<meta name="description" content="Купить самую модную одежду для мужчин и женщин можно в интернет магазине MEXMAX
+"/>
+<meta name="keywords" content=""/>
+<meta property="og:site_name" content="MEXMAX"/>
+<meta property="og:type" content="website" />
+ <meta property="og:image" content="http://mexmax.ru/images/logo.png" />
+ <meta property="og:url" content="http://mexmax.ru/" />
+<meta property="og:title" content="MEXMAX интернет магазин женской и мужской одежды
+" />
+<meta property="og:description" content="Купить самую модную одежду для мужчин и женщин можно в интернет магазине MEXMAX
+" />
+ <meta property="vk:image" content="http://mexmax.ru/images/logo.png" />
+<meta property="vk:title" content="MEXMAX интернет магазин женской и мужской одежды
+" />
+<meta property="vk:description" content="Купить самую модную одежду для мужчин и женщин можно в интернет магазине MEXMAX
+" />
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = 'Xb6ULJ5LyR';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!-- {/literal} END JIVOSITE CODE -->
+
+</head>
+<body >
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter14591632 = new Ya.Metrika({id:14591632,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/14591632" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google.Metrika counter -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-11361387-10']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- Google.Metrika counter -->
+
+<div id="wrapper">
+		
+		<div id="header">
+			<div class="logo">
+			<a href="/" class="logoimg">mexmax</a>
+			Интернет-магазин одежды
+			</div>
+		<!--noindex-->	<div id="jcart" >
+<div class="panel">
+	<div class="box">
+					<ul class="sign">
+					 						<li> <a href="http://mexmax.ru/auth.php?login">Войти</a></li>
+						<li><a href="http://mexmax.ru/auth.php?registration">Регистрация</a></li> 
+						  					</ul>
+	</div>
+<a href="http://mexmax.ru/checkout.php" class="basket-box" title="Перейти к оформлению заказа">
+					<span class="img-holder">
+						<img src="/images/ico-2.png" alt="bas" width="30" height="27" />
+					</span>
+					<span class="row">
+						<span class="title">Моя корзина  <span>(0)</span></span>
+						<span class="price">Сумма: <span>0 руб.</span></span>
+					</span>
+				</a> 
+</div>
+
+
+<div style="display: none; padding: 20px;" id="modal_cart">
+<!--modal-->
+	<table>
+		<thead>
+			<tr>
+				<th colspan="2">
+					Ваша корзина
+				</th>
+			</tr>
+		</thead>
+		<tbody id="j-mod">
+		
+					<tr>
+				<td id="jcart-empty" colspan="2">Ваша корзина пуста!</td>
+			</tr>
+				
+		</tbody>
+		<tfoot>
+			<tr>
+				<th colspan='2'>
+					
+					<!--subtotal-->
+					<span id="jcart-subtotal" class="f-right">Всего: <strong>0 руб.</strong></span><!--/subtotal-->
+				</th>
+			</tr>
+			<tr>
+				<td colspan='2'>
+					<a href="/checkout.php" class="f-right button">Оформить заказ</a>
+					
+					<span class="f-left button simplemodal-close">Продолжить покупки</span>
+					
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+<!--modal end-->
+</div>
+
+<div id="jcart-tooltip"></div>
+	
+				
+		</div><!--/noindex-->
+			<div class="search-holder">
+				<div class="wrap">
+					<div class="free">
+						<strong>Бесплатный звонок</strong>
+						<a href="tel:88007755946">8-800-775-59-46</a>
+					</div>
+					<div class="tel">
+						<strong>Городской телефон</strong>
+						<a href="tel:84957687688">8(495)76-8-76-88</a>
+					</div>
+				</div>
+				
+				<form onsubmit="return false;" method="get" action="" id="search" class="search">
+					<fieldset>
+						<span class="text"><input type="text" value="" id="search-area"/></span>
+						<input type="submit" value="search" class="btn-search" id="magnifier"/>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<ul class="nav">
+			<li><a href="/odezhda/woman"><span>Женская одежда</span></a></li>
+			<li><a href="/odezhda/man"><span>Мужская одежда</span></a></li>
+			<!--<li><a href="#" class="construction" tabindex="1"><span>Детская одежда</span></a></li>-->
+			<li><a href="/odezhda/new"><span>Новинки</span></a></li>
+			<li><a href="/promotions.php"><span>Акции и скидки</span></a></li>
+			<li><a href="/brands.php"><span>Бренды</span></a></li>
+			<li><a href="/information/dostavka.php"><span>Доставка</span></a></li>
+			<!--<li><a href="#" class="construction" tabindex="1"><span>Статьи</span></a></li>-->
+			<li><a href="/comments.php"><span>Отзывы</span></a></li>
+		</ul>
+
+<div id="main">
+			<div class="main-holder">
+			
+				<div id="content">
+					<div class="promo-holder">
+						<div class="promo-gallery" id="promo-gallery">
+						<img src="/images/slide11.jpg" alt="В интернет-магазине MEXMAX представлена женская и мужская одежда популярных торговых марок. Новинки и распродажи, повседневная и эксклюзивная одежда.
+" title="В интернет-магазине MEXMAX представлена женская и мужская одежда популярных торговых марок. Новинки и распродажи, повседневная и эксклюзивная одежда.
+" width="707" height="471" />
+						<img src="/images/slide1.png" alt="В интернет-магазине MEXMAX представлена женская и мужская одежда популярных торговых марок. Новинки и распродажи, повседневная и эксклюзивная одежда.
+" title="В интернет-магазине MEXMAX представлена женская и мужская одежда популярных торговых марок. Новинки и распродажи, повседневная и эксклюзивная одежда.
+" width="707" height="471" />
+						
+						<img src="/images/slide3.png" alt="В интернет-магазине MEXMAX представлена женская и мужская одежда популярных торговых марок. Новинки и распродажи, повседневная и эксклюзивная одежда." title="В интернет-магазине MEXMAX представлена женская и мужская одежда популярных торговых марок. Новинки и распродажи, повседневная и эксклюзивная одежда." width="707" height="471" />
+						<img src="/images/slide4.png" alt="В интернет-магазине MEXMAX представлена женская и мужская одежда популярных торговых марок. Новинки и распродажи, повседневная и эксклюзивная одежда." title="В интернет-магазине MEXMAX представлена женская и мужская одежда популярных торговых марок. Новинки и распродажи, повседневная и эксклюзивная одежда." width="707" height="471" />
+						
+     					<img src="/images/slide6.png" alt="В интернет-магазине MEXMAX представлена женская и мужская одежда популярных торговых марок. Новинки и распродажи, повседневная и эксклюзивная одежда." title="В интернет-магазине MEXMAX представлена женская и мужская одежда популярных торговых марок. Новинки и распродажи, повседневная и эксклюзивная одежда." width="707" height="471" />
+						
+						<img src="/images/slide9.png" alt="В интернет-магазине MEXMAX представлена женская и мужская одежда популярных торговых марок. Новинки и распродажи, повседневная и эксклюзивная одежда." title="В интернет-магазине MEXMAX представлена женская и мужская одежда популярных торговых марок. Новинки и распродажи, повседневная и эксклюзивная одежда." width="707" height="471" />
+						
+						</div>
+					</div>
+					<div class="promo-list-holder">
+						<ul class="promo-list">
+							<li>
+								<div class="img-holder">
+									<span><img src="/images/ico-5.png" alt="Бесплатная доставка" title="Бесплатная доставка" width="29" height="32" /></span>
+								</div>
+								<a >Доставка по России</a>
+							</li>
+							<li>
+								<div class="img-holder">
+									<span><img src="/images/ico-6.png" alt="Пункты получения" title="Пункты получения" width="32" height="24" /></span>
+								</div>
+								<a >Пункты получения</a>
+							</li>
+							<li>
+								<div class="img-holder">
+									<span><img src="/images/ico-7.png" alt="Фирменные магазины" title="Фирменные магазины" width="32" height="34" /></span>
+								</div>
+								<a >Фирменные магазины</a>
+							</li>
+						</ul>
+					</div>
+					<ul class="banner-list">
+				
+					
+						<li><a href="http://mexmax.ru/odezhda/rasprodazha_zhenskoj_odezhdy/"><img src="/images/slide5.jpg" alt="" title=""width="700" height="393" /></a></li>
+						<!--<li><a href="http://mexmax.ru/odezhda/shuby_zhenskie/"><img src="/images/main_banner5.png" alt="" title=""width="709" height="200" /></a></li> -->
+					</ul>
+				</div>
+				
+				<div id="sidebar">
+					<div class="side-nav-holder">
+						
+											<div class="slide-box active">
+				<div class="opener"><strong>Для женщин</strong><span class="icon"></span></div><ul  data-count="1" class="side-nav0"><li data="1"><a href="/odezhda/pukhoviki_zhenskie">Пуховики</a><ul  data-count="" class="side-nav1"><li data="2"><a href="/odezhda/zhenskie_puhoviki_puhovoe_palto">Пуховое пальто</a></li><li data="16"><a href="/odezhda/zhenskie_puhoviki_zimnie">Зимние</a></li><li data="5"><a href="/odezhda/zhenskie_puhoviki_s_mehom">С мехом</a></li><li data="3"><a href="/odezhda/zhenskie_puhoviki_dlinnie">Длинные</a></li><li data="8"><a href="/odezhda/zhenskie_puhoviki_s_kapyushonom">С капюшоном</a></li><li data="7"><a href="/odezhda/zhenskie_puhoviki_s_mehom_lisi_chernoburki">С мехом лисы чернобурки</a></li><li data="11"><a href="/odezhda/zhenskie_puhoviki_molodezhnie">Молодежные</a></li><li data="13"><a href="/odezhda/zhenskie_puhoviki_stilnie">Стильные</a></li><li data="14"><a href="/odezhda/zhenskie_puhoviki_eksklyuzivnie">Эксклюзивные</a></li><li data="4"><a href="/odezhda/zhenskie_puhoviki_korotkie">Короткие</a></li><li data="9"><a href="/odezhda/zhenskie_puhoviki_kozhanie">Кожаные</a></li><li data="6"><a href="/odezhda/zhenskie_puhoviki_kurtka">Куртка</a></li><li data="12"><a href="/odezhda/zhenskie_puhoviki_modnie">Модные</a></li><li data="10"><a href="/odezhda/zhenskie_puhoviki_sportivnie">Спортивные</a></li></ul></li><li data="107"><a href="/odezhda/rasprodazha_zhenskoj_odezhdy">Распродажа</a><ul  data-count="" class="side-nav1"><li data="102"><a href="/odezhda/zhenskie_puhoviki_rasprodazha">Пуховики</a></li><li data="103"><a href="/odezhda/zhenskie_kurtki_rasprodazha">Куртки</a></li><li data="105"><a href="/odezhda/zhenskie_palto_rasprodazha">Пальто</a></li><li data="407"><a href="/odezhda/zhenskaya_kozha_zima_rasprodazha">Кожа</a></li></ul></li><li data="29"><a href="/odezhda/kurtki_zhenskie">Куртки</a><ul  data-count="" class="side-nav1"><li data="39"><a href="/odezhda/zhenskie_kurtki_na_tinsuleyte">На тинсулейте</a></li><li data="37"><a href="/odezhda/zhenskie_kurtki_na_sintepone">На синтепоне</a></li><li data="38"><a href="/odezhda/zhenskie_kurtki_na_hollofaybere">На холлофайбере</a></li><li data="47"><a href="/odezhda/zhenskie_kurtki_zimnie">Зимние</a></li><li data="41"><a href="/odezhda/zhenskie_kurtki_molodezhnie">Молодежные</a></li><li data="36"><a href="/odezhda/zhenskie_kurtki_kozhzam">Кожзам</a></li><li data="35"><a href="/odezhda/zhenskie_kurtki_kozhanie">Кожаные</a></li><li data="30"><a href="/odezhda/zhenskie_kurtki_dlinnie">Длинные</a></li><li data="31"><a href="/odezhda/zhenskie_kurtki_korotkie">Короткие</a></li><li data="34"><a href="/odezhda/zhenskie_kurtki_s_kapyushonom">С капюшоном</a></li><li data="46"><a href="/odezhda/zhenskie_kurtki_stilnie">Стильные</a></li><li data="45"><a href="/odezhda/zhenskie_kurtki_modnie">Модные</a></li><li data="44"><a href="/odezhda/zhenskie_kurtki_alyaski">Аляски</a></li><li data="33"><a href="/odezhda/zhenskie_kurtki_s_mehom_norki">С мехом норки</a></li><li data="32"><a href="/odezhda/zhenskie_kurtki_s_mehom">С мехом</a></li><li data="42"><a href="/odezhda/zhenskie_kurtki_vetrovki">Ветровки</a></li><li data="40"><a href="/odezhda/zhenskie_kurtki_sportivnie">Спортивные</a></li><li data="43"><a href="/odezhda/zhenskie_kurtki_parki">Парки</a></li></ul></li><li data="65"><a href="/odezhda/palto_zhenskie">Пальто</a><ul  data-count="" class="side-nav1"><li data="72"><a href="/odezhda/zhenskie_palto_na_tinsuleyte">На тинсулейте</a></li><li data="70"><a href="/odezhda/zhenskie_palto_na_sintepone">На синтепоне</a></li><li data="71"><a href="/odezhda/zhenskie_palto_na_hollofaybere">На холлофайбере</a></li><li data="77"><a href="/odezhda/zhenskie_palto_zimnie">Зимние</a></li><li data="68"><a href="/odezhda/zhenskie_palto_s_kapyushonom">С капюшоном</a></li><li data="73"><a href="/odezhda/zhenskie_palto_molodezhnie">Молодежные</a></li><li data="76"><a href="/odezhda/zhenskie_palto_stilnie">Стильные</a></li><li data="67"><a href="/odezhda/zhenskie_palto_s_mehom_lisi_chernoburki">С мехом лисы чернобурки</a></li><li data="66"><a href="/odezhda/zhenskie_palto_s_mehom">С мехом</a></li><li data="75"><a href="/odezhda/zhenskie_palto_modnie">Модные</a></li><li data="74"><a href="/odezhda/zhenskie_palto_plashchi">Плащи</a></li><li data="69"><a href="/odezhda/zhenskie_palto_kozhanie">Кожаные</a></li></ul></li><li data="109"><a href="/odezhda/zhenskie_zima_2015_2016">Зима 2015 2016</a><ul  data-count="" class="side-nav1"><li data="111"><a href="/odezhda/zhenskie_puhoviki_zima_2015_2016">Пуховики</a></li><li data="112"><a href="/odezhda/zhenskie_palto_zima_2015_2016">Пальто</a></li><li data="110"><a href="/odezhda/zhenskie_kurtki_zima_2015_2016">Куртки</a></li></ul></li><li data="113"><a href="/odezhda/zhenskie_vesna_2016">Весна 2016</a><ul  data-count="" class="side-nav1"><li data="114"><a href="/odezhda/zhenskie_kurtki_vesna_2016">Куртки</a></li><li data="115"><a href="/odezhda/zhenskie_palto_vesna_2016">Пальто</a></li></ul></li><li data="651"><a href="/odezhda/kardigani_zhenskie">Кардиганы</a></li><li data="507"><a href="/odezhda/zhenskie_bryuki">Брюки</a></li><li data="653"><a href="/odezhda/svitera_zhenskie">Свитера</a></li><li data="655"><a href="/odezhda/kofti_zhenskie">Кофты</a></li><li data="652"><a href="/odezhda/dzhemperi_zhenskie">Джемперы</a></li><li data="654"><a href="/odezhda/puloveri_zhenskie">Пуловеры</a></li><li data="693"><a href="/odezhda/shapka">Шапки</a></li><li data="694"><a href="/odezhda/zhaket_zhenskii">Жакеты</a></li><li data="700"><a href="/odezhda/futbolka_zhenskaya">Футболки</a></li><li data="779"><a href="/odezhda/kombinezony_zhenskie">Комбинезоны</a></li><li data="778"><a href="/odezhda/kostyumy_zhenskie">Костюмы</a></li><li data="774"><a href="/odezhda/shorty_zhenskie">Шорты</a></li><li data="776"><a href="/odezhda/topy_zhenskie">Топы</a></li></ul>				</div>
+								<div class="slide-box active">
+				<div class="opener"><strong>Для мужчин</strong><span class="icon"></span></div><ul  data-count="2" class="side-nav0"><li data="17"><a href="/odezhda/pukhoviki_muzhskie">Пуховики</a><ul  data-count="" class="side-nav1"><li data="28"><a href="/odezhda/muzhskie_puhoviki_zimnie">Зимние</a></li><li data="19"><a href="/odezhda/muzhskie_puhoviki_dlinnie">Длинные</a></li><li data="18"><a href="/odezhda/muzhskie_puhoviki_puhovoe_palto">Пуховое пальто</a></li><li data="22"><a href="/odezhda/muzhskie_puhoviki_kozhanie">Кожаные</a></li><li data="20"><a href="/odezhda/muzhskie_puhoviki_korotkie">Короткие</a></li><li data="25"><a href="/odezhda/muzhskie_puhoviki_modnie">Модные</a></li><li data="24"><a href="/odezhda/muzhskie_puhoviki_molodezhnie">Молодежные</a></li><li data="26"><a href="/odezhda/muzhskie_puhoviki_stilnie">Стильные</a></li><li data="21"><a href="/odezhda/muzhskie_puhoviki_kurtki">Куртки</a></li><li data="23"><a href="/odezhda/muzhskie_puhoviki_sportivnie">Спортивные</a></li></ul></li><li data="48"><a href="/odezhda/kurtki_muzhskie">Куртки</a><ul  data-count="" class="side-nav1"><li data="64"><a href="/odezhda/muzhskie_kurtki_zimnie">Зимние</a></li><li data="49"><a href="/odezhda/muzhskie_kurtki_dlinnie">Длинные</a></li><li data="55"><a href="/odezhda/muzhskie_kurtki_kozhzam">Кожзам</a></li><li data="52"><a href="/odezhda/muzhskie_kurtki_s_mehom_volka">С мехом волка</a></li><li data="54"><a href="/odezhda/muzhskie_kurtki_kozhanie">Кожаные</a></li><li data="51"><a href="/odezhda/muzhskie_kurtki_s_mehom">С мехом</a></li><li data="57"><a href="/odezhda/muzhskie_kurtki_molodezhnie">Молодежные</a></li><li data="50"><a href="/odezhda/muzhskie_kurtki_korotkie">Короткие</a></li><li data="63"><a href="/odezhda/muzhskie_kurtki_stilnie">Стильные</a></li><li data="60"><a href="/odezhda/muzhskie_kurtki_alyaski">Аляски</a></li><li data="53"><a href="/odezhda/muzhskie_kurtki_s_kapyushonom">С капюшоном</a></li><li data="62"><a href="/odezhda/muzhskie_kurtki_modnie">Модные</a></li><li data="58"><a href="/odezhda/muzhskie_kurtki_vetrovki">Ветровки</a></li><li data="61"><a href="/odezhda/muzhskie_kurtki_pilot">Пилот</a></li><li data="59"><a href="/odezhda/muzhskie_kurtki_parki">Парки</a></li><li data="56"><a href="/odezhda/muzhskie_kurtki_sportivnie">Спортивные</a></li></ul></li><li data="108"><a href="/odezhda/rasprodazha_muzhskoj_odezhdy">Распродажа</a><ul  data-count="" class="side-nav1"><li data="101"><a href="/odezhda/muzhskie_puhoviki_rasprodazha">Пуховики</a></li><li data="104"><a href="/odezhda/muzhskie_kurtki_rasprodazha">Куртки</a></li><li data="409"><a href="/odezhda/muzhskaya_kozha_zima_rasprodazha">Кожа</a></li><li data="106"><a href="/odezhda/muzhskie_palto_rasprodazha">Пальто</a></li></ul></li><li data="78"><a href="/odezhda/palto_muzhskie">Пальто</a><ul  data-count="" class="side-nav1"><li data="80"><a href="/odezhda/muzhskie_palto_s_mehovim_vorotnikom">С меховым воротником</a></li><li data="86"><a href="/odezhda/muzhskie_palto_zimnie">Зимние</a></li><li data="85"><a href="/odezhda/muzhskie_palto_stilnie">Стильные</a></li><li data="79"><a href="/odezhda/muzhskie_palto_s_mehom">С мехом</a></li><li data="82"><a href="/odezhda/muzhskie_palto_dvubortnie">Двубортные</a></li><li data="83"><a href="/odezhda/muzhskie_palto_molodezhnie">Молодежные</a></li><li data="84"><a href="/odezhda/muzhskie_palto_modnie">Модные</a></li><li data="81"><a href="/odezhda/muzhskie_palto_kozhanie">Кожаные</a></li></ul></li><li data="95"><a href="/odezhda/dublenki_muzhskie">Дубленки</a><ul  data-count="" class="side-nav1"><li data="97"><a href="/odezhda/muzhskie_dublenki_kozhanie">Кожаные</a></li><li data="96"><a href="/odezhda/muzhskie_dublenki_korotkie">Короткие</a></li></ul></li><li data="116"><a href="/odezhda/muzhskie_zima_2015_2016">Зима 2015 2016</a><ul  data-count="" class="side-nav1"><li data="117"><a href="/odezhda/muzhskie_kurtki_zima_2015_2016">Куртки</a></li><li data="118"><a href="/odezhda/muzhskie_puhoviki_zima_2015_2016">Пуховики</a></li><li data="119"><a href="/odezhda/muzhskie_palto_zima_2015_2016">Пальто</a></li></ul></li><li data="120"><a href="/odezhda/muzhskie_vesna_2016">Весна 2016</a><ul  data-count="" class="side-nav1"><li data="121"><a href="/odezhda/muzhskie_kurtki_vesna_2016">Куртки</a></li><li data="122"><a href="/odezhda/muzhskie_palto_vesna_2016">Пальто</a></li></ul></li><li data="698"><a href="/odezhda/futbolka_muzhskaya">Футболки</a></li><li data="696"><a href="/odezhda/shorty_muzhskie">Шорты</a></li><li data="775"><a href="/odezhda/bryuki_muzhskie">Брюки</a></li></ul>				</div>
+				<script type="text/javascript">
+
+		$(document).ready(function() {
+		if ($.cookie('submenuMark'))
+		{
+		var dataCount=$.cookie('submenuMark').split('_')[0];
+		var data=$.cookie('submenuMark').split('_')[1];
+		}
+		
+	$('.side-nav0 li').each(function(i) { 
+	    
+		if ((dataCount==$(this).parent().attr('data-count')) & (data==$(this).attr('data'))) { 
+		$(this).children('ul').slideDown(600); 
+		}
+		
+		$(this).click(function() { 
+		
+		    
+	       
+		    href=$(this).children('a').attr('href');
+	        z=($(this).parent().attr('data-count'));
+			
+			var this_i=($(this).attr('data'));
+			var list = $(this).find('ul');
+			if ((href)&(z>'')){
+			$('.side-nav0 ul').hide();
+			}
+			if (list.length == 0){
+			
+			if (z>''){
+			Delcookie();
+			}
+			if (href){
+					location.href=href;
+					}
+			
+			}
+			else 
+			{
+			if ($(this).children().next().css('display') == 'none') {
+			    Setcookie(z+'_'+this_i);
+				    if (href){ location.href=href; }
+					else { $(this).children('a').next().slideDown(600); }
+			
+			}
+			else { 
+			     $(this).children('a').next().slideUp(200);
+				 Delcookie()
+    			 }
+		}
+		return false; // Prohibit the browser to follow the link address
+		});
+	});
+}); 
+
+function Setcookie(index) {
+	$.cookie('submenuMark', index, {expires: null, path: '/'}); // Set mark to cookie (submenu is shown):
+}
+function Delcookie() {
+	$.cookie('submenuMark', null, {expires: null, path: '/'}); // Set mark to cookie (submenu is shown):
+}
+
+	</script>
+						
+						
+						<div class="slide-box active">
+							<div class="opener">
+								<strong style="height:56px;padding:7px 0 0 37px;line-height:26px;">Подписаться на <br />акции и новости</strong>
+								<span class="icon"></span>
+							</div>
+							<form  class="subscribe" action="?action=signup" method="post" id="newsletter-signup">
+								<fieldset>
+									<div class="help">
+										<p><strong>Вы первыми будете узнавать о</strong> распродажах, новых поступлениях и акциях.</p>
+									</div>
+									<span class="text"><input type="text" value="Ваше имя" name="signup-name" id="signup-name" /></span>
+									<span class="text"><input type="text" value="Ваш e-mail" name="signup-email" id="signup-email" /></span>
+									<input type="submit" value="Подписаться" id="signup-button" class="btn-subscribe" />
+									 <p id="signup-response"></p>
+								</fieldset>
+						</form>						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="recommend-holder">
+				<div class="recommend">
+					<div class="heading">
+						<h2>Новые поступления</h2>
+						<a href="/odezhda/new" class="all">Все поступления</a>
+					</div>
+	
+					<div class="products-box">
+						<ul class="products">
+									<li>
+								<div class="img-holder">
+								<img class="ico-new" width="50" height="32" alt="новинка" title="новинка" src="/images/ico-new.png"/>
+									<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_300-1_mexmax"><img src="/foto-catalog/category/491a0155.jpg" alt="Куртка ветровка 300-1 женская" title="Куртка ветровка 300-1 женская" width="174" height="260" /></a>
+																		<span href="/popuppage.php?id=9275" class="lnk-popup fancybox fancybox.ajax">Быстрый просмотр</span>
+																		
+								</div>
+								<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_300-1_mexmax" class="title">куртка женская</a>
+								<strong class="price">Цена: 1299</strong>
+							</li>
+														<li>
+								<div class="img-holder">
+								<img class="ico-new" width="50" height="32" alt="новинка" title="новинка" src="/images/ico-new.png"/>
+									<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_1506_mc_classic"><img src="/foto-catalog/category/491a0057.jpg" alt="Куртка 1506 женская" title="Куртка 1506 женская" width="174" height="260" /></a>
+																		<span href="/popuppage.php?id=9267" class="lnk-popup fancybox fancybox.ajax">Быстрый просмотр</span>
+																		
+								</div>
+								<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_1506_mc_classic" class="title">куртка женская</a>
+								<strong class="price">Цена: 2800</strong>
+							</li>
+														<li>
+								<div class="img-holder">
+								<img class="ico-new" width="50" height="32" alt="новинка" title="новинка" src="/images/ico-new.png"/>
+									<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_1556_mc_classic"><img src="/foto-catalog/category/491a0147.jpg" alt="Куртка 1556 женская" title="Куртка 1556 женская" width="174" height="260" /></a>
+																		<span href="/popuppage.php?id=9262" class="lnk-popup fancybox fancybox.ajax">Быстрый просмотр</span>
+																		
+								</div>
+								<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_1556_mc_classic" class="title">куртка женская</a>
+								<strong class="price">Цена: 4800</strong>
+							</li>
+														<li>
+								<div class="img-holder">
+								<img class="ico-new" width="50" height="32" alt="новинка" title="новинка" src="/images/ico-new.png"/>
+									<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_6083_hannan_liuni"><img src="/foto-catalog/category/491a7336.jpg" alt="Куртка короткая 6083 женская на синтепоне" title="Куртка короткая 6083 женская на синтепоне" width="174" height="260" /></a>
+																		<span href="/popuppage.php?id=9252" class="lnk-popup fancybox fancybox.ajax">Быстрый просмотр</span>
+																		
+								</div>
+								<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_6083_hannan_liuni" class="title">куртка женская</a>
+								<strong class="price">Цена: 1599</strong>
+							</li>
+														<li>
+								<div class="img-holder">
+								<img class="ico-new" width="50" height="32" alt="новинка" title="новинка" src="/images/ico-new.png"/>
+									<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_2951-1_crame"><img src="/foto-catalog/category/491a8177.jpg" alt="Куртка 2951-1 женская" title="Куртка 2951-1 женская" width="174" height="260" /></a>
+																		<span href="/popuppage.php?id=9250" class="lnk-popup fancybox fancybox.ajax">Быстрый просмотр</span>
+																		
+								</div>
+								<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_2951-1_crame" class="title">куртка женская</a>
+								<strong class="price">Цена: 5000</strong>
+							</li>
+													</ul>
+					</div>
+				</div>
+			</div>
+		<div class="recommend-holder">
+				<div class="recommend">
+					<div class="heading">
+						<h2>Лидеры продаж</h2>
+						
+					</div>
+					<div class="products-box">
+						<ul class="products">
+													<li>
+								<div class="img-holder">
+								<img class="ico-leader" width="73" height="70" alt="Лидер" title="Лидер" src="/images/ico-leader.png"/>									<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_099_hannan_liuni"><img src="/foto-catalog/category/491a7675.jpg" alt="Куртка короткая 099 женская на синтепоне" title="Куртка короткая 099 женская на синтепоне" width="174" height="260" /></a>
+									<span href="/popuppage.php?id=9214" class="lnk-popup fancybox fancybox.ajax">Быстрый просмотр</span>
+								</div>
+								<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_099_hannan_liuni" class="title">куртка женская</a>
+								<strong class="price">Цена: 1599</strong>
+							</li>
+														<li>
+								<div class="img-holder">
+								<img class="ico-leader" width="73" height="70" alt="Лидер" title="Лидер" src="/images/ico-leader.png"/>									<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_2010_hannan_liuni"><img src="/foto-catalog/category/491a5273.jpg" alt="Куртка короткая 2010 женская на синтепоне" title="Куртка короткая 2010 женская на синтепоне" width="174" height="260" /></a>
+									<span href="/popuppage.php?id=9204" class="lnk-popup fancybox fancybox.ajax">Быстрый просмотр</span>
+								</div>
+								<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_2010_hannan_liuni" class="title">куртка женская</a>
+								<strong class="price">Цена: 1800</strong>
+							</li>
+														<li>
+								<div class="img-holder">
+								<img class="ico-leader" width="73" height="70" alt="Лидер" title="Лидер" src="/images/ico-leader.png"/>									<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_2010_hannan_liuni"><img src="/foto-catalog/category/491a5234.jpg" alt="Куртка короткая 2010 женская на синтепоне" title="Куртка короткая 2010 женская на синтепоне" width="174" height="260" /></a>
+									<span href="/popuppage.php?id=9204" class="lnk-popup fancybox fancybox.ajax">Быстрый просмотр</span>
+								</div>
+								<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_2010_hannan_liuni" class="title">куртка женская</a>
+								<strong class="price">Цена: 1800</strong>
+							</li>
+														<li>
+								<div class="img-holder">
+								<img class="ico-leader" width="73" height="70" alt="Лидер" title="Лидер" src="/images/ico-leader.png"/>									<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_2010_hannan_liuni"><img src="/foto-catalog/category/491a5242.jpg" alt="Куртка короткая 2010 женская на синтепоне" title="Куртка короткая 2010 женская на синтепоне" width="174" height="260" /></a>
+									<span href="/popuppage.php?id=9204" class="lnk-popup fancybox fancybox.ajax">Быстрый просмотр</span>
+								</div>
+								<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_2010_hannan_liuni" class="title">куртка женская</a>
+								<strong class="price">Цена: 1800</strong>
+							</li>
+														<li>
+								<div class="img-holder">
+								<img class="ico-leader" width="73" height="70" alt="Лидер" title="Лидер" src="/images/ico-leader.png"/>									<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_2010_hannan_liuni"><img src="/foto-catalog/category/491a5282.jpg" alt="Куртка короткая 2010 женская на синтепоне" title="Куртка короткая 2010 женская на синтепоне" width="174" height="260" /></a>
+									<span href="/popuppage.php?id=9204" class="lnk-popup fancybox fancybox.ajax">Быстрый просмотр</span>
+								</div>
+								<a href="/odezhda/kurtki_zhenskie/kurtka_zhenskaya_2010_hannan_liuni" class="title">куртка женская</a>
+								<strong class="price">Цена: 1800</strong>
+							</li>
+													</ul>
+					</div>
+				</div>
+			</div><div class="brands">
+				<h2><a href="#">Популярные бренды</a></h2>
+				<div class="brand-list">
+					<ul>
+											<li><a href="/odezhda/YIERMAN"><img src="/images/brands/main/yierman-logo.png" alt="YIERMAN" title="YIERMAN" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/KAPRE"><img src="/images/brands/main/kapre-logo.png" alt="KAPRE" title="KAPRE" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/FineBabyCat"><img src="/images/brands/main/finebabycat-logo.png" alt="FineBabyCat" title="FineBabyCat" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/CATTAIL_WILLOW"><img src="/images/brands/main/catt-logo.png" alt="CATTAIL WILLOW" title="CATTAIL WILLOW" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/SALCO"><img src="/images/brands/main/salco-logo.png" alt="SALCO" title="SALCO" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/VININUS"><img src="/images/brands/main/vininus-logo.png" alt="VININUS" title="VININUS" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/KAROYNA"><img src="/images/brands/main/karoyna-logo.png" alt="KAROYNA" title="KAROYNA" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/SNOWIMAGE"><img src="/images/brands/main/snowimage-logo.png" alt="SNOWIMAGE" title="SNOWIMAGE" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/Towmy"><img src="/images/brands/main/towmy-logo.png" alt="Towmy" title="Towmy" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/TUOMAIFLY"><img src="/images/brands/main/tuomaifly-logo.png" alt="TUOMAIFLY" title="TUOMAIFLY" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/JDL_LADY"><img src="/images/brands/main/jdllady-logo.png" alt="JDL LADY" title="JDL LADY" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/EAST_ELEPHANT"><img src="/images/brands/main/eastelepfant-logo.png" alt="EAST ELEPHANT" title="EAST ELEPHANT" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/MC_CLASSIC"><img src="/images/brands/main/mcclassic-logo.png" alt="MC CLASSIC" title="MC CLASSIC" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/VARY"><img src="/images/brands/main/vary-logo.png" alt="VARY" title="VARY" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/GEBUR"><img src="/images/brands/main/gebur-logo.png" alt="GEBUR" title="GEBUR" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/BUTTERAMY"><img src="/images/brands/main/butteramy-logo.png" alt="BUTTERAMY" title="BUTTERAMY" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/VATANA"><img src="/images/brands/main/vatana-logo.png" alt="VATANA" title="VATANA" width="74" height="48" /></a></li>
+												<li><a href="/odezhda/ironi"><img src="/images/brands/main/ironi-logo.png" alt="ironi" title="ironi" width="74" height="48" /></a></li>
+											</ul>
+				</div>
+			</div>			
+			
+		</div>
+	</div>
+<div id="footer">
+		<div class="footer-holder">
+			<ul class="title-list">
+				<li>Каталог товаров</li>
+				<li>Сервис и помощь</li>
+				<li>О компании</li>
+				<li>Мы в соцсетях</li>
+				<!--<li>Мы принимаем</li>-->
+			</ul>
+			<div class="footer-nav">
+				<ul>
+					<li><a href="/odezhda/woman/">Одежда для женщин</a></li>
+					<li><a href="/odezhda/man/">Одежда для мужчин</a></li>
+					<!--<li><a class="construction" tabindex="1">Одежда для детей</a></li>
+					<li><a class="construction" tabindex="1">Для дома</a></li>-->
+				</ul>
+				<ul>
+					<li><a href="/information/zakaz.php">Как заказать</a></li>
+					<li><a href="/information/oplata.php">Как оплатить</a></li>
+					<li><a href="/information/dostavka.php">Как получить </a></li>
+					<li><a href="/information/vernut.php">Как вернуть</a></li>
+					<!--<li><a class="construction" tabindex="1">Пункты выдачи</a></li>
+					<li><a class="construction" tabindex="1">Правила продажи</a></li>
+					<li><a class="construction" tabindex="1">Публичная оферта</a></li>
+					<li><a class="construction" tabindex="1">Уход за товаром</a></li>-->
+				</ul>
+				<ul>
+					<li><a href="/information/about.php" >О нас</a></li>
+					<li><a href="/contacts.php">Контакты</a></li>
+					<li><a href="/information/advantages.php">Преимущества</a></li>
+					<!--<li><a class="construction" tabindex="1">Партнерам</a></li>-->
+				</ul>
+				<ul>
+					<!--<li>
+						<a class="construction" tabindex="1">Фейсбук</a>
+						<a class="soc"  >
+							<img src="/images/social-1.png" alt="facebook" width="20" height="20" />
+						</a>
+					</li>
+					<li>
+						<a class="construction" tabindex="1">Вконтакте</a>
+						<a class="soc">
+							<img src="/images/social-2.png" alt="vkontakte" width="20" height="20" />
+						</a>
+					</li>
+					<li>
+						<a class="construction" tabindex="1">Одноклассники</a>
+						<a class="soc">
+							<img src="/images/social-3.png" alt="odnoklassniki" width="20" height="20" />
+						</a>
+					</li>
+					<li>
+						<a class="construction" tabindex="1">Твиттер</a>
+						<a class="soc">
+							<img src="/images/social-4.png" alt="tweeter" width="20" height="20" />
+						</a>
+					</li>-->
+					<li>
+						<a rel="nofollow" href="https://www.youtube.com/user/mexmaxshop" >YouTube</a>
+						<a class="soc">
+							<img src="/images/social-5.png" alt="YouTube" width="20" height="20" />
+						</a>
+					</li>
+				</ul>
+				<!--<ul>
+					<li><a class="construction">Master Card</a></li>
+					<li><a class="construction">Visa</a></li>
+					<li><a class="construction">Qiwi</a></li>
+					<li><a class="construction">Яндекс Деньги</a></li>
+					<li><a class="construction">Webmoney</a></li>
+				</ul>-->
+				<span id ='answer' class='answer'>Раздел в разработке</span>
+			</div>
+			<ul class="payment">
+				<li><img src="/images/payment-1.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-2.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-3.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-4.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-5.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-6.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-7.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-8.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-9.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-10.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-11.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-12.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-13.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-14.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-15.png" alt="image description" width="50" height="30" /></li>
+				<li><img src="/images/payment-16.png" alt="image description" width="50" height="30" /></li>
+			</ul>
+		</div>
+		<span class="copy">Copyright 2000-2015 © mexmax.ru. Интернет-магазин одежды MEXMAX. Все права защищены. <br/>Бесплатная доставка по всей России. Тел. 8-800-775-59-46 (Бесплатно) e-mail: mexmax-shop@yandex.ru</span>
+	</div>
+	<div class='scrollTop' style='display:none;'></div> 
+	<noscript>
+<div class="warning">
+<noindex>Внимание! В вашем браузере отключен <b>JavaScript</b>. Для полноценной работы с сайтом необходимо включить его.</noindex>
+</div>
+
+</noscript>
+
+
+
+<script async type="text/javascript">
+$(document).ready(function() {
+	$("span.fancybox").fancybox({
+		maxWidth	: 970,
+		
+		fitToView	: false,
+		width		: '970',
+		height		: '100%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+</script>
+
+</body>
+</html>

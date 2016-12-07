@@ -1,0 +1,1172 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+    Главная страница	  
+    </title>
+    <meta name="description" content="Неопределено" />
+    <meta name="keywords" content="Неопределено" />           
+    <link rel="stylesheet" href="/template/administrator_/styles_text_editor/text_editor.css?nocache=1" type="text/css"/>
+    <!--Стили визуального редактора  помеченные специальными тегами-->
+    <link rel="stylesheet" href="/template/administrator_/styles_text_editor/table_editor.css?nocache=1" type="text/css"/>
+    <!--Стили визуального редактора  помеченные специальными тегами-->
+    <link rel="stylesheet" href="/template/public_/styles/bone.css" type="text/css" />
+    <link rel="stylesheet" href="/template/public_/styles/media-queries.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    $(function() {
+        $(window).scroll(function() {
+            if($(this).scrollTop() != 0) {
+                $('#toTop').fadeIn();
+            } else {
+                $('#toTop').fadeOut();
+            }
+        });
+        $('#toTop').click(function() {
+            $('body,html').animate({scrollTop:0},600);
+        });
+    });
+    </script>
+    
+    
+	<!--[if lt IE 9]> 
+	 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+	<![endif]-->
+    
+    
+    <script src="/template/public_/scripts/autoHeight.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="/template/public_/scripts/map.js"></script>    
+    <!--Стили оформления блочного составляющего-->
+    <!-- start Стили активного механизма-->
+        <!--end Стили активного механизма-->
+    <!--start Скрипты активного механизма-->
+    <script src="/mechanism_usePublic_wheel/public_/administrator_/page/script.js" language="javascript"></script><script src="/mechanism_usePublic_wheel/public_/administrator_/pageOther/script.js" language="javascript"></script>    <!--end Скрипты активного механизма-->
+    <script src="/template/public_/scripts/system.js"></script> 
+    <script src="/interface_js/motion_img_object.js"></script>
+    <script src="/interface_js/motion_div_object.js"></script>
+    <script>
+    //проверка загрузки докумета и начальной загрузки мета данных для видео
+    var loaded_kode=1;
+    if(window.addEventListener){	
+    	window.addEventListener("load", function (){loaded_kode=loaded_kode+1000}, false);
+    }else if (window.attachEvent){
+    	window.attachEvent("onload", function (){loaded_kode=loaded_kode+1000});
+    };
+    //проверка загрузки докумета и начальной загрузки мета данных для видео
+    </script>
+</head>
+<body>
+    
+<style type="text/css">
+.head_block_authorization{color:#000000; font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:auto }
+.head_block_authorization a:link, .head_block_authorization a:visited{ color:#b10101; font-family:Arial, Helvetica, sans-serif; text-decoration:underline; font-size:12px}
+.head_block_authorization a:hover, .head_block_authorization a:active{ color:#b10101; font-family:Arial, Helvetica, sans-serif; text-decoration:none; font-size:12px}
+.head_authorization_input{ width:140px; height:22px;color:#000000;font-family:Arial, Helvetica, sans-serif; font-size:12px}
+.head_authorization_submit{  height:22px; cursor:pointer}
+
+</style>
+	
+
+	
+                
+    <div id="glasses-link">
+        <div id="glasses-button" title="Версия для слабовидящих" onclick="setSpecVersion()">&nbsp;</div>
+    </div>
+    <div id="notice">
+        <div class="wrapper">
+                        <a class="close-link" href="javascript:void(0)" onclick="document.getElementById('notice').style.display = 'none';">x</a>
+        </div>
+    </div>
+    <div id="main-top-block">
+        <div class="wrapper">
+            <div class="all-contacts">
+                <a href="/"><img src="/template/public_/bone/logo.jpg" alt="Официальный сайт муниципального округа Нижегородский Москва" class="logo" /></a>
+                <div class="contacts">
+                    <div class="adress">г. Москва, ул. Нижегородская, д.58, корп.1</div>
+                    <div class="phones">Тел./факс: <a href="tel:+74956705342">+7 (495) 670-53-42</a></div>
+                    <div class="email">E-mail: <a href="mailto:nizh_mncpl@uvao.mos.ru">nizh_mncpl@uvao.mos.ru</a></div>
+                    <div class="big-link"><a href="/meeting.html">ЗАПИСАТЬСЯ НА ПРИЕМ К ДЕПУТАТУ</a></div>
+                    <div class="online-form">
+                        Для жителей округа:<br />
+                        <a href="/form.html" class="button">On-line форма обращения</a>
+                    </div>
+                    <div class="social-links">
+                        Представительство в социальных сетях<br />
+                        <a href="" class="vkontakte"></a>
+                        <a href="" class="odnoklassniki"></a>
+                        <a href="" class="facebook"></a>
+                        <a href="" class="twitter"></a>
+                        <a href="" class="instagram"></a>
+                    </div>
+                </div>
+                <a href="http://www.uprava.org/section.php?id=34" target="_blank">
+                <img src="http://www.uprava.org/br/bestmsite.jpg" alt='участник конкурса Золотой Сайт МСУ' border='0'>
+                </a>
+            </div>
+            <div class="introduction">
+                <img alt="" class="photo" src="/filelibrary/administrator_/rus_/text_editor/images/photo.jpg" /> 
+<p style="color: rgb(172, 31, 34); font-size: 18px; margin: 0px 0px 15px;">Приветствую вас на сайте муниципального округа Нижегородский!</p> 
+<p>Мы благодарны вам, избравшим нас на выборах в 2012 году, и стараемся делать все зависящее от нас, чтобы отстаивать интересы наших избирателей. Считаю, что вы сделали абсолютно правильный выбор: за это время наши депутаты доказали, что все они душой болеют за свой район, за своих избирателей, они отдают своей работе в представительном органе власти района очень много времени и сил. И успешно справляются со своими полномочиями, которые за последний год значительно расширились.</p> 
+<p>Не все вопросы даются нам просто, но в дискуссиях мы всегда находим то единственно правильное решение, которое пойдет на пользу нашим избирателям и всему району. И я абсолютно уверен, что тот высокий деловой и душевный настрой, который отличает всех наших депутатов, стремление помочь каждому, кто обращается с какой-либо просьбой или проблемой, сохранится и в дальнейшем.</p> 
+<p style="font-style: italic;">Глава муниципального округа Нижегородский<br />М.С. Аперян </p> <!--<img border="0" alt="" class="photo" src="/filelibrary/administrator_/rus_/text_editor/images/foto_glava.jpg" /> 
+<p style="color: rgb(172, 31, 34); font-size: 18px; margin: 0px 0px 15px;">Уважаемый Манвел Седракович!</p> 
+<p>На протяжении ряда лет Вы являетесь главой муниципального округа, председателем Совета депутатов, депутатом Совета депутатов.</p> 
+<p>Вы – опытный и умелый руководитель, активный общественный деятель, прекрасный, отзывчивый человек. Вас ценят и уважают. Вы пользуетесь заслуженным авторитетом.</p> 
+<p>От чистого сердца поздравляем Вас с днём рождения и от всей души желаем
+большого счастья, огромной удачи, долгих лет жизни  в здравии и спокойствии. Пусть работа и общественно-политическая деятельность ещё многие годы приносит Вам вдохновение и глубокое удовлетворение, а фортуна всегда улыбается.</p> 
+<p style="font-style: italic;">Коллектив аппарата Совета депутатов</p> <br /><br />-->                <div class="page-element">
+                    <a href="/view_page/157.html">Организационная структура Муниципального округа, Совета депутатов и аппарата Совета депутатов</a>
+                    <div class="buttons">
+                        <a href="/view_page/119.html" class="button">Полномочия</a>
+                        <a href="" class="button white">ПКРО</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <div id="social" class="main-blocks">
+        <div class="wrapper">
+            <div class="head">Социальная сфера</div>
+<div class="layout">
+
+<div class="info-block">
+    <div class="name">
+        <a href="/page/10001011110010.html">Программа комплексного развития</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/57/673/0f.jpg" border="0" >
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="name">
+        <a href="/page/1001010011010001.html">Информационный раздел</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/57/671/0f.jpg" border="0" >
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="name">
+        <a href="/page/1110110001100010.html">Парковки</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/57/664/0f.jpg" border="0" >
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="name">
+        <a href="/view_page/64.html">Социальная защита населения Нижегородского района</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/57/64/0f.jpg" border="0" >
+    </div>
+</div>
+<div class="info-block">
+    <div class="name">
+        <a href="/view_page/65.html">Центр социального обслуживания № 19 филиал "Нижегородский"</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/57/65/0f.jpg" border="0" >
+    </div>
+</div>
+<div class="info-block">
+    <div class="name">
+        <a href="/page/11000000000000000.html">Трудоустройство</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/57/503/0f.jpg" border="0" >
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="name">
+        <a href="/page/ustanovka_shlagbaumov.html">Установка шлагбаумов</a>
+    </div>
+    <div class="photo">
+        
+    </div>
+</div>
+</div>        </div>
+    </div>
+    <div id="municipal" class="main-blocks"> 
+        <div class="wrapper">
+            <div class="head">Муниципальные услуги</div>
+<div class="thematic-pic">
+    <img src="/template/public_/bone/thematic-pic-3.jpg" alt="" />
+</div>
+<div class="layout">
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/71.html">Сведения о муниципальной услуге</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/72.html">Об утверждении Административного регламента предоставления муниципальной услуги «Выдача разрешения на вступление в брак лицам, достигшим возраста шестнадцати лет»</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/73.html">Об утверждении Административного регламента предоставления муниципальной услуги «Регистрация уставов территориальных общественных самоуправлений»</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/74.html">Об утверждении Административного регламента предоставления муниципальной услуги «Регистрация трудовых договоров, заключаемых работодателями – физическими лицами, не являющимися индивидуальными предпринимателями, с работниками, регистрация факта прекращени</a>
+    </div>
+</div>
+</div>        </div>
+    </div>
+    <div id="municipal-order" class="main-blocks">
+        <div class="wrapper">
+            <div class="head">Муниципальный заказ (конкурсы аукционы)</div>
+<div class="thematic-pic">
+    <img src="/template/public_/bone/thematic-pic-2.jpg" alt="" />
+</div>
+<div class="layout">
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/75.html">Положение о Единой комиссии по осуществлению закупок для нужд аппарата Совета депутатов</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/76.html">Федеральный закон "О контрактной системе в сфере закупок товаров, работ, услуг для обеспечения государственных и муниципальных нужд"</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="http://zakupki.gov.ru/epz/order/quicksearch/update.html?placeOfSearch=FZ_44&_placeOfSearch=on&_placeOfSearch=on&_placeOfSearch=on&priceFrom=0&priceTo=200+000+000+000&publishDateFrom=&publishDateTo=&updateDateFrom=&updateDateTo=&orderStages=AF&_orderStages=on&orderStages=CA&_orderStages=on&orderStages=PC&_orderStages=on&orderStages=PA&_orderStages=on&sortDirection=false&sortBy=UPDATE_DATE&recordsPerPage=_10&pageNo=1&searchString=%D0%B0%D0%BF%D0%BF%D0%B0%D1%80%D0%B0%D1%82+%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D0%B0+%D0%B4%D0%B5%D0%BF%D1%83%D1%82%D0%B0%D1%82%D0%BE%D0%B2+%D0%BC%D1%83%D0%BD%D0%B8%D1%86%D0%B8%D0%BF%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE+%D0%BE%D0%BA%D1%80%D1%83%D0%B3%D0%B0+%D0%9D%D0%B8%D0%B6%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%B9+&strictEqual=false&morphology=false&showLotsInfo=false&isPaging=false&isHeaderClick=&checkIds=">Осуществление закупок</a>
+    </div>
+</div>
+</div>         
+        </div>
+    </div>
+    <div id="fourth" class="main-blocks">
+        <div class="wrapper">
+            <div class="head">Нормативные правовые акты</div>
+<div class="layout">
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/78.html">Федеральный закон об общих принципах организации местного самоуправления в Российской Федерации</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/79.html"> Федеральный закон "О контрактной системе в сфере закупок товаров, работ, услуг для обеспечения государственных и муниципальных нужд"</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/80.html">Закон города Москвы об организации местного самоуправления в городе Москве</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/81.html">Закон города Москвы о наделении органов местного самоуправления муниципальных округов в городе Москве отдельными полномочиями города Москвы</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/82.html">Закон города Москвы о муниципальной службе в городе Москве</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/83.html">Устав муниципального округа Нижегородский</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/117.html">Бюджетный процесс</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/119.html">Полномочия</a>
+    </div>
+</div>
+</div> 
+        </div>
+    </div>
+    <div id="information" class="main-blocks">
+        <div class="wrapper">
+            <div class="head">Важная информация</div>
+<div class="layout">
+
+<div class="info-block">
+    <div class="name">
+        <a href="/page/1010011001110000.html">Кадровый резерв</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/61/658/0f.jpg" border="0" >
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="name">
+        <a href="/page/10000111111001001.html">Информация об использовании бюджетных средств</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/61/651/0f.jpg" border="0" >
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="name">
+        <a href="/page/1000101101101111.html">2016 год объявлен в России Годом российского кино</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/61/513/0f.jpg" border="0" >
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="name">
+        <a href="/page/11110100100010.html">Встреча с населением</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/61/510/0f.jpg" border="0" >
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="name">
+        <a href="/page/10000101110010.html">Организационная структура</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/61/464/0f.jpg" border="0" >
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="name">
+        <a href="/page/1100011110000010.html">Военный комиссариат города Москвы (по Лефортовскому району)/ Призыв</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/61/414/0f.jpg" border="0" >
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="name">
+        <a href="/view_page/84.html">Результаты проверок</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/61/84/0f.jpg" border="0" >
+    </div>
+</div>
+<div class="info-block">
+    <div class="name">
+        <a href="/view_page/85.html">График встреч главы управы с населением</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/61/85/0f.jpg" border="0" >
+    </div>
+</div>
+<div class="info-block">
+    <div class="name">
+        <a href="/view_page/86.html">Обзоры обращения граждан</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/61/86/0f.jpg" border="0" >
+    </div>
+</div>
+<div class="info-block">
+    <div class="name">
+        <a href="/view_page/88.html">Вакансии и порядок поступления на муниципальную службу</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/61/88/0f.jpg" border="0" >
+    </div>
+</div>
+<div class="info-block">
+    <div class="name">
+        <a href="/page/1100010110101001.html">Муниципальные нормативные правовые акты</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/61/103/0f.jpg" border="0" >
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="name">
+        <a href="/page/1110001100110001.html">Прокурор разъясняет</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/61/158/0f.jpg" border="0" >
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="name">
+        <a href="/page/1000100101000010.html">Противодействие коррупции</a>
+    </div>
+    <div class="photo">
+        
+    </div>
+</div>
+</div> 
+        </div>
+    </div>
+       <div id="municipal-order" class="main-blocks">
+        <div class="wrapper">
+            <div class="head">Глава муниципального округа</div>
+<div class="thematic-pic">
+    <img src="/template/public_/bone/thematic-pic-2.jpg" alt="" />
+</div>
+<div class="layout">
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/information.html">Сведения о главе муниципального округа</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/status_powers_head.html">Статус и полномочия главы муниципального округа</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/information_activities_chapter.html">Информация о деятельности главы муниципального округа</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/rabota-s-obrascheniyami.html">Работа с обращениями</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/svedeniya_oficialnx_vizitax_rabochix.html">Сведения об официальных визитах и о рабочих поездках главы муниципального округа</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/informaciya_meropriyatiyax_uchastie_kotorx.html">Информация о мероприятиях, участие в которых принял глава муниципального округа</a>
+    </div>
+</div>
+</div>         
+        </div>
+    </div>
+    <div id="deputies" class="main-blocks">
+        <div class="wrapper">
+            <div class="head">Совет депутатов</div>
+<div class="layout">
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/obschaya_informaciya_nijegorod.html">Общая информация о СД МО Нижегородский</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/10100110111000000.html">Проекты повестки дня к заседанию Совета депутатов</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/11111000110001.html">Видеозаписи заседаний Совета депутатов</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/90.html">Наши депутаты</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/91.html">График приема</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/92.html">Комиссии Совета депутатов муниципального округа Нижегородский</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/111110110011101.html">Решения Совета депутатов</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/1001110110110111.html">Трибуна депутата</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/111011101001.html">Отчеты главы управы Нижегородского района</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/722.html">Регламент Совета депутатов  муниципального округа Нижегородский в городе Москве</a>
+    </div>
+</div>
+</div>        </div>
+    </div>
+ 
+     <div id="municipal-order" class="main-blocks">
+        <div class="wrapper">
+            <div class="head">Аппарат Совета депутатов</div>
+<div class="thematic-pic">
+    <img src="/template/public_/bone/thematic-pic-2.jpg" alt="" />
+</div>
+<div class="layout">
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/reglament_apparata_soveta_deputatov.html">Регламент аппарата Совета депутатов Нижегородский</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/svedeniya_doljnosti_lica_ispolnyayuschego.html">Сведения о должности лица, исполняющего полномочия руководителя аппарата Совета депутатов</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/svedeniya_strukture_apparata_soveta.html">Сведения о структуре аппарата Совета депутатов</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/polnomochiya_apparata_soveta_deputatov.html">Полномочия аппарата Совета депутатов</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/pravove_akt_apparata_soveta.html">Правовые акты аппарата Совета депутатов</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/view_page/informaciya_zakupkax_tovarov_rabot.html">Информация о закупках товаров, работ, услуг для обеспечения муниципальных нужд</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/kadrovoe_obespechenie_apparata_soveta.html">Кадровое обеспечение аппарата Совета депутатов</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/svedeniya_rabote_obrascheniyami.html">Сведения о работе с обращениями</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/normativne_pravove_akt_sostavlyayuschie.html">Нормативные правовые акты, составляющие правовую основу деятельности аппарата Совета депутатов: федеральные законы, нормативные правовые акты РФ, законы и иные нормативные правовые акты города Москвы, муниципальные правовые акты</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/svedeniya_proektax_resheniy_soveta.html">Сведения о проектах решений Совета депутатов муниципального округа Нижегородский, внесенных аппаратом Совета депутатов</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/proekt_administrativnx_reglamentov.html">Проекты административных регламентов</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/svedeniya_ispolzovanii_apparatom_soveta.html">Сведения об использовании аппаратом Совета депутатов выделяемых бюджетных средств</a>
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="link">
+        <a href="/page/ejegodny_otchet_rukovoditelya_apparata.html">Ежегодный отчет руководителя аппарата Совета депутатов о деятельности аппарата СД, в т.ч. решение вопросов, представленных Советом депутатов</a>
+    </div>
+</div>
+</div>         
+        </div>
+    </div>
+    <div id="news-and-info" class="main-blocks">
+        <div class="wrapper">
+            <div class="layout">
+                <div class="news-block">
+                    
+<div class="head">Новости</div>
+
+    <div class="news">
+        <div class="title">
+            <span class="date">24-10-2016 |</span> 
+            У ТПУ «Дубровка» на МЦК разберут 13 опор ЛЭП        </div>
+        <div class="readmore"><a href="/view_news/1137.html">Подробнее...</a></div>
+    </div>
+
+  
+
+    <div class="news">
+        <div class="title">
+            <span class="date">24-10-2016 |</span> 
+            Курсирующий в Нижегородском автобус №340 не будет останавливаться у ТК «Город»        </div>
+        <div class="readmore"><a href="/view_news/1136.html">Подробнее...</a></div>
+    </div>
+
+  
+
+    <div class="news">
+        <div class="title">
+            <span class="date">24-10-2016 |</span> 
+            Оповещение о проведении публичных слушаний        </div>
+        <div class="readmore"><a href="/view_news/1135.html">Подробнее...</a></div>
+    </div>
+
+  
+<div class="readmore"><a href="/news.html">Все новости...</a></div>                </div>
+            </div>
+            <div class="layout">
+                <div class="official-texts">
+                    <div class="head">Тексты официальных выступлений главы округа и аппарата</div>
+<div class="text-block">
+
+    <span class="date">29-03-2016 | </span><span class="person">М.С. Аперян</span> 
+    <div class="title">Отчет главы муниципального округа Нижегородский  «О работе Совета депутатов в  2015 году»</div>  
+    <div class="text">
+        <br />    </div>
+    <div class="readmore"><a href="/view_speech/2.html">Читать текст выступления полностью</a></div>
+                        
+     
+  
+
+    <div class="readmore"><a href="/speech.html">Архив выступлений</a></div>
+</div>                </div>
+            </div>
+            <div class="layout">
+                <div class="paper-block">
+                    
+ 
+<div class="head">Газета района</div>
+<ul>
+
+
+
+  
+  
+ 
+      
+            <li><a  href="/filelibrary/administrator_/rus_/paper/16/zip_0.zip" target="_blank">Нижегородский район № 8, 2016</a></li>
+                  
+            
+     			  
+             
+          
+
+
+
+
+
+
+
+
+  
+  
+ 
+      
+            <li><a  href="/filelibrary/administrator_/rus_/paper/15/zip_0.zip" target="_blank">Нижегородский район № 7, 2016г.</a></li>
+                  
+            
+     			  
+             
+          
+
+
+
+
+
+
+
+
+  
+  
+ 
+      
+            <li><a  href="/filelibrary/administrator_/rus_/paper/14/zip_0.zip" target="_blank">Нижегородский район № 6, июль 2016г.</a></li>
+                  
+            
+     			  
+             
+          
+
+
+
+
+
+
+
+
+  
+  
+ 
+      
+            <li><a  href="/filelibrary/administrator_/rus_/paper/13/zip_0.zip" target="_blank">Нижегородский район № 5, май 2016</a></li>
+                  
+            
+     			  
+             
+          
+
+
+
+
+
+
+
+
+  
+  
+ 
+      
+            <li><a  href="/filelibrary/administrator_/rus_/paper/12/zip_0.zip" target="_blank">Нижегородский район № 4, апрель</a></li>
+                  
+            
+     			  
+             
+          
+
+
+
+
+
+
+
+
+  
+  
+ 
+      
+            <li><a  href="/filelibrary/administrator_/rus_/paper/9/zip_0.zip" target="_blank">Нижегородский район № 3, апрель 2016</a></li>
+                  
+            
+     			  
+             
+          
+
+
+
+
+
+
+
+
+  
+  
+ 
+      
+            <li><a  href="/filelibrary/administrator_/rus_/paper/8/zip_0.zip" target="_blank">Нижегородский района № 2, март 2016</a></li>
+                  
+            
+     			  
+             
+          
+
+
+
+
+
+
+
+
+  
+  
+ 
+      
+            <li><a  href="/filelibrary/administrator_/rus_/paper/7/zip_0.zip" target="_blank">Нижегородский район № 1, февраль 2016</a></li>
+                  
+            
+     			  
+             
+          
+
+
+
+
+
+
+
+
+  
+  
+ 
+      
+            <li><a  href="/filelibrary/administrator_/rus_/paper/6/zip_0.zip" target="_blank">Нижегородский район № 12, декабрь 2015</a></li>
+                  
+            
+     			  
+             
+          
+
+
+
+
+
+
+
+
+  
+  
+ 
+      
+            <li><a  href="/filelibrary/administrator_/rus_/paper/5/zip_0.zip" target="_blank">Нижегородский район № 11, ноябрь 2015</a></li>
+                  
+            
+     			  
+             
+          
+
+
+
+
+
+</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about" class="main-blocks">
+        <div class="wrapper">
+            <div class="head">О районе</div>
+<div class="thematic-pic">
+    <img src="/template/public_/bone/tk-gorod-5.jpg" alt="" />
+</div>
+<div class="layout">
+
+<div class="info-block">
+    <div class="name">
+        <a href="/page/10001010110010100.html">Молодежная палата</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/63/501/0f.jpg" border="0" >
+    </div>
+</div>
+
+<div class="info-block">
+    <div class="name">
+        <a href="/view_page/96.html">Герб и флаг района</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/63/96/0f.jpg" border="0" >
+    </div>
+</div>
+<div class="info-block">
+    <div class="name">
+        <a href="/view_page/97.html">Историческая справка</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/63/97/0f.jpg" border="0" >
+    </div>
+</div>
+<div class="info-block">
+    <div class="name">
+        <a href="/view_page/98.html">Статистические данные</a>
+    </div>
+    <div class="photo">
+        <img src="/filelibrary/administrator_/rus_/page/63/98/0f.jpg" border="0" >
+    </div>
+</div></div>        </div>
+    </div>
+    <div id="photogallery" class="main-blocks">
+        <div class="wrapper">
+            <div class="head">Фотогалерея района</div>
+<div class="layout">
+    <div class="info-block">
+        <div class="name">
+            <a href="/photogallery/21.html">День города 2016 г</a>
+        </div>
+        <div class="photo">
+            
+                               	<img src="/filelibrary/administrator_/rus_/photogallery/21/middle_0.jpg?nocash=469529f5" alt="День города 2016 г" />
+                           
+        </div>
+    </div>        
+       <div class="info-block">
+        <div class="name">
+            <a href="/photogallery/20.html">ДЕНЬ ПОБЕДЫ 2016 ГОД</a>
+        </div>
+        <div class="photo">
+            
+                               	<img src="/filelibrary/administrator_/rus_/photogallery/20/middle_0.jpg?nocash=315ba79e" alt="ДЕНЬ ПОБЕДЫ 2016 ГОД" />
+                           
+        </div>
+    </div>        
+       <div class="info-block">
+        <div class="name">
+            <a href="/photogallery/19.html">23 апреля 2016 года состоялся День призывника</a>
+        </div>
+        <div class="photo">
+            
+                               	<img src="/filelibrary/administrator_/rus_/photogallery/19/middle_0.jpg?nocash=8dab8f72" alt="23 апреля 2016 года состоялся День призывника" />
+                           
+        </div>
+    </div>        
+       <div class="info-block">
+        <div class="name">
+            <a href="/photogallery/18.html">23.02.2016 - День защитника Отечества</a>
+        </div>
+        <div class="photo">
+            
+                               	<img src="/filelibrary/administrator_/rus_/photogallery/18/middle_0.jpg?nocash=e30406b9" alt="23.02.2016 - День защитника Отечества" />
+                           
+        </div>
+    </div>        
+       <div class="info-block">
+        <div class="name">
+            <a href="/photogallery/17.html">15.02.2016 г. состоялась провека по жалобе жителей</a>
+        </div>
+        <div class="photo">
+            
+                               	<img src="/filelibrary/administrator_/rus_/photogallery/17/middle_0.jpg?nocash=5ef711b3" alt="15.02.2016 г. состоялась провека по жалобе жителей" />
+                           
+        </div>
+    </div>        
+       <div class="info-block">
+        <div class="name">
+            <a href="/photogallery/16.html">Встреча главы управы Нижегородского района Михайлова С.Н. с населением 20.01.2016</a>
+        </div>
+        <div class="photo">
+            
+                               	<img src="/filelibrary/administrator_/rus_/photogallery/16/middle_0.jpg?nocash=1bda3e0a" alt="Встреча главы управы Нижегородского района Михайлова С.Н. с населением 20.01.2016" />
+                           
+        </div>
+    </div>        
+   </div>        </div>
+    </div>
+    <div id="official-sites" class="main-blocks">
+        <div class="wrapper">
+            
+<div class="head">Официальные сайты Москвы</div>
+<div class="layout">
+     <div class="info-block">
+        <div class="link">
+            <div class="title">бюллетень "Московский муниципальный вестник"</div>
+            <a href='http://amom.mos.ru/vestnik/' target="_blank"  >http://amom.mos.ru/vestnik/</a>  
+        </div>
+    </div>
+    <div class="info-block">
+        <div class="link">
+            <div class="title">Совет муниципальных образований города Москвы</div>
+            <a href='http://amom.mos.ru/' target="_blank"  >http://amom.mos.ru/</a>  
+        </div>
+    </div>
+    <div class="info-block">
+        <div class="link">
+            <div class="title">Российская муниципальная Академии</div>
+            <a href='http://www.ros-ma.ru/' target="_blank"  >http://www.ros-ma.ru/</a>  
+        </div>
+    </div>
+    <div class="info-block">
+        <div class="link">
+            <div class="title">Журнал управы</div>
+            <a href='http://www.uprava.org' target="_blank"  >http://www.uprava.org</a>  
+        </div>
+    </div>
+    <div class="info-block">
+        <div class="link">
+            <div class="title">Правительство Москвы</div>
+            <a href='http://www.mos.ru/' target="_blank"  >http://www.mos.ru/</a>  
+        </div>
+    </div>
+    <div class="info-block">
+        <div class="link">
+            <div class="title">Московская городская дума</div>
+            <a href='http://duma.mos.ru/ru/' target="_blank"  >http://duma.mos.ru/ru/</a>  
+        </div>
+    </div>
+    <div class="info-block">
+        <div class="link">
+            <div class="title">Портал государственных услуг города Москвы</div>
+            <a href='http://https://pgu.mos.ru/ru/' target="_blank"  >http://https://pgu.mos.ru/ru/</a>  
+        </div>
+    </div>
+    <div class="info-block">
+        <div class="link">
+            <div class="title">Единый централизованный портал Правительства Москвы "Наш город"</div>
+            <a href='http://gorod.mos.ru/' target="_blank"  >http://gorod.mos.ru/</a>  
+        </div>
+    </div>
+    <div class="info-block">
+        <div class="link">
+            <div class="title">Управа Нижегородского района</div>
+            <a href='http://nizhegorodsky.mos.ru/' target="_blank"  >http://nizhegorodsky.mos.ru/</a>  
+        </div>
+    </div>
+</div>        </div>
+    </div>
+    <div id="map"></div>
+    <footer>    
+        <div class="wrapper">
+            <div class="footer-contacts">
+                <div class="year">&copy; 2015</div>
+                <div class="title">Официальный сайт муниципального округа Нижегородский</div>
+                <div class="contacts">
+                    <div class="adress">г. Москва, ул. Нижегородская, д.58, корп.1</div>
+                    <div class="phones">Тел./факс: <a href="tel:+74956705342">+7 (495) 670-53-42</a></div>
+                    <div class="email">E-mail: <a href="mailto:nizh_mncpl@uvao.mos.ru">nizh_mncpl@uvao.mos.ru</a></div>
+                </div>
+                <div class="social-links">
+                    Представительство в социальных сетях<br />
+                    <a href="" class="vkontakte"></a>
+                    <a href="" class="odnoklassniki"></a>
+                    <a href="" class="facebook"></a>
+                    <a href="" class="twitter"></a>
+                    <a href="" class="instagram"></a>
+                    <br /><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=31282623&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/31282623/3_0_FFFFFFFF_FFFFFFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:31282623,lang:'ru'});return false}catch(e){}" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+(w[c] = w[c] || []).push(function() {
+try {
+w.yaCounter31282623 = new Ya.Metrika({
+id:31282623,
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true,
+webvisor:true
+});
+} catch(e) { }
+});
+
+var n = d.getElementsByTagName("script")[0],
+s = d.createElement("script"),
+f = function () { n.parentNode.insertBefore(s, n); };
+s.type = "text/javascript";
+s.async = true;
+s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+if (w.opera == "[object Opera]") {
+d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/31282623" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->                </div>
+            </div>
+            <div class="partners">
+                
+<div class="head">Наши партнеры</div>
+<div class="layout">
+     <div class="info-block">
+        <div class="link">
+            <div class="title">Муниципальное бюджетное учреждение "Кругозор"</div>
+            <a href='http://krugozor.msk.ru/' target="_blank"  >http://krugozor.msk.ru/</a>  
+        </div>
+    </div>
+    <div class="info-block">
+        <div class="link">
+            <div class="title">Семейный клуб родительского опыта "Рождество"</div>
+            <a href='http://www.rojdestvo.ru/' target="_blank"  >http://www.rojdestvo.ru/</a>  
+        </div>
+    </div>
+    <div class="info-block">
+        <div class="link">
+            <div class="title">Клуб-школа старинного танца "Миндон Энвина". Занятия в ней посвящены изучению танцев, истории и культуры XIV-XX вв.</div>
+            <a href='http://www.mindon-envina.ru/' target="_blank"  >http://www.mindon-envina.ru/</a>  
+        </div>
+    </div>
+    <div class="info-block">
+        <div class="link">
+            <div class="title">Спорт инфо. Я выбираю спорт!</div>
+            <a href='http://rfsport.info/index.html' target="_blank"  >http://rfsport.info/index.html</a>  
+        </div>
+    </div>
+</div>            </div>
+            <div class="ultrasite">
+                <div class="ultrasite_text">
+                    <p><img src="/template/public_/bone/ultrasite.png" alt="Ultrasite" /><a href="http://www.ultrasite.ru/">Создание и продвижение сайта:</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="toTop"></div>
+    <script>
+        function setSpecVersion() {
+            var body = document.body;
+            if (body.className == 'special_version') {
+                body.className = '';
+                document.cookie = 'specialVersion=false; path=/';
+                location.reload();
+            } else {
+                body.className = 'special_version';
+                document.cookie = 'specialVersion=true; path=/';
+                location.reload();
+            }
+        }
+        
+        function findCookieValue(cookieName) {
+        	var allCookies = document.cookie;
+        	var pos = allCookies.indexOf(cookieName + "=");
+        	if (pos != -1) {
+        		var start = pos + cookieName.length + 1;
+        		var end = allCookies.indexOf(";", start);
+        		if (end == -1) {
+        			end = allCookies.length;
+        		}
+        		var value = allCookies.substring(start, end);
+        		return decodeURIComponent(value);
+        	}
+        }
+        
+        (function () {
+            if (findCookieValue('specialVersion')=='true')
+                document.body.className = 'special_version';  
+        })();
+    </script>
+</body>
+</html>

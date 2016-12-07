@@ -1,0 +1,802 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Intervale</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="0" />
+  <meta name="description" content="0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+	<link rel="stylesheet" type="text/css" href="/css/style_4.css" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">  
+	<!--[if IE 7]>
+	  <link rel="stylesheet" type="text/css" media="screen" href="/css/ie7.css"/>
+	<![endif]-->
+	<!--[if IE 8]>
+	  <link rel="stylesheet" type="text/css" media="screen" href="/css/ie8.css"/>
+	<![endif]-->
+  <script type="text/javascript" src="/js/jquery.js"></script>
+
+	<script type="text/javascript" src="/js/jquery-ui-1.8.13.custom.min.js"></script>
+	<script type="text/javascript" src="/ContentFlow/contentflow_src.js"></script>
+	<script type="text/javascript" src="/js/player_api.js"></script>
+	<script type="text/javascript" src="/js/player.js"></script>
+	<script type="text/javascript" src="/js/map_highlight.js"></script>
+	<script type="text/javascript" src="/js/cookie.js"></script>
+
+	<link rel="stylesheet" href="/ContentFlow/contentflow_src.css" type="text/css" />    
+  
+  <script type="text/javascript">
+  $(document).ready(function(){
+   $(".fadethis").fadeTo(0, 0.3);
+  $(".fadethis").hover(function(){
+   $(this).fadeTo("slow", 1);
+  },
+  function(){
+   $(this).fadeTo("slow", 0.3);
+  }
+  );
+  
+  
+   $(".vacanc_link").click(function() {
+      $(this).next().slideToggle(function(){
+       $(this).parent().toggleClass('open_city');
+      });
+      return false;
+   });
+   $("div.no_vacancy .vacanc_link").unbind('click').click(function() {return false;} );
+   
+   $(".tab1, .tab2, .tab3").click(function(){
+    if (0 == 1)
+    {
+     //$.cookie('showTabs', 1, { expires: 7, path: '/' });
+    }
+    var hideThis;
+    curhash = window.location.hash;
+    if (curhash.replace('#', '') == $(this).attr('class') && 0 == 1)
+    {
+     //ùåëêíóëè ïî îòêðûòîé âêëàäêå - ñâåðíóòü åå.
+     $(".bg1, .bg2, .bg3").slideUp();
+     //$.cookie('showTabs', 0, { expires: -1, path: '/' });
+     document.location = '#hide';
+    }
+    else
+    {
+     document.location = '#'+$(this).attr('class');
+     if ($("#tabs_box").hasClass('active1'))
+       hideThis = '.bg1';
+     if ($("#tabs_box").hasClass('active2'))
+       hideThis = '.bg2';
+     if ($("#tabs_box").hasClass('active3'))
+       hideThis = '.bg3'; 
+
+     $(".three_banners").slideUp(0);
+     $("#tabs_box").removeClass('active1 active2 active3').addClass( ($(this).hasClass('tab1') ? 'active1' :  ($(this).hasClass('tab2') ? 'active2' : 'active3' ) ) );
+     $(hideThis).slideUp(function() {
+     var hideThis;
+     if ($("#tabs_box").hasClass('active1'))
+       hideThis = '.bg1';
+     if ($("#tabs_box").hasClass('active2'))
+       hideThis = '.bg2';
+     if ($("#tabs_box").hasClass('active3'))
+       hideThis = '.bg3';
+      
+       $(".three_banners").slideDown();
+      $(hideThis).slideDown(function(){
+      });
+      
+
+
+     });
+    }
+    return false;
+   });
+
+ $(".pagi a").click(function()
+ {
+  $(this).parent().children().removeClass('act');
+  $(this).addClass('act');
+  $("#"+$(this).parent().attr('id')+"_content").animate({
+  'margin-left': '-' + (parseInt($(this).html()) * 1000 - 1000) +'px'
+  }); 
+  return false;
+ });
+
+ $(".roll_up").click(function(){
+    $(".bg1, .bg2, .bg3").slideUp();
+    document.location = '#hide';
+    //$.cookie('showTabs', 0, { expires: -1, path: '/' });
+
+    return false;  
+   });
+
+
+	  $("a.logo img").hover(function()
+    {
+     $(this).attr('src', '/images/logo2.png');
+    },
+    function()
+    {
+     $(this).attr('src', '/images/logo.png');
+     
+    });
+		$('.map1').maphilight();
+	
+
+
+ var hash = window.location.hash;
+
+
+ function hideTabs() {
+
+ if (0 == 0) //$.cookie('showTabs') == 1 || 
+ {
+   
+  
+   $(".bg2").show(0);
+   
+   
+ }
+ else
+ {
+   //$(".bg2, .bg1, .bg3").hide(0);
+ }
+  if (hash != '')
+  {
+   hash = hash.replace('#', '.');
+   window.location= '#hide';
+   $(hash).click();
+  } 
+}
+
+  hideTabs();
+
+ 
+  });
+  </script>
+
+</head>
+
+<body>
+
+<div id="main">
+
+	<!-- **************************************** header ************************************* -->
+	<div id="header">
+		<div class="header_inside">
+			<!-- logo -->
+			<a href="/" class="logo"><img src="/images/logo.png" width="170" alt="" /></a>
+
+			<!-- language -->
+			<div class="language">
+				<ul>
+					<li class="active"><a href="/ru/">Rus</a></li>
+<li><a href="/en/">Eng</a></li>
+
+				</ul>
+			</div>
+
+			<!-- search -->
+			<div class="search">
+				<form method="GET" action="/ru/search/">
+					<div class="inp">
+						<input id="you_proj_input" type="text" name="q" value="ïîèñê" onfocus="javascript:if(this.value=='ïîèñê')this.value=''" onblur="javascript:if(this.value=='')this.value='ïîèñê'" />
+					</div>
+					<input type="submit" class="loupe" value="" />
+				</form>
+			</div>
+
+			<!-- top_menu -->
+<div class="top_menu_overflow">
+			<div class="top_menu">
+				<ul>
+					<li><a href="/ru/intervale/">Î êîìïàíèè</a></li><li><a href="/ru/projects/">Ïðîåêòû</a></li><li><a href="/ru/partners/">Ïàðòíåðû</a></li><li><a href="/ru/clients/">Êëèåíòû</a></li>
+				</ul>
+			</div>
+</div>
+		</div>
+	</div><!-- header -->
+
+	<!-- tabs_box -->
+	<div id="tabs_box" class="tabs_box active2">
+		<div class="top_lines">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+<div class="top_tabs_overflow">
+		<div class="top_tabs">
+			<ul>
+				<li class="tab1"><a href="#"><span class="lft">Äëÿ ×àñòíûõ êëèåíòîâ</span></a>
+        	<div class="top_lines">
+            <div class="line1"></div>
+            <div class="line2"></div>
+      			<div class="line3"></div>
+      		</div>
+        </li>
+				<li class="tab2"><a href="#"><span class="lft">Êàê ýòî ðàáîòàåò?</span></a>
+        	<div class="top_lines">
+            <div class="line1"></div>
+            <div class="line2"></div>
+      			<div class="line3"></div>
+      		</div>        
+        </li>
+				<li class="tab3"><a href="#"><span class="lft">Äëÿ áèçíåñà</span></a>
+        	<div class="top_lines">
+            <div class="line1"></div>
+            <div class="line2"></div>
+      			<div class="line3"></div>
+      		</div>
+        </li>
+
+			</ul>
+
+
+		</div>
+</div>
+
+		<div class="top_box bg1" style="display: none;">
+		 <div class="box_overflow">
+		 <div class="slider" id="slider_1_content">
+     
+
+
+
+
+      <div class="inside_box">
+      
+	  
+      <p style="font-size: 16px; text-align: center; margin-bottom: 20px; color: #fff;"> 
+	  Ïðÿìî ñåé÷àñ îïëà÷èâàéòå óñëóãè è òîâàðû ñ ïîìîùüþ ðåøåíèÿ Intervale!
+	  </br>
+	  Âîñïîëüçóéòåñü ôîðìîé
+	  </p>
+      
+				<div class="column">
+					<div class="turn">
+					
+          <div style="height: 34px; width: 76px; float: left;  background: url('/thumb/phpThumb.php?f=png&h=30&w=76&src=../uploads/persons/1.jpg') no-repeat center center;"></div>
+          
+						<div class="tit">
+							<a target="_blank" href="http://www.mts.ru/services/service_pay/mts_pay/">«Ëåãêèé ïëàòåæ»</a>
+						</div>
+					</div>
+
+					<div class="turn" style="">
+					
+          <div style="height: 34px; width: 76px; float: left;  background: url('/thumb/phpThumb.php?f=png&h=30&w=76&src=../uploads/persons/2.jpg') no-repeat center center;"></div>
+          
+						<div class="tit">
+							<a target="_blank"  href="http://moscow.megafon.ru/services/finance/m_payment.html">«Ìîáèëüíûå ïëàòåæè»</a>
+						</div>
+           </div>
+           
+						<div class="turn" style="">
+					
+          <div style="height: 34px; width: 76px; float: left;  background: url('/thumb/phpThumb.php?f=png&h=30&w=76&src=../uploads/persons/6.jpg') no-repeat center center;"></div>
+          
+						<div class="tit">
+							<a target="_blank"  href="https://mobile.mastercard.ru/">MasterCard Mobile</a>
+						</div>
+					</div>	
+
+
+				</div>
+
+				<div class="column">
+
+					
+					<div class="turn" style="">
+				  
+          <div style="height: 34px; width: 76px; float: left;  background: url('/thumb/phpThumb.php?f=png&h=30&w=76&src=../uploads/persons/4.jpg') no-repeat center center;"></div>
+          
+						<div class="tit">
+							<a target="_blank"  href="http://www.mypay.kz/">Ìîáèëüíûå ïëàòåæè</a>
+						</div>
+					</div>
+
+
+					<div class="turn" style="">
+					
+						<div class="tit">
+							<a target="_blank"  href=""></a>
+						</div>
+					</div>
+
+
+						<div class="turn" style="">
+					
+						<div class="tit">
+							<a target="_blank"  href=""></a>
+						</div>
+					</div>			
+				
+				</div>
+				<div class="clear"></div>
+
+				</div>
+
+
+
+
+
+
+
+
+
+    
+    </div>	
+       
+	   
+		</div>
+	</div>
+		<div class="top_box bg2" style="display: none;">
+		 <div style="width: 1000px; margin: 0px auto; overflow: visible; position: relative; height: 400px;" id="putvideohere">
+		 	  
+  
+     </div>
+	</div>
+
+
+		 <div style="width: 1000px; overflow: hidden; position: absolute; left: -3000px; top: 0px; height: 400px;">
+
+		   <div class="ContentFlow" id="gallery">
+            <div class="flow">
+
+<div class="item">
+<img class="content videoimg" src="/uploads/video/1.jpg" href="" alt="" title="" />
+<img src="/images/play.png" height="0" width="0" class="play" />
+<div class="videovideo" id="p1">	
+<iframe class="player" id="player_p1"
+src="http://player.vimeo.com/video/37174781?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;player_id=player_p1" api="1" width="100%" height="340" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
+   <div class="info">
+    </div>
+        
+</div>
+<div class="item">
+<img class="content videoimg" src="/uploads/video/2.jpg" href="" alt="" title="" />
+<img src="/images/play.png" height="0" width="0" class="play" />
+<div class="videovideo" id="p2">	
+<iframe class="player" id="player_p2"
+src="http://player.vimeo.com/video/37174414?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;player_id=player_p2" api="1" width="100%" height="340" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
+   <div class="info">
+    </div>
+        
+</div>
+<div class="item">
+<img class="content videoimg" src="/uploads/video/3.jpg" href="" alt="" title="" />
+<img src="/images/play.png" height="0" width="0" class="play" />
+<div class="videovideo" id="p3">	
+<iframe class="player" id="player_p3"
+src="http://player.vimeo.com/video/37174685?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;player_id=player_p3" api="1" width="100%" height="340" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
+   <div class="info">
+    </div>
+        
+</div>
+<div class="item">
+<img class="content videoimg" src="/uploads/video/5.jpg" href="" alt="" title="" />
+<img src="/images/play.png" height="0" width="0" class="play" />
+<div class="videovideo" id="p4">	
+<iframe class="player" id="player_p4"
+src="http://player.vimeo.com/video/38437263?title=0&amp;byline=0&amp;portrait=0&amp;api=1&amp;player_id=player_p4" api="1" width="100%" height="340" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
+   <div class="info">
+    </div>
+        
+</div>
+
+              </div>
+    </div>
+		 	   
+     </div>
+		<div class="top_box bg3" style="display: none;">
+		 <div class="box_overflow">
+		 <div class="slider" id="slider_3_content">
+     
+
+
+
+
+
+
+      <div class="inside_box">
+      
+				<div class="column">
+					<div class="turn">
+					
+						<div class="tit">
+							<a  href="/ru/products/ehlektronnaya_i_mobilnaya_kommerciya/">Ýëåêòðîííàÿ è ìîáèëüíàÿ êîììåðöèÿ</a>
+						</div>
+					</div>
+
+					<div class="turn" style="">
+					
+						<div class="tit">
+							<a   href="/ru/products/transportnaya_platforma_rassylka_sms/">Òðàíñïîðòíàÿ ïëàòôîðìà (ðàññûëêà SMS)</a>
+						</div>
+           </div>
+           
+					<div class="turn" style="">
+					
+						<div class="tit">
+							<a   href="/ru/products/perevody_s_karty_na_kartu/">Ïåðåâîäû ñ êàðòû íà êàðòó</a>
+						</div>
+					</div>
+
+
+
+				</div>
+
+				<div class="column">
+						
+					<div class="turn" style="">
+				  
+						<div class="tit">
+							<a   href="/ru/products/internet-ehkvajring/">Èíòåðíåò-ýêâàéðèíã</a>
+						</div>
+					</div>
+
+					
+					<div class="turn" style="">
+					
+						<div class="tit">
+							<a  href="/ru/products/agregaciya_istochnikov_platezhej/">Àãðåãàöèÿ èñòî÷íèêîâ ïëàòåæåé</a>
+						</div>
+					</div>
+
+
+					<div class="turn" style="">
+					
+						<div class="tit">
+							<a   href="/ru/products/mobilnyj_banking/">Ìîáèëüíûé áàíêèíã</a>
+						</div>
+					</div>
+
+				
+				
+				</div>
+				<div class="clear"></div>
+
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="inside_box">
+      
+				<div class="column">
+					<div class="turn">
+					
+						<div class="tit">
+							<a  href="/ru/products/mobilnye_prilozheniya/">Ìîáèëüíûå ïðèëîæåíèÿ</a>
+						</div>
+					</div>
+
+					<div class="turn" style="">
+					
+						<div class="tit">
+							<a   href="/ru/products/mobilnyj_poisk_i_geolokaciya/">Ìîáèëüíûé ïîèñê è ãåîëîêàöèÿ</a>
+						</div>
+           </div>
+           
+					<div class="turn" style="">
+					
+						<div class="tit">
+							<a   href="/ru/products/agregaciya_tsp/">Àãðåãàöèÿ ÒÑÏ</a>
+						</div>
+					</div>
+
+
+
+				</div>
+
+				<div class="column">
+						
+					<div class="turn" style="">
+				  
+						<div class="tit">
+							<a   href=""></a>
+						</div>
+					</div>
+
+					
+					<div class="turn" style="">
+					
+						<div class="tit">
+							<a  href=""></a>
+						</div>
+					</div>
+
+
+					<div class="turn" style="">
+					
+						<div class="tit">
+							<a   href=""></a>
+						</div>
+					</div>
+
+				
+				
+				</div>
+				<div class="clear"></div>
+
+				</div>
+
+
+
+
+
+
+
+
+    
+    </div>	
+       
+     	  <div class="pagi" id="slider_3" style="width: 50px;">
+					<a href="#" class="act">1</a><a href="#" >2</a>
+				</div>
+	   
+	   
+		</div>
+	</div>
+
+	</div>
+	<!-- **************************************** content ****************************************** -->
+
+
+	<div id="content">
+	
+	
+
+		<!-- three_banners -->
+		<div class="three_banners">
+			<a href="/ru/contacts/moscow/" style="margin-top: 3px;"><img src="/images/banner2.png" alt="" /></a>
+			<a href="/ru/private_persons/"><img src="/images/banner1.png" alt="" /></a>
+			<a href="/ru/job/"><img src="/images/banner.png" alt="" /></a>
+			<div class="clear"></div>
+		</div>
+
+		<!-- index_col -->
+		<div class="index_col">
+			<div class="column">
+				<!-- last_novelty -->
+				<div class="novelty last_novelty">
+					<div class="date">
+						10 îêòÿáðÿ 2016
+					</div>
+
+					<div class="link">
+							<a href="/ru/intervale/news/190/">Óñïåøíîå âíåäðåíèå ïëàòåæíîé óñëóãè êîìïàíèè Èíòåðâåéë â ñîòðóäíè÷åñòâå ñ Êàçïî÷òîé îòìå÷åíî â îò÷åòå ýêñïåðòíîé ãðóïïû ÌÑÝ ïî öèôðîâûì ôèíàíñîâûì ñåðâèñàì.</a>
+				</div>
+
+					<div class="txt">
+						
+						
+<p>&nbsp;Ìåæäóíàðîäíûì ñîþçîì ýëåêòðîñâÿçè
+îïóáëèêîâàí îò÷åò «Î ðîëè ïî÷òîâûõ
+ñëóæá â ðàçâèòèè öèôðîâûõ ôèíàíñîâûõ
+ñåðâèñîâ»</p>
+<p>http://www.itu.int/en/ITU-T/focusgroups/dfs/Documents/10_2016/The Role of Postal Networks in Digital Financial Services_Formatted.pdf</p> 
+<p>Îò÷åò ïîäãîòîâëåí ãðóïïîé ýêñïåðòîâ
+Ñïåöèàëüíîé Ãðóïïû ÌÑÝ ïî öèôðîâûì
+ôèíàíñîâûì óñëóãàì (FGDFS) ïîä ðóêîâîäñòâîì
+Âèöå-Ïðåäñåäàòåëÿ ýòîé Ñïåöèàëüíîé
+Ãðóïïû, çàìåñòèòåëÿ Ãåíåðàëüíîãî
+Äèðåêòîðà Èíòåðâåéë Ãðèíÿ Þ. Ã.. Îñíîâíîé
+âêëàä â ïîäãîòîâêó ýòîãî îò÷åòà áûë
+âíåñåí ïðåäñòàâèòåëÿìè Âñåìèðíîãî
+ïî÷òîâîãî ñîþçà, â êîòîðîì íàêîïëåí
+áîëüøîé îáúåì èíôîðìàöèè î ïðèìåðàõ
+óñïåøíûõ ðåàëèçàöèé ñîâðåìåííûõ öèôðîâûõ
+ôèíàíñîâûõ óñëóã â ðàçëè÷íûõ ñòðàíàõ
+ìèðà. </p> 
+<p>Â îò÷åòå èññëåäóåòñÿ ðîëü ïî÷òîâûõ
+ñåòåé â...</p></b></sup>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="column">
+			 				<!-- novelty -->
+				<div class="novelty">
+					<div class="date">
+						21 ñåíòÿáðÿ 2016
+					</div>
+
+					<div class="link">
+						<a href="/ru/intervale/news/189/">«Èíòåðâåéë» ïðîâåë ñåìèíàð ïî íàèáîëåå âîñòðåáîâàííûì ìîáèëüíûì ïðèëîæåíèÿì: ïóòè èõ âíåäðåíèÿ è ðàçâèòèÿ â ñòðàíàõ ÑÍÃ</a>
+					</div>
+				</div>
+				<!-- novelty -->
+				<div class="novelty">
+					<div class="date">
+						09 ñåíòÿáðÿ 2016
+					</div>
+
+					<div class="link">
+						<a href="/ru/intervale/news/188/">«Èíòåðâåéë» èíòåãðèðîâàëñÿ ñ CMS Wordpress. </a>
+					</div>
+				</div>
+				<!-- novelty -->
+				<div class="novelty">
+					<div class="date">
+						05 ñåíòÿáðÿ 2016
+					</div>
+
+					<div class="link">
+						<a href="/ru/intervale/news/187/">Èíòåðâåéë ñîâìåñòíî ñ ÖÊÒ âûñòóïèë ïîñòàâùèêîì ðåøåíèÿ ÌÒÑ ïî ìîáèëüíîé êîììåðöèè</a>
+					</div>
+				</div>
+				<!-- novelty -->
+				<div class="novelty">
+					<div class="date">
+						23 èþíÿ 2015
+					</div>
+
+					<div class="link">
+						<a href="/ru/intervale/news/186/">Êàê óñïåòü íà ïîåçä â áóäóùåå? «Èíòåðâýéë» ïîäñêàæåò...</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		
+		<div class="c-foot"></div>
+	</div><!-- content -->
+
+
+	<div class="bottom_menu">
+		<div class="bottom_menu_inside">
+			<div class="box1">
+				<div class="unit">
+					<p class="sct"><a href="/ru/intervale/">Î êîìïàíèè</a></p>
+					
+<p><a href="/ru/intervale/history/">Èñòîðèÿ Intervale</a></p>
+
+
+<p><a href="/ru/intervale/map/">Êàðòà ïîêðûòèÿ</a></p>
+
+
+<p><a href="/ru/intervale/foundations/">Ïðèíöèïû</a></p>
+
+
+<p><a href="/ru/intervale/">äàëåå...</a></p>
+
+
+</div>
+
+			</div>
+
+			<div class="box2">
+				<div class="unit">
+					<p class="sct"><a href="/ru/intervale/news/">Íîâîñòè</a></p>
+					
+</div>
+<div class="unit">
+					<p class="sct"><a href="/ru/intervale/press_release/">Ïðåññ-ðåëèçû</a></p>
+					
+</div>
+<div class="unit">
+					<p class="sct"><a href="/ru/projects/">Ïðîåêòû</a></p>
+					
+</div>
+<div class="unit">
+					<p class="sct"><a href="/ru/partners/">Ïàðòíåðû</a></p>
+					
+</div>
+<div class="unit">
+					<p class="sct"><a href="/ru/clients/">Êëèåíòû</a></p>
+					
+</div>
+
+			</div>
+
+			<div class="box3">
+				<div class="unit">
+					<p class="sct"><a href="/ru/services/">Óñëóãè</a></p>
+					
+</div>
+<div class="unit">
+					<p class="sct"><a href="/ru/products/">Ïðîäóêòû è ðåøåíèÿ</a></p>
+					
+<p><a href="/ru/products/ehlektronnaya_i_mobilnaya_kommerciya/">Ýëåêòðîííàÿ è ìîáèëüíàÿ êîììåðöèÿ</a></p>
+
+
+<p><a href="/ru/products/transportnaya_platforma_rassylka_sms/">Òðàíñïîðòíàÿ ïëàòôîðìà (ðàññûëêà SMS)</a></p>
+
+
+<p><a href="/ru/products/agregaciya_tsp/">Àãðåãàöèÿ ÒÑÏ</a></p>
+
+
+<p><a href="/ru/products/agregaciya_istochnikov_platezhej/">Àãðåãàöèÿ èñòî÷íèêîâ ïëàòåæåé</a></p>
+
+
+<p><a href="/ru/products/">äàëåå...</a></p>
+
+
+</div>
+
+			</div>
+
+			<div class="box4">
+				<div class="unit">
+					<p class="sct"><a href="/ru/call-centers/">Êîëë-öåíòðû</a></p>
+					
+<p class="num">+7 (727) 391-04-47</p>
+
+
+<p class="num">+7 (495) 660-63-00</p>
+
+
+</div>
+<div class="unit">
+					<p class="sct"><a href="/ru/support/">Êðóãëîñóòî÷íàÿ <br /> ñëóæáà ïîääåðæêè</a></p>
+					
+<p class="num">+7 (495) 225-92-08</p>
+
+
+</div>
+
+			</div>
+
+			<div class="box5">
+				<div class="unit">
+					<p class="sct"><a href="http://www.development.intervale.ru"><a target="_new" href=" http://www.development.intervale.ru ">Âõîä äëÿ àâòîðèçîâàííûõ ïîëüçîâàòåëåé</a></a></p>
+					<ul>
+          
+          </ul>
+</div>
+<div class="unit">
+					<p class="sct"><a href="/ru/contacts/">Êîíòàêòíàÿ èíôîðìàöèÿ</a></p>
+					<ul>
+          <li><a href="/ru/contacts/moscow/">Ìîñêâà</a></li>
+<li><a href="/ru/contacts/almaata/">Àëìàòû</a></li>
+<li><a href="/ru/contacts/kiev/">Êèåâ</a></li>
+<li><a href="/ru/contacts/prag/">Ïðàãà</a></li>
+<li><a href="/ru/contacts/minsk/">Ìèíñê</a></li>
+
+          </ul>
+</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="sub_footer"></div>
+</div><!-- main -->
+
+<!-- **************************************** footer ****************************************** -->
+<div id="footer">	
+	<div class="footer_inside">
+		<!-- copy -->
+		<!-- copy -->
+		<div class="copy">
+			&copy; Intervale, 2010ï¿½2016. Âñå ïðàâà çàùèùåíû
+		</div>
+
+		<!-- studio -->
+		<div class="studio">
+			Ñàéò ñîçäàí â «<a href="http://nordor.ru/">Íîðäîðå</a>»
+		</div>
+	</div>
+</div><!-- footer -->
+</body>
+</html>
+

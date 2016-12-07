@@ -1,0 +1,842 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+	<head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+				
+						<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Keywords" />
+<meta name="description" content="Description" />
+<link href="/bitrix/cache/css/s1/stom_grey_s1/kernel_main/kernel_main.css?146314508448075" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/stom_grey_s1/page_4a9cdef6cc7d268fdea2b30647d66fee/page_4a9cdef6cc7d268fdea2b30647d66fee.css?145934516718108" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/stom_grey_s1/template_28934de83cfc360323c914abf0df85f6/template_28934de83cfc360323c914abf0df85f6.css?145934516712742" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'','SERVER_TIME':'1477471445','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'ecaffc82e89589705ec333d0eab3cb78'});</script>
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/stom_grey_s1/kernel_main/kernel_main.js?1466601176277796"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_db.min.js?14660058185048"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_frame_cache.min.js?146600581910587"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js?146600581870997','/bitrix/js/main/core/core_ajax.js?146314488620978','/bitrix/js/main/json/json2.min.js?14502712133467','/bitrix/js/main/core/core_ls.js?14502712137365','/bitrix/js/main/core/core_fx.js?14502712139592','/bitrix/js/main/core/core_popup.js?146314487831170','/bitrix/js/main/session.js?14502712132511','/bitrix/js/main/core/core_window.js?146600581874754','/bitrix/js/main/core/core_date.js?146314488934276','/bitrix/js/main/utils.js?145027121319858','/bitrix/templates/stom_grey_s1/components/bitrix/news.list/block1/script.js?14502712143288','/bitrix/templates/stom_grey_s1/components/bitrix/news.list/block3/script.js?14502712143288','/bitrix/templates/stom_grey_s1/components/bitrix/news.list/personal_index/script.js?14502712143288','/bitrix/templates/stom_grey_s1/components/bitrix/news.list/news/script.js?14502712143288','/bitrix/templates/stom_grey_s1/components/bitrix/news.list/departament/script.js?14502712143288','/bitrix/templates/stom_grey_s1/components/bitrix/menu/top_menu/script.js?1450271214407','/bitrix/templates/stom_grey_s1/components/bitrix/news.list/section_botom/script.js?14502712143288','/bitrix/templates/stom_grey_s1/components/bitrix/menu/footer_menu/script.js?1450271214407']); </script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css?14502712132854','/bitrix/js/main/core/css/core_popup.css?146314487933075','/bitrix/js/main/core/css/core_date.css?14502712139689','/bitrix/templates/stom_grey_s1/components/bitrix/news.list/block1/style.css?14502712143329','/bitrix/templates/stom_grey_s1/components/bitrix/news.list/block3/style.css?14502712143329','/bitrix/templates/stom_grey_s1/components/bitrix/news.list/personal_index/style.css?14502712143329','/bitrix/templates/stom_grey_s1/components/bitrix/news.list/news/style.css?14502712143329','/bitrix/templates/stom_grey_s1/components/bitrix/news.list/departament/style.css?14502712143329','/bitrix/templates/stom_grey_s1/components/bitrix/menu/top_menu/style.css?14502712143715','/bitrix/templates/stom_grey_s1/components/bitrix/news.list/section_botom/style.css?14502712143329','/bitrix/templates/stom_grey_s1/components/bitrix/menu/footer_menu/style.css?14502712143715','/bitrix/templates/stom_grey_s1/template_styles.css?1450271213695']); </script>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300" >
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic" >
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/stom_grey_s1/css/jquery-ui-1.10.3.custom.css" >
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/stom_grey_s1/css/animate.css" >
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/stom_grey_s1/css/font-awesome.min.css" >
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/stom_grey_s1/css/color.css" >
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/stom_grey_s1/rs-plugin/css/settings.min.css" >
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/stom_grey_s1/css/slides.css" >
+<link rel="stylesheet" type="text/css" href="/bitrix/templates/stom_grey_s1/css/inline.min.css" >
+<!--[if IE 9]>  <link rel="stylesheet" type="text/css" href="/bitrix/templates/stom_grey_s1/css/ie9.css" ><![endif]--> 
+
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/stom_grey_s1/template_65098c16fa4cd79e4f722c84fb5c3f6f/template_65098c16fa4cd79e4f722c84fb5c3f6f.js?14593449495704"></script>
+<script type="text/javascript" src="/bitrix/cache/js/s1/stom_grey_s1/page_fbd1abe6817c017f42b55d5810c7132e/page_fbd1abe6817c017f42b55d5810c7132e.js?145934516719087"></script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "8ac84c95062ef7d5ba41b4f25d52f223"]); _ba.push(["host", "www.n-stom.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+		<title>Клиника "Наша Стоматология"</title>
+		<link rel="shortcut icon" type="image/ico" href="/bitrix/templates/stom_grey_s1/images/favicon.ico" /> 	
+	</head>
+	<body>
+
+		<div id="panel">
+					</div>
+            <header>
+            
+            <div class="header-bg">
+            <div id="search-overlay">
+            <div class="container">
+        						<div id="close">X</div>
+								
+<form action="/search/index.php">
+			<input id="hidden-search" type="text" name="q" value="" placeholder="Поиск" autocomplete="off" />
+						<input style="  display: none;" name="s" type="submit" value="" />
+</form>
+								</div>
+			</div>
+               
+                	
+                    <!--Topbar-->
+                    <div class="topbar-info no-pad">                    
+                        <div class="container">  
+						    <div class="social-wrap-head col-md-3 no-pad"">
+						                                <ul>
+								                                <li><a class="mail-menu" href="#"><i class="icon-facebook head-social-icon" id="face-head" data-original-title="" title=""></i></a></li>
+																                                <li><a class="mail-menu" href="#"><i class="icon-social-twitter head-social-icon" id="tweet-head" data-original-title="" title=""></i></a></li>
+																                                <li><a class="mail-menu" href="#"><i class="icon-google-plus head-social-icon" id="gplus-head" data-original-title="" title=""></i></a></li>
+																                                <li><a class="mail-menu" href="#"><i class="icon-linkedin head-social-icon" id="link-head" data-original-title="" title=""></i></a></li>
+																                                <li><a class="mail-menu" href="#"><i class="icon-rss head-social-icon" id="rss-head" data-original-title="" title=""></i></a></li>
+								                                </ul>									
+                            </div>    
+                            <div class="top-info-contact pull-right col-md-6">
+							Позвоните нам!							8(495) 971-72-04							 |    
+							info@n-stom.ru								 <div id="search" class="fa fa-search search-head"></div>
+                            </div>                            
+                  
+                        </div>
+                    </div><!--Topbar-info-close-->
+			
+			
+			
+<div style="height:66px;display: block;position: relative;">
+                    <div id="headerstic" style="position: relative;">
+                    
+                    <div class=" top-bar container">
+                    	<div class="row">
+                            <nav class=" navbar-default" >
+                              <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                          
+                          <button type="button" class="navbar-toggle icon-list-ul" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Переключить меню</span>
+                          </button>
+                          <button type="button" class="navbar-toggle icon-rocket" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                            <span class="sr-only">Переключить меню</span>
+                          </button>
+
+                          <a href="/"><div class="logo"><img src="/bitrix/templates/stom_grey_s1/images/logo.gif" /></div></a>
+                        </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+
+	
+	
+							<li  class="dropdown"><a href="/about/" class="dropdown-toggle" >О клинике</a>
+				<ul class="dropdown-menu">
+					
+	
+
+
+	
+
+	
+	
+		
+							<li><a href="/about/reviews/">Отзывы</a></li>
+						
+			
+
+
+	
+
+			</ul></li>	
+	
+		
+										<li class=""><a href="/services/" >Услуги и цены</a></li>
+									
+			
+
+
+	
+
+	
+	
+		
+										<li class=""><a href="/personal/" >Наши специалисты</a></li>
+									
+			
+
+
+	
+
+	
+	
+		
+										<li class=""><a href="/appointments/" >Запись на прием</a></li>
+									
+			
+
+
+	
+
+	
+	
+							<li  class="dropdown"><a href="/patient/" class="dropdown-toggle" >Для пациентов</a>
+				<ul class="dropdown-menu">
+					
+	
+
+
+	
+
+	
+	
+		
+							<li><a href="/patient/section/">Статьи</a></li>
+						
+			
+
+
+	
+
+	
+	
+		
+							<li><a href="/patient/promotions/">Акции и скидки</a></li>
+						
+			
+
+
+	
+
+			</ul></li>	
+	
+		
+										<li class=""><a href="/contact/" >Контакты</a></li>
+									
+			
+
+
+	
+
+	
+	
+		
+												
+			
+
+
+	
+
+	
+	
+		
+												
+			
+
+
+	
+
+																		<li class="dropdown dop-menu"><a style="width: 70px;"  class="dropdown-toggle" data-toggle="dropdown" ><span>...</span><b class="icon-angle-down"></b></a>
+<ul class="dropdown-menu" style="top: 60px;">
+		 <li><a href="/news/">Новости</a></li>
+		 <li><a href="/blogs/">Блог</a></li>
+
+
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                              </div><!-- /.container-fluid -->
+                            </nav>
+                    	</div>    
+                    </div><!--Topbar End-->
+                	</div>
+</div>                                <div class="hide-mid navbar-collapse option-drop collapse in" id="bs-example-navbar-collapse-2" style="height: auto;">
+                                  
+                                  
+                                  <ul class="nav navbar-nav navbar-right other-op">
+                                    <li><i class="icon-phone2"></i>							8(495) 971-72-04</li>
+                                    <li><i class="icon-mail"></i>							info@n-stom.ru</li>
+                                    
+                                    <li><i class="icon-globe"></i>
+								                                <a class="mail-menu" href="#"><i class="icon-facebook head-social-icon" id="face-head" data-original-title="" title=""></i></a>																                                <a class="mail-menu" href="#"><i class="icon-social-twitter head-social-icon" id="tweet-head" data-original-title="" title=""></i></a>																                                <a class="mail-menu" href="#"><i class="icon-google-plus head-social-icon" id="gplus-head" data-original-title="" title=""></i></a>																                                <a class="mail-menu" href="#"><i class="icon-linkedin head-social-icon" id="link-head" data-original-title="" title=""></i></a>								                                    </li>
+                                    <li><i class="icon-search"></i>
+									
+<form action="/search/index.php">
+			<div class="search-wrap"><input id="search-text" type="text" class="search-txt" name="q" value="" placeholder="Поиск" autocomplete="off" />
+                                   
+                                   
+						<input id="searchbt" class="icon-search search-bt"  name="s" type="submit" value="" /></div>
+</form>
+                                    </li>
+                                    
+                                  </ul>
+                                </div><!-- /.navbar-collapse -->			
+              </div>
+            </header>
+			            <div class="complete-content ">
+												
+						<!--'start_frame_cache_slide'-->
+            <div class="container full-width-container ihome-banner">
+            	<div class="banner col-sm-12 col-xs-12 col-md-12">
+                	
+                    <ul>
+               				
+                <li data-transition="fade" data-slotamount="1" data-masterspeed="700" data-saveperformance="on"  data-title="Intro Slide">
+             	<img src="/upload/iblock/f93/f9385db6d34b3b32596aec9af6f4c425.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+				    					<div class="tp-caption bluebg-t3 sfr skewtoright imed-sl1"
+                        data-x="100"
+                        data-y="bottom"
+                        data-hoffset="0"
+                        data-speed="700"
+                        data-start="1"
+                        data-easing="Power1.easeOut"
+                        data-endspeed="700"
+                        data-endeasing="Power3.easeInOut"
+						data-autoplayonlyfirsttime="false"
+						data-nextslideatend="true"
+                        ><img src="/upload/iblock/b51/b51467a50961f09d1ed8a96121740f70.png?>" alt="Нам доверяют!" class="img-responsive">
+                    </div>
+										<div class="tp-caption bluebg-t2 sfr skewtoright imed-sl1"
+                        data-x="720"
+                        data-y="172"
+                        data-hoffset="-10"
+                        data-speed="700"
+                        data-start="1"
+                        data-easing="Back.easeOut"
+                        data-endspeed="700"
+                        data-endeasing="Power2.easeIn"
+                        ><strong style="color:#fff">Нам доверяют!</strong>
+                    </div>
+
+
+                    <!-- LAYER NR. 7 -->
+                    <div class="tp-caption bluebg-t3 sfr skewtoright imed-sl1"
+                        data-x="720"
+                        data-y="230"
+                        data-hoffset="-60"
+                        data-speed="700"
+                        data-start="1"
+                        data-easing="Back.easeOut"
+                        data-endspeed="700"
+                        data-endeasing="Power3.easeIn"
+                        ><strong style="color:#fff">Отзывы наших пациентов<br>
+на сайте 32top.ru<br><br>
+Мы всегда рады помочь в самой<br>
+сложной ситуации!
+</strong>
+						</div>
+						
+												<div class="tp-caption s1-but customin skewtoright imed-sl1"
+                        data-x="center"
+                        data-y="375"
+                        data-hoffset="205"
+                        data-speed="700"
+                        data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                        data-start="10"
+                        data-easing="Back.easeOut"
+                        data-endspeed="700"
+                        data-endeasing="Power4.easeIn"
+                        >						
+						<a class="cnopca_slider" href="http://www.32top.ru/clinics/1866/">Подробнее</a></div>
+						                                         
+                </li>				   
+								
+                <li data-transition="fade" data-slotamount="1" data-masterspeed="700" data-saveperformance="on"  data-title="Intro Slide">
+             	<img src="/upload/iblock/d25/d256aefefe6e144ad7583cc944e731cd.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+				    					<div class="tp-caption bluebg-t3 sfr skewtoright imed-sl1"
+                        data-x="100"
+                        data-y="bottom"
+                        data-hoffset="0"
+                        data-speed="700"
+                        data-start="1"
+                        data-easing="Power1.easeOut"
+                        data-endspeed="700"
+                        data-endeasing="Power3.easeInOut"
+						data-autoplayonlyfirsttime="false"
+						data-nextslideatend="true"
+                        ><img src="/upload/iblock/d14/d14b131af3c4aab75f4a3cbc7df5b178.png?>" alt="Гарантия результата!" class="img-responsive">
+                    </div>
+										<div class="tp-caption bluebg-t2 sfr skewtoright imed-sl1"
+                        data-x="720"
+                        data-y="172"
+                        data-hoffset="-10"
+                        data-speed="700"
+                        data-start="1"
+                        data-easing="Back.easeOut"
+                        data-endspeed="700"
+                        data-endeasing="Power2.easeIn"
+                        ><strong style="color:#000">Гарантия результата!</strong>
+                    </div>
+
+
+                    <!-- LAYER NR. 7 -->
+                    <div class="tp-caption bluebg-t3 sfr skewtoright imed-sl1"
+                        data-x="720"
+                        data-y="230"
+                        data-hoffset="-60"
+                        data-speed="700"
+                        data-start="1"
+                        data-easing="Back.easeOut"
+                        data-endspeed="700"
+                        data-endeasing="Power3.easeIn"
+                        ><strong style="color:#000">Мы гарантируем что Вы останетесь<br>
+довольны посещением нашей клиники,<br> 
+нас рекомендуют друзьям! 
+
+</strong>
+						</div>
+						
+												<div class="tp-caption s1-but customin skewtoright imed-sl1"
+                        data-x="center"
+                        data-y="375"
+                        data-hoffset="205"
+                        data-speed="700"
+                        data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                        data-start="10"
+                        data-easing="Back.easeOut"
+                        data-endspeed="700"
+                        data-endeasing="Power4.easeIn"
+                        >						
+						<a class="cnopca_slider" href="contact/">Подробнее</a></div>
+						                                         
+                </li>				   
+								</ul>
+			</div>    
+		</div>	
+			
+	<!--'end_frame_cache_slide'--><div class="container">
+	             <div class="container">
+            	<div class="row">
+            	<div class="no-pad icon-boxes-1"> 
+														
+					<div class="col-sm-6 col-xs-12 col-md-3 col-lg-3" id="bx_3218110189_9">
+                     <div class="icon-box-3 wow" >
+                    	<div class="icon-boxwrap2"><i class="fa fa-medkit icon-box-back2"></i></div>
+                        <div class="icon-box2-title">Бесплатная консультация</div>
+                        <p>Получите бесплатную консультацию у высококвалифицированного пародонтолога.</p>
+
+                        
+																			<div class="iconbox-readmore"><a href="/detail/9/">Подробнее</a></div><p></p>
+									                     </div>   
+                    </div>
+					
+					
+
+														
+					<div class="col-sm-6 col-xs-12 col-md-3 col-lg-3" id="bx_3218110189_10">
+                     <div class="icon-box-3 wow" >
+                    	<div class="icon-boxwrap2"><i class="icon-stethoscope icon-box-back2"></i></div>
+                        <div class="icon-box2-title">Современное оборудование</div>
+                        <p>Клиника оснащена современным медицинским и диагностическим оборудованием мировых производителей.
+<div class="iconbox-readmore"><a href="departament/">Подробнее</a></div></p>
+
+                        
+									                     </div>   
+                    </div>
+					
+					
+
+														
+					<div class="col-sm-6 col-xs-12 col-md-3 col-lg-3" id="bx_3218110189_12">
+                     <div class="icon-box-3 wow" >
+                    	<div class="icon-boxwrap2"><i class="icon-ambulance icon-box-back2"></i></div>
+                        <div class="icon-box2-title">Уникальное предложение</div>
+                        <p>Air Flow + Снятие зубного камня + Полировка <br>
+всего за 3690 руб! 
+<div class="iconbox-readmore"><a href="appointments/">Записаться</a></div></p>
+
+                        
+									                     </div>   
+                    </div>
+					
+					
+
+														
+					<div class="col-sm-6 col-xs-12 col-md-3 col-lg-3" id="bx_3218110189_11">
+                     <div class="icon-box-3 wow" >
+                    	<div class="icon-boxwrap2"><i class="fa fa-clock-o icon-box-back2"></i></div>
+                        <div class="icon-box2-title">Время работы</div>
+                        <p>                        <ul>
+                       </br>
+                       </br>
+                        <li>пн-пт<span class="ibox-right-span">10.00 - 20.00</span></li>
+                        <li>Cуб, воскр: <span class="ibox-right-span">выходной</span></li>
+                        </ul>
+</p>
+
+                        
+									                     </div>   
+                    </div>
+					
+					
+
+				                </div>
+                </div>
+            </div><!--Icon Boxes 1 end-->
+<div class="container">
+	<div class="col-md-12 no-pad col-xs-12 col-sm-12 heading-content elemnts-wrap wow" >
+		 <h2>Здоровье ваших зубов и привлекательность улыбки – цель&nbsp;«Нашей Стоматологии»</h2>
+<p style="text-align: left;">
+	 Медицинский центр «Наша Стоматология» - это не только современное оборудование и передовые технологии. Самое главное, чем может по праву гордиться клиника – это дружный коллектив настоящих профессионалов своего дела, любящих свою работу. <br>
+	 В 1996 году они объединилась под руководством Владимира Валентиновича Белоуса, опытного врача-ортопеда с целью организовать учреждение, где будут созданы максимально комфортные условия для работы стоматологов. И врачи ее достигли! Доказательством тому служит увеличивающееся с каждым годом число клиентов «Нашей Стоматологии», лица которых украшают счастливые улыбки. Одну из них мы будет рады подарить и вам!
+</p>	</div>
+	</div>
+	<div class="mid-widgets-serices col-xs-12 col-sm-12 col-md-12 col-lg-12 no-pad services-page">
+		 		<div class="container">
+            	<div class="row">
+									
+					<div class="col-sm-5 col-xs-12 col-md-3 col-lg-3 service-box no-pad wow " id="bx_651765591_90" >
+						<div class="service-title"><div class="service-icon-container rot-y"><i class="icon-eye-open panel-icon"></i></div>Диагностика </div>
+						<p>Зубы – это естественное украшение человека и важнейший природный инструмент, который должен содержаться в чистоте и порядке.</p>
+												<a href="/services/90/">Подробнее</a>
+											</div>
+									
+					<div class="col-sm-5 col-xs-12 col-md-3 col-lg-3 service-box no-pad wow " id="bx_651765591_91" >
+						<div class="service-title"><div class="service-icon-container rot-y"><i class="icon-medkit panel-icon"></i></div>Лечение зубов</div>
+						<p>Главная задача любого врача стоматолога – это максимально быстрое и комфортное лечение болезней полости рта пациента. Он... </p>
+												<a href="/services/91/">Подробнее</a>
+											</div>
+									
+					<div class="col-sm-5 col-xs-12 col-md-3 col-lg-3 service-box no-pad wow " id="bx_651765591_95" >
+						<div class="service-title"><div class="service-icon-container rot-y"><i class="icon-stethoscope panel-icon"></i></div>Лечение десен</div>
+						<p>Воспаление десен — повод для визита к стоматологу, так как полость рта содержит большое количество микроорганизмов, которые... </p>
+												<a href="/services/95/">Подробнее</a>
+											</div>
+									
+					<div class="col-sm-5 col-xs-12 col-md-3 col-lg-3 service-box no-pad wow " id="bx_651765591_92" >
+						<div class="service-title"><div class="service-icon-container rot-y"><i class="icon-ambulance panel-icon"></i></div>Протезирование зубов</div>
+						<p>Стоимость протезирования может значительно варьироваться в зависимости от вида протеза, однако мы предлагаем вам выгодные кредиты и... </p>
+												<a href="/services/92/">Подробнее</a>
+											</div>
+									
+					<div class="col-sm-5 col-xs-12 col-md-3 col-lg-3 service-box no-pad wow " id="bx_651765591_96" >
+						<div class="service-title"><div class="service-icon-container rot-y"><i class="icon-medkit panel-icon"></i></div>Исправление прикуса</div>
+						<p>Если у вас неправильный прикус, с возрастом это становится заметнее. Не стоит переживать, что время для лечения... </p>
+												<a href="/services/96/">Подробнее</a>
+											</div>
+								</div>
+		</div>	</div>
+	<div id="home-page-version-five">
+		<div class="container">
+			<div class="elements-box">
+				<p class="blockquote">
+				</p>
+				<div class="col-xs-12 col-sm-12 col-md-12 pull-right">
+					<div class="purchase-strip-blue pull-right col-sm-12 col-md-12 col-xs-12 notViewed wow medical-theme-block" >
+						<div class="purchase-strip-text medical-website-theme">
+							 Лучшая стоматология по итогам 2014 года!						</div>
+						<div class="color-4">
+							<p class="ipurchase-paragraph">
+								<a href="/contact/" class="icon-calendar btn btn-4 btn-4a notViewed wow purchase-btn" >Оставить заявку</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<p>
+				</p>
+			</div>
+		</div>
+		<!--container-->
+	</div>
+	<div id="homepage-long-version-two">
+		<div class="intro-content-wrap col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+			<div class="container top-padding bottom-padding">
+			
+
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 ">
+									
+
+					     <a href="/personal/5/31/"><div class="doctor-box col-md-4 col-sm-6 col-xs-12 wow animated"  id="bx_1373509569_31">
+                        
+                        	<div class="zoom-wrap">
+                          <div class="zoom-icon"></div>
+                        	<img alt="" class="img-responsive" src="/upload/iblock/550/55094b28f35908a22bbbdc49b25a7cc3.jpg" />
+                          </div>
+                      	<div class="doc-name">
+                          	<div class="doc-name-class">Терапевт</div><span class="doc-title">Виноградова М.Ю.</span>
+                          
+                          </div>
+                         </div></a>
+
+
+									
+
+					     <a href="/personal/2/32/"><div class="doctor-box col-md-4 col-sm-6 col-xs-12 wow animated"  id="bx_1373509569_32">
+                        
+                        	<div class="zoom-wrap">
+                          <div class="zoom-icon"></div>
+                        	<img alt="" class="img-responsive" src="/upload/iblock/290/2906e4cf1a59a24009f77ec9ff377ab1.jpg" />
+                          </div>
+                      	<div class="doc-name">
+                          	<div class="doc-name-class">Ортодонт</div><span class="doc-title">Смирнова Т.В</span>
+                          
+                          </div>
+                         </div></a>
+
+
+									
+
+					     <a href="/personal/3/33/"><div class="doctor-box col-md-4 col-sm-6 col-xs-12 wow animated"  id="bx_1373509569_33">
+                        
+                        	<div class="zoom-wrap">
+                          <div class="zoom-icon"></div>
+                        	<img alt="" class="img-responsive" src="/upload/iblock/8eb/8eba7670ad021a0702cf81caa8fe48eb.jpg" />
+                          </div>
+                      	<div class="doc-name">
+                          	<div class="doc-name-class">Ортопед</div><span class="doc-title">Белоус Владимир Валентинович</span>
+                          
+                          </div>
+                         </div></a>
+
+
+								</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="doctor-content-title">
+						 <h2>Наши врачи</h2>
+<p>
+	В нашей клинике работают лучшие врачи нашей страны. Мы решим любую задачу комплексно и в срок.&nbsp;Обращайтесь - будем только рады!
+</p> <a href="/personal/" class="inner-page-butt-blue">Подробнее</a>
+					</div>
+					<!--doctor-content-title-->
+				</div>
+				<!--col-md-4-end-->
+			</div>
+		</div>
+	</div>
+	<div class="container top-padding bottom-padding">
+		<div class="intro-content-wrap col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			 		
+
+                 <div class="col-xs-12 col-sm-12 col-md-6">
+                 
+                    <div class="latest-post-wrap" >
+					    <div class="subtitle col-xs-12 no-pad col-sm-11 col-md-12">Новости</div>
+						                         <a href="/news/" class="dept-details-butt posts-showall">Все новости</a>
+                            
+                        </div>
+                    </div>
+ 		
+
+                <div class="col-xs-12 col-sm-12 col-md-6" >
+                    
+                    <div class="subtitle pull-left">Департаменты</div>
+					<div id="imedica-dep-accordion">
+									
+
+						    <h3 class="last-child-ac ilast-child-acc"><i class="icon-ambulance dept-icon"></i><span class="dep-txt">Клиника на &quot;Водном Стадионе&quot;</span></h3>
+                            <div id="bx_3099439860_13">
+                                
+                                <img src="/upload/iblock/f42/f428b5d431057926d0dfde884283dd62.png" class="img-responsive dept-author-img-desk col-md-4" alt="Клиника на &quot;Водном Стадионе&quot;" />
+                                <div class="dept-content pull-left col-md-7 col-lg-8">
+                              
+                                <p>Наша клиника располагается недалеко от метро &quot;Водный Стадион&quot;. Выходите из метро в сторону Конаковского проезда, проходите мимо торговых комплексов - 3-5 минут, с левой... </p>
+                                
+                                
+                                <a href="/departament/13/" class="dept-details-butt">Подробнее</a>
+                                <div class="purchase-strip-blue dept-apponit-butt"><div class="color-4">
+                                    <p class="ipurchase-paragraph">
+                                         <a href="/contact/13/"><button class="icon-calendar btn btn-4 btn-4a notViewed">Контакты</button></a>
+                                    </p>
+                                </div></div>
+                                
+                                <div class="vspacer"></div>
+                                </div>
+                            </div>
+
+
+									</div>
+				</div>
+		</div>
+	</div>
+</div>	</div>
+            <div class="complete-footer">
+            <footer id="footer">
+            	<div class="container">
+                	<div class="row">
+					    <div class="col-xs-12 col-sm-6 col-md-3 foot-widget">
+                        <div class="foot-widget-title">Контакты</div>
+                        
+                        <address class="foot-address">
+							 <div class="col-xs-12 no-pad">
+	Клиника "Наша Стоматология"<br>
+г.Москва, Ленинградском шоссе, д.58, корпус 17.
+Ближайшая к нам станция метро - "Водный Стадион".
+Удобнее всего к нам добираться пешком. Дорога не займет у вас и 10 минут.
+</div>
+<div class="col-xs-12 no-pad">
+ <i class="icon-phone2 address-icons"></i>8(495) 971-72-04
+</div>
+<div class="col-xs-12 no-pad">
+ <i class="icon-file address-icons"></i>8(495) 459-97-70
+</div>
+<div class="col-xs-12 no-pad">
+ <i class="icon-mail address-icons"></i><a href="mailto:info@n-stom.ru">info@n-stom.ru</a>
+</div>
+ <br>                        </address>
+                        </div>
+						
+                        <!--Foot widget-->
+                       
+								 		
+
+                        <div class="col-xs-12 col-sm-6 col-md-3 recent-post-foot foot-widget">
+                        	<div class="foot-widget-title">Новости</div>
+                        	<ul>							
+								                            </ul>						
+                    </div>
+		 		
+
+                        <div class="col-xs-12 col-sm-6 col-md-3 recent-post-foot foot-widget">
+                        	<div class="foot-widget-title">Статьи</div>
+                        	<ul>							
+																										<li id="bx_1373509569_88"><a href="/patient/section/88/">Флюороз<br /><span class="event-date">13.08.2015</span></a></li>
+																										<li id="bx_1373509569_87"><a href="/patient/section/87/">Стираемость зубов<br /><span class="event-date">06.08.2015</span></a></li>
+																										<li id="bx_1373509569_86"><a href="/patient/section/86/">Острая зубная боль<br /><span class="event-date">01.08.2015</span></a></li>
+								                            </ul>						
+                    </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 foot-widget">
+                        	<div class="foot-widget-title">Рассылка</div>
+                        	<p>Подписаться на рассылку:</p>
+                            <div class="news-subscribe">
+
+														
+
+<form name="ajaxform" action="/bitrix/components/bit-ecommerce/element_add/ajax.php" method="POST" enctype="multipart/form-data"><input type="hidden" name="bxajaxid" id="bxajaxid__8BACKi" value="" /><input type="hidden" name="AJAX_CALL" value="Y" /><script type="text/javascript">
+function _processform_8BACKi(){
+	var obForm = top.BX('bxajaxid__8BACKi').form;
+	top.BX.bind(obForm, 'submit', function() {BX.ajax.submitComponentForm(this, 'result', true)});
+	top.BX.removeCustomEvent('onAjaxSuccess', _processform_8BACKi);
+}
+if (top.BX('bxajaxid__8BACKi'))
+	_processform_8BACKi();
+else
+	top.BX.addCustomEvent('onAjaxSuccess', _processform_8BACKi);
+</script>   
+<input type="hidden" name="IBLOCK_ID" value="10">    
+<input type="hidden" name="ERROR" value=" Введен некорректный e-mail.">   
+<input type="hidden" name="ERROR_2" value=" Вы подписаны!">  
+<span id="result">
+
+</span>
+<span >
+					<input autocomplete="off" type="text" name="EMAIL" class="news-tb" placeholder="Email Address" />
+	<input type="submit" name="" class="news-button" value="Подписаться"/>
+</span>
+	</form>
+							</div>
+                            <div class="foot-widget-title">Мы в соцсетях</div>
+                            <div class="social-wrap">
+                                <ul>
+								                                <li><a class="mail-menu" href="#"><i class="icon-facebook head-social-icon" id="face-head" data-original-title="" title=""></i></a></li>
+																                                <li><a class="mail-menu" href="#"><i class="icon-social-twitter head-social-icon" id="tweet-head" data-original-title="" title=""></i></a></li>
+																                                <li><a class="mail-menu" href="#"><i class="icon-google-plus head-social-icon" id="gplus-head" data-original-title="" title=""></i></a></li>
+																                                <li><a class="mail-menu" href="#"><i class="icon-linkedin head-social-icon" id="link-head" data-original-title="" title=""></i></a></li>
+																                                <li><a class="mail-menu" href="#"><i class="icon-rss head-social-icon" id="rss-head" data-original-title="" title=""></i></a></li>
+								                                </ul>
+                            </div>
+                        </div>
+						
+					</div>
+				</div>
+			
+			</footer>
+            <div class="bottom-footer">
+            <div class="container">
+            
+                <div class="row">
+                    <!--Foot widget-->
+                    <div class="col-xs-12 col-sm-12 col-md-12 foot-widget-bottom">
+                    <p class="col-xs-12 col-md-3 no-pad">
+							Клиника "Наша Стоматология 1996-2015 © <!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=11456029&from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/11456029/2_1_FFFFFFFF_EFEFEFFF_0_uniques" style="width:80px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:11456029,lang:'ru'});return false}catch(e){}"></a>
+<!-- /Yandex.Metrika informer -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter11456029 = new Ya.Metrika({
+                    id:11456029,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    ut:"noindex"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<!-- /Yandex.Metrika counter -->							
+					</p> 
+					<p class="col-xs-12 col-md-2 no-pad" id="bx-composite-banner"></p>
+								
+<ul class="foot-menu col-xs-12 col-md-7 no-pad">
+
+		
+		
+							<li class="dropdown"><a href="/about/"class="dropdown-toggle" >О клинике</a></li>
+			
+			
+
+	
+
+		
+		
+							<li class="dropdown"><a href="/services/"class="dropdown-toggle" >Услуги и цены</a></li>
+			
+			
+
+	
+
+		
+		
+							<li class="dropdown"><a href="/personal/"class="dropdown-toggle" >Наши специалисты</a></li>
+			
+			
+
+	
+
+		
+		
+							<li class="dropdown"><a href="/appointments/"class="dropdown-toggle" >Запись на прием</a></li>
+			
+			
+
+	
+
+		
+		
+							<li class="dropdown"><a href="/patient/"class="dropdown-toggle" >Для пациентов</a></li>
+			
+			
+
+	
+
+		
+		
+							<li class="dropdown"><a href="/contact/"class="dropdown-toggle" >Контакты</a></li>
+			
+			
+
+	
+
+	
+
+	
+
+	
+
+	
+
+                    </ul>
+                    </div>
+                </div>
+            </div> 
+            </div>
+			</div>
+
+    <script type="text/javascript" src="/bitrix/templates/stom_grey_s1/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/bitrix/templates/stom_grey_s1/js/jquery-ui-1.10.3.custom.min.js"></script>  
+    <script type="text/javascript" src="/bitrix/templates/stom_grey_s1/bootstrap-new/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/bitrix/templates/stom_grey_s1/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="/bitrix/templates/stom_grey_s1/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="/bitrix/templates/stom_grey_s1/js/jquery.scrollUp.min.js"></script>
+    <script type="text/javascript" src="/bitrix/templates/stom_grey_s1/js/jquery.sticky.min.js"></script>
+    <script type="text/javascript" src="/bitrix/templates/stom_grey_s1/js/wow.min.js"></script>
+    <script type="text/javascript" src="/bitrix/templates/stom_grey_s1/js/jquery.flexisel.min.js"></script>
+    <script type="text/javascript" src="/bitrix/templates/stom_grey_s1/js/jquery.imedica.min.js"></script>
+    <script type="text/javascript" src="/bitrix/templates/stom_grey_s1/js/custom-imedicajs.min.js"></script>
+   	<script type='text/javascript'>
+		$(window).load(function(){
+			$('#loader-overlay').fadeOut(900);
+			$("html").css("overflow","visible");
+		});
+			</script>
+	</body>
+</html>

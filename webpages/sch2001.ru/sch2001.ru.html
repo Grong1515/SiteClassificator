@@ -1,0 +1,5317 @@
+<html>
+
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Øêîëà ¹ 2001</title>
+<meta name="Keywords" content="Øêîëà îáó÷åíèå ïåðâûé êëàññ">
+<meta name="Description" content="Øêîëà ¹ 2001. Êðóïíîå ñðåäíåå îáðàçîâàòåëüíîå ó÷ðåæäåíèå, ñîñòîÿùåå èç øåñòè çäàíèé.">
+<link rel="stylesheet" href="css.css" type="text/css">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<meta name='yandex-verification' content='5d94fa8503911a21' />
+<meta name='yandex-verification' content='7440b7f991027eaf' />
+
+
+
+<!--//Ïîäêëþ÷åíèå áàçîâûõ ôóíêöèé JScript-->
+<script src="/basefunctions.js"></script>
+
+<!--//Ïîäêëþ÷åíèå áèáëèîòåê THREE.JS-->
+<script src="js/build/three.min.js" type="text/javascript"></script>
+
+<script src="templates/main.js" type="text/javascript"></script>
+
+</head>
+
+<script>
+
+var MainWidth;
+
+var main_file = 'news.smt';
+var search_light='';
+var cur_scroll = GetCookie('cur_scroll_311');
+var cur_search = GetCookie('cur_search');
+var rnd_photos=new Array();
+
+console.log("-  - ");
+
+
+
+function ApplySearch()
+{	
+	frmSearch.submit();
+}
+
+function GetRealScrollSize()
+{
+	var divTestScroll = document.createElement('div');
+	divTestScroll.style.overflowY = 'scroll';
+	divTestScroll.style.width =  '50px';
+	divTestScroll.style.height = '50px';
+	divTestScroll.style.visibility = 'hidden';
+	
+	document.body.appendChild(divTestScroll);
+
+	var scrollWidth = divTestScroll.offsetWidth - divTestScroll.clientWidth;
+	document.body.removeChild(divTestScroll);
+	
+	return ( scrollWidth );	
+}
+
+function GetCurTeg(in_str, in_num)
+{
+	control_process=0;
+	
+	$i=in_num-1;
+	while (control_process!=1)
+	{
+		control_tag=0;
+		while (control_tag==0)
+		{
+			if ((in_str.substr($i,1)=='<') && (in_str.substr($i,2)!='</') || ($i==0 || (in_str.substr($i,7)=='</SpAn>'))) 
+				control_tag=1;
+			else
+				$i--;
+		}
+		
+		if ($i==0) return 'none';
+	
+		$j=$i+1;
+		while ((in_str.substr($j,1)!=' ') && (in_str.substr($j,1)!='>') || ($j==in_str.length)) 
+		{
+			$j++;
+		}
+		
+		if ($j==in_str.length) return 'error';
+		cur_teg=in_str.substr($i+1,$j-$i-1);
+		cur_teg=cur_teg.toUpperCase();
+		if (cur_teg=='BR' || cur_teg=='STRONG' || cur_teg=='SUB' || cur_teg=='SUP' || cur_teg=='B' || cur_teg=='EM' || cur_teg=='I' || cur_teg=='U' || cur_teg=='FONT')
+			$i--;
+		else
+			control_process=1
+	}
+	
+	return in_str.substr($i+1,$j-$i-1).toUpperCase();
+
+}
+
+function SearchLight()
+{
+		
+	var whole_text=tdMainContent.innerHTML;
+		
+	//Ôîðìèðîâàíèå ìàññèâà áåç êîðîòêèõ ñëîâ
+	var k=0;
+	var full_words=cur_search.split(' ');
+	var words=new Array();
+	for(j=0; j<full_words.length; j++)
+	{
+		if (full_words[j].length>2)
+		{
+			words[k]= full_words[j];
+			k++;
+		}
+	}		
+
+	for(i=0; i<words.length; i++)
+	{
+		re = new RegExp (words[i], ["ig"]);
+		if (re.test(whole_text))
+		{	
+			arr = whole_text.split(re);
+			var cur_index=(-1)*words[i].length;
+			var new_text='';
+			
+			for(j=0; j<arr.length; j++)
+			{
+				cur_index+=arr[j].length+words[i].length;
+				cur_word=whole_text.substr(cur_index,words[i].length)
+				cur_teg=GetCurTeg(whole_text, cur_index);
+				if (cur_teg=='SpesialTeg')
+					new_text+=arr[j]+cur_word;
+				else
+					new_text+=arr[j]+"<font style='background-color:#E8E119'>"+cur_word+"</font>";
+			}
+			whole_text=new_text;
+		}
+	}
+	//Ïåðåäà÷à ïîäñâå÷åííîãî òåêñòà â äîêóìåíò
+	tdMainContent.innerHTML=whole_text;	
+		
+	whole_text=tdRightCol.innerHTML;
+	
+	//Ôîðìèðîâàíèå ìàññèâà áåç êîðîòêèõ ñëîâ
+	k=0;
+	full_words=cur_search.split(' ');
+	words=new Array();
+	for(j=0; j<full_words.length; j++)
+	{
+		if (full_words[j].length>2)
+		{
+			words[k]= full_words[j];
+			k++;
+		}
+	}		
+
+	for(i=0; i<words.length; i++)
+	{
+		re = new RegExp (words[i], ["ig"]);
+		if (re.test(whole_text))
+		{	
+			arr = whole_text.split(re);
+			var cur_index=(-1)*words[i].length;
+			var new_text='';
+			
+			for(j=0; j<arr.length; j++)
+			{
+				cur_index+=arr[j].length+words[i].length;
+				cur_word=whole_text.substr(cur_index,words[i].length)
+				cur_teg=GetCurTeg(whole_text, cur_index);
+				if (cur_teg=='SpesialTeg')
+					new_text+=arr[j]+cur_word;
+				else
+					new_text+=arr[j]+"<font style='background-color:#E8E119'>"+cur_word+"</font>";
+			}
+			whole_text=new_text;
+		}
+	}
+	//Ïåðåäà÷à ïîäñâå÷åííîãî òåêñòà â äîêóìåíò
+	tdRightCol.innerHTML=whole_text;	
+
+	
+			
+}
+
+function PostData()
+{
+	divObj=document.getElementById('divSlides');
+	
+	//SetCookie('cur_scroll_311', divObj.scrollLeft);
+	
+
+	if (main_file=='search.smt')
+	{
+		SetCookie('search_selected_one', selected_one);
+	}
+	SetCookie('cur_search', frmSearch.term.value);
+}
+
+window.onunload = function()
+{
+	PostData();
+}
+
+function WindowOnLoad()
+{
+	WIDTH=window.innerWidth-GetRealScrollSize();
+	
+	start();
+	
+	if (search_light==1) SearchLight();
+	
+	if (frmSearch.term.value=='' && cur_search!=null)	{frmSearch.term.value=cur_search; term_vis.value=cur_search;}
+	
+	b_top=(document.body.scrollHeight > document.body.offsetHeight)? document.body.scrollHeight : document.body.offsetHeight;
+	trMainContent.style.height=b_top-140-34;
+	(parseInt(trMainContent.offsetHeight)>(b_top-140-34)) ? a_top=34 : a_top=0;
+	b_top=(document.body.scrollHeight > document.body.offsetHeight)? document.body.scrollHeight : document.body.offsetHeight;
+
+	if (typeof(divFooter)!='undefined') divFooter.style.top=b_top-442+a_top;
+	if (typeof(divFooter)!='undefined') divFooter.style.display='block';
+
+	
+}
+
+window.onload = function()
+{
+	WindowOnLoad();
+}
+
+
+
+
+
+
+<!--//Ïåðåäà÷à â JScript ñëó÷àéíûõ ôîòîãðàôèé-->
+		rnd_photos[0] = new Array();
+	rnd_photos[0]['ill_name']= 'posadkaallei_106.jpg';
+	rnd_photos[0]['org_w']= '1000';
+	rnd_photos[0]['org_h']= '666';
+		rnd_photos[1] = new Array();
+	rnd_photos[1]['ill_name']= 'posadkaallei_100.jpg';
+	rnd_photos[1]['org_w']= '1000';
+	rnd_photos[1]['org_h']= '666';
+		rnd_photos[2] = new Array();
+	rnd_photos[2]['ill_name']= '1st_n_2016_0034.jpg';
+	rnd_photos[2]['org_w']= '1000';
+	rnd_photos[2]['org_h']= '666';
+		rnd_photos[3] = new Array();
+	rnd_photos[3]['ill_name']= '1sent2001_2chast_117.jpg';
+	rnd_photos[3]['org_w']= '1000';
+	rnd_photos[3]['org_h']= '666';
+		rnd_photos[4] = new Array();
+	rnd_photos[4]['ill_name']= '1sent2001_1chast_109.jpg';
+	rnd_photos[4]['org_w']= '1000';
+	rnd_photos[4]['org_h']= '666';
+		rnd_photos[5] = new Array();
+	rnd_photos[5]['ill_name']= '1sent2001_1chast_101.jpg';
+	rnd_photos[5]['org_w']= '1000';
+	rnd_photos[5]['org_h']= '666';
+		rnd_photos[6] = new Array();
+	rnd_photos[6]['ill_name']= 'bitvashkolotbor_111.jpg';
+	rnd_photos[6]['org_w']= '467';
+	rnd_photos[6]['org_h']= '700';
+		rnd_photos[7] = new Array();
+	rnd_photos[7]['ill_name']= 'dengoroda2016_232.jpg';
+	rnd_photos[7]['org_w']= '1000';
+	rnd_photos[7]['org_h']= '666';
+		rnd_photos[8] = new Array();
+	rnd_photos[8]['ill_name']= 'img_3925.jpg';
+	rnd_photos[8]['org_w']= '933';
+	rnd_photos[8]['org_h']= '700';
+		rnd_photos[9] = new Array();
+	rnd_photos[9]['ill_name']= 'posadkaallei_108.jpg';
+	rnd_photos[9]['org_w']= '1000';
+	rnd_photos[9]['org_h']= '666';
+		rnd_photos[10] = new Array();
+	rnd_photos[10]['ill_name']= '1st_n_2016_0038.jpg';
+	rnd_photos[10]['org_w']= '1000';
+	rnd_photos[10]['org_h']= '666';
+		rnd_photos[11] = new Array();
+	rnd_photos[11]['ill_name']= 'gto_dosh_0004.jpg';
+	rnd_photos[11]['org_w']= '1000';
+	rnd_photos[11]['org_h']= '666';
+		rnd_photos[12] = new Array();
+	rnd_photos[12]['ill_name']= '1st_n_2016_0008.jpg';
+	rnd_photos[12]['org_w']= '1000';
+	rnd_photos[12]['org_h']= '666';
+		rnd_photos[13] = new Array();
+	rnd_photos[13]['ill_name']= 'gto_dosh_0010.jpg';
+	rnd_photos[13]['org_w']= '1000';
+	rnd_photos[13]['org_h']= '666';
+		rnd_photos[14] = new Array();
+	rnd_photos[14]['ill_name']= '1sent2001_2chast_106.jpg';
+	rnd_photos[14]['org_w']= '1000';
+	rnd_photos[14]['org_h']= '666';
+		rnd_photos[15] = new Array();
+	rnd_photos[15]['ill_name']= '1st_n_2016_0029.jpg';
+	rnd_photos[15]['org_w']= '1000';
+	rnd_photos[15]['org_h']= '666';
+		rnd_photos[16] = new Array();
+	rnd_photos[16]['ill_name']= '1sent2001_1chast_135.jpg';
+	rnd_photos[16]['org_w']= '1000';
+	rnd_photos[16]['org_h']= '666';
+		rnd_photos[17] = new Array();
+	rnd_photos[17]['ill_name']= 'gto_dosh_0008.jpg';
+	rnd_photos[17]['org_w']= '1000';
+	rnd_photos[17]['org_h']= '666';
+		rnd_photos[18] = new Array();
+	rnd_photos[18]['ill_name']= '1sent2001_1chast_129.jpg';
+	rnd_photos[18]['org_w']= '1000';
+	rnd_photos[18]['org_h']= '666';
+		rnd_photos[19] = new Array();
+	rnd_photos[19]['ill_name']= 'posadkaallei_116.jpg';
+	rnd_photos[19]['org_w']= '1000';
+	rnd_photos[19]['org_h']= '562';
+		rnd_photos[20] = new Array();
+	rnd_photos[20]['ill_name']= 'gto_dosh_0013.jpg';
+	rnd_photos[20]['org_w']= '781';
+	rnd_photos[20]['org_h']= '536';
+		rnd_photos[21] = new Array();
+	rnd_photos[21]['ill_name']= '1class_100.jpg';
+	rnd_photos[21]['org_w']= '1000';
+	rnd_photos[21]['org_h']= '666';
+		rnd_photos[22] = new Array();
+	rnd_photos[22]['ill_name']= '1st_n_2016_0037.jpg';
+	rnd_photos[22]['org_w']= '1000';
+	rnd_photos[22]['org_h']= '666';
+		rnd_photos[23] = new Array();
+	rnd_photos[23]['ill_name']= '1class_105.jpg';
+	rnd_photos[23]['org_w']= '1000';
+	rnd_photos[23]['org_h']= '666';
+		rnd_photos[24] = new Array();
+	rnd_photos[24]['ill_name']= 'dengoroda2016_158.jpg';
+	rnd_photos[24]['org_w']= '1000';
+	rnd_photos[24]['org_h']= '666';
+		rnd_photos[25] = new Array();
+	rnd_photos[25]['ill_name']= '1sent2001_1chast_106.jpg';
+	rnd_photos[25]['org_w']= '1000';
+	rnd_photos[25]['org_h']= '666';
+		rnd_photos[26] = new Array();
+	rnd_photos[26]['ill_name']= '1sent2001_1chast_131.jpg';
+	rnd_photos[26]['org_w']= '1000';
+	rnd_photos[26]['org_h']= '666';
+		rnd_photos[27] = new Array();
+	rnd_photos[27]['ill_name']= '1st_n_2016_0026.jpg';
+	rnd_photos[27]['org_w']= '533';
+	rnd_photos[27]['org_h']= '800';
+		rnd_photos[28] = new Array();
+	rnd_photos[28]['ill_name']= '1sent2001_1chast_117.jpg';
+	rnd_photos[28]['org_w']= '1000';
+	rnd_photos[28]['org_h']= '666';
+		rnd_photos[29] = new Array();
+	rnd_photos[29]['ill_name']= 'posadkaallei_104.jpg';
+	rnd_photos[29]['org_w']= '1000';
+	rnd_photos[29]['org_h']= '666';
+		rnd_photos[30] = new Array();
+	rnd_photos[30]['ill_name']= '1class_103.jpg';
+	rnd_photos[30]['org_w']= '1000';
+	rnd_photos[30]['org_h']= '666';
+		rnd_photos[31] = new Array();
+	rnd_photos[31]['ill_name']= '1class_130.jpg';
+	rnd_photos[31]['org_w']= '1000';
+	rnd_photos[31]['org_h']= '666';
+		rnd_photos[32] = new Array();
+	rnd_photos[32]['ill_name']= 'dengoroda2016_231.jpg';
+	rnd_photos[32]['org_w']= '1000';
+	rnd_photos[32]['org_h']= '666';
+		rnd_photos[33] = new Array();
+	rnd_photos[33]['ill_name']= '1sent2001_1chast_132.jpg';
+	rnd_photos[33]['org_w']= '1000';
+	rnd_photos[33]['org_h']= '666';
+		rnd_photos[34] = new Array();
+	rnd_photos[34]['ill_name']= 'gto_dosh_0009.jpg';
+	rnd_photos[34]['org_w']= '1000';
+	rnd_photos[34]['org_h']= '666';
+		rnd_photos[35] = new Array();
+	rnd_photos[35]['ill_name']= '1st_n_2016_0036.jpg';
+	rnd_photos[35]['org_w']= '1000';
+	rnd_photos[35]['org_h']= '666';
+		rnd_photos[36] = new Array();
+	rnd_photos[36]['ill_name']= 'bitvashkolotbor_100.jpg';
+	rnd_photos[36]['org_w']= '1000';
+	rnd_photos[36]['org_h']= '666';
+		rnd_photos[37] = new Array();
+	rnd_photos[37]['ill_name']= '1sent2001_1chast_138.jpg';
+	rnd_photos[37]['org_w']= '1000';
+	rnd_photos[37]['org_h']= '666';
+		rnd_photos[38] = new Array();
+	rnd_photos[38]['ill_name']= 'gto_dosh_0007.jpg';
+	rnd_photos[38]['org_w']= '1000';
+	rnd_photos[38]['org_h']= '666';
+		rnd_photos[39] = new Array();
+	rnd_photos[39]['ill_name']= 'gto_dosh_0003.jpg';
+	rnd_photos[39]['org_w']= '1000';
+	rnd_photos[39]['org_h']= '666';
+		rnd_photos[40] = new Array();
+	rnd_photos[40]['ill_name']= 'dengoroda2016_239.jpg';
+	rnd_photos[40]['org_w']= '1000';
+	rnd_photos[40]['org_h']= '666';
+		rnd_photos[41] = new Array();
+	rnd_photos[41]['ill_name']= 'posadkaallei_114.jpg';
+	rnd_photos[41]['org_w']= '1000';
+	rnd_photos[41]['org_h']= '666';
+		rnd_photos[42] = new Array();
+	rnd_photos[42]['ill_name']= '1sent2001_1chast_139.jpg';
+	rnd_photos[42]['org_w']= '1000';
+	rnd_photos[42]['org_h']= '666';
+		rnd_photos[43] = new Array();
+	rnd_photos[43]['ill_name']= 'bitvashkolotbor_113.jpg';
+	rnd_photos[43]['org_w']= '1000';
+	rnd_photos[43]['org_h']= '666';
+		rnd_photos[44] = new Array();
+	rnd_photos[44]['ill_name']= 'posadkaallei_113.jpg';
+	rnd_photos[44]['org_w']= '1000';
+	rnd_photos[44]['org_h']= '666';
+		rnd_photos[45] = new Array();
+	rnd_photos[45]['ill_name']= '1sent2001_1chast_100.jpg';
+	rnd_photos[45]['org_w']= '1000';
+	rnd_photos[45]['org_h']= '666';
+		rnd_photos[46] = new Array();
+	rnd_photos[46]['ill_name']= 'gto_dosh_0012.jpg';
+	rnd_photos[46]['org_w']= '492';
+	rnd_photos[46]['org_h']= '700';
+		rnd_photos[47] = new Array();
+	rnd_photos[47]['ill_name']= '1sent2001_1chast_112.jpg';
+	rnd_photos[47]['org_w']= '1000';
+	rnd_photos[47]['org_h']= '666';
+		rnd_photos[48] = new Array();
+	rnd_photos[48]['ill_name']= 'posadkaallei_107.jpg';
+	rnd_photos[48]['org_w']= '467';
+	rnd_photos[48]['org_h']= '700';
+		rnd_photos[49] = new Array();
+	rnd_photos[49]['ill_name']= '1sent2001_2chast_125.jpg';
+	rnd_photos[49]['org_w']= '1000';
+	rnd_photos[49]['org_h']= '666';
+		rnd_photos[50] = new Array();
+	rnd_photos[50]['ill_name']= '1sent2001_2chast_114.jpg';
+	rnd_photos[50]['org_w']= '1000';
+	rnd_photos[50]['org_h']= '666';
+		rnd_photos[51] = new Array();
+	rnd_photos[51]['ill_name']= '1st_n_2016_0016.jpg';
+	rnd_photos[51]['org_w']= '533';
+	rnd_photos[51]['org_h']= '800';
+		rnd_photos[52] = new Array();
+	rnd_photos[52]['ill_name']= '1st_n_2016_0035.jpg';
+	rnd_photos[52]['org_w']= '1000';
+	rnd_photos[52]['org_h']= '666';
+		rnd_photos[53] = new Array();
+	rnd_photos[53]['ill_name']= '1st_n_2016_0017.jpg';
+	rnd_photos[53]['org_w']= '1000';
+	rnd_photos[53]['org_h']= '666';
+		rnd_photos[54] = new Array();
+	rnd_photos[54]['ill_name']= '1sent2001_2chast_121.jpg';
+	rnd_photos[54]['org_w']= '1000';
+	rnd_photos[54]['org_h']= '666';
+		rnd_photos[55] = new Array();
+	rnd_photos[55]['ill_name']= '1sent2001_2chast_131.jpg';
+	rnd_photos[55]['org_w']= '1000';
+	rnd_photos[55]['org_h']= '666';
+		rnd_photos[56] = new Array();
+	rnd_photos[56]['ill_name']= '1sent2001_1chast_123.jpg';
+	rnd_photos[56]['org_w']= '1000';
+	rnd_photos[56]['org_h']= '666';
+		rnd_photos[57] = new Array();
+	rnd_photos[57]['ill_name']= '1st_n_2016_0021.jpg';
+	rnd_photos[57]['org_w']= '1000';
+	rnd_photos[57]['org_h']= '666';
+		rnd_photos[58] = new Array();
+	rnd_photos[58]['ill_name']= '1st_n_2016_0031.jpg';
+	rnd_photos[58]['org_w']= '1000';
+	rnd_photos[58]['org_h']= '666';
+		rnd_photos[59] = new Array();
+	rnd_photos[59]['ill_name']= 'bitvashkolotbor_103.jpg';
+	rnd_photos[59]['org_w']= '1000';
+	rnd_photos[59]['org_h']= '666';
+		rnd_photos[60] = new Array();
+	rnd_photos[60]['ill_name']= '1st_n_2016_0027.jpg';
+	rnd_photos[60]['org_w']= '533';
+	rnd_photos[60]['org_h']= '800';
+		rnd_photos[61] = new Array();
+	rnd_photos[61]['ill_name']= 'posadkaallei_110.jpg';
+	rnd_photos[61]['org_w']= '1000';
+	rnd_photos[61]['org_h']= '666';
+		rnd_photos[62] = new Array();
+	rnd_photos[62]['ill_name']= 'posadkaallei_102.jpg';
+	rnd_photos[62]['org_w']= '1000';
+	rnd_photos[62]['org_h']= '666';
+		rnd_photos[63] = new Array();
+	rnd_photos[63]['ill_name']= '1class_110.jpg';
+	rnd_photos[63]['org_w']= '1000';
+	rnd_photos[63]['org_h']= '666';
+		rnd_photos[64] = new Array();
+	rnd_photos[64]['ill_name']= 'posadkaallei_105.jpg';
+	rnd_photos[64]['org_w']= '1000';
+	rnd_photos[64]['org_h']= '666';
+		rnd_photos[65] = new Array();
+	rnd_photos[65]['ill_name']= 'posadkaallei_111.jpg';
+	rnd_photos[65]['org_w']= '1000';
+	rnd_photos[65]['org_h']= '562';
+		rnd_photos[66] = new Array();
+	rnd_photos[66]['ill_name']= '1class_127.jpg';
+	rnd_photos[66]['org_w']= '1000';
+	rnd_photos[66]['org_h']= '666';
+		rnd_photos[67] = new Array();
+	rnd_photos[67]['ill_name']= '1st_n_2016_0006.jpg';
+	rnd_photos[67]['org_w']= '533';
+	rnd_photos[67]['org_h']= '800';
+		rnd_photos[68] = new Array();
+	rnd_photos[68]['ill_name']= '1st_n_2016_0033.jpg';
+	rnd_photos[68]['org_w']= '1000';
+	rnd_photos[68]['org_h']= '666';
+		rnd_photos[69] = new Array();
+	rnd_photos[69]['ill_name']= '1class_104.jpg';
+	rnd_photos[69]['org_w']= '1000';
+	rnd_photos[69]['org_h']= '666';
+		rnd_photos[70] = new Array();
+	rnd_photos[70]['ill_name']= '1class_114.jpg';
+	rnd_photos[70]['org_w']= '1000';
+	rnd_photos[70]['org_h']= '666';
+		rnd_photos[71] = new Array();
+	rnd_photos[71]['ill_name']= 'bitvashkolotbor_109.jpg';
+	rnd_photos[71]['org_w']= '1000';
+	rnd_photos[71]['org_h']= '666';
+		rnd_photos[72] = new Array();
+	rnd_photos[72]['ill_name']= 'bitvashkolotbor_108.jpg';
+	rnd_photos[72]['org_w']= '467';
+	rnd_photos[72]['org_h']= '700';
+		rnd_photos[73] = new Array();
+	rnd_photos[73]['ill_name']= 'dengoroda2016_179.jpg';
+	rnd_photos[73]['org_w']= '467';
+	rnd_photos[73]['org_h']= '700';
+		rnd_photos[74] = new Array();
+	rnd_photos[74]['ill_name']= '1sent2001_2chast_133.jpg';
+	rnd_photos[74]['org_w']= '1000';
+	rnd_photos[74]['org_h']= '666';
+		rnd_photos[75] = new Array();
+	rnd_photos[75]['ill_name']= '1st_n_2016_0015.jpg';
+	rnd_photos[75]['org_w']= '1000';
+	rnd_photos[75]['org_h']= '666';
+		rnd_photos[76] = new Array();
+	rnd_photos[76]['ill_name']= '1class_136.jpg';
+	rnd_photos[76]['org_w']= '1000';
+	rnd_photos[76]['org_h']= '666';
+		rnd_photos[77] = new Array();
+	rnd_photos[77]['ill_name']= 'posadkaallei_115.jpg';
+	rnd_photos[77]['org_w']= '1000';
+	rnd_photos[77]['org_h']= '666';
+		rnd_photos[78] = new Array();
+	rnd_photos[78]['ill_name']= '1sent2001_2chast_110.jpg';
+	rnd_photos[78]['org_w']= '1000';
+	rnd_photos[78]['org_h']= '666';
+		rnd_photos[79] = new Array();
+	rnd_photos[79]['ill_name']= '1st_n_2016_0013.jpg';
+	rnd_photos[79]['org_w']= '1000';
+	rnd_photos[79]['org_h']= '666';
+		rnd_photos[80] = new Array();
+	rnd_photos[80]['ill_name']= '1sent2001_1chast_128.jpg';
+	rnd_photos[80]['org_w']= '1000';
+	rnd_photos[80]['org_h']= '666';
+		rnd_photos[81] = new Array();
+	rnd_photos[81]['ill_name']= '1sent2001_2chast_122.jpg';
+	rnd_photos[81]['org_w']= '1000';
+	rnd_photos[81]['org_h']= '666';
+		rnd_photos[82] = new Array();
+	rnd_photos[82]['ill_name']= '1sent2001_2chast_105.jpg';
+	rnd_photos[82]['org_w']= '1000';
+	rnd_photos[82]['org_h']= '666';
+		rnd_photos[83] = new Array();
+	rnd_photos[83]['ill_name']= '1sent2001_2chast_107.jpg';
+	rnd_photos[83]['org_w']= '1000';
+	rnd_photos[83]['org_h']= '666';
+		rnd_photos[84] = new Array();
+	rnd_photos[84]['ill_name']= 'posadkaallei_121.jpg';
+	rnd_photos[84]['org_w']= '1000';
+	rnd_photos[84]['org_h']= '666';
+		rnd_photos[85] = new Array();
+	rnd_photos[85]['ill_name']= 'dengoroda2016_127.jpg';
+	rnd_photos[85]['org_w']= '1000';
+	rnd_photos[85]['org_h']= '666';
+		rnd_photos[86] = new Array();
+	rnd_photos[86]['ill_name']= 'dengoroda2016_187.jpg';
+	rnd_photos[86]['org_w']= '1000';
+	rnd_photos[86]['org_h']= '666';
+		rnd_photos[87] = new Array();
+	rnd_photos[87]['ill_name']= '1sent2001_2chast_134.jpg';
+	rnd_photos[87]['org_w']= '1000';
+	rnd_photos[87]['org_h']= '666';
+		rnd_photos[88] = new Array();
+	rnd_photos[88]['ill_name']= '1class_112.jpg';
+	rnd_photos[88]['org_w']= '1000';
+	rnd_photos[88]['org_h']= '666';
+		rnd_photos[89] = new Array();
+	rnd_photos[89]['ill_name']= 'dengoroda2016_105.jpg';
+	rnd_photos[89]['org_w']= '1000';
+	rnd_photos[89]['org_h']= '666';
+		rnd_photos[90] = new Array();
+	rnd_photos[90]['ill_name']= '1class_125.jpg';
+	rnd_photos[90]['org_w']= '1000';
+	rnd_photos[90]['org_h']= '666';
+		rnd_photos[91] = new Array();
+	rnd_photos[91]['ill_name']= '1class_124.jpg';
+	rnd_photos[91]['org_w']= '1000';
+	rnd_photos[91]['org_h']= '666';
+		rnd_photos[92] = new Array();
+	rnd_photos[92]['ill_name']= '1sent2001_1chast_120.jpg';
+	rnd_photos[92]['org_w']= '1000';
+	rnd_photos[92]['org_h']= '666';
+		rnd_photos[93] = new Array();
+	rnd_photos[93]['ill_name']= 'dengoroda2016_194.jpg';
+	rnd_photos[93]['org_w']= '467';
+	rnd_photos[93]['org_h']= '700';
+		rnd_photos[94] = new Array();
+	rnd_photos[94]['ill_name']= '1class_119.jpg';
+	rnd_photos[94]['org_w']= '1000';
+	rnd_photos[94]['org_h']= '666';
+		rnd_photos[95] = new Array();
+	rnd_photos[95]['ill_name']= 'dengoroda2016_223.jpg';
+	rnd_photos[95]['org_w']= '1000';
+	rnd_photos[95]['org_h']= '666';
+		rnd_photos[96] = new Array();
+	rnd_photos[96]['ill_name']= '1sent2001_1chast_114.jpg';
+	rnd_photos[96]['org_w']= '1000';
+	rnd_photos[96]['org_h']= '666';
+		rnd_photos[97] = new Array();
+	rnd_photos[97]['ill_name']= '1sent2001_2chast_128.jpg';
+	rnd_photos[97]['org_w']= '1000';
+	rnd_photos[97]['org_h']= '666';
+		rnd_photos[98] = new Array();
+	rnd_photos[98]['ill_name']= '1sent2001_1chast_113.jpg';
+	rnd_photos[98]['org_w']= '1000';
+	rnd_photos[98]['org_h']= '666';
+		rnd_photos[99] = new Array();
+	rnd_photos[99]['ill_name']= '1sent2001_1chast_119.jpg';
+	rnd_photos[99]['org_w']= '1000';
+	rnd_photos[99]['org_h']= '666';
+
+</script>
+
+
+<body id="bdyMain" style="background-image: url(img/autumn_main_back.jpg); background-attachment: fixed; margin:0;" >
+
+<!--//Ôîðìà ïîèñêà-->
+<div style="font-size:12; position: absolute; left:-1500; top:-1500">
+	<form id='frmSearch' action="/search_redirect.php" method="post" onsubmit="if(this.term.value.length < 3) return false;">
+	<input type="text" style="font-size:12px; color:#C0C0C0; width: 105 " name="term" id="term" value="">
+	</form>
+</div>
+
+<div style="font-size:12; position: absolute; left:260; top:80; z-index:1000">
+<table  border=0 cellspacing=0 cellpadding=0>
+<tr height=15 valign=center>
+	<td>
+		<input onkeypress="document.getElementById('frmSearch').term.value=this.value; if(event.keyCode==13) ApplySearch();" onkeyup="document.getElementById('frmSearch').term.value=this.value;" onclick='if(this.value=="ïîèñê ïî ñàéòó") this.value="";' type="text" class="main_inp" id='term_vis' name='term_vis' placeholder="ïîèñê..." value="">
+	</td>
+	<td align=center width=20px><img onclick='ApplySearch();' style='cursor: pointer;' src="img/search_ok.png"></td>
+</tr>
+</table>
+</div>
+
+<!--//Êàíâàñ ñ ôîòîãðàôèÿìè-->
+<div id="glcanvas" style='width:600px; height:140px; position: absolute; top:0px; left: 0px;'>
+</div>	
+
+
+<div style='position: absolute; top:5px; left: 0px; width: 220px; overflow: hidden;'>
+	<script>
+
+	var cur_select_id=0;
+var tim_flow=new Array();
+var cur_parent=0;
+
+
+
+function FlowMenu(in_num, tar_height, in_step)
+{
+	tim_flow[in_num]=setTimeout("FlowMenu("+in_num+", "+tar_height+", "+in_step+");",30);
+	
+	var obj=document.getElementById('divMenu'+in_num);
+	
+	var cur_height=parseInt(obj.offsetHeight);
+
+	var step=0;
+	step=(tar_height-cur_height)/Math.abs(tar_height-cur_height)*in_step;
+	
+	if (Math.abs(tar_height-cur_height)<=Math.abs(step)) 
+	{
+		clearTimeout(tim_flow[in_num]);
+		obj.style.height=parseInt(tar_height)+'px';
+		if (tar_height==1)obj.style.display='none';  
+	}
+	else
+	{
+		obj.style.height=parseInt(cur_height+step)+'px';
+	}
+}
+
+function ChangeSelected(in_id, have_sub, in_href)
+{
+	if (cur_select_id!=in_id)
+	{
+		if (cur_select_id>-1) CloseSubMenu(cur_select_id);
+		OpebSubMenu(in_id);
+		cur_select_id=in_id;
+	}
+	else
+	{
+		CloseSubMenu(cur_select_id);
+		cur_select_id=-1;
+	}
+	
+	if (have_sub==0)
+	{
+		location.href=in_href;
+	}
+}
+
+function OpebSubMenu(in_id)
+{
+	obj=document.getElementById("divMenu"+in_id);
+	if (obj)
+	{
+		sdw=document.getElementById("divMenu"+in_id+"_shadow");
+		clearTimeout(tim_flow[in_id]);
+		FlowMenu(in_id,parseInt(sdw.offsetHeight),20);
+		obj.style.display='block';
+	}
+}
+
+function CloseSubMenu(in_id)
+{
+	obj=document.getElementById("divMenu"+in_id);
+	if (obj)
+	{
+		clearTimeout(tim_flow[in_id]);
+		FlowMenu(in_id,1,30);
+	}
+}
+
+
+
+
+
+</script>
+
+<div style='position: absolute; top:24px; left: 30px;'>
+	<embed wmode="transparent" width=150 height=117 src="/img/flag.swf">
+</div>
+
+<div style='z-index:100; position: relative; top:0px; width:60px; height:37px; overflow:hidden; margin-left: 101px;'>
+<embed wmode="transparent" width=60 height=37 src="/img/autumn_fluger.swf">
+</div>
+
+<div style='position: relative; top:-28px; width:224px; height: 150px; cursor: pointer; overflow: hidden; background: url("img/autumn_menu_begin.png");background-repeat: no-repeat;'>
+</div>	
+
+
+
+
+
+						<div onclick='ChangeSelected(1054, 9, "/index.php?sid=1054")' style='position: relative; top:-57px; margin-left:6px; cursor: pointer; height: 60px; overflow: hidden; background: url("img/autumn_main_menu_norm_200.png");background-repeat: no-repeat;' onMouseout='this.style.background="url(img/autumn_main_menu_norm_200.png)"; this.style.backgroundRepeat="no-repeat";' onMouseover='this.style.background="url(img/autumn_main_menu_push_200.png)"; this.style.backgroundRepeat="no-repeat"' >
+						<div style='width:170px; text-align:center; position: relative; top:13px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px; '>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family:Georgia; font-size:14px; font-style: italic; color: #111111; font-weight: normal;">Íàøà øêîëà</td></tr></table>
+				</div>
+
+				<div style='width:170px; text-align:center; position: relative; left:-1px; top:-24px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px;'>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family: Georgia; font-size:14px; font-style: italic; color: #FFFFFF; font-weight: normal;">Íàøà øêîëà</td></tr></table>
+				</div>
+			</div>
+	
+			
+		<div id='divMenu1054' style='background: url("img/autumn_submenu_back.png"); position: relative; top:-57px; margin-left:6px; width: 200px; height: 1px; display:none;  overflow: hidden'>
+		
+			<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+			<tr>
+			<td>
+				<div style=' margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+					<table cellpadding="0" cellspacing="0" border="0">
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2615"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ó÷åáíûå ïëàíû
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2483"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ïëàí ðàáîòû
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2382"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Øêîëà ñåãîäíÿ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1666"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ýêñêóðñèè ïî øêîëå
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2462"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Øêîëà â ÑÌÈ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2549"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Øêîëà â ñîöèàëüíûõ ñåòÿõ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1055"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Èñòîðèÿ øêîëû
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1254"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Êëàññû è ãðóïïû
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1341"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ïðàâèëà øêîëüíîé æèçíè
+							</font>
+						</a>
+					</td>
+					</tr>
+										</table>
+				</div>
+			</td>
+			</tr>
+			</table>
+		</div>
+		
+		<!--//Ñîçäàíèå âòîðîãî òåíåâîãî ìåíþ äëÿ êîíòðîëÿ ìàêñèìàëüíîé âûñîòû-->
+		<div id='divMenu1054_shadow' style='background: url("img/autumn_submenu_back.png"); width: 200px; position:absolute; left:-5000px; top:-5000px;'>
+		
+		<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+		<tr>
+		<td>
+			<div style='margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+				<table cellpadding="0" cellspacing="0" border="0">
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2615"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ó÷åáíûå ïëàíû
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2483"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ïëàí ðàáîòû
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2382"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Øêîëà ñåãîäíÿ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1666"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ýêñêóðñèè ïî øêîëå
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2462"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Øêîëà â ÑÌÈ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2549"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Øêîëà â ñîöèàëüíûõ ñåòÿõ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1055"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Èñòîðèÿ øêîëû
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1254"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Êëàññû è ãðóïïû
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1341"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ïðàâèëà øêîëüíîé æèçíè
+						</font>
+					</a>
+				</td>
+				</tr>
+								</table>
+			</div>
+		</td>
+		</tr>
+		</table>
+	
+		</div>
+	
+
+
+						<div onclick='ChangeSelected(2269, 8, "/index.php?sid=2269")' style='position: relative; top:-57px; margin-left:6px; cursor: pointer; height: 60px; overflow: hidden; background: url("img/autumn_main_menu_norm_200.png");background-repeat: no-repeat;' onMouseout='this.style.background="url(img/autumn_main_menu_norm_200.png)"; this.style.backgroundRepeat="no-repeat";' onMouseover='this.style.background="url(img/autumn_main_menu_push_200.png)"; this.style.backgroundRepeat="no-repeat"' >
+						<div style='width:170px; text-align:center; position: relative; top:13px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px; '>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family:Georgia; font-size:14px; font-style: italic; color: #111111; font-weight: normal;">Óñëîâèÿ îáó÷åíèÿ</td></tr></table>
+				</div>
+
+				<div style='width:170px; text-align:center; position: relative; left:-1px; top:-24px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px;'>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family: Georgia; font-size:14px; font-style: italic; color: #FFFFFF; font-weight: normal;">Óñëîâèÿ îáó÷åíèÿ</td></tr></table>
+				</div>
+			</div>
+	
+			
+		<div id='divMenu2269' style='background: url("img/autumn_submenu_back.png"); position: relative; top:-57px; margin-left:6px; width: 200px; height: 1px; display:none;  overflow: hidden'>
+		
+			<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+			<tr>
+			<td>
+				<div style=' margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+					<table cellpadding="0" cellspacing="0" border="0">
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1154"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ðàáîòà ñî ñïåöèàëèñòàìè
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1351"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Îðãàíèçàöèÿ ïèòàíèÿ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1318"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ñîöèàëüíàÿ çàùèòà
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1174"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Áåçîïàñíîñòü
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1263"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ìåäèöèíñêîå îáñëóæèâàíèå
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1211"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Áèáëèîòåêà
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2389"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ñïîðòèâíàÿ æèçíü
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2623"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ëåòî â øêîëå
+							</font>
+						</a>
+					</td>
+					</tr>
+										</table>
+				</div>
+			</td>
+			</tr>
+			</table>
+		</div>
+		
+		<!--//Ñîçäàíèå âòîðîãî òåíåâîãî ìåíþ äëÿ êîíòðîëÿ ìàêñèìàëüíîé âûñîòû-->
+		<div id='divMenu2269_shadow' style='background: url("img/autumn_submenu_back.png"); width: 200px; position:absolute; left:-5000px; top:-5000px;'>
+		
+		<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+		<tr>
+		<td>
+			<div style='margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+				<table cellpadding="0" cellspacing="0" border="0">
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1154"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ðàáîòà ñî ñïåöèàëèñòàìè
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1351"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Îðãàíèçàöèÿ ïèòàíèÿ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1318"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ñîöèàëüíàÿ çàùèòà
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1174"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Áåçîïàñíîñòü
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1263"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ìåäèöèíñêîå îáñëóæèâàíèå
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1211"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Áèáëèîòåêà
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2389"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ñïîðòèâíàÿ æèçíü
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2623"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ëåòî â øêîëå
+						</font>
+					</a>
+				</td>
+				</tr>
+								</table>
+			</div>
+		</td>
+		</tr>
+		</table>
+	
+		</div>
+	
+
+
+						<div onclick='ChangeSelected(1485, 3, "/index.php?sid=1485")' style='position: relative; top:-57px; margin-left:6px; cursor: pointer; height: 60px; overflow: hidden; background: url("img/autumn_main_menu_norm_200.png");background-repeat: no-repeat;' onMouseout='this.style.background="url(img/autumn_main_menu_norm_200.png)"; this.style.backgroundRepeat="no-repeat";' onMouseover='this.style.background="url(img/autumn_main_menu_push_200.png)"; this.style.backgroundRepeat="no-repeat"' >
+						<div style='width:170px; text-align:center; position: relative; top:13px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px; '>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family:Georgia; font-size:14px; font-style: italic; color: #111111; font-weight: normal;">Óïðàâëåíèå øêîëîé</td></tr></table>
+				</div>
+
+				<div style='width:170px; text-align:center; position: relative; left:-1px; top:-24px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px;'>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family: Georgia; font-size:14px; font-style: italic; color: #FFFFFF; font-weight: normal;">Óïðàâëåíèå øêîëîé</td></tr></table>
+				</div>
+			</div>
+	
+			
+		<div id='divMenu1485' style='background: url("img/autumn_submenu_back.png"); position: relative; top:-57px; margin-left:6px; width: 200px; height: 1px; display:none;  overflow: hidden'>
+		
+			<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+			<tr>
+			<td>
+				<div style=' margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+					<table cellpadding="0" cellspacing="0" border="0">
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1177"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Îáðàùåíèå ê ðóêîâîäèòåëþ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1118"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Óïðàâëÿþùèé ñîâåò
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2750"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ñîâåò ðîäèòåëåé
+							</font>
+						</a>
+					</td>
+					</tr>
+										</table>
+				</div>
+			</td>
+			</tr>
+			</table>
+		</div>
+		
+		<!--//Ñîçäàíèå âòîðîãî òåíåâîãî ìåíþ äëÿ êîíòðîëÿ ìàêñèìàëüíîé âûñîòû-->
+		<div id='divMenu1485_shadow' style='background: url("img/autumn_submenu_back.png"); width: 200px; position:absolute; left:-5000px; top:-5000px;'>
+		
+		<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+		<tr>
+		<td>
+			<div style='margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+				<table cellpadding="0" cellspacing="0" border="0">
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1177"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Îáðàùåíèå ê ðóêîâîäèòåëþ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1118"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Óïðàâëÿþùèé ñîâåò
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2750"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ñîâåò ðîäèòåëåé
+						</font>
+					</a>
+				</td>
+				</tr>
+								</table>
+			</div>
+		</td>
+		</tr>
+		</table>
+	
+		</div>
+	
+
+
+						<div onclick='ChangeSelected(767, 12, "/index.php?sid=767")' style='position: relative; top:-57px; margin-left:6px; cursor: pointer; height: 60px; overflow: hidden; background: url("img/autumn_main_menu_norm_200.png");background-repeat: no-repeat;' onMouseout='this.style.background="url(img/autumn_main_menu_norm_200.png)"; this.style.backgroundRepeat="no-repeat";' onMouseover='this.style.background="url(img/autumn_main_menu_push_200.png)"; this.style.backgroundRepeat="no-repeat"' >
+						<div style='width:170px; text-align:center; position: relative; top:13px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px; '>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family:Georgia; font-size:14px; font-style: italic; color: #111111; font-weight: normal;">Êîëëåêòèâ</td></tr></table>
+				</div>
+
+				<div style='width:170px; text-align:center; position: relative; left:-1px; top:-24px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px;'>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family: Georgia; font-size:14px; font-style: italic; color: #FFFFFF; font-weight: normal;">Êîëëåêòèâ</td></tr></table>
+				</div>
+			</div>
+	
+			
+		<div id='divMenu767' style='background: url("img/autumn_submenu_back.png"); position: relative; top:-57px; margin-left:6px; width: 200px; height: 1px; display:none;  overflow: hidden'>
+		
+			<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+			<tr>
+			<td>
+				<div style=' margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+					<table cellpadding="0" cellspacing="0" border="0">
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1044"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Àäìèíèñòðàöèÿ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1043"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Äîøêîëüíîå îòäåëåíèå
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1039"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Íà÷àëüíàÿ øêîëà
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1045"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ó÷èòåëÿ ðóññêîãî ÿçûêà è ëèòåðàòóðû
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1046"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ó÷èòåëÿ ìàòåìàòèêè è èíôîðìàòèêè
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1058"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ó÷èòåëÿ èíîñòðàííîãî ÿçûêà
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1059"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ó÷èòåëÿ åñòåñòâåííî-íàó÷íûõ ïðåäìåòîâ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1060"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ó÷èòåëÿ èñòîðèè è îáùåñòâîçíàíèÿ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1063"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ó÷èòåëÿ ôèçè÷åñêîé êóëüòóðû, òåõíîëîãèè è ÎÁÆ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1062"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ó÷èòåëÿ òâîð÷åñêèõ äèñöèïëèí
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1238"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ñîöèàëüíî-ïñèõîëîãè÷åñêàÿ ñëóæáà
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1064"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Äðóãèå ñîòðóäíèêè
+							</font>
+						</a>
+					</td>
+					</tr>
+										</table>
+				</div>
+			</td>
+			</tr>
+			</table>
+		</div>
+		
+		<!--//Ñîçäàíèå âòîðîãî òåíåâîãî ìåíþ äëÿ êîíòðîëÿ ìàêñèìàëüíîé âûñîòû-->
+		<div id='divMenu767_shadow' style='background: url("img/autumn_submenu_back.png"); width: 200px; position:absolute; left:-5000px; top:-5000px;'>
+		
+		<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+		<tr>
+		<td>
+			<div style='margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+				<table cellpadding="0" cellspacing="0" border="0">
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1044"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Àäìèíèñòðàöèÿ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1043"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Äîøêîëüíîå îòäåëåíèå
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1039"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Íà÷àëüíàÿ øêîëà
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1045"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ó÷èòåëÿ ðóññêîãî ÿçûêà è ëèòåðàòóðû
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1046"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ó÷èòåëÿ ìàòåìàòèêè è èíôîðìàòèêè
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1058"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ó÷èòåëÿ èíîñòðàííîãî ÿçûêà
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1059"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ó÷èòåëÿ åñòåñòâåííî-íàó÷íûõ ïðåäìåòîâ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1060"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ó÷èòåëÿ èñòîðèè è îáùåñòâîçíàíèÿ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1063"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ó÷èòåëÿ ôèçè÷åñêîé êóëüòóðû, òåõíîëîãèè è ÎÁÆ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1062"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ó÷èòåëÿ òâîð÷åñêèõ äèñöèïëèí
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1238"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ñîöèàëüíî-ïñèõîëîãè÷åñêàÿ ñëóæáà
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1064"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Äðóãèå ñîòðóäíèêè
+						</font>
+					</a>
+				</td>
+				</tr>
+								</table>
+			</div>
+		</td>
+		</tr>
+		</table>
+	
+		</div>
+	
+
+
+						<div onclick='ChangeSelected(1071, 9, "/index.php?sid=1071")' style='position: relative; top:-57px; margin-left:6px; cursor: pointer; height: 60px; overflow: hidden; background: url("img/autumn_main_menu_norm_200.png");background-repeat: no-repeat;' onMouseout='this.style.background="url(img/autumn_main_menu_norm_200.png)"; this.style.backgroundRepeat="no-repeat";' onMouseover='this.style.background="url(img/autumn_main_menu_push_200.png)"; this.style.backgroundRepeat="no-repeat"' >
+						<div style='width:170px; text-align:center; position: relative; top:13px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px; '>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family:Georgia; font-size:14px; font-style: italic; color: #111111; font-weight: normal;">Ó÷åáíûé ïðîöåññ</td></tr></table>
+				</div>
+
+				<div style='width:170px; text-align:center; position: relative; left:-1px; top:-24px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px;'>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family: Georgia; font-size:14px; font-style: italic; color: #FFFFFF; font-weight: normal;">Ó÷åáíûé ïðîöåññ</td></tr></table>
+				</div>
+			</div>
+	
+			
+		<div id='divMenu1071' style='background: url("img/autumn_submenu_back.png"); position: relative; top:-57px; margin-left:6px; width: 200px; height: 1px; display:none;  overflow: hidden'>
+		
+			<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+			<tr>
+			<td>
+				<div style=' margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+					<table cellpadding="0" cellspacing="0" border="0">
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1076"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ðàñïèñàíèå óðîêîâ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1387"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Çâîíêè
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1401"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ýëåêòðîííûé äíåâíèê
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1992"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Äèàãíîñòè÷åñêèå ðàáîòû
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1158"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ýêçàìåíû
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2390"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ïðîôèëüíîå îáó÷åíèå
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1410"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ãðàôèê îëèìïèàä
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1184"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Êàíèêóëû
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1269"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Çàäàíèÿ íà ëåòî
+							</font>
+						</a>
+					</td>
+					</tr>
+										</table>
+				</div>
+			</td>
+			</tr>
+			</table>
+		</div>
+		
+		<!--//Ñîçäàíèå âòîðîãî òåíåâîãî ìåíþ äëÿ êîíòðîëÿ ìàêñèìàëüíîé âûñîòû-->
+		<div id='divMenu1071_shadow' style='background: url("img/autumn_submenu_back.png"); width: 200px; position:absolute; left:-5000px; top:-5000px;'>
+		
+		<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+		<tr>
+		<td>
+			<div style='margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+				<table cellpadding="0" cellspacing="0" border="0">
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1076"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ðàñïèñàíèå óðîêîâ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1387"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Çâîíêè
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1401"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ýëåêòðîííûé äíåâíèê
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1992"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Äèàãíîñòè÷åñêèå ðàáîòû
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1158"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ýêçàìåíû
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2390"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ïðîôèëüíîå îáó÷åíèå
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1410"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ãðàôèê îëèìïèàä
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1184"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Êàíèêóëû
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1269"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Çàäàíèÿ íà ëåòî
+						</font>
+					</a>
+				</td>
+				</tr>
+								</table>
+			</div>
+		</td>
+		</tr>
+		</table>
+	
+		</div>
+	
+
+
+	 <a style='text-decoration: none;' href="/index.php?sid=1444"> 					<div onclick='ChangeSelected(1444, 11, "/index.php?sid=1444")' style='position: relative; top:-57px; margin-left:6px; cursor: pointer; height: 60px; overflow: hidden; background: url("img/autumn_main_menu_norm_200.png");background-repeat: no-repeat;' onMouseout='this.style.background="url(img/autumn_main_menu_norm_200.png)"; this.style.backgroundRepeat="no-repeat";' onMouseover='this.style.background="url(img/autumn_main_menu_push_200.png)"; this.style.backgroundRepeat="no-repeat"' >
+						<div style='width:170px; text-align:center; position: relative; top:13px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px; '>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family:Georgia; font-size:14px; font-style: italic; color: #111111; font-weight: normal;">Äîïîëíèòåëüíîå îáðàçîâàíèå</td></tr></table>
+				</div>
+
+				<div style='width:170px; text-align:center; position: relative; left:-1px; top:-24px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px;'>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family: Georgia; font-size:14px; font-style: italic; color: #FFFFFF; font-weight: normal;">Äîïîëíèòåëüíîå îáðàçîâàíèå</td></tr></table>
+				</div>
+			</div>
+	 </a> 
+			
+		<div id='divMenu1444' style='background: url("img/autumn_submenu_back.png"); position: relative; top:-57px; margin-left:6px; width: 200px; height: 1px; display:none;  overflow: hidden'>
+		
+			<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+			<tr>
+			<td>
+				<div style=' margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+					<table cellpadding="0" cellspacing="0" border="0">
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1628"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Îáúÿâëåíèÿ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2695"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								×àñû ïðèåìà
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2720"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Íîðìàòèâíûå äîêóìåíòû
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2718"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Êàòàëîã (ðàñïèñàíèå)
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1937"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ôèçêóëüòóðíî-ñïîðòèâíîå
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1940"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Õóäîæåñòâåííî-ýñòåòè÷åñêîå
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1942"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Âîåííî-ïàòðèîòè÷åñêîå
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1943"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Íàó÷íî-òåõíè÷åñêîå
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1967"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ñîöèàëüíî-ïåäàãîãè÷åñêîå
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1769"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Êíèãà æàëîá è ïðåäëîæåíèé
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1799"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ôîòîàëüáîì
+							</font>
+						</a>
+					</td>
+					</tr>
+										</table>
+				</div>
+			</td>
+			</tr>
+			</table>
+		</div>
+		
+		<!--//Ñîçäàíèå âòîðîãî òåíåâîãî ìåíþ äëÿ êîíòðîëÿ ìàêñèìàëüíîé âûñîòû-->
+		<div id='divMenu1444_shadow' style='background: url("img/autumn_submenu_back.png"); width: 200px; position:absolute; left:-5000px; top:-5000px;'>
+		
+		<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+		<tr>
+		<td>
+			<div style='margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+				<table cellpadding="0" cellspacing="0" border="0">
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1628"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Îáúÿâëåíèÿ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2695"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							×àñû ïðèåìà
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2720"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Íîðìàòèâíûå äîêóìåíòû
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2718"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Êàòàëîã (ðàñïèñàíèå)
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1937"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ôèçêóëüòóðíî-ñïîðòèâíîå
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1940"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Õóäîæåñòâåííî-ýñòåòè÷åñêîå
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1942"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Âîåííî-ïàòðèîòè÷åñêîå
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1943"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Íàó÷íî-òåõíè÷åñêîå
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1967"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ñîöèàëüíî-ïåäàãîãè÷åñêîå
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1769"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Êíèãà æàëîá è ïðåäëîæåíèé
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1799"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ôîòîàëüáîì
+						</font>
+					</a>
+				</td>
+				</tr>
+								</table>
+			</div>
+		</td>
+		</tr>
+		</table>
+	
+		</div>
+	
+
+
+						<div onclick='ChangeSelected(1412, 11, "/index.php?sid=1412")' style='position: relative; top:-57px; margin-left:6px; cursor: pointer; height: 60px; overflow: hidden; background: url("img/autumn_main_menu_norm_200.png");background-repeat: no-repeat;' onMouseout='this.style.background="url(img/autumn_main_menu_norm_200.png)"; this.style.backgroundRepeat="no-repeat";' onMouseover='this.style.background="url(img/autumn_main_menu_push_200.png)"; this.style.backgroundRepeat="no-repeat"' >
+						<div style='width:170px; text-align:center; position: relative; top:13px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px; '>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family:Georgia; font-size:14px; font-style: italic; color: #111111; font-weight: normal;">Ðàçâèòèå ëè÷íîñòè</td></tr></table>
+				</div>
+
+				<div style='width:170px; text-align:center; position: relative; left:-1px; top:-24px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px;'>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family: Georgia; font-size:14px; font-style: italic; color: #FFFFFF; font-weight: normal;">Ðàçâèòèå ëè÷íîñòè</td></tr></table>
+				</div>
+			</div>
+	
+			
+		<div id='divMenu1412' style='background: url("img/autumn_submenu_back.png"); position: relative; top:-57px; margin-left:6px; width: 200px; height: 1px; display:none;  overflow: hidden'>
+		
+			<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+			<tr>
+			<td>
+				<div style=' margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+					<table cellpadding="0" cellspacing="0" border="0">
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1333"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ó÷åíè÷åñêèé ñîâåò
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1589"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ëàãåðü «Ëèäåð»
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1996"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Äèñêóññèîííûé êëóá
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2279"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Êèíîêëóá
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2021"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ðîäèòåëüñêàÿ ãîñòèíàÿ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1416"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Äíè íàóêè è ñïîðòà
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1413"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Êàëåíäàðü äåë
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1337"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Âîëîíòåðñêîå äâèæåíèå
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1415"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Æèçíü êëàññîâ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2016"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Þíîìó ìàòåìàòèêó
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2095"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								IT ïðîåêòû
+							</font>
+						</a>
+					</td>
+					</tr>
+										</table>
+				</div>
+			</td>
+			</tr>
+			</table>
+		</div>
+		
+		<!--//Ñîçäàíèå âòîðîãî òåíåâîãî ìåíþ äëÿ êîíòðîëÿ ìàêñèìàëüíîé âûñîòû-->
+		<div id='divMenu1412_shadow' style='background: url("img/autumn_submenu_back.png"); width: 200px; position:absolute; left:-5000px; top:-5000px;'>
+		
+		<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+		<tr>
+		<td>
+			<div style='margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+				<table cellpadding="0" cellspacing="0" border="0">
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1333"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ó÷åíè÷åñêèé ñîâåò
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1589"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ëàãåðü «Ëèäåð»
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1996"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Äèñêóññèîííûé êëóá
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2279"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Êèíîêëóá
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2021"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ðîäèòåëüñêàÿ ãîñòèíàÿ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1416"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Äíè íàóêè è ñïîðòà
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1413"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Êàëåíäàðü äåë
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1337"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Âîëîíòåðñêîå äâèæåíèå
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1415"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Æèçíü êëàññîâ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2016"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Þíîìó ìàòåìàòèêó
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2095"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							IT ïðîåêòû
+						</font>
+					</a>
+				</td>
+				</tr>
+								</table>
+			</div>
+		</td>
+		</tr>
+		</table>
+	
+		</div>
+	
+
+
+						<div onclick='ChangeSelected(1180, 6, "/index.php?sid=1180")' style='position: relative; top:-57px; margin-left:6px; cursor: pointer; height: 60px; overflow: hidden; background: url("img/autumn_main_menu_norm_200.png");background-repeat: no-repeat;' onMouseout='this.style.background="url(img/autumn_main_menu_norm_200.png)"; this.style.backgroundRepeat="no-repeat";' onMouseover='this.style.background="url(img/autumn_main_menu_push_200.png)"; this.style.backgroundRepeat="no-repeat"' >
+						<div style='width:170px; text-align:center; position: relative; top:13px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px; '>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family:Georgia; font-size:14px; font-style: italic; color: #111111; font-weight: normal;">Äîøêîëüíîå îòäåëåíèå</td></tr></table>
+				</div>
+
+				<div style='width:170px; text-align:center; position: relative; left:-1px; top:-24px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px;'>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family: Georgia; font-size:14px; font-style: italic; color: #FFFFFF; font-weight: normal;">Äîøêîëüíîå îòäåëåíèå</td></tr></table>
+				</div>
+			</div>
+	
+			
+		<div id='divMenu1180' style='background: url("img/autumn_submenu_back.png"); position: relative; top:-57px; margin-left:6px; width: 200px; height: 1px; display:none;  overflow: hidden'>
+		
+			<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+			<tr>
+			<td>
+				<div style=' margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+					<table cellpadding="0" cellspacing="0" border="0">
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1670"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Âèðòóàëüíàÿ ýêñêóðñèÿ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1584"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ìåðîïðèÿòèÿ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1181"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ðåæèì äíÿ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1426"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Îðãàíèçàöèÿ ïèòàíèÿ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1193"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Îáðàçîâàòåëüíàÿ äåÿòåëüíîñòü
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1526"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Íîðìà ðàñõîäîâ
+							</font>
+						</a>
+					</td>
+					</tr>
+										</table>
+				</div>
+			</td>
+			</tr>
+			</table>
+		</div>
+		
+		<!--//Ñîçäàíèå âòîðîãî òåíåâîãî ìåíþ äëÿ êîíòðîëÿ ìàêñèìàëüíîé âûñîòû-->
+		<div id='divMenu1180_shadow' style='background: url("img/autumn_submenu_back.png"); width: 200px; position:absolute; left:-5000px; top:-5000px;'>
+		
+		<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+		<tr>
+		<td>
+			<div style='margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+				<table cellpadding="0" cellspacing="0" border="0">
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1670"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Âèðòóàëüíàÿ ýêñêóðñèÿ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1584"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ìåðîïðèÿòèÿ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1181"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ðåæèì äíÿ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1426"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Îðãàíèçàöèÿ ïèòàíèÿ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1193"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Îáðàçîâàòåëüíàÿ äåÿòåëüíîñòü
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1526"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Íîðìà ðàñõîäîâ
+						</font>
+					</a>
+				</td>
+				</tr>
+								</table>
+			</div>
+		</td>
+		</tr>
+		</table>
+	
+		</div>
+	
+
+
+						<div onclick='ChangeSelected(2423, 4, "/index.php?sid=2423")' style='position: relative; top:-57px; margin-left:6px; cursor: pointer; height: 60px; overflow: hidden; background: url("img/autumn_main_menu_norm_200.png");background-repeat: no-repeat;' onMouseout='this.style.background="url(img/autumn_main_menu_norm_200.png)"; this.style.backgroundRepeat="no-repeat";' onMouseover='this.style.background="url(img/autumn_main_menu_push_200.png)"; this.style.backgroundRepeat="no-repeat"' >
+						<div style='width:170px; text-align:center; position: relative; top:13px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px; '>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family:Georgia; font-size:14px; font-style: italic; color: #111111; font-weight: normal;">Ïðàâèëà ïðèåìà</td></tr></table>
+				</div>
+
+				<div style='width:170px; text-align:center; position: relative; left:-1px; top:-24px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px;'>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family: Georgia; font-size:14px; font-style: italic; color: #FFFFFF; font-weight: normal;">Ïðàâèëà ïðèåìà</td></tr></table>
+				</div>
+			</div>
+	
+			
+		<div id='divMenu2423' style='background: url("img/autumn_submenu_back.png"); position: relative; top:-57px; margin-left:6px; width: 200px; height: 1px; display:none;  overflow: hidden'>
+		
+			<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+			<tr>
+			<td>
+				<div style=' margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+					<table cellpadding="0" cellspacing="0" border="0">
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1237"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Áóäóùåìó ïåðâîêëàññíèêó
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2424"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Øêîëüíîå îòäåëåíèå
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2426"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Äîøêîëüíîå îòäåëåíèå
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2431"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Âàêàíòíûå ìåñòà äëÿ ïðèåìà
+							</font>
+						</a>
+					</td>
+					</tr>
+										</table>
+				</div>
+			</td>
+			</tr>
+			</table>
+		</div>
+		
+		<!--//Ñîçäàíèå âòîðîãî òåíåâîãî ìåíþ äëÿ êîíòðîëÿ ìàêñèìàëüíîé âûñîòû-->
+		<div id='divMenu2423_shadow' style='background: url("img/autumn_submenu_back.png"); width: 200px; position:absolute; left:-5000px; top:-5000px;'>
+		
+		<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+		<tr>
+		<td>
+			<div style='margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+				<table cellpadding="0" cellspacing="0" border="0">
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1237"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Áóäóùåìó ïåðâîêëàññíèêó
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2424"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Øêîëüíîå îòäåëåíèå
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2426"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Äîøêîëüíîå îòäåëåíèå
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2431"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Âàêàíòíûå ìåñòà äëÿ ïðèåìà
+						</font>
+					</a>
+				</td>
+				</tr>
+								</table>
+			</div>
+		</td>
+		</tr>
+		</table>
+	
+		</div>
+	
+
+
+						<div onclick='ChangeSelected(1143, 3, "/index.php?sid=1143")' style='position: relative; top:-57px; margin-left:6px; cursor: pointer; height: 60px; overflow: hidden; background: url("img/autumn_main_menu_norm_200.png");background-repeat: no-repeat;' onMouseout='this.style.background="url(img/autumn_main_menu_norm_200.png)"; this.style.backgroundRepeat="no-repeat";' onMouseover='this.style.background="url(img/autumn_main_menu_push_200.png)"; this.style.backgroundRepeat="no-repeat"' >
+						<div style='width:170px; text-align:center; position: relative; top:13px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px; '>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family:Georgia; font-size:14px; font-style: italic; color: #111111; font-weight: normal;">Íàøè äîñòèæåíèÿ</td></tr></table>
+				</div>
+
+				<div style='width:170px; text-align:center; position: relative; left:-1px; top:-24px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px;'>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family: Georgia; font-size:14px; font-style: italic; color: #FFFFFF; font-weight: normal;">Íàøè äîñòèæåíèÿ</td></tr></table>
+				</div>
+			</div>
+	
+			
+		<div id='divMenu1143' style='background: url("img/autumn_submenu_back.png"); position: relative; top:-57px; margin-left:6px; width: 200px; height: 1px; display:none;  overflow: hidden'>
+		
+			<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+			<tr>
+			<td>
+				<div style=' margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+					<table cellpadding="0" cellspacing="0" border="0">
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1749"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Øêîëà
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1748"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ó÷àùèåñÿ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1703"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ïåäàãîãè
+							</font>
+						</a>
+					</td>
+					</tr>
+										</table>
+				</div>
+			</td>
+			</tr>
+			</table>
+		</div>
+		
+		<!--//Ñîçäàíèå âòîðîãî òåíåâîãî ìåíþ äëÿ êîíòðîëÿ ìàêñèìàëüíîé âûñîòû-->
+		<div id='divMenu1143_shadow' style='background: url("img/autumn_submenu_back.png"); width: 200px; position:absolute; left:-5000px; top:-5000px;'>
+		
+		<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+		<tr>
+		<td>
+			<div style='margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+				<table cellpadding="0" cellspacing="0" border="0">
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1749"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Øêîëà
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1748"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ó÷àùèåñÿ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1703"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ïåäàãîãè
+						</font>
+					</a>
+				</td>
+				</tr>
+								</table>
+			</div>
+		</td>
+		</tr>
+		</table>
+	
+		</div>
+	
+
+
+						<div onclick='ChangeSelected(2397, 3, "/index.php?sid=2397")' style='position: relative; top:-57px; margin-left:6px; cursor: pointer; height: 60px; overflow: hidden; background: url("img/autumn_main_menu_norm_200.png");background-repeat: no-repeat;' onMouseout='this.style.background="url(img/autumn_main_menu_norm_200.png)"; this.style.backgroundRepeat="no-repeat";' onMouseover='this.style.background="url(img/autumn_main_menu_push_200.png)"; this.style.backgroundRepeat="no-repeat"' >
+						<div style='width:170px; text-align:center; position: relative; top:13px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px; '>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family:Georgia; font-size:14px; font-style: italic; color: #111111; font-weight: normal;">Íàøè âûïóñêíèêè</td></tr></table>
+				</div>
+
+				<div style='width:170px; text-align:center; position: relative; left:-1px; top:-24px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px;'>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family: Georgia; font-size:14px; font-style: italic; color: #FFFFFF; font-weight: normal;">Íàøè âûïóñêíèêè</td></tr></table>
+				</div>
+			</div>
+	
+			
+		<div id='divMenu2397' style='background: url("img/autumn_submenu_back.png"); position: relative; top:-57px; margin-left:6px; width: 200px; height: 1px; display:none;  overflow: hidden'>
+		
+			<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+			<tr>
+			<td>
+				<div style=' margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+					<table cellpadding="0" cellspacing="0" border="0">
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=1344"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ìîäåëü âûïóñêíèêà øêîëû
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2398"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ñïèñêè ïîñòóïëåíèÿ
+							</font>
+						</a>
+					</td>
+					</tr>
+										<tr valign=top>
+					<td><img src='img/sub_symbol.png'></td>
+					<td>
+						<a href="index.php?sid=2403"  style="margin-left:0px; color: #336599;  text-decoration: none ">
+							<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+								Ôîòî- è âèäåîãàëåðåÿ
+							</font>
+						</a>
+					</td>
+					</tr>
+										</table>
+				</div>
+			</td>
+			</tr>
+			</table>
+		</div>
+		
+		<!--//Ñîçäàíèå âòîðîãî òåíåâîãî ìåíþ äëÿ êîíòðîëÿ ìàêñèìàëüíîé âûñîòû-->
+		<div id='divMenu2397_shadow' style='background: url("img/autumn_submenu_back.png"); width: 200px; position:absolute; left:-5000px; top:-5000px;'>
+		
+		<table cellpadding="0" cellspacing="0" border="0" width=180 style='margin-left:9px'>
+		<tr>
+		<td>
+			<div style='margin-left:8px; text-align:left; width: 170px;' onMouseout='' onMouseover=''>
+				<table cellpadding="0" cellspacing="0" border="0">
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=1344"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ìîäåëü âûïóñêíèêà øêîëû
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2398"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ñïèñêè ïîñòóïëåíèÿ
+						</font>
+					</a>
+				</td>
+				</tr>
+								<tr valign=top>
+				<td><img src='img/sub_symbol.png'></td>
+				<td>
+					<a href="index.php?sid=2403"  style="margin-left:0px; color: #336599; text-decoration: none">
+						<font style="font-family:Times New Roman; font-style: ; font-size:14px; color: #461000;">
+							Ôîòî- è âèäåîãàëåðåÿ
+						</font>
+					</a>
+				</td>
+				</tr>
+								</table>
+			</div>
+		</td>
+		</tr>
+		</table>
+	
+		</div>
+	
+
+
+	 <a style='text-decoration: none;' href="/index.php?sid=793"> 					<div onclick='ChangeSelected(793, 0, "/index.php?sid=793")' style='position: relative; top:-57px; margin-left:6px; cursor: pointer; height: 60px; overflow: hidden; background: url("img/autumn_main_menu_norm_200.png");background-repeat: no-repeat;' onMouseout='this.style.background="url(img/autumn_main_menu_norm_200.png)"; this.style.backgroundRepeat="no-repeat";' onMouseover='this.style.background="url(img/autumn_main_menu_push_200.png)"; this.style.backgroundRepeat="no-repeat"' >
+						<div style='width:170px; text-align:center; position: relative; top:13px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px; '>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family:Georgia; font-size:14px; font-style: italic; color: #111111; font-weight: normal;">Êîíòàêòû</td></tr></table>
+				</div>
+
+				<div style='width:170px; text-align:center; position: relative; left:-1px; top:-24px; height:36px; overflow:hidden; cursor: pointer; margin-left:15px;'>
+					<table width=100%><tr height=36 valign=center><td align=center style="font-family: Georgia; font-size:14px; font-style: italic; color: #FFFFFF; font-weight: normal;">Êîíòàêòû</td></tr></table>
+				</div>
+			</div>
+	 </a> 
+			<div style='width: 200px; display:none; overflow: hidden'>&nbsp;</div>
+	
+
+<div style='z-index:1000; float: left; position: relative; top:-59px; width:50px; height:75px; overflow:hidden; margin-left: 2px;'>
+	<embed wmode="transparent" width=50 height=90 src="/img/autumn_rope_l.swf">
+</div>
+<div style='position: relative; top:-58px; width:35px; height:75px; overflow:hidden; margin-left: 184px;'>
+	<embed wmode="transparent" width=50 height=90 src="/img/autumn_rope_r.swf">
+</div>
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img style='margin-left: 5px;' src='//counter.yadro.ru/hit?t21.7;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"' alt='' title='LiveInternet: ïîêàçàíî ÷èñëî ïðîñìîòðîâ çà 24"+
+" ÷àñà, ïîñåòèòåëåé çà 24 ÷àñà è çà ñåãîäíÿ' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+</div>
+
+
+<table id='tblMainContent' cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign=top height=140px>
+	<td>
+		<div style='width:220px; height:140px; overflow:hidden;'></div>
+	</td>
+	<td align=center> 
+		<img style='position: relative; top: 0px;' src='img/title.png'>
+	</td>
+			<td width="width:300px" valign="top">
+			<div style='width:300px; height:140px; overflow:hidden;'></div>
+		</td>
+		
+</tr>	
+<tr id='trMainContent' valign=top>
+	<td id='tdMainMenu' width="width:220px" valign="top">
+		<div style='width:220px; height:1px; overflow:hidden;'></div>
+	</td>
+
+	<td id='tdMainContent' width="100%" style="padding: 15px; background-image: url(img/autumn_fon.png);">
+		
+					<div style='width:680px; height:1px; overflow:hidden;'></div>
+				<table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr><td>
+			
+								</tr></td></table>
+				<h1><img src='img/h1_b.png'>&nbsp;Ãëàâíàÿ&nbsp;<img src='img/h1_e.png'></h1>
+
+<div align=center style='width: 100%'>
+<div style='text-align: left; width: 680px;'>
+
+<!--//Êîä òîï íîâîñòåé-->
+<table style='background-image: url(img/fon.png); border-radius: 5px 5px 5px 5px; box-shadow: 0px 2px 2px rgba(0,0,0,0.3), 0px 0px 50px 10px rgba(255, 255 ,255, 1.0);' border="0" cellspacing="0" cellpadding="10" width="100%">
+			<tr>
+		<td>
+				<a href='/index.php?sid=311&did=1488' style="text-decoration: none; ">				<img align=left style="margin-bottom: 0; margin-right: 18" src=/userImages/fullsizerender.jpg width=155 height=116>
+				</a>				
+				<a href='/index.php?sid=311&did=1488' style="text-decoration: none; ">				<font style="color: #434343;"> 26.10.2016</font>
+				</a>				
+				<a href='/index.php?sid=311&did=1488'>				Ïîçäðàâëÿåì ïîáåäèòåëåé!<br><br>
+				</a>
+				<a href='/index.php?sid=311&did=1488' style="text-decoration: none; ">				<div id='new_subhead_1488' style="text-decoration: none; font-size: 14; font-weight:normal">
+				18 îêòÿáðÿ 2016 ãîäà íà áàçå íàøåé øêîëû ïðîõîäèëè ðàéîííûå ñîðåâíîâàíèÿ ïî ìèíè-ôóòáîëó.&nbsp;
+				</div>
+				<script>
+					var letters_count;
+					var t=new_subhead_1488.innerHTML; 
+					
+					letters_count=250;
+					
+					i=0
+					
+					if (t.length>letters_count)
+					{
+					var i=letters_count;
+					while (t.substring(i,i+1)!=' ') 
+						{
+						i--;
+						if (i==0) break;
+						}
+					}
+					
+					
+					if (i>0) new_subhead_1488.innerHTML=t.substring(0,i)+'...';
+				</script>
+				</a>		</td>
+	</tr>
+		<tr>
+		<td>
+				<a href='/index.php?sid=311&did=1495' style="text-decoration: none; ">				<img align=left style="margin-bottom: 0; margin-right: 18" src=/userImages/20161020_172217.jpg width=155 height=116>
+				</a>				
+				<a href='/index.php?sid=311&did=1495' style="text-decoration: none; ">				<font style="color: #434343;"> 25.10.2016</font>
+				</a>				
+				<a href='/index.php?sid=311&did=1495'>				Îòêðûâàåòñÿ íîâàÿ ãðóïïà â ñåêöèè&nbsp;&laquo;Ìàðüèíñêèé áåãîâåë&raquo;<br><br>
+				</a>
+				<a href='/index.php?sid=311&did=1495' style="text-decoration: none; ">				<div id='new_subhead_1495' style="text-decoration: none; font-size: 14; font-weight:normal">
+				Ñ 1 íîÿáðÿ îòêðûâàåòñÿ íîâàÿ ãðóïïà â ñåêöèè&nbsp;&laquo;Ìàðüèíñêèé áåãîâåë&raquo;.&nbsp;Ìû æäåì ðåáÿòèøåê îò 2 äî 5 ëåò, ëþáÿùèõ äâèæåíèå è ñêîðîñòü.
+				</div>
+				<script>
+					var letters_count;
+					var t=new_subhead_1495.innerHTML; 
+					
+					letters_count=250;
+					
+					i=0
+					
+					if (t.length>letters_count)
+					{
+					var i=letters_count;
+					while (t.substring(i,i+1)!=' ') 
+						{
+						i--;
+						if (i==0) break;
+						}
+					}
+					
+					
+					if (i>0) new_subhead_1495.innerHTML=t.substring(0,i)+'...';
+				</script>
+				</a>		</td>
+	</tr>
+		<tr>
+		<td>
+				<a href='/index.php?sid=311&did=1494' style="text-decoration: none; ">				<img align=left style="margin-bottom: 0; margin-right: 18" src=/userImages/img_7161.jpg width=155 height=116>
+				</a>				
+				<a href='/index.php?sid=311&did=1494' style="text-decoration: none; ">				<font style="color: #434343;"> 25.10.2016</font>
+				</a>				
+				<a href='/index.php?sid=311&did=1494'>				Èçìåíåíèÿ â ðàñïèñàíèè çàíÿòèé ñåêöèè&nbsp;&laquo;Ìèíè-ôóòáîë&raquo;<br><br>
+				</a>
+				<a href='/index.php?sid=311&did=1494' style="text-decoration: none; ">				<div id='new_subhead_1494' style="text-decoration: none; font-size: 14; font-weight:normal">
+				26 îêòÿáðÿ îòìåíÿþòñÿ çàíÿòèÿ&nbsp;â ñåêöèè&nbsp;&laquo;ÌÈÍÈ-ÔÓÒÁÎË&raquo;&nbsp;â ãðóïïàõ ¹2 è ¹4, òðåíåð: Êîðåøêîâ Äåíèñ Ïåòðîâè÷.
+				</div>
+				<script>
+					var letters_count;
+					var t=new_subhead_1494.innerHTML; 
+					
+					letters_count=250;
+					
+					i=0
+					
+					if (t.length>letters_count)
+					{
+					var i=letters_count;
+					while (t.substring(i,i+1)!=' ') 
+						{
+						i--;
+						if (i==0) break;
+						}
+					}
+					
+					
+					if (i>0) new_subhead_1494.innerHTML=t.substring(0,i)+'...';
+				</script>
+				</a>		</td>
+	</tr>
+		<tr>
+		<td>
+				<a href='/index.php?sid=311&did=1493' style="text-decoration: none; ">				<img align=left style="margin-bottom: 0; margin-right: 18" src=/userImages/i_(1).jpg width=155 height=116>
+				</a>				
+				<a href='/index.php?sid=311&did=1493' style="text-decoration: none; ">				<font style="color: #434343;"> 24.10.2016</font>
+				</a>				
+				<a href='/index.php?sid=311&did=1493'>				Èçìåíåíèÿ â ðàñïèñàíèè ðàáîòû ñåêöèé<br><br>
+				</a>
+				<a href='/index.php?sid=311&did=1493' style="text-decoration: none; ">				<div id='new_subhead_1493' style="text-decoration: none; font-size: 14; font-weight:normal">
+				Ïðîèçîøëè èçìåíåíèÿ â ðàñïèñàíèè ðàáîòû ñåêöèé áëîêà äîïîëíèòåëüíîãî îáðàçîâàíèÿ.
+				</div>
+				<script>
+					var letters_count;
+					var t=new_subhead_1493.innerHTML; 
+					
+					letters_count=250;
+					
+					i=0
+					
+					if (t.length>letters_count)
+					{
+					var i=letters_count;
+					while (t.substring(i,i+1)!=' ') 
+						{
+						i--;
+						if (i==0) break;
+						}
+					}
+					
+					
+					if (i>0) new_subhead_1493.innerHTML=t.substring(0,i)+'...';
+				</script>
+				</a>		</td>
+	</tr>
+		<tr>
+		<td>
+				<a href='/index.php?sid=311&did=1489' style="text-decoration: none; ">				<img align=left style="margin-bottom: 0; margin-right: 18" src=/userImages/761f955905.jpg width=155 height=116>
+				</a>				
+				<a href='/index.php?sid=311&did=1489' style="text-decoration: none; ">				<font style="color: #434343;"> 23.10.2016</font>
+				</a>				
+				<a href='/index.php?sid=311&did=1489'>				Âñòðå÷à â &laquo;Ðîäèòåëüñêîé ãîñòèíîé&raquo;<br><br>
+				</a>
+				<a href='/index.php?sid=311&did=1489' style="text-decoration: none; ">				<div id='new_subhead_1489' style="text-decoration: none; font-size: 14; font-weight:normal">
+				Ìû ïðèãëàøàåì Âàñ íà âñòðå÷ó ñî ñïåöèàëèñòàìè ïñèõîëîãî-ñîöèàëüíîé ñëóæáû â &laquo;Ðîäèòåëüñêîé ãîñòèíîé&raquo; 26 îêòÿáðÿ â 18.00 â êîíôåðåíö-çàëå íà÷àëüíîé øêîëû.&nbsp;
+				</div>
+				<script>
+					var letters_count;
+					var t=new_subhead_1489.innerHTML; 
+					
+					letters_count=250;
+					
+					i=0
+					
+					if (t.length>letters_count)
+					{
+					var i=letters_count;
+					while (t.substring(i,i+1)!=' ') 
+						{
+						i--;
+						if (i==0) break;
+						}
+					}
+					
+					
+					if (i>0) new_subhead_1489.innerHTML=t.substring(0,i)+'...';
+				</script>
+				</a>		</td>
+	</tr>
+	</table>
+		
+<br>
+
+<!--//Êîä ëåíòû íîâîñòåé-->
+<table border=0 cellspacing="0" cellpadding="0" width="100%">
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1492' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/img_8196_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 23.10.2016</div>
+							Âûñòàâêà &laquo;Äàðû îñåíè&raquo;&nbsp;â äîøêîëüíîì êîðïóñå &laquo;Ñêàçêå&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1491' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/20161013_182244_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 23.10.2016</div>
+							Êîíêóðñ ÷òåöîâ&nbsp;&laquo;Î Ðóñü, âçìàõíè êðûëàìè&hellip;&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1490' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/img_3134_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 23.10.2016</div>
+							Êóêîëüíûé òåàòð&nbsp;â äîøêîëüíîì êîðïóñå &laquo;Òåðåìîê&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1487' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/defektolog_0_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 22.10.2016</div>
+							Ïñèõîëîãè÷åñêàÿ äèàãíîñòèêà ãîòîâíîñòè ê øêîëå
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1485' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/dscn3944_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 21.10.2016</div>
+							Ïîçäðàâëÿåì ïîáåäèòåëåé òóðíèðà ïî øàøêàì!
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1483' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/vyb_us2016_0001_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 20.10.2016</div>
+							Ñîñòîÿëèñü âûáîðû â Óïðàâëÿþùèé ñîâåò
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1482' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/ned_bez_0005_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 20.10.2016</div>
+							Ïðîôèëàêòè÷åñêàÿ íåäåëÿ &laquo;Áóäóùåå â ìîèõ ðóêàõ&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1481' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/nsh_bez_0011_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 20.10.2016</div>
+							&laquo;Íåäåëÿ áåçîïàñíîñòè&raquo;&nbsp;â íà÷àëüíîé øêîëå
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1480' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/761f955905_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 19.10.2016</div>
+							Âñòðå÷à â ðîäèòåëüñêîé ãîñòèíîé &laquo;Íàäåæäà&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1479' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/image_18_10_16_12_23_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 18.10.2016</div>
+							Ïîçäðàâëÿåì íàøåãî òðåíåðà ïî äçþäî!
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1478' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/osen_sol_0002_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 18.10.2016</div>
+							&laquo;Îñåííÿÿ ôàíòàçèÿ&raquo; - âûñòàâêà â äîøêîëüíîì êîðïóñå&nbsp;&laquo;Ñîëíûøêî&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1477' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/posadkaallei_113_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 16.10.2016</div>
+							Øêîëà â ÑÌÈ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1475' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/img_7161_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 16.10.2016</div>
+							Âîçîáíîâëÿþòñÿ çàíÿòèÿ â ñåêöèÿõ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1474' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/podgotovka_olimp_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 15.10.2016</div>
+							Ïîäãîòîâêà øêîëüíèêîâ ê îëèìïèàäàì
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1473' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/img_20161005_110538_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 14.10.2016</div>
+							Ïîçíàâàòåëüíàÿ ïîåçäêà â ÃÁÏÎÓ Îáðàçîâàòåëüíûé êîìïëåêñ &laquo;Þãî-Çàïàä&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1472' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/sk_ter_0016_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 13.10.2016</div>
+							Ïðàçäíèê &laquo;Ñêàêàëêà-Ïîïðûãàéêà&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1471' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/img_7161_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 11.10.2016</div>
+							Èçìåíåíèÿ â ðàñïèñàíèè ðàáîòû ñåêöèé&nbsp;&laquo;Ìèíè-ôóòáîë&raquo; è &laquo;Ôëîðáîë&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1470' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/upr_sovet_vybory_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 11.10.2016</div>
+							Âûáîðû â óïðàâëÿþùèé ñîâåò øêîëû
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1469' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/kt_sol_0008_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 11.10.2016</div>
+							Êóêîëüíûé òåàòð&nbsp;â äîøêîëüíîì êîðïóñå &laquo;Ñîëíûøêî&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1468' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/simvol_2_215.png");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 11.10.2016</div>
+							Îáúÿâëåíèå îò ïðîôñîþçíîé îðãàíèçàöèè
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1467' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/dsc0581111_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 10.10.2016</div>
+							Âûñòàâêà&nbsp;äåòñêî-ðîäèòåëüñêèõ ïîäåëîê &laquo;Îñåííÿÿ ôàíòàçèÿ&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1466' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/bitvashkolotbor_115_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 08.10.2016</div>
+							Èíòåëëåêòóàëüíîå øîó &laquo;Áèòâà øêîë&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1465' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/ot_tur_kvn_0002_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 08.10.2016</div>
+							Ãîðîäñêîé ÷åìïèîíàò èãð ÊÂÍ &laquo;Âåðíèñàæ ïðîôåññèé - 2016&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1464' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/20161003_105017_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 08.10.2016</div>
+							Îáó÷åíèå ïî êóðñó &laquo;Îêàçàíèå ïåðâîé ïîìîùè&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1463' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/bez_imeni_1_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 08.10.2016</div>
+							Äåíü ñàìîóïðàâëåíèÿ íà óðîêàõ ôèçêóëüòóðû
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1462' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/beg_nsch_0002_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 08.10.2016</div>
+							Ñîðåâíîâàíèÿ ïî áåãó â íà÷àëüíîé øêîëå
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1461' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/20160905_105225_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 08.10.2016</div>
+							Þíûå &nbsp;ñàäîâîäû &nbsp;ëþáèòåëè<br />
+
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1460' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/091_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 08.10.2016</div>
+							Èòîãè øêîëüíîãî ýòàïà Âñåðîññèéñêîé îëèìïèàäû øêîëüíèêîâ ïî ÎÁÆ è ïðàâó
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1459' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/posadkaallei_113_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 07.10.2016</div>
+							Àêöèÿ &laquo;Ìèëëèîí äåðåâüåâ&raquo; â ÃÁÎÓ Øêîëà ¹2001&nbsp;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1458' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/den_otkr_dverey_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 07.10.2016</div>
+							Äíè îòêðûòûõ äâåðåé ìîñêîâñêèõ êîëëåäæåé
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1457' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/20160930_132711_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 06.10.2016</div>
+							Äåíü ó÷èòåëÿ â íà÷àëüíîé øêîëå
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1456' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/angely_mira_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 05.10.2016</div>
+							Êîíêóðñ ðèñóíêîâ &laquo;Ìû çà ìèð íà Çåìëå&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1455' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/091_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 05.10.2016</div>
+							Èòîãè øêîëüíîãî ýòàïà Âñåðîññèéñêîé îëèìïèàäû øêîëüíèêîâ ïî ëèòåðàòóðå è ôèçèêå
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1454' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/pldu_pr_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 05.10.2016</div>
+							&laquo;Øêîëüíàÿ ïî÷òà&raquo; - ïîçäðàâüòå ëþáèìûõ ó÷èòåëåé!
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1453' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/den_uchit_0005_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 04.10.2016</div>
+							Äåíü ó÷èòåëÿ â ñòàðøåé øêîëå
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1452' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/20160929_081755_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 04.10.2016</div>
+							Êëàññíûå ÷àñû â áèáëèîòåêå: &laquo;Êàê õîðîøî óìåòü ÷èòàòü&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1451' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/obyavlenie_215.png");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 03.10.2016</div>
+							Èçìåíåíèÿ â ðàñïèñàíèè çàíÿòèé òàíöåâàëüíîãî êîëëåêòèâà &laquo;Pride&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1450' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/20160923_084220_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 03.10.2016</div>
+							Âûñòàâêà&nbsp;&laquo;Îñåííÿÿ ôàíòàçèÿ&raquo; â äîøêîëüíîì ïîäðàçäåëåíèè&nbsp;&laquo;Òåðåìîê&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1449' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/091_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 03.10.2016</div>
+							Èòîãè øêîëüíîãî ýòàïà Âñåðîññèéñêîé îëèìïèàäû øêîëüíèêîâ ïî àíãëèéñêîìó ÿçûêó è áèîëîãèè
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1446' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/den_uch_2016_2_215.png");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 30.09.2016</div>
+							Â øêîëå - ó÷èòü! Ïîçäðàâèòåëüíûé êëèï íà Äåíü Ó÷èòåëÿ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1445' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/den_uch_2016_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 30.09.2016</div>
+							Ïîçäðàâëÿåì ñ Äíåì ó÷èòåëÿ!
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1444' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/82427985_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 30.09.2016</div>
+							Èçìåíåíèÿ â ðàáîòå áëîêà äîïîëíèòåëüíîãî îáðàçîâàíèÿ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1440' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/kem_st_2016_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 29.09.2016</div>
+							Âðó÷åíèå ìåæäóíàðîäíûõ ñåðòèôèêàòîâ ïðîåêòà Cambridge English 2015-2016
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1439' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/091_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 29.09.2016</div>
+							Èòîãè øêîëüíîãî ýòàïà Âñåðîññèéñêîé îëèìïèàäû øêîëüíèêîâ ïî îáùåñòâîçíàíèþ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1438' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/turnir_shashki_0007_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 29.09.2016</div>
+							Øêîëüíûé ýòàï òóðíèðà&nbsp;&laquo;Þíûé øàøèñò&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1437' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/img_3923_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 28.09.2016</div>
+							ÊÐÎÑÑ-ÍÀÖÈÈ 2016
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1436' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/sport_nedelya_0014_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 28.09.2016</div>
+							Íåäåëÿ ôèçè÷åñêîé êóëüòóðû è ñïîðòà
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1435' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/obyavlenie_215.png");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 28.09.2016</div>
+							Îòìåíà çàíÿòèé â ñåêöèè &laquo;Àýðîáèêà&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1434' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/eng_deti_pr_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 28.09.2016</div>
+							Àíãëèéñêèé äëÿ ñàìûõ ìàëåíüêèõ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1433' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/1class_119_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 27.09.2016</div>
+							Ïîñâÿùåíèå â Ïåðâîêëàññíèêè
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1432' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/20160922_150323_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 27.09.2016</div>
+							Ïîñâÿùåíèå â ïÿòèêëàññíèêè
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1431' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/otkr_zanyatie_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 27.09.2016</div>
+							Îòêðûòûå çàíÿòèÿ â Áëîêå äîïîëíèòåëüíîãî îáðàçîâàíèÿ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1430' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/761f955905_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 27.09.2016</div>
+							&laquo;Ðîäèòåëüñêàÿ ãîñòèíàÿ&raquo; â íà÷àëüíîé øêîëå
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1429' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/su_160931_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 27.09.2016</div>
+							IV ñúåçä ó÷èòåëåé ãîðîäà Ìîñêâû
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1428' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/den_vospitatelya_2016_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 27.09.2016</div>
+							Ñ Äíåì äîøêîëüíîãî ðàáîòíèêà!
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1427' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/44416551_215.png");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 27.09.2016</div>
+							Ïîäïèñàíèå äîãîâîðîâ ïðîåêòà Cambridge English
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1426' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/091_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 26.09.2016</div>
+							Èòîãè øêîëüíîãî ýòàïà Âñåðîññèéñêîé îëèìïèàäû øêîëüíèêîâ ïî ýêîëîãèè
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1425' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/mosobrtv_tel_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 26.09.2016</div>
+							Ïðîåêò &laquo;Òåëåâèçèîíùèêè&raquo;&nbsp;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1411' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/vystavkapodelok2016_119_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 21.09.2016</div>
+							Âûñòàâêà ïîäåëîê èç ïðèðîäíîãî ìàòåðèàëà &laquo;×óäåñà ôàíòàçèè&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1417' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/turnir_sh_sol_0007_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 21.09.2016</div>
+							Òóðíèð &laquo;Þíûé øàøèñò&raquo;&nbsp;â äîøêîëüíîì êîðïóñå &laquo;Ñîëíûøêî&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1416' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/bud_pervoklassniku_3_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 21.09.2016</div>
+							Îðãàíèçàöèîííîå ñîáðàíèå Öåíòðà ðàííåãî ðàçâèòèÿ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1415' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/pileckiy2_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 20.09.2016</div>
+							Ïîçäðàâëÿåì íàøåãî òðåíåðà ïî äçþäî!
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1414' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/gto_dosh_0013_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 20.09.2016</div>
+							Ôåñòèâàëü ÃÒÎ äëÿ äîøêîëüíèêîâ &laquo;Îñåííèé ìàðàôîí&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1413' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/medosmotr_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 20.09.2016</div>
+							Ìåäèöèíñêèé ïðîôèëàêòè÷åñêèé îñìîòð
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1412' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/sertifikaty_cam_2016_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 20.09.2016</div>
+							Òîðæåñòâåííîå âðó÷åíèå Ìåæäóíàðîäíûõ ñåðòèôèêàòîâ ïðîåêòà Cambridge English
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1410' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/dsc09775_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 19.09.2016</div>
+							Ìàñòåð-êëàññ ïî øàøêàì&nbsp;â äîøêîëüíîì êîðïóñå &laquo;Ñîëíûøêî&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1409' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/prof_otv_2016_0002_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 19.09.2016</div>
+							Ïðîôèëàêòè÷åñêàÿ íåäåëÿ&nbsp;&laquo;Âûñîêàÿ îòâåòñòâåííîñòü&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1408' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/vybory2016_156_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 19.09.2016</div>
+							Äåíü âûáîðîâ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1407' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/obyavlenie_215.png");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 16.09.2016</div>
+							Èçìåíåíèå ãðàôèêà ðóêîâîäèòåëÿ äîïîëíèòåëüíîãî îáðàçîâàíèÿ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1406' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/dsc05685_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 15.09.2016</div>
+							Äåíü ãîðîäà â äîøêîëüíîì êîðïóñå &laquo;Ðàäóãà&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1404' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/la_2016_0003_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 15.09.2016</div>
+							Ëåãêîàòëåòè÷åñêèå ñîðåâíîâàíèÿ&nbsp;øêîëüíèêîâ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1400' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/p_20160913_142539_1_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 14.09.2016</div>
+							Âûñòàâêà ðèñóíêîâ &laquo;Ëþáèìûé ãîðîä&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1399' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/dg_ter_2016_0022_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 14.09.2016</div>
+							Äåíü ãîðîäà â äîøêîëüíîì êîðïóñå &laquo;Òåðåìîê&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1398' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/dg_sol_2016_0014_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 13.09.2016</div>
+							Äåíü ãîðîäà â&nbsp;äîøêîëüíîì êîðïóñå &laquo;Ñîëíûøêî&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1397' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/den_goroda_2016_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 13.09.2016</div>
+							Äåíü ãîðîäà. Âèäåîîò÷åò
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1395' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/i_(1)_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 13.09.2016</div>
+							Ãðàôèê&nbsp;ïðèåìà íàñåëåíèÿ&nbsp;ïî âîïðîñàì äîïîëíèòåëüíîãî îáðàçîâàíèÿ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1393' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/dengoroda2016_239_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 12.09.2016</div>
+							Äåíü ãîðîäà
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1392' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/761f955905_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 12.09.2016</div>
+							Âñòðå÷à â ðîäèòåëüñêîé ãîñòèíîé &laquo;Íàäåæäà&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1391' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/dsc_9825_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 12.09.2016</div>
+							Ñåêöèÿ &laquo;Ïåðñåé&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1396' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/hx1jv_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 12.09.2016</div>
+							Îáúåäèíåíèå &laquo;Áóñèíêà&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1390' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/palitra_215.png");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 12.09.2016</div>
+							Èçîñòóäèÿ &laquo;Ïàëèòðà&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1389' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/im5_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 12.09.2016</div>
+							Îáúåäèíåíèå &laquo;Þíûé ñêóëüïòîð&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1388' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/tv_moskva24_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 09.09.2016</div>
+							Øêîëà ¹2001&nbsp;â ýôèðå èíôîðìàöèîííî-ïîçíàâàòåëüíîãî òåëåêàíàëà Ìîñêâà24
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1385' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/img_2151_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 06.09.2016</div>
+							Äåíü çíàíèé&nbsp;â äîøêîëüíîì êîðïóñå &nbsp;&laquo;Òåðåìîê&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1384' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/1st_sol_2016_0007_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 06.09.2016</div>
+							Äåíü çíàíèé â äîøêîëüíîì êîðïóñå &laquo;Ñîëíûøêî&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1372' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/obyavlenie_215.png");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 06.09.2016</div>
+							Âîïðîñû çà÷èñëåíèÿ ðåáåíêà â øêîëó
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1383' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/image_05_09_16_12_44_1_215.jpeg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 06.09.2016</div>
+							Ïðîåêò Cambridge English â 2016-2017 ó÷åáíîì ãîäó!
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1386' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/obyavlenie_215.png");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 06.09.2016</div>
+							Âîïðîñû ïèòàíèÿ ðåáåíêà â øêîëå
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1382' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/image_05_09_16_12_44._pr_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 05.09.2016</div>
+							Øêîëà - Öåíòð ïîäãîòîâêè ê ìåæäóíàðîäíûì Êåìáðèäæñêèì ýêçàìåíàì
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1381' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/terrory_net_106_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 05.09.2016</div>
+							&laquo;Òåððîðèçìó &ndash; Íåò! Ìèðó &ndash; Äà!&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1379' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/rodit_sobranie_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 03.09.2016</div>
+							Ðîäèòåëüñêèå ñîáðàíèÿ â äîøêîëüíûõ êîðïóñàõ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+								<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/privivki_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 02.09.2016</div>
+							Ïðîôèëàêòè÷åñêèå ïðèâèâêè
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+								</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1377' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/1st_n_2016_0031_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 02.09.2016</div>
+							Ôîòîîò÷åò î òîðæåñòâåííîé ëèíåéêå (2-4 êëàññû)
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1376' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/video_makovetskaya_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 02.09.2016</div>
+							Ðåçóëüòàòû êîíêóðñà &laquo;Ïðîñòî î ñëîæíîì&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1375' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/rod_sobranie_plav_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 02.09.2016</div>
+							Ðîäèòåëüñêîå ñîáðàíèå â ñåêöèè&nbsp;&laquo;Ó÷óñü ïëàâàòü&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1374' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/1sent2001_2chast_109_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 01.09.2016</div>
+							Ôîòîîò÷åò î òîðæåñòâåííîé ëèíåéêå (6-9 êëàññû)
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1373' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/1sent2001_1chast_131_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 01.09.2016</div>
+							Ôîòîîò÷åò î òîðæåñòâåííîé ëèíåéêå (1, 5, 10, 11 êëàññû)
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1371' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/effectiv_215.png");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 31.08.2016</div>
+							Ãðàôèê äèàãíîñòè÷åñêèõ ðàáîò
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1370' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/reiting_pr_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 31.08.2016</div>
+							Èòîãîâûé ðåéòèíã øêîë ïî ðåçóëüòàòàì 2015-2016 ó÷åáíîãî ãîäà
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1369' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/892_pr_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 31.08.2016</div>
+							Òåáå ðåøàòü, ÷åì çàíÿòüñÿ íà êàíèêóëàõ!
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1368' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/raspisanie_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 30.08.2016</div>
+							Ðàñïèñàíèå çàíÿòèé íà ïåðâîå ïîëóãîäèå
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1367' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/rodit_sobranie_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 27.08.2016</div>
+							Ðîäèòåëüñêèå ñîáðàíèÿ â 2016-2017 ó÷åáíîì ãîäó
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1366' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/1220267615_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 27.08.2016</div>
+							Òîðæåñòâåííûå ëèíåéêè. Äåíü çíàíèé
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1365' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/prikaz_pr_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 25.08.2016</div>
+							Ïðàâèëà ïîäà÷è çàÿâëåíèÿ è çà÷èñëåíèÿ äåòåé â îáúåäèíåíèÿ äîïîëíèòåëüíîãî îáðàçîâàíèÿ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1364' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/snova_v_shkolu_pr_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 25.08.2016</div>
+							Ïðîôèëàêòè÷åñêîå ìåðîïðèÿòèå&nbsp;&laquo;ÑÍÎÂÀ Â ØÊÎËÓ&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1363' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/deti_vokal_pr_215.png");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 24.08.2016</div>
+							Ðàñïèñàíèå âûñòóïëåíèé â ðàìêàõ ßðìàðêè äîïîëíèòåëüíîãî îáðàçîâàíèÿ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1362' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/vserosiyskaya_olimpiada_pr_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 24.08.2016</div>
+							Ãðàôèê ïðîâåäåíèÿ øêîëüíîãî ýòàïà Âñåðîññèéñêîé îëèìïèàäû øêîëüíèêîâ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1361' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/bdo_2_pr_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 19.08.2016</div>
+							ßðìàðêà äîïîëíèòåëüíîãî îáðàçîâàíèÿ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1360' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/98_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 18.08.2016</div>
+							Ðåæèì ðàáîòû êàáèíåòîâ &laquo;Çäîðîâîå äåòñòâî&raquo;
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1359' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/img_7073_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 18.08.2016</div>
+							Îòêðûòà çàïèñü äåòåé â îáúåäèíåíèÿ äîïîëíèòåëüíîãî îáðàçîâàíèÿ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1358' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/shkola_2001_istoriya_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 09.08.2016</div>
+							Ïî ðåçóëüòàòàì îëèìïèàä øêîëà ¹ 2001 âîøëà â òîï-300 îáùåîáðàçîâàòåëüíûõ ó÷ðåæäåíèé Ìîñêâû
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1357' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/091_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 09.08.2016</div>
+							Äàòû ïðîâåäåíèÿ Âñåðîññèéñêîé îëèìïèàäû øêîëüíèêîâ
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+			<tr height="128px">
+									<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1356' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/olimp_4_kl_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 05.08.2016</div>
+							Êàëåíäàðíûé ãðàôèê ðàáîòû øêîëû íà 2016-17 ó÷åáíûé ãîä
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+															<td align=center width="340px">
+				<a href='/index.php?sid=311&did=1291' style="text-decoration: none; ">				<div class='new_div' >
+					<table border=0 cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+					<td>
+						<div class='new_image' style='float: left; background-image: url("/userImages/ban_pr_215.jpg");'></div>
+					</td>
+					<td>
+						<div class='new_head'> 
+							<div class='new_date'> 01.08.2016</div>
+							Ãîëîñîâàíèå äëÿ ðîäèòåëåé øêîëüíèêîâ ïî âûáîðó êðóæêîâ è ñåêöèé
+						</div>
+					</td>
+					</tr>
+					</table>	
+				</div>
+				</a>				</td>
+										</tr>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+</table>
+</div></div>		<br><br>
+		<!--//Íèæíåå ìåíþ äëÿ íåêîòîðûõ ñòðàíèö-->
+		<table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr><td>
+														
+									<div style=' text-align: center; padding: 5px; float:left; width: 154px; line-height: 16px; height: 50px; overflow: hidden; border-radius: 0px 0px 5px 5px; box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.3); '>
+								
+				<a href="index.php?sid=311&cur_edu_year=2016" style='font-size: 18px; font-family: Monotype Corsiva; text-decoration: none;'>
+				2016 - 2017<br>ó÷åáíûé ãîä&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				</a>
+				</div>
+				<div style='float: left; width:3px; height:50px; overflow:hidden;'></div>
+											
+									<div style='background-color: #AAAAAA; opacity: 0.5; text-align: center; padding: 5px; float:left; width: 154px; line-height: 16px; height: 50px; overflow: hidden; border-radius: 0px 0px 5px 5px; box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.3); '>
+								
+				<a href="index.php?sid=311&cur_edu_year=2015" style='font-size: 18px; font-family: Monotype Corsiva; text-decoration: none;'>
+				2015 - 2016<br>ó÷åáíûé ãîä&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				</a>
+				</div>
+				<div style='float: left; width:3px; height:50px; overflow:hidden;'></div>
+					</tr></td>
+		</table>
+
+	</td>
+		<td id='tdRightCol' width="width:300px" style="padding-left: 15px; padding-right: 15px;"> 
+		<div style='width:300px; height:1px; overflow:hidden;'></div>
+			<div style='background-image: url(img/autumn_fon.png); padding-left: 15px; padding-right: 15px; padding-top: 20px; padding-bottom: 20px;'>
+					<!--//Êàíâàñ ñ áàííåðàìè-->
+			<!--
+			<h3 style="text-align: center;">
+			   <strong>Äîïîëíèòåëüíîå îáðàçîâàíèå â íàøåé øêîëå</strong>
+			</h3><br>-->
+	   		<a href="/index.php?sid=1368">
+	   		<div id="rtcanvas" style='z-index: 1000; width:270px; height:100px;'> 
+			</div>	
+			</a>
+			<br>
+				<div style='width: 300px; text-align: center;'>
+		</div>
+		<br>
+		<div>
+   <br />
+   <a href="/index.php?sid=2549" style="color: #600000; font-size: 18px; font-family: Times New Roman; text-decoration: none"><strong><img alt="" src="/userImages/marker_2.png" style="width: 10px; height: 10px; border-width: 0px; border-style: solid; margin-right: 5px;" />Øêîëà â ñîöèàëüíûõ ñåòÿõ</strong></a></div>
+<br />
+<div>
+   <a href="/index.php?sid=2462" style="color: #600000; font-size: 18px; font-family: Times New Roman; text-decoration: none"><strong><img alt="" src="/userImages/marker_2.png" style="width: 10px; height: 10px; border-width: 0px; border-style: solid; margin-right: 5px;" />Øêîëà â ÑÌÈ</strong></a></div>
+<br />
+<div>
+   <a href="/index.php?sid=1498" style="color: #600000; font-size: 18px; font-family: Times New Roman; text-decoration: none"><strong><img alt="" src="/userImages/marker_2.png" style="width: 10px; height: 10px; border-width: 0px; border-style: solid; margin-right: 5px;" />Äíè ðîäèòåëüñêèõ ñîáðàíèé</strong></a></div>
+<br />
+<div>
+   <a href="/index.php?sid=1184" style="color: #600000; font-size: 18px; font-family: Times New Roman; text-decoration: none"><strong><img alt="" src="/userImages/marker_2.png" style="width: 10px; height: 10px; border-width: 0px; border-style: solid; margin-right: 5px;" />Ãðàôèê êàíèêóë</strong></a></div>
+<br />
+<div>
+   <a href="/index.php?sid=1497" style="color: #600000; font-size: 18px; font-family: Times New Roman; text-decoration: none"><strong><img alt="" src="/userImages/marker_2.png" style="width: 10px; height: 10px; border-width: 0px; border-style: solid; margin-right: 5px;" />Äíè îòêðûòûõ äâåðåé</strong></a></div>
+<br />
+<br />
+<br />
+<h3 style="text-align: center;">
+   <strong>Êàëåíäàðü áëèæàéøèõ ñîáûòèé</strong></h3>
+<br />
+<li><b>26 îêòÿáðÿ</b> - Àäìèíèñòðàòèâíàÿ ðàáîòà ïî ðóññêîìó ÿçûêó (ñëîâàðíûé äèêòàíò) (4à, 4â)<br><br><li><b>26 îêòÿáðÿ</b> - Àäìèíèñòðàòèâíàÿ ðàáîòà ïî ðóññêîìó ÿçûêó (ñëîâàðíûé äèêòàíò) (4á, 4ã)<br><br><li><b>26 îêòÿáðÿ</b> - Øêîëüíûé ýòàï îëèìïèàäû ïî èíôîðìàòèêå è ÈÊÒ (5-11 êëàññû)<br><br><li><b>26 îêòÿáðÿ</b> - Òîâàðèùåñêàÿ âñòðå÷à ïî âîëåéáîëó ñ ó÷àùèìèñÿ øêîëû ¹ 667 (Ó÷àùèåñÿ ñåêöèè &laquo;Âîëåéáîë")<br><br><li><b>26 îêòÿáðÿ</b> - Ðîäèòåëüñêàÿ ãîñòèíàÿ &laquo;Êàê ïîáóäèòü ó ðåáåíêà èíòåðåñ ê ÷òåíèþ&raquo; (ðîäèòåëè íà÷àëüíîé øêîëû)<br><br><li><b>27 îêòÿáðÿ</b> - Óðîê áåçîïàñíîñòè ñåòè Èíòåðíåò (7-11 êëàññû)<br><br><li><b>27 îêòÿáðÿ</b> - Òðåíèðîâî÷íàÿ ðàáîòà ïî õèìèè 11 êëàññ (ó÷àùèåñÿ 11-õ êëàññîâ)<br><br><li><b>27 îêòÿáðÿ</b> - Øêîëüíûé ýòàï îëèìïèàäû ïî êèòàéñêîìó ÿçûêó (5-11 êëàññû)<br><br><li><b>28 îêòÿáðÿ</b> - Óðîê áåçîïàñíîñòè ñåòè Èíòåðíåò (7-11 êëàññû)<br><br><li><b>30 îêòÿáðÿ</b> - Ìóíèöèïàëüíûé ýòàï ÂÎØ ïî îáùåñòâîçíàíèþ (7-11 êëàññû)<br><br><li><b>8 íîÿáðÿ</b> - Òðåíèðîâî÷íàÿ ðàáîòà ïî àíãëèéñêîìó ÿçûêó 9 êëàññ (ó÷àùèåñÿ 9-õ êëàññîâ)<br><br><li><b>8 íîÿáðÿ</b> - Ìóíèöèïàëüíûé ýòàï Âñåðîññèéñêîé îëèìïèàäû øêîëüíèêîâ ïî ïðàâó (7-11 êëàññû)<br><br><li><b>9 íîÿáðÿ</b> - Äèàãíîñòè÷åñêàÿ ðàáîòà ïî ðóññêîìó ÿçûêó 11 êëàññ (ó÷àùèåñÿ 11-õ êëàññîâ)<br><br><li><b>10 íîÿáðÿ</b> - Ìîíèòîðèíã ÌÖÊÎ  ðóññêèé ÿçûê 10-å êëàññû (10-å)<br><br><li><b>11 íîÿáðÿ</b> - Òðåíèðîâî÷íàÿ ðàáîòà ïî èñòîðèè 9 êëàññ (ó÷àùèåñÿ 9-õ êëàññîâ)<br><br><li><b>20 íîÿáðÿ</b> - Ìóíèöèïàëüíûé ýòàï ÂÎØ ïî ðóññêîìó ÿçûêó (7-11 êëàññû)<br><br><li><b>22 íîÿáðÿ</b> - Òðåíèðîâî÷íàÿ ðàáîòà ïî áèîëîãèè 9 êëàññ (ó÷àùèåñÿ 9-õ êëàññîâ)<br><br><li><b>23 íîÿáðÿ</b> - Òðåíèðîâî÷íàÿ ðàáîòà ïî èíôîðìàòèêå  9 êëàññ (ó÷àùèåñÿ 9-õ êëàññîâ)<br><br><li><b>24 íîÿáðÿ</b> - Òðåíèðîâî÷íàÿ ðàáîòà ïî ëèòåðàòóðå 11 êëàññ (ó÷àùèåñÿ 11-õ êëàññîâ)<br><br><li><b>25 íîÿáðÿ</b> - Òðåíèðîâî÷íàÿ ðàáîòà ïî èñòîðèè 11 êëàññ (ó÷àùèåñÿ 11-õ êëàññîâ)<br><br>	
+	</div>	
+	</td>
+	</tr>
+</table>
+
+<a href='/index.php'>
+<div style='position: absolute; top:35px; left: 0px; width:100%'>
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td>
+			<div style='width:296px; height:1px; overflow:hidden;'></div>
+			<img style='position: relative; top: 0px;' src='img/lenta_l.png'>
+		</td>
+		<td width=100% style="background-image: url(img/lenta_m.png); background-repeat: repeat-x;">
+			<div style='width:600px; height:1px; overflow:hidden;'></div>
+			<div style="line-height: 14px; color: fbde8e; font-size: 18px; font-family: Monotype Corsiva; width: 100%; text-align: center; position: relative; top:28px;" >
+				Èíôîðìàöèîííî-òâîð÷åñêèé ñàéò øêîëû 2001. Åñëè Âàì íóæíà îôèöèàëüíàÿ èíôîðìàöèÿ, ïåðåéäèòå íà <a style="line-height: 14px; color: fbde8e; font-size: 18px; font-family: Monotype Corsiva;" href='http://sch2001u.mskobr.ru/'>îôèöèàëüíûé ñàéò</a>.
+			</div> 
+		</td>
+		<td>
+			<div style='width:197px; height:1px; overflow:hidden;'></div>
+			<img style='position: relative; top: 0px;' src='img/lenta_r.png'>
+		</td>
+	</tr>
+	</table>
+</div>
+</a>
+
+
+
+</body>
+</html>

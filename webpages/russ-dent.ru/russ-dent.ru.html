@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Стоматология в Бибирево РУСС-ДЕНТ, 11 лет работы</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.form.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var k=1;
+
+                var options = {
+                    success: function(responseText) {
+                        var data = eval("(" + responseText + ")");
+                        if(data.result){
+                            $("#errorDiv").html('Ваша заявка принята');
+                        }
+                        else{
+                            $("#errorDiv").html(data.error);
+                            k++;
+                            $("#captchaImg").attr("src","/kcaptcha/index.php?k="+k);
+                            $("#captchaInput").val("");
+                        }
+                    }
+                };
+                $("#reqForm").ajaxForm(options);
+            })
+        </script>
+    </head>
+    <body>
+        		<div class="header header_index">
+			<div class="wrap clearfix">
+				<a href="/" class="logo"><img src="img/logo.png"></a>
+				<div class="contact">
+					<div class="contact__phone">(495) 978-111-8</div>
+					<div class="contact__order">Записаться на прием</div>
+					<div class="order-form">
+						<form id="reqForm" action="/ajax.php?task=addReq" method="post">
+						<div class="order-form__label">Имя</div>
+						<input type="text" class="order-form__input" name="name">
+						<div class="order-form__label">Номер телефона</div>
+						<input type="text" class="order-form__input" name="phone">
+						<div class="captcha-b">
+							<div class="captcha"><img id="captchaImg" src="/kcaptcha/index.php?k=100" alt="" class="" /></div>
+							<input type="text" class="order-form__input" name="captcha" id="captchaInput">
+						</div>
+						<input type="submit" class="order-form__submit" value="Отправить заявку">
+						<div class="order-text" id="errorDiv">Мы вам перезвоним и уточним<br>желаемое время визита</div>
+						<div class="order-close">Закрыть</div>
+						</form>
+					</div>
+				</div>
+				<div class="menu">
+					<a class="menu__item" href="/">Главная</a>
+					<a class="menu__item" href="gallery.html">Галерея</a>
+					<a class="menu__item" href="map.html">Схема проезда</a>
+					<a class="menu__item" href="doc.html">Доктора</a>
+					<a class="menu__item" href="price.html">Прайс</a>
+					<a class="menu__item" href="opinion.html">Отзывы</a>
+				</div>
+			</div>
+		</div>
+			
+		<div class="wrap slider">	
+			<div class="big-banner">
+				<img src="pic/big-banner1.jpg">
+			</div>
+			
+			<div class="banner-list clearfix">
+				<a href="lechenie_kariesa.html" class="mini__banner">
+					<img src="pic/banner1.jpg">
+					<div class="mini__banner_info">Лечение кариеса</div>
+				</a>
+				<a href="udalenie_zubov.html" class="mini__banner">
+					<img src="pic/banner2.jpg">
+					<div class="mini__banner_info">Удаление зуба</div>
+				</a>
+				<a href="implantacija_zubov.html" class="mini__banner">
+					<img src="pic/banner3.jpg">
+					<div class="mini__banner_info">Имплантация</div>
+				</a>
+				<a href="otbelivanie_zoom.html" class="mini__banner">
+					<img src="pic/banner4.jpg">
+					<div class="mini__banner_info">Аппаратное отбеливание</div>
+				</a>
+				<a href="gibkie_protezy.html" class="mini__banner">
+					<img src="pic/banner5.jpg">
+					<div class="mini__banner_info">Нейлоновые протезы</div>
+				</a>
+			</div>
+		</div>        		<div class="wrap clearfix">
+			<div class="sidebar-right">
+				<a href="sale.html" class="sidebar__discont">
+					<img src="pic/discont.jpg"><br>
+					<span class="discont__link">дисконтная карта</span>
+				</a>
+
+				<div style="margin-top: 30px;">
+					<img style="display: block; max-width: 100%;" src="/img/luxapp.jpg"><br>
+				</div>
+
+				<div class="s-menu">
+					<div class="s-menu__item">
+						<span class="s-menu__category">Лечение зубов</span>
+						<ul class="s-menu__subcategory">
+							<li><a href="lechenie_kariesa.html">Лечение кариеса</a></li>
+							<li><a href="lechenie_kanalov.html">Лечение каналов</a></li>
+						</ul>
+					</div>
+					
+					<div class="s-menu__item">
+						<span class="s-menu__category">Реставрация зубов</span>
+						<ul class="s-menu__subcategory">
+							<li><a href="vkladki.html">Вкладки</a></li>
+							<li><a href="viniry.html">Виниры</a></li>
+						</ul>
+					</div>
+					
+					<div class="s-menu__item">
+						<span class="s-menu__category">Протезирование</span>
+						<ul class="s-menu__subcategory">
+							<li><a href="cirkonievye_koronki.html">Циркониевые коронки</a></li>
+							<li><a href="gibkie_protezy.html">Гибкие протезы</a></li>
+							<li><a href="protezirovanie_bez_obtochki.html">Протезирование без обточки соседних зубов</a></li>
+							<li><a href="semnye_protezy.html">Съемные протезы</a></li>
+						</ul>
+					</div>
+					
+					<div class="s-menu__item">
+						<a href="implantacija_zubov.html" class="s-menu__category s-menu__category_no-arrow">Имплантация зубов</a>
+					</div>
+					
+					<div class="s-menu__item">
+						<a href="udalenie_zubov.html" class="s-menu__category s-menu__category_no-arrow">Удаление зубов</a>
+					</div>
+					
+					<div class="s-menu__item">
+						<span class="s-menu__category">Отбеливание зубов</span>
+						<ul class="s-menu__subcategory">
+							<li><a href="ultrazvukovaja_chistka.html">Ультразвуковая чистка</a></li>
+							<li><a href="ultrazvukovaja_chistka.html">Чистка AirFlow</a></li>
+							<li><a href="domashnee_otbelivanie.html">Домашнее отбеливание</a></li>
+							<li><a href="otbelivanie_zoom.html">Отбеливание Zoom</a></li>
+						</ul>
+					</div>
+					
+					<div class="s-menu__item">
+						<span class="s-menu__category">Лечение десен</span>
+						<ul class="s-menu__subcategory">
+							<li><a href="gingivit.html">Гингивит</a></li>
+							<li><a href="parodontit.html">Пародонтит</a></li>
+							<li><a href="parodontoz.html">Пародонтоз</a></li>
+							<li><a href="shinirovanie.html">Шинирование подвижных зубов</a></li>
+						</ul>
+					</div>
+					
+					<div class="s-menu__item">
+						<span class="s-menu__category">Исправление прикуса</span>
+						<ul class="s-menu__subcategory">
+							<li><a href="brekety.html">Брекеты</a></li>
+							<li><a href="plastinki.html">Пластинки</a></li>
+						</ul>
+					</div>
+					
+					<div class="s-menu__item">
+						<a href="detskaja_stomatologija.html" class="s-menu__category s-menu__category_no-arrow">Детская стоматология</a>
+					</div>
+				</div>
+			</div>		
+
+        <div class="content">
+            <div class="cat-title">
+                <div class="slogan__title">Стоматология РУСС-ДЕНТ</div>
+                <div class="slogan__text">РУСС-ДЕНТ – Cтоматология эконом класса в бибирево - качественные и доступные стоматологические услуги круглосуточно.</div>
+                <div class="slogan__text">Стоматология РУСС-ДЕНТ - 15000 клиентов за 8 лет работы.</div>
+                <div class="slogan__text">Вы достойны красивой улыбки!</div>
+            </div>
+            <div class="content-inner">
+                <div class="index-text">
+                    <div class="index-text__left">
+                        <img src="pic/index-img.jpg">
+                    </div>
+                    <div class="index-text__right">
+                        <p>Стоматология РУСС-ДЕНТ в Бибирево приветствует Вас! Каждого клиента у нас ждет доброжелательный, приветливый прием, а также приятная, позитивная атмосфера. Наши специалисты окажут индивидуальные, высококвалифицированные стоматологические услуги на самом высоком уровне.</p>
+                        <p>Стоматологическая клиника у метро Бибирево оборудована новым суперсовременным оборудованием, высокоточной компьютерной диагностической системой, визиографической аппаратурой, благодаря которой можно провести исследование в максимально сжатые сроки, но при этом с высокими показателями точности результата.</p>
+                        <p>Наша стоматологическая клиника в Бибирево сотрудничает с самыми известными производителями из Японии, США и Германии. В процессе работы мы применяем исключительно высококачественные материалы и современные технологии, использование которых разрешено Министерством здравоохранения Российской Федерации.</p>
+                        <p>Наша клиника оснащена новым, уникальным оборудованием: аппаратурой для лечения, диагностических процедур, удобными установками от ведущих немецких и японских производителей.</p>
+                        <p>Стоматология Русс-Дент предлагает:</p>
+                        <ul>
+                            <li>высококачественное лечение зубов;</li>
+                            <li>выравнивание зубов, максимальное исправление прикуса и любых дефектов;</li>
+                            <li>имплантация, современное протезирование зубов (при помощи съемных протезов, нейлоновых гибких протезов, металлокерамических коронок);</li>
+                            <li>качественное отбеливание зубов;</li>
+                            <li>профилактика и диагностические методики выявления зубных болезней.</li>
+                        </ul>
+                        <p>За время своей деятельности в области стоматологии наша клиника по праву заслужила отличную репутацию и превосходные оценки клиентов. Основой нашей деятельности является эксклюзивный подход к проблеме каждого клиента, привлекательные цены на оказываемые услуги, их безупречное качество.</p>
+                        <p>Наша стоматологическая клиника в Бибирево является одной из немногих, в которых работают профессионалы с высочайшим уровнем медицинской подготовки. Наши специалисты – это не обычные врачи, а настоящие мастера своего дела, которые подходят к решению каждой задачи комплексно. Пациенту больше не нужно будет ходить по кабинетам многих специалистов. У каждого клиента есть собственный врач, который выполняет свои услуги качественно и максимально быстро. Наши стоматологи принимают на себя полную ответственность за здоровье пациента.</p>
+                        <p>Доктора нашей стоматологии – первоклассные специалисты, которые имеют все необходимые сертификаты и огромный опыт работы в своей сфере. Наша стоматологическая клиника в Бибирево гарантирует индивидуальный подход и комплексное решение любых стоматологических проблем. Вы можете убедиться в нашем профессионализме самостоятельно!</p>
+                        <p>Мы ждем Вас по адресу: м. Бибирево, улица Мурановская, дом 7</p>
+                        <p>Стоматология эконом-класса РУСС-ДЕНТ</p>
+                    </div>
+                </div>
+            </div>	
+            <noindex><div class="index-block">
+                    <div class="index-block__title">Цены</div>
+                    <div class="index-price index-price_a">Лечение зубов</div>
+                    <div class="content-inner index-price-list_a hide">
+                        <table class="price">
+                            <tr>
+                                <td>Наименование услуги</td>
+                                <td>Цена, рублей</td>
+                            </tr>
+                            <tr>
+                                <td>Анестезия инъекционная</td>
+                                <td>500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Световая пломба</td>
+                                <td>от 750,00</td>
+                            </tr>
+                            <tr>
+                                <td>Наращивание зуба</td>
+                                <td>2000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Винир(облицовка световым материалом)</td>
+                                <td>3500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Герметизация фиссур</td>
+                                <td>600,00</td>
+                            </tr>
+                            <tr>
+                                <td>Лечебная прокладка</td>
+                                <td>400,00</td>
+                            </tr>
+                            <tr>
+                                <td>Временная пломба</td>
+                                <td>200,00</td>
+                            </tr>
+                            <tr>
+                                <td>Снятие пломбы</td>
+                                <td>200,00</td>
+                            </tr>
+                            <tr>
+                                <td>Инструментальная и мед. обработка 1-ого канала</td>
+                                <td>500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Пломбирование 1-ого канала</td>
+                                <td>700,00</td>
+                            </tr>
+                            <tr>
+                                <td>Распломбировка 1-ого канала</td>
+                                <td>500,00 - 1500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Извлечение штифта, инструмента</td>
+                                <td>500,00 - 1500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Пломбирование 1-ого канала лечебной пастой</td>
+                                <td>300,00</td>
+                            </tr>
+                            <tr>
+                                <td>Фиксация титанового штифта</td>
+                                <td>900,00</td>
+                            </tr>
+                            <tr>
+                                <td>Фиксация стекловолоконного штифта</td>
+                                <td>900,00</td>
+                            </tr>
+                            <tr>
+                                <td>Парапульпарный штифт</td>
+                                <td>500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Замещение отсутствующего зуба композитной конструкцией без обточки опорных зубов</td>
+                                <td>7000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Профессиональное отбеливание зубов(ZOOM)</td>
+                                <td>9000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Домашнее отбеливание</td>
+                                <td>5500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Фиксация ювелирного украшения</td>
+                                <td>1000,00</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="index-price index-price_b">Лечение десен</div>
+                    <div class="content-inner index-price-list_b hide">
+                        <table class="price">
+                            <tr>
+                                <td>Наименование услуги</td>
+                                <td>Цена, рублей</td>
+                            </tr>
+                            <tr>
+                                <td>Снятие зубных отложений ультразвуком</td>
+                                <td>50,00</td>
+                            </tr>
+                            <tr>
+                                <td>Удаление над- и поддесневого зубного камня (1 зуб)</td>
+                                <td>50,00</td>
+                            </tr>
+                            <tr>
+                                <td>Обработка F-содержащим препаратом (1зуб)</td>
+                                <td>50,00</td>
+                            </tr>
+                            <tr>
+                                <td>Обработка F-содержащим препаратом сегмента(6-8 зубов)</td>
+                                <td>250,00</td>
+                            </tr>
+                            <tr>
+                                <td>Медикаментозная обработка пародонтального кармана</td>
+                                <td>100,00</td>
+                            </tr>
+                            <tr>
+                                <td>Наложение пародонтальной повязки</td>
+                                <td>50,00</td>
+                            </tr>
+                            <tr>
+                                <td>Наложение пародонтальной повязки (6-8 зубов)</td>
+                                <td>400,00</td>
+                            </tr>
+                            <tr>
+                                <td>Вскрытие пародонтального абсцесса</td>
+                                <td>150,00</td>
+                            </tr>
+                            <tr>
+                                <td>Кюретаж патологического зубо-деснового кармана</td>
+                                <td>200,00</td>
+                            </tr>
+                            <tr>
+                                <td>Коакуляция гипертрофированногодесневого сосочка</td>
+                                <td>250,00</td>
+                            </tr>
+                            <tr>
+                                <td>Щадящая чистка зубов «Air-Fiow»( США)</td>
+                                <td>1000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Шинирование (сегмент из 3х зубов)</td>
+                                <td>2500,00</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="index-price index-price_c">Протезирование зубов</div>
+                    <div class="content-inner index-price-list_c hide">
+                        <table class="price">
+                            <tr>
+                                <td>Наименование услуги</td>
+                                <td>Цена, рублей</td>
+                            </tr>
+                            <tr>
+                                <td>Металлическая коронка</td>
+                                <td>800,00</td>
+                            </tr>
+                            <tr>
+                                <td>Пластмассовая коронка</td>
+                                <td>500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Литая коронка</td>
+                                <td>1500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Металлокерамическая коронка (Германия)</td>
+                                <td>2500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Безметалловая керамика (Япония)</td>
+                                <td>3500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Безметалловая керамика на основе оксида циркония</td>
+                                <td>8000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Безметалловая керамика на основе оксида алюминия</td>
+                                <td>8000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Мк с плечевой массой</td>
+                                <td>5000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Литая вкладка</td>
+                                <td>1700,00</td>
+                            </tr>
+                            <tr>
+                                <td>Вкладка-зуб из керомера</td>
+                                <td>8000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Штифтовая вкладка из керомера</td>
+                                <td>5000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Съемный протез (Германия)</td>
+                                <td>5000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Съёмный протез (Россия)</td>
+                                <td>2500,00</td>
+                            </tr>
+                            <tr>
+                                <td>ValPlast - нейлоновый протез</td>
+                                <td>15500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Бюгельный протез (Германия)</td>
+                                <td>10000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Бюгельный протез на замках (Германия)</td>
+                                <td>20000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Безметалловый бюгельный протез (кватро)</td>
+                                <td>18000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Стекловидная опора под МК коронку (Италия)</td>
+                                <td>10000,00</td>
+                            </tr>
+                            <tr>
+                                <td>ProFlex</td>
+                                <td>10000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Кламмер DD</td>
+                                <td>1200,00</td>
+                            </tr>
+                            <tr>
+                                <td>Бюгельный протез с DD</td>
+                                <td>19000,00</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="index-price index-price_d">Удаление зубов</div>
+                    <div class="content-inner index-price-list_d">
+                        <table class="price">
+                            <tr>
+                                <td>Наименование услуги</td>
+                                <td>Цена, рублей</td>
+                            </tr>
+                            <tr>
+                                <td>Удаление постоянного зуба (простое)</td>
+                                <td>700,00</td>
+                            </tr>
+                            <tr>
+                                <td>Удаление постоянного зуба (сложное)</td>
+                                <td>1800,00</td>
+                            </tr>
+                            <tr>
+                                <td>Удаление ретинированного зуба</td>
+                                <td>2000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Наложение шва 1ед</td>
+                                <td>150,00</td>
+                            </tr>
+                            <tr>
+                                <td>Операция цистэктомии, резекция корня</td>
+                                <td>3000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Гемисекция</td>
+                                <td>1500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Пластика уздечек</td>
+                                <td>1000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Иссечение капюшона, перикоронаротомия</td>
+                                <td>1000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Периостальный разрез, периостотомия</td>
+                                <td>500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Кюретаж лунки</td>
+                                <td>500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Удаление экзостозов в проекции 1 зуба</td>
+                                <td>500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Внедрение остеопластического материала</td>
+                                <td>500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Иссечение гипертрофированной слизистой</td>
+                                <td>500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Гемостаз раны с использованием Альвостаза</td>
+                                <td>200,00</td>
+                            </tr>
+                            <tr>
+                                <td>Медикаментозная обработка раны после хирургического вмешательства</td>
+                                <td>500,00</td>
+                            </tr>
+                        </table>
+                    </div>	
+                </div>
+                <div class="index-block">
+                    <div class="content-inner">
+                        <div class="index-block__title">Доктора</div>
+                        <div class="doc-list">
+                            <div class="doc">
+                                <img class="doc__img" src="pic/doc4.jpg">
+                                <div class="doc__about">
+                                    <div class="doc__name">Чаплин Алексей Валерьевич</div>
+                                    <div class="doc__item">Специализация:
+                                        <div class="doc__spec">Специалист по терапевтической стоматологии, хирургический прием, ортопедическая стоматология, детский прием</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="doc">
+                                <img class="doc__img" src="pic/doc6.jpg">
+                                <div class="doc__about">
+                                    <div class="doc__name">Клепач Владимир Владимирович</div>
+                                    <div class="doc__item">Специализация:
+                                        <div class="doc__spec">Ортодонтический прием, все виды исправления прикуса</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="doc">
+                                <img class="doc__img" src="pic/luchenkov.jpg">
+                                <div class="doc__about">
+                                    <div class="doc__name">Лученков Дмитрий Сергеевич</div>
+                                    <div class="doc__item">Специализация:
+                                        <div class="doc__spec">стоматолог-терапевт, хирург, ортопед</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="doc">
+                                <img class="doc__img" src="pic/manasyan.jpg">
+                                <div class="doc__about">
+                                    <div class="doc__name">Манасян Семен Геннадьевич</div>
+                                    <div class="doc__item">Специализация:
+                                        <div class="doc__spec">стоматолог-терапевт, хирург, ортопед</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="index-block__all"><a href="doc.html">посмотреть всех докторов</a></div>
+                    </div>	
+                </div>	
+                <div class="index-block">
+                    <div class="content-inner">
+                        <div class="index-block__title">Галерея</div>
+                        <div class="gallery">
+                            <a href="pic/g1_b.jpg" class="gallery__item"><img src="pic/g1.jpg"></a>
+                            <a href="pic/g2_b.jpg" class="gallery__item"><img src="pic/g2.jpg"></a>
+                            <a href="pic/g3_b.jpg" class="gallery__item"><img src="pic/g3.jpg"></a>
+                            <a href="pic/g4_b.jpg" class="gallery__item"><img src="pic/g4.jpg"></a>
+                            <a href="pic/g5_b.jpg" class="gallery__item"><img src="pic/g5.jpg"></a>
+                            <a href="pic/g6_b.jpg" class="gallery__item"><img src="pic/g6.jpg"></a>
+                        </div>
+                        <div class="index-block__all"><a href="gallery.html">посмотреть все фотографии</a></div>
+                    </div>					
+                </div></noindex>
+        </div>
+
+        		</div>		
+		
+		<div class="footer">
+			<div class="wrap clearfix">
+				<a href="/" class="logo"><img src="img/logo-footer.png"></a>
+				<div class="contact">
+					<div class="contact__phone contact__phone_footer">(495) 978-111-8</div>
+				</div>
+				<div class="menu">
+					<a class="menu__item" href="/">Главная</a>
+					<a class="menu__item" href="gallery.html">Галерея</a>
+					<a class="menu__item" href="map.html">Схема проезда</a>
+					<a class="menu__item" href="doc.html">Доктора</a>
+					<a class="menu__item" href="price.html">Прайс</a>
+					<a class="menu__item" href="opinion.html">Отзывы</a>
+				</div>
+			</div>
+			<div class="wrap">
+				<div class="map">
+					<img src="pic/map.jpg">
+					<div class="map__contact">
+						метро Бибирево, улица Мурановская, дом 7
+					</div>
+				</div>
+				<div style="margin-top:10px;font-size:14px;text-align:right;">Разработка сайта - <a href="http://www.re-kla-ma.ru" style="color:#898989;">RE-KLA-MA</a></div>
+			</div>
+		</div>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		(function (d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+				try {
+					w.yaCounter25292132 = new Ya.Metrika({id:25292132,
+							webvisor:true,
+							clickmap:true,
+							trackLinks:true,
+							accurateTrackBounce:true});
+				} catch(e) { }
+			});
+
+			var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function () { n.parentNode.insertBefore(s, n); };
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="//mc.yandex.ru/watch/25292132" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-49605559-7', 'russ-dent.ru');
+		  ga('send', 'pageview');
+		</script>
+		<script>
+			var border = document.querySelector('.contact__order');
+			var lorder = document.querySelector('.order-form');
+			var corder = document.querySelector('.order-close');
+			border.addEventListener('click', function(event){
+				event.preventDefault();
+				lorder.classList.add('active');
+				border.classList.add('active');
+				},false);
+			corder.addEventListener('click', function(event){
+				event.preventDefault();
+				lorder.classList.remove('active');
+				border.classList.remove('active');
+				},false);
+		</script>
+		<script>
+			var aprice = document.querySelector('.index-price_a');
+			var bprice = document.querySelector('.index-price_b');
+			var cprice = document.querySelector('.index-price_c');
+			var dprice = document.querySelector('.index-price_d');
+			var alist = document.querySelector('.index-price-list_a');
+			var blist = document.querySelector('.index-price-list_b');
+			var clist = document.querySelector('.index-price-list_c');
+			var dlist = document.querySelector('.index-price-list_d');
+			aprice.addEventListener('click', function(event){
+				event.preventDefault();
+				blist.classList.add('hide');
+				clist.classList.add('hide');
+				dlist.classList.add('hide');
+				alist.classList.remove('hide');
+				},false);
+			bprice.addEventListener('click', function(event){
+				event.preventDefault();
+				alist.classList.add('hide');
+				clist.classList.add('hide');
+				dlist.classList.add('hide');
+				blist.classList.remove('hide');
+				},false);
+			cprice.addEventListener('click', function(event){
+				event.preventDefault();
+				alist.classList.add('hide');
+				blist.classList.add('hide');
+				dlist.classList.add('hide');
+				clist.classList.remove('hide');
+				},false);
+			dprice.addEventListener('click', function(event){
+				event.preventDefault();
+				alist.classList.add('hide');
+				blist.classList.add('hide');
+				clist.classList.add('hide');
+				dlist.classList.remove('hide');
+				},false);
+		</script>    </body>
+</html>
