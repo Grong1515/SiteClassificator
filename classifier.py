@@ -1,6 +1,6 @@
 import numpy as np
 
-from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.feature_selection import RFECV
 from sklearn.model_selection import cross_val_score, cross_val_predict, KFold
 from scipy.sparse import coo_matrix, hstack
@@ -16,8 +16,8 @@ from preparations import *
 def train_and_test():
     sites, test_sites = load_sites(WEBPAGES_PATH)
 
-    text_vectorizer = CountVectorizer()
-    attrs_vectorizer = CountVectorizer()
+    vectorizer = dict(text=CountVectorizer(), attrs=CountVectorizer())
+    transformer = dict(attrs=TfidfTransformer(), text=TfidfTransformer())
     model = LogisticRegression()
 
     text_data, attrs_data = [], []
@@ -35,15 +35,17 @@ def train_and_test():
     write_to_file(RESULTS_PATH, 'text_data.txt', json.dumps(text_data))
     write_to_file(RESULTS_PATH, 'attrs_data.txt', json.dumps(attrs_data))
 
-    a = text_vectorizer.fit_transform(text_data)
-    b = attrs_vectorizer.fit_transform(attrs_data)
+    a = vectorizer['text'].fit_transform(text_data)
+    b = vectorizer['attrs'].fit_transform(attrs_data)
+    transformer['text'].fit(a)
+    transformer['attrs'].fit(b)
 
     # print(type(a))
     # print(type(b))
     # print(a.shape)
     # print(b.shape)
 
-    X, y, fails = corpus_transformation(sites, text_vectorizer, attrs_vectorizer)
+    X, y, fails = corpus_transformation(sites, vectorizer, transformer)
 
     # kf = KFold(n_splits=10)
     # print('CROSS VALIDATION')
@@ -67,15 +69,15 @@ def train_and_test():
     # summarize the fit of the model
     print('-'*60)
     print('Results of training:')
-    print(metrics.classification_report(expected, predicted))
+    print(metrics.classification_report(expected, predicted, target_names=CLASSES_LIST))
     # print(metrics.confusion_matrix(expected, predicted))
 
-    X_test, y_test, fails = corpus_transformation(test_sites, text_vectorizer, attrs_vectorizer)
+    X_test, y_test, fails = corpus_transformation(test_sites, vectorizer, transformer)
     failsFile.write(fails)
     failsFile.close()
     predicted = model.predict(X_test)
     print('Results of testing:')
-    print(metrics.classification_report(y_test, predicted))
+    print(metrics.classification_report(y_test, predicted, target_names=CLASSES_LIST))
     # print(metrics.confusion_matrix(y_test, predicted))
 
 

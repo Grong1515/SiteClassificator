@@ -8,6 +8,8 @@ from lxml import etree as ET
 from lxml.etree import HTMLParser
 from scipy.sparse import vstack, hstack
 
+from sklearn.feature_extraction.text import TfidfTransformer
+
 
 def get_site_classes(classes):
     sites_with_classes = dict()
@@ -46,6 +48,7 @@ def load_sites(path):
             sites_list.append((file_path, dirname, dir))
 
     shuffle(sites_list)
+    # sites_list = sites_list[:300]
 
     split_line = int(len(sites_list)/4*3)
     return sites_list[:split_line], sites_list[split_line:]
@@ -87,11 +90,14 @@ def load_file(file):
     return ' \n '.join(text_train_data), ' \n '.join(np.array(attr_train_data))
 
 
-def corpus_transformation(sites, text_vectorizer, attrs_vectorizer):
+def corpus_transformation(sites, vectorizer, transformer):
     y = []
     X = None
     fails = ''
+    i = 0
+    print(len(sites))
     for site in sites:
+        i += 1
         try:
             text, attrs = load_file(site[0])
         except Exception as exception:
@@ -100,8 +106,8 @@ def corpus_transformation(sites, text_vectorizer, attrs_vectorizer):
             print('text is', type(text))
         y.append(get_class_index(site[1]))
         X_row = hstack([
-            text_vectorizer.transform([text]),
-            attrs_vectorizer.transform([attrs])
+            transformer['text'].transform(vectorizer['text'].transform([text])),
+            transformer['attrs'].transform(vectorizer['attrs'].transform([attrs]))
         ])
         if X is None:
             X = X_row
@@ -110,4 +116,5 @@ def corpus_transformation(sites, text_vectorizer, attrs_vectorizer):
     # print(type(y))
     # print(len(y))
     # print(X.shape)
+    print('Count cycles: ', i)
     return X, np.array(y), fails
