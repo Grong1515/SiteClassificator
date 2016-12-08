@@ -1,0 +1,5 @@
+.idea
+results/*
+webpages/*
+*.pyc
+__pycache__
