@@ -1,6 +1,6 @@
-.idea
+.idea/*
 results/*
 webpages/*
 *.txt
 *.pyc
-__pycache__
+__pycache__/*
