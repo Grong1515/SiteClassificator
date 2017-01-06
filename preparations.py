@@ -27,6 +27,8 @@ def get_site_classes(classes):
 
 WEBPAGES_PATH = 'webpages/'
 RESULTS_PATH = 'results/'
+if not os.path.isdir(RESULTS_PATH):
+    os.mkdir(RESULTS_PATH)
 VECTORIZER_DATA_FILE = ['text_vect_data.txt', 'attrs_vect_data.txt']
 PAGE_CLASSES_FILE = './metadata.json'
 PAGE_CLASSES = dict()
