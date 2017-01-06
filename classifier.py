@@ -18,7 +18,7 @@ def train_and_test():
 
     text_vectorizer = CountVectorizer()
     attrs_vectorizer = CountVectorizer()
-    model = LogisticRegression()
+    model = [LogisticRegression() for i in range(len(CLASSES_LIST))]
 
     text_data, attrs_data = [], []
 
@@ -49,7 +49,9 @@ def train_and_test():
     # print('CROSS VALIDATION')
     # i = 1
     # for train, test in kf.split(X):
-    model.fit(X, y)
+    # for model in models:
+    for i in range(len(CLASSES_LIST)):
+        model[i].fit(X, y[i])
 
     # kf = KFold(n_splits=10)
     # print('CROSS VALIDATION')
@@ -62,21 +64,33 @@ def train_and_test():
     #     i += 1
 
     # make predictions
-    expected = y
-    predicted = model.predict(X)
-    # summarize the fit of the model
-    print('-'*60)
-    print('Results of training:')
-    print(metrics.classification_report(expected, predicted))
+    f = open('results.txt', 'w')
+    print('Results of training:', file=f)
+    for i in range(len(CLASSES_LIST)):
+        expected = y[i]
+        predicted = model[i].predict(X)
+        print(CLASSES_LIST[i] + ':', file=f)
+        print(metrics.classification_report(expected, predicted), file=f)
     # print(metrics.confusion_matrix(expected, predicted))
 
     X_test, y_test, fails = corpus_transformation(test_sites, text_vectorizer, attrs_vectorizer)
     failsFile.write(fails)
     failsFile.close()
-    predicted = model.predict(X_test)
-    print('Results of testing:')
-    print(metrics.classification_report(y_test, predicted))
+    print('-' * 60, file=f)
+    print('Results of testing:', file=f)
+    predicted_all = []
+    for i in range(len(CLASSES_LIST)):
+        predicted = model[i].predict(X_test)
+        predicted_all.append(predicted)
+        print(CLASSES_LIST[i] + ':', file=f)
+        print(metrics.classification_report(y_test[i], predicted), file=f)
+    print('Full result:', file=f)
+    print(metrics.classification_report(np.reshape(y_test, (1, len(y_test)*len(y_test[0])))[0],
+                                        np.reshape(np.array(predicted_all), (1, len(y_test) * len(y_test[0])))[0]),
+          file=f)
     # print(metrics.confusion_matrix(y_test, predicted))
+    f.close()
+    print('Done. Results are in results.txt')
 
 
 if __name__ == '__main__':

@@ -9,6 +9,10 @@ from lxml.etree import HTMLParser
 from scipy.sparse import vstack, hstack
 
 
+def sign(x):
+    return 1 - (x < 0)
+
+
 def get_site_classes(classes):
     sites_with_classes = dict()
     with open('classes_list.txt', 'w') as thefile:
@@ -75,11 +79,12 @@ def load_file(file):
     for node in body.iter():
         if node.text:
             text_train_data.append(node.text)
-        attr_vals = []
-        for attr in node.items():
-            if attr[1]:
-                attr_vals.append(attr[1])
-        attr_train_data.append(' \n '.join(attr_vals))
+        # attr_vals = []
+        # for attr in node.items():
+        #     if attr[1]:
+        #         attr_vals.append(attr[1])
+        if node.get('class'):
+            attr_train_data.append(node.get('class'))
 
     if not len(text_train_data) or not len(attr_train_data):
         raise Exception('Empty data for learning.')
@@ -101,7 +106,8 @@ def corpus_transformation(sites, text_vectorizer, attrs_vectorizer):
         y.append(get_class_index(site[1]))
         X_row = hstack([
             text_vectorizer.transform([text]),
-            attrs_vectorizer.transform([attrs])
+            # Uncomment this string to add attributes data into learning data
+            # attrs_vectorizer.transform([attrs])
         ])
         if X is None:
             X = X_row
@@ -110,4 +116,8 @@ def corpus_transformation(sites, text_vectorizer, attrs_vectorizer):
     # print(type(y))
     # print(len(y))
     # print(X.shape)
-    return X, np.array(y), fails
+    answers_formatted = []
+    answers = y
+    for i in range(len(CLASSES_LIST)):
+        answers_formatted.append([sign(x-i)*sign(i-x) for x in answers])
+    return X, np.array(answers_formatted), fails
