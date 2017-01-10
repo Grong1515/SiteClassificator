@@ -1,3 +1,4 @@
+import codecs
 import numpy as np
 
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
@@ -22,7 +23,7 @@ def train_and_test():
 
     text_data, attrs_data = [], []
 
-    failsFile = open(RESULTS_PATH + 'fails.txt', 'w')
+    failsFile = codecs.open(RESULTS_PATH + 'fails.txt', mode='w', encoding='utf-8', errors='ignore')
     for site in sites:
         try:
             text, attrs = load_file(site[0])
@@ -32,8 +33,12 @@ def train_and_test():
         text_data.append(text)
         attrs_data.append(attrs)
 
-    write_to_file(RESULTS_PATH, 'text_data.txt', json.dumps(text_data))
-    write_to_file(RESULTS_PATH, 'attrs_data.txt', json.dumps(attrs_data))
+    """with codecs.open(os.path.join(os.path.normpath(RESULTS_PATH), 'text_data.txt'), mode='w', encoding='utf-8') as fp:
+        json.dump(text_data, fp, ensure_ascii=False, indent=4)
+    with codecs.open(os.path.join(os.path.normpath(RESULTS_PATH), 'attrs_data.txt'), mode='w', encoding='utf-8') as fp:
+        json.dump(attrs_data, fp, ensure_ascii=False, indent=4)"""
+    write_to_file(RESULTS_PATH, 'text_data.txt', json.dumps(text_data, ensure_ascii=False, indent=4))
+    write_to_file(RESULTS_PATH, 'attrs_data.txt', json.dumps(attrs_data, ensure_ascii=False, indent=4))
 
     a = text_vectorizer.fit_transform(text_data)
     b = attrs_vectorizer.fit_transform(attrs_data)
@@ -64,7 +69,7 @@ def train_and_test():
     #     i += 1
 
     # make predictions
-    f = open('results.txt', 'w')
+    f = codecs.open('results.txt', mode='w', encoding='utf-8', errors='ignore')
     print('Results of training:', file=f)
     for i in range(len(CLASSES_LIST)):
         expected = y[i]

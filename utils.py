@@ -1,10 +1,11 @@
+import codecs
 import os
 
 
 def write_to_file(dir, filename, data):
     if not os.path.exists(dir):
         os.makedirs(dir)
-    with open(dir + filename, 'w') as file:
+    with codecs.open(dir + filename, mode='w', encoding='utf-8', errors='ignore') as file:
         file.write(data)
 
 
@@ -17,7 +18,10 @@ def shuffle_set(set, mix):
 
 class LogFile:
     def __init__(self, file):
-        self.file = open(file, 'rw')
+        self.file = codecs.open(file, mode='rw', encoding='utf-8', errors='ignore')
+
+    def __del__(self):
+        self.file.close()
 
     def write(self, site, exception):
         self.file.write()
